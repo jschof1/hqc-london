@@ -1,0 +1,233 @@
+---
+export interface ReviewBadge {
+  icon: string;
+  text: string;
+}
+
+export interface TrustLogo {
+  type: 'svg' | 'image';
+  content: string;
+  alt: string;
+}
+
+export interface CtaButton {
+  text: string;
+  href: string;
+  type: 'primary' | 'secondary';
+  id?: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  videoSrc?: string;
+  fallbackImage?: string;
+  fallbackImageAlt?: string;
+  reviewBadge?: ReviewBadge;
+  starRating?: number;
+  ctaButtons?: CtaButton[];
+  trustText?: string;
+  trustLogos?: TrustLogo[];
+  className?: string;
+}
+
+const {
+  title = "Where Profound Care Meets Perfected Detail",
+  subtitle = "Premium cleaning services designed for busy professionals and wellness-focused spaces across London. From Chelsea townhouses to Hampstead studios, we deliver the emotional reset you deserve.",
+  videoSrc = "assets/videos/hero.mp4",
+  fallbackImage = "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&h=900&fit=crop&crop=center&q=80",
+  fallbackImageAlt = "Luxury living room interior",
+  reviewBadge = {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+      <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+    </svg>`,
+    text: "97+ reviews"
+  },
+  starRating = 5,
+  ctaButtons = [
+    {
+      text: "Request a Personalised Quote",
+      href: "#quote",
+      type: "primary",
+      id: "hero-cta"
+    },
+    {
+      text: "Discover Our Difference",
+      href: "#differentiation",
+      type: "secondary"
+    }
+  ],
+  trustText = "Trusted by London's most discerning homeowners",
+  trustLogos = [
+    {
+      type: "svg",
+      content: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+      </svg>`,
+      alt: "Google"
+    },
+    {
+      type: "svg",
+      content: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+        <path fill="#00b67a" d="M45.023,18.995H28.991L24.039,3.737l-4.968,15.259L3.039,18.98l12.984,9.44l-4.968,15.243 l12.984-9.424l12.968,9.424L32.055,28.42L45.023,18.995z"></path><path fill="#005128" d="M33.169,31.871l-1.114-3.451l-8.016,5.819L33.169,31.871z"></path>
+      </svg>`,
+      alt: "Trustpilot"
+    },
+    {
+      type: "image",
+      content: "assets/images/checkatrade.png",
+      alt: "Checkatrade"
+    },
+    {
+      type: "image",
+      content: "assets/images/yell.png",
+      alt: "Yell"
+    }
+  ],
+  className = ""
+} = Astro.props;
+---
+<section class="bg-white border-b border-gold/20 py-3 md:py-4">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8 text-xs text-ink/60">
+    <div class="flex items-center gap-2">
+    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+    </svg>
+    <span class="whitespace-nowrap">Fully Insured & Bonded</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+    </svg>
+    <span class="whitespace-nowrap">DBS Checked Team</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+    </svg>
+    <span class="whitespace-nowrap">ISO 9001 Certified</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+    </svg>
+    <span class="whitespace-nowrap">Same Day Response</span>
+    </div>
+  </div>
+  </div>
+</section>
+<section class={`relative bg-navy min-h-[calc(100vh-8rem)] flex items-center justify-center ${className}`}>
+  <div class="absolute inset-0 h-full w-full">
+    <!-- Video background -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="image-transition h-full w-full object-cover"
+    >
+      <source src={videoSrc} type="video/mp4">
+      <!-- Fallback image if video fails to load -->
+      <img
+        src={fallbackImage}
+        alt={fallbackImageAlt}
+        class="image-transition h-full w-full object-cover"
+      />
+    </video>
+
+    <!-- Enhanced overlay for better text visibility -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/60 to-navy/40"
+    ></div>
+  </div>
+  
+  <!-- Hero copy + CTAs - Centered within the hero section -->
+  <div class="font-serif relative z-10 flex flex-col items-center justify-center flex-1 w-full px-4 md:px-16 lg:px-24 xl:px-32">
+    <div class="text-transition">
+    {reviewBadge && (
+      <div class="flex items-center justify-center mb-4">
+        <div set:html={reviewBadge.icon}></div>
+        <span class="text-white font-semibold text-base ml-2">{reviewBadge.text}</span>
+      </div>
+    )}
+    
+    <!-- Star Rating with Lines -->
+    {starRating > 0 && (
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <div class="h-px w-8 bg-gold/60"></div>
+        <div class="flex items-center gap-1">
+          {Array.from({ length: starRating }).map((_, i) => (
+            <span
+              class="text-xl"
+              style="
+                background: linear-gradient(90deg, #C9A961 0%, #FFD700 50%, #FDE68A 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                display: inline-block;
+              "
+              aria-hidden="true"
+            >★</span>
+          ))}
+        </div>
+        <div class="h-px w-8 bg-yellow-200/60"></div>
+      </div>
+    )}
+
+    <h1 class="text-4xl md:text-7xl text-center font-medium max-w-4xl bg-gradient-to-r from-gold via-gold to-yellow-300 text-transparent bg-clip-text leading-tight">
+      {title}
+    </h1>
+    
+    <p class="text-slate-300 md:text-lg text-center max-w-2xl mt-4 leading-relaxed">
+      {subtitle}
+    </p>
+    </div>
+
+    {ctaButtons.length > 0 && (
+      <div class="text-transition flex items-center gap-3 mt-8">
+        {ctaButtons.map((button) => (
+          <a
+            id={button.id}
+            href={button.href}
+            class={
+              button.type === 'primary'
+                ? "flex items-center gap-2 px-8 py-3 bg-gold hover:bg-gold/90 text-navy font-semibold transition rounded-full shadow-2xl hover:shadow-3xl hover:scale-105 duration-300"
+                : "bg-white/10 border border-white/15 rounded-full px-8 py-3 text-white hover:bg-white/20 transition duration-300"
+            }
+          >
+            <span>{button.text}</span>
+            {button.type === 'primary' && (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.79688 11.5117H18.2274M18.2274 11.5117L11.5121 4.79639M18.2274 11.5117L11.5121 18.2269"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            )}
+          </a>
+        ))}
+      </div>
+    )}
+
+    {trustText && (
+      <p class="text-slate-300 mt-16 text-sm">{trustText}</p>
+    )}
+
+    {trustLogos.length > 0 && (
+      <div class="flex flex-wrap items-center justify-center gap-8 mt-6">
+        {trustLogos.map((logo) => (
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center">
+              {logo.type === 'svg' ? (
+                <div set:html={logo.content}></div>
+              ) : (
+                <img src={logo.content} alt={logo.alt} class="w-full h-full object-contain opacity-60">
+              )}
+            </div>
+            <span class="text-xs text-slate-100">{logo.alt}</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

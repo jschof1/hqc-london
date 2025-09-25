@@ -1,0 +1,521 @@
+@import "tailwindcss";
+
+/* Theme configuration for Tailwind CSS v4 */
+@theme {
+  --color-ink: #0E0E10;
+  --color-mist: #F7F7F9;
+  --color-gold: #C9A961;
+  --color-navy: #2C3E50;
+  --color-night: #1c2833;
+  
+  --font-family-display: "Inter var", ui-sans-serif, system-ui;
+  --font-family-serif: "Cormorant Garamond", serif;
+  
+  --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.1), 0 4px 10px rgb(0 0 0 / 0.06);
+  
+  --radius-xl2: 1.25rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-family-display);
+    background-color: var(--color-mist);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: var(--font-family-serif);
+  }
+}
+
+@layer components {
+  /* Gallery specific styles */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid var(--color-gold);
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(from var(--color-navy) r g b / 0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-overlay-content h3 {
+    color: var(--color-gold);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .gallery-overlay-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+  }
+
+  /* Before/After comparison */
+  .ba-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid var(--color-gold);
+  }
+
+  .ba-img,
+  .ba-svg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .ba-after-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .ba-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-gold);
+    cursor: ew-resize;
+    z-index: 10;
+  }
+
+  .ba-dot {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ba-dot::before {
+    content: "↔";
+    color: var(--color-navy);
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  /* Mobile Navigation */
+  .mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+
+  /* Button hover effects */
+  .btn-hover {
+    transition: all 0.3s ease;
+  }
+
+  .btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  /* Card styling consistency */
+  .card {
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  /* Area cards with consistent heights */
+  .area-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .area-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .area-card .image-container {
+    height: 240px; /* Fixed height for all images */
+    overflow: hidden;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  .area-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .area-card:hover .image-container img {
+    transform: scale(1.05);
+  }
+
+  .area-card .card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem;
+  }
+
+  .area-card .card-footer {
+    margin-top: auto; /* Push button to bottom */
+    padding-top: 1rem;
+    border-top: 1px solid rgb(from var(--color-gold) r g b / 0.2);
+  }
+}
+
+@layer utilities {
+  /* Animations - More subtle scroll effects */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+  }
+
+  /* View Transition Classes */
+  .page-transition {
+    view-transition-name: page-content;
+  }
+
+  .hero-transition {
+    view-transition-name: hero-section;
+  }
+
+  .nav-transition {
+    view-transition-name: navigation;
+  }
+
+  .card-transition {
+    view-transition-name: var(--card-name);
+  }
+
+  .image-transition {
+    view-transition-name: page-image;
+  }
+
+  .text-transition {
+    view-transition-name: page-text;
+  }
+
+  /* Smooth page loading */
+  .page-enter {
+    animation: pageEnter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .page-exit {
+    animation: pageExit 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  @keyframes pageEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes pageExit {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.98);
+    }
+  }
+
+  /* Staggered animations for lists and grids - More subtle */
+  .stagger-children > * {
+    animation: staggerFadeIn 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+
+  @keyframes staggerFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Smooth transitions for hover effects */
+  .smooth-hover {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .smooth-hover:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Reduce animations on slow devices */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .stagger-children > *,
+    .smooth-hover {
+      transition: none !important;
+      animation: none !important;
+    }
+    
+    .fade-in {
+      opacity: 1;
+    }
+    
+    .stagger-children > * {
+      opacity: 1;
+    }
+  }
+}
+
+@layer components {
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+  }
+
+  .modal.active {
+    display: block;
+  }
+
+  .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border: 2px solid var(--color-gold);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--color-gold);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .modal-close:hover {
+    opacity: 0.7;
+  }
+}
+
+@layer utilities {
+  /* Accessibility improvements */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Focus visible for keyboard navigation */
+  .focus-visible:focus {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Masonry layout for varied image sizes */
+  .masonry {
+    column-count: 3;
+    column-gap: 2rem;
+    column-fill: balance;
+  }
+
+  .masonry-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2rem;
+    break-inside: avoid;
+  }
+
+  @media (max-width: 1024px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+
+  /* Testimonial cards */
+  .testimonial-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(from var(--color-gold) r g b / 0.3);
+  }
+}
+
+@layer utilities {
+  /* Critical utility classes */
+  .ar-16-9 {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  
+  .ar-16-9 > * {
+    position: absolute;
+    inset: 0;
+  }
+
+  .ar-4-3 {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 aspect ratio */
+  }
+  
+  .ar-4-3 > * {
+    position: absolute;
+    inset: 0;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .grain {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@layer components {
+  /* Accordion */
+  .accordion-content {
+    display: none;
+  }
+  
+  .accordion.open .accordion-content {
+    display: block;
+  }
+  
+  /* Timeline */
+  .timeline-dot {
+    box-shadow: 0 0 0 6px rgb(from var(--color-gold) r g b / 0.18);
+  }
+}
+
+@layer base {
+  /* Typography improvements */
+  h1, h2, h3 { 
+    line-height: 1.2; 
+  }
+  
+  p { 
+    line-height: 1.6; 
+  }
+
+  /* Image optimization - Remove global hover transforms */
+  img {
+    object-fit: cover;
+  }
+}

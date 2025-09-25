@@ -1,0 +1,76 @@
+---
+export interface GalleryImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+export interface Props {
+  title?: string;
+  images?: GalleryImage[];
+  className?: string;
+}
+
+const {
+  title = "Transformation Gallery",
+  images = [
+    {
+      src: "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+      alt: "Kitchen deep clean transformation",
+      caption: "Kitchen Deep Clean"
+    },
+    {
+      src: "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+      alt: "Marble restoration before and after",
+      caption: "Marble Restoration"
+    },
+    {
+      src: "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+      alt: "Living room detail cleaning",
+      caption: "Living Room Detail"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      alt: "Bathroom refresh transformation",
+      caption: "Bathroom Refresh"
+    },
+    {
+      src: "/images/luxury-home/luxurious-chelsea-bedroom.png",
+      alt: "Bedroom sanctuary cleaning",
+      caption: "Bedroom Sanctuary"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      alt: "Office space refresh",
+      caption: "Office Refresh"
+    }
+  ],
+  className = ""
+} = Astro.props;
+---
+
+<section class={`py-24 md:py-32 bg-navy ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 class="font-serif text-3xl md:text-4xl text-white mb-12 text-center">
+      {title}
+    </h2>
+    <div
+      class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4"
+      aria-label="Photo story carousel"
+    >
+      {images.map((image) => (
+        <figure class="snap-start min-w-[320px]">
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="h-56 w-full object-cover rounded-lg border border-gold/50"
+            loading="lazy"
+          />
+          <figcaption class="mt-3 text-center text-gold font-medium">
+            {image.caption}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

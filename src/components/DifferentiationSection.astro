@@ -1,0 +1,117 @@
+---
+export interface DifferentiationFeature {
+  mainIcon: string;
+  smallIcon: string;
+  title: string;
+  description: string;
+}
+
+export interface CustomerStory {
+  title: string;
+  subtitle: string;
+  content: string[];
+  quote: string;
+  footer: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  features?: DifferentiationFeature[];
+  story?: CustomerStory;
+  showStory?: boolean;
+  className?: string;
+  sectionId?: string;
+}
+
+const {
+  title = "Our Difference: Wellness & Concierge Care",
+  subtitle = "We combine wellness expertise with hospitality standards to deliver a distinctly calm and elevated experience.",
+  features = [
+    {
+      mainIcon: "fas fa-leaf",
+      smallIcon: "fas fa-spa",
+      title: "Wellness Expertise",
+      description: "Products screened for skin-sensitivity, air quality, and surface integrity. Results you can feel."
+    },
+    {
+      mainIcon: "fas fa-concierge-bell",
+      smallIcon: "fas fa-key",
+      title: "Concierge Care",
+      description: "Seamless scheduling, key-holding, and discreet communication. Your standards are our standard."
+    }
+  ],
+  story = {
+    title: "The Concierge Standard in Action",
+    subtitle: "Caring for Archie – Because Service Should Feel Like Home",
+    content: [
+      "While away on a trip, one of our Wandsworth clients realised they wouldn't make it back home in time to feed their dog, Archie. They sent us a message. No drama. No stress. Just a simple ask: \"Could you check in on Archie and make sure he's okay?\"",
+      "We were already nearby and stepped in without hesitation. We let ourselves in discreetly, fed and watered Archie, gave him a little attention and comfort, and made sure the space was calm and secure for their return."
+    ],
+    quote: "It's the kind of thing you can't put a price on knowing someone's there, not just to clean, but to care.",
+    footer: "This is cleaning with heart. Not just service — but support that matters."
+  },
+  showStory = true,
+  className = "",
+  sectionId = "differentiation"
+} = Astro.props;
+---
+
+<section id={sectionId} class={`py-20 sm:py-24 bg-navy ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 class="font-serif text-3xl md:text-6xl text-gold">
+      {title}
+    </h2>
+    <p class="mt-4 text-white/70 max-w-3xl text-sm md:text-base">
+      {subtitle}
+    </p>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      {features.map((feature) => (
+        <div
+          class="rounded-2xl bg-white p-8 border border-gold flex items-center gap-6"
+        >
+          <div class="flex items-center justify-center bg-navy/5 rounded-md w-20 h-20 border-2 border-gold">
+            <i class={`${feature.mainIcon} text-gold text-4xl`} aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center justify-center bg-navy/10 rounded-full w-7 h-7 border border-gold">
+                <i class={`${feature.smallIcon} text-gold text-lg`} aria-hidden="true"></i>
+              </span>
+              <h3 class="font-medium text-navy">{feature.title}</h3>
+            </div>
+            <p class="mt-3 text-sm text-navy/70">
+              {feature.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Customer Story -->
+    {showStory && story && (
+      <div class="mt-16 bg-navy rounded-2xl p-8 text-white">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex items-center gap-3 mb-6">
+            <i class="fas fa-star text-gold text-2xl"></i>
+            <h3 class="font-serif text-2xl text-gold">{story.title}</h3>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+            <h4 class="font-semibold text-gold mb-3">{story.subtitle}</h4>
+            {story.content.map((paragraph, index) => (
+              <p class="text-white/90 mb-4" set:html={paragraph}></p>
+            ))}
+            <div class="border-l-4 border-gold pl-4 italic text-gold/80">
+              "{story.quote}"
+            </div>
+            <p class="text-white/80 text-sm mt-4 font-medium">
+              {story.footer}
+            </p>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+</section>

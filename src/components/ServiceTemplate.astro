@@ -1,0 +1,388 @@
+---
+// Define the props interface
+interface Props {
+  service: {
+    hero: {
+      headline: string;
+      subheadline: string;
+      badges: string[];
+      cta: {
+        text: string;
+        url: string;
+      };
+    };
+    trustbar: {
+      logos: Array<{
+        src: string;
+        alt: string;
+      }>;
+      reviews: Array<{
+        text: string;
+        author: string;
+        rating: number;
+      }>;
+    };
+    painpoint: {
+      headline: string;
+      text?: string | string[];
+      painpionts?: Array<{
+        text: string;
+      }>;
+    };
+    serviceExplanation: {
+      headline: string;
+      steps: Array<{
+        icon: string;
+        title: string;
+        description: string;
+      }>;
+    };
+    benefits: {
+      headline: string;
+      bullets: string[];
+    };
+    gallery?: {
+      headline: string;
+      images: Array<{
+        src: string;
+        alt: string;
+        caption?: string;
+      }>;
+    };
+    socialProof: {
+      headline: string;
+      reviews: Array<{
+        text: string;
+        author: string;
+      }>;
+      cta: {
+        text: string;
+        url: string;
+      };
+    };
+    offer: {
+      headline: string;
+      details: string;
+      cta: {
+        text: string;
+        url: string;
+      };
+    };
+    objections: {
+      headline: string;
+      faqs: Array<{
+        question: string;
+        answer: string;
+      }>;
+    };
+    finalCta: {
+      headline: string;
+      cta: {
+        text: string;
+        url: string;
+      };
+      subtext: string;
+    };
+  };
+}
+
+const { service } = Astro.props;
+---
+
+<main class="pt-16 relative">
+  <!-- Hero Section -->
+  <section class="relative bg-navy min-h-[calc(100vh-8rem)] flex items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/60 to-navy/40"></div>
+    <div class="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Star Rating with Lines -->
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <div class="h-px w-8 bg-gold/60"></div>
+          <div class="flex items-center gap-1">
+            {service.hero.badges.map((badge) => (
+              <span class="text-gold text-2xl">★</span>
+            ))}
+          </div>
+          <div class="h-px w-8 bg-gold/60"></div>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gold drop-shadow-2xl leading-tight">
+          {service.hero.headline}
+        </h1>
+        <p class="mt-6 md:mt-4 max-w-3xl mx-auto text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-light drop-shadow-lg">
+          {service.hero.subheadline}
+        </p>
+        <div class="mt-8 md:mt-10 flex justify-center">
+          <a
+            href={service.hero.cta.url}
+            class="inline-flex items-center justify-center rounded-lg bg-gold text-navy px-8 py-4 text-lg md:text-xl font-semibold border-2 border-gold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:bg-gold/90 hover:scale-105"
+          >
+            {service.hero.cta.text}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-white py-8 border-b border-gold/20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-6">
+        <p class="text-sm text-ink/60 font-medium">Trusted by London's most discerning homeowners</p>
+      </div>
+      <div class="flex items-center justify-center gap-8 md:gap-12 opacity-80">
+        {service.trustbar.logos.map((logo) => (
+          <div class="flex items-center gap-2">
+            <div class="w-16 h-16 flex items-center justify-center">
+              <img src={logo.src} alt={logo.alt} class="w-full h-full object-contain" />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Painpoint Intro -->
+  <section class="py-20 sm:py-24 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-serif text-4xl md:text-6xl font-bold text-navy mb-6">
+            {service.painpoint.headline}
+          </h2>
+          {Array.isArray(service.painpoint.text)
+            ? service.painpoint.text.map((paragraph) => (
+                <p class="text-xl text-ink/80 mb-4">{paragraph}</p>
+              ))
+            : <p class="text-xl text-ink/80 mb-4">{service.painpoint.text}</p>
+          }
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] bg-gradient-to-br from-navy/20 to-gold/20 rounded-xl overflow-hidden">
+            <img 
+              src="/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png" 
+              alt="Luxury cleaning transformation" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Explained -->
+  <section class="py-20 sm:py-24 bg-navy text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-serif text-3xl md:text-6xl text-gold mb-4">
+          {service.serviceExplanation.headline}
+        </h2>
+      </div>
+      
+      <!-- Dynamic Step Layout -->
+      <div class="space-y-12">
+        {service.serviceExplanation.steps.map((step, index) => (
+          <div class={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+            <div class={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+              <div class="bg-white/10 backdrop-blur rounded-xl p-8 border border-gold/30">
+                <div class="flex items-center mb-6">
+                  <div class="w-16 h-16 bg-gold rounded-xl flex items-center justify-center mr-6">
+                    <i class={`${step.icon} text-navy text-xl`}></i>
+                  </div>
+                  <h4 class="font-semibold text-gold text-xl">{step.title}</h4>
+                </div>
+                <p class="text-white/80 text-lg leading-relaxed">{step.description}</p>
+              </div>
+            </div>
+            <div class={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+              <div class="aspect-[4/3] bg-gradient-to-br from-gold/20 to-white/10 rounded-xl overflow-hidden">
+                <img 
+                  src={`/images/luxury-home/${index === 0 ? 'Mayfair_penthouse_kitchen_with_beautiful_marble.png' : index === 1 ? 'Belgravia_bathroom_with_beautiful_stone.png' : 'Hyde_Park_apartment_in_the_living_room.png'}`}
+                  alt={`Step ${index + 1}: ${step.title}`}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-20 sm:py-24 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="relative order-2 lg:order-1">
+          <div class="aspect-[4/3] bg-gradient-to-br from-gold/20 to-navy/20 rounded-xl overflow-hidden">
+            <img 
+              src="/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png" 
+              alt="Professional cleaning results" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <h2 class="font-serif text-3xl md:text-6xl text-navy mb-12">
+            {service.benefits.headline}
+          </h2>
+          <div class="grid gap-6">
+            {service.benefits.bullets.map((bullet) => (
+              <div class="flex items-start text-ink/80 text-lg">
+                <i class="fas fa-check-circle text-gold text-xl mr-3 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                <span>{bullet}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section (if provided) -->
+  {service.gallery && (
+    <section class="py-20 sm:py-24 bg-navy">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="font-serif text-3xl md:text-4xl text-white mb-12 text-center">
+          {service.gallery.headline}
+        </h2>
+        <div class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4" aria-label="Transformation gallery">
+          {service.gallery.images.map((image) => (
+            <figure class="snap-start min-w-[320px] flex-shrink-0">
+              <img
+                src={image.src}
+                alt={image.alt}
+                class="h-56 w-full object-cover rounded-lg border border-gold/50"
+                loading="lazy"
+              />
+              {image.caption && (
+                <figcaption class="mt-3 text-center text-gold font-medium">
+                  {image.caption}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Social Proof -->
+  <section class="py-20 sm:py-24 bg-navy text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-serif text-3xl md:text-6xl text-gold mb-12">
+            {service.socialProof.headline}
+          </h2>
+          <div class="grid gap-8">
+            {service.socialProof.reviews.map((review) => (
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                <p class="text-white/90 mb-4">{review.text}</p>
+                <p class="text-gold font-medium">{review.author}</p>
+              </div>
+            ))}
+          </div>
+          <div class="mt-12">
+            <a
+              href={service.socialProof.cta.url}
+              class="inline-flex items-center justify-center rounded-lg bg-gold text-navy px-8 py-4 text-lg font-semibold border-2 border-gold hover:bg-gold/90 transition-all duration-300"
+            >
+              {service.socialProof.cta.text}
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] bg-gradient-to-br from-gold/20 to-white/10 rounded-xl overflow-hidden">
+            <img 
+              src="/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png" 
+              alt="Customer testimonial showcase" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer Section -->
+  <section class="py-20 sm:py-24 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-serif text-3xl md:text-6xl text-navy mb-6">
+            {service.offer.headline}
+          </h2>
+          <p class="text-lg text-ink/70 mb-8">{service.offer.details}</p>
+          <a
+            href={service.offer.cta.url}
+            class="inline-flex items-center justify-center rounded-lg bg-gold text-navy px-8 py-4 text-lg font-semibold border-2 border-gold hover:bg-gold/90 transition-all duration-300"
+          >
+            {service.offer.cta.text}
+          </a>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] bg-gradient-to-br from-navy/20 to-gold/20 rounded-xl overflow-hidden">
+            <img 
+              src="/images/luxury-home/luxurious-chelsea-bedroom.png" 
+              alt="Special offer highlight" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objection Handler -->
+  <section class="py-20 sm:py-24 bg-navy text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="relative order-2 lg:order-1">
+          <div class="aspect-[4/3] bg-gradient-to-br from-white/10 to-gold/20 rounded-xl overflow-hidden">
+            <img 
+              src="/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png" 
+              alt="FAQ support visual" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <h2 class="font-serif text-3xl md:text-6xl text-gold mb-12">
+            {service.objections.headline}
+          </h2>
+          <div class="grid gap-6">
+            {service.objections.faqs.map((faq) => (
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                <h4 class="font-semibold text-gold mb-3">{faq.question}</h4>
+                <p class="text-white/80">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 sm:py-24 bg-white">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-3xl md:text-6xl text-navy mb-6">
+        {service.finalCta.headline}
+      </h2>
+      <a
+        href={service.finalCta.cta.url}
+        class="inline-flex items-center justify-center rounded-lg bg-gold text-navy px-8 py-4 text-lg font-semibold border-2 border-gold hover:bg-gold/90 transition-all duration-300 mb-4"
+      >
+        {service.finalCta.cta.text}
+      </a>
+      <p class="text-sm text-ink/60">{service.finalCta.subtext}</p>
+    </div>
+  </section>
+</main>

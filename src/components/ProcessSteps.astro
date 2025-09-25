@@ -1,0 +1,79 @@
+---
+export interface ProcessStep {
+  icon: string;
+  stepNumber: number;
+  title: string;
+  description: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  steps?: ProcessStep[];
+  className?: string;
+  sectionId?: string;
+  backgroundColor?: string;
+}
+
+const {
+  title = "How It Works",
+  subtitle = "Transparent steps, predictable outcomes, and visuals at each stage.",
+  steps = [
+    {
+      icon: "fas fa-phone-volume",
+      stepNumber: 1,
+      title: "Consult",
+      description: "A short call to understand goals, finishes, and sensitivities."
+    },
+    {
+      icon: "fas fa-person-walking",
+      stepNumber: 2,
+      title: "Walkthrough",
+      description: "Priority mapping and surface assessment."
+    },
+    {
+      icon: "fas fa-broom",
+      stepNumber: 3,
+      title: "Precision Clean",
+      description: "Dedicated team with HEPA filtration and wellness protocols."
+    },
+    {
+      icon: "fas fa-clipboard-check",
+      stepNumber: 4,
+      title: "Handover",
+      description: "Photo report, fragrance preferences, and aftercare notes."
+    }
+  ],
+  className = "",
+  sectionId = "process",
+  backgroundColor = "bg-white"
+} = Astro.props;
+---
+
+<section id={sectionId} class={`py-20 sm:py-24 ${backgroundColor} ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 class="font-serif text-3xl md:text-6xl">{title}</h2>
+    <p class="mt-4 text-ink/70 max-w-3xl text-sm md:text-base">
+      {subtitle}
+    </p>
+
+    <ol
+      class="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
+      role="list"
+    >
+      {steps.map((step) => (
+        <li class="rounded-2xl p-6 border border-gold bg-white">
+          <div class="mx-auto flex items-center justify-center rounded-full border-2 border-gold w-16 h-16 bg-navy/5">
+            <i class={`${step.icon} text-gold text-3xl`}></i>
+          </div>
+          <div class="mt-4 font-medium text-navy">
+            {step.stepNumber}. {step.title}
+          </div>
+          <p class="text-sm text-ink/70">
+            {step.description}
+          </p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

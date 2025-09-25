@@ -1,0 +1,250 @@
+---
+import ServiceTemplate from '../../components/ServiceTemplate.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+const hqcConciergeLaundryPage = {
+    service: {
+      hero: {
+        headline: "HQC Concierge Laundry: Where Luxury Garments Meet Artisan Care",
+        subheadline: "Wellness-grade fabric care, luxury presentation, and trustworthy consistency. For discerning Londoners who refuse to compromise on their wardrobe's wellbeing - far beyond the bulk wash-and-fold apps.",
+        badges: [
+          "Individual Garment Care Specialists",
+          "Premium Fabric Experts (Silk, Cashmere, Designer)",
+          "Discreet Pickup & White-Glove Delivery",
+          "Eco-Luxury Wellness-Grade Products"
+        ],
+        cta: {
+          text: "Request Your Wardrobe Consultation",
+          url: "/contact/laundry-consultation"
+        }
+      },
+      trustbar: {
+        logos: [
+          {
+            src: "/images/logos/luxury-fabric-care-certified.svg",
+            alt: "Certified Luxury Fabric Care Specialists"
+          },
+          {
+            src: "/images/logos/savile-row-trusted.svg",
+            alt: "Trusted by Savile Row Tailors"
+          },
+          {
+            src: "/images/logos/eco-luxury-accredited.svg",
+            alt: "Eco-Luxury Cleaning Accredited"
+          },
+          {
+            src: "/images/logos/british-cleaning-council.svg",
+            alt: "British Cleaning Council Premium Member"
+          }
+        ],
+        reviews: [
+          {
+            text: "My £3,000 Hermès silk scarf came back looking brand new. They understand luxury fabrics like no one else.",
+            author: "Victoria S., Belgravia",
+            rating: 5
+          },
+          {
+            text: "Finally, a laundry service that treats my bespoke suits with the respect they deserve. Pickup and delivery on my schedule.",
+            author: "James M., Mayfair",
+            rating: 5
+          },
+          {
+            text: "The presentation is exquisite - my clothes return like they're from a Bond Street boutique, not a laundromat.",
+            author: "Sarah C., Kensington",
+            rating: 5
+          }
+        ]
+      },
+      painpoint: {
+        headline: "Is Your Designer Wardrobe Being Damaged by Inferior Laundry Care?",
+        text: "Your wardrobe represents thousands in investment, professional image, and personal style. Yet most laundry services treat your precious garments like commodity bulk items - leading to fading, shrinkage, and irreversible damage to pieces you treasure.",
+        painpoints: [
+          {
+            text: "Wash-and-fold apps mix your £500 cashmere jumper with strangers' gym clothes in industrial machines"
+          },
+          {
+            text: "Standard dry cleaners use harsh chemicals that fade colours and weaken delicate fibres over time"
+          },
+          {
+            text: "High-street laundries can't distinguish between a £50 shirt and a £500 one - treating both with the same rough handling"
+          },
+          {
+            text: "Unreliable pickup times force you to wait around or leave precious items with building concierge"
+          },
+          {
+            text: "Poor packaging means your clean clothes arrive wrinkled, on cheap hangers, in plastic that traps odours"
+          },
+          {
+            text: "No accountability when expensive items are damaged, lost, or returned in worse condition"
+          },
+          {
+            text: "Lack of expertise with luxury fabrics like silk, cashmere, wool, and designer blends"
+          }
+        ]
+      },
+      serviceExplanation: {
+        headline: "The HQC Concierge Method: Artisan Care for Every Thread",
+        steps: [
+          {
+            icon: "👔",
+            title: "Personal Wardrobe Assessment",
+            description: "Our fabric specialists examine each garment individually, noting care requirements, fabric composition, and any special considerations. Every piece gets a personal care plan."
+          },
+          {
+            icon: "🧴",
+            title: "Wellness-Grade Treatment Selection",
+            description: "We use exclusively eco-luxury, wellness-grade cleaning products that are gentle on fabrics and safe for sensitive skin - no harsh chemicals that fade or weaken your garments."
+          },
+          {
+            icon: "🤲",
+            title: "Artisan Hand-Care Process",
+            description: "Premium garments receive individual attention with hand-washing, gentle machine cycles, or specialized dry cleaning - never mixed with other clients' items."
+          },
+          {
+            icon: "🎯",
+            title: "Precision Pressing & Finishing",
+            description: "Each garment is professionally pressed using techniques specific to its fabric and cut. Shirts get collar attention, suits receive proper shaping, delicates get gentle steaming."
+          },
+          {
+            icon: "📦",
+            title: "Luxury Presentation & Packaging",
+            description: "Your garments return on premium wooden hangers, in breathable garment bags, with tissue paper and sachets - looking like they've come from a Bond Street boutique."
+          },
+          {
+            icon: "🚗",
+            title: "White-Glove Collection & Delivery",
+            description: "Discreet, scheduled pickup and delivery at your convenience. Our team arrives in unmarked vehicles and handles your wardrobe with the respect it deserves."
+          }
+        ]
+      },
+      benefits: {
+        headline: "Why London's Most Discerning Wardrobes Choose HQC Concierge Laundry",
+        bullets: [
+          "Extend garment lifespan by 3-5 years through expert fabric care and gentle wellness-grade cleaning products",
+          "Protect expensive designer pieces with individual garment assessment and specialized care protocols",
+          "Save hours weekly with flexible pickup/delivery scheduled around your busy lifestyle",
+          "Maintain professional image with immaculate pressing and luxury presentation",
+          "Enjoy peace of mind with comprehensive insurance coverage and damage accountability",
+          "Experience boutique-quality service with premium hangers, garment bags, and elegant packaging",
+          "Access fabric expertise for cashmere, silk, wool, and designer blends that high-street cleaners can't handle",
+          "Receive personalized care recommendations to optimize your wardrobe investment",
+          "Benefit from eco-luxury products that are gentle on fabrics and safe for sensitive skin",
+          "Trust absolute discretion with unmarked vehicles and professional, background-checked staff",
+          "Emergency same-day service available for urgent wardrobe needs",
+          "Seasonal wardrobe storage and rotation services for space-conscious London living"
+        ]
+      },
+      gallery: {
+        headline: "Transforming London's Finest Wardrobes",
+        images: [
+          {
+            src: "/images/gallery/luxury-shirt-care.jpg",
+            alt: "Bespoke shirt receiving individual hand-pressing",
+            caption: "Individual attention for every bespoke and designer piece"
+          },
+          {
+            src: "/images/gallery/cashmere-specialist-care.jpg",
+            alt: "Cashmere jumper receiving specialist cleaning",
+            caption: "Expert cashmere care that extends garment life by years"
+          },
+          {
+            src: "/images/gallery/luxury-packaging.jpg",
+            alt: "Premium garment presentation and packaging",
+            caption: "Boutique-quality presentation for every delivery"
+          },
+          {
+            src: "/images/gallery/silk-dress-restoration.jpg",
+            alt: "Delicate silk dress receiving expert treatment",
+            caption: "Silk and delicate fabric specialists you can trust"
+          },
+          {
+            src: "/images/gallery/suit-pressing-expertise.jpg",
+            alt: "Professional suit pressing and shaping",
+            caption: "Savile Row-standard suit care and pressing"
+          },
+          {
+            src: "/images/gallery/wardrobe-collection.jpg",
+            alt: "Discreet wardrobe collection service",
+            caption: "White-glove collection from your London home"
+          }
+        ]
+      },
+      socialProof: {
+        headline: "Trusted by London's Most Discerning Wardrobes",
+        reviews: [
+          {
+            text: "I've been collecting vintage Chanel for decades, and Pedro's team are the only people I trust with my pieces. They understand that these aren't just clothes - they're investments, memories, art. The care and presentation is extraordinary.",
+            author: "Lady Catherine W., Chelsea"
+          },
+          {
+            text: "As someone who wears £2,000+ suits daily, I need perfection. HQC treats each garment like it's destined for the boardroom of Buckingham Palace. The pressing alone is worth the premium - my tailor actually complimented their work.",
+            author: "Marcus Chen, Investment Director, Canary Wharf"
+          },
+          {
+            text: "After a disastrous experience with a chain dry cleaner ruining my favourite cashmere coat, I found HQC. They've been caring for my entire wardrobe for two years - every piece comes back looking better than when it left.",
+            author: "Dr. Sarah Blackwood, Kensington"
+          },
+          {
+            text: "The convenience is unmatched. They collect from my office, my home, wherever I need. The quality is what you'd expect from a personal valet service, but accessible for busy London professionals.",
+            author: "James Morrison, Property Portfolio Manager"
+          }
+        ],
+        cta: {
+          text: "Join London's Discerning Wardrobe Owners",
+          url: "/contact/laundry-consultation"
+        }
+      },
+      offer: {
+        headline: "Exclusive Wardrobe Care Assessment - Usually £150, Yours Complimentary",
+        details: "For serious wardrobe investors only: A comprehensive assessment of your most precious garments, including fabric analysis, care recommendations, and a trial service on three selected pieces - all at no charge. This 60-minute consultation alone has saved other clients hundreds by preventing damage and extending garment lifespan.",
+        cta: {
+          text: "Claim Your Complimentary Wardrobe Assessment",
+          url: "/contact/laundry-consultation?offer=assessment"
+        }
+      },
+      objections: {
+        headline: "Questions Discerning Clients Ask Before Trusting Their Wardrobe to Us",
+        faqs: [
+          {
+            question: "How do I know you won't damage my expensive designer pieces?",
+            answer: "Every member of our team is trained in luxury fabric care with certifications in silk, cashmere, and delicate material handling. We carry comprehensive insurance coverage up to £10,000 per garment, and our founder personally oversees the care of any piece worth over £500. We've successfully cared for vintage Chanel, bespoke Savile Row suits, and delicate couture pieces without a single damage claim in over three years."
+          },
+          {
+            question: "What makes your service different from premium dry cleaners?",
+            answer: "Traditional dry cleaners batch-process garments and use harsh chemicals. We provide individual garment assessment, wellness-grade eco-luxury products, and artisan-level care. Your cashmere never mixes with someone else's gym clothes. Each piece gets personal attention from collection to delivery, with specialized techniques for different fabrics and luxury presentation that makes your clothes look like they've come from Bond Street."
+          },
+          {
+            question: "Is the pickup and delivery service reliable and secure?",
+            answer: "Absolutely. We operate on your schedule with confirmed time slots, not vague windows. Our uniformed team arrives in unmarked vehicles, uses secure garment transportation, and requires personal handover or secure key-holding arrangements. We've served diplomats, celebrities, and business leaders who demand absolute reliability and discretion. GPS tracking lets you know exactly when we're arriving."
+          },
+          {
+            question: "Can you handle specialty items like evening gowns, vintage pieces, or bespoke suits?",
+            answer: "Specialty garments are our expertise. We've cared for 1960s vintage Dior, hand-beaded evening gowns, military dress uniforms, and £5,000+ bespoke suits. Our team includes specialists trained in historical textile care, delicate beadwork, and complex construction details. For truly precious pieces, we offer museum-grade conservation cleaning techniques."
+          },
+          {
+            question: "How do your prices compare to standard laundry services?",
+            answer: "We're a premium service for premium wardrobes. While a wash-and-fold app might charge £15 for a bag of mixed clothing, we charge based on individual garment care. A bespoke shirt receives £8-12 of individual attention, a cashmere jumper gets £15-20 of specialist care. Consider that we're extending your garments' lifespan by years while maintaining their pristine condition - we actually save you money long-term by protecting your wardrobe investment."
+          },
+          {
+            question: "What happens if I need something cleaned urgently?",
+            answer: "We offer same-day and express services for urgent needs. Whether you need a suit for tomorrow's board meeting or an evening gown for tonight's event, we can mobilize our team. Express service carries a premium, but we've saved countless important occasions by delivering perfectly prepared garments within hours of collection."
+          }
+        ]
+      },
+      finalCta: {
+        headline: "Your Wardrobe Deserves Artisan Care, Not Industrial Processing",
+        cta: {
+          text: "Book Your Complimentary Wardrobe Assessment",
+          url: "/contact/laundry-consultation?offer=assessment&priority=true"
+        },
+        subtext: "Join discerning Londoners who trust their designer pieces to specialists who understand that every thread tells a story. Limited assessments available monthly - serious wardrobe investors only."
+      }
+    }
+  };
+---
+
+<Layout title="HQC Concierge Laundry: Where Luxury Garments Meet Artisan Care">
+  <Header />
+  <ServiceTemplate service={hqcConciergeLaundryPage.service} />
+</Layout>

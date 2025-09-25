@@ -1,0 +1,124 @@
+---
+export interface Qualification {
+  title: string;
+}
+
+export interface Feature {
+  icon: string;
+  text: string;
+}
+
+export interface Props {
+  name?: string;
+  title?: string;
+  biography?: string;
+  image?: string;
+  imageAlt?: string;
+  qualifications?: Qualification[];
+  qualificationsTitle?: string;
+  features?: Feature[];
+  ctaText?: string;
+  ctaLink?: string;
+  className?: string;
+  backgroundColor?: string;
+}
+
+const {
+  name = "Pedro",
+  title = "Meet Pedro",
+  biography = "After a decade serving luxury hospitality, Pedro founded High Quality Cleaning to bring wellness-grade methods and concierge etiquette to private homes. Every detail is considered; every visit is calm, discreet, and precise.",
+  image = "assets/images/pedro.jpg",
+  imageAlt = "Pedro - Founder and luxury service expert",
+  qualifications = [
+    { title: "Bachelor's Degree - Chemical Engineering" },
+    { title: "Masters in Digital Technology Solutions" },
+    { title: "ISO 9001 Lead Auditor (Quality Certification)" },
+    { title: "Certified Quality Auditor (CQA)" },
+    { title: "Chartered Chemical Engineering (ICHemE)" },
+    { title: "Chartered Quality Professional (CQI)" },
+    { title: "Prochem Certified - Upholstery Care (#2025/036)" },
+    { title: "Prochem Certified - Carpet & Rug Care (#2025/132)" },
+    { title: "Wellness Consulting Specialist" }
+  ],
+  qualificationsTitle = "Professional Accreditations",
+  features = [
+    { icon: "fas fa-check-circle", text: "Quiet presence, precise standards" },
+    { icon: "fas fa-check-circle", text: "Surface‑safe methods, long‑term care" },
+    { icon: "fas fa-check-circle", text: "Predictable outcomes, photo handovers" },
+    { icon: "fas fa-check-circle", text: "Engineering precision meets wellness expertise" }
+  ],
+  ctaText = "Speak with Pedro's Team",
+  ctaLink = "#quote",
+  className = "",
+  backgroundColor = "bg-mist"
+} = Astro.props;
+---
+
+<section class={`py-20 sm:py-24 ${backgroundColor} ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="grid md:grid-cols-5 gap-8 items-center md:items-start md:gap-12"
+    >
+      <!-- Founder Image -->
+      <div class="md:col-span-3 flex justify-center items-center">
+        <figure
+          class="rounded-2xl overflow-hidden border border-gold shadow-soft w-[32rem] max-w-full"
+        >
+          <img
+            src={image}
+            alt={imageAlt}
+            class="w-full h-[32rem] object-cover"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+      
+      <!-- Founder Details -->
+      <div class="md:col-span-2">
+        <h2 class="font-serif text-3xl md:text-6xl">{title}</h2>
+        <p class="mt-4 text-ink/80 text-lg md:text-xl">
+          {biography}
+        </p>
+        
+        <!-- Professional Qualifications -->
+        {qualifications.length > 0 && (
+          <div class="mt-6 bg-white/50 rounded-xl p-4 border border-gold/20">
+            <h3 class="font-semibold text-navy mb-3">{qualificationsTitle}</h3>
+            <div class="grid md:grid-cols-2 gap-3 text-sm text-ink/70">
+              {qualifications.map((qualification) => (
+                <div class="flex items-center">
+                  <span class="w-2 h-2 bg-gold rounded-full mr-2"></span>
+                  {qualification.title}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Features/Benefits -->
+        {features.length > 0 && (
+          <div class="mt-6 space-y-3">
+            {features.map((feature) => (
+              <div class="flex items-center text-ink/80 text-lg">
+                <i class={`${feature.icon} text-gold text-xl mr-3`} aria-hidden="true"></i>
+                <span>{feature.text}</span>
+              </div>
+            ))}
+          </div>
+        )}
+        
+        <!-- CTA Button -->
+        {ctaText && ctaLink && (
+          <div class="mt-6">
+            <a
+              href={ctaLink}
+              class="inline-flex items-center rounded-md bg-navy text-white px-4 py-2 text-sm border border-gold"
+            >
+              {ctaText}
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

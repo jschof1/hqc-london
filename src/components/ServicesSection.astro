@@ -1,0 +1,225 @@
+---
+export interface ServiceFeature {
+  text: string;
+  color?: string;
+}
+
+export interface ServiceTier {
+  name: string;
+  subtitle: string;
+  description: string;
+  suitabilityFor: string;
+  notSuitableFor: string;
+  features: ServiceFeature[];
+  ctaText: string;
+  ctaLink: string;
+  icon: string;
+  isPopular?: boolean;
+  isFlagship?: boolean;
+  cardColor: string;
+  ctaColor: string;
+}
+
+export interface TrustIndicator {
+  text: string;
+  icon: string;
+}
+
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  serviceTiers?: ServiceTier[];
+  showTrustIndicators?: boolean;
+  trustIndicators?: TrustIndicator[];
+  mainCtaText?: string;
+  mainCtaLink?: string;
+  className?: string;
+  sectionId?: string;
+  backgroundColor?: string;
+}
+
+const {
+  title = "Choose Your Perfect Clean",
+  subtitle = "Three meticulously designed programmes, each tailored to your home, schedule, and lifestyle preferences",
+  serviceTiers = [
+    {
+      name: "Essentials Clean™",
+      subtitle: "A pristine reset for everyday peace of mind",
+      description: "Ideal for busy professionals and families",
+      suitabilityFor: "Professionals, short lets, lighter-use homes",
+      notSuitableFor: "Deep grime, sensitive spaces, detailed upkeep needs",
+      features: [
+        { text: "Standard home cleaning", color: "gold" },
+        { text: "Kitchen & bathroom hygiene", color: "gold" },
+        { text: "Dusting, hoovering, bins", color: "gold" },
+        { text: "Light refresh of main spaces", color: "gold" },
+        { text: "Floors mopped & rubbish emptied", color: "gold" }
+      ],
+      ctaText: "Get Started",
+      ctaLink: "#quote",
+      icon: "M2.25 12 8.954 3.045c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25",
+      cardColor: "gold",
+      ctaColor: "bg-gold text-navy"
+    },
+    {
+      name: "Signature Clean™",
+      subtitle: "Our most requested – deeper detail, care, and attention",
+      description: "Tailored to your lifestyle",
+      suitabilityFor: "Busy households, luxury lets, weekly service clients",
+      notSuitableFor: "Homes needing post-renovation care or wellness deep cleans",
+      features: [
+        { text: "Everything in Essentials, plus:", color: "navy" },
+        { text: "Deeper attention to detail", color: "navy" },
+        { text: "Interior windows & upholstery vacuuming", color: "navy" },
+        { text: "Inside fridge & microwave", color: "navy" },
+        { text: "Premium finishing touches", color: "navy" },
+        { text: "Linen changed (on request)", color: "navy" },
+        { text: "Scented finishing touches", color: "navy" }
+      ],
+      ctaText: "Choose Signature",
+      ctaLink: "#quote",
+      icon: "m9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z",
+      isPopular: true,
+      cardColor: "navy",
+      ctaColor: "bg-navy text-white"
+    },
+    {
+      name: "WellClean™",
+      subtitle: "Flagship Wellness Offering",
+      description: "For wellness studios, spa clients, luxury homes",
+      suitabilityFor: "Wellness-focused residents, pre/post-event cleans, allergy-sensitive homes",
+      notSuitableFor: "Budget-conscious or maintenance-only clients",
+      features: [
+        { text: "Everything in Signature, plus:", color: "gold" },
+        { text: "Steam or chemical-free options", color: "gold" },
+        { text: "Spa-grade sanitisation of touchpoints", color: "gold" },
+        { text: "Aromatherapy scenting (optional)", color: "gold" },
+        { text: "Personalised cleaner briefing", color: "gold" },
+        { text: "Deep degreasing & eco-conscious disinfecting", color: "gold" },
+        { text: "High dusting & detailing of fixtures", color: "gold" }
+      ],
+      ctaText: "Go WellClean™",
+      ctaLink: "#quote",
+      icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
+      isFlagship: true,
+      cardColor: "gold",
+      ctaColor: "bg-gold text-navy"
+    }
+  ],
+  showTrustIndicators = true,
+  trustIndicators = [
+    { text: "Fully Insured", icon: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" },
+    { text: "Background Checked", icon: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" },
+    { text: "100% Satisfaction Guarantee", icon: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" }
+  ],
+  mainCtaText = "Request Personalised Quote",
+  mainCtaLink = "#quote",
+  className = "",
+  sectionId = "services",
+  backgroundColor = "bg-white"
+} = Astro.props;
+---
+
+<section id={sectionId} class={`py-20 sm:py-24 ${backgroundColor} ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="font-serif text-4xl md:text-6xl font-bold text-navy mb-4">
+        {title.split(' ').slice(0, -1).join(' ')} 
+        <span class="text-gold">
+          {title.split(' ').slice(-1)[0]}
+        </span>
+      </h2>
+      <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Service Tiers -->
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
+      {serviceTiers.map((tier) => (
+        <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
+          <!-- Popular/Flagship Badge -->
+          {tier.isPopular && (
+            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-navy text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
+          )}
+          {tier.isFlagship && (
+            <div class="absolute -top-3 right-4 bg-gradient-to-r from-gold to-yellow-500 text-navy px-3 py-1 rounded-full text-xs font-bold">FLAGSHIP</div>
+          )}
+          
+          <!-- Icon -->
+          <div class="flex items-start justify-between mb-6">
+            <div class={`tier-icon w-20 h-20 bg-${tier.cardColor} rounded-2xl flex items-center justify-center shadow-lg`}>
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={tier.icon}/>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Content -->
+          <div class="mb-6">
+            <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+              {tier.name}
+            </h3>
+            <p class="text-gray-600 font-medium mb-2">
+              {tier.subtitle}
+            </p>
+            <p class="text-sm text-gray-500 italic">
+              {tier.description}
+            </p>
+            <div class="mt-3 text-sm font-medium text-navy">
+              For: {tier.suitabilityFor}<br>
+              Not suitable for: {tier.notSuitableFor}
+            </div>
+          </div>
+
+          <!-- Features -->
+          <ul class="space-y-3 mb-8">
+            {tier.features.map((feature) => (
+              <li class="feature-item text-sm text-gray-700 flex items-center">
+                <span class={`w-2 h-2 bg-${feature.color} rounded-full mr-3`}></span>
+                {feature.text}
+              </li>
+            ))}
+          </ul>
+
+          <!-- CTA -->
+          <a href={tier.ctaLink} class={`inline-flex items-center justify-center w-full px-6 py-3 ${tier.ctaColor} font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105`}>
+            {tier.ctaText}
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Main CTA -->
+    <div class="mt-10 flex justify-center">
+      <a href={mainCtaLink} class="inline-flex items-center px-8 py-4 bg-gold text-navy font-semibold rounded-md border border-gold hover:bg-gold/90 transition-all duration-300 shadow-soft hover:shadow-lg transform hover:scale-105 text-lg">
+        {mainCtaText}
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Trust Indicators -->
+    {showTrustIndicators && trustIndicators.length > 0 && (
+      <div class="mt-16 text-center">
+        <div class="flex items-center justify-center space-x-8 text-sm text-gray-500">
+          {trustIndicators.map((indicator) => (
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d={indicator.icon} clip-rule="evenodd"/>
+              </svg>
+              {indicator.text}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+  </div>
+</section>

@@ -1,0 +1,193 @@
+---
+export interface AreaLocation {
+  name: string;
+  postcode: string;
+  link?: string;
+}
+
+export interface AreaImage {
+  src: string;
+  alt: string;
+  caption: string;
+  link?: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  areasListText?: string;
+  mapImage?: string;
+  mapImageAlt?: string;
+  surreyTitle?: string;
+  surreyLocations?: AreaLocation[];
+  featuredAreas?: AreaImage[];
+  mobileAreas?: AreaImage[];
+  className?: string;
+  sectionId?: string;
+  backgroundColor?: string;
+}
+
+const {
+  title = "Areas We Serve",
+  subtitle = "Central and prime West London postcodes, plus select Surrey locations including Weybridge, Hersham, and Walton-on-Thames. If your area isn't listed, enquire—our concierge team can advise availability.",
+  areasListText = "Belgravia • Chelsea • Kensington • Mayfair • Knightsbridge • Surrey",
+  mapImage = "assets/images/london.jpg",
+  mapImageAlt = "London map showing luxury neighborhoods",
+  surreyTitle = "Now Serving Select Surrey Locations",
+  surreyLocations = [
+    {
+      name: "Weybridge",
+      postcode: "St Georges Hill KT13",
+      link: "areas/weybridge.html"
+    },
+    {
+      name: "Hersham", 
+      postcode: "Burwood Park KT12",
+      link: "areas/hersham.html"
+    },
+    {
+      name: "Walton-on-Thames",
+      postcode: "Ashley Park KT12",
+      link: "areas/walton-on-thames.html"
+    }
+  ],
+  featuredAreas = [
+    {
+      src: "assets/images/belgravia.jpg",
+      alt: "Belgravia luxury Georgian architecture",
+      caption: "Belgravia SW1",
+      link: "areas/belgravia.html"
+    },
+    {
+      src: "assets/images/chelsea.jpg",
+      alt: "Chelsea luxury townhouses and tree-lined streets", 
+      caption: "Chelsea SW3",
+      link: "areas/chelsea.html"
+    },
+    {
+      src: "assets/images/kensington.jpg",
+      alt: "Kensington elegant Victorian mansions",
+      caption: "Kensington W8"
+    }
+  ],
+  mobileAreas = [
+    {
+      src: "https://placehold.co/150x80/",
+      alt: "Belgravia",
+      caption: "SW1"
+    },
+    {
+      src: "https://placehold.co/150x80/",
+      alt: "Chelsea", 
+      caption: "SW3"
+    },
+    {
+      src: "https://placehold.co/150x80/",
+      alt: "Kensington",
+      caption: "W8"
+    }
+  ],
+  className = "",
+  sectionId = "areas",
+  backgroundColor = "bg-white"
+} = Astro.props;
+---
+
+<section id={sectionId} class={`py-20 sm:py-24 ${backgroundColor} ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between gap-6">
+      <h2 class="font-serif text-3xl md:text-6xl">{title}</h2>
+      <div class="hidden md:flex gap-3 text-sm text-ink/60">
+        {areasListText}
+      </div>
+    </div>
+    <p class="mt-2 text-ink/70 max-w-3xl text-sm md:text-base">
+      {subtitle}
+    </p>
+
+    <!-- Surrey Areas Highlight -->
+    {surreyLocations.length > 0 && (
+      <div class="mt-8 bg-gradient-to-r from-gold/10 to-navy/10 rounded-xl p-6 border border-gold/30">
+        <h3 class="font-semibold text-navy mb-3">{surreyTitle}</h3>
+        <div class="grid md:grid-cols-3 gap-4 text-sm text-ink/70">
+          {surreyLocations.map((location) => (
+            <div class="flex items-center">
+              <span class="w-2 h-2 bg-gold rounded-full mr-2"></span>
+              <div>
+                {location.link ? (
+                  <a href={location.link}>
+                    <div class="font-medium">{location.name}</div>
+                  </a>
+                ) : (
+                  <div class="font-medium">{location.name}</div>
+                )}
+                <div class="text-xs">{location.postcode}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div
+      class="mt-12 grid gap-8 md:grid-cols-2 items-stretch md:items-start"
+    >
+      <!-- Map (navy base layer) -->
+      <div class="md:col-span-1 order-2 md:order-1">
+        <div
+          class="rounded-xl overflow-hidden border border-gold aspect-[4/3] bg-navy grid place-items-center"
+        >
+          <img
+            src={mapImage}
+            alt={mapImageAlt}
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Featured Areas Gallery (Desktop) -->
+      <div class="order-1 md:order-2 space-y-8">
+        {featuredAreas.map((area) => (
+          <figure
+            class="relative rounded-xl overflow-hidden border border-gold"
+          >
+            {area.link && <a href={area.link}></a>}
+            <img
+              src={area.src}
+              alt={area.alt}
+              class="w-full h-40 object-cover"
+              loading="lazy"
+            />
+            <figcaption
+              class="absolute bottom-2 left-2 bg-navy/80 text-gold backdrop-blur rounded px-2 py-1 text-xs border border-gold"
+            >
+              {area.caption}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <!-- Mobile stacked gallery -->
+      <div class="md:hidden order-3">
+        <div class="grid grid-cols-3 gap-4">
+          {mobileAreas.map((area) => (
+            <div class="relative">
+              <img
+                src={area.src}
+                alt={area.alt}
+                class="w-full h-20 object-cover rounded border border-gold"
+                loading="lazy"
+              />
+              <span
+                class="absolute bottom-1 left-1 text-[10px] bg-navy/80 text-gold rounded px-1 border border-gold"
+              >
+                {area.caption}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

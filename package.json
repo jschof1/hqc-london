@@ -1,0 +1,41 @@
+{
+  "name": "hqc-london",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "High Quality Cleaning London website with Astro and Tailwind CSS",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate:all": "node scripts/generate-area-pages.js all",
+    "generate:single": "node scripts/generate-area-pages.js single",
+    "list": "node scripts/generate-area-pages.js list",
+    "validate": "node scripts/generate-area-pages.js validate",
+    "help": "node scripts/generate-area-pages.js"
+  },
+  "keywords": [
+    "astro",
+    "tailwindcss",
+    "cleaning-services",
+    "london",
+    "seo",
+    "luxury-cleaning"
+  ],
+  "author": "High Quality Cleaning",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.10",
+    "tailwindcss": "^4.1.13"
+  },
+  "directories": {
+    "data": "data",
+    "templates": "templates",
+    "scripts": "scripts",
+    "output": "areas"
+  }
+}

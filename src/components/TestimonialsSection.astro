@@ -1,0 +1,124 @@
+---
+export interface Testimonial {
+  name: string;
+  avatar: string;
+  avatarAlt: string;
+  title: string;
+  quote: string;
+  subtitle: string;
+  rating: number;
+}
+
+export interface Props {
+  headerText?: string;
+  testimonials?: Testimonial[];
+  className?: string;
+  backgroundColor?: string;
+  ariaLabel?: string;
+}
+
+const {
+  headerText = "Trusted by residents of Mayfair, Belgravia & Kensington",
+  testimonials = [
+    {
+      name: "Neylan",
+      avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=48&h=48&fit=crop&crop=face&q=80",
+      avatarAlt: "Neylan - satisfied client",
+      title: "Trusted Recommendation",
+      quote: "Pedro's care and attention to detail exceeded my expectations. It's rare to get both great customer care and a job well done but that's exactly what they delivered.",
+      subtitle: "From skepticism to satisfaction - now recommends with full confidence",
+      rating: 5
+    },
+    {
+      name: "Myreete",
+      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=48&h=48&fit=crop&crop=face&q=80",
+      avatarAlt: "Myreete - satisfied client",
+      title: "Returning Client",
+      quote: "I wasn't 100% sure if this was a real service... They cleaned the heck out of my house. They were AWESOME!",
+      subtitle: "From \"Is this real?\" to \"We need them back\" - now part of the HQC family",
+      rating: 5
+    },
+    {
+      name: "Lucy",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=face&q=80",
+      avatarAlt: "Lucy - satisfied client",
+      title: "Deep Clean Client",
+      quote: "Absolutely blown away by the service… the property looks completely different! 110% recommend — thank you so much!",
+      subtitle: "Exceptional standard with a delightful team",
+      rating: 5
+    },
+    {
+      name: "Ozlem",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face&q=80",
+      avatarAlt: "Ozlem - satisfied client",
+      title: "5-Star Experience",
+      quote: "My most satisfied cleaning experience. Pedro is incredibly polite and extremely respectful of his work. I've never seen such attention to detail.",
+      subtitle: "Care put into every step - hopes to continue the relationship",
+      rating: 5
+    },
+    {
+      name: "Tawfeeq",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face&q=80",
+      avatarAlt: "Tawfeeq - satisfied client",
+      title: "Return Client",
+      quote: "They clean from the heart and take their time on it. I really do recommend them.",
+      subtitle: "Second visit - the best service he's received",
+      rating: 5
+    }
+  ],
+  className = "",
+  backgroundColor = "bg-navy",
+  ariaLabel = "Client testimonials"
+} = Astro.props;
+
+// Generate star rating
+const generateStars = (rating: number) => {
+  return Array.from({ length: rating }, (_, i) => '★').join('');
+};
+---
+
+<section
+  class={`relative py-16 sm:py-20 ${backgroundColor} text-white ${className}`}
+  aria-label={ariaLabel}
+>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex items-center gap-3 mb-6 md:mb-8 text-gold text-sm"
+    >
+      <div class="h-px w-8 bg-gold/60"></div>
+      {headerText}
+    </div>
+
+    <div
+      class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory"
+      role="list"
+    >
+      {testimonials.map((testimonial) => (
+        <article
+          class="min-w-[320px] max-w-md snap-start rounded-xl bg-navy border border-gold p-6"
+          role="listitem"
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <img
+              src={testimonial.avatar}
+              width="48"
+              height="48"
+              alt={testimonial.avatarAlt}
+              class="rounded-full object-cover border-2 border-gold"
+            />
+            <div>
+              <div class="font-medium text-gold">{testimonial.name}</div>
+              <div class="text-xs text-white/70">{testimonial.title}</div>
+            </div>
+          </div>
+          <div class="text-sm text-white/90 mb-3" set:html={`"${testimonial.quote}"`}>
+          </div>
+          <div class="text-xs text-gold/80 italic mb-2">{testimonial.subtitle}</div>
+          <div class="text-gold" aria-label={`${testimonial.rating} stars`}>
+            {generateStars(testimonial.rating)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

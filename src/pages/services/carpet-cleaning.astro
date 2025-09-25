@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import ServiceTemplate from '../../components/ServiceTemplate.astro';
+
+const carpetCleaningService = {
+  hero: {
+    headline: "Professional Carpet Cleaning in London",
+    subheadline: "Restore your carpets to pristine condition with our premium, eco-conscious cleaning service",
+    badges: ["★", "★", "★", "★", "★"],
+    cta: {
+      text: "Get Your Free Quote",
+      url: "#quote"
+    }
+  },
+  trustbar: {
+    logos: [
+      {
+        src: "/assets/images/checkatrade.png",
+        alt: "Checkatrade"
+      },
+      {
+        src: "/assets/images/yell.png",
+        alt: "Yell"
+      }
+    ],
+    reviews: [
+      {
+        text: "Exceptional service, my carpets look brand new",
+        author: "Sarah in Chelsea",
+        rating: 5
+      }
+    ]
+  },
+  painpoint: {
+    headline: "Your Carpets Deserve More Than Just a Clean",
+    text: "From wine spills to everyday wear, we understand the challenges of maintaining luxury carpets in London homes. Our service doesn't just clean - it revitalizes, protects, and extends the life of your investment."
+  },
+  serviceExplanation: {
+    headline: "Our Premium Carpet Cleaning Process",
+    steps: [
+      {
+        icon: "fas fa-magnifying-glass",
+        title: "Expert Assessment",
+        description: "We analyze your carpet's fabric, age, and condition to determine the perfect cleaning approach"
+      },
+      {
+        icon: "fas fa-spray-can-sparkles",
+        title: "Deep Extraction",
+        description: "Our advanced hot water extraction method removes deep-seated dirt and allergens"
+      },
+      {
+        icon: "fas fa-shield-heart",
+        title: "Protective Finish",
+        description: "We apply a protective coating to guard against future stains and wear"
+      }
+    ]
+  },
+  benefits: {
+    headline: "Why Choose Our Carpet Cleaning Service?",
+    bullets: [
+      "Extends carpet life by removing damaging grit and debris",
+      "Improves indoor air quality by eliminating allergens",
+      "Eco-friendly products safe for children and pets",
+      "Same-day service available for urgent needs",
+      "Fully insured and guaranteed service",
+      "Expert care for delicate and luxury carpets"
+    ]
+  },
+  socialProof: {
+    headline: "What Our Clients Say",
+    reviews: [
+      {
+        text: "The attention to detail was impressive. They even got out stains that previous cleaners couldn't touch.",
+        author: "James, Kensington"
+      },
+      {
+        text: "Professional, punctual, and perfect results. My carpets look and smell amazing.",
+        author: "Emma, Mayfair"
+      }
+    ],
+    cta: {
+      text: "Read More Reviews",
+      url: "#reviews"
+    }
+  },
+  offer: {
+    headline: "Special Introductory Offer",
+    details: "Book your first carpet cleaning service and receive our premium protective coating treatment at no extra cost - a £95 value!",
+    cta: {
+      text: "Claim This Offer",
+      url: "#quote"
+    }
+  },
+  objections: {
+    headline: "Common Questions",
+    faqs: [
+      {
+        question: "How long does the cleaning process take?",
+        answer: "Most rooms take 30-45 minutes. We recommend allowing 4-6 hours for carpets to fully dry."
+      },
+      {
+        question: "Are your products safe for delicate carpets?",
+        answer: "Yes, we use pH-balanced, wool-safe products specifically formulated for luxury carpets."
+      },
+      {
+        question: "Do you guarantee stain removal?",
+        answer: "We can remove most stains. During our assessment, we'll identify any challenging stains and discuss expected results."
+      }
+    ]
+  },
+  finalCta: {
+    headline: "Ready to Transform Your Carpets?",
+    cta: {
+      text: "Book Your Premium Clean",
+      url: "#quote"
+    },
+    subtext: "Satisfaction guaranteed or we'll re-clean for free"
+  }
+};
+---
+
+<Layout title="Professional Carpet Cleaning London | High Quality Cleaning">
+  <Header />
+  <ServiceTemplate service={carpetCleaningService} />
+</Layout>

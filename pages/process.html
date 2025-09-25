@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="High Quality Clean — How It Works. A curated, wellness-focused, concierge-level process that delivers emotional calm through cleanliness." />
+    <title>How It Works — High Quality Clean</title>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Inter var"', 'ui-sans-serif', 'system-ui'],
+              serif: ['"Cormorant Garamond"', 'serif'],
+            },
+            colors: {
+              ink: '#0E0E10',
+              mist: '#F7F7F9',
+              gold: '#C9A961',
+              navy: '#2C3E50',
+              night: '#1c2833',
+            },
+            boxShadow: {
+              soft: '0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06)',
+            },
+            borderRadius: {
+              xl2: '1.25rem',
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Critical CSS inlined for performance */
+      .ar-16-9 {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+      }
+      .ar-16-9 > * {
+        position: absolute;
+        inset: 0;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .accordion-content {
+        display: none;
+      }
+      .accordion.open .accordion-content {
+        display: block;
+      }
+      .timeline-dot {
+        box-shadow: 0 0 0 6px rgba(201, 169, 97, 0.18);
+      }
+      .grain {
+        background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        background-size: 3px 3px;
+      }
+      
+      /* Typography improvements */
+      h1, h2, h3 { line-height: 1.2; }
+      p { line-height: 1.6; }
+      
+
+      
+      /* Image optimization */
+      img {
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      img:hover {
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+
+  <body class="bg-mist text-ink antialiased">
+    <!-- Header -->
+    <header class="fixed inset-x-0 top-0 z-40 backdrop-blur supports-backdrop-blur:bg-navy/85 bg-navy/95 border-b border-gold">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-white">
+        <a href="index.html" class="flex items-center gap-3">
+          <span class="font-serif text-xl tracking-wide text-gold">High Quality Cleaning</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="services.html" class="hover:text-gold text-white transition-colors">Service Tiers</a>
+          <a href="why-us.html" class="hover:text-gold text-white transition-colors">Why Us</a>
+          <a href="areas.html" class="hover:text-gold text-white transition-colors">Areas</a>
+          <a href="process.html" class="hover:text-gold text-white transition-colors">Process</a>
+          <a href="case-studies-detailed.html" class="hover:text-gold text-white transition-colors">Case Studies</a>
+          <a
+            href="index.html#quote"
+            class="inline-flex items-center rounded-md bg-gold text-navy px-4 py-2 border border-gold btn-hover focus-visible"
+          >
+            Request a Personalised Quote
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <!-- Page Header -->
+      <section class="bg-navy relative">
+        <div class="ar-16-9">
+          <img
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+            alt="Luxury home interior with professional cleaning service"
+            class="w-full h-full object-cover opacity-30"
+            fetchpriority="high"
+          />
+          <div class="absolute inset-0 flex items-end pb-10 md:pb-16 px-4 sm:px-6 lg:px-8 grain">
+            <div class="mx-auto max-w-5xl w-full">
+              <h1 class="font-serif text-3xl md:text-5xl text-gold">
+                A Curated Process. Calm, By Design.
+              </h1>
+              <p class="mt-4 text-white/85 text-sm md:text-base max-w-3xl leading-relaxed">
+                This isn't a rushed transaction — it's a bespoke, consultative experience for homes that demand discretion, expertise and immaculate outcomes.
+              </p>
+
+              <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href="index.html#quote" class="inline-flex items-center rounded-md bg-gold text-navy px-4 py-2 border border-gold btn-hover focus-visible">Start Your Personalised Service Design</a>
+                <a href="https://wa.me/07824390336" target="_blank" rel="noopener nofollow" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; color: #C9A961; font-size: 0.875rem; background-color: transparent; transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.backgroundColor='transparent'">
+                  <i class="fab fa-whatsapp mr-2"></i>Speak to Our Team on WhatsApp
+                </a>
+              </div>
+
+              <div class="mt-6 flex items-center gap-4 text-xs text-white/70 flex-wrap">
+                <span class="inline-flex items-center gap-2">
+                  <i class="fas fa-shield-alt text-gold border border-gold rounded p-1"></i>
+                  £5M Insurance
+                </span>
+                <span class="h-3 w-px bg-white/30"></span>
+                <span class="inline-flex items-center gap-2">
+                  <i class="fas fa-id-card text-gold border border-gold rounded p-1"></i>
+                  100% DBS‑checked
+                </span>
+                <span class="h-3 w-px bg-white/30"></span>
+                <span class="inline-flex items-center gap-2">
+                  <i class="fas fa-user-secret text-gold border border-gold rounded p-1"></i>
+                  Discretion Agreements Available
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Intro -->
+      <section class="py-12 md:py-16 bg-mist">
+        <div class="mx-auto max-w-4xl px-6">
+          <p class="text-ink/85 text-base leading-relaxed">
+            We serve clients who expect precision and peace of mind. Our process reduces anxiety, protects valuable finishes, and creates emotional calm through cleanliness — without asking you to manage the details.
+          </p>
+        </div>
+      </section>
+
+      <!-- Timeline Indicator -->
+      <section class="bg-mist py-24 md:py-32 font-serif">
+        <div class="mx-auto max-w-5xl px-6">
+          <div class="relative">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8">
+              <div class="flex md:block items-center gap-4">
+                <span class="text-6xl md:text-7xl font-extrabold text-gold md:block md:mb-4">1</span>
+                <span class="text-3xl md:text-4xl text-navy md:block md:mt-4 font-bold">Consult</span>
+              </div>
+              <div class="flex md:block items-center gap-4">
+                <span class="text-6xl md:text-7xl font-extrabold text-gold md:block md:mb-4">2</span>
+                <span class="text-3xl md:text-4xl text-navy md:block md:mt-4 font-bold">Design</span>
+              </div>
+              <div class="flex md:block items-center gap-4">
+                <span class="text-6xl md:text-7xl font-extrabold text-gold md:block md:mb-4">3</span>
+                <span class="text-3xl md:text-4xl text-navy md:block md:mt-4 font-bold">Assign</span>
+              </div>
+              <div class="flex md:block items-center gap-4">
+                <span class="text-6xl md:text-7xl font-extrabold text-gold md:block md:mb-4">4</span>
+                <span class="text-3xl md:text-4xl text-navy md:block md:mt-4 font-bold">Deliver</span>
+              </div>
+              <div class="flex md:block items-center gap-4">
+                <span class="text-6xl md:text-7xl font-extrabold text-gold md:block md:mb-4">5</span>
+                <span class="text-3xl md:text-4xl text-navy md:block md:mt-4 font-bold">Assure</span>
+              </div>
+              <div class="flex md:block items-center gap-4">
+                <span class="text-6xl md:text-7xl font-extrabold text-gold md:block md:mb-4">6</span>
+                <span class="text-3xl md:text-4xl text-navy md:block md:mt-4 font-bold">Evolve</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Steps -->
+      <section class="py-14 md:py-18 bg-mist">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-28">
+          <!-- Step 1 -->
+          <article class="grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold bg-white shadow-soft">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Professional consultation discussing luxury home cleaning needs"
+                class="w-full h-64 md:h-80 object-cover rounded-xl border border-navy/30"
+                loading="lazy"
+              />
+              <p class="mt-4 text-sm italic text-gold">
+                "They listened first, then designed around our life." — Victoria S., Belgravia
+              </p>
+            </div>
+            <div class="max-w-xl">
+              <h2 class="font-serif text-2xl md:text-3xl text-navy">1. Initial Consultation</h2>
+              <p class="mt-4 text-ink/80 leading-relaxed">
+                We begin with a discreet conversation to understand your priorities, finishes, sensitivities, access requirements, and schedule. We assess how you live in the space and the level of calm you want to feel when you return.
+              </p>
+              <ul class="mt-4 text-ink/80 text-sm space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  We assess materials, layouts, and traffic patterns.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  We discuss valuables, artworks, and specialty requirements.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  We schedule around travel, meetings, and quiet hours — early, late, or in your absence.
+                </li>
+              </ul>
+              <div class="mt-4 text-xs text-ink/60">
+                <i class="fas fa-clock text-gold mr-1"></i>
+                Typical timeframe: 10–20 minutes by phone or WhatsApp. Optional on‑site walkthrough for complex properties.
+              </div>
+              <div class="mt-6 flex gap-2">
+                <a href="index.html#quote" class="inline-flex items-center rounded-md bg-gold text-navy px-4 py-2 border border-gold btn-hover focus-visible">Start Your Personalised Service Design</a>
+                <a href="tel:+442033425260" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; font-size: 0.875rem; color: #C9A961; background-color: white; transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.05)'" onmouseout="this.style.backgroundColor='white'">
+                  <i class="fas fa-phone mr-2"></i>Speak to Our Team
+                </a>
+              </div>
+              <div class="mt-4 text-xs text-ink/60">
+                <i class="fas fa-shield-alt text-gold mr-1"></i>
+                Trust: 100% DBS‑checked team. £5M insurance. Discretion agreements available.
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold bg-mist">
+            <div class="md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Bespoke service planning and product selection for luxury homes"
+                class="w-full h-64 md:h-80 object-cover rounded-xl border border-navy/30"
+                loading="lazy"
+              />
+              <p class="mt-4 text-sm italic text-gold md:text-right">
+                "They created a plan that protected our marble and brass." — Sarah B., Kensington
+              </p>
+            </div>
+            <div class="md:order-1 max-w-xl">
+              <h2 class="font-serif text-2xl md:text-3xl text-navy">2. Tailored Service Design</h2>
+              <p class="mt-4 text-ink/80 leading-relaxed">
+                We design a bespoke protocol for your property — not a one‑size‑fits‑all checklist. From eco‑sensitive chemistry to finish‑safe tools, every decision serves the outcome you value.
+              </p>
+              <ul class="mt-4 text-ink/80 text-sm space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Custom cleaning protocols per room and material.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Product selection: skin‑safe, fragrance‑optional.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Special‑attention map for high‑touch and display areas.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Tier recommendation (Essentials, Signature, WellClean™) with clear reasoning.
+                </li>
+              </ul>
+              <div class="mt-4 text-xs text-ink/60">
+                <i class="fas fa-clock text-gold mr-1"></i>
+                Typical timeframe: 24–48 hours for written proposal after consult/walkthrough.
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold bg-white shadow-soft">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Professional cleaning team preparation and briefing"
+                class="w-full h-64 md:h-80 object-cover rounded-xl border border-navy/30"
+                loading="lazy"
+              />
+              <p class="mt-4 text-sm italic text-gold">
+                "Same team, same standards, every time." — James M., Property Manager
+              </p>
+            </div>
+            <div class="max-w-xl">
+              <h2 class="font-serif text-2xl md:text-3xl text-navy">3. Team Assignment & Preparation</h2>
+              <p class="mt-4 text-ink/80 leading-relaxed">
+                Your service is delivered by a consistent, DBS‑checked team trained in luxury materials and confidentiality. Before we arrive, we brief on your preferences, access, and protocols.
+              </p>
+              <ul class="mt-4 text-ink/80 text-sm space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  DBS‑checked, insured, and bonded professionals.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Team brief: priorities, materials, access and etiquette.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Discretion and confidentiality protocols observed.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Equipment and product kit prepared per your plan.
+                </li>
+              </ul>
+              <div class="mt-4 text-xs text-ink/60">
+                <i class="fas fa-clock text-gold mr-1"></i>
+                Typical timeframe: 1–3 days to schedule and stage your first visit.
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 4 -->
+          <article class="grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold bg-mist">
+            <div class="md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Professional cleaning service delivery in luxury home"
+                class="w-full h-64 md:h-80 object-cover rounded-xl border border-navy/30"
+                loading="lazy"
+              />
+              <p class="mt-4 text-sm italic text-gold md:text-right">
+                "They were invisible in the best way — and the place felt calm." — Marcus C., Mayfair
+              </p>
+            </div>
+            <div class="md:order-1 max-w-xl">
+              <h2 class="font-serif text-2xl md:text-3xl text-navy">4. Service Delivery</h2>
+              <p class="mt-4 text-ink/80 leading-relaxed">
+                We arrive punctually, uniformed and discreet. Our Clean Code™ methodology sequences tasks for efficiency and thoroughness, protecting finishes while delivering a serene result.
+              </p>
+              <ul class="mt-4 text-ink/80 text-sm space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Arrival protocol and quiet, respectful presence.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Clean Code™: systematic room order, tool/cloth coding, and finish‑safe technique.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Real‑time communication if an issue or recommendation arises.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Emotional touches: balanced staging, optional scent, temperature and lighting reset.
+                </li>
+              </ul>
+              <div class="mt-4 text-xs text-ink/60">
+                <i class="fas fa-clock text-gold mr-1"></i>
+                Typical timeframe: agreed per property size and tier.
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 5 -->
+          <article class="grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold bg-white shadow-soft">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Quality assurance inspection and documentation"
+                class="w-full h-64 md:h-80 object-cover rounded-xl border border-navy/30"
+                loading="lazy"
+              />
+              <p class="mt-4 text-sm italic text-gold">
+                "Any note was addressed within a day — exceptional." — Amelia R., Kensington
+              </p>
+            </div>
+            <div class="max-w-xl">
+              <h2 class="font-serif text-2xl md:text-3xl text-navy">5. Quality Assurance</h2>
+              <p class="mt-4 text-ink/80 leading-relaxed">
+                Your team lead completes a final walkthrough and optional photo documentation (with permission). We invite immediate feedback and resolve any concerns rapidly.
+              </p>
+              <ul class="mt-4 text-ink/80 text-sm space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Final inspection against your brief and our checklist.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Optional photo handover and aftercare notes.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Feedback link sent the same day. 24–48h remedy commitment.
+                </li>
+              </ul>
+              <div class="mt-4 text-xs text-ink/60">
+                <i class="fas fa-guarantee text-gold mr-1"></i>
+                Promise: Complimentary remedy within 48h if anything was missed.
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 6 -->
+          <article class="grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold bg-mist">
+            <div class="md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Ongoing luxury home maintenance and relationship management"
+                class="w-full h-64 md:h-80 object-cover rounded-xl border border-navy/30"
+                loading="lazy"
+              />
+              <p class="mt-4 text-sm italic text-gold md:text-right">
+                "They anticipate our needs before we do." — Victoria S.
+              </p>
+            </div>
+            <div class="md:order-1 max-w-xl">
+              <h2 class="font-serif text-2xl md:text-3xl text-navy">6. Ongoing Relationship</h2>
+              <p class="mt-4 text-ink/80 leading-relaxed">
+                We evolve with your lifestyle. Your preferences are recorded and refined, and your schedule is protected with proactive planning and seasonal care.
+              </p>
+              <ul class="mt-4 text-ink/80 text-sm space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Reserved slots for regular service cadence.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Seasonal adjustments and deep‑detail rotations.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Concierge elements: key‑holding, access coordination.
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-gold mt-1 text-xs"></i>
+                  Continuous improvement based on feedback.
+                </li>
+              </ul>
+              <div class="mt-4 text-xs text-ink/60">
+                <i class="fas fa-heart text-gold mr-1"></i>
+                Outcome: long‑term serenity and consistent standards.
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Trust & Security -->
+      <section class="py-20 bg-navy">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="rounded-xl bg-navy/70 border border-gold p-4 flex items-center gap-3">
+              <i class="fas fa-shield-alt text-gold text-2xl"></i>
+              <div>
+                <div class="text-gold font-semibold">£5M</div>
+                <div class="text-xs text-white/80">Insurance cover</div>
+              </div>
+            </div>
+            <div class="rounded-xl bg-navy/70 border border-gold p-4 flex items-center gap-3">
+              <i class="fas fa-id-card text-gold text-2xl"></i>
+              <div>
+                <div class="text-gold font-semibold">100%</div>
+                <div class="text-xs text-white/80">DBS‑checked staff</div>
+              </div>
+            </div>
+            <div class="rounded-xl bg-navy/70 border border-gold p-4 flex items-center gap-3">
+              <i class="fas fa-star text-gold text-2xl"></i>
+              <div>
+                <div class="text-gold font-semibold">97%</div>
+                <div class="text-xs text-white/80">Client retention</div>
+              </div>
+            </div>
+            <div class="rounded-xl bg-navy/70 border border-gold p-4 flex items-center gap-3">
+              <i class="fas fa-user-secret text-gold text-2xl"></i>
+              <div>
+                <div class="text-gold font-semibold">On request</div>
+                <div class="text-xs text-white/80">Discretion agreements</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section id="faqs" class="py-24 bg-mist">
+        <div class="mx-auto max-w-3xl px-6">
+          <h2 class="font-serif text-2xl md:text-3xl text-navy text-center tracking-tight">
+            Questions About Our Process
+          </h2>
+          <div class="mt-8 space-y-4">
+            <!-- FAQ items -->
+            <div class="accordion rounded-xl bg-white border border-gold/70 hover:border-gold transition">
+              <button class="w-full text-left px-4 sm:px-6 py-4 flex items-center justify-between" data-acc-toggle>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-question-circle text-gold"></i>
+                  <span class="font-medium text-navy">Can you clean while I'm away or at work?</span>
+                </div>
+                <span class="text-gold text-xl leading-none">+</span>
+              </button>
+              <div class="accordion-content px-4 sm:px-6 pb-5 text-sm text-ink/80">
+                Yes. Many clients use our key‑holding concierge. We operate discreetly with clear communication and an optional photo handover.
+              </div>
+            </div>
+
+            <div class="accordion rounded-xl bg-white border border-gold/70 hover:border-gold transition">
+              <button class="w-full text-left px-4 sm:px-6 py-4 flex items-center justify-between" data-acc-toggle>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-question-circle text-gold"></i>
+                  <span class="font-medium text-navy">How do you protect delicate materials?</span>
+                </div>
+                <span class="text-gold text-xl leading-none">+</span>
+              </button>
+              <div class="accordion-content px-4 sm:px-6 pb-5 text-sm text-ink/80">
+                We map finishes during consult, then apply finish‑appropriate chemistry, tools and methods. Our team is trained in stone, metal and fine wood care.
+              </div>
+            </div>
+
+            <div class="accordion rounded-xl bg-white border border-gold/70 hover:border-gold transition">
+              <button class="w-full text-left px-4 sm:px-6 py-4 flex items-center justify-between" data-acc-toggle>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-question-circle text-gold"></i>
+                  <span class="font-medium text-navy">What if something isn't perfect?</span>
+                </div>
+                <span class="text-gold text-xl leading-none">+</span>
+              </button>
+              <div class="accordion-content px-4 sm:px-6 pb-5 text-sm text-ink/80">
+                Tell us within 48 hours and we'll remedy promptly — usually the next day. Your calm is non‑negotiable.
+              </div>
+            </div>
+
+            <div class="accordion rounded-xl bg-white border border-gold/70 hover:border-gold transition">
+              <button class="w-full text-left px-4 sm:px-6 py-4 flex items-center justify-between" data-acc-toggle>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-question-circle text-gold"></i>
+                  <span class="font-medium text-navy">Do you bring supplies and equipment?</span>
+                </div>
+                <span class="text-gold text-xl leading-none">+</span>
+              </button>
+              <div class="accordion-content px-4 sm:px-6 pb-5 text-sm text-ink/80">
+                Yes. We bring wellness‑vetted products and HEPA filtration as needed. We can use your preferred items if suitable for the surface.
+              </div>
+            </div>
+
+            <div class="accordion rounded-xl bg-white border border-gold/70 hover:border-gold transition">
+              <button class="w-full text-left px-4 sm:px-6 py-4 flex items-center justify-between" data-acc-toggle>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-question-circle text-gold"></i>
+                  <span class="font-medium text-navy">How are quotes priced?</span>
+                </div>
+                <span class="text-gold text-xl leading-none">+</span>
+              </button>
+              <div class="accordion-content px-4 sm:px-6 pb-5 text-sm text-ink/80">
+                Quotes reflect property size, finishes, access and your preferences. After consult, we provide a clear, bespoke proposal.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversion Row -->
+      <section class="py-12 md:py-16 bg-white">
+        <div class="mx-auto max-w-5xl px-6">
+          <div class="rounded-2xl border border-gold p-6 md:p-8 bg-mist shadow-soft">
+            <h2 class="font-serif text-2xl md:text-3xl text-navy">Ready to Design Your Service?</h2>
+            <p class="mt-3 text-ink/80 max-w-3xl leading-relaxed">
+              We'll map your property, recommend the right tier, and create a protocol that protects your time and finishes.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="index.html#quote" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">Start Your Personalised Service Design</a>
+              <a href="services.html" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; font-size: 0.875rem; color: #C9A961; background-color: white; transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.05)'" onmouseout="this.style.backgroundColor='white'">View Our Service Tiers</a>
+              <a href="#stories" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; font-size: 0.875rem; color: #C9A961; background-color: white; transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.05)'" onmouseout="this.style.backgroundColor='white'">Read Client Stories</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Client Stories -->
+      <section id="stories" class="py-14 md:py-18 bg-mist">
+        <div class="mx-auto max-w-7xl px-6">
+          <h3 class="font-serif text-2xl md:text-3xl text-navy">Process In Action</h3>
+          <p class="mt-3 text-ink/70 text-sm md:text-base leading-relaxed">
+            Before/after calm transformations from recent projects.
+          </p>
+          <div class="mt-8 flex gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory" aria-label="Case study carousel">
+            <figure class="snap-start min-w-[300px]">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Belgravia luxury townhouse marble restoration and styling"
+                class="h-48 w-auto object-cover rounded-lg border-2 border-navy/40"
+                loading="lazy"
+              />
+              <figcaption class="mt-2 text-gold text-sm font-medium">
+                Belgravia — marble care & staging
+              </figcaption>
+            </figure>
+            <figure class="snap-start min-w-[300px]">
+              <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Chelsea luxury apartment textile care and aromatherapy service"
+                class="h-48 w-auto object-cover rounded-lg border-2 border-navy/40"
+                loading="lazy"
+              />
+              <figcaption class="mt-2 text-gold text-sm font-medium">
+                Chelsea — textile refresh & scent
+              </figcaption>
+            </figure>
+            <figure class="snap-start min-w-[300px]">
+              <img
+                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Kensington residence allergen-free deep cleaning service"
+                class="h-48 w-auto object-cover rounded-lg border-2 border-navy/40"
+                loading="lazy"
+              />
+              <figcaption class="mt-2 text-gold text-sm font-medium">
+                Kensington — allergen reduction
+              </figcaption>
+            </figure>
+            <figure class="snap-start min-w-[300px]">
+              <img
+                src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Mayfair penthouse brass and glass restoration perfection"
+                class="h-48 w-auto object-cover rounded-lg border-2 border-navy/40"
+                loading="lazy"
+              />
+              <figcaption class="mt-2 text-gold text-sm font-medium">
+                Mayfair — brass & glass perfection
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calm Guaranteed -->
+      <section class="relative py-14 md:py-18 bg-white">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <img
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+            alt="Luxury linen texture background"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="relative mx-auto max-w-3xl px-6">
+          <div class="rounded-2xl border border-gold bg-navy text-white p-6 md:p-8 text-center shadow-soft" role="alert" aria-live="polite">
+            <h3 class="font-serif text-2xl md:text-3xl text-gold">Calm Guaranteed™</h3>
+            <p class="mt-4 text-white/90 leading-relaxed">
+              Your peace of mind is our standard. If anything feels less than calm, we will make it right.
+            </p>
+            <ul class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-white">
+              <li class="flex items-center justify-center gap-2">
+                <i class="fas fa-clock text-gold"></i> 48h remedy commitment
+              </li>
+              <li class="flex items-center justify-center gap-2">
+                <i class="fas fa-shield-alt text-gold"></i> Insured & vetted teams
+              </li>
+              <li class="flex items-center justify-center gap-2">
+                <i class="fas fa-leaf text-gold"></i> Finish‑safe protocols
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section id="final-cta" class="relative bg-mist" aria-labelledby="cta">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div class="rounded-2xl overflow-hidden border border-gold relative">
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+              alt="Elegant luxury home interior showcase for premium cleaning services"
+              class="w-full h-56 md:h-72 object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center">
+              <div class="px-6 md:px-10">
+                <h2 id="cta" class="font-serif text-3xl md:text-4xl text-gold">Design Your Calm With Us</h2>
+                <p class="mt-4 text-white/90 max-w-2xl text-sm md:text-base leading-relaxed">
+                  We'll tailor a service that protects your time, your finishes, and your peace of mind.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a href="index.html#quote" class="inline-flex items-center rounded-md bg-gold text-navy px-4 py-2 border border-gold btn-hover focus-visible">Start Your Personalised Service Design</a>
+                  <a href="https://wa.me/07824390336" target="_blank" rel="noopener nofollow" class="inline-flex items-center justify-center rounded-full bg-navy text-white ring-1 ring-gold/60 px-5 py-3 text-sm md:text-base hover:bg-navy/90 transition">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp Us
+                  </a>
+                  <a href="tel:+442033425260" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; font-size: 0.875rem; color: #C9A961; background-color: white; transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.05)'" onmouseout="this.style.backgroundColor='white'">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Form -->
+      <section id="quote" class="py-14 md:py-18 bg-white">
+        <div class="mx-auto max-w-3xl px-6">
+          <form class="grid gap-4 bg-mist rounded-2xl p-5 md:p-7 border border-gold shadow-soft" action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');">
+            <div class="grid md:grid-cols-2 gap-4">
+              <label class="text-sm">
+                <span class="block mb-1 text-navy font-medium">Full Name</span>
+                <input type="text" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Your name" />
+              </label>
+              <label class="text-sm">
+                <span class="block mb-1 text-navy font-medium">Email</span>
+                <input type="email" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="you@example.com" />
+              </label>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+              <label class="text-sm md:col-span-1">
+                <span class="block mb-1 text-navy font-medium">Postcode</span>
+                <input type="text" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="SW1, W8…" />
+              </label>
+              <label class="text-sm md:col-span-1">
+                <span class="block mb-1 text-navy font-medium">Property Type</span>
+                <select class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
+                  <option value="">Select…</option>
+                  <option>Townhouse</option>
+                  <option>Penthouse</option>
+                  <option>Apartment</option>
+                  <option>Mews</option>
+                </select>
+              </label>
+              <label class="text-sm md:col-span-1">
+                <span class="block mb-1 text-navy font-medium">Preferred Tier</span>
+                <select class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
+                  <option value="">Select…</option>
+                  <option>Essentials Clean™</option>
+                  <option>Signature Clean™</option>
+                  <option>WellClean™</option>
+                </select>
+              </label>
+            </div>
+            <label class="text-sm">
+              <span class="block mb-1 text-navy font-medium">Notes & Preferences</span>
+              <textarea rows="4" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Surfaces, sensitivities, schedule, access…"></textarea>
+            </label>
+            <div class="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
+              <label class="text-xs text-ink/80 inline-flex items-center gap-2">
+                <input type="checkbox" required class="accent-gold h-4 w-4 border border-navy/30" />
+                I understand this is a premium service with bespoke pricing.
+              </label>
+              <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
+                <i class="fas fa-paper-plane mr-2"></i>Submit Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-navy relative">
+        <div class="absolute inset-0 opacity-5" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+            alt="Granite texture background"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="relative mx-auto max-w-7xl px-6 py-12">
+          <div class="grid gap-10 md:grid-cols-4">
+            <div class="md:col-span-2">
+              <div class="flex items-center gap-3">
+                <div class="h-9 w-9 rounded grid place-items-center bg-navy border-2 border-gold">
+                  <span class="text-[10px] font-semibold text-gold">HQC</span>
+                </div>
+                <div class="font-serif text-lg text-gold">High Quality Cleaning</div>
+              </div>
+              <p class="mt-4 text-sm text-white/75 max-w-md leading-relaxed">
+                Luxury home cleaning with wellness expertise and concierge care. Serving prime Central and West London.
+              </p>
+              <div class="mt-4 text-sm text-white/60">
+                © <span id="y"></span> High Quality Cleaning. All rights reserved.
+              </div>
+            </div>
+            <div>
+              <div class="font-medium text-gold mb-3">Company</div>
+              <ul class="space-y-2 text-sm text-white/80">
+                <li><a href="services.html" class="hover:text-gold transition-colors">Services</a></li>
+                <li><a href="why-us.html" class="hover:text-gold transition-colors">Why Us</a></li>
+                <li><a href="process.html" class="hover:text-gold transition-colors">Process</a></li>
+                <li><a href="index.html#quote" class="hover:text-gold transition-colors">Request Quote</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium text-gold mb-3">Instagram</div>
+              <div class="grid grid-cols-3 gap-2">
+                <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Luxury cleaning before/after showcase" class="h-16 w-full object-cover rounded border border-gold" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Professional team at work" class="h-16 w-full object-cover rounded border border-gold" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Pristine luxury interior" class="h-16 w-full object-cover rounded border border-gold" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Marble restoration results" class="h-16 w-full object-cover rounded border border-gold" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Eco-friendly cleaning products" class="h-16 w-full object-cover rounded border border-gold" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Quality assurance check" class="h-16 w-full object-cover rounded border border-gold" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+      // Set current year
+      document.getElementById("y").textContent = new Date().getFullYear();
+
+      // Accordion functionality for FAQs
+      document.querySelectorAll("[data-acc-toggle]").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const parent = trigger.closest(".accordion");
+          parent.classList.toggle("open");
+          const symbol = trigger.querySelector("span:last-child");
+          if (symbol) {
+            symbol.textContent = parent.classList.contains("open") ? "−" : "+";
+          }
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

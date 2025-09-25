@@ -1,0 +1,112 @@
+---
+export interface SpecializedService {
+  name: string;
+  description: string;
+  tagline: string;
+  icon: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  services?: SpecializedService[];
+  ctaText?: string;
+  ctaLink?: string;
+  className?: string;
+  sectionId?: string;
+  backgroundColor?: string;
+  textColor?: string;
+}
+
+const {
+  title = "Specialised Cleaning Services",
+  subtitle = "Book separately or as add-ons to your regular service",
+  services = [
+    {
+      name: "Move In / Move Out Reset™",
+      description: "Deep, compliant cleaning to meet landlord or agent expectations — inventory-ready and stress-free.",
+      tagline: "Leave it spotless. Start fresh.",
+      icon: "M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V3m6 4v10a2 2 0 01-2 2H10a2 2 0 01-2-2V7"
+    },
+    {
+      name: "Airbnb Turnover Clean™",
+      description: "Rapid reset between guests — linen, restocking, staging. Hosts trust our touch.",
+      tagline: "Five-star hosting, every time",
+      icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+    },
+    {
+      name: "HQC Office Clean™",
+      description: "Office cleaning for premium spaces. Confidential, consistent, and concierge-level.",
+      tagline: "Confidence in your first impression",
+      icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+    },
+    {
+      name: "WellClean™ Studio Edition",
+      description: "Cleaning tailored to spas, saunas, cold plunges & wellness studios, trained for tranquillity.",
+      tagline: "Trust at a wellness level",
+      icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+    },
+    {
+      name: "WellClean™ Studio Advisory",
+      description: "Consulting for wellness operators from design flow to maintenance & operations.",
+      tagline: "Clarity and confidence in your operations",
+      icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+    },
+    {
+      name: "HQC Concierge Laundry",
+      description: "Wellness-grade care, luxury presentation, trustworthy consistency — far beyond the bulk wash-and-fold apps.",
+      tagline: "Your Home, Your Wardrobe, Five-Star Clean",
+      icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2V3zM21 3h-6a2 2 0 00-2 2v12a4 4 0 002 4h6V3z"
+    }
+  ],
+  ctaText = "Enquire About Specialised Services",
+  ctaLink = "#quote",
+  className = "",
+  sectionId = "specialized-services",
+  backgroundColor = "bg-navy",
+  textColor = "text-white"
+} = Astro.props;
+---
+
+<section id={sectionId} class={`py-20 sm:py-24 ${backgroundColor} ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class={`rounded-3xl p-8 ${textColor}`}>
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-gold mb-4">
+          {title}
+        </h2>
+        <p class="text-white/90 text-lg max-w-2xl mx-auto">
+          {subtitle}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gold">{service.name}</h3>
+            </div>
+            <p class="text-white/80 text-sm mb-3">{service.description}</p>
+            <p class="text-gold text-sm font-medium italic">"{service.tagline}"</p>
+          </div>
+        ))}
+      </div>
+
+      {ctaText && ctaLink && (
+        <div class="text-center mt-8">
+          <a href={ctaLink} class="inline-flex items-center px-6 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300">
+            {ctaText}
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+</section>

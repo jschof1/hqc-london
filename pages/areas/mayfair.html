@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Premium luxury cleaning services in Mayfair, London's most exclusive district. Professional domestic cleaning for Georgian mansions, luxury apartments and high-end properties in W1K and W1J postcodes." />
+    <title>Professional Cleaning Services in Mayfair, London — High Quality Clean</title>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Inter var"', 'ui-sans-serif', 'system-ui'],
+              serif: ['"Cormorant Garamond"', 'serif'],
+            },
+            colors: {
+              ink: '#0E0E10',
+              mist: '#F7F7F9',
+              gold: '#C9A961',
+              navy: '#2C3E50',
+              night: '#1c2833',
+            },
+            boxShadow: {
+              soft: '0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06)',
+            },
+            borderRadius: {
+              xl2: '1.25rem',
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Critical CSS inlined for performance */
+      .ar-16-9 {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+      }
+      .ar-16-9 > * {
+        position: absolute;
+        inset: 0;
+      }
+      .ar-4-3 {
+        position: relative;
+        width: 100%;
+        padding-top: 75%;
+      }
+      .ar-4-3 > * {
+        position: absolute;
+        inset: 0;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .grain {
+        background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        background-size: 3px 3px;
+      }
+      
+      /* Typography improvements */
+      h1, h2, h3 { line-height: 1.2; }
+      p { line-height: 1.6; }
+      
+      /* Service card hover effects */
+      .service-card {
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.08);
+      }
+      
+      /* FAQ styling */
+      .faq-item {
+        transition: all 0.3s ease;
+      }
+      .faq-question {
+        cursor: pointer;
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .faq-answer.open {
+        max-height: 500px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-mist text-ink antialiased">
+    <!-- Header -->
+    <header class="fixed inset-x-0 top-0 z-40 backdrop-blur supports-backdrop-blur:bg-navy/85 bg-navy/95 border-b border-gold">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-white">
+        <a href="../index.html" class="flex items-center gap-3">
+          <span class="font-serif text-xl tracking-wide text-gold">High Quality Cleaning</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="../services.html" class="hover:text-gold text-white transition-colors">Service Tiers</a>
+          <a href="../why-us.html" class="hover:text-gold text-white transition-colors">Why Us</a>
+          <a href="../areas.html" class="hover:text-gold text-white transition-colors">Areas</a>
+          <a href="../process.html" class="hover:text-gold text-white transition-colors">Process</a>
+          <a href="../case-studies-detailed.html" class="hover:text-gold text-white transition-colors">Case Studies</a>
+          <a href="#quote" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">Get Quote</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <!-- Page Header -->
+      <section class="bg-navy relative">
+        <div class="ar-16-9">
+          <img
+            src="assets/images/mayfair.jpg"
+            alt="Luxury Georgian townhouses and elegant architecture in Mayfair, London's most exclusive district"
+            class="w-full h-full object-cover opacity-40"
+            fetchpriority="high"
+          />
+          <div class="absolute inset-0 flex items-end pb-10 md:pb-16 px-4 sm:px-6 lg:px-8 grain">
+            <div class="mx-auto max-w-5xl w-full">
+              <h1 class="font-serif text-3xl md:text-5xl text-gold mb-4">
+                Professional Cleaning Services in Mayfair, London
+              </h1>
+              <p class="text-white/85 text-sm md:text-base max-w-3xl leading-relaxed">
+                Luxury domestic cleaning for London's most exclusive address. Serving Georgian mansions, private clubs and high-net-worth residences with discretion and expertise.
+              </p>
+
+              <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href="#services" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
+                  <i class="fas fa-list mr-2"></i>View Services
+                </a>
+                <a href="#quote" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; color: #C9A961; font-size: 0.875rem; background-color: transparent; transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.backgroundColor='transparent'">
+                  <i class="fas fa-phone mr-2"></i>Get Quote
+                </a>
+              </div>
+
+              <div class="mt-6 flex items-center gap-6 text-xs text-white/70 flex-wrap">
+                <span class="inline-flex items-center gap-2">
+                  <i class="fas fa-map-marked-alt text-gold"></i>
+                  W1K,W1J Postcodes
+                </span>
+                <span class="h-3 w-px bg-white/30"></span>
+                <span class="inline-flex items-center gap-2">
+                  <i class="fas fa-award text-gold"></i>
+                  Premium Service Standards
+                </span>
+                <span class="h-3 w-px bg-white/30"></span>
+                <span class="inline-flex items-center gap-2">
+                  <i class="fas fa-clock text-gold"></i>
+                  Flexible Scheduling
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Area Section -->
+      <section class="py-16 md:py-20 bg-white">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 class="font-serif text-2xl md:text-3xl text-navy mb-6">About Our Mayfair Cleaning Services</h2>
+              <div class="prose prose-lg text-ink/80 space-y-4">
+                
+                <p class="leading-relaxed">Mayfair stands as London's most prestigious address, home to Georgian mansions, exclusive private clubs, and some of the world's most expensive real estate. This historic district, bounded by Hyde Park, Oxford Street, Regent Street, and Piccadilly, demands cleaning services that match its exceptional standards.</p>
+                
+                <p class="leading-relaxed">Our High Quality Clean Mayfair team understands the unique requirements of this ultra-exclusive area. From the grand townhouses of Grosvenor Square to the luxury apartments overlooking Hyde Park, we provide discreet, professional cleaning services that preserve the elegance and heritage of your property.</p>
+                
+                <p class="leading-relaxed">The area's rich history dating back to the early 18th century means many properties feature period details, antique furnishings, and valuable art collections that require specialist care. Our trained professionals are experienced in handling delicate surfaces, fine fabrics, and irreplaceable items with the utmost care.</p>
+                
+                <p class="leading-relaxed">As the heart of London's luxury district, Mayfair attracts international residents, diplomats, and business leaders who expect nothing less than perfection. Our WellClean™ Premium services are tailored to meet these exacting standards, providing a level of service that matches the prestige of your address.</p>
+                
+              </div>
+            </div>
+            <div class="bg-mist rounded-2xl p-8">
+              <h3 class="font-serif text-xl text-navy mb-4">Quick Facts</h3>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-map-pin text-gold"></i>
+                  <span class="text-sm"><strong>Region:</strong> Central London</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-mail-bulk text-gold"></i>
+                  <span class="text-sm"><strong>Postcodes:</strong> W1K,W1J</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-home text-gold"></i>
+                  <span class="text-sm"><strong>Property Types:</strong> Luxury residences, heritage homes</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-shield-alt text-gold"></i>
+                  <span class="text-sm"><strong>Service Level:</strong> Premium concierge-grade</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="py-16 bg-mist">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="font-serif text-2xl md:text-3xl text-navy mb-8 text-center">Our Mayfair Service Areas</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="service-card bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <h3 class="font-semibold text-navy mb-3">Berkeley Square</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Historic garden square surrounded by Georgian architecture and prestigious offices. Home to some of London's most expensive properties and exclusive members' clubs.</p>
+            </div>
+            
+            <div class="service-card bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <h3 class="font-semibold text-navy mb-3">Grosvenor Square</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Grand residential square known for its diplomatic missions and luxury residences. Features some of Mayfair's largest and most impressive townhouses.</p>
+            </div>
+            
+            <div class="service-card bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <h3 class="font-semibold text-navy mb-3">Bond Street Area</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Shopping district with luxury apartments above world-famous boutiques. High-security properties requiring Specialised cleaning protocols.</p>
+            </div>
+            
+            <div class="service-card bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <h3 class="font-semibold text-navy mb-3">Hyde Park Corner</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Premium location with penthouse apartments overlooking Hyde Park. Modern luxury developments with state-of-the-art amenities.</p>
+            </div>
+            
+            <div class="service-card bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <h3 class="font-semibold text-navy mb-3">Mount Street</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Elegant Victorian street with boutique hotels, fine dining, and luxury residential properties. Historic charm meets contemporary luxury.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="py-16 bg-white">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="font-serif text-2xl md:text-3xl text-navy mb-12 text-center">Why Choose High Quality Clean for Mayfair</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-star text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-3">Ultra-High Security Clearance</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">All our Mayfair team members undergo extensive background checks and security clearance suitable for high-net-worth residences and diplomatic properties.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-star text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-3">Heritage Property Expertise</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Specialised training in caring for Georgian and Victorian period features, antique furnishings, and valuable art collections without causing damage.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-star text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-3">Absolute Discretion</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">We understand the importance of privacy in Mayfair. Our team operates with complete confidentiality and respects the private nature of your residence.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-star text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-3">Flexible Premium Scheduling</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Available 24/7 to accommodate international schedules, last-minute events, and the demanding lifestyles of Mayfair residents.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-star text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-3">Luxury Product Selection</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Only the finest, eco-friendly cleaning products that are safe for antiques, fine fabrics, and sensitive surfaces found in luxury properties.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-star text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-3">Concierge-Level Service</h3>
+              <p class="text-ink/70 text-sm leading-relaxed">Beyond cleaning, we offer property care services including plant care, silver polishing, and coordination with other household staff.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="py-16 bg-navy">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center mb-12">
+            <h2 class="font-serif text-2xl md:text-3xl text-gold">Services We Provide in Mayfair</h2>
+            <p class="mt-3 text-white/80 max-w-2xl mx-auto leading-relaxed">
+              Comprehensive cleaning and property care services tailored to Mayfair's unique requirements.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="bg-navy/70 border border-gold rounded-xl p-6">
+              <h3 class="font-semibold text-gold text-lg mb-4">Regular Domestic Cleaning</h3>
+              <ul class="space-y-2">
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Weekly, bi-weekly, or monthly cleaning schedules</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Deep cleaning of reception rooms and entertaining spaces</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Kitchen cleaning including premium appliances</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Bathroom sanitization and luxury fixture care</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Bedroom and dressing room organization</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Hallway and staircase maintenance</span>
+                </li>
+                
+              </ul>
+            </div>
+            
+            <div class="bg-navy/70 border border-gold rounded-xl p-6">
+              <h3 class="font-semibold text-gold text-lg mb-4">Specialist Property Services</h3>
+              <ul class="space-y-2">
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Antique furniture cleaning and polishing</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Crystal chandelier cleaning and maintenance</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Fine art and sculpture dusting (insured)</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Oriental rug and carpet specialist cleaning</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Silver and brass polishing services</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Leather furniture conditioning and care</span>
+                </li>
+                
+              </ul>
+            </div>
+            
+            <div class="bg-navy/70 border border-gold rounded-xl p-6">
+              <h3 class="font-semibold text-gold text-lg mb-4">Event and Entertaining Support</h3>
+              <ul class="space-y-2">
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Pre-event deep cleaning and preparation</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Post-event cleanup and restoration</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Same-day emergency cleaning services</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Entertaining space setup and breakdown</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Wine cellar and bar area maintenance</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Guest bedroom preparation services</span>
+                </li>
+                
+              </ul>
+            </div>
+            
+            <div class="bg-navy/70 border border-gold rounded-xl p-6">
+              <h3 class="font-semibold text-gold text-lg mb-4">Property Care and Maintenance</h3>
+              <ul class="space-y-2">
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Plant and flower arrangement care</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Window cleaning (interior specialist service)</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Wardrobe organization and garment care</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Seasonal property preparation</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Holiday home preparation and maintenance</span>
+                </li>
+                
+                <li class="text-white/80 text-sm flex items-start gap-2">
+                  <i class="fas fa-check text-gold text-xs mt-1 flex-shrink-0"></i>
+                  <span>Move-in and move-out comprehensive cleaning</span>
+                </li>
+                
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="py-16 bg-mist">
+        <div class="mx-auto max-w-6xl px-6">
+          <h2 class="font-serif text-2xl md:text-3xl text-navy mb-12 text-center">What Our Mayfair Clients Say</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <div class="flex items-center gap-1 mb-4">
+                
+              </div>
+              <blockquote class="text-ink/80 text-sm leading-relaxed mb-4">
+                "Exceptional service for our Berkeley Square property. They understand the level of care required for our antique collection and always deliver beyond expectations."
+              </blockquote>
+              <cite class="text-xs text-ink/60 not-italic">— Private Family Office, Berkeley Square</cite>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <div class="flex items-center gap-1 mb-4">
+                
+              </div>
+              <blockquote class="text-ink/80 text-sm leading-relaxed mb-4">
+                "Finally found a cleaning service that matches Mayfair standards. Discreet, professional, and they treat our home with the respect it deserves."
+              </blockquote>
+              <cite class="text-xs text-ink/60 not-italic">— International Resident, Grosvenor Square</cite>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
+              <div class="flex items-center gap-1 mb-4">
+                
+              </div>
+              <blockquote class="text-ink/80 text-sm leading-relaxed mb-4">
+                "Their attention to detail is remarkable. From our Georgian moldings to our modern art collection, everything is perfectly maintained."
+              </blockquote>
+              <cite class="text-xs text-ink/60 not-italic">— Diplomat, Hyde Park Corner</cite>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Information -->
+      <section class="py-16 bg-white">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="font-serif text-2xl md:text-3xl text-navy mb-12 text-center">Getting Around Mayfair</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Transport -->
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-subway text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-4">Transport Links</h3>
+              <ul class="space-y-2 text-sm text-ink/70">
+                
+                <li>Bond Street Station (Central & Jubilee Lines)</li>
+                
+                <li>Green Park Station (Jubilee, Piccadilly & Victoria Lines)</li>
+                
+                <li>Oxford Circus Station (Central, Northern & Victoria Lines)</li>
+                
+                <li>Marble Arch Station (Central Line)</li>
+                
+              </ul>
+            </div>
+
+            <!-- Attractions -->
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-camera text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-4">Nearby Attractions</h3>
+              <ul class="space-y-2 text-sm text-ink/70">
+                
+                <li>Hyde Park and Speaker's Corner</li>
+                
+                <li>Royal Academy of Arts</li>
+                
+                <li>Wallace Collection</li>
+                
+                <li>Handel & Hendrix Museum</li>
+                
+                <li>Berkeley Square Gardens</li>
+                
+              </ul>
+            </div>
+
+            <!-- Shopping & Dining -->
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-shopping-bag text-gold text-2xl"></i>
+              </div>
+              <h3 class="font-semibold text-navy mb-4">Shopping & Dining</h3>
+              <ul class="space-y-2 text-sm text-ink/70">
+                
+                <li>Bond Street luxury shopping</li>
+                
+                <li>Selfridges department store</li>
+                
+                <li>Michelin-starred restaurants</li>
+                
+                <li>Exclusive members' clubs</li>
+                
+                <li>Fine art galleries and auction houses</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="py-16 bg-gradient-to-r from-navy/5 to-gold/5">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="text-center mb-12">
+            <h2 class="font-serif text-2xl md:text-3xl text-navy">Pricing & Packages for Mayfair Properties</h2>
+            <p class="mt-3 text-ink/70 max-w-2xl mx-auto">All Mayfair services include our premium care standards, full insurance coverage, and 24/7 availability.</p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="bg-white rounded-xl border border-gold/30 shadow-soft overflow-hidden">
+              <div class="p-6 border-b border-gold/20">
+                <h3 class="font-semibold text-navy text-lg">Heritage Property Care</h3>
+                <div class="mt-2">
+                  <span class="text-2xl font-bold text-gold">From £95 per visit</span>
+                  <span class="text-sm text-ink/60 ml-2">3-4 hours</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3">
+                  
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl border border-gold/30 shadow-soft overflow-hidden">
+              <div class="p-6 border-b border-gold/20">
+                <h3 class="font-semibold text-navy text-lg">Executive Residence Service</h3>
+                <div class="mt-2">
+                  <span class="text-2xl font-bold text-gold">From £150 per visit</span>
+                  <span class="text-sm text-ink/60 ml-2">4-6 hours</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3">
+                  
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl border border-gold/30 shadow-soft overflow-hidden">
+              <div class="p-6 border-b border-gold/20">
+                <h3 class="font-semibold text-navy text-lg">Diplomatic Standard Service</h3>
+                <div class="mt-2">
+                  <span class="text-2xl font-bold text-gold">Quote on application</span>
+                  <span class="text-sm text-ink/60 ml-2">Customized</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <ul class="space-y-3">
+                  
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section class="py-16 bg-white">
+        <div class="mx-auto max-w-4xl px-6">
+          <h2 class="font-serif text-2xl md:text-3xl text-navy mb-12 text-center">Frequently Asked Questions</h2>
+          <div class="space-y-4">
+            
+            <div class="faq-item bg-mist rounded-xl border border-gold/20">
+              <div class="faq-question p-6 flex items-center justify-between cursor-pointer" onclick="toggleFaq(this)">
+                <h3 class="font-medium text-navy">Do you provide cleaning services throughout all Mayfair postcodes?</h3>
+                <i class="fas fa-chevron-down text-gold transition-transform"></i>
+              </div>
+              <div class="faq-answer px-6 pb-0">
+                <div class="pb-6 text-ink/80 text-sm leading-relaxed">
+                  Yes, we serve all Mayfair areas including W1K and W1J postcodes. Our team is familiar with the unique requirements of different Mayfair locations, from the grand townhouses of Grosvenor Square to the luxury apartments of Bond Street.
+                </div>
+              </div>
+            </div>
+            
+            <div class="faq-item bg-mist rounded-xl border border-gold/20">
+              <div class="faq-question p-6 flex items-center justify-between cursor-pointer" onclick="toggleFaq(this)">
+                <h3 class="font-medium text-navy">Are your cleaning products safe for antique furniture and valuable items?</h3>
+                <i class="fas fa-chevron-down text-gold transition-transform"></i>
+              </div>
+              <div class="faq-answer px-6 pb-0">
+                <div class="pb-6 text-ink/80 text-sm leading-relaxed">
+                  Absolutely. We use only premium, pH-neutral cleaning products that are safe for antiques, fine fabrics, and delicate surfaces. Our team is trained in specialist techniques for caring for period furniture, artwork, and luxury fixtures.
+                </div>
+              </div>
+            </div>
+            
+            <div class="faq-item bg-mist rounded-xl border border-gold/20">
+              <div class="faq-question p-6 flex items-center justify-between cursor-pointer" onclick="toggleFaq(this)">
+                <h3 class="font-medium text-navy">How do you ensure security and discretion in Mayfair properties?</h3>
+                <i class="fas fa-chevron-down text-gold transition-transform"></i>
+              </div>
+              <div class="faq-answer px-6 pb-0">
+                <div class="pb-6 text-ink/80 text-sm leading-relaxed">
+                  All our Mayfair staff undergo comprehensive background checks and security clearance. We sign strict confidentiality agreements and operate with complete discretion. Our team understands the privacy requirements of high-profile residents.
+                </div>
+              </div>
+            </div>
+            
+            <div class="faq-item bg-mist rounded-xl border border-gold/20">
+              <div class="faq-question p-6 flex items-center justify-between cursor-pointer" onclick="toggleFaq(this)">
+                <h3 class="font-medium text-navy">Can you accommodate irregular schedules and last-minute requests?</h3>
+                <i class="fas fa-chevron-down text-gold transition-transform"></i>
+              </div>
+              <div class="faq-answer px-6 pb-0">
+                <div class="pb-6 text-ink/80 text-sm leading-relaxed">
+                  Yes, we offer 24/7 availability for Mayfair clients. We understand that international schedules and business demands can be unpredictable, so we maintain flexible booking options and emergency response capability.
+                </div>
+              </div>
+            </div>
+            
+            <div class="faq-item bg-mist rounded-xl border border-gold/20">
+              <div class="faq-question p-6 flex items-center justify-between cursor-pointer" onclick="toggleFaq(this)">
+                <h3 class="font-medium text-navy">Do you coordinate with other household staff and service providers?</h3>
+                <i class="fas fa-chevron-down text-gold transition-transform"></i>
+              </div>
+              <div class="faq-answer px-6 pb-0">
+                <div class="pb-6 text-ink/80 text-sm leading-relaxed">
+                  Certainly. We're experienced in working alongside housekeepers, property managers, security teams, and other service providers. We can coordinate schedules and ensure seamless service delivery.
+                </div>
+              </div>
+            </div>
+            
+            <div class="faq-item bg-mist rounded-xl border border-gold/20">
+              <div class="faq-question p-6 flex items-center justify-between cursor-pointer" onclick="toggleFaq(this)">
+                <h3 class="font-medium text-navy">What insurance coverage do you provide for Mayfair properties?</h3>
+                <i class="fas fa-chevron-down text-gold transition-transform"></i>
+              </div>
+              <div class="faq-answer px-6 pb-0">
+                <div class="pb-6 text-ink/80 text-sm leading-relaxed">
+                  We carry comprehensive insurance coverage up to £2 million, specifically designed for high-value properties. This includes coverage for antiques, artwork, and luxury fixtures commonly found in Mayfair residences.
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Form -->
+      <section id="quote" class="py-16 bg-navy">
+        <div class="mx-auto max-w-3xl px-6">
+          <div class="text-center mb-8">
+            <h2 class="font-serif text-2xl md:text-3xl text-gold">Contact Our Mayfair Cleaning Team</h2>
+            <p class="mt-3 text-white/80 leading-relaxed">
+              Ready to experience premium cleaning services in Mayfair? Get in touch for a personalized quote.
+            </p>
+          </div>
+          
+          <form class="grid gap-4 bg-navy/70 border border-gold rounded-2xl p-6 md:p-8" action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you! Our Mayfair team will contact you within 2 hours.');">
+            <div class="grid md:grid-cols-2 gap-4">
+              <label class="text-sm">
+                <span class="block mb-1 text-white font-medium">Full Name</span>
+                <input type="text" required class="w-full rounded-md px-3 py-2 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Your name" />
+              </label>
+              <label class="text-sm">
+                <span class="block mb-1 text-white font-medium">Email</span>
+                <input type="email" required class="w-full rounded-md px-3 py-2 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="you@example.com" />
+              </label>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <label class="text-sm">
+                <span class="block mb-1 text-white font-medium">Phone</span>
+                <input type="tel" class="w-full rounded-md px-3 py-2 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="0203 342 5260" />
+              </label>
+              <label class="text-sm">
+                <span class="block mb-1 text-white font-medium">Postcode</span>
+                <input type="text" required class="w-full rounded-md px-3 py-2 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="W1K,W1J" />
+              </label>
+            </div>
+            <label class="text-sm">
+              <span class="block mb-1 text-white font-medium">Service Requirements</span>
+              <textarea rows="4" class="w-full rounded-md px-3 py-2 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Tell us about your property and cleaning requirements..."></textarea>
+            </label>
+            <div class="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
+              <div class="text-xs text-white/70">
+                <p><strong>Available 24/7 for Mayfair clients</strong></p>
+                <p>Emergency and same-day services available for registered Mayfair clients</p>
+              </div>
+              <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
+                <i class="fas fa-paper-plane mr-2"></i>Request Quote
+              </button>
+            </div>
+          </form>
+
+          <!-- Contact Details -->
+          <div class="mt-8 text-center">
+            <div class="inline-flex items-center gap-6 text-sm text-white/80">
+              <a href="tel:0203 342 5260" class="flex items-center gap-2 hover:text-gold transition-colors">
+                <i class="fas fa-phone"></i>0203 342 5260
+              </a>
+              <a href="mailto:mayfair@highqualityclean.co.uk" class="flex items-center gap-2 hover:text-gold transition-colors">
+                <i class="fas fa-envelope"></i>mayfair@highqualityclean.co.uk
+              </a>
+              <a href="https://wa.me/+44 XXXX XXX XXX" class="flex items-center gap-2 hover:text-gold transition-colors">
+                <i class="fab fa-whatsapp"></i>WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-night relative">
+        <div class="absolute inset-0 opacity-5" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+            alt="Granite texture background"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="relative mx-auto max-w-7xl px-6 py-12">
+          <div class="grid gap-10 md:grid-cols-4">
+            <div class="md:col-span-2">
+              <div class="flex items-center gap-3">
+                <div class="h-9 w-9 rounded grid place-items-center bg-night border-2 border-gold">
+                  <span class="text-[10px] font-semibold text-gold">HQC</span>
+                </div>
+                <div class="font-serif text-lg text-gold">High Quality Cleaning</div>
+              </div>
+              <p class="mt-4 text-sm text-white/75 max-w-md leading-relaxed">
+                Premium cleaning services for Mayfair and London's most prestigious areas. Professional, discreet, and reliable.
+              </p>
+              <div class="mt-4 text-sm text-white/60">
+                © <span id="y"></span> High Quality Cleaning. All rights reserved.
+              </div>
+            </div>
+            <div>
+              <div class="font-medium text-gold mb-3">Mayfair Services</div>
+              <ul class="space-y-2 text-sm text-white/80">
+                <li><a href="#services" class="hover:text-gold transition-colors">Domestic Cleaning</a></li>
+                <li><a href="#services" class="hover:text-gold transition-colors">Deep Cleaning</a></li>
+                <li><a href="#services" class="hover:text-gold transition-colors">Specialist Care</a></li>
+                <li><a href="../areas.html" class="hover:text-gold transition-colors">Other Areas</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium text-gold mb-3">Contact</div>
+              <ul class="space-y-2 text-sm text-white/80">
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-phone text-gold"></i>
+                  <a href="tel:0203 342 5260" class="hover:text-gold transition-colors">0203 342 5260</a>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fab fa-whatsapp text-gold"></i>
+                  <a href="https://wa.me/+44 XXXX XXX XXX" class="hover:text-gold transition-colors">WhatsApp</a>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-envelope text-gold"></i>
+                  <a href="mailto:mayfair@highqualityclean.co.uk" class="hover:text-gold transition-colors">mayfair@highqualityclean.co.uk</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+      // Set current year
+      document.getElementById("y").textContent = new Date().getFullYear();
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // FAQ Toggle
+      function toggleFaq(element) {
+        const faqItem = element.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const icon = element.querySelector('i');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.querySelector('.faq-answer').classList.remove('open');
+            item.querySelector('i').style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current FAQ
+        answer.classList.toggle('open');
+        if (answer.classList.contains('open')) {
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          icon.style.transform = 'rotate(0deg)';
+        }
+      }
+    </script>
+  </body>
+</html>
+

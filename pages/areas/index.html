@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area-Specific Cleaning Services — High Quality Clean</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f7f7f9;
+            color: #0e0e10;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .logo {
+            color: #c9a961;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .area-links {
+            display: grid;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .area-link {
+            display: block;
+            padding: 1rem;
+            background: white;
+            border: 2px solid #c9a961;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.2s;
+        }
+        .area-link:hover {
+            background: #c9a961;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .area-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .area-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .back-link a {
+            color: #c9a961;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">High Quality Cleaning</div>
+        <h1>Area-Specific Cleaning Services</h1>
+        <p>Professional cleaning services tailored to London's most prestigious areas</p>
+    </div>
+
+    <div class="area-links">
+        <a href="mayfair.html" class="area-link">
+            <div class="area-name">Mayfair (W1K, W1J)</div>
+            <div class="area-desc">London's most exclusive district - Ultra-luxury cleaning for Georgian mansions and high-net-worth residences</div>
+        </a>
+
+        <a href="kensington.html" class="area-link">
+            <div class="area-name">Kensington (SW7, SW5, W8)</div>
+            <div class="area-desc">Royal Borough sophistication - Museum-quality care for Victorian mansions and cultural properties</div>
+        </a>
+
+        <a href="chelsea.html" class="area-link">
+            <div class="area-name">Chelsea (SW3, SW10)</div>
+            <div class="area-desc">Creative elegance by the Thames - Artistic collection care and riverside property expertise</div>
+        </a>
+    </div>
+
+    <div class="back-link">
+        <a href="../areas.html">← Back to All Areas</a> | 
+        <a href="../index.html">← Back to Home</a>
+    </div>
+
+    <script>
+        // Simple analytics to track which area pages are most popular
+        document.querySelectorAll('.area-link').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Area page accessed:', this.getAttribute('href'));
+            });
+        });
+    </script>
+</body>
+</html>
+

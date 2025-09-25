@@ -1,0 +1,733 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import FAQ from '../components/FAQ.astro';
+import HeroSection from '../components/HeroSection.astro';
+import TransformationGallery from '../components/TransformationGallery.astro';
+---
+
+<Layout 
+  title="Services — High Quality Cleaning"
+  description="Service Tiers — High Quality Cleaning. Explore Essentials, Signature, and WellClean programmes designed for calm, immaculate homes."
+>
+  <Header />
+  
+  <main class="page-transition pt-16">
+    <!-- 1. Hero -->
+    <HeroSection 
+      title="All Your Cleaning Needs Covered"
+      subtitle="From deep cleans to daily maintenance, we offer a range of services to suit your needs."
+      imageSrc="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&h=900&fit=crop&crop=center&auto=format&q=80"
+      imageAlt="Luxury home interior showcase"
+    />
+
+    <!-- 2. Proof Bar -->
+    <section class="bg-white border-y border-gold/20 py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
+            class="rounded-xl bg-navy border border-gold/50 p-6 flex items-center gap-4"
+          >
+            <div class="h-12 w-12 rounded-lg bg-gold/20 border border-gold flex items-center justify-center">
+              <i class="fas fa-chart-line text-gold text-lg"></i>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-xl">97%</div>
+              <div class="text-sm text-white/70">Client retention</div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl bg-navy border border-gold/50 p-6 flex items-center gap-4"
+          >
+            <div class="h-12 w-12 rounded-lg bg-gold/20 border border-gold flex items-center justify-center">
+              <i class="fas fa-shield-alt text-gold text-lg"></i>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-xl">£5M</div>
+              <div class="text-sm text-white/70">Insurance cover</div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl bg-navy border border-gold/50 p-6 flex items-center gap-4"
+          >
+            <div class="h-12 w-12 rounded-lg bg-gold/20 border border-gold flex items-center justify-center">
+              <i class="fas fa-clock text-gold text-lg"></i>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-xl">48h</div>
+              <div class="text-sm text-white/70">Avg response</div>
+            </div>
+          </div>
+          <div
+            class="rounded-xl bg-navy border border-gold/50 p-6 flex items-center gap-4"
+          >
+            <div class="h-12 w-12 rounded-lg bg-gold/20 border border-gold flex items-center justify-center">
+              <i class="fas fa-user-check text-gold text-lg"></i>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-xl">100%</div>
+              <div class="text-sm text-white/70">DBS‑checked staff</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5. Service Tiers Detail -->
+    <section id="services" class="py-20 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+              <h2 class="font-serif text-4xl md:text-6xl font-bold text-navy mb-4">
+                  Choose Your Perfect 
+                  <span class="text-gold">
+                      Clean
+                  </span>
+              </h2>
+              <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                  Three meticulously designed programmes, each tailored to your home, schedule, and lifestyle preferences
+              </p>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
+              <!-- Essentials Clean -->
+              <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
+                  <div class="flex items-start justify-between mb-6">
+                      <div class="tier-icon w-20 h-20 bg-gold rounded-2xl flex items-center justify-center shadow-lg">
+                          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+                          </svg>
+                      </div>
+                      <div class="pricing-hint text-sm text-gray-600">£100-£285+</div>
+                  </div>
+                  
+                  <div class="mb-6">
+                      <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+                          Essentials Clean™
+                      </h3>
+                      <p class="text-gray-600 font-medium mb-2">
+                          A pristine reset for everyday peace of mind
+                      </p>
+                      <p class="text-sm text-gray-500 italic">
+                          Ideal for busy professionals and families
+                      </p>
+                  </div>
+
+                  <ul class="space-y-3 mb-8">
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Standard home cleaning
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Kitchen & bathroom hygiene
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Dusting, hoovering, bins
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Light refresh of main spaces
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Floors mopped & rubbish emptied
+                      </li>
+                  </ul>
+
+                  <a href="index.html#quote" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Get Started
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- Signature Clean (Most Popular) -->
+              <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
+                  <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-navy text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
+                  
+                  <div class="flex items-start justify-between mb-6">
+                      <div class="tier-icon w-20 h-20 bg-navy rounded-2xl flex items-center justify-center shadow-lg">
+                          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/>
+                          </svg>
+                      </div>
+                      <div class="pricing-hint text-sm text-gray-600">£175-£320+</div>
+                  </div>
+                  
+                  <div class="mb-6">
+                      <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+                          Signature Clean™
+                      </h3>
+                      <p class="text-gray-600 font-medium mb-2">
+                          Our most requested – deeper detail, care, and attention
+                      </p>
+                      <p class="text-sm text-gray-500 italic">
+                          Tailored to your lifestyle
+                      </p>
+                  </div>
+
+                  <ul class="space-y-3 mb-8">
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Everything in Essentials, plus:
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Deeper attention to detail
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Interior windows & upholstery vacuuming
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Inside fridge & microwave
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Premium finishing touches
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Linen changed (on request)
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Scented finishing touches
+                      </li>
+                  </ul>
+
+                  <a href="index.html#quote" class="inline-flex items-center justify-center w-full px-6 py-3 bg-navy text-white font-semibold rounded-xl hover:bg-navy/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Choose Signature
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- WellClean Premium -->
+              <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
+                  <div class="absolute -top-3 right-4 bg-gradient-to-r from-gold to-yellow-500 text-navy px-3 py-1 rounded-full text-xs font-bold">FLAGSHIP</div>
+                  
+                  <div class="flex items-start justify-between mb-6">
+                      <div class="tier-icon w-20 h-20 bg-gold rounded-2xl flex items-center justify-center shadow-lg">
+                          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
+                          </svg>
+                      </div>
+                      <div class="pricing-hint text-sm text-gray-600">£250-£375+</div>
+                  </div>
+                  
+                  <div class="mb-6">
+                      <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+                          WellClean™
+                      </h3>
+                      <p class="text-gray-600 font-medium mb-2">
+                          Flagship Wellness Offering
+                      </p>
+                      <p class="text-sm text-gray-500 italic">
+                          For wellness studios, spa clients, luxury homes
+                      </p>
+                  </div>
+
+                  <ul class="space-y-3 mb-8">
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Everything in Signature, plus:
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Steam or chemical-free options
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Spa-grade sanitisation of touchpoints
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Aromatherapy scenting (optional)
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Personalised cleaner briefing
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Deep degreasing & eco-conscious disinfecting
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          High dusting & detailing of fixtures
+                      </li>
+                  </ul>
+                  <a href="index.html#quote" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Go WellClean™
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- 2.6. Specialised Services -->
+    <section class="py-20 sm:py-24 bg-navy">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+              <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
+                  Specialised 
+                  <span class="text-gold">
+                      Services
+                  </span>
+              </h2>
+              <p class="text-lg text-white/80 max-w-3xl mx-auto">
+                  Bespoke cleaning solutions for unique needs — book separately or as premium add-ons
+              </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <!-- Move In/Move Out Reset -->
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                  <div class="flex items-center mb-4">
+                      <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
+                          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2v0a2 2 0 01-2-2v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2a2 2 0 01-2 2 2 2 0 01-2-2V9a2 2 0 012-2h2V7"/>
+                          </svg>
+                      </div>
+                      <h4 class="font-semibold text-gold">Move In / Move Out Reset™</h4>
+                  </div>
+                  <p class="text-white/80 text-sm mb-3">Deep, compliant cleaning to meet landlord or agent expectations — inventory-ready and stress-free.</p>
+                  <p class="text-gold text-sm font-medium italic mb-4">"Leave it spotless. Start fresh."</p>
+                  <a href="/services/moving-out" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
+                      Learn More
+                      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- Airbnb Turnover Clean -->
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                  <div class="flex items-center mb-4">
+                      <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
+                          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 15h8M8 11h8m-4-4h4"/>
+                          </svg>
+                      </div>
+                      <h4 class="font-semibold text-gold">Airbnb Turnover Clean™</h4>
+                  </div>
+                  <p class="text-white/80 text-sm mb-3">Rapid reset between guests — linen, restocking, staging. Hosts trust our touch.</p>
+                  <p class="text-gold text-sm font-medium italic mb-4">"Five-star hosting, every time"</p>
+                  <a href="/services/airbnb-turnover" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
+                      Learn More
+                      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- HQC Office Clean -->
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                  <div class="flex items-center mb-4">
+                      <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
+                          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                          </svg>
+                      </div>
+                      <h4 class="font-semibold text-gold">HQC Office Clean™</h4>
+                  </div>
+                  <p class="text-white/80 text-sm mb-3">Office cleaning for premium spaces. Confidential, consistent, and concierge-level.</p>
+                  <p class="text-gold text-sm font-medium italic mb-4">"Confidence in your first impression"</p>
+                  <a href="/services/office-cleaning-services" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
+                      Learn More
+                      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- WellClean Studio Edition -->
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                  <div class="flex items-center mb-4">
+                      <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
+                          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                          </svg>
+                      </div>
+                      <h4 class="font-semibold text-gold">WellClean™ Studio Edition</h4>
+                  </div>
+                  <p class="text-white/80 text-sm mb-3">Cleaning tailored to spas, saunas, cold plunges & wellness studios, trained for tranquillity.</p>
+                  <p class="text-gold text-sm font-medium italic mb-4">"Trust at a wellness level"</p>
+                  <a href="/services/well-clean" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
+                      Learn More
+                      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- WellClean Studio Advisory -->
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                  <div class="flex items-center mb-4">
+                      <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
+                          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                          </svg>
+                      </div>
+                      <h4 class="font-semibold text-gold">WellClean™ Studio Advisory</h4>
+                  </div>
+                  <p class="text-white/80 text-sm mb-3">Consulting for wellness operators from design flow to maintenance & operations.</p>
+                  <p class="text-gold text-sm font-medium italic mb-4">"Clarity and confidence in your operations"</p>
+                  <a href="/services/well-clean" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
+                      Learn More
+                      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- HQC Concierge Laundry -->
+              <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
+                  <div class="flex items-center mb-4">
+                      <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
+                          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M7 4h10M9 9h6m-6 4h6"/>
+                          </svg>
+                      </div>
+                      <h4 class="font-semibold text-gold">HQC Concierge Laundry</h4>
+                  </div>
+                  <p class="text-white/80 text-sm mb-3">Wellness-grade care, luxury presentation, trustworthy consistency — far beyond the bulk wash-and-fold apps.</p>
+                  <p class="text-gold text-sm font-medium italic mb-4">"Your Home, Your Wardrobe, Five-Star Clean"</p>
+                  <a href="/services/concierge-laundry" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
+                      Learn More
+                      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+
+          <div class="text-center mt-12">
+              <p class="text-white/80 text-sm mb-6">All Specialised services can be booked separately or added to your regular cleaning programme</p>
+              <a href="index.html#quote" class="inline-flex items-center justify-center px-8 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                  Enquire About Specialised Services
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+              </a>
+          </div>
+      </div>
+    </section>
+
+    <!-- 2.7. Transparent Pricing Structure -->
+    <section class="py-20 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+              <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy mb-4">
+                  Transparent 
+                  <span class="text-gold">
+                      Pricing
+                  </span>
+              </h2>
+              <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                  Clear, upfront pricing based on property size — no hidden fees, no surprises
+              </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-navy/5 to-gold/5 rounded-2xl p-8 md:p-12 border border-gold/20">
+              <div class="overflow-x-auto">
+                  <table class="w-full text-sm">
+                      <thead>
+                          <tr class="border-b-2 border-gold/30">
+                              <th class="text-left p-4 font-semibold text-navy">Service Tier</th>
+                              <th class="text-center p-4 font-semibold text-navy">Studio/1-Bed</th>
+                              <th class="text-center p-4 font-semibold text-navy">2-Bed</th>
+                              <th class="text-center p-4 font-semibold text-navy">3-Bed</th>
+                              <th class="text-center p-4 font-semibold text-navy">4-Bed+</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="border-b border-gold/20">
+                              <td class="p-4 font-semibold text-navy">Essentials Clean™</td>
+                              <td class="p-4 text-center text-ink/70">£100 – £170</td>
+                              <td class="p-4 text-center text-ink/70">£175 – £240</td>
+                              <td class="p-4 text-center text-ink/70">£245 – £280</td>
+                              <td class="p-4 text-center text-ink/70">£285+</td>
+                          </tr>
+                          <tr class="border-b border-gold/20 bg-gold/5">
+                              <td class="p-4 font-semibold text-navy">Signature Clean™</td>
+                              <td class="p-4 text-center text-ink/70">£175 – £200</td>
+                              <td class="p-4 text-center text-ink/70">£245 – £260</td>
+                              <td class="p-4 text-center text-ink/70">£285 – £315</td>
+                              <td class="p-4 text-center text-ink/70">£320+</td>
+                          </tr>
+                          <tr class="border-b border-gold/20">
+                              <td class="p-4 font-semibold text-navy">WellClean™ Premium</td>
+                              <td class="p-4 text-center text-ink/70">£250 – £270</td>
+                              <td class="p-4 text-center text-ink/70">£280 – £310</td>
+                              <td class="p-4 text-center text-ink/70">£325 – £350</td>
+                              <td class="p-4 text-center text-ink/70">£375+</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm text-ink/70">
+                  <div class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-gold rounded-full mt-2"></div>
+                      <div>
+                          <span class="font-medium text-navy">Add-ons</span> (oven clean, inside fridge, carpet, etc.) are priced separately based on need
+                      </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-gold rounded-full mt-2"></div>
+                      <div>
+                          <span class="font-medium text-navy">Repeat clients</span> receive loyalty pricing or bundled packages
+                      </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-gold rounded-full mt-2"></div>
+                      <div>
+                          <span class="font-medium text-navy">All pricing</span> includes VAT if applicable, and full insurance cover
+                      </div>
+                  </div>
+              </div>
+
+              <div class="mt-8 text-center">
+                  <p class="text-ink/60 italic mb-4">
+                      Indicative pricing — final quotes subject to property assessment and specific requirements
+                  </p>
+                  <a href="index.html#quote" class="inline-flex items-center justify-center px-8 py-3 bg-navy text-white font-semibold rounded-xl hover:bg-navy/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Get Your Exact Quote
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- 5. Photo Story Strip -->
+    <TransformationGallery />
+
+    <!-- 6. Founder Vision -->
+     <section class="py-24 md:py-32 bg-white">
+      <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center"
+      >
+        <div class="flex justify-center">
+          <img
+            src="assets/images/pedro.jpg"
+            alt="Pedro, founder of High Quality Cleaning"
+            class="w-3/4 h-auto rounded-xl border border-gold/30 shadow-lg"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <h3 class="font-serif text-3xl md:text-4xl text-navy mb-6 flex items-center gap-3">
+            <i class="fas fa-user-tie text-gold"></i>
+            Pedro's Vision
+          </h3>
+          <p class="text-slate-600 text-lg leading-relaxed mb-6">
+            After a decade in luxury hospitality, Pedro founded HQC to merge
+            wellness science with concierge etiquette.
+          </p>
+          <ul class="text-slate-600 space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-gold mt-1"></i>
+              Quiet presence, precise standards
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-gold mt-1"></i>
+              Surface‑safe methods, long‑term care
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-gold mt-1"></i>
+              Predictable outcomes, photo handovers
+            </li>
+          </ul>
+          <blockquote class="text-xl italic text-gold font-medium border-l-4 border-gold pl-6">
+            "True luxury is the calm you feel when every detail is handled."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQs -->
+    <section id="faqs" class="py-24 md:py-32 bg-navy">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <h2 class="font-serif text-3xl md:text-4xl text-white text-center mb-12">
+          Frequently Asked Questions
+        </h2>
+      <FAQ />
+      </div>
+    </section>
+
+    <!-- 10. Final CTA Banner -->
+    <section id="final-cta" class="relative bg-navy" aria-labelledby="cta">
+      <div class="ar-16-6">
+        <img
+          src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=1600&h=600&fit=crop&crop=center&auto=format&q=80"
+          alt="Beautiful luxury home ready for living"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"
+        ></div>
+        <div class="absolute inset-0 flex items-center px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-5xl w-full text-left">
+            <h2 id="cta" class="font-serif text-4xl md:text-5xl text-gold mb-4">
+              Ready for Total Calm?
+            </h2>
+            <p class="text-white/90 max-w-2xl text-lg mb-8 leading-relaxed">
+              Choose your tier, and we'll tailor every detail to your home.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="index.html#quote"
+                class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 text-base font-medium border border-gold hover:bg-gold/90 transition-colors"
+                >Request Personalised Quote</a
+              >
+              <a
+                href="https://wa.me/07824390336"
+                target="_blank"
+                rel="noopener nofollow"
+                class="inline-flex items-center justify-center rounded-md bg-navy/50 text-white px-6 py-3 text-base border border-white/50 backdrop-blur-sm hover:bg-navy/70 transition-colors"
+                ><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"/>
+                </svg>WhatsApp Us</a
+              >
+              <a
+                href="tel:+442033425260"
+                class="inline-flex items-center justify-center rounded-md border border-gold px-6 py-3 text-gold text-base bg-transparent hover:bg-gold/10 transition-colors"
+                ><i class="fas fa-phone mr-2"></i>Call Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section id="quote" class="py-24 md:py-32 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Get Your Personalised Quote</h2>
+          <p class="text-slate-600 text-lg">Tell us about your home and preferences</p>
+        </div>
+        <form
+          class="bg-navy rounded-2xl p-8 md:p-12 border border-gold/50 shadow-xl"
+          action="#"
+          method="post"
+          onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');"
+        >
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-user text-gold"></i>
+                Full Name
+              </span>
+              <input
+                type="text"
+                required
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+                placeholder="Your name"
+              />
+            </label>
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-envelope text-gold"></i>
+                Email
+              </span>
+              <input
+                type="email"
+                required
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+                placeholder="you@example.com"
+              />
+            </label>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6 mb-6">
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-gold"></i>
+                Postcode
+              </span>
+              <input
+                type="text"
+                required
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+                placeholder="SW1, W8…"
+              />
+            </label>
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-home text-gold"></i>
+                Property Type
+              </span>
+              <select
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-2 focus:ring-gold/20"
+                required
+              >
+                <option value="">Select…</option>
+                <option>Townhouse</option>
+                <option>Penthouse</option>
+                <option>Apartment</option>
+                <option>Mews</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-sparkles text-gold"></i>
+                Preferred Tier
+              </span>
+              <select
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-2 focus:ring-gold/20"
+                required
+              >
+                <option value="">Select…</option>
+                <option>Essentials Clean™</option>
+                <option>Signature Clean™</option>
+                <option>WellClean™</option>
+              </select>
+            </label>
+          </div>
+          <label class="block mb-8">
+            <span class="block mb-2 text-white font-medium flex items-center gap-2">
+              <i class="fas fa-comment text-gold"></i>
+              Notes & Preferences
+            </span>
+            <textarea
+              rows="4"
+              class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+              placeholder="Surfaces, sensitivities, schedule, access requirements…"
+            ></textarea>
+          </label>
+          <div
+            class="flex flex-col md:flex-row md:items-center gap-6 md:justify-between"
+          >
+            <label
+              class="text-sm text-white/80 inline-flex items-start gap-3"
+            >
+              <input type="checkbox" required class="accent-gold mt-1" />
+              <span>I understand this is a premium service with bespoke pricing tailored to my specific requirements.</span>
+            </label>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 text-base font-medium border border-gold hover:bg-gold/90 transition-colors min-w-[200px]"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</Layout>

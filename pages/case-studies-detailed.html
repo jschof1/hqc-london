@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="High Quality Cleaning Client Success Stories — Real experiences from discerning London clients who trusted us with their homes. Detailed case studies showcasing our wellness-grade cleaning excellence."
+    />
+    <title>Client Success Stories — High Quality Cleaning London</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      /* CSS Custom Properties */
+      :root {
+        --color-ink: #0E0E10;
+        --color-mist: #F7F7F9;
+        --color-gold: #C9A961;
+        --color-navy: #2C3E50;
+        --color-night: #1c2833;
+      }
+
+      /* Base Styles */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        background-color: var(--color-mist);
+        color: var(--color-ink);
+      }
+
+      .font-serif {
+        font-family: 'Cormorant Garamond', serif;
+      }
+
+      /* Custom Color Classes */
+      .text-ink { color: var(--color-ink); }
+      .text-mist { color: var(--color-mist); }
+      .text-gold { color: var(--color-gold); }
+      .text-navy { color: var(--color-navy); }
+      .text-night { color: var(--color-night); }
+      
+      .bg-ink { background-color: var(--color-ink); }
+      .bg-mist { background-color: var(--color-mist); }
+      .bg-gold { background-color: var(--color-gold); }
+      .bg-navy { background-color: var(--color-navy); }
+      .bg-night { background-color: var(--color-night); }
+      
+      .border-gold { border-color: var(--color-gold); }
+      .border-navy { border-color: var(--color-navy); }
+
+      /* Opacity variations */
+      .text-ink\/60 { color: rgba(14, 14, 16, 0.6); }
+      .text-ink\/70 { color: rgba(14, 14, 16, 0.7); }
+      .text-ink\/80 { color: rgba(14, 14, 16, 0.8); }
+      .bg-navy\/60 { background-color: rgba(44, 62, 80, 0.6); }
+      .bg-navy\/80 { background-color: rgba(44, 62, 80, 0.8); }
+      .bg-navy\/85 { background-color: rgba(44, 62, 80, 0.85); }
+      .bg-navy\/90 { background-color: rgba(44, 62, 80, 0.9); }
+      .bg-navy\/95 { background-color: rgba(44, 62, 80, 0.95); }
+      .bg-navy\/5 { background-color: rgba(44, 62, 80, 0.05); }
+      .border-gold\/20 { border-color: rgba(201, 169, 97, 0.2); }
+      .bg-gold\/60 { background-color: rgba(201, 169, 97, 0.6); }
+      .bg-gold\/90 { background-color: rgba(201, 169, 97, 0.9); }
+
+      /* Custom shadows */
+      .shadow-soft {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06);
+      }
+
+      /* Mobile Navigation */
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .mobile-menu.open {
+        transform: translateX(0);
+      }
+      
+      /* Animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Button hover effects */
+      .btn-hover {
+        transition: all 0.3s ease;
+      }
+      
+      .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      }
+      
+      /* Typography improvements */
+      h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+        font-weight: 600;
+      }
+      
+      p {
+        line-height: 1.6;
+      }
+      
+      /* Card styling consistency */
+      .card {
+        transition: all 0.3s ease;
+        border-radius: 1rem;
+      }
+      
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+
+      /* Testimonial cards */
+      .testimonial-card {
+        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(201, 169, 97, 0.3);
+      }
+      
+      /* Accessibility improvements */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      
+      /* Focus visible for keyboard navigation */
+      .focus-visible:focus {
+        outline: 2px solid var(--color-gold);
+        outline-offset: 2px;
+      }
+
+      /* Transition classes */
+      .transition-colors {
+        transition: color 0.2s ease;
+      }
+
+      .transition-all {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Top Bar / Brand -->
+    <header
+      class="fixed inset-x-0 top-0 z-50 backdrop-blur border-b border-gold"
+      style="background-color: rgba(44, 62, 80, 0.95);"
+    >
+      <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-white"
+      >
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="font-serif text-xl tracking-wide text-gold hover:opacity-80 transition-opacity">
+            High Quality Cleaning
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm" role="navigation" aria-label="Main navigation">
+          <a href="index.html#services" class="hover:text-gold text-white transition-colors focus-visible">Service Tiers</a>
+          <a href="index.html#differentiation" class="hover:text-gold text-white transition-colors focus-visible">Why Us</a>
+          <a href="index.html#areas" class="hover:text-gold text-white transition-colors focus-visible">Areas</a>
+          <a href="index.html#process" class="hover:text-gold text-white transition-colors focus-visible">Process</a>
+          <a href="case-studies.html" class="hover:text-gold text-gold transition-colors focus-visible">Case Studies</a>
+          <a
+            href="index.html#quote"
+            class="inline-flex items-center rounded-md bg-gold text-navy px-4 py-2 border border-gold btn-hover focus-visible"
+          >
+            Request a Personalised Quote
+          </a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white p-2 focus-visible"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="mobile-menu md:hidden fixed inset-y-0 right-0 w-64 bg-navy border-l border-gold p-6 z-50"
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <div class="flex justify-between items-center mb-8">
+          <span class="font-serif text-lg text-gold">Menu</span>
+          <button
+            id="mobile-menu-close"
+            class="text-white p-2 focus-visible"
+            aria-label="Close mobile menu"
+          >
+            <i class="fas fa-times text-xl" aria-hidden="true"></i>
+          </button>
+        </div>
+        <ul class="space-y-6 text-white">
+          <li><a href="index.html#services" class="block hover:text-gold transition-colors focus-visible">Service Tiers</a></li>
+          <li><a href="index.html#differentiation" class="block hover:text-gold transition-colors focus-visible">Why Us</a></li>
+          <li><a href="index.html#areas" class="block hover:text-gold transition-colors focus-visible">Areas</a></li>
+          <li><a href="index.html#process" class="block hover:text-gold transition-colors focus-visible">Process</a></li>
+          <li><a href="case-studies.html" class="block text-gold">Case Studies</a></li>
+          <li>
+            <a
+              href="index.html#quote"
+              class="inline-flex items-center rounded-md bg-gold text-navy px-4 py-2 border border-gold btn-hover focus-visible"
+            >
+              Request Quote
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="pt-16 relative">
+      <!-- Hero Section -->
+      <section class="relative bg-navy text-white py-20 md:py-32">
+        <div class="absolute inset-0">
+          <img
+            src="assets/images/luxury-home/luxury-home-1.jpg"
+            alt="Luxury home interior showcasing pristine cleaning results"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(44, 62, 80, 0.8), rgba(28, 40, 51, 0.9));"></div>
+        </div>
+        
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-4xl">
+            <div class="flex items-center gap-3 mb-6 text-gold text-sm">
+              <div class="h-px w-8" style="background-color: rgba(201, 169, 97, 0.6);"></div>
+              <span>Client Success Stories</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl text-gold mb-6">
+              Client Success Stories
+            </h1>
+            
+            <p class="text-xl md:text-2xl leading-relaxed mb-8" style="color: rgba(255, 255, 255, 0.9);">
+              Real experiences from discerning London clients who trusted us with their homes. Each story showcases our commitment to excellence and the lasting relationships we build.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#stories"
+                class="inline-flex items-center px-6 py-3 bg-gold text-navy font-semibold rounded-lg border border-gold btn-hover focus-visible"
+              >
+                <i class="fas fa-book-open mr-2" aria-hidden="true"></i>
+                Read Our Stories
+              </a>
+              <a
+                href="case-studies.html"
+                class="inline-flex items-center px-6 py-3 border-2 border-gold text-gold font-semibold rounded-lg btn-hover focus-visible"
+                style="background-color: rgba(44, 62, 80, 0.8);"
+              >
+                <i class="fas fa-images mr-2" aria-hidden="true"></i>
+                View Gallery
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section id="stories" class="py-20 sm:py-24 bg-white fade-in">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Client Success Stories</h2>
+            <p class="text-lg max-w-3xl mx-auto" style="color: rgba(14, 14, 16, 0.7);">
+              Real experiences from discerning London clients who trusted us with their homes
+            </p>
+          </div>
+          <div class="space-y-20">
+                    
+            <!-- Mr. Edwards Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                Mr. Edwards – From Disappointment to Dependability
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  When Mr. Edwards first contacted us, he didn't hold back.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  He had worked with other cleaning companies before, but told me plainly:
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "They didn't treat my property with respect. Corners were cut. Things were missed."
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  He was clear about what he expected, not just a clean home, but one looked after with care and attention. That stuck with me.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  We started with a full top-to-bottom clean. From protecting surfaces properly to detailing the kitchen and bathroom, we focused on restoring order and showing him that yes, there is a different standard. His home was left spotless and more importantly, respected.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  We encountered a small hiccup during one of the early services, but rather than hide it, we resolved it quickly and professionally. Mr. Edwards later told me:
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "It wasn't just the clean. It was how you handled the whole situation that made me trust you."
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Since then, he's become a regular. We now care for his property on a regular basis and he's recommended us to others in his network. That means a lot to us.
+                </p>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    For Mr. Edwards, what started as a frustrating search for quality ended with peace of mind and that's what we aim to deliver every time.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mrs. Dean Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                Mrs. Dean – A Home Restored Before the First Brick Was Laid
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Mrs. Dean contacted us about her flat in Chelsea, she was planning renovation works and needed the space cleaned ahead of the builders arriving. She wasn't based in London, but she knew the property needed attention and wanted a professional clean to prepare the space.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  When we visited the flat for an initial inspection, it became clear the condition was worse than expected. We filmed a full walkthrough and sent her a video report. She was shocked.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "Please do what you can," she said.
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  We got to work immediately cleaning top to bottom, removing multiple bags of rubbish, restoring order, and making the space workable for the incoming tradespeople. Once the clean was complete, we sent her another video walkthrough so she could see the transformation for herself. Her response said it all.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  That first experience built a foundation of trust.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  After the renovations were complete, she called us back for a post-build clean, and from there, we've continued to support her with regular maintenance cleans, window cleaning, laundry coordination, and anything else her property needs.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  More recently, she asked us to visit a second property she was renting not just to clean, but to give an honest view on its condition and offer guidance on ongoing issues with the landlord. She knew she could rely on us not just to clean, but to advise.
+                </p>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    For Mrs. Dean, we became more than a service, we became her trusted team on the ground.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Neylan Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                From Skepticism to Satisfaction, Neylan's Experience with High Quality Clean
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Neylan first came to us through a trusted recommendation. A family friend had spoken highly of our work but she was honest from the start: she'd worked with professional cleaning companies before, and had often been left disappointed.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  There had been missed details, poor communication, and a sense that care was lacking.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  So when Neylan booked us, she did so with cautious expectations.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  We didn't overpromise, we simply listened to what she needed and delivered with quiet consistency. The focus was on care, precision, and restoring confidence through detail.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  What stood out most to Neylan was something we take pride in, the combination of top-tier cleaning with thoughtful, responsive service.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "Pedro's care and attention to detail exceeded my expectations. It's rare to get both great customer care and a job well done but that's exactly what they delivered."
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Today, Neylan recommends High Quality Clean to others with full confidence.
+                </p>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    Because what began with skepticism ended with trust.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Myreete Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                From "Is This Real?" to "We Need Them Back" - Myreete's Story
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  When Myreete first came across High Quality Clean, she had a moment of hesitation.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "I wasn't 100% sure if this was a real service," she later admitted with a smile.
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  She decided to give us a shot and that's when things changed.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Our team showed up on time, fully equipped, and went to work. This wasn't surface-level cleaning; it was a full reset. Every room. Every corner. Every detail given the attention it deserved.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  By the end of the first appointment, the doubt had turned into something else entirely: surprise, satisfaction, and immediate trust.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "They cleaned the heck out of my house. They were AWESOME!"
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Since that day, Myreete has welcomed us back again and again not just for maintenance, but for proper, deep-deep cleans that keep her home fresh, calm, and fully reset.
+                </p>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    She's not just a client anymore, she's part of the High Quality Clean family.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Lucy Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                "Absolutely Blown Away" - Lucy's Deep Clean Experience
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  When Lucy booked us for a one-off deep clean, she expected a professional service. What she got was something more: a transformation.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  From the moment our team arrived, the focus was clear, restore the space with care, precision, and attention to every detail. This wasn't just about making things look tidy. It was about giving Lucy's home a true reset.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  By the time we were done, the difference was undeniable.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "Absolutely blown away by the service… the property looks completely different!"
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Lucy described the standard of cleaning as exceptional, and even more importantly, she said our team were a delight to have around. Respectful, efficient, and thorough, the kind of presence that makes a big job feel easy.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  She ended her review with a full-hearted:
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "110% recommend — thank you so much!"
+                  </p>
+                </div>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    That's what we aim for: not just a clean home, but a lasting impression.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Amy Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                Ready for Market in 48 Hours - Amy's Sales Prep Clean
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  When Amy needed her property cleaned and ready for sale, time was critical. She picked up the phone and called High Quality Clean and within 48 hours, everything was sorted.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  From that first conversation, she could tell this wasn't a typical cleaning service. The process was smooth, fast, and friendly, just what you need when you're juggling estate agents, timelines, and potential buyers.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Our team arrived promptly and delivered a deep, presentation-ready clean that helped the space shine at just the right moment.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "Very high quality clean… I was impressed with the speed and the friendliness of the owner."
+                  </p>
+                </div>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    Amy's job wasn't just done, it was done right, and done fast. Another property, prepped for market. Another client, completely at ease.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Courtney Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                Short Notice. No Corners Cut. Courtney's Best-Ever Clean
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  When Courtney needed a deep clean on short notice, she turned to High Quality Clean. What she got wasn't just a service it was an experience that stood out from anything she'd had before.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Pedro arrived personally and brought more than just supplies. He brought care, professionalism, and clear communication.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  He walked her through the process explaining what products he uses, how different surfaces should be treated, and why certain areas require more attention. It wasn't just about delivering a high-standard clean it was about helping Courtney feel confident and cared for at every step.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "Pedro was friendly, thorough, and worked efficiently… This experience was by far the best I've ever had."
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  She highlighted his focus on the specific areas she was concerned about, and the way he adapted the clean to fit her needs.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Today, Courtney doesn't just recommend High Quality Clean, she's already planning to book again.
+                </p>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    Because when service is thoughtful, professional, and personal, it becomes something worth returning to.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Ozlem Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                Attention to Detail, Start to Finish – Ozlem's 5-Star Experience
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Ozlem described her clean with High Quality Clean in one sentence:
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "My most satisfied cleaning experience."
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Having worked with other cleaning companies before, she knew what to expect but this time was different. From the first message to the final walkthrough, everything felt intentional, respectful, and seamless. What stood out wasn't just the result, it was the care put into every step.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Pedro's communication was prompt and professional, the team arrived prepared, and the work was carried out with quiet precision.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "Pedro is incredibly polite and extremely respectful of his work. I've never seen such attention to detail."
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  For Ozlem, this wasn't just a cleaning appointment, it was a full-circle, 5-star experience. And more than that, it set the tone for a trusted, ongoing relationship.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "Hope to continue working with you in future."
+                  </p>
+                </div>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    That's what we aim for. Clean spaces. Clear communication. Clients who feel seen and served not just booked.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tawfeeq Story -->
+            <article class="bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gold rounded-full"></div>
+                <span class="text-sm font-medium text-navy uppercase tracking-wide">Client Success Story</span>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-6">
+                Cleaned from the Heart - Tawfeeq's Return Visit
+              </h2>
+              <div class="prose prose-lg max-w-none">
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  For Tawfeeq, it wasn't just about cleanliness, it was about care.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  This was his second time booking High Quality Clean, and the reason he came back was simple: he felt the difference in how we clean.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  From the very first visit, what stood out was the way we handled his home, especially the bathrooms. Not rushed. Not surface-level. But with care, time, and detail where it mattered.
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "They clean from the heart and take their time on it."
+                  </p>
+                </div>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  That's not just a compliment, it's a principle we work by.
+                </p>
+                <p class="text-lg text-ink/80 leading-relaxed">
+                  Tawfeeq described his experience with Pedro and the team as the best service he's received, and his words say it all:
+                </p>
+                <div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-lg my-6">
+                  <p class="text-ink/80 italic">
+                    "I really do recommend them."
+                  </p>
+                </div>
+                <div class="bg-gold/10 border border-gold/30 p-6 rounded-lg text-center">
+                  <p class="text-navy font-medium">
+                    Consistent quality. A personal touch. That's why clients like Tawfeeq come back and keep spreading the word.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+            </div>
+        </section>
+
+      <!-- Call to Action -->
+      <section class="py-20 md:py-24 bg-mist fade-in">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">
+            Ready to Experience the Difference?
+          </h2>
+          <p class="text-lg max-w-3xl mx-auto mb-8" style="color: rgba(14, 14, 16, 0.7);">
+            Join London's most discerning homeowners who trust High Quality Cleaning with their most precious spaces. 
+            Experience the difference that wellness-grade methods and concierge-level care can make.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="index.html#quote"
+              class="inline-flex items-center px-8 py-4 bg-gold text-navy font-semibold rounded-lg border border-gold btn-hover focus-visible"
+            >
+              <i class="fas fa-calendar-check mr-2" aria-hidden="true"></i>
+              Request Your Personalised Quote
+            </a>
+            <a
+              href="case-studies.html"
+              class="inline-flex items-center px-8 py-4 border-2 border-gold text-gold font-semibold rounded-lg btn-hover focus-visible bg-white"
+            >
+              <i class="fas fa-images mr-2" aria-hidden="true"></i>
+              View Our Gallery
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-white relative">
+        <div class="absolute inset-0 opacity-5" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop&crop=center&q=80"
+            alt="Subtle marble texture background"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <div class="grid gap-10 md:grid-cols-4">
+            <div class="md:col-span-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="h-9 w-9 rounded grid place-items-center bg-navy border-2 border-gold">
+                  <span class="text-xs font-semibold text-gold" style="font-size: 10px;">HQC</span>
+                </div>
+                <div class="font-serif text-lg text-navy">
+                  High Quality Cleaning
+                </div>
+              </div>
+              <p class="text-sm max-w-md mb-4" style="color: rgba(14, 14, 16, 0.7);">
+                Luxury home cleaning with wellness expertise and concierge care.
+                Serving prime Central and West London.
+              </p>
+              <div class="text-sm" style="color: rgba(14, 14, 16, 0.6);">
+                © <span id="current-year"></span> High Quality Cleaning. All rights reserved.
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-medium text-navy mb-4">Company</h4>
+              <ul class="space-y-3 text-sm" style="color: rgba(14, 14, 16, 0.7);" role="list">
+                <li>
+                  <a href="index.html#services" class="hover:text-gold transition-colors focus-visible">Services</a>
+                </li>
+                <li>
+                  <a href="index.html#differentiation" class="hover:text-gold transition-colors focus-visible">Why Us</a>
+                </li>
+                <li>
+                  <a href="index.html#process" class="hover:text-gold transition-colors focus-visible">Process</a>
+                </li>
+                <li>
+                  <a href="case-studies.html" class="hover:text-gold transition-colors focus-visible">Case Studies</a>
+                </li>
+                <li>
+                  <a href="index.html#quote" class="hover:text-gold transition-colors focus-visible">Request Quote</a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-medium text-navy mb-4">Contact</h4>
+              <div class="space-y-3 text-sm" style="color: rgba(14, 14, 16, 0.7);">
+                <p class="flex items-center gap-2">
+                  <i class="fas fa-phone text-gold" aria-hidden="true"></i>
+                  020 7123 4567
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fas fa-envelope text-gold" aria-hidden="true"></i>
+                  hello@hqcleaning.london
+                </p>
+                <p class="flex items-center gap-2">
+                  <i class="fas fa-map-marker-alt text-gold" aria-hidden="true"></i>
+                  Central & West London
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Update copyright year
+        const yearElement = document.getElementById("current-year");
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+        function toggleMobileMenu() {
+          mobileMenu.classList.toggle('open');
+          const isOpen = mobileMenu.classList.contains('open');
+          mobileMenuButton.setAttribute('aria-expanded', isOpen);
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+          observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              const offsetTop = target.offsetTop - 80;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

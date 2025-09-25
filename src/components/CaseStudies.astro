@@ -1,0 +1,116 @@
+---
+export interface CaseStudy {
+  id: string;
+  beforeImage: string;
+  afterImage: string;
+  beforeAlt: string;
+  afterAlt: string;
+  heroImage?: string;
+  heroAlt?: string;
+  detailImage?: string;
+  detailAlt?: string;
+  sliderPosition?: number; // percentage for initial slider position
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  caseStudies?: CaseStudy[];
+  className?: string;
+  sectionId?: string;
+}
+
+const {
+  title = "Recent Work",
+  subtitle = "Before/After transformations with room-wide heroes and detail macros.",
+  caseStudies = [
+    {
+      id: "case-1",
+      beforeImage: "assets/images/before-after/before.jpg",
+      afterImage: "assets/images/before-after/after.jpg",
+      beforeAlt: "Kitchen before professional cleaning",
+      afterAlt: "Kitchen after professional deep cleaning",
+      heroImage: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      heroAlt: "Room-wide hero placeholder",
+      detailImage: "assets/images/before-after/before-2.jpg",
+      detailAlt: "Detail macro placeholder",
+      sliderPosition: 50
+    },
+    {
+      id: "case-2",
+      beforeImage: "assets/images/before-after/before-2.jpg",
+      afterImage: "assets/images/before-after/after-2.jpg",
+      beforeAlt: "Before placeholder",
+      afterAlt: "After placeholder",
+      heroImage: "",
+      heroAlt: "Room-wide hero placeholder",
+      detailImage: "https://placehold.co/400x112/",
+      detailAlt: "Detail macro placeholder",
+      sliderPosition: 50
+    }
+  ],
+  className = "",
+  sectionId = "case-studies"
+} = Astro.props;
+---
+
+<section id={sectionId} class={`py-20 sm:py-24 bg-white ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 class="font-serif text-3xl md:text-6xl">{title}</h2>
+    <p class="mt-4 text-ink/70 max-w-3xl text-sm md:text-base">
+      {subtitle}
+    </p>
+
+    <div
+      class="mt-12 grid gap-10 md:grid-cols-2"
+      aria-roledescription="carousel"
+    >
+      {caseStudies.map((caseStudy) => (
+        <article class="space-y-6">
+          <!-- Before/After Slider -->
+          <div class="rounded-xl overflow-hidden border border-gold">
+            <div class="ba-container aspect-[16/9] bg-navy">
+              <img
+                class="ba-svg"
+                src={caseStudy.beforeImage}
+                alt={caseStudy.beforeAlt}
+                loading="lazy"
+              />
+              <div class="ba-after-wrap" style={`width: ${caseStudy.sliderPosition || 50}%`}>
+                <img
+                  class="ba-svg"
+                  src={caseStudy.afterImage}
+                  alt={caseStudy.afterAlt}
+                  loading="lazy"
+                />
+              </div>
+              <div class="ba-handle" style={`left: ${caseStudy.sliderPosition || 50}%`}>
+                <div class="ba-dot"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Additional Images Grid -->
+          <div class="grid grid-cols-2 gap-3">
+            {caseStudy.heroImage && (
+              <img
+                src={caseStudy.heroImage}
+                alt={caseStudy.heroAlt || "Room-wide hero"}
+                class="h-28 w-full object-cover rounded-lg border border-gold"
+                loading="lazy"
+              />
+            )}
+            {caseStudy.detailImage && (
+              <img
+                src={caseStudy.detailImage}
+                alt={caseStudy.detailAlt || "Detail macro"}
+                class="h-28 w-full object-cover rounded-lg border border-gold"
+                loading="lazy"
+              />
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

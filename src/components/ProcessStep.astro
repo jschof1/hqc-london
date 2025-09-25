@@ -1,0 +1,118 @@
+---
+export interface Props {
+  step: number;
+  title: string;
+  description: string;
+  bulletPoints: string[];
+  imageUrl: string;
+  imageAlt: string;
+  testimonial: string;
+  testimonialAuthor: string;
+  timeframeIcon: string;
+  timeframeText: string;
+  isTextOnRight?: boolean;
+  primaryButton?: {
+    text: string;
+    href: string;
+  };
+  secondaryButton?: {
+    text: string;
+    href: string;
+    icon?: string;
+  };
+  bottomNote?: {
+    icon: string;
+    text: string;
+  };
+}
+
+const {
+  step,
+  title,
+  description,
+  bulletPoints,
+  imageUrl,
+  imageAlt,
+  testimonial,
+  testimonialAuthor,
+  timeframeIcon,
+  timeframeText,
+  isTextOnRight = false,
+  primaryButton,
+  secondaryButton,
+  bottomNote
+} = Astro.props;
+
+// Determine background based on step number (alternating pattern)
+const bgClass = step % 2 === 1 ? "bg-white shadow-soft" : "bg-mist";
+
+// Determine grid order classes
+const imageOrderClass = isTextOnRight ? "md:order-2" : "";
+const textOrderClass = isTextOnRight ? "md:order-1" : "";
+
+// Determine testimonial alignment
+const testimonialAlignClass = isTextOnRight ? "md:text-right" : "";
+---
+
+<article class={`grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold ${bgClass}`}>
+  <div class={imageOrderClass}>
+    <img
+      src={imageUrl}
+      alt={imageAlt}
+      class="w-full h-64 md:h-80 object-cover rounded-xl border border-navy/30"
+      loading="lazy"
+    />
+    <p class={`mt-4 text-sm italic text-gold ${testimonialAlignClass}`}>
+      {testimonial} — {testimonialAuthor}
+    </p>
+  </div>
+  <div class={`max-w-xl ${textOrderClass}`}>
+    <h2 class="font-serif text-2xl md:text-3xl text-navy">{step}. {title}</h2>
+    <p class="mt-4 text-ink/80 leading-relaxed">
+      {description}
+    </p>
+    <ul class="mt-4 text-ink/80 text-sm space-y-2">
+      {bulletPoints.map((point) => (
+        <li class="flex items-start gap-2">
+          <i class="fas fa-check text-gold mt-1 text-xs"></i>
+          {point}
+        </li>
+      ))}
+    </ul>
+    <div class="mt-4 text-xs text-ink/60">
+      <i class={`fas fa-${timeframeIcon} text-gold mr-1`}></i>
+      {timeframeText}
+    </div>
+    
+    {(primaryButton || secondaryButton) && (
+      <div class="mt-6 flex gap-2">
+        {primaryButton && (
+          <a 
+            href={primaryButton.href} 
+            class="inline-flex items-center rounded-md bg-gold text-navy px-4 py-2 border border-gold btn-hover focus-visible"
+          >
+            {primaryButton.text}
+          </a>
+        )}
+        {secondaryButton && (
+          <a 
+            href={secondaryButton.href}
+            style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; font-size: 0.875rem; color: #C9A961; background-color: white; transition: all 0.2s; text-decoration: none;" 
+            onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.05)'" 
+            onmouseout="this.style.backgroundColor='white'"
+          >
+            {secondaryButton.icon && <i class={`fas fa-${secondaryButton.icon} mr-2`}></i>}
+            {secondaryButton.text}
+          </a>
+        )}
+      </div>
+    )}
+    
+    {bottomNote && (
+      <div class="mt-4 text-xs text-ink/60">
+        <i class={`fas fa-${bottomNote.icon} text-gold mr-1`}></i>
+        {bottomNote.text}
+      </div>
+    )}
+  </div>
+</article>
