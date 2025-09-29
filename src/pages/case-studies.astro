@@ -836,7 +836,7 @@ import HeroSection from '../components/HeroSection.astro';
 
 /* Gallery Modal Styles - Specific to prevent conflicts with global.css */
 #galleryModal {
-  display: none;
+  display: none !important;
   position: fixed;
   z-index: 2000 !important;
   left: 0;
@@ -1313,6 +1313,7 @@ body:has(#galleryModal.active) .basic-modal {
   .modal-badges {
     flex-direction: column;
     gap: 0.5rem;
+    align-items: flex-start;
   }
 }
 
