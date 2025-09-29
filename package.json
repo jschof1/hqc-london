@@ -28,12 +28,14 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.4",
     "@astrojs/sitemap": "^3.6.0",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.10",
     "astro-robots-txt": "^1.0.0",
     "astro-seo-schema": "^5.1.0",
     "google-maps-review-scraper": "^1.5.0",
+    "partytown": "^0.0.0",
     "schema-dts": "^1.1.5",
     "tailwindcss": "^4.1.13"
   },

@@ -1,206 +1,208 @@
 ---
-import '../styles/global.css';
-import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 
-import { Schema } from 'astro-seo-schema';
+import { Schema } from "astro-seo-schema";
 
 export interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = "High Quality Cleaning — Luxury home cleaning for discerning London clients." } = Astro.props;
+const {
+  title,
+  description = "High Quality Cleaning — Luxury home cleaning for discerning London clients.",
+} = Astro.props;
 
-const baseUrl = 'https://highqualitycleaning.co.uk';
+const baseUrl = "https://highqualitycleaning.co.uk";
 const canonicalUrl = Astro.url ? Astro.url.href : baseUrl;
 const defaultImage = `${baseUrl}/images/mayfair.jpg`;
 const serviceAreaNames = [
-  'Belgravia',
-  'Chelsea',
-  'Kensington',
-  'Mayfair',
-  'Knightsbridge',
-  'St John\'s Wood',
-  'Hampstead',
-  'Primrose Hill',
-  'Highgate',
-  'Weybridge',
-  'Hersham',
-  'Walton-on-Thames'
+  "Belgravia",
+  "Chelsea",
+  "Kensington",
+  "Mayfair",
+  "Knightsbridge",
+  "St John's Wood",
+  "Hampstead",
+  "Primrose Hill",
+  "Highgate",
+  "Weybridge",
+  "Hersham",
+  "Walton-on-Thames",
 ];
 
 const sameAs = [
-  'https://www.facebook.com/highqualityclean',
-  'https://www.instagram.com/highqualityclean',
-  'https://www.yell.com/biz/high-quality-clean-ltd-london-901756897/',
-  'https://www.tiktok.com/@highqualityclean',
-  'https://www.linkedin.com/company/86747092/',
-  'https://www.instagram.com/highqualitycleanltd/',
-  'https://www.bark.com/en/gb/company/high-quality-clean-ltd/LnAX9/'
-
+  "https://www.facebook.com/highqualityclean",
+  "https://www.instagram.com/highqualityclean",
+  "https://www.yell.com/biz/high-quality-clean-ltd-london-901756897/",
+  "https://www.tiktok.com/@highqualityclean",
+  "https://www.linkedin.com/company/86747092/",
+  "https://www.instagram.com/highqualitycleanltd/",
+  "https://www.bark.com/en/gb/company/high-quality-clean-ltd/LnAX9/",
 ];
 
 const serviceNodes = [
   {
-    '@type': 'Service',
-    '@id': `${baseUrl}/#service-essentials-clean`,
-    name: 'Essentials Clean™',
-    serviceType: 'Luxury maintenance cleaning programme',
+    "@type": "Service",
+    "@id": `${baseUrl}/#service-essentials-clean`,
+    name: "Essentials Clean™",
+    serviceType: "Luxury maintenance cleaning programme",
     description:
-      'Weekly upkeep service for maintaining pristine residences between deep cleans, tailored to Central London homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
+      "Weekly upkeep service for maintaining pristine residences between deep cleans, tailored to Central London homes.",
+    provider: { "@id": `${baseUrl}/#organization` },
     areaServed: serviceAreaNames,
     audience: {
-      '@type': 'Audience',
-      audienceType: 'Discerning homeowners and busy professionals'
-    }
+      "@type": "Audience",
+      audienceType: "Discerning homeowners and busy professionals",
+    },
   },
   {
-    '@type': 'Service',
-    '@id': `${baseUrl}/#service-signature-clean`,
-    name: 'Signature Clean™',
-    serviceType: 'Comprehensive deep cleaning programme',
+    "@type": "Service",
+    "@id": `${baseUrl}/#service-signature-clean`,
+    name: "Signature Clean™",
+    serviceType: "Comprehensive deep cleaning programme",
     description:
-      'Meticulous deep cleaning with wellness-grade products, designed for luxury interiors that demand elevated detail.',
-    provider: { '@id': `${baseUrl}/#organization` },
+      "Meticulous deep cleaning with wellness-grade products, designed for luxury interiors that demand elevated detail.",
+    provider: { "@id": `${baseUrl}/#organization` },
     areaServed: serviceAreaNames,
     audience: {
-      '@type': 'Audience',
-      audienceType: 'Luxury property managers and high-net-worth households'
-    }
+      "@type": "Audience",
+      audienceType: "Luxury property managers and high-net-worth households",
+    },
   },
   {
-    '@type': 'Service',
-    '@id': `${baseUrl}/#service-wellclean`,
-    name: 'WellClean™',
-    serviceType: 'Wellness-led premium cleaning programme',
+    "@type": "Service",
+    "@id": `${baseUrl}/#service-wellclean`,
+    name: "WellClean™",
+    serviceType: "Wellness-led premium cleaning programme",
     description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
+      "Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.",
+    provider: { "@id": `${baseUrl}/#organization` },
     areaServed: serviceAreaNames,
     audience: {
-      '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
-    }
-  }
+      "@type": "Audience",
+      audienceType: "Wellness-focused households and executive residences",
+    },
+  },
 ];
 
 const offerNodes = serviceNodes.map((service) => ({
-  '@type': 'Offer',
-  '@id': `${service['@id']}-offer`,
-  itemOffered: { '@id': service['@id'] },
+  "@type": "Offer",
+  "@id": `${service["@id"]}-offer`,
+  itemOffered: { "@id": service["@id"] },
   url: `${baseUrl}/#quote`,
-  availability: 'https://schema.org/InStock',
-  description: `Arrange ${service.name} with a bespoke proposal from High Quality Cleaning.`
+  availability: "https://schema.org/InStock",
+  description: `Arrange ${service.name} with a bespoke proposal from High Quality Cleaning.`,
 }));
 
 const offerCatalogNode = {
-  '@type': 'OfferCatalog',
-  '@id': `${baseUrl}/#offer-catalog`,
-  name: 'High Quality Cleaning programmes',
+  "@type": "OfferCatalog",
+  "@id": `${baseUrl}/#offer-catalog`,
+  name: "High Quality Cleaning programmes",
   itemListElement: offerNodes.map((offer, index) => ({
-    '@type': 'ListItem',
+    "@type": "ListItem",
     position: index + 1,
-    item: { '@id': offer['@id'] }
-  }))
+    item: { "@id": offer["@id"] },
+  })),
 };
 
 const organizationNode = {
-  '@type': ['LocalBusiness', 'CleaningService'],
-  '@id': `${baseUrl}/#organization`,
-  name: 'High Quality Cleaning',
-  alternateName: 'High Quality Clean',
+  "@type": ["LocalBusiness", "CleaningService"],
+  "@id": `${baseUrl}/#organization`,
+  name: "High Quality Cleaning",
+  alternateName: "High Quality Clean",
   url: baseUrl,
   description,
   image: defaultImage,
   logo: `${baseUrl}/favicon.ico`,
-  email: 'sales@highqualityclean.co.uk',
-  telephone: '+44 20 3342 5260',
-  priceRange: '£££',
+  email: "sales@highqualityclean.co.uk",
+  telephone: "+44 20 3342 5260",
+  priceRange: "£££",
   address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'London',
-    addressRegion: 'Greater London',
-    postalCode: 'SW1',
-    addressCountry: 'GB'
+    "@type": "PostalAddress",
+    addressLocality: "London",
+    addressRegion: "Greater London",
+    postalCode: "SW1",
+    addressCountry: "GB",
   },
   areaServed: serviceAreaNames,
   sameAs,
   contactPoint: [
     {
-      '@type': 'ContactPoint',
-      contactType: 'Customer Service',
-      telephone: '+44 20 3342 5260',
-      email: 'sales@highqualityclean.co.uk',
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      telephone: "+44 20 3342 5260",
+      email: "sales@highqualityclean.co.uk",
       areaServed: serviceAreaNames,
-      availableLanguage: ['English']
-    }
+      availableLanguage: ["English"],
+    },
   ],
   aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    bestRating: '5',
-    ratingCount: 97
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    ratingCount: 97,
   },
-  award: ['ISO 9001 Certified', 'DBS Checked Team', '97+ Five-star Reviews'],
+  award: ["ISO 9001 Certified", "DBS Checked Team", "97+ Five-star Reviews"],
   founder: {
-    '@type': 'Person',
-    name: 'Pedro',
-    jobTitle: 'Founder',
+    "@type": "Person",
+    name: "Pedro",
+    jobTitle: "Founder",
     description:
-      'Luxury hospitality professional and wellness cleaning specialist leading High Quality Cleaning.',
+      "Luxury hospitality professional and wellness cleaning specialist leading High Quality Cleaning.",
     knowsAbout: [
-      'Luxury home cleaning',
-      'Wellness-grade protocols',
-      'Concierge service',
-      'Quality management'
-    ]
+      "Luxury home cleaning",
+      "Wellness-grade protocols",
+      "Concierge service",
+      "Quality management",
+    ],
   },
-  hasOfferCatalog: { '@id': offerCatalogNode['@id'] },
-  makesOffer: offerNodes.map((offer) => ({ '@id': offer['@id'] }))
+  hasOfferCatalog: { "@id": offerCatalogNode["@id"] },
+  makesOffer: offerNodes.map((offer) => ({ "@id": offer["@id"] })),
 };
 
 const websiteNode = {
-  '@type': 'WebSite',
-  '@id': `${baseUrl}/#website`,
+  "@type": "WebSite",
+  "@id": `${baseUrl}/#website`,
   url: baseUrl,
-  name: 'High Quality Cleaning',
+  name: "High Quality Cleaning",
   description,
-  inLanguage: 'en-GB',
-  publisher: { '@id': organizationNode['@id'] },
+  inLanguage: "en-GB",
+  publisher: { "@id": organizationNode["@id"] },
   potentialAction: {
-    '@type': 'SearchAction',
+    "@type": "SearchAction",
     target: `${baseUrl}/?s={search_term_string}`,
-    'query-input': 'required name=search_term_string'
-  }
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const webpageNode = {
-  '@type': 'WebPage',
-  '@id': `${canonicalUrl}#webpage`,
+  "@type": "WebPage",
+  "@id": `${canonicalUrl}#webpage`,
   url: canonicalUrl,
   name: title,
   description,
-  isPartOf: { '@id': websiteNode['@id'] },
-  inLanguage: 'en-GB',
+  isPartOf: { "@id": websiteNode["@id"] },
+  inLanguage: "en-GB",
   primaryImageOfPage: defaultImage,
-  about: { '@id': organizationNode['@id'] }
+  about: { "@id": organizationNode["@id"] },
 };
 
 const schemaItem = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     websiteNode,
     offerCatalogNode,
     organizationNode,
     webpageNode,
     ...serviceNodes,
-    ...offerNodes
-  ]
+    ...offerNodes,
+  ],
 };
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Meta -->
@@ -217,15 +219,52 @@ const schemaItem = {
     <meta name="google" content="notranslate" />
     <meta name="google" content="notranslate" />
     <link rel="icon" href="/favicon.ico" />
+<!-- Google tag (gtag.js) -->
+<script
+  data-category="analytics"
+  is:inline
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id=G-F3ET7LHSLG"
+></script>
+
+<script data-category="analytics" is:inline type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-F3ET7LHSLG");
+</script>
+<script is:inline data-category="analytics">
+  function updateConsents() {
+    gtag('consent', 'update', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'granted',
+    });
+  }
+</script>
     <title>{title}</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <Schema item={schemaItem} />
     <!-- Import Global Styles (includes Tailwind) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
     <style>
       .ar-16-9 {
         position: relative;
@@ -530,42 +569,48 @@ const schemaItem = {
         }
 
         @keyframes fade-out {
-          0%, 100% {
+          0%,
+          100% {
             transform: none;
             filter: none;
           }
         }
-        
+
         @keyframes fade-in {
-          0%, 100% {
+          0%,
+          100% {
             transform: none;
             filter: none;
           }
         }
-        
+
         @keyframes slide-out-up {
-          0%, 100% {
+          0%,
+          100% {
             transform: none;
             filter: none;
           }
         }
-        
+
         @keyframes slide-in-up {
-          0%, 100% {
+          0%,
+          100% {
             transform: none;
             filter: none;
           }
         }
-        
+
         @keyframes hero-fade-out {
-          0%, 100% {
+          0%,
+          100% {
             transform: none;
             filter: none;
           }
         }
-        
+
         @keyframes hero-fade-in {
-          0%, 100% {
+          0%,
+          100% {
             transform: none;
             filter: none;
           }
@@ -574,19 +619,32 @@ const schemaItem = {
     </style>
   </head>
   <body class="bg-mist text-ink font-display antialiased">
+    <script src="../scripts/cookieconsent-config.js"></script>
     <slot />
     <Footer />
-    
+
     <script src="../scripts/main.js"></script>
-    
+
     <!-- Debug View Transitions (remove in production) -->
     <script>
-      if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-        console.log('🎬 View Transitions Debug Mode Active');
-        console.log('ViewTransition API available:', !!document.startViewTransition);
-        
+      if (
+        typeof window !== "undefined" &&
+        window.location.hostname === "localhost"
+      ) {
+        console.log("🎬 View Transitions Debug Mode Active");
+        console.log(
+          "ViewTransition API available:",
+          !!document.startViewTransition
+        );
+
         // Log all transition events
-        ['astro:before-preparation', 'astro:after-preparation', 'astro:before-swap', 'astro:after-swap', 'astro:page-load'].forEach(event => {
+        [
+          "astro:before-preparation",
+          "astro:after-preparation",
+          "astro:before-swap",
+          "astro:after-swap",
+          "astro:page-load",
+        ].forEach((event) => {
           document.addEventListener(event, () => {
             console.log(`📍 ${event} fired`);
           });
