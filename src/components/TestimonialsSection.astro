@@ -1,75 +1,75 @@
 ---
-export interface Testimonial {
-  name: string;
-  avatar: string;
-  avatarAlt: string;
-  title: string;
-  quote: string;
-  subtitle: string;
-  rating: number;
-}
-
-export interface Props {
-  headerText?: string;
-  testimonials?: Testimonial[];
-  className?: string;
-  backgroundColor?: string;
-  ariaLabel?: string;
-}
+import type { Props, Testimonial } from "./TestimonialsSection.types";
+import { fetchGoogleTestimonials } from "../lib/googleReviews";
 
 const {
   headerText = "Trusted by residents of Mayfair, Belgravia & Kensington",
-  testimonials = [
-    {
-      name: "Neylan",
-      avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=48&h=48&fit=crop&crop=face&q=80",
-      avatarAlt: "Neylan - satisfied client",
-      title: "Trusted Recommendation",
-      quote: "Pedro's care and attention to detail exceeded my expectations. It's rare to get both great customer care and a job well done but that's exactly what they delivered.",
-      subtitle: "From skepticism to satisfaction - now recommends with full confidence",
-      rating: 5
-    },
-    {
-      name: "Myreete",
-      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=48&h=48&fit=crop&crop=face&q=80",
-      avatarAlt: "Myreete - satisfied client",
-      title: "Returning Client",
-      quote: "I wasn't 100% sure if this was a real service... They cleaned the heck out of my house. They were AWESOME!",
-      subtitle: "From \"Is this real?\" to \"We need them back\" - now part of the HQC family",
-      rating: 5
-    },
-    {
-      name: "Lucy",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=face&q=80",
-      avatarAlt: "Lucy - satisfied client",
-      title: "Deep Clean Client",
-      quote: "Absolutely blown away by the service… the property looks completely different! 110% recommend — thank you so much!",
-      subtitle: "Exceptional standard with a delightful team",
-      rating: 5
-    },
-    {
-      name: "Ozlem",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face&q=80",
-      avatarAlt: "Ozlem - satisfied client",
-      title: "5-Star Experience",
-      quote: "My most satisfied cleaning experience. Pedro is incredibly polite and extremely respectful of his work. I've never seen such attention to detail.",
-      subtitle: "Care put into every step - hopes to continue the relationship",
-      rating: 5
-    },
-    {
-      name: "Tawfeeq",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face&q=80",
-      avatarAlt: "Tawfeeq - satisfied client",
-      title: "Return Client",
-      quote: "They clean from the heart and take their time on it. I really do recommend them.",
-      subtitle: "Second visit - the best service he's received",
-      rating: 5
-    }
-  ],
+  testimonials: propTestimonials,
   className = "",
   backgroundColor = "bg-navy",
   ariaLabel = "Client testimonials"
-} = Astro.props;
+} = Astro.props as Props;
+
+const fallbackTestimonials: Testimonial[] = [
+  {
+    name: "High Quality Clean",
+    avatar: "",
+    avatarAlt: "High Quality Clean reviewer",
+    title: "Google Reviewer",
+    quote: "Pedro and the team exceeded expectations with their attention to detail and professionalism.",
+    subtitle: "Review from Google Maps",
+    rating: 5
+  }
+];
+
+const testimonials =
+  propTestimonials?.length
+    ? propTestimonials
+    : await fetchGoogleTestimonials({ fallback: fallbackTestimonials, pages: "max", limit: Infinity });
+
+const normalizeWhitespace = (text: string) =>
+  text.replace(/\s+/g, " ").trim();
+
+const createQuotePreview = (quote: string) => {
+  const normalized = normalizeWhitespace(quote);
+  const sentences = normalized.match(/[^.!?]+[.!?]+|[^.!?]+$/g) ?? [normalized];
+  const previewSentences = sentences.slice(0, 2);
+  const preview = normalizeWhitespace(previewSentences.join(" "));
+  const isTruncated = sentences.length > 2;
+
+  return {
+    preview: preview || normalized,
+    full: normalized,
+    isTruncated,
+  };
+};
+
+type TestimonialCard = Testimonial & {
+  previewQuote: string;
+  fullQuote: string;
+  isTruncated: boolean;
+};
+
+const testimonialCards: TestimonialCard[] = testimonials.map((testimonial) => {
+  const { preview, full, isTruncated } = createQuotePreview(testimonial.quote);
+
+  return {
+    ...testimonial,
+    previewQuote: preview,
+    fullQuote: full,
+    isTruncated,
+  };
+});
+
+const INITIAL_RENDER_COUNT = 6;
+const initialTestimonials = testimonialCards.slice(0, INITIAL_RENDER_COUNT);
+const remainingTestimonials = testimonialCards.slice(INITIAL_RENDER_COUNT);
+const serializeToJson = (value: unknown) =>
+  JSON.stringify(value).replace(/[<>&]/g, (char) =>
+    ({ "<": "\\u003C", ">": "\\u003E", "&": "\\u0026" })[char] || char
+  );
+
+const serializedRemainingTestimonials = serializeToJson(remainingTestimonials);
 
 // Generate star rating
 const generateStars = (rating: number) => {
@@ -92,33 +92,244 @@ const generateStars = (rating: number) => {
     <div
       class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory"
       role="list"
+      data-testimonials-list
     >
-      {testimonials.map((testimonial) => (
+      {initialTestimonials.map((testimonial) => (
         <article
           class="min-w-[320px] max-w-md snap-start rounded-xl bg-navy border border-gold p-6"
           role="listitem"
+          data-quote-card
+          data-expanded="false"
         >
           <div class="flex items-center gap-4 mb-4">
-            <img
-              src={testimonial.avatar}
-              width="48"
-              height="48"
-              alt={testimonial.avatarAlt}
-              class="rounded-full object-cover border-2 border-gold"
-            />
+            {testimonial.avatar ? (
+              <img
+                src={testimonial.avatar}
+                width="48"
+                height="48"
+                alt={testimonial.avatarAlt}
+                class="rounded-full object-cover border-2 border-gold"
+              />
+            ) : (
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gold bg-navy/60 text-gold font-semibold"
+                aria-hidden="true"
+              >
+                {testimonial.name.slice(0, 1).toUpperCase()}
+              </div>
+            )}
             <div>
               <div class="font-medium text-gold">{testimonial.name}</div>
               <div class="text-xs text-white/70">{testimonial.title}</div>
             </div>
           </div>
-          <div class="text-sm text-white/90 mb-3" set:html={`"${testimonial.quote}"`}>
+          <div
+            class="text-sm text-white/90 mb-3"
+            data-quote-container
+            data-preview={testimonial.previewQuote}
+            data-full={testimonial.fullQuote}
+          >
+            <span class="quote-text">"{testimonial.previewQuote}"</span>
           </div>
           <div class="text-xs text-gold/80 italic mb-2">{testimonial.subtitle}</div>
           <div class="text-gold" aria-label={`${testimonial.rating} stars`}>
             {generateStars(testimonial.rating)}
           </div>
+          {testimonial.isTruncated && (
+            <button
+              type="button"
+              class="mt-3 text-xs font-medium text-gold/80 underline offset-2 hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-navy"
+              data-quote-toggle
+              aria-expanded="false"
+            >
+              Read more
+            </button>
+          )}
         </article>
       ))}
     </div>
   </div>
 </section>
+
+<script
+  id="testimonials-more"
+  type="application/json"
+  is:inline
+  set:html={serializedRemainingTestimonials}
+></script>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector("[data-testimonials-list]");
+    if (!container) return;
+
+    const attachReadMore = (card) => {
+      const quoteContainer = card.querySelector("[data-quote-container]");
+      const textEl = card.querySelector(".quote-text");
+      const button = card.querySelector("[data-quote-toggle]");
+
+      if (!quoteContainer || !textEl || !button) {
+        return;
+      }
+
+      const preview = quoteContainer.getAttribute("data-preview") || "";
+      const full = quoteContainer.getAttribute("data-full") || "";
+
+      button.addEventListener("click", () => {
+        const expanded = card.getAttribute("data-expanded") === "true";
+        const nextExpanded = !expanded;
+
+        card.setAttribute("data-expanded", String(nextExpanded));
+        button.setAttribute("aria-expanded", String(nextExpanded));
+
+        if (nextExpanded) {
+          textEl.textContent = `"${full}"`;
+          button.textContent = "Read less";
+        } else {
+          textEl.textContent = `"${preview}"`;
+          button.textContent = "Read more";
+        }
+      });
+    };
+
+    container.querySelectorAll("[data-quote-card]").forEach((card) => attachReadMore(card));
+
+    const dataScript = document.getElementById("testimonials-more");
+    if (!dataScript?.textContent) return;
+
+    let queue = [];
+    try {
+      queue = JSON.parse(dataScript.textContent);
+    } catch (error) {
+      console.error("Failed to parse additional testimonials", error);
+      return;
+    }
+
+    if (!Array.isArray(queue) || !queue.length) return;
+
+    const BATCH_SIZE = 4;
+
+    const clampRating = (value) => {
+      const numeric = Math.round(Number(value) || 0);
+      if (!Number.isFinite(numeric)) return 5;
+      return Math.min(Math.max(numeric, 1), 5);
+    };
+
+    const createStars = (rating) => "★".repeat(clampRating(rating));
+
+    const createAvatarFallback = (name) => {
+      const div = document.createElement("div");
+      div.className = "flex h-12 w-12 items-center justify-center rounded-full border-2 border-gold bg-navy/60 text-gold font-semibold";
+      div.setAttribute("aria-hidden", "true");
+      div.textContent = (name || "").slice(0, 1).toUpperCase() || "?";
+      return div;
+    };
+
+    const createQuoteCard = (testimonial) => {
+      const article = document.createElement("article");
+      article.className = "min-w-[320px] max-w-md snap-start rounded-xl bg-navy border border-gold p-6";
+      article.setAttribute("role", "listitem");
+      article.setAttribute("data-quote-card", "");
+      article.setAttribute("data-expanded", "false");
+
+      const header = document.createElement("div");
+      header.className = "flex items-center gap-4 mb-4";
+
+      const avatarWrapper = document.createElement("div");
+      if (testimonial.avatar) {
+        const img = document.createElement("img");
+        img.src = testimonial.avatar;
+        img.width = 48;
+        img.height = 48;
+        img.alt = testimonial.avatarAlt || "Google reviewer";
+        img.className = "rounded-full object-cover border-2 border-gold";
+        avatarWrapper.appendChild(img);
+      } else {
+        avatarWrapper.appendChild(createAvatarFallback(testimonial.name));
+      }
+
+      header.appendChild(avatarWrapper);
+
+      const nameWrapper = document.createElement("div");
+      const nameEl = document.createElement("div");
+      nameEl.className = "font-medium text-gold";
+      nameEl.textContent = testimonial.name;
+      const titleEl = document.createElement("div");
+      titleEl.className = "text-xs text-white/70";
+      titleEl.textContent = testimonial.title;
+      nameWrapper.appendChild(nameEl);
+      nameWrapper.appendChild(titleEl);
+      header.appendChild(nameWrapper);
+
+      article.appendChild(header);
+
+      const quoteContainer = document.createElement("div");
+      quoteContainer.className = "text-sm text-white/90 mb-3";
+      quoteContainer.setAttribute("data-quote-container", "");
+      quoteContainer.setAttribute("data-preview", testimonial.previewQuote || "");
+      quoteContainer.setAttribute("data-full", testimonial.fullQuote || "");
+
+      const quoteText = document.createElement("span");
+      quoteText.className = "quote-text";
+      quoteText.textContent = `"${testimonial.previewQuote || ""}"`;
+      quoteContainer.appendChild(quoteText);
+      article.appendChild(quoteContainer);
+
+      const subtitle = document.createElement("div");
+      subtitle.className = "text-xs text-gold/80 italic mb-2";
+      subtitle.textContent = testimonial.subtitle;
+      article.appendChild(subtitle);
+
+      const stars = document.createElement("div");
+      stars.className = "text-gold";
+      stars.setAttribute("aria-label", `${testimonial.rating} stars`);
+      stars.textContent = createStars(testimonial.rating);
+      article.appendChild(stars);
+
+      if (testimonial.isTruncated) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "mt-3 text-xs font-medium text-gold/80 underline offset-2 hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-navy";
+        button.setAttribute("data-quote-toggle", "");
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "Read more";
+        article.appendChild(button);
+      }
+
+      return article;
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          observer.unobserve(entry.target);
+          const batch = queue.splice(0, BATCH_SIZE);
+          batch.forEach((testimonial) => {
+            const card = createQuoteCard(testimonial);
+            container.appendChild(card);
+            attachReadMore(card);
+          });
+          if (queue.length) {
+            requestAnimationFrame(observeLastCard);
+          }
+        });
+      },
+      {
+        root: container,
+        threshold: 0.6,
+      }
+    );
+
+    const observeLastCard = () => {
+      observer.disconnect();
+      const cards = container.querySelectorAll("[data-quote-card]");
+      const lastCard = cards[cards.length - 1];
+      if (lastCard) {
+        observer.observe(lastCard);
+      }
+    };
+
+    observeLastCard();
+  });
+</script>

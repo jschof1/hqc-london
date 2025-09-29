@@ -14,7 +14,7 @@ export interface Props {
   sectionId?: string;
   backgroundColor?: string;
 }
-
+import CtaButton from './CtaButton.astro'; 
 const {
   title = "How It Works",
   subtitle = "Transparent steps, predictable outcomes, and visuals at each stage.",
@@ -46,7 +46,10 @@ const {
   ],
   className = "",
   sectionId = "process",
-  backgroundColor = "bg-white"
+  backgroundColor = "bg-white",
+  ctaText = "Start Your Journey",
+  ctaLink = "index.html#quote"
+
 } = Astro.props;
 ---
 
@@ -76,4 +79,11 @@ const {
       ))}
     </ol>
   </div>
+  {ctaText && ctaLink && (
+    <div class="text-center mt-8">
+      <CtaButton href={ctaLink}>
+        {ctaText}
+      </CtaButton>  
+    </div>
+  )}
 </section>

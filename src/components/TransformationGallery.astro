@@ -9,7 +9,10 @@ export interface Props {
   title?: string;
   images?: GalleryImage[];
   className?: string;
+  ctaText?: string;
 }
+
+import CtaButton from './CtaButton.astro';
 
 const {
   title = "Transformation Gallery",
@@ -45,9 +48,11 @@ const {
       caption: "Office Refresh"
     }
   ],
-  className = ""
+  className = "",
+  ctaText = "View All Transformations",
+  ctaLink = "/case-studies"
 } = Astro.props;
----
+--- 
 
 <section class={`py-24 md:py-32 bg-navy ${className}`}>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -71,6 +76,11 @@ const {
           </figcaption>
         </figure>
       ))}
+    </div>
+    <div class="text-center mt-8">
+      <CtaButton href={ctaLink}>
+        {ctaText}
+      </CtaButton>
     </div>
   </div>
 </section>

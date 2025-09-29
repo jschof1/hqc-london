@@ -131,6 +131,7 @@
     const hamburgerLines = document.querySelectorAll('.hamburger-line');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     const body = document.body;
+    let scrollPosition = 0;
 
     // Early return if required elements are not found
     if (!mobileMenuToggle || !mobileMenu || !mobileMenuClose) {
@@ -140,13 +141,12 @@
     function openMobileMenu() {
       if (!mobileMenu) return;
       
+      scrollPosition = window.pageYOffset || window.scrollY || 0;
       mobileMenu.classList.remove('translate-x-full');
       mobileMenu.classList.add('translate-x-0');
       body.classList.add('overflow-hidden');
-      
-      // Store current scroll position to prevent jumping
-      const scrollY = window.scrollY;
-      body.style.top = `-${scrollY}px`;
+      body.style.top = `-${scrollPosition}px`;
+      body.dataset.scrollPosition = `${scrollPosition}`;
       
       // Animate hamburger to X
       if (hamburgerLines.length >= 3) {
@@ -156,18 +156,21 @@
       }
     }
 
-    function closeMobileMenu() {
+    function closeMobileMenu(options = {}) {
+      const { restoreScroll = true } = options;
       if (!mobileMenu) return;
       
       mobileMenu.classList.remove('translate-x-0');
       mobileMenu.classList.add('translate-x-full');
-      
-      // Restore scroll position
-      const scrollY = body.style.top;
+      const lastScrollPosition = scrollPosition || parseInt(body.dataset.scrollPosition || '0', 10) || 0;
       body.classList.remove('overflow-hidden');
       body.style.top = '';
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      delete body.dataset.scrollPosition;
+
+      if (restoreScroll) {
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: lastScrollPosition, behavior: 'auto' });
+        });
       }
       
       // Reset hamburger animation
@@ -180,24 +183,26 @@
 
     // Toggle mobile menu
     mobileMenuToggle.addEventListener('click', openMobileMenu);
-    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileMenuClose.addEventListener('click', () => closeMobileMenu({ restoreScroll: true }));
 
     // Close menu when clicking on navigation links
     mobileNavLinks.forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
+      link.addEventListener('click', () => {
+        closeMobileMenu({ restoreScroll: false });
+      });
     });
 
     // Close menu when pressing Escape key
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
-        closeMobileMenu();
+        closeMobileMenu({ restoreScroll: true });
       }
     });
 
     // Close menu when clicking outside (on overlay)
     mobileMenu.addEventListener('click', function(event) {
       if (event.target === mobileMenu) {
-        closeMobileMenu();
+        closeMobileMenu({ restoreScroll: true });
       }
     });
   });

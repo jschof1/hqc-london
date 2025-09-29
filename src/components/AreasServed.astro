@@ -11,7 +11,7 @@ export interface AreaImage {
   caption: string;
   link?: string;
 }
-
+import CtaButton from './CtaButton.astro';    
 export interface AreaLink {
   name: string;
   link: string;
@@ -30,7 +30,11 @@ export interface Props {
   className?: string;
   sectionId?: string;
   backgroundColor?: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
+
+
 
 const {
   title = "Areas We Serve",
@@ -105,7 +109,9 @@ const {
   ],
   className = "",
   sectionId = "areas",
-  backgroundColor = "bg-white"
+  backgroundColor = "bg-white",
+  ctaText = "Enquire About Availability",
+  ctaLink = "#quote"
 } = Astro.props;
 ---
 
@@ -251,4 +257,11 @@ const {
       </div>
     </div>
   </div>
+  {ctaText && ctaLink && (
+    <div class="text-center mt-8">
+      <CtaButton href={ctaLink}>
+        {ctaText}
+      </CtaButton>  
+    </div>
+  )}
 </section>

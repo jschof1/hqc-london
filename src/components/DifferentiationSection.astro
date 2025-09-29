@@ -22,8 +22,10 @@ export interface Props {
   showStory?: boolean;
   className?: string;
   sectionId?: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
-
+import CtaButton from './CtaButton.astro';  
 const {
   title = "Our Difference: Wellness & Concierge Care",
   subtitle = "We combine wellness expertise with hospitality standards to deliver a distinctly calm and elevated experience.",
@@ -53,7 +55,9 @@ const {
   },
   showStory = true,
   className = "",
-  sectionId = "differentiation"
+  sectionId = "differentiation",
+  ctaText = "Discover Our Difference",
+  ctaLink = "index.html#differentiation"
 } = Astro.props;
 ---
 
@@ -113,5 +117,13 @@ const {
         </div>
       </div>
     )}
+    {ctaText && ctaLink && (
+      <div class="text-center mt-8">
+        <CtaButton href={ctaLink}>
+          {ctaText}
+        </CtaButton>  
+      </div>
+    )}
   </div>
+  
 </section>

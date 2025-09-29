@@ -18,6 +18,8 @@ export interface Props {
   textColor?: string;
 }
 
+import CtaButton from './CtaButton.astro'; 
+
 const {
   title = "Specialised Cleaning Services",
   subtitle = "Book separately or as add-ons to your regular service",
@@ -99,12 +101,9 @@ const {
 
       {ctaText && ctaLink && (
         <div class="text-center mt-8">
-          <a href={ctaLink} class="inline-flex items-center px-6 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300">
+          <CtaButton href={ctaLink}>
             {ctaText}
-            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          </CtaButton>
         </div>
       )}
     </div>
