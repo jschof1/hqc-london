@@ -74,14 +74,14 @@ import Header from '../components/Header.astro';
             <div class="ba-container" style="aspect-ratio: 4/3;">
               <img
                 class="ba-svg"
-                src="/images/before-after/transformation-mayfair.png"
+                src="/images/before-after/transformation-mayfair-improved.png"
                 alt="Kitchen before deep cleaning - showing daily wear and accumulated grime"
                 loading="lazy"
               />
               <div class="ba-after-wrap" style="width: 50%">
                 <img
                   class="ba-svg"
-                  src="/images/before-after/transformation-mayfair-improved.png"
+                  src="/images/before-after/transformation-mayfair.png"
                   alt="Kitchen after comprehensive cleaning - gleaming surfaces and pristine finish"
                   loading="lazy"
                 />
@@ -1119,6 +1119,9 @@ import Header from '../components/Header.astro';
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 0; /* Ensure no extra bottom margin */
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .masonry-item .gallery-item {
@@ -1199,6 +1202,19 @@ import Header from '../components/Header.astro';
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/* Filter states */
+.masonry-item.filtered-out {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.masonry-item.filtered-in {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 /* Modal responsive design */
@@ -1330,6 +1346,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentImageIndex = 0;
   let filteredItems = [...galleryItems];
 
+  // Initialize all items as visible
+  galleryItems.forEach(item => {
+    const htmlItem = item.element as HTMLElement;
+    htmlItem.classList.add('filtered-in');
+  });
+
   // Gallery filtering
   const filterButtons = document.querySelectorAll('.filter-btn');
 
@@ -1348,10 +1370,23 @@ document.addEventListener('DOMContentLoaded', function() {
       
       galleryItems.forEach(item => {
         const htmlItem = item.element as HTMLElement;
+        
         if (filter === 'all' || item.category === filter) {
+          // Show item with smooth transition
+          htmlItem.classList.remove('filtered-out');
+          htmlItem.classList.add('filtered-in');
           htmlItem.style.display = 'block';
         } else {
-          htmlItem.style.display = 'none';
+          // Hide item with smooth transition
+          htmlItem.classList.remove('filtered-in');
+          htmlItem.classList.add('filtered-out');
+          
+          // Wait for transition to complete before hiding
+          setTimeout(() => {
+            if (htmlItem.classList.contains('filtered-out')) {
+              htmlItem.style.display = 'none';
+            }
+          }, 300);
         }
       });
 

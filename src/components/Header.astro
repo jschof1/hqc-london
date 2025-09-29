@@ -52,7 +52,8 @@
   <!-- Mobile Full-Screen Navigation Overlay -->
   <div
     id="mobile-menu"
-    class="md:hidden fixed inset-0 z-50 bg-navy/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out"
+    class="md:hidden fixed inset-0 z-50 bg-navy/98 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out min-h-screen"
+    style="height: 100vh; height: 100dvh;"
   >
     <div class="flex flex-col h-full">
       <!-- Mobile Header with Close Button -->
@@ -131,26 +132,50 @@
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     const body = document.body;
 
+    // Early return if required elements are not found
+    if (!mobileMenuToggle || !mobileMenu || !mobileMenuClose) {
+      return;
+    }
+
     function openMobileMenu() {
+      if (!mobileMenu) return;
+      
       mobileMenu.classList.remove('translate-x-full');
       mobileMenu.classList.add('translate-x-0');
       body.classList.add('overflow-hidden');
       
+      // Store current scroll position to prevent jumping
+      const scrollY = window.scrollY;
+      body.style.top = `-${scrollY}px`;
+      
       // Animate hamburger to X
-      hamburgerLines[0].classList.add('rotate-45', 'translate-y-2');
-      hamburgerLines[1].classList.add('opacity-0');
-      hamburgerLines[2].classList.add('-rotate-45', '-translate-y-2');
+      if (hamburgerLines.length >= 3) {
+        hamburgerLines[0].classList.add('rotate-45', 'translate-y-2');
+        hamburgerLines[1].classList.add('opacity-0');
+        hamburgerLines[2].classList.add('-rotate-45', '-translate-y-2');
+      }
     }
 
     function closeMobileMenu() {
+      if (!mobileMenu) return;
+      
       mobileMenu.classList.remove('translate-x-0');
       mobileMenu.classList.add('translate-x-full');
+      
+      // Restore scroll position
+      const scrollY = body.style.top;
       body.classList.remove('overflow-hidden');
+      body.style.top = '';
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
       
       // Reset hamburger animation
-      hamburgerLines[0].classList.remove('rotate-45', 'translate-y-2');
-      hamburgerLines[1].classList.remove('opacity-0');
-      hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-2');
+      if (hamburgerLines.length >= 3) {
+        hamburgerLines[0].classList.remove('rotate-45', 'translate-y-2');
+        hamburgerLines[1].classList.remove('opacity-0');
+        hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-2');
+      }
     }
 
     // Toggle mobile menu
@@ -164,7 +189,7 @@
 
     // Close menu when pressing Escape key
     document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
+      if (event.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
         closeMobileMenu();
       }
     });
@@ -201,5 +226,19 @@
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  /* Ensure mobile menu covers full viewport */
+  #mobile-menu {
+    background-color: rgba(44, 62, 80, 0.98); /* Dark navy with high opacity */
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+
+  /* Prevent scrolling when mobile menu is open */
+  body.overflow-hidden {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
   }
 </style>
