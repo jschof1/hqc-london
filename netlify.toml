@@ -3,4 +3,9 @@
   publish = "dist"
 
 [context.production.environment]
-  NODE_VERSION = "18.0.0"
+  NODE_VERSION = "18.20.8"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
