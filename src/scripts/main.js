@@ -1,4 +1,5 @@
 // Main JavaScript functionality for HQC website
+import { initializeCaseStudies } from './gallery.js';
 
 // Enhanced page transitions and navigation
 document.addEventListener('DOMContentLoaded', function() {
@@ -120,6 +121,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function reinitializeComponents() {
+    // Clean up existing gallery before reinitializing
+    if (window.galleryCleanup) {
+      window.galleryCleanup();
+    }
+    
     // Re-observe stagger targets on new page (after delay to avoid conflicts)
     setTimeout(() => {
       const newStaggerTargets = document.querySelectorAll('.grid:not(.stagger-children), .gallery-grid:not(.stagger-children), .area-grid:not(.stagger-children), .service-grid:not(.stagger-children)');
@@ -145,6 +151,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Re-initialize forms
     initializeForms();
+    
+    // Initialize case studies functionality if on that page
+    if (window.location.pathname.includes('/case-studies')) {
+      initializeCaseStudies();
+    }
   }
 
   // Separate initialization functions for reuse
@@ -252,6 +263,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize before/after functionality
   initializeBeforeAfter();
+  
+  // Initialize case studies functionality if on that page
+  if (window.location.pathname.includes('/case-studies')) {
+    initializeCaseStudies();
+  }
 
   function initializeBeforeAfter() {
     // Basic before/after image comparison (if element exists)

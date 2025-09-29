@@ -12,10 +12,15 @@ export interface AreaImage {
   link?: string;
 }
 
+export interface AreaLink {
+  name: string;
+  link: string;
+}
+
 export interface Props {
   title?: string;
   subtitle?: string;
-  areasListText?: string;
+  areasListText?: AreaLink[];
   mapImage?: string;
   mapImageAlt?: string;
   surreyTitle?: string;
@@ -30,7 +35,14 @@ export interface Props {
 const {
   title = "Areas We Serve",
   subtitle = "Central and prime West London postcodes, plus select Surrey locations including Weybridge, Hersham, and Walton-on-Thames. If your area isn't listed, enquire—our concierge team can advise availability.",
-  areasListText = "Belgravia • Chelsea • Kensington • Mayfair • Knightsbridge • Surrey",
+  areasListText = [
+    { name: "Belgravia", link: "/areas/belgravia" },
+    { name: "Chelsea", link: "/areas/chelsea" },
+    { name: "Kensington", link: "/areas/kensington" },
+    { name: "Mayfair", link: "/areas/mayfair" },
+    { name: "Knightsbridge", link: "/areas/knightsbridge" },
+    { name: "Surrey", link: "/areas" }
+  ],
   mapImage = "/images/london.jpg",
   mapImageAlt = "London map showing luxury neighborhoods",
   surreyTitle = "Now Serving Select Surrey Locations",
@@ -38,17 +50,17 @@ const {
     {
       name: "Weybridge",
       postcode: "St Georges Hill KT13",
-      link: "areas/weybridge"
+      link: "/areas/weybridge"
     },
     {
       name: "Hersham", 
       postcode: "Burwood Park KT12",
-      link: "areas/hersham"
+      link: "/areas/hersham"
     },
     {
       name: "Walton-on-Thames",
       postcode: "Ashley Park KT12",
-      link: "areas/walton-on-thames"
+      link: "/areas/waltonOnThames"
     }
   ],
   featuredAreas = [
@@ -56,35 +68,39 @@ const {
       src: "/images/belgravia.jpg",
       alt: "Belgravia luxury Georgian architecture",
       caption: "Belgravia SW1",
-      link: "areas/belgravia"
+      link: "/areas/belgravia"
     },
     {
       src: "/images/chelsea.jpg",
       alt: "Chelsea luxury townhouses and tree-lined streets", 
       caption: "Chelsea SW3",
-      link: "areas/chelsea"
+      link: "/areas/chelsea"
     },
     {
       src: "/images/kensington.jpg",
       alt: "Kensington elegant Victorian mansions",
-      caption: "Kensington W8"
+      caption: "Kensington W8",
+      link: "/areas/kensington"
     }
   ],
   mobileAreas = [
     {
-      src: "https://placehold.co/150x80/",
+      src: "/images/belgravia.jpg",
       alt: "Belgravia",
-      caption: "SW1"
+      caption: "SW1",
+      link: "/areas/belgravia"
     },
     {
-      src: "https://placehold.co/150x80/",
+      src: "/images/chelsea.jpg",
       alt: "Chelsea", 
-      caption: "SW3"
+      caption: "SW3",
+      link: "/areas/chelsea"
     },
     {
-      src: "https://placehold.co/150x80/",
+      src: "/images/kensington.jpg",
       alt: "Kensington",
-      caption: "W8"
+      caption: "W8",
+      link: "/areas/kensington"
     }
   ],
   className = "",
@@ -98,7 +114,17 @@ const {
     <div class="flex items-end justify-between gap-6">
       <h2 class="font-serif text-3xl md:text-6xl">{title}</h2>
       <div class="hidden md:flex gap-3 text-sm text-ink/60">
-        {areasListText}
+        {areasListText.map((area, index) => (
+          <span class="flex items-center gap-3">
+            <a 
+              href={area.link} 
+              class="hover:text-gold transition-colors cursor-pointer"
+            >
+              {area.name}
+            </a>
+            {index < areasListText.length - 1 && <span>•</span>}
+          </span>
+        ))}
       </div>
     </div>
     <p class="mt-2 text-ink/70 max-w-3xl text-sm md:text-base">
@@ -150,20 +176,37 @@ const {
       <div class="order-1 md:order-2 space-y-8">
         {featuredAreas.map((area) => (
           <figure
-            class="relative rounded-xl overflow-hidden border border-gold"
+            class="relative rounded-xl overflow-hidden border border-gold group cursor-pointer transition-transform hover:scale-[1.02]"
           >
-            {area.link && <a href={area.link}></a>}
-            <img
-              src={area.src}
-              alt={area.alt}
-              class="w-full h-40 object-cover"
-              loading="lazy"
-            />
-            <figcaption
-              class="absolute bottom-2 left-2 bg-navy/80 text-gold backdrop-blur rounded px-2 py-1 text-xs border border-gold"
-            >
-              {area.caption}
-            </figcaption>
+            {area.link ? (
+              <a href={area.link} class="block">
+                <img
+                  src={area.src}
+                  alt={area.alt}
+                  class="w-full h-40 object-cover"
+                  loading="lazy"
+                />
+                <figcaption
+                  class="absolute bottom-2 left-2 bg-navy/80 text-gold backdrop-blur rounded px-2 py-1 text-xs border border-gold group-hover:bg-gold group-hover:text-navy transition-colors"
+                >
+                  {area.caption}
+                </figcaption>
+              </a>
+            ) : (
+              <>
+                <img
+                  src={area.src}
+                  alt={area.alt}
+                  class="w-full h-40 object-cover"
+                  loading="lazy"
+                />
+                <figcaption
+                  class="absolute bottom-2 left-2 bg-navy/80 text-gold backdrop-blur rounded px-2 py-1 text-xs border border-gold"
+                >
+                  {area.caption}
+                </figcaption>
+              </>
+            )}
           </figure>
         ))}
       </div>
@@ -172,18 +215,36 @@ const {
       <div class="md:hidden order-3">
         <div class="grid grid-cols-3 gap-4">
           {mobileAreas.map((area) => (
-            <div class="relative">
-              <img
-                src={area.src}
-                alt={area.alt}
-                class="w-full h-20 object-cover rounded border border-gold"
-                loading="lazy"
-              />
-              <span
-                class="absolute bottom-1 left-1 text-[10px] bg-navy/80 text-gold rounded px-1 border border-gold"
-              >
-                {area.caption}
-              </span>
+            <div class="relative group">
+              {area.link ? (
+                <a href={area.link} class="block">
+                  <img
+                    src={area.src}
+                    alt={area.alt}
+                    class="w-full h-20 object-cover rounded border border-gold transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 text-[10px] bg-navy/80 text-gold rounded px-1 border border-gold group-hover:bg-gold group-hover:text-navy transition-colors"
+                  >
+                    {area.caption}
+                  </span>
+                </a>
+              ) : (
+                <>
+                  <img
+                    src={area.src}
+                    alt={area.alt}
+                    class="w-full h-20 object-cover rounded border border-gold"
+                    loading="lazy"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 text-[10px] bg-navy/80 text-gold rounded px-1 border border-gold"
+                  >
+                    {area.caption}
+                  </span>
+                </>
+              )}
             </div>
           ))}
         </div>
