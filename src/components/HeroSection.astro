@@ -48,7 +48,7 @@ const {
 ---
 
 <section class={backgroundClass}>
-  <div class="ar-16-9">
+  <div class="relative w-full h-[70vh] min-h-[500px] max-h-[800px] md:h-[60vh] lg:h-[70vh]">
     <img
       src={imageSrc}
       alt={imageAlt}
@@ -59,22 +59,22 @@ const {
       class="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-transparent"
     ></div>
     <div
-      class="absolute inset-0 flex items-end pb-12 md:pb-20 px-4 sm:px-6 lg:px-8"
+      class="absolute inset-0 flex items-end pb-8 md:pb-12 lg:pb-20 px-4 sm:px-6 lg:px-8"
     >
       <div class="mx-auto max-w-5xl w-full">
         <div class="text-transition">
-          <h1 class="font-serif text-4xl md:text-6xl text-white leading-tight">
+          <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             {title}
           </h1>
-          <p class="mt-4 text-white/90 text-base md:text-lg max-w-2xl leading-relaxed">
+          <p class="mt-3 md:mt-4 text-white/90 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
             {subtitle}
           </p>
         </div>
-        <div class="text-transition mt-8 flex flex-col sm:flex-row gap-4">
+        <div class="text-transition mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
           {primaryCta && (
             <a
               href={primaryCta.href}
-              class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 text-base font-medium border border-gold hover:bg-gold/90 transition-colors"
+              class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 text-sm sm:text-base font-medium border border-gold hover:bg-gold/90 transition-colors min-h-[48px]"
             >
               {primaryCta.text}
             </a>
@@ -84,7 +84,7 @@ const {
               href={secondaryCta.href}
               target={secondaryCta.target}
               rel={secondaryCta.rel}
-              class="inline-flex items-center justify-center rounded-md border border-gold px-6 py-3 text-gold text-base bg-navy/50 backdrop-blur-sm hover:bg-navy/70 transition-colors"
+              class="inline-flex items-center justify-center rounded-md border border-gold px-6 py-3 text-gold text-sm sm:text-base bg-navy/50 backdrop-blur-sm hover:bg-navy/70 transition-colors min-h-[48px]"
             >
               {secondaryCta.icon && secondaryCta.icon === "fab fa-whatsapp" ? (
                 <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -101,12 +101,12 @@ const {
         {trustBadges && trustBadges.length > 0 && (
           <!-- Trust badges -->
           <div
-            class="mt-8 flex items-center gap-6 text-sm text-white/80 flex-wrap"
+            class="mt-6 md:mt-8 flex items-center gap-4 md:gap-6 text-xs sm:text-sm text-white/80 flex-wrap"
           >
             {trustBadges.map((badge, index) => (
               <>
-                <span class="inline-flex items-center gap-2">
-                  <div class="h-6 w-6 rounded border border-gold bg-gold/20 flex items-center justify-center">
+                <span class="inline-flex items-center gap-1.5 sm:gap-2">
+                  <div class="h-5 w-5 sm:h-6 sm:w-6 rounded border border-gold bg-gold/20 flex items-center justify-center">
                     <i class={`${badge.icon} text-gold text-xs`}></i>
                   </div>
                   {badge.text}

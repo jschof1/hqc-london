@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
   title: string;
@@ -21,10 +20,14 @@ const { title, description = "High Quality Cleaning — Luxury home cleaning for
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="yandexbot" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <meta name="google" content="notranslate" />
+    <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
-
-    <!-- View Transitions -->
-    <ViewTransitions />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />

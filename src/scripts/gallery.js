@@ -4,10 +4,42 @@
 export function initializeGallery() {
   // Prevent duplicate initialization
   if (window.galleryInitialized) {
+    console.log('🖼️ Gallery already initialized, skipping...');
     return;
   }
   
   console.log('🖼️ Initializing gallery...');
+  
+  // Check for and remove duplicate gallery modals first
+  const existingGalleryModals = document.querySelectorAll('#galleryModal');
+  if (existingGalleryModals.length > 1) {
+    console.log('⚠️ Found multiple gallery modals, removing duplicates...');
+    existingGalleryModals.forEach((modal, index) => {
+      if (index > 0) { // Keep the first one, remove the rest
+        modal.remove();
+        console.log('🧹 Removed duplicate gallery modal #' + index);
+      }
+    });
+  }
+  
+  // Clean up any conflicting modal systems
+  const conflictingModals = document.querySelectorAll('#imageModal, .modal:not(#galleryModal), .basic-modal');
+  conflictingModals.forEach(modal => {
+    if (modal.id !== 'galleryModal') {
+      modal.remove();
+      console.log('🧹 Removed conflicting modal:', modal.id || modal.className || 'unnamed');
+    }
+  });
+  
+  // Remove any existing event listeners on gallery items to prevent conflicts
+  document.querySelectorAll('.masonry-item').forEach(item => {
+    // Clone to remove all existing event listeners
+    const newItem = item.cloneNode(true);
+    const parent = item.parentNode;
+    if (parent) {
+      parent.replaceChild(newItem, item);
+    }
+  });
 
   // Gallery data structure
   const galleryItems = Array.from(document.querySelectorAll('.masonry-item')).map((item, index) => {
@@ -38,6 +70,7 @@ export function initializeGallery() {
 
   let currentImageIndex = 0;
   let filteredItems = [...galleryItems];
+  let modalIsTransitioning = false;
 
   // Initialize all items as visible
   galleryItems.forEach(item => {
@@ -92,22 +125,28 @@ export function initializeGallery() {
     });
   });
 
-  // Modal elements
+  // Modal elements - ensure we get the right modal
   const modal = document.getElementById('galleryModal');
-  const modalImg = document.getElementById('modalImage');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDescription = document.getElementById('modalDescription');
-  const modalBadge = document.getElementById('modalBadge');
-  const modalLocation = document.getElementById('modalLocation');
-  const modalCurrentIndex = document.getElementById('modalCurrentIndex');
-  const modalTotalCount = document.getElementById('modalTotalCount');
-  const modalClose = document.querySelector('.modal-close');
-  const carouselPrev = document.querySelector('.carousel-prev');
-  const carouselNext = document.querySelector('.carousel-next');
-  const thumbnailContainer = document.getElementById('thumbnailContainer');
+  if (!modal) {
+    console.log('⚠️ Gallery modal not found, skipping modal functionality');
+    return;
+  }
+  
+  // Get elements specifically from within our gallery modal
+  const modalImg = modal.querySelector('#modalImage');
+  const modalTitle = modal.querySelector('#modalTitle');
+  const modalDescription = modal.querySelector('#modalDescription');
+  const modalBadge = modal.querySelector('#modalBadge');
+  const modalLocation = modal.querySelector('#modalLocation');
+  const modalCurrentIndex = modal.querySelector('#modalCurrentIndex');
+  const modalTotalCount = modal.querySelector('#modalTotalCount');
+  const modalClose = modal.querySelector('.modal-close');
+  const carouselPrev = modal.querySelector('.carousel-prev');
+  const carouselNext = modal.querySelector('.carousel-next');
+  const thumbnailContainer = modal.querySelector('#thumbnailContainer');
 
-  if (!modal || !modalImg || !modalTitle || !modalDescription) {
-    console.log('⚠️ Modal elements not found, skipping modal functionality');
+  if (!modalImg || !modalTitle || !modalDescription) {
+    console.log('⚠️ Modal elements not found within gallery modal, skipping modal functionality');
     return;
   }
 
@@ -126,8 +165,29 @@ export function initializeGallery() {
     if (modalCurrentIndex) modalCurrentIndex.textContent = (index + 1).toString();
     if (modalTotalCount) modalTotalCount.textContent = filteredItems.length.toString();
 
+    // Show/hide navigation based on number of items
+    const hasMultipleItems = filteredItems.length > 1;
+    if (carouselPrev) {
+      carouselPrev.style.display = hasMultipleItems ? 'flex' : 'none';
+    }
+    if (carouselNext) {
+      carouselNext.style.display = hasMultipleItems ? 'flex' : 'none';
+    }
+
     // Update thumbnails
     updateThumbnails();
+    
+    // Ensure modal elements are properly visible
+    requestAnimationFrame(() => {
+      if (modal.classList.contains('active')) {
+        // Force layout recalculation to prevent hiding issues
+        modal.style.display = 'flex';
+        
+        // Ensure navigation arrows are visible
+        if (carouselPrev && hasMultipleItems) carouselPrev.style.visibility = 'visible';
+        if (carouselNext && hasMultipleItems) carouselNext.style.visibility = 'visible';
+      }
+    });
   }
 
   // Create and update thumbnails
@@ -141,9 +201,12 @@ export function initializeGallery() {
       thumbnail.src = item.src;
       thumbnail.alt = item.alt;
       thumbnail.className = `thumbnail ${index === currentImageIndex ? 'active' : ''}`;
-      thumbnail.addEventListener('click', () => {
+      thumbnail.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         currentImageIndex = index;
         updateModalContent(currentImageIndex);
+        console.log('📸 Thumbnail clicked:', index);
       });
       thumbnailContainer.appendChild(thumbnail);
     });
@@ -166,38 +229,140 @@ export function initializeGallery() {
     updateModalContent(currentImageIndex);
   }
 
-  // Gallery item click handlers
-  galleryItems.forEach((item, index) => {
-    item.element.addEventListener('click', () => {
-      // Find the index in the current filtered items
-      const filteredIndex = filteredItems.findIndex(filteredItem => filteredItem.index === index);
-      if (filteredIndex !== -1) {
-        currentImageIndex = filteredIndex;
-        updateModalContent(currentImageIndex);
-        openModal();
+    // Gallery item click handlers
+    galleryItems.forEach((item, index) => {
+      // Make gallery items focusable
+      item.element.setAttribute('tabindex', '0');
+      item.element.setAttribute('role', 'button');
+      item.element.setAttribute('aria-label', `View ${item.title} in gallery`);
+      
+      item.element.addEventListener('click', (e) => {
+        // Don't open modal if it's already open or if we're currently transitioning
+        if (modal.classList.contains('active') || modalIsTransitioning) {
+          console.log('📷 Gallery item clicked but modal is already open or transitioning');
+          return;
+        }
+        
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Find the index in the current filtered items
+        const filteredIndex = filteredItems.findIndex(filteredItem => filteredItem.index === index);
+        if (filteredIndex !== -1) {
+          console.log('📷 Gallery item clicked, opening modal for:', item.title);
+          currentImageIndex = filteredIndex;
+          updateModalContent(currentImageIndex);
+          openModal();
+        }
+      });
+    
+    // Keyboard support for gallery items
+    item.element.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const filteredIndex = filteredItems.findIndex(filteredItem => filteredItem.index === index);
+        if (filteredIndex !== -1) {
+          currentImageIndex = filteredIndex;
+          updateModalContent(currentImageIndex);
+          openModal();
+        }
       }
     });
   });
 
   // Modal controls
   function openModal() {
+    if (modalIsTransitioning) {
+      console.log('📷 Modal is transitioning, ignoring open request');
+      return;
+    }
+    
+    modalIsTransitioning = true;
+    
+    // Ensure we're the only modal open - check both modal types
+    document.querySelectorAll('.modal.active, .basic-modal.active').forEach(m => {
+      if (m !== modal) {
+        m.classList.remove('active');
+      }
+    });
+    
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Ensure navigation arrows are visible
+    setTimeout(() => {
+      if (carouselPrev) carouselPrev.style.display = 'flex';
+      if (carouselNext) carouselNext.style.display = 'flex';
+      modalIsTransitioning = false;
+    }, 100);
+    
+    // Focus management for accessibility
+    if (modalClose) {
+      modalClose.focus();
+    }
+    
+    console.log('📷 Gallery modal opened');
   }
 
   function closeModal() {
+    if (modalIsTransitioning) {
+      console.log('📷 Modal is transitioning, ignoring close request');
+      return;
+    }
+    
+    console.log('📷 Closing gallery modal...');
+    modalIsTransitioning = true;
+    
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
+    
+    // Return focus to the clicked gallery item with a delay to prevent immediate reopen
+    const currentItem = filteredItems[currentImageIndex];
+    if (currentItem && currentItem.element) {
+      setTimeout(() => {
+        currentItem.element.focus();
+        modalIsTransitioning = false;
+      }, 200);
+    } else {
+      setTimeout(() => {
+        modalIsTransitioning = false;
+      }, 200);
+    }
+    
+    console.log('📷 Gallery modal closed');
   }
 
   // Event listeners
-  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modalClose) {
+    modalClose.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeModal();
+    });
+  }
   if (carouselPrev) carouselPrev.addEventListener('click', prevImage);
   if (carouselNext) carouselNext.addEventListener('click', nextImage);
 
-  // Click outside modal to close
+  // Click outside modal to close (but not on navigation elements)
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
+    // Don't close if clicking on navigation arrows, info panel, thumbnails, or modal header
+    const clickedElement = e.target;
+    const isModalBackground = clickedElement === modal;
+    const isInsideCarouselNav = clickedElement.closest('.carousel-nav');
+    const isInsideCarouselInfo = clickedElement.closest('.carousel-info');
+    const isInsideThumbnailStrip = clickedElement.closest('.thumbnail-strip');
+    const isInsideCarouselMain = clickedElement.closest('.carousel-main');
+    const isInsideModalHeader = clickedElement.closest('.modal-header');
+    const isInsideModalContent = clickedElement.closest('.modal-content');
+    
+    // Only close if clicking directly on the modal background (not on any content)
+    if (isModalBackground && 
+        !isInsideCarouselNav && 
+        !isInsideCarouselInfo && 
+        !isInsideThumbnailStrip &&
+        !isInsideCarouselMain &&
+        !isInsideModalHeader &&
+        !isInsideModalContent) {
       closeModal();
     }
   });
@@ -251,19 +416,34 @@ export function initializeGallery() {
   document.addEventListener('keydown', handleKeydown);
   modal.addEventListener('touchstart', handleTouchStart);
   modal.addEventListener('touchend', handleTouchEnd);
+  
+  // Prevent thumbnail strip from closing modal
+  if (thumbnailContainer) {
+    thumbnailContainer.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
 
   // Store cleanup function for later use
   window.galleryCleanup = function() {
+    console.log('🧹 Starting gallery cleanup...');
+    
+    // Remove global event listeners
     document.removeEventListener('keydown', handleKeydown);
-    modal.removeEventListener('touchstart', handleTouchStart);
-    modal.removeEventListener('touchend', handleTouchEnd);
+    if (modal) {
+      modal.removeEventListener('touchstart', handleTouchStart);
+      modal.removeEventListener('touchend', handleTouchEnd);
+    }
+    
+    // Reset global flags
     window.galleryInitialized = false;
     window.galleryCleanup = null;
-    console.log('🧹 Gallery cleaned up');
+    
+    console.log('🧹 Gallery cleaned up successfully');
   };
 
   window.galleryInitialized = true;
-  console.log('✅ Gallery initialized successfully');
+  console.log('✅ Gallery initialized successfully with modal:', modal.id);
 }
 
 // Before/After functionality
@@ -369,6 +549,10 @@ export function initializeBeforeAfter() {
 // Main initialization function
 export function initializeCaseStudies() {
   console.log('📚 Initializing case studies functionality...');
+  console.log('📚 Gallery initialized status:', !!window.galleryInitialized);
+  console.log('📚 Existing gallery modals:', document.querySelectorAll('#galleryModal').length);
+  console.log('📚 Existing image modals:', document.querySelectorAll('#imageModal').length);
+  
   initializeGallery();
   initializeBeforeAfter();
 }
