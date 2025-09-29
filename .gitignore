@@ -30,3 +30,4 @@ ASTRO-SETUP.md
 templates
 src/pages/index-backup.astro
 src/pages/index-clean.astro
+pages/
