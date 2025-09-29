@@ -31,3 +31,5 @@ templates
 src/pages/index-backup.astro
 src/pages/index-clean.astro
 pages/
+data/
+Area-Page-Gen/
