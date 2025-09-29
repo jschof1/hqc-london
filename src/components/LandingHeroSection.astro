@@ -141,7 +141,7 @@ const {
   
   <!-- Hero copy + CTAs - Centered within the hero section -->
   <div class="font-serif relative z-10 flex flex-col items-center justify-center flex-1 w-full px-4 md:px-16 lg:px-24 xl:px-32">
-    <div class="text-transition">
+    <div class="text-transition mx-auto flex max-w-4xl flex-col items-center text-center">
     {reviewBadge && (
       <div class="flex items-center justify-center mb-4">
         <div set:html={reviewBadge.icon}></div>
@@ -213,8 +213,8 @@ const {
     {trustLogos.length > 0 && (
       <div class="flex flex-wrap items-center justify-center gap-8 mt-6">
         {trustLogos.map((logo) => (
-            <a href={logo.link} target="_blank" rel="noopener noreferrer">
           <div class="flex items-center gap-2">
+            <a href={logo.link} target="_blank" rel="noopener noreferrer">
             <div class="w-6 h-6 rounded-full flex items-center justify-center">
               {logo.type === 'svg' ? (
                 <div set:html={logo.content}></div>

@@ -33,3 +33,5 @@ src/pages/index-clean.astro
 pages/
 data/
 Area-Page-Gen/
+templates/
+docs/
