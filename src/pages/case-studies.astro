@@ -238,7 +238,7 @@ import Header from '../components/Header.astro';
         <!-- Masonry Gallery -->
         <div class="masonry" id="gallery-container">
           <!-- Kitchen Items -->
-          <article class="masonry-item gallery-item" data-category="kitchen" data-modal="modal1">
+          <article class="masonry-item gallery-item" data-category="kitchen" data-index="0">
             <img
               src="/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png"
               alt="Luxury kitchen with pristine marble surfaces and professional-grade appliances"
@@ -248,11 +248,15 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Mayfair Penthouse Kitchen</h3>
                 <p>Signature Clean™ • Marble restoration • 6 hours</p>
+                <div class="project-details">
+                  <span class="badge">Kitchen</span>
+                  <span class="location">Mayfair, London</span>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="masonry-item gallery-item" data-category="kitchen" data-modal="modal2">
+          <article class="masonry-item gallery-item" data-category="kitchen" data-index="1">
             <img
               src="/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png"
               alt="Modern kitchen island with gleaming quartz countertops"
@@ -262,12 +266,16 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Chelsea Townhouse</h3>
                 <p>WellClean™ Premium • Deep sanitization • 8 hours</p>
+                <div class="project-details">
+                  <span class="badge">Kitchen</span>
+                  <span class="location">Chelsea, London</span>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Bathroom Items -->
-          <article class="masonry-item gallery-item" data-category="bathroom" data-modal="modal3">
+          <article class="masonry-item gallery-item" data-category="bathroom" data-index="2">
             <img
               src="/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png"
               alt="Spa-like bathroom with immaculate fixtures and surfaces"
@@ -277,11 +285,15 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Belgravia Master Bath</h3>
                 <p>Signature Clean™ • Tile restoration • 4 hours</p>
+                <div class="project-details">
+                  <span class="badge">Bathroom</span>
+                  <span class="location">Belgravia, London</span>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="masonry-item gallery-item" data-category="bathroom" data-modal="modal4">
+          <article class="masonry-item gallery-item" data-category="bathroom" data-index="3">
             <img
               src="/images/luxury-home/luxurious-kensington-ensuite.png"
               alt="Luxury bathroom vanity with spotless mirror and fixtures"
@@ -291,12 +303,16 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Kensington Ensuite</h3>
                 <p>Essentials Clean™ • Weekly service • 2 hours</p>
+                <div class="project-details">
+                  <span class="badge">Bathroom</span>
+                  <span class="location">Kensington, London</span>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Living Areas -->
-          <article class="masonry-item gallery-item" data-category="living" data-modal="modal5">
+          <article class="masonry-item gallery-item" data-category="living" data-index="4">
             <img
               src="/images/luxury-home/richmond-living-room.png"
               alt="Elegant living room with pristine upholstery and polished surfaces"
@@ -306,11 +322,15 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Knightsbridge Drawing Room</h3>
                 <p>WellClean™ Premium • Antique care • 5 hours</p>
+                <div class="project-details">
+                  <span class="badge">Living Area</span>
+                  <span class="location">Knightsbridge, London</span>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="masonry-item gallery-item" data-category="living" data-modal="modal6">
+          <article class="masonry-item gallery-item" data-category="living" data-index="5">
             <img
               src="/images/luxury-home/mayfair-home-hallway.png"
               alt="Modern living space with immaculate glass surfaces and furniture"
@@ -320,12 +340,16 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Mayfair Apartment</h3>
                 <p>Signature Clean™ • Glass specialist • 3 hours</p>
+                <div class="project-details">
+                  <span class="badge">Living Area</span>
+                  <span class="location">Mayfair, London</span>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Exterior Items -->
-          <article class="masonry-item gallery-item" data-category="exterior" data-modal="modal7">
+          <article class="masonry-item gallery-item" data-category="exterior" data-index="6">
             <img
               src="/images/luxury-home/belgravia-stonework.png"
               alt="Pristine Georgian townhouse exterior with cleaned stonework"
@@ -335,11 +359,15 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Belgravia Townhouse</h3>
                 <p>Exterior restoration • Stone cleaning • 12 hours</p>
+                <div class="project-details">
+                  <span class="badge">Exterior</span>
+                  <span class="location">Belgravia, London</span>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="masonry-item gallery-item" data-category="exterior" data-modal="modal8">
+          <article class="masonry-item gallery-item" data-category="exterior" data-index="7">
             <img
               src="/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png"
               alt="Chelsea mews house with spotless exterior details"
@@ -349,12 +377,16 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Chelsea Mews</h3>
                 <p>Pressure washing • Window cleaning • 6 hours</p>
+                <div class="project-details">
+                  <span class="badge">Exterior</span>
+                  <span class="location">Chelsea, London</span>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Additional Items -->
-          <article class="masonry-item gallery-item" data-category="kitchen" data-modal="modal9">
+          <article class="masonry-item gallery-item" data-category="kitchen" data-index="8">
             <img
               src="/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png"
               alt="Contemporary kitchen with pristine stainless steel appliances"
@@ -364,11 +396,15 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Hyde Park Apartment</h3>
                 <p>WellClean™ Premium • Appliance detail • 4 hours</p>
+                <div class="project-details">
+                  <span class="badge">Kitchen</span>
+                  <span class="location">Hyde Park, London</span>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="masonry-item gallery-item" data-category="living" data-modal="modal10">
+          <article class="masonry-item gallery-item" data-category="living" data-index="9">
             <img
               src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=380&fit=crop&crop=center&q=80"
               alt="Luxury bedroom with immaculate linens and surfaces"
@@ -378,6 +414,10 @@ import Header from '../components/Header.astro';
               <div class="gallery-overlay-content">
                 <h3>Mayfair Master Suite</h3>
                 <p>Signature Clean™ • Textile care • 3 hours</p>
+                <div class="project-details">
+                  <span class="badge">Living Area</span>
+                  <span class="location">Mayfair, London</span>
+                </div>
               </div>
             </div>
           </article>
@@ -631,14 +671,48 @@ import Header from '../components/Header.astro';
 
   </main>
 
-  <!-- Image Modal -->
-  <div id="imageModal" class="modal">
-    <span class="modal-close">&times;</span>
+  <!-- Gallery Carousel Modal -->
+  <div id="galleryModal" class="modal">
+    <div class="modal-header">
+      <button class="modal-close" aria-label="Close gallery">&times;</button>
+      <div class="modal-counter">
+        <span id="modalCurrentIndex">1</span> of <span id="modalTotalCount">10</span>
+      </div>
+    </div>
+    
     <div class="modal-content">
-      <img id="modalImage" src="" alt="">
-      <div class="text-center mt-4">
-        <h3 id="modalTitle" class="font-serif text-2xl text-gold mb-2"></h3>
-        <p id="modalDescription" class="text-white"></p>
+      <div class="carousel-container">
+        <!-- Navigation Arrows -->
+        <button class="carousel-nav carousel-prev" aria-label="Previous image">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="carousel-nav carousel-next" aria-label="Next image">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        
+        <!-- Main Image -->
+        <div class="carousel-main">
+          <img id="modalImage" src="" alt="" />
+        </div>
+        
+        <!-- Image Information -->
+        <div class="carousel-info">
+          <div class="info-content">
+            <h3 id="modalTitle" class="font-serif text-2xl text-gold mb-2"></h3>
+            <p id="modalDescription" class="text-white mb-3"></p>
+            <div class="modal-badges">
+              <span id="modalBadge" class="badge"></span>
+              <span id="modalLocation" class="location"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Thumbnail Strip -->
+      <div class="thumbnail-strip">
+        <div class="thumbnail-container" id="thumbnailContainer">
+          <!-- Thumbnails will be populated by JavaScript -->
+        </div>
       </div>
     </div>
   </div>
@@ -802,44 +876,217 @@ import Header from '../components/Header.astro';
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  overflow: auto;
+  background-color: rgba(0,0,0,0.95);
+  overflow: hidden;
 }
 
 .modal.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
-.modal-content {
-  position: relative;
-  margin: auto;
-  padding: 20px;
-  width: 90%;
-  max-width: 1200px;
-  top: 50%;
-  transform: translateY(-50%);
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
 }
 
-.modal img {
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
-  border: 2px solid var(--color-gold);
+.modal-counter {
+  color: var(--color-gold);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .modal-close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
   color: var(--color-gold);
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
-  z-index: 1001;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .modal-close:hover {
   opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  top: auto;
+}
+
+.carousel-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.carousel-main {
+  max-width: 70%;
+  max-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-main img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  border: 2px solid var(--color-gold);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(201, 169, 97, 0.9);
+  color: var(--color-navy);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-nav:hover {
+  background: var(--color-gold);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 2rem;
+}
+
+.carousel-next {
+  right: 2rem;
+}
+
+.carousel-info {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background: rgba(44, 62, 80, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+}
+
+.info-content h3 {
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.info-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.modal-badges {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.badge {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.location {
+  color: var(--color-gold);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.thumbnail-strip {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) transparent;
+}
+
+.thumbnail-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnail-container::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.thumbnail:hover {
+  border-color: rgba(201, 169, 97, 0.7);
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(201, 169, 97, 0.5);
+}
+
+/* Project details styling */
+.project-details {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
 }
 
 /* Focus visible for keyboard navigation */
@@ -954,6 +1201,94 @@ import Header from '../components/Header.astro';
   object-position: center;
 }
 
+/* Modal responsive design */
+@media (max-width: 768px) {
+  .modal-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .modal-counter {
+    font-size: 0.875rem;
+  }
+  
+  .modal-close {
+    font-size: 1.5rem;
+  }
+  
+  .carousel-container {
+    padding: 1rem;
+  }
+  
+  .carousel-main {
+    max-width: 85%;
+    max-height: 60vh;
+  }
+  
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .carousel-prev {
+    left: 1rem;
+  }
+  
+  .carousel-next {
+    right: 1rem;
+  }
+  
+  .carousel-info {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .info-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .info-content p {
+    font-size: 0.875rem;
+  }
+  
+  .thumbnail-strip {
+    padding: 0.75rem 1rem;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .modal-badges {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-main {
+    max-width: 90%;
+    max-height: 50vh;
+  }
+  
+  .carousel-info {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 1rem;
+  }
+  
+  .carousel-container {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+}
+
 /* Testimonial cards */
 .testimonial-card {
   background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
@@ -970,9 +1305,33 @@ document.addEventListener('DOMContentLoaded', function() {
     yearElement.textContent = String(new Date().getFullYear());
   }
 
+  // Gallery data structure
+  const galleryItems = Array.from(document.querySelectorAll('.masonry-item')).map((item, index) => {
+    const img = item.querySelector('img') as HTMLImageElement;
+    const overlayContent = item.querySelector('.gallery-overlay-content');
+    const titleEl = overlayContent?.querySelector('h3');
+    const descEl = overlayContent?.querySelector('p');
+    const badgeEl = overlayContent?.querySelector('.badge');
+    const locationEl = overlayContent?.querySelector('.location');
+    
+    return {
+      element: item,
+      index: index,
+      src: img?.src || '',
+      alt: img?.alt || '',
+      title: titleEl?.textContent || '',
+      description: descEl?.textContent || '',
+      category: item.getAttribute('data-category') || '',
+      badge: badgeEl?.textContent || '',
+      location: locationEl?.textContent || ''
+    };
+  });
+
+  let currentImageIndex = 0;
+  let filteredItems = [...galleryItems];
+
   // Gallery filtering
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.masonry-item');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -986,70 +1345,176 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Filter items
       const filter = button.getAttribute('data-filter');
+      
       galleryItems.forEach(item => {
-        const htmlItem = item as HTMLElement;
-        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-          htmlItem.style.display = 'flex';
+        const htmlItem = item.element as HTMLElement;
+        if (filter === 'all' || item.category === filter) {
+          htmlItem.style.display = 'block';
         } else {
           htmlItem.style.display = 'none';
         }
       });
-    });
-  });
 
-  // Modal functionality
-  const modal = document.getElementById('imageModal') as HTMLElement;
-  const modalImg = document.getElementById('modalImage') as HTMLImageElement;
-  const modalTitle = document.getElementById('modalTitle') as HTMLElement;
-  const modalDescription = document.getElementById('modalDescription') as HTMLElement;
-  const modalClose = document.querySelector('.modal-close') as HTMLElement;
-
-  if (!modal || !modalImg || !modalTitle || !modalDescription || !modalClose) return;
-
-  // Gallery item click handlers
-  galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('img') as HTMLImageElement;
-      const overlayContent = item.querySelector('.gallery-overlay-content');
-      
-      if (!img || !overlayContent) return;
-      
-      const titleEl = overlayContent.querySelector('h3');
-      const descEl = overlayContent.querySelector('p');
-      
-      if (titleEl && descEl) {
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-        modalTitle.textContent = titleEl.textContent;
-        modalDescription.textContent = descEl.textContent;
-        
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+      // Update filtered items for carousel
+      if (filter === 'all') {
+        filteredItems = [...galleryItems];
+      } else {
+        filteredItems = galleryItems.filter(item => item.category === filter);
       }
     });
   });
 
-  // Close modal
+  // Modal elements
+  const modal = document.getElementById('galleryModal') as HTMLElement;
+  const modalImg = document.getElementById('modalImage') as HTMLImageElement;
+  const modalTitle = document.getElementById('modalTitle') as HTMLElement;
+  const modalDescription = document.getElementById('modalDescription') as HTMLElement;
+  const modalBadge = document.getElementById('modalBadge') as HTMLElement;
+  const modalLocation = document.getElementById('modalLocation') as HTMLElement;
+  const modalCurrentIndex = document.getElementById('modalCurrentIndex') as HTMLElement;
+  const modalTotalCount = document.getElementById('modalTotalCount') as HTMLElement;
+  const modalClose = document.querySelector('.modal-close') as HTMLElement;
+  const carouselPrev = document.querySelector('.carousel-prev') as HTMLElement;
+  const carouselNext = document.querySelector('.carousel-next') as HTMLElement;
+  const thumbnailContainer = document.getElementById('thumbnailContainer') as HTMLElement;
+
+  if (!modal || !modalImg || !modalTitle || !modalDescription) return;
+
+  // Update modal content
+  function updateModalContent(index: number) {
+    const item = filteredItems[index];
+    if (!item) return;
+
+    modalImg.src = item.src;
+    modalImg.alt = item.alt;
+    modalTitle.textContent = item.title;
+    modalDescription.textContent = item.description;
+    
+    if (modalBadge) modalBadge.textContent = item.badge;
+    if (modalLocation) modalLocation.textContent = item.location;
+    if (modalCurrentIndex) modalCurrentIndex.textContent = (index + 1).toString();
+    if (modalTotalCount) modalTotalCount.textContent = filteredItems.length.toString();
+
+    // Update thumbnails
+    updateThumbnails();
+  }
+
+  // Create and update thumbnails
+  function updateThumbnails() {
+    if (!thumbnailContainer) return;
+    
+    thumbnailContainer.innerHTML = '';
+    
+    filteredItems.forEach((item, index) => {
+      const thumbnail = document.createElement('img');
+      thumbnail.src = item.src;
+      thumbnail.alt = item.alt;
+      thumbnail.className = `thumbnail ${index === currentImageIndex ? 'active' : ''}`;
+      thumbnail.addEventListener('click', () => {
+        currentImageIndex = index;
+        updateModalContent(currentImageIndex);
+      });
+      thumbnailContainer.appendChild(thumbnail);
+    });
+
+    // Scroll active thumbnail into view
+    const activeThumbnail = thumbnailContainer.querySelector('.thumbnail.active');
+    if (activeThumbnail) {
+      activeThumbnail.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }
+
+  // Navigation functions
+  function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % filteredItems.length;
+    updateModalContent(currentImageIndex);
+  }
+
+  function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + filteredItems.length) % filteredItems.length;
+    updateModalContent(currentImageIndex);
+  }
+
+  // Gallery item click handlers
+  galleryItems.forEach((item, index) => {
+    item.element.addEventListener('click', () => {
+      // Find the index in the current filtered items
+      const filteredIndex = filteredItems.findIndex(filteredItem => filteredItem.index === index);
+      if (filteredIndex !== -1) {
+        currentImageIndex = filteredIndex;
+        updateModalContent(currentImageIndex);
+        openModal();
+      }
+    });
+  });
+
+  // Modal controls
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
   function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
 
-  modalClose.addEventListener('click', closeModal);
+  // Event listeners
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (carouselPrev) carouselPrev.addEventListener('click', prevImage);
+  if (carouselNext) carouselNext.addEventListener('click', nextImage);
+
+  // Click outside modal to close
   modal.addEventListener('click', (e: Event) => {
     if (e.target === modal) {
       closeModal();
     }
   });
 
-  // Escape key to close modal
+  // Keyboard navigation
   document.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
+    if (!modal.classList.contains('active')) return;
+    
+    switch(e.key) {
+      case 'Escape':
+        closeModal();
+        break;
+      case 'ArrowLeft':
+        e.preventDefault();
+        prevImage();
+        break;
+      case 'ArrowRight':
+        e.preventDefault();
+        nextImage();
+        break;
     }
   });
 
-  // Note: Scroll animations are now handled by main.js to prevent conflicts
+  // Touch/swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  modal.addEventListener('touchstart', (e: TouchEvent) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  modal.addEventListener('touchend', (e: TouchEvent) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        nextImage(); // Swipe left = next image
+      } else {
+        prevImage(); // Swipe right = previous image
+      }
+    }
+  }
 
   // Before/After functionality
   function initBA(container: HTMLElement) {
@@ -1143,7 +1608,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize all before/after containers
   document.querySelectorAll(".ba-container").forEach((c) => initBA(c as HTMLElement));
-
-  // Note: Smooth scrolling is now handled by main.js to prevent conflicts
 });
 </script>
