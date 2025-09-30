@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
 
 // Import area data from JSON file
@@ -767,7 +766,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
           <article class="area-card bg-white rounded-xl border border-gold shadow-soft overflow-hidden">
             <div class="image-container">
               <img
-                src="https://images.unsplash.com/photo-1594736797933-d0401ba4db79?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
+                src="/images/weybridge.jpg"
                 alt="Weybridge St Georges Hill luxury properties"
                 loading="lazy"
               />

@@ -623,10 +623,11 @@ import TransformationGallery from '../components/TransformationGallery.astro';
         </div>
         <form
           class="bg-navy rounded-2xl p-8 md:p-12 border border-gold/50 shadow-xl"
-          action="#"
-          method="post"
+          action="https://api.web3forms.com/submit"
+          method="POST"
           onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');"
         >
+          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <label class="block">
               <span class="block mb-2 text-white font-medium flex items-center gap-2">
