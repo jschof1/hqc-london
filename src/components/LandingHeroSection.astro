@@ -177,13 +177,13 @@ const {
       {title}
     </h1>
     
-    <p class="text-slate-300 md:text-lg text-center max-w-2xl mt-4 leading-relaxed">
+    <p class="text-slate-300 md:text-lg text-center max-w-2xl mt-4 leading-relaxed lg:text-center mx-auto">
       {subtitle}
     </p>
     </div>
 
     {ctaButtons.length > 0 && (
-      <div class="text-transition flex items-center gap-3 mt-8">
+      <div class="text-transition flex items-center gap-3 mt-8 sm:flex-row flex-col">
         {ctaButtons.map((button) => (
           <a
             id={button.id}

@@ -305,7 +305,8 @@ function repeat(count: number): number[] {
           </p>
         </div>
         
-        <form class="grid gap-4 bg-navy/70 border border-gold rounded-2xl p-6 md:p-8" action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you! Our {areaInfo.name} team will contact you within 2 hours.');">
+        <form class="grid gap-4 bg-navy/70 border border-gold rounded-2xl p-6 md:p-8"  action="https://api.web3forms.com/submit" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Our {areaInfo.name} team will contact you within 2 hours.');">
+          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
           <div class="grid md:grid-cols-2 gap-4">
             <label class="text-sm">
               <span class="block mb-1 text-white font-medium">Full Name</span>
@@ -347,7 +348,7 @@ function repeat(count: number): number[] {
             <a href={`tel:${areaInfo.contact.phone}`} class="flex items-center gap-2 hover:text-gold transition-colors">
               <i class="fas fa-phone"></i>{areaInfo.contact.phone}
             </a>
-            <a href={`mailto:${areaInfo.contact.email}`} class="flex items-center gap-2 hover:text-gold transition-colors">
+            <a href=mailto:"sales@highqualityclean.co.uk" class="flex items-center gap-2 hover:text-gold transition-colors">
               <i class="fas fa-envelope"></i>{areaInfo.contact.email}
             </a>
             <a href={`https://wa.me/${areaInfo.contact.whatsapp}`} class="flex items-center gap-2 hover:text-gold transition-colors">
@@ -360,7 +361,7 @@ function repeat(count: number): number[] {
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer
     <footer class="bg-night relative">
       <div class="absolute inset-0 opacity-5" aria-hidden="true">
         <img
@@ -415,7 +416,7 @@ function repeat(count: number): number[] {
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </main>
 
   <style>
