@@ -427,7 +427,8 @@ const processSteps = [
     <!-- Quote Form -->
     <section id="quote" class="py-14 md:py-18 bg-white">
       <div class="mx-auto max-w-3xl px-6">
-        <form class="grid gap-4 bg-mist rounded-2xl p-5 md:p-7 border border-gold shadow-soft" action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');">
+        <form class="grid gap-4 bg-mist rounded-2xl p-5 md:p-7 border border-gold shadow-soft" action="https://api.web3forms.com/submit" method="POST" onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');">
+          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
           <div class="grid md:grid-cols-2 gap-4">
             <label class="text-sm">
               <span class="block mb-1 text-navy font-medium">Full Name</span>
