@@ -1,22 +1,18 @@
 @import "tailwindcss";
 
-/* Theme configuration for Tailwind CSS v4 */
-@theme {
-  --color-ink: #0E0E10;
-  --color-mist: #F7F7F9;
-  --color-gold: #C9A961;
-  --color-navy: #2C3E50;
-  --color-night: #1c2833;
-  
-  --font-family-display: "Inter var", ui-sans-serif, system-ui;
-  --font-family-serif: "Cormorant Garamond", serif;
-  
-  --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.1), 0 4px 10px rgb(0 0 0 / 0.06);
-  
-  --radius-xl2: 1.25rem;
-}
-
 @layer base {
+  @theme {
+    --color-ink: #0E0E10;
+    --color-mist: #F7F7F9;
+    --color-gold: #C9A961;
+    --color-navy: #2C3E50;
+    --color-night: #1c2833;
+  
+    --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.1), 0 4px 10px rgb(0 0 0 / 0.06);
+    
+    --radius-xl2: 1.25rem;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -25,6 +21,21 @@
     font-family: var(--font-family-display);
     background-color: var(--color-mist);
     color: var(--color-ink);
+    
+  }
+
+  /* Typography improvements */
+  h1, h2, h3 { 
+    line-height: 1.2; 
+  }
+  
+  p { 
+    line-height: 1.6; 
+  }
+
+  /* Image optimization - Remove global hover transforms */
+  img {
+    object-fit: cover;
   }
 }
 
@@ -32,9 +43,7 @@
   .font-serif {
     font-family: var(--font-family-serif);
   }
-}
 
-@layer components {
   /* Gallery specific styles */
   .gallery-grid {
     display: grid;
@@ -222,126 +231,7 @@
     padding-top: 1rem;
     border-top: 1px solid rgb(from var(--color-gold) r g b / 0.2);
   }
-}
 
-@layer utilities {
-  /* Animations - More subtle scroll effects */
-  .fade-in {
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-  }
-
-  /* View Transition Classes */
-  .page-transition {
-    view-transition-name: page-content;
-  }
-
-  .hero-transition {
-    view-transition-name: hero-section;
-  }
-
-  .nav-transition {
-    view-transition-name: navigation;
-  }
-
-  .card-transition {
-    view-transition-name: var(--card-name);
-  }
-
-  .image-transition {
-    view-transition-name: page-image;
-  }
-
-  .text-transition {
-    view-transition-name: page-text;
-  }
-
-  /* Smooth page loading */
-  .page-enter {
-    animation: pageEnter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .page-exit {
-    animation: pageExit 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  @keyframes pageEnter {
-    0% {
-      opacity: 0;
-      transform: translateY(20px) scale(0.98);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-
-  @keyframes pageExit {
-    0% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-20px) scale(0.98);
-    }
-  }
-
-  /* Staggered animations for lists and grids - More subtle */
-  .stagger-children > * {
-    animation: staggerFadeIn 0.4s ease forwards;
-    opacity: 0;
-  }
-
-  .stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
-  .stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
-  .stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
-  .stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
-  .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
-  .stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
-
-  @keyframes staggerFadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /* Smooth transitions for hover effects */
-  .smooth-hover {
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .smooth-hover:hover {
-    transform: translateY(-2px);
-  }
-
-  /* Reduce animations on slow devices */
-  @media (prefers-reduced-motion: reduce) {
-    .fade-in,
-    .stagger-children > *,
-    .smooth-hover {
-      transition: none !important;
-      animation: none !important;
-    }
-    
-    .fade-in {
-      opacity: 1;
-    }
-    
-    .stagger-children > * {
-      opacity: 1;
-    }
-  }
-}
-
-@layer components {
   /* Generic modal styles - for basic modals only */
   /* Gallery modal uses specific styling in case-studies page */
   .basic-modal {
@@ -391,30 +281,7 @@
   .basic-modal-close:hover {
     opacity: 0.7;
   }
-}
 
-@layer utilities {
-  /* Accessibility improvements */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  /* Focus visible for keyboard navigation */
-  .focus-visible:focus {
-    outline: 2px solid var(--color-gold);
-    outline-offset: 2px;
-  }
-}
-
-@layer components {
   /* Masonry layout for varied image sizes */
   .masonry {
     column-count: 3;
@@ -448,10 +315,39 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgb(from var(--color-gold) r g b / 0.3);
   }
+
+  /* Accordion */
+  .accordion-content {
+    display: none;
+  }
+  
+  .accordion.open .accordion-content {
+    display: block;
+  }
+  
+  /* Timeline */
+  .timeline-dot {
+    box-shadow: 0 0 0 6px rgb(from var(--color-gold) r g b / 0.18);
+  }
+
+  /* Parallax backgrounds */
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Sticky table columns */
+  .sticky-col {
+    position: sticky;
+    left: 0;
+    background: var(--color-navy); /* Changed from #ffffff to navy */
+    z-index: 10;
+  }
 }
 
 @layer utilities {
-  /* Critical utility classes */
+  /* Aspect ratio utilities */
   .ar-16-9 {
     position: relative;
     width: 100%;
@@ -473,7 +369,19 @@
     position: absolute;
     inset: 0;
   }
+
+  .ar-16-6 {
+    position: relative;
+    width: 100%;
+    padding-top: 37.5%;
+  }
   
+  .ar-16-6 > * {
+    position: absolute;
+    inset: 0;
+  }
+  
+  /* Scrollbar utilities */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -483,40 +391,344 @@
     scrollbar-width: none;
   }
   
+  /* Background effects */
   .grain {
     background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
     background-size: 3px 3px;
   }
+
+  /* Accessibility improvements */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Focus visible for keyboard navigation */
+  .focus-visible:focus {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+
+  /* Animations - More subtle scroll effects */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+  }
+
+  /* Smooth page loading */
+  .page-enter {
+    animation: pageEnter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .page-exit {
+    animation: pageExit 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  @keyframes pageEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes pageExit {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.98);
+    }
+  }
+
+  /* Staggered animations for lists and grids - More subtle */
+  .stagger-children > * {
+    animation: staggerFadeIn 0.9s ease forwards;
+    opacity: 0;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+
+  @keyframes staggerFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Smooth transitions for hover effects */
+  .smooth-hover {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .smooth-hover:hover {
+    transform: translateY(-2px);
+  }
+
+  /* View transition names */
+  .page-transition {
+    view-transition-name: page-content;
+  }
+
+  .hero-transition {
+    view-transition-name: hero-section;
+  }
+
+  .nav-transition {
+    view-transition-name: navigation;
+  }
+
+  .card-transition {
+    view-transition-name: var(--card-name);
+  }
+
+  .image-transition {
+    view-transition-name: page-image;
+  }
+
+  .text-transition {
+    view-transition-name: page-text;
+  }
+
+  /* Reduce animations on slow devices */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .stagger-children > *,
+    .smooth-hover {
+      transition: none !important;
+      animation: none !important;
+    }
+    
+    .fade-in {
+      opacity: 1;
+    }
+    
+    .stagger-children > * {
+      opacity: 1;
+    }
+  }
 }
 
-@layer components {
-  /* Accordion */
-  .accordion-content {
-    display: none;
+/* View Transitions - Root level animations */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+::view-transition-old(root) {
+  animation-name: subtle-fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: subtle-fade-in;
+}
+
+@keyframes subtle-fade-out {
+  0% {
+    opacity: 1;
   }
-  
-  .accordion.open .accordion-content {
-    display: block;
-  }
-  
-  /* Timeline */
-  .timeline-dot {
-    box-shadow: 0 0 0 6px rgb(from var(--color-gold) r g b / 0.18);
+  100% {
+    opacity: 0;
   }
 }
 
-@layer base {
-  /* Typography improvements */
-  h1, h2, h3 { 
-    line-height: 1.2; 
+@keyframes subtle-fade-in {
+  0% {
+    opacity: 0;
   }
-  
-  p { 
-    line-height: 1.6; 
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Page content transitions */
+::view-transition-old(page-content),
+::view-transition-new(page-content) {
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+::view-transition-old(page-content) {
+  animation-name: content-fade-out;
+}
+
+::view-transition-new(page-content) {
+  animation-name: content-fade-in;
+}
+
+@keyframes content-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes content-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hero section transitions */
+::view-transition-old(hero-section),
+::view-transition-new(hero-section) {
+  animation-duration: 600ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+::view-transition-old(hero-section) {
+  animation-name: hero-image-fade-out;
+}
+
+::view-transition-new(hero-section) {
+  animation-name: hero-image-fade-in;
+}
+
+@keyframes hero-image-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-image-fade-in {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Navigation transitions */
+::view-transition-old(navigation),
+::view-transition-new(navigation) {
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+}
+
+/* Image transitions */
+::view-transition-old(page-image),
+::view-transition-new(page-image) {
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+::view-transition-old(page-image) {
+  animation-name: image-subtle-fade-out;
+}
+
+::view-transition-new(page-image) {
+  animation-name: image-subtle-fade-in;
+}
+
+@keyframes image-subtle-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes image-subtle-fade-in {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Text transitions */
+::view-transition-old(page-text),
+::view-transition-new(page-text) {
+  animation-duration: 800ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+::view-transition-old(page-text) {
+  animation-name: text-fade-out;
+}
+
+::view-transition-new(page-text) {
+  animation-name: text-delayed-fade-in;
+}
+
+@keyframes text-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes text-delayed-fade-in {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-old(page-content),
+  ::view-transition-new(page-content),
+  ::view-transition-old(hero-section),
+  ::view-transition-new(hero-section),
+  ::view-transition-old(navigation),
+  ::view-transition-new(navigation),
+  ::view-transition-old(page-image),
+  ::view-transition-new(page-image),
+  ::view-transition-old(page-text),
+  ::view-transition-new(page-text) {
+    animation-duration: 150ms;
+    animation-timing-function: ease;
   }
 
-  /* Image optimization - Remove global hover transforms */
-  img {
-    object-fit: cover;
-  }
 }
