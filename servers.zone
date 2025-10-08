@@ -1,0 +1,34 @@
+$ORIGIN highqualityclean.co.uk.
+$TTL 300
+@   IN  SOA ns-1799.awsdns-32.co.uk. awsdns-hostmaster.amazon.com. (
+        1       ; serial
+        7200    ; refresh
+        900     ; retry
+        1209600 ; expire
+        86400   ; minimum
+)
+
+@   IN  NS  ns-1799.awsdns-32.co.uk.
+@   IN  NS  ns-338.awsdns-42.com.
+@   IN  NS  ns-765.awsdns-31.net.
+@   IN  NS  ns-1249.awsdns-28.org.
+
+; A records
+@   IN  A   35.214.31.184
+www IN  A   35.214.31.184
+
+; MX
+@   IN  MX  1 SMTP.GOOGLE.COM.
+
+; TXT
+@   IN  TXT "google-site-verification=LVJUuxL4dc5KPPDudCP7zwuFVgPbVoOomtCJ3iwcofU"
+info IN  TXT "v=spf1 include:amazonses.com ~all"
+
+; ACM / AWS validation CNAMEs
+_32d80615d3204a131c761cb4d4acb3e9 IN CNAME _31d56fb75635055a0dfbde022ea5a712.mqzgcdqkwq.acm-validations.aws.
+_7414131f5855e98eeecfe548e111940d.www IN CNAME _6c5afcdc52fead36ba8228dcfdde9cbe.mqzgcdqkwq.acm-validations.aws.
+
+; SES DKIM CNAMEs
+aq2mocube467aydjmwrg5gz4uohvhwr4._domainkey IN CNAME aq2mocube467aydjmwrg5gz4uohvhwr4.dkim.amazonses.com.
+nokz6q7pb7bgub6hdwku65h7qr2hvznh._domainkey IN CNAME nokz6q7pb7bgub6hdwku65h7qr2hvznh.dkim.amazonses.com.
+tlbrsjnyxjbivohkohcwx4vklkamxhrb._domainkey IN CNAME tlbrsjnyxjbivohkohcwx4vklkamxhrb.dkim.amazonses.com.
