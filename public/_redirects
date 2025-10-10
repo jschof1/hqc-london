@@ -1,0 +1,9 @@
+# Flatten service URLs - serve files from /services/ at root level
+/concierge-laundry /services/concierge-laundry 200
+/moving-out /services/moving-out 200
+/carpet-cleaning /services/carpet-cleaning 200
+/well-clean-advisory /services/well-clean-advisory 200
+/office-cleaning-services /services/office-cleaning-services 200
+/airbnb-turnover /services/airbnb-turnover 200
+/well-clean /services/well-clean 200
+
