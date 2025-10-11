@@ -25,7 +25,7 @@ interface Props {
     painpoint: {
       headline: string;
       text?: string | string[];
-      painpionts?: Array<{
+      painpoints?: Array<{
         text: string;
       }>;
     };
@@ -154,8 +154,18 @@ const { service } = Astro.props;
             ? service.painpoint.text.map((paragraph) => (
                 <p class="text-xl text-ink/80 mb-4">{paragraph}</p>
               ))
-            : <p class="text-xl text-ink/80 mb-4">{service.painpoint.text}</p>
+            : service.painpoint.text && <p class="text-xl text-ink/80 mb-4">{service.painpoint.text}</p>
           }
+          {service.painpoint.painpoints && service.painpoint.painpoints.length > 0 && (
+            <div class="mt-8 grid gap-4">
+              {service.painpoint.painpoints.map((point) => (
+                <div class="flex items-start text-ink/80 text-lg">
+                  <i class="fas fa-exclamation-circle text-red-500 text-xl mr-3 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                  <span>{point.text}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <div class="relative">
           <div class="aspect-[4/3] bg-gradient-to-br from-navy/20 to-gold/20 rounded-xl overflow-hidden">
