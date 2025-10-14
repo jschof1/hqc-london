@@ -713,9 +713,11 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 placeholder="e.g. SW1A, W1K, NW3"
                 class="flex-1 rounded-full px-4 py-3 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-center"
               />
-              <button style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'" title="Search postcode" aria-label="Search postcode">
+            <a href="/#quote">
+            <button type="button" class="rounded-full px-4 py-3 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-center bg-gold">
                 <i class="fas fa-search"></i>
               </button>
+            </a>
             </div>
             <p class="text-xs text-ink/60 mt-3">
               Don't see your area? <a href="/#quote" class="text-gold hover:underline">Contact us</a> — we're always expanding.

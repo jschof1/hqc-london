@@ -9,7 +9,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "High Quality Cleaning — Luxury home cleaning for discerning London clients." } = Astro.props;
+const { title, description = "High Quality Clean — Luxury home cleaning for discerning London clients." } = Astro.props;
 
 const baseUrl = 'https://highqualitycleaning.co.uk';
 const canonicalUrl = Astro.url ? Astro.url.href : baseUrl;
@@ -91,13 +91,13 @@ const offerNodes = serviceNodes.map((service) => ({
   itemOffered: { '@id': service['@id'] },
   url: `${baseUrl}/#quote`,
   availability: 'https://schema.org/InStock',
-  description: `Arrange ${service.name} with a bespoke proposal from High Quality Cleaning.`
+  description: `Arrange ${service.name} with a bespoke proposal from High Quality Clean.`
 }));
 
 const offerCatalogNode = {
   '@type': 'OfferCatalog',
   '@id': `${baseUrl}/#offer-catalog`,
-  name: 'High Quality Cleaning programmes',
+  name: 'High Quality Clean programmes',
   itemListElement: offerNodes.map((offer, index) => ({
     '@type': 'ListItem',
     position: index + 1,
@@ -108,7 +108,7 @@ const offerCatalogNode = {
 const organizationNode = {
   '@type': ['LocalBusiness', 'CleaningService'],
   '@id': `${baseUrl}/#organization`,
-  name: 'High Quality Cleaning',
+  name: 'High Quality Clean',
   alternateName: 'High Quality Clean',
   url: baseUrl,
   description,
@@ -148,7 +148,7 @@ const organizationNode = {
     name: 'Pedro',
     jobTitle: 'Founder',
     description:
-      'Luxury hospitality professional and wellness cleaning specialist leading High Quality Cleaning.',
+      'Luxury hospitality professional and wellness cleaning specialist leading High Quality Clean.',
     knowsAbout: [
       'Luxury home cleaning',
       'Wellness-grade protocols',
@@ -164,7 +164,7 @@ const websiteNode = {
   '@type': 'WebSite',
   '@id': `${baseUrl}/#website`,
   url: baseUrl,
-  name: 'High Quality Cleaning',
+  name: 'High Quality Clean',
   description,
   inLanguage: 'en-GB',
   publisher: { '@id': organizationNode['@id'] },

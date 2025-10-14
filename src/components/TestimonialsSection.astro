@@ -81,22 +81,23 @@ const generateStars = (rating: number) => {
   class={`relative py-16 sm:py-20 ${backgroundColor} text-white ${className}`}
   aria-label={ariaLabel}
 >
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="relative mx-auto max-w-7xl px-4 ">
     <div
       class="flex items-center gap-3 mb-6 md:mb-8 text-gold text-sm"
     >
       <div class="h-px w-8 bg-gold/60"></div>
       {headerText}
     </div>
-
+    <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-navy via-navy/80 to-transparent z-20 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-navy via-navy/80 to-transparent z-20 pointer-events-none"></div>
     <div
-      class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory"
+      class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory items-stretch"
       role="list"
       data-testimonials-list
     >
       {initialTestimonials.map((testimonial) => (
         <article
-          class="min-w-[320px] max-w-md snap-start rounded-xl bg-navy border border-gold p-6"
+          class="min-w-[320px] max-w-md h-[320px] snap-start rounded-xl bg-navy border border-gold p-6 z-10 flex flex-col"
           role="listitem"
           data-quote-card
           data-expanded="false"
@@ -124,27 +125,29 @@ const generateStars = (rating: number) => {
             </div>
           </div>
           <div
-            class="text-sm text-white/90 mb-3"
+            class="text-sm text-white/90 mb-3 flex-1 overflow-hidden"
             data-quote-container
             data-preview={testimonial.previewQuote}
             data-full={testimonial.fullQuote}
-          >
-            <span class="quote-text">"{testimonial.previewQuote}"</span>
-          </div>
-          <div class="text-xs text-gold/80 italic mb-2">{testimonial.subtitle}</div>
-          <div class="text-gold" aria-label={`${testimonial.rating} stars`}>
-            {generateStars(testimonial.rating)}
-          </div>
-          {testimonial.isTruncated && (
-            <button
-              type="button"
-              class="mt-3 text-xs font-medium text-gold/80 underline offset-2 hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-navy"
-              data-quote-toggle
-              aria-expanded="false"
             >
-              Read more
-            </button>
-          )}
+            <span class="quote-text">"{testimonial.previewQuote}"</span>
+            {testimonial.isTruncated && (
+              <button
+                type="button"
+                class="mt-3 text-xs font-medium text-gold/80 underline offset-2 hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-navy"
+                data-quote-toggle
+                aria-expanded="false"
+              >
+                Read more
+              </button>
+            )}
+          </div>
+          <div class="mt-auto">
+            <div class="text-xs text-gold/80 italic mb-2">{testimonial.subtitle}</div>
+            <div class="text-gold" aria-label={`${testimonial.rating} stars`}>
+              {generateStars(testimonial.rating)}
+            </div>
+          </div>
         </article>
       ))}
     </div>
@@ -227,7 +230,7 @@ const generateStars = (rating: number) => {
 
     const createQuoteCard = (testimonial) => {
       const article = document.createElement("article");
-      article.className = "min-w-[320px] max-w-md snap-start rounded-xl bg-navy border border-gold p-6";
+      article.className = "min-w-[320px] max-w-md h-[320px] snap-start rounded-xl bg-navy border border-gold p-6 flex flex-col";
       article.setAttribute("role", "listitem");
       article.setAttribute("data-quote-card", "");
       article.setAttribute("data-expanded", "false");
@@ -264,7 +267,7 @@ const generateStars = (rating: number) => {
       article.appendChild(header);
 
       const quoteContainer = document.createElement("div");
-      quoteContainer.className = "text-sm text-white/90 mb-3";
+      quoteContainer.className = "text-sm text-white/90 mb-3 flex-1 overflow-hidden";
       quoteContainer.setAttribute("data-quote-container", "");
       quoteContainer.setAttribute("data-preview", testimonial.previewQuote || "");
       quoteContainer.setAttribute("data-full", testimonial.fullQuote || "");
@@ -273,18 +276,6 @@ const generateStars = (rating: number) => {
       quoteText.className = "quote-text";
       quoteText.textContent = `"${testimonial.previewQuote || ""}"`;
       quoteContainer.appendChild(quoteText);
-      article.appendChild(quoteContainer);
-
-      const subtitle = document.createElement("div");
-      subtitle.className = "text-xs text-gold/80 italic mb-2";
-      subtitle.textContent = testimonial.subtitle;
-      article.appendChild(subtitle);
-
-      const stars = document.createElement("div");
-      stars.className = "text-gold";
-      stars.setAttribute("aria-label", `${testimonial.rating} stars`);
-      stars.textContent = createStars(testimonial.rating);
-      article.appendChild(stars);
 
       if (testimonial.isTruncated) {
         const button = document.createElement("button");
@@ -293,8 +284,26 @@ const generateStars = (rating: number) => {
         button.setAttribute("data-quote-toggle", "");
         button.setAttribute("aria-expanded", "false");
         button.textContent = "Read more";
-        article.appendChild(button);
+        quoteContainer.appendChild(button);
       }
+
+      article.appendChild(quoteContainer);
+
+      const bottomContainer = document.createElement("div");
+      bottomContainer.className = "mt-auto";
+
+      const subtitle = document.createElement("div");
+      subtitle.className = "text-xs text-gold/80 italic mb-2";
+      subtitle.textContent = testimonial.subtitle;
+      bottomContainer.appendChild(subtitle);
+
+      const stars = document.createElement("div");
+      stars.className = "text-gold";
+      stars.setAttribute("aria-label", `${testimonial.rating} stars`);
+      stars.textContent = createStars(testimonial.rating);
+      bottomContainer.appendChild(stars);
+
+      article.appendChild(bottomContainer);
 
       return article;
     };
