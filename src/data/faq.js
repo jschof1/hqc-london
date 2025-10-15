@@ -42,7 +42,7 @@ export const faqData = [
       items: [
         {
           question: "Do you offer discounts for regular customers?",
-          answer: "Yes. 25% off fortnightly, 40% off weekly, 65% off multiple cleans per week."
+          answer: "Yes."
         },
         {
           question: "What is the guarantee?",
@@ -50,7 +50,7 @@ export const faqData = [
         },
         {
           question: "Do you have insurance?",
-          answer: "Yes, we have £2m public liability insurance and use secure Stripe payment processing."
+          answer: "Yes, we have £5m public liability insurance and use secure Stripe payment processing."
         }
       ]
     }
