@@ -1,0 +1,13 @@
+---
+export interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="bg-navy/5 border-l-4 border-gold p-6 rounded-r-md my-6">
+  <p class="text-ink/80 italic">
+    {text}
+  </p>
+</div>

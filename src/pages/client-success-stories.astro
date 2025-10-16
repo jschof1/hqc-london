@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CardBlock from '../components/CardBlock.astro';
+import HeaderBlock from '../components/HeaderBlock.astro';
+import TitleBlock from '../components/TitleBlock.astro';
+import ContentBlock from '../components/ContentBlock.astro';
+import QuoteBlock from '../components/QuoteBlock.astro';
+import CalloutBlock from '../components/CalloutBlock.astro';
+import { Masonry } from 'astro-masonry';
+---
+
+<Layout 
+  title="Client Success Stories — High Quality Clean London"
+  description="High Quality Clean Client Success Stories — Real experiences from discerning London clients who trusted us with their homes. Detailed case studies showcasing our wellness-grade cleaning excellence."
+>
+  <Header />
+
+  <main class="page-transition pt-16 relative">
+    <!-- Hero Section -->
+    <section class="relative bg-navy text-white py-20 md:py-32">
+      <div class="absolute inset-0">
+        <img
+          src="/images/luxury-home/luxury-home-1.jpg"
+          alt="Luxury home interior showcasing pristine cleaning results"
+          class="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(44, 62, 80, 0.8), rgba(28, 40, 51, 0.9));"></div>
+      </div>
+      
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+        <div class="max-w-4xl">
+          <div class="flex items-center gap-3 mb-6 text-gold text-sm">
+            <div class="h-px w-8" style="background-color: rgba(201, 169, 97, 0.6);"></div>
+            <span>Client Success Stories</span>
+          </div>
+          
+          <h1 class="font-serif text-4xl md:text-6xl md:text-7xl text-gold mb-6">
+            Client Success Stories
+          </h1>
+          
+          <p class="text-xl md:text-2xl leading-relaxed mb-8" style="color: rgba(255, 255, 255, 0.9);">
+            Real experiences from discerning London clients who trusted us with their homes. Each story showcases our commitment to excellence and the lasting relationships we build.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#stories"
+              class="inline-flex items-center px-6 py-3 bg-gold text-navy font-semibold rounded-md border border-gold btn-hover focus-visible"
+            >
+              <i class="fas fa-book-open mr-2" aria-hidden="true"></i>
+              Read Our Stories
+            </a>
+            <a
+              href="/case-studies"
+              class="inline-flex items-center px-6 py-3 border-2 border-gold text-gold font-semibold rounded-md btn-hover focus-visible"
+              style="background-color: rgba(44, 62, 80, 0.8);"
+            >
+              <i class="fas fa-images mr-2" aria-hidden="true"></i>
+              View Gallery
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gradient-to-br from-navy to-slate-300 border-t-2 border-gold">
+      <div class="flex flex-col items-center justify-center mx-auto max-w-7xl pt-12 px-4 sm:px-6 md:px-8">
+        <h2 class="font-serif sm:text-6xl md:text-7xl text-gold mb-6"> Our Stories</h2>
+      </div>
+    <Masonry
+      breakpointCols={{
+        default: 2,
+        1100: 3,
+        700: 2,
+        500: 1
+      }},
+       class="flex gap-12 p-12"
+    >
+      <!-- Item 1 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="Mr. Edwards – From Disappointment to Dependability" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="When Mr. Edwards first contacted us, he didn't hold back." />
+            <ContentBlock text="He had worked with other cleaning companies before, but told me plainly:" />
+            <QuoteBlock text="They didn't treat my property with respect. Corners were cut. Things were missed." />
+            <ContentBlock text="He was clear about what he expected, not just a clean home, but one looked after with care and attention. That stuck with me." />
+            <ContentBlock text="We started with a full top-to-bottom clean. From protecting surfaces properly to detailing the kitchen and bathroom, we focused on restoring order and showing him that yes, there is a different standard. His home was left spotless and more importantly, respected." />
+            <ContentBlock text="We encountered a small hiccup during one of the early services, but rather than hide it, we resolved it quickly and professionally. Mr. Edwards later told me:" />
+            <QuoteBlock text="It wasn't just the clean. It was how you handled the whole situation that made me trust you." />
+            <ContentBlock text="Since then, he's become a regular. We now care for his property on a regular basis and he's recommended us to others in his network. That means a lot to us." />
+            <CalloutBlock text="For Mr. Edwards, what started as a frustrating search for quality ended with peace of mind and that's what we aim to deliver every time." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 2 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="Mrs. Dean – A Home Restored Before the First Brick Was Laid" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="Mrs. Dean contacted us about her flat in Chelsea, she was planning renovation works and needed the space cleaned ahead of the builders arriving. She wasn't based in London, but she knew the property needed attention and wanted a professional clean to prepare the space." />
+            <ContentBlock text="When we visited the flat for an initial inspection, it became clear the condition was worse than expected. We filmed a full walkthrough and sent her a video report. She was shocked." />
+            <QuoteBlock text="Please do what you can, she said." />
+            <ContentBlock text="We got to work immediately cleaning top to bottom, removing multiple bags of rubbish, restoring order, and making the space workable for the incoming tradespeople. Once the clean was complete, we sent her another video walkthrough so she could see the transformation for herself. Her response said it all." />
+            <ContentBlock text="That first experience built a foundation of trust." />
+            <ContentBlock text="After the renovations were complete, she called us back for a post-build clean, and from there, we've continued to support her with regular maintenance cleans, window cleaning, laundry coordination, and anything else her property needs." />
+            <ContentBlock text="More recently, she asked us to visit a second property she was renting not just to clean, but to give an honest view on its condition and offer guidance on ongoing issues with the landlord. She knew she could rely on us not just to clean, but to advise." />
+            <CalloutBlock text="For Mrs. Dean, we became more than a service, we became her trusted team on the ground." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 3 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="From Skepticism to Satisfaction, Neylan's Experience with High Quality Clean" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="Neylan first came to us through a trusted recommendation. A family friend had spoken highly of our work but she was honest from the start: she'd worked with professional cleaning companies before, and had often been left disappointed." />
+            <ContentBlock text="There had been missed details, poor communication, and a sense that care was lacking." />
+            <ContentBlock text="So when Neylan booked us, she did so with cautious expectations." />
+            <ContentBlock text="We didn't overpromise, we simply listened to what she needed and delivered with quiet consistency. The focus was on care, precision, and restoring confidence through detail." />
+            <ContentBlock text="What stood out most to Neylan was something we take pride in, the combination of top-tier cleaning with thoughtful, responsive service." />
+            <QuoteBlock text="Pedro's care and attention to detail exceeded my expectations. It's rare to get both great customer care and a job well done but that's exactly what they delivered." />
+            <ContentBlock text="Today, Neylan recommends High Quality Clean to others with full confidence." />
+            <CalloutBlock text="Because what began with skepticism ended with trust." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 4 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="From Is This Real? to We Need Them Back - Myreete's Story" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="When Myreete first came across High Quality Clean, she had a moment of hesitation." />
+            <QuoteBlock text="I wasn't 100% sure if this was a real service, she later admitted with a smile." />
+            <ContentBlock text="She decided to give us a shot and that's when things changed." />
+            <ContentBlock text="Our team showed up on time, fully equipped, and went to work. This wasn't surface-level cleaning; it was a full reset. Every room. Every corner. Every detail given the attention it deserved." />
+            <ContentBlock text="By the end of the first appointment, the doubt had turned into something else entirely: surprise, satisfaction, and immediate trust." />
+            <QuoteBlock text="They cleaned the heck out of my house. They were AWESOME!" />
+            <ContentBlock text="Since that day, Myreete has welcomed us back again and again not just for maintenance, but for proper, deep-deep cleans that keep her home fresh, calm, and fully reset." />
+            <CalloutBlock text="She's not just a client anymore, she's part of the High Quality Clean family." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 5 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="Absolutely Blown Away - Lucy's Deep Clean Experience" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="When Lucy booked us for a one-off deep clean, she expected a professional service. What she got was something more: a transformation." />
+            <ContentBlock text="From the moment our team arrived, the focus was clear, restore the space with care, precision, and attention to every detail. This wasn't just about making things look tidy. It was about giving Lucy's home a true reset." />
+            <ContentBlock text="By the time we were done, the difference was undeniable." />
+            <QuoteBlock text="Absolutely blown away by the service… the property looks completely different!" />
+            <ContentBlock text="Lucy described the standard of cleaning as exceptional, and even more importantly, she said our team were a delight to have around. Respectful, efficient, and thorough, the kind of presence that makes a big job feel easy." />
+            <ContentBlock text="She ended her review with a full-hearted:" />
+            <QuoteBlock text="110% recommend — thank you so much!" />
+            <CalloutBlock text="That's what we aim for: not just a clean home, but a lasting impression." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 6 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="Ready for Market in 48 Hours - Amy's Sales Prep Clean" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="When Amy needed her property cleaned and ready for sale, time was critical. She picked up the phone and called High Quality Clean and within 48 hours, everything was sorted." />
+            <ContentBlock text="From that first conversation, she could tell this wasn't a typical cleaning service. The process was smooth, fast, and friendly, just what you need when you're juggling estate agents, timelines, and potential buyers." />
+            <ContentBlock text="Our team arrived promptly and delivered a deep, presentation-ready clean that helped the space shine at just the right moment." />
+            <QuoteBlock text="Very high quality clean… I was impressed with the speed and the friendliness of the owner." />
+            <CalloutBlock text="Amy's job wasn't just done, it was done right, and done fast. Another property, prepped for market. Another client, completely at ease." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 7 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="Short Notice. No Corners Cut. Courtney's Best-Ever Clean" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="When Courtney needed a deep clean on short notice, she turned to High Quality Clean. What she got wasn't just a service it was an experience that stood out from anything she'd had before." />
+            <ContentBlock text="Pedro arrived personally and brought more than just supplies. He brought care, professionalism, and clear communication." />
+            <ContentBlock text="He walked her through the process explaining what products he uses, how different surfaces should be treated, and why certain areas require more attention. It wasn't just about delivering a high-standard clean it was about helping Courtney feel confident and cared for at every step." />
+            <QuoteBlock text="Pedro was friendly, thorough, and worked efficiently… This experience was by far the best I've ever had." />
+            <ContentBlock text="She highlighted his focus on the specific areas she was concerned about, and the way he adapted the clean to fit her needs." />
+            <ContentBlock text="Today, Courtney doesn't just recommend High Quality Clean, she's already planning to book again." />
+            <CalloutBlock text="Because when service is thoughtful, professional, and personal, it becomes something worth returning to." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 8 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="Attention to Detail, Start to Finish – Ozlem's 5-Star Experience" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="Ozlem described her clean with High Quality Clean in one sentence:" />
+            <QuoteBlock text="My most satisfied cleaning experience." />
+            <ContentBlock text="Having worked with other cleaning companies before, she knew what to expect but this time was different. From the first message to the final walkthrough, everything felt intentional, respectful, and seamless. What stood out wasn't just the result, it was the care put into every step." />
+            <ContentBlock text="Pedro's communication was prompt and professional, the team arrived prepared, and the work was carried out with quiet precision." />
+            <QuoteBlock text="Pedro is incredibly polite and extremely respectful of his work. I've never seen such attention to detail." />
+            <ContentBlock text="For Ozlem, this wasn't just a cleaning appointment, it was a full-circle, 5-star experience. And more than that, it set the tone for a trusted, ongoing relationship." />
+            <QuoteBlock text="Hope to continue working with you in future." />
+            <CalloutBlock text="That's what we aim for. Clean spaces. Clear communication. Clients who feel seen and served not just booked." />
+          </div>
+        </CardBlock>
+      </div>
+    
+      <!-- Item 9 -->
+      <div class="masonry-item">
+        <CardBlock>
+          <HeaderBlock text="Client Success Story" />
+          <TitleBlock text="Cleaned from the Heart - Tawfeeq's Return Visit" />
+          <div class="prose prose-md max-w-none">
+            <ContentBlock text="For Tawfeeq, it wasn't just about cleanliness, it was about care." />
+            <ContentBlock text="This was his second time booking High Quality Clean, and the reason he came back was simple: he felt the difference in how we clean." />
+            <ContentBlock text="From the very first visit, what stood out was the way we handled his home, especially the bathrooms. Not rushed. Not surface-level. But with care, time, and detail where it mattered." />
+            <QuoteBlock text="They clean from the heart and take their time on it." />
+            <ContentBlock text="That's not just a compliment, it's a principle we work by." />
+            <ContentBlock text="Tawfeeq described his experience with Pedro and the team as the best service he's received, and his words say it all:" />
+            <QuoteBlock text="I really do recommend them." />
+            <CalloutBlock text="Consistent quality. A personal touch. That's why clients like Tawfeeq come back and keep spreading the word." />
+          </div>
+        </CardBlock>
+      </div>
+    </Masonry>
+    </section>
+    </Layout>
+    </main>
+
+    <style>
+      .masonry-item {
+        break-inside: avoid;
+        padding: 1rem;
+      }
+    </style>

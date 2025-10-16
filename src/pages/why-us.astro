@@ -92,174 +92,190 @@ import CTABanner from '../components/CTABanner.astro';
           We're proud to serve some of London's most prestigious businesses and property agencies.
         </p>
 
-        <!-- Carousel Container -->
-        <div class="relative overflow-hidden">
-          <div class="carousel-track flex gap-8 animate-scroll">
-            <!-- Chesterton -->
-            <a href="https://www.chestertons.co.uk" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80 block hover:shadow-lg transition-shadow duration-200">
-              <div class="mb-6">
-                <img src="/images/brand-logos/chestertons.webp" 
-                     alt="Chesterton logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Chesterton</h4>
-              <p class="text-gray-700 text-sm">
-                As a leading international property agency, Chesterton demands the highest standards in every aspect of their business, including cleanliness. We're proud to meet their high expectations.
-              </p>
-            </a>
+  <!-- Marquee -->
+<section class="relative bg-navy py-8">
+  <div class="marquee group relative">
+    <div class="marquee__inner" aria-hidden="true">
+      <!-- TRACK 1 -->
+      <ul class="marquee__track">
+        <!-- ITEMS -->
+        <li class="marquee__item">
+          <a href="https://www.chestertons.co.uk" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/chestertons.webp" alt="Chestertons" class="logo">
+            <h4 class="title">Chestertons</h4>
+            <p class="copy">Leading international property agency. We meet their high standards.</p>
+          </a>
+        </li>
 
-            <!-- Lowlu -->
-            <a href="https://www.lowlu.co" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80 block hover:shadow-lg transition-shadow duration-200">
-              <div class="mb-6">
-                <img src="/images/brand-logos/lowlu.webp" 
-                     alt="Lowlu logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Lowlu</h4>
-              <p class="text-gray-700 text-sm">
-                Lowlu is a boutique sauna company that requires a cleaning service that meets their high standards. We provide a clean and professional environment for their clients.
-              </p>
-            </a>
+        <li class="marquee__item">
+          <a href="https://www.lowlu.co" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/lowlu.webp" alt="Lowlu" class="logo">
+            <h4 class="title">Lowlu</h4>
+            <p class="copy">Boutique sauna company. Clean, calm, client-ready spaces.</p>
+          </a>
+        </li>
 
-            <!-- Young Guns -->
-            <div class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80">
-              <a href="https://youngguns.org" target="_blank" rel="noopener noreferrer" class="block mb-6">
-                <img src="/images/brand-logos/young-guns.webp" 
-                     alt="Young Guns logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-                <h4 class="font-serif text-lg text-navy mb-4 mt-4">Young Guns</h4>
-              </a>
-              <p class="text-gray-700 text-sm">
-                Young Guns is an international portfolio-based competition and community, founded by the Art Directors Club in 1996, recognizing top creative professionals aged 30 or under across the globe. We are proud to foster their inspiring environment of creative excellence with our meticulous cleaning.<br>
-                <a href="https://youngguns.org" class="text-gold hover:underline text-xs mt-2 inline-block" target="_blank" rel="noopener noreferrer">Learn more</a>
-              </p>
-            </div>
+        <li class="marquee__item">
+          <a href="https://youngguns.org" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/young-guns.webp" alt="Young Guns" class="logo">
+            <h4 class="title">Young Guns</h4>
+            <p class="copy">International creative awards. We keep the environment crisp.</p>
+          </a>
+        </li>
 
+        <li class="marquee__item">
+          <a href="https://www.knightfrank.co.uk" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/Knight-Frank.webp" alt="Knight Frank" class="logo">
+            <h4 class="title">Knight Frank</h4>
+            <p class="copy">Global real estate consultancy. Prime standards, prime results.</p>
+          </a>
+        </li>
 
-            <!-- Knight Frank -->
-            <a href="https://www.knightfrank.co.uk" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80 block hover:shadow-lg transition-shadow duration-200">
-              <div class="mb-6">
-                <img src="/images/brand-logos/Knight-Frank.webp" 
-                     alt="Knight Frank logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Knight Frank</h4>
-              <p class="text-gray-700 text-sm">
-                Knight Frank is a globally renowned real estate consultancy with over 600 offices in 52 countries, trusted by clients for their expertise in prime residential and commercial property <br>
-                <span class="text-xs text-gold italic">Learn more at knightfrank.co.uk</span>
-              </p>
-            </a>
-            <!-- Marsh and Parsons -->
-            <a href="https://www.marshandparsons.co.uk" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80 block hover:shadow-lg transition-shadow duration-200">
-              <div class="mb-6">
-                <img src="/images/brand-logos/Marsh-and-Parsons.webp" 
-                     alt="Marsh and Parsons logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Marsh and Parsons</h4>
-              <p class="text-gray-700 text-sm">
-                Renowned for their excellent service in the real estate sector, Marsh and Parsons require a cleaning service that matches their reputation. We rise to the challenge.
-              </p>
-            </a>
+        <li class="marquee__item">
+          <a href="https://www.marshandparsons.co.uk" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/Marsh-and-Parsons.webp" alt="Marsh & Parsons" class="logo">
+            <h4 class="title">Marsh & Parsons</h4>
+            <p class="copy">Renowned service. We match the reputation.</p>
+          </a>
+        </li>
 
-            <!-- Søstrene Grene -->
-            <a href="https://sostrenegrene.com/" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80 block hover:shadow-lg transition-shadow duration-200">
-              <div class="mb-6">
-                <img src="/images/brand-logos/Sostrene-Grene.png" 
-                     alt="Søstrene Grene logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Søstrene Grene</h4>
-              <p class="text-gray-700 text-sm">
-                A Danish retail chain known for their cosy, quality merchandise. We help maintain the welcoming atmosphere of their stores with our comprehensive cleaning services.
-              </p>
-            </a>
+        <li class="marquee__item">
+          <a href="https://sostrenegrene.com" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/Sostrene-Grene.png" alt="Søstrene Grene" class="logo">
+            <h4 class="title">Søstrene Grene</h4>
+            <p class="copy">Warm retail vibe. We maintain the welcome.</p>
+          </a>
+        </li>
 
-            <!-- Generate UK -->
-            <a href="https://www.generateuk.co.uk" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80 block hover:shadow-lg transition-shadow duration-200">
-              <div class="mb-6">
-                <img src="/images/brand-logos/Generate-UK.png" 
-                     alt="Generate UK logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Generate UK</h4>
-              <p class="text-gray-700 text-sm">
-                Generate UK is an award-winning B2B digital marketing agency based in Berkshire, empowering leading companies to achieve growth online with expert web, marketing, and creative solutions.<br>
-                <span class="text-xs text-gold italic">Learn more at generateuk.co.uk</span>
-              </p>
-            </a>
+        <li class="marquee__item">
+          <a href="https://www.generateuk.co.uk" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/Generate-UK.png" alt="Generate UK" class="logo">
+            <h4 class="title">Generate UK</h4>
+            <p class="copy">Award-winning B2B agency. Clean operations, literally.</p>
+          </a>
+        </li>
 
-            <!-- London Lux Property -->
-            <a href="https://www.londonluxproperty.com" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80 block hover:shadow-lg transition-shadow duration-200">
-              <div class="mb-6">
-                <img src="/images/brand-logos/Lux.webp" 
-                     alt="London Lux Property logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">London Lux Property</h4>
-              <p class="text-gray-700 text-sm">
-                London Lux Property is a modern boutique agency specialising in investment, sales, management, and rental of real estate in Prime Central London and sought-after global destinations. Their dedicated team offers expert, personalised service for every client.<br>
-                <span class="text-xs text-gold italic">Learn more at londonluxproperty.com</span>
-              </p>
-            </a>
+        <li class="marquee__item">
+          <a href="https://www.londonluxproperty.com" target="_blank" rel="noopener" class="card">
+            <img src="/images/brand-logos/Lux.webp" alt="London Lux Property" class="logo">
+            <h4 class="title">London Lux Property</h4>
+            <p class="copy">Boutique PCL agency. Precision and polish.</p>
+          </a>
+        </li>
+      </ul>
 
-            <!-- Duplicate items for seamless loop -->
-            <div class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80">
-              <div class="mb-6">
-                <img src="/images/brand-logos/chestertons.webp" 
-                     alt="Chesterton logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Chesterton</h4>
-              <p class="text-gray-700 text-sm">
-                As a leading international property agency, Chesterton demands the highest standards in every aspect of their business, including cleanliness. We're proud to meet their high expectations.
-              </p>
-            </div>
+      <!-- TRACK 2 (duplicate for seamless loop) -->
+      <ul class="marquee__track" aria-hidden="true">
+        <!-- Duplicate the exact same items -->
+        <!-- You can literally copy the <li> blocks above or let a component render twice -->
+      </ul>
+    </div>
+  </div>
+</section>
 
-            <div class="bg-white rounded-xl p-8 text-center flex-shrink-0 w-80">
-              <div class="mb-6">
-                <img src="/images/brand-logos/young-guns.webp" 
-                     alt="Young Guns logo" 
-                     class="mx-auto h-25 w-auto object-contain"
-                     style="height: 80px; width: 240px;">
-              </div>
-              <h4 class="font-serif text-lg text-navy mb-4">Young Guns</h4>
-              <p class="text-gray-700 text-sm">
-                Young Guns, a network that champions young creative talent, believes in creating an environment that fuels creativity. We assist them by providing a clean and vibrant workspace.
-              </p>
-            </div>
-          </div>
-        </div>
+<style>
+  /* Tunables */
+  .marquee {
+    --speed: 28s;               /* overall cycle duration */
+    --gap: 2rem;                /* space between cards */
+    --fade: 80px;               /* edge fade width */
+    --card-w: 20rem;            /* 320px card width */
+    --card-p: 2rem;             /* card padding */
+  }
 
-        <style>
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-          
-          .animate-scroll {
-            animation: scroll 30s linear infinite;
-          }
-          
-          .carousel-track:hover {
-            animation-play-state: paused;
-          }
-        </style>
-      </div>
-    </section>
+  /* Container with edge fades via mask */
+  .marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--fade),
+      #000 calc(100% - var(--fade)),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--fade),
+      #000 calc(100% - var(--fade)),
+      transparent 100%
+    );
+  }
+
+  .marquee__inner {
+    position: relative;
+  }
+
+  /* Track: two copies sliding left in lockstep */
+  .marquee__track {
+    display: flex;
+    align-items: stretch;
+    gap: var(--gap);
+    padding-block: .25rem;
+    will-change: transform;
+    animation: marquee var(--speed) linear infinite;
+  }
+
+  /* Second track starts immediately after the first */
+  .marquee__track + .marquee__track {
+    position: absolute;
+    inset: 0;
+    transform: translateX(100%);
+    animation-name: marquee-follow;
+    animation-duration: var(--speed);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /* Pause on hover/focus within */
+  .group:hover .marquee__track,
+  .group:focus-within .marquee__track {
+    animation-play-state: paused;
+  }
+
+  /* Items & cards */
+  .marquee__item {
+    flex: 0 0 auto;
+    width: var(--card-w);
+  }
+  .card {
+    display: block;
+    background: #fff;
+    border-radius: .875rem; /* ~14px */
+    padding: var(--card-p);
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.25); /* gold/25 */
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    transition: box-shadow .2s ease, transform .2s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+  .logo { display:block; margin-inline:auto; height: 80px; width:auto; object-fit: contain; }
+  .title { font-family: ui-serif, Georgia, "Times New Roman", serif; font-size: 1.125rem; color: #0f1a2a; margin: .75rem 0  .5rem; }
+  .copy { font-size: .875rem; color: #4b5563; line-height: 1.5; }
+
+  /* Keyframes: classic marquee technique */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+  }
+  @keyframes marquee-follow {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0%); }
+  }
+
+  /* Responsiveness: slower on small screens, faster on desktop */
+  @media (min-width: 768px) {
+    .marquee { --speed: 72s; }
+  }
+  @media (min-width: 1280px) {
+    .marquee { --speed: 18s; }
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; }
+  }
+</style>
 
 
     <!-- 3. Unique Differentiators -->
