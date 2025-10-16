@@ -44,7 +44,9 @@ const {
 } = Astro.props;
 
 // Determine background based on step number (alternating pattern)
-const bgClass = step % 2 === 1 ? "bg-white shadow-soft" : "bg-mist";
+const bgClass = step % 2 === 1 ? "bg-navy shadow-soft" : "bg-mist";
+const textColorClass = step % 2 === 1 ? "text-stone-200" : "text-navy";
+const SubtitleColorClass = step % 2 === 1 ? "text-stone-300" : "text-navy";
 
 // Determine grid order classes
 const imageOrderClass = isTextOnRight ? "md:order-2" : "";
@@ -54,8 +56,8 @@ const textOrderClass = isTextOnRight ? "md:order-1" : "";
 const testimonialAlignClass = isTextOnRight ? "md:text-right" : "";
 ---
 
-<article class={`grid md:grid-cols-2 gap-8 items-start p-6 md:p-8 rounded-xl2 border border-gold ${bgClass}`}>
-  <div class={imageOrderClass}>
+<article class={`grid md:grid-cols-2 gap-8 items-start p-6 md:py-16 md:px-12 rounded-xl2 border border-gold ${bgClass} ${textColorClass}`}>
+  <div class={`${imageOrderClass}`}>
     <img
       src={imageUrl}
       alt={imageAlt}
@@ -67,11 +69,11 @@ const testimonialAlignClass = isTextOnRight ? "md:text-right" : "";
     </p>
   </div>
   <div class={`max-w-xl ${textOrderClass}`}>
-    <h2 class="font-serif text-2xl md:text-3xl text-navy">{step}. {title}</h2>
-    <p class="mt-4 text-ink/80 leading-relaxed">
+    <h2 class="font-serif text-2xl md:text-3xl">{step}. {title}</h2>
+    <p class="mt-4 leading-relaxed">
       {description}
     </p>
-    <ul class="mt-4 text-ink/80 text-sm space-y-2">
+    <ul class="mt-4 text-sm space-y-2">
       {bulletPoints.map((point) => (
         <li class="flex items-start gap-2">
           <i class="fas fa-check text-gold mt-1 text-xs"></i>
@@ -79,13 +81,13 @@ const testimonialAlignClass = isTextOnRight ? "md:text-right" : "";
         </li>
       ))}
     </ul>
-    <div class="mt-4 text-xs text-ink/60">
+    <div class={`mt-4 text-xs ${SubtitleColorClass}`}>
       <i class={`fas fa-${timeframeIcon} text-gold mr-1`}></i>
       {timeframeText}
     </div>
     
     {(primaryButton || secondaryButton) && (
-      <div class="mt-6 flex flex-col sm:flex-row gap-2 items-center sm:items-start">
+      <div class="flex flex-col sm:flex-row gap-2 items-center sm:items-start mt-6">
         {primaryButton && (
           <a 
             href={primaryButton.href} 
@@ -97,20 +99,20 @@ const testimonialAlignClass = isTextOnRight ? "md:text-right" : "";
         {secondaryButton && (
           <a 
             href={secondaryButton.href}
-            class="inline-flex items-center justify-center rounded-md text-navy px-4 py-2 border border-gold hover:bg-gold/30 hover:border-navy w-full sm:w-auto"
-          >
-            {secondaryButton.icon && <i class={`${secondaryButton.icon} mr-2`}></i>}
-            {secondaryButton.text}
-          </a>
-        )}
-      </div>
-    )}
-    
-    {bottomNote && (
-      <div class="mt-4 text-xs text-ink/60">
-        <i class={`fas fa-${bottomNote.icon} text-gold mr-1`}></i>
-        {bottomNote.text}
-      </div>
-    )}
+            class={`${SubtitleColorClass} inline-flex items-center justify-center rounded-md text-navy px-4 py-2 border border-gold hover:bg-gold/30 hover:border-navy w-full sm:w-auto`}
+            >
+              {secondaryButton.icon && <i class={`${secondaryButton.icon} mr-2`}></i>}
+              {secondaryButton.text}
+            </a>
+          )}
+        </div>
+      )}
+      {bottomNote && (
+        <div class="mt-4 text-xs ${SubtitleColorClass}">
+          <i class={`fas fa-${bottomNote.icon} text-gold mr-1`}></i>
+          {bottomNote.text}
+        </div>
+      )}
+    </div>
   </div>
 </article>

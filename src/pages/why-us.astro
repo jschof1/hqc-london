@@ -4,6 +4,142 @@ import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
 import TransformationGallery from '../components/TransformationGallery.astro';
 import CTABanner from '../components/CTABanner.astro';
+import ProcessStep from '../components/ProcessStep.astro';
+const WhyUsBlocks = [
+  {
+    step: 1,
+    title: "Wellness Cleaning Protocols",
+    description:
+      "We screen every product for skin-sensitivity, indoor air quality, and surface compatibility. Methods respect stone, brass, and specialty finishes while delivering pristine results with minimum VOC impact.",
+    bulletPoints: [
+      "Finish-safe chemistry and tools",
+      "HEPA filtration for allergen control",
+      "Evidence-based disinfection on high-touch points",
+      "Low-VOC, fragrance-controlled options",
+      "Microfibre colour-coding to prevent cross-contamination",
+      "pH-appropriate routines for stone, metal, wood",
+      "Ventilation and dwell-time standards documented"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&h=600&fit=crop&auto=format&q=80",
+    imageAlt:
+      "Professional cleaning supplies and eco-friendly products arranged neatly showcasing wellness-grade cleaning protocols",
+    testimonial:
+      "No irritation, no harsh odours—just a home that feels noticeably clearer.",
+    testimonialAuthor: "Private Client, Marylebone",
+    timeframeIcon: "fas fa-clock",
+    timeframeText: "Weekly • Fortnightly • Monthly (60–150 min typical slot)",
+    isTextOnRight: false,
+    primaryButton: { text: "Book a consultation", href: "/book" },
+    secondaryButton: {
+      text: "View our protocols",
+      href: "/protocols",
+      icon: "fas fa-arrow-right"
+    },
+    bottomNote: {
+      icon: "fas fa-shield-check",
+      text: "Finish-safe methods • Non-toxic options • Full MSDS on request"
+    }
+  },
+  {
+    step: 2,
+    title: "Concierge-Level Care",
+    description:
+      "Discreet key-holding, seamless scheduling, and proactive communication. We adapt to your rhythms and protect your time—quiet presence, precise timing, immaculate handover.",
+    bulletPoints: [
+      "Dedicated point of contact",
+      "Quiet, respectful on-site etiquette",
+      "Photo handover and aftercare notes",
+      "Calendar sync (Google/Apple/Outlook)",
+      "Unbranded uniforms/vehicles upon request",
+      "Clear escalation paths for urgent requests"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop&auto=format&q=80",
+    imageAlt:
+      "Professional cleaning staff member in uniform providing discreet, concierge-level service in an elegant home",
+    testimonial:
+      "Effortless. Keys are managed securely and every visit is perfectly timed.",
+    testimonialAuthor: "Townhouse Owner, Chelsea",
+    timeframeIcon: "fas fa-key",
+    timeframeText: "Secure key-holding • Preferred-day rota • 24h rescheduling",
+    isTextOnRight: true,
+    primaryButton: { text: "Set up key-holding", href: "/concierge" },
+    secondaryButton: {
+      text: "How we communicate",
+      href: "/#quote",
+      icon: "fas fa-envelope"
+    },
+    bottomNote: {
+      icon: "fas fa-lock",
+      text: "Key custody logged • Access protocols audited • NDA available"
+    }
+  },
+  {
+    step: 3,
+    title: "Technical Consulting",
+    description:
+      "From marble etching to protective finishes, we advise on the safest approach and maintenance cadence for your materials—including recovery plans after spills or contractor damage.",
+    bulletPoints: [
+      "Stone, metal, and wood care guidance",
+      "Product compatibility checks",
+      "Custom maintenance plans",
+      "Stain ID + spot-treat playbooks",
+      "Sealant and finish recommendations",
+      "Contractor coordination (post-renovation)"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=800&h=600&fit=crop&auto=format&q=80",
+    imageAlt:
+      "Close-up of marble surface being carefully cleaned with specialised tools showcasing technical expertise",
+    testimonial:
+      "Their guidance saved our marble island from further etching—and it looks new again.",
+    testimonialAuthor: "Penthouse Resident, Mayfair",
+    timeframeIcon: "fas fa-flask",
+    timeframeText: "Initial assessment 30–45 min (on-site or virtual)",
+    isTextOnRight: false,
+    primaryButton: { text: "Request an assessment", href: "/consulting" },
+    secondaryButton: {
+      text: "Material care guides",
+      href: "/resources/material-care",
+      icon: "fas fa-book-open"
+    },
+    bottomNote: {
+      icon: "fas fa-wand-magic-sparkles",
+      text: "Vendor-agnostic product advice • Finish-safe recovery methods"
+    }
+  },
+  {
+    step: 4,
+    title: "Emotional Outcomes",
+    description:
+      "Clients describe a sense of calm and control—spaces that feel lighter, quieter, and ready for living. We make the visual noise disappear so your home works for your day.",
+    bulletPoints: [
+      "Visual clarity and balance",
+      "Subtle fragrance options (or fragrance-free)",
+      "Less effort, more ease at home",
+      "Predictable rhythms, fewer decisions",
+      "Reset-ready before guests or travel"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop&auto=format&q=80",
+    imageAlt:
+      "Serene, perfectly cleaned living space with natural light creating a calm, peaceful atmosphere",
+    testimonial:
+      "It’s the first time our home has felt this calm. Everything breathes.",
+    testimonialAuthor: "Family Home, Notting Hill",
+    timeframeIcon: "fas fa-star",
+    timeframeText: "Noticeable from the first clean",
+    isTextOnRight: true,
+    primaryButton: { text: "Get My Quote", href: "/#quote" },
+    secondaryButton: {
+      text: "Message on WhatsApp",
+      href: "/#quote",
+      icon: "fas fa-envelope"
+    },
+    bottomNote: {
+      icon: "fas fa-heart",
+      text: "Hypoallergenic and fragrance-free options available"
+    }
+  },
+]
+
 ---
 
 <Layout 
@@ -39,7 +175,7 @@ import CTABanner from '../components/CTABanner.astro';
     />
 
     <!-- 2. Proof Bar -->
-    <section class="bg-white border-y border-gold/20">
+    <section class="bg-gray-200 border-2 border-gold">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div
@@ -91,9 +227,6 @@ import CTABanner from '../components/CTABanner.astro';
         <p class="text-white/80 text-lg mb-12 max-w-2xl">
           We're proud to serve some of London's most prestigious businesses and property agencies.
         </p>
-
-  <!-- Marquee -->
-<section class="relative bg-navy py-8">
   <div class="marquee group relative">
     <div class="marquee__inner" aria-hidden="true">
       <!-- TRACK 1 -->
@@ -276,197 +409,19 @@ import CTABanner from '../components/CTABanner.astro';
     .marquee__track { animation: none; }
   }
 </style>
-
-
-    <!-- 3. Unique Differentiators -->
-    <section class="relative overflow-hidden">
-        
-        <!-- Block 1: Wellness Protocols - Dark Navy -->
-        <div class="py-16 md:py-20 bg-navy relative">
-          <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy to-night opacity-90"></div>
-          <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div class="group">
-                <img
-                  src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&h=600&fit=crop&auto=format&q=80"
-                  alt="Professional cleaning supplies and eco-friendly products arranged neatly showcasing wellness-grade cleaning protocols"
-                  class="w-full h-72 md:h-80 object-cover rounded-xl border-2 border-gold/30 shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-gold/20"
-                  loading="lazy"
-                />
-              </div>
-            
-              <div class="space-y-4 md:space-y-6">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="p-2 md:p-3 bg-gold/20 rounded-full">
-                    <i class="fas fa-leaf text-gold text-xl md:text-2xl"></i>
-                  </div>
-                  <h3 class="text-white text-2xl md:text-3xl lg:text-4xl font-serif font-semibold">
-                    Wellness Cleaning Protocols
-                  </h3>
-                </div>
-                <p class="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed font-light">
-                  We screen products for skin-sensitivity, indoor air quality, and
-                  surface compatibility. Our methods respect stone, brass, and
-                  specialty finishes while delivering pristine results.
-                </p>
-                <ul class="mt-6 space-y-3 text-white/85">
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Finish-safe chemistry and tools</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">HEPA filtration for allergen control</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Evidence-based disinfection on high-touch points</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Block 2: Concierge Care - Medium Navy -->
-        <div class="py-16 md:py-20 bg-gradient-to-br from-night via-navy/80 to-navy/60 relative">
-          <div class="absolute inset-0 bg-gradient-to-l from-navy/40 to-transparent"></div>
-          <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div class="md:order-2 group">
-                <img
-                  src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop&auto=format&q=80"
-                  alt="Professional cleaning staff member in uniform providing discreet, concierge-level service in an elegant home"
-                  class="w-full h-72 md:h-80 object-cover rounded-xl border-2 border-gold/30 shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-gold/20"
-                  loading="lazy"
-                />
-              </div>
-              <div class="md:order-1 space-y-4 md:space-y-6">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="p-2 md:p-3 bg-gold/20 rounded-full">
-                    <i class="fas fa-concierge-bell text-gold text-xl md:text-2xl"></i>
-                  </div>
-                  <h3 class="text-white text-2xl md:text-3xl lg:text-4xl font-serif font-semibold">
-                    Concierge-Level Care
-                  </h3>
-                </div>
-                <p class="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed font-light">
-                  Discreet key‑holding, seamless scheduling, and proactive
-                  communication. We adapt to your rhythms and protect your time.
-                </p>
-                <ul class="mt-6 space-y-3 text-white/85">
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Dedicated point of contact</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Quiet, respectful on-site etiquette</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Photo handover and aftercare notes</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Block 3: Technical Consulting - Light Navy/Slate -->
-        <div class="py-16 md:py-20 bg-gradient-to-br from-navy/50 via-slate-700 to-slate-600 relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-navy/30 to-transparent"></div>
-          <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div class="group">
-                <img
-                  src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=800&h=600&fit=crop&auto=format&q=80"
-                  alt="Close-up of marble surface being carefully cleaned with Specialised tools showcasing technical expertise"
-                  class="w-full h-72 md:h-80 object-cover rounded-xl border-2 border-gold/30 shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-gold/20"
-                  loading="lazy"
-                />
-              </div>
-              <div class="space-y-4 md:space-y-6">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="p-2 md:p-3 bg-gold/20 rounded-full">
-                    <i class="fas fa-tools text-gold text-xl md:text-2xl"></i>
-                  </div>
-                  <h3 class="text-white text-2xl md:text-3xl lg:text-4xl font-serif font-semibold">
-                    Technical Consulting
-                  </h3>
-                </div>
-                <p class="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed font-light">
-                  From marble etching to protective finishes, we advise on the
-                  safest approach and maintenance cadence for your materials.
-                </p>
-                <ul class="mt-6 space-y-3 text-white/85">
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Stone, metal, and wood care guidance</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Product compatibility checks</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Custom maintenance plans</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Block 4: Emotional Outcomes - Lightest Navy/Gray -->
-        <div class="py-16 md:py-20 bg-gradient-to-br from-slate-600 via-slate-500 to-gray-600 relative">
-          <div class="absolute inset-0 bg-gradient-to-l from-slate-500/40 to-transparent"></div>
-          <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div class="md:order-2 group">
-                <img
-                  src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop&auto=format&q=80"
-                  alt="Serene, perfectly cleaned living space with natural light creating a calm, peaceful atmosphere"
-                  class="w-full h-72 md:h-80 object-cover rounded-xl border-2 border-gold/30 shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-gold/20"
-                  loading="lazy"
-                />
-              </div>
-              <div class="md:order-1 space-y-4 md:space-y-6">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="p-2 md:p-3 bg-gold/20 rounded-full">
-                    <i class="fas fa-heart text-gold text-xl md:text-2xl"></i>
-                  </div>
-                  <h3 class="text-white text-2xl md:text-3xl lg:text-4xl font-serif font-semibold">Emotional Outcomes</h3>
-                </div>
-                <p class="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed font-light">
-                  Clients describe a sense of calm and control—spaces that feel
-                  lighter, quieter, and ready for living.
-                </p>
-                <ul class="mt-6 space-y-3 text-white/85">
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Visual clarity and balance</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Subtle fragrance options</span>
-                  </li>
-                  <li class="flex items-start gap-3 group">
-                    <i class="fas fa-check-circle text-gold text-base md:text-lg mt-1 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-base md:text-lg">Less effort, more ease at home</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
+<section class="py-14 md:py-18 bg-mist border-t-2 border-gold">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-28">
+{WhyUsBlocks.map((block) => (
+  <ProcessStep {...block} />
+))} 
+</div>
+</section>
 
     <!-- 4. Comparative Snapshot -->
     <section class="py-20 md:py-28 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="font-serif text-3xl md:text-4xl text-navy font-semibold">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy ">
             Essentials vs Others — At a Glance
           </h2>
           <p class="mt-4 text-ink/70 text-base md:text-lg max-w-2xl mx-auto">

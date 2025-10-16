@@ -16,8 +16,8 @@ export interface ServiceTier {
   icon: string;
   isPopular?: boolean;
   isFlagship?: boolean;
-  cardColor: string;
-  ctaColor: string;
+  cardColor: 'navy' | 'gold' | 'yellow' | 'emerald' | 'slate';
+  ctaColor: 'navy' | 'gold' | 'outline';
 }
 
 export interface TrustIndicator {
@@ -39,7 +39,47 @@ export interface Props {
   backgroundColor?: string;
 }
 
+/** Props:
+ *  - serviceTiers: Array<{
+ *      id?: string;
+ *      name: string;
+ *      subtitle?: string;
+ *      description?: string;
+ *      suitabilityFor?: string;
+ *      notSuitableFor?: string;
+ *      isPopular?: boolean;
+ *      isFlagship?: boolean;
+ *      icon: string; // svg path d
+ *      cardColor?: 'navy' | 'gold' | 'yellow' | 'emerald' | 'slate';
+ *      features: Array<{ text: string; color?: 'navy' | 'gold' | 'yellow' | 'emerald' | 'slate' }>;
+ *      ctaText: string;
+ *      ctaLink: string;
+ *      ctaVariant?: 'navy' | 'gold' | 'outline';
+ *    }>
+ */
 
+// Tailwind-safe maps (avoid fully dynamic class strings)
+const bgMap = {
+  navy: 'bg-navy',
+  gold: 'bg-gold',
+  yellow: 'bg-yellow-500',
+  emerald: 'bg-emerald-500',
+  slate: 'bg-slate-600',
+} as const;
+
+const dotMap = {
+  navy: 'bg-navy',
+  gold: 'bg-gold',
+  yellow: 'bg-yellow-500',
+  emerald: 'bg-emerald-500',
+  slate: 'bg-slate-600',
+} as const;
+
+const ctaMap = {
+  navy: 'bg-navy text-white hover:opacity-90',
+  gold: 'bg-gold text-navy hover:opacity-90',
+  outline: 'border border-navy text-navy hover:bg-navy hover:text-white',
+} as const;
 
 const {
   title = "Choose Your Perfect Clean",
@@ -56,10 +96,12 @@ const {
         { text: "Kitchen & bathroom hygiene", color: "gold" },
         { text: "Dusting, hoovering, bins", color: "gold" },
         { text: "Light refresh of main spaces", color: "gold" },
-        { text: "Floors mopped & rubbish emptied", color: "gold" }
+        { text: "Floors mopped & rubbish emptied", color: "gold" },
+        { text: "Fully Insured", color: "gold" },
+        { text: "100% Satisfaction Guarantee", color: "gold" }
       ],
       ctaText: "Get Started",
-      ctaLink: "#quote",
+      ctaLink: "/#quote",
       icon: "M2.25 12 8.954 3.045c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25",
       cardColor: "gold",
       ctaColor: "bg-gold text-navy"
@@ -138,64 +180,91 @@ const {
       </p>
     </div>
 
-    <!-- Service Tiers -->
-    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
-      {serviceTiers.map((tier) => (
-        <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
-          <!-- Popular/Flagship Badge -->
-          {tier.isPopular && (
-            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-navy text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
-          )}
-          {tier.isFlagship && (
-            <div class="absolute -top-3 right-4 bg-gradient-to-r from-gold to-yellow-500 text-navy px-3 py-1 rounded-full text-xs font-bold">FLAGSHIP</div>
-          )}
-          
-          <!-- Icon -->
-          <div class="flex items-start justify-between mb-6">
-            <div class={`tier-icon w-20 h-20 bg-${tier.cardColor} rounded-2xl flex items-center justify-center shadow-lg`}>
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={tier.icon}/>
-              </svg>
-            </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {serviceTiers.map((tier) => (
+      <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+        {/* Popular/Flagship Badges */}
+        {tier.isPopular && (
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-navy text-white px-4 py-1 rounded-full text-sm font-medium">
+            Most Popular
           </div>
-          
-          <!-- Content -->
-          <div class="mb-6">
-            <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
-              {tier.name}
-            </h3>
+        )}
+        {tier.isFlagship && (
+          <div class="absolute -top-3 right-4 bg-gradient-to-r from-gold to-yellow-500 text-navy px-3 py-1 rounded-full text-xs font-bold">
+            FLAGSHIP
+          </div>
+        )}
+  
+        {/* Icon */}
+        <div class="flex items-start justify-between mb-6">
+          <div
+            class:list={[
+              'tier-icon w-20 h-20 rounded-2xl flex items-center justify-center shadow-lg',
+              bgMap[tier.cardColor] ?? 'bg-navy',
+            ]}
+          >
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={tier.icon} />
+            </svg>
+          </div>
+        </div>
+  
+        {/* Content */}
+        <div class="mb-6">
+          <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+            {tier.name}
+          </h3>
+          {tier.subtitle && (
             <p class="text-gray-600 font-medium mb-2">
               {tier.subtitle}
             </p>
+          )}
+          {tier.description && (
             <p class="text-sm text-gray-500 italic">
               {tier.description}
             </p>
+          )}
+          {(tier.suitabilityFor || tier.notSuitableFor) && (
             <div class="mt-3 text-sm font-medium text-navy">
-              For: {tier.suitabilityFor}<br>
-              Not suitable for: {tier.notSuitableFor}
+              {tier.suitabilityFor && <>For: {tier.suitabilityFor}<br /></>}
+              {tier.notSuitableFor && <>Not suitable for: {tier.notSuitableFor}</>}
             </div>
-          </div>
-
-          <!-- Features -->
+          )}
+        </div>
+  
+        {/* Features */}
+        {Array.isArray(tier.features) && tier.features.length > 0 && (
           <ul class="space-y-3 mb-8">
             {tier.features.map((feature) => (
               <li class="feature-item text-sm text-gray-700 flex items-center">
-                <span class={`w-2 h-2 bg-${feature.color} rounded-full mr-3`}></span>
+                <span
+                  class:list={[
+                    'w-2 h-2 rounded-full mr-3 inline-block',
+                    dotMap[feature.color as keyof typeof dotMap] ?? 'bg-gold',
+                  ]}
+                />
                 {feature.text}
               </li>
             ))}
           </ul>
-
-          <!-- CTA -->
-          <a href={tier.ctaLink} class={`inline-flex items-center justify-center w-full px-6 py-3 ${tier.ctaColor} font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105`}>
-            {tier.ctaText}
-            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      ))}
-    </div>
+        )}
+  
+        {/* CTA */}
+        <a
+          href={tier.ctaLink}
+          class:list={[
+            'inline-flex items-center justify-center w-full px-6 py-3 font-semibold rounded-xl transition-transform duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-navy',
+            ctaMap[tier.ctaColor as keyof typeof ctaMap] ?? ctaMap.navy,
+          ]}
+        >
+          {tier.ctaText}
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    ))}
+  </div>
 
     <!-- Main CTA -->
     <div class="mt-10 flex justify-center">

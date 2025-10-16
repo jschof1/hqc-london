@@ -62,29 +62,23 @@ const {
 ---
 
 <section id={sectionId} class={`py-20 sm:py-24 bg-navy ${className}`}>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h2 class="font-serif text-3xl md:text-6xl text-gold">
+  <div class="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+    <h2 class="font-serif text-2xl md:text-3xl text-gold">
       {title}
     </h2>
     <p class="mt-4 text-white/70 max-w-3xl text-sm md:text-base">
       {subtitle}
     </p>
-
-    <div class="mt-12 grid gap-8 md:grid-cols-2">
+    <div class="mt-12 grid gap-4 md:grid-cols-2">
       {features.map((feature) => (
         <div
-          class="rounded-2xl bg-white p-8 border border-gold flex items-center gap-6"
+          class="rounded-xl bg-gray-100 p-5 border-2 border-gold flex items-center gap-6 shadow-2xl shadow-gold/20"
         >
-          <div class="flex items-center justify-center bg-navy/5 rounded-md w-20 h-20 border-2 border-gold">
+          <div class="flex items-center justify-center bg-navy rounded-md w-20 h-20 border-2 border-gold">
             <i class={`${feature.mainIcon} text-gold text-4xl`} aria-hidden="true"></i>
           </div>
           <div class="flex-1">
-            <div class="flex items-center gap-3">
-              <span class="flex items-center justify-center bg-navy/10 rounded-full w-7 h-7 border border-gold">
-                <i class={`${feature.smallIcon} text-gold text-lg`} aria-hidden="true"></i>
-              </span>
-              <h3 class="font-medium text-navy">{feature.title}</h3>
-            </div>
+            <h3 class="font-medium text-navy border-b border-gold pb-1">{feature.title}</h3>
             <p class="mt-3 text-sm text-navy/70">
               {feature.description}
             </p>
@@ -95,8 +89,7 @@ const {
 
     <!-- Customer Story -->
     {showStory && story && (
-      <div class="mt-16 bg-navy rounded-2xl p-8 text-white">
-        <div class="max-w-4xl mx-auto">
+      <div class="mt-16 bg-navy rounded-2xl lg:md:p-8 text-white">
           <div class="flex items-center gap-3 mb-6">
             <i class="fas fa-star text-gold text-2xl"></i>
             <h3 class="font-serif text-2xl text-gold">{story.title}</h3>
@@ -115,7 +108,6 @@ const {
             </p>
           </div>
         </div>
-      </div>
     )}
     {ctaText && ctaLink && (
       <div class="text-center mt-8">

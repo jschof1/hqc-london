@@ -6,6 +6,6 @@ export interface Props {
 const { class: className = "" } = Astro.props;
 ---
 
-<article class={`bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border border-gold/20 shadow-soft card w-full ${className}`}>
+<article class={`bg-gradient-to-br from-white to-mist rounded-3xl p-8 md:p-12 border-2 border-gold shadow-soft card w-full ${className}`}>
   <slot />
 </article>
