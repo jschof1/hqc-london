@@ -142,16 +142,18 @@ const {
   <!-- Hero copy + CTAs - Centered within the hero section -->
   <div class="font-serif relative z-10 flex flex-col items-center justify-center flex-1 w-full px-4 md:px-16 lg:px-24 xl:px-32">
     <div class="text-transition">
+          <!-- Star Rating with Lines -->
+
     {reviewBadge && (
-      <div class="flex items-center justify-center mb-4">
-        <div set:html={reviewBadge.icon}></div>
-        <span class="text-white font-semibold text-base ml-2">{reviewBadge.text}</span>
+      <div class="flex items-center justify-center pb-1">
+        <span class="inline-flex items-center bg-navy/60 rounded-full px-2 py-1 bg-auto">
+          <span set:html={reviewBadge.icon}></span>
+          <span class="text-white font-semibold text-base ml-2">{reviewBadge.text}</span>
+        </span>
       </div>
     )}
-    
-    <!-- Star Rating with Lines -->
     {starRating > 0 && (
-      <div class="flex items-center justify-center gap-3 mb-4">
+      <div class="flex items-center justify-center gap-2 mb-4">
         <div class="h-px w-8 bg-gold/60"></div>
         <div class="flex items-center gap-1">
           {Array.from({ length: starRating }).map((_, i) => (
@@ -172,12 +174,11 @@ const {
         <div class="h-px w-8 bg-yellow-200/60"></div>
       </div>
     )}
-
     <h1 class="text-4xl md:text-7xl text-center font-medium max-w-4xl bg-gradient-to-r from-gold via-gold to-yellow-300 text-transparent bg-clip-text leading-tight">
       {title}
     </h1>
     
-    <p class="text-slate-300 md:text-lg text-center max-w-2xl mt-4 leading-relaxed lg:text-center mx-auto">
+    <p class="text-slate-100 md:text-lg text-center max-w-2xl mt-4 leading-relaxed lg:text-center mx-auto">
       {subtitle}
     </p>
     </div>
