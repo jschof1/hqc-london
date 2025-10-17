@@ -11,10 +11,10 @@ export interface Props {
 
 const { title, description = "High Quality Clean — Luxury home cleaning for discerning London clients." } = Astro.props;
 
-const baseUrl = 'https://highqualitycleaning.co.uk';
+const baseUrl = 'https://highqualityclean.co.uk';
 const canonicalUrl = Astro.url ? Astro.url.href : baseUrl;
 const defaultImage = `${baseUrl}/images/mayfair.jpg`;
-const serviceAreaNames = [
+const ServiceAreaNames = [
   'Belgravia',
   'Chelsea',
   'Kensington',
@@ -40,44 +40,100 @@ const sameAs = [
 
 ];
 
-const serviceNodes = [
+const areaNodes = [
   {
-    '@type': 'Service',
-    '@id': `${baseUrl}/#service-essentials-clean`,
-    name: 'Essentials Clean™',
-    serviceType: 'Luxury maintenance cleaning programme',
+    '@type': 'Area',
+    '@id': `${baseUrl}/belgravia`,
+    name: 'Belgravia',
+    areaType: 'Luxury maintenance cleaning programme',
     description:
       'Weekly upkeep service for maintaining pristine residences between deep cleans, tailored to Central London homes.',
     provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: serviceAreaNames,
+    areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
       audienceType: 'Discerning homeowners and busy professionals'
     }
   },
   {
-    '@type': 'Service',
-    '@id': `${baseUrl}/#service-signature-clean`,
-    name: 'Signature Clean™',
-    serviceType: 'Comprehensive deep cleaning programme',
+    '@type': 'Area',
+    '@id': `${baseUrl}/chelsea`,
+    name: 'Chelsea',
+    areaType: 'Comprehensive deep cleaning programme in Chelsea',
     description:
       'Meticulous deep cleaning with wellness-grade products, designed for luxury interiors that demand elevated detail.',
     provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: serviceAreaNames,
+    areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
       audienceType: 'Luxury property managers and high-net-worth households'
     }
   },
   {
-    '@type': 'Service',
-    '@id': `${baseUrl}/#service-wellclean`,
-    name: 'WellClean™',
-    serviceType: 'Wellness-led premium cleaning programme',
+    '@type': 'Area',
+    '@id': `${baseUrl}/kensington`,
+    name: 'Kensington',
+    areaType: 'Wellness-led premium cleaning programme in Kensington',
     description:
       'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
     provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: serviceAreaNames,
+    areaServed: ServiceAreaNames,
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Wellness-focused households and executive residences'
+    }
+  },
+  {
+    '@type': 'Area',
+    '@id': `${baseUrl}/mayfair`,
+    name: 'Mayfair',
+    areaType: 'Wellness-led premium cleaning programme in Mayfair',
+    description:
+      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+    provider: { '@id': `${baseUrl}/#organization` },
+    areaServed: ServiceAreaNames,
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Wellness-focused households and executive residences'
+    }
+  },
+  {
+    '@type': 'Area',
+    '@id': `${baseUrl}/knightsbridge`,
+    name: 'Knightsbridge',
+    areaType: 'Wellness-led premium cleaning programme in Knightsbridge',
+    description:
+      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+    provider: { '@id': `${baseUrl}/#organization` },
+    areaServed: ServiceAreaNames,
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Wellness-focused households and executive residences'
+    }
+  },
+  {
+    '@type': 'Area',
+    '@id': `${baseUrl}/st-johns-wood`,
+    name: 'St John\'s Wood',
+    areaType: 'Wellness-led premium cleaning programme in St John\'s Wood',
+    description:
+      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+    provider: { '@id': `${baseUrl}/#organization` },
+    areaServed: ServiceAreaNames,
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Wellness-focused households and executive residences'
+    }
+  },
+  {
+    '@type': 'Area',
+    '@id': `${baseUrl}/hampstead`,
+    name: 'Hampstead',
+    areaType: 'Wellness-led premium cleaning programme in Hampstead',
+    description:
+      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+    provider: { '@id': `${baseUrl}/#organization` },
+    areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
       audienceType: 'Wellness-focused households and executive residences'
@@ -85,19 +141,19 @@ const serviceNodes = [
   }
 ];
 
-const offerNodes = serviceNodes.map((service) => ({
+const offerNodes = areaNodes.map((area) => ({
   '@type': 'Offer',
-  '@id': `${service['@id']}-offer`,
-  itemOffered: { '@id': service['@id'] },
+  '@id': `${area['@id']}-offer`,
+  itemOffered: { '@id': area['@id'] },
   url: `${baseUrl}/#quote`,
   availability: 'https://schema.org/InStock',
-  description: `Arrange ${service.name} with a bespoke proposal from High Quality Clean.`
+  description: `Arrange ${area.name} with a bespoke proposal from High Quality Clean.`
 }));
 
 const offerCatalogNode = {
   '@type': 'OfferCatalog',
   '@id': `${baseUrl}/#offer-catalog`,
-  name: 'High Quality Clean programmes',
+  name: 'High Quality Clean areas',
   itemListElement: offerNodes.map((offer, index) => ({
     '@type': 'ListItem',
     position: index + 1,
@@ -124,7 +180,7 @@ const organizationNode = {
     postalCode: 'SW1',
     addressCountry: 'GB'
   },
-  areaServed: serviceAreaNames,
+  areaServed: ServiceAreaNames,
   sameAs,
   contactPoint: [
     {
@@ -132,7 +188,7 @@ const organizationNode = {
       contactType: 'Customer Service',
       telephone: '+44 20 3342 5260',
       email: 'sales@highqualityclean.co.uk',
-      areaServed: serviceAreaNames,
+      areaServed: ServiceAreaNames,
       availableLanguage: ['English']
     }
   ],
@@ -194,7 +250,7 @@ const schemaItem = {
     offerCatalogNode,
     organizationNode,
     webpageNode,
-    ...serviceNodes,
+    ...areaNodes,
     ...offerNodes
   ]
 };
@@ -217,35 +273,18 @@ const schemaItem = {
     <meta name="google" content="notranslate" />
     <meta name="google" content="notranslate" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="95c24898-5333-41ef-8fbf-a17bcac067af"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <Schema item={schemaItem} />
-    <!-- Import Global Styles (includes Tailwind) -->
   </head>
   <body class="bg-mist text-ink font-display antialiased">
     <slot />
     <Footer />
-    
     <script src="../scripts/main.js"></script>
-    
-    <!-- Debug View Transitions (remove in production) -->
-    <script>
-      if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-        console.log('🎬 View Transitions Debug Mode Active');
-        console.log('ViewTransition API available:', !!document.startViewTransition);
-        
-        // Log all transition events
-        ['astro:before-preparation', 'astro:after-preparation', 'astro:before-swap', 'astro:after-swap', 'astro:page-load'].forEach(event => {
-          document.addEventListener(event, () => {
-            console.log(`📍 ${event} fired`);
-          });
-        });
-      }
-    </script>
   </body>
 </html>
