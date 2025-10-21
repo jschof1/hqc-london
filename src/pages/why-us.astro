@@ -429,61 +429,166 @@ const WhyUsBlocks = [
           </p>
         </div>
 
-        <div
-          class="rounded-2xl border border-gold/50 overflow-hidden bg-navy shadow-soft"
-        >
+        <!-- Mobile: Card-based layout -->
+        <div class="md:hidden space-y-4">
+          <!-- Feature 1 -->
+          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
+            <div class="p-4 border-b border-gold/30">
+              <h3 class="text-white font-semibold text-base">DBS Background Checks</h3>
+            </div>
+            <div class="grid grid-cols-2 divide-x divide-gold/30">
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
+                <i class="fas fa-check text-gold text-2xl"></i>
+              </div>
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
+                <i class="fas fa-times text-red-400 text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
+            <div class="p-4 border-b border-gold/30">
+              <h3 class="text-white font-semibold text-base">£5M Insurance Coverage</h3>
+            </div>
+            <div class="grid grid-cols-2 divide-x divide-gold/30">
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
+                <i class="fas fa-check text-gold text-2xl"></i>
+              </div>
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
+                <i class="fas fa-times text-red-400 text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
+            <div class="p-4 border-b border-gold/30">
+              <h3 class="text-white font-semibold text-base">Surface-Safe Product Selection</h3>
+            </div>
+            <div class="grid grid-cols-2 divide-x divide-gold/30">
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
+                <i class="fas fa-check text-gold text-2xl"></i>
+              </div>
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
+                <i class="fas fa-times text-red-400 text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
+            <div class="p-4 border-b border-gold/30">
+              <h3 class="text-white font-semibold text-base">Key Holding Service</h3>
+            </div>
+            <div class="grid grid-cols-2 divide-x divide-gold/30">
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
+                <i class="fas fa-check text-gold text-2xl"></i>
+              </div>
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
+                <div class="text-white/60 text-sm">Extra charge</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
+            <div class="p-4 border-b border-gold/30">
+              <h3 class="text-white font-semibold text-base">Photo Handover Reports</h3>
+            </div>
+            <div class="grid grid-cols-2 divide-x divide-gold/30">
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
+                <i class="fas fa-check text-gold text-2xl"></i>
+              </div>
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
+                <i class="fas fa-times text-red-400 text-2xl"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
+            <div class="p-4 border-b border-gold/30">
+              <h3 class="text-white font-semibold text-base">24/7 Support Line</h3>
+            </div>
+            <div class="grid grid-cols-2 divide-x divide-gold/30">
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
+                <i class="fas fa-check text-gold text-2xl"></i>
+              </div>
+              <div class="p-4 text-center">
+                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
+                <div class="text-white/60 text-sm">Business hours</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop: Table layout -->
+        <div class="hidden md:block rounded-2xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
           <div class="overflow-x-auto">
-            <div class="min-w-[720px]">
+            <div class="min-w-full">
               <!-- Header Row -->
               <div class="grid grid-cols-3 bg-navy border-b border-gold/50">
-                <div class="sticky-col p-6 font-semibold text-white text-lg">
+                <div class="p-6 font-semibold text-white text-lg">
                   Service Features
                 </div>
                 <div class="p-6 text-center text-white font-semibold">HQC Essentials</div>
                 <div class="p-6 text-center text-white font-semibold">Typical Firm</div>
               </div>
-              
+
               <!-- Comparison Rows -->
               <div class="grid grid-cols-3 border-b border-gold/30">
-                <div class="sticky-col p-4 text-white/90">DBS Background Checks</div>
+                <div class="p-4 text-white/90">DBS Background Checks</div>
                 <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
                 <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
               </div>
-              
+
               <div class="grid grid-cols-3 border-b border-gold/30 bg-navy/50">
-                <div class="sticky-col p-4 text-white/90">£5M Insurance Coverage</div>
+                <div class="p-4 text-white/90">£5M Insurance Coverage</div>
                 <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
                 <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
               </div>
-              
+
               <div class="grid grid-cols-3 border-b border-gold/30">
-                <div class="sticky-col p-4 text-white/90">Surface-Safe Product Selection</div>
+                <div class="p-4 text-white/90">Surface-Safe Product Selection</div>
                 <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
                 <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
               </div>
-              
+
               <div class="grid grid-cols-3 border-b border-gold/30 bg-navy/50">
-                <div class="sticky-col p-4 text-white/90">Key Holding Service</div>
+                <div class="p-4 text-white/90">Key Holding Service</div>
                 <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
                 <div class="p-4 text-center text-white/60 text-sm">Extra charge</div>
               </div>
-              
+
               <div class="grid grid-cols-3 border-b border-gold/30">
-                <div class="sticky-col p-4 text-white/90">Photo Handover Reports</div>
+                <div class="p-4 text-white/90">Photo Handover Reports</div>
                 <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
                 <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
               </div>
-              
+
               <div class="grid grid-cols-3 bg-navy/50">
-                <div class="sticky-col p-4 text-white/90">24/7 Support Line</div>
+                <div class="p-4 text-white/90">24/7 Support Line</div>
                 <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
                 <div class="p-4 text-center text-white/60 text-sm">Business hours</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="mt-4 text-sm text-ink/60 text-center">
-          <i class="fas fa-check text-gold mr-2"></i>Gold checkmarks indicate standard inclusions; 
+
+        <div class="mt-4 text-sm text-ink/60 text-center px-4">
+          <i class="fas fa-check text-gold mr-2"></i>Gold checkmarks indicate standard inclusions;
           <i class="fas fa-times text-red-400 mx-2"></i>red crosses denote exclusions or additional charges with typical firms.
         </div>
       </div>
