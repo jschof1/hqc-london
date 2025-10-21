@@ -1196,7 +1196,7 @@
     "name": "Notting Hill",
     "postcodes": ["W11", "W2"],
     "region": "West London",
-    "heroImage": "assets/images/notting-hill.jpg",
+    "heroImage": "/images/areas/nottinghill.jpg",
     "heroImageAlt": "Charming Victorian terraces and colorful houses in vibrant Notting Hill",
     "metaDescription": "Professional cleaning services in Notting Hill, London's vibrant cultural quarter. Expert domestic cleaning for Victorian houses, luxury apartments and boutique properties in W11 and W2 postcodes.",
     "pageTitle": "Professional Cleaning Services in Notting Hill, London — High Quality Clean",
