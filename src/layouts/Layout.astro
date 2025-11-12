@@ -285,5 +285,81 @@ const schemaItem = {
     <slot />
     <Footer />
     <script src="../scripts/main.js"></script>
+    <script is:inline>
+      // Load Keak script after user interaction to prevent flashing
+      (function() {
+        let keakLoaded = false;
+        let interactionOccurred = false;
+        
+        function loadKeakScript() {
+          if (keakLoaded || document.getElementById('keak-script')) {
+            keakLoaded = true;
+            return;
+          }
+          
+          const script = document.createElement('script');
+          script.id = 'keak-script';
+          script.src = 'https://zzontar2hsjaawcn.public.blob.vercel-storage.com/scripts/domain-402-httpshighqualityclean.co.uk.js';
+          script.setAttribute('data-domain', '402');
+          script.defer = true;
+          document.head.appendChild(script);
+          keakLoaded = true;
+        }
+        
+        // Load after user interaction (scroll, click, touch, keypress)
+        function handleInteraction() {
+          if (!interactionOccurred) {
+            interactionOccurred = true;
+            // Small delay after interaction to ensure page is stable
+            setTimeout(loadKeakScript, 100);
+          }
+        }
+        
+        // Listen for various user interactions
+        ['scroll', 'click', 'touchstart', 'keydown'].forEach(eventType => {
+          document.addEventListener(eventType, handleInteraction, { once: true, passive: true });
+        });
+        
+        // Fallback: Load after a delay if no interaction occurs
+        // This ensures the script still loads for analytics purposes
+        document.addEventListener('astro:page-load', () => {
+          setTimeout(() => {
+            if (!interactionOccurred) {
+              // Use requestIdleCallback to load when browser is idle
+              if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadKeakScript, { timeout: 2000 });
+              } else {
+                setTimeout(loadKeakScript, 2000);
+              }
+            }
+          }, 1000);
+        }, { once: false });
+        
+        // Initial page load fallback
+        if (document.readyState === 'complete') {
+          setTimeout(() => {
+            if ('requestIdleCallback' in window) {
+              requestIdleCallback(() => {
+                setTimeout(loadKeakScript, 2000);
+              }, { timeout: 2000 });
+            } else {
+              setTimeout(loadKeakScript, 2000);
+            }
+          }, 1000);
+        } else {
+          window.addEventListener('load', () => {
+            setTimeout(() => {
+              if ('requestIdleCallback' in window) {
+                requestIdleCallback(() => {
+                  setTimeout(loadKeakScript, 2000);
+                }, { timeout: 2000 });
+              } else {
+                setTimeout(loadKeakScript, 2000);
+              }
+            }, 1000);
+          }, { once: true });
+        }
+      })();
+    </script>
   </body>
 </html>

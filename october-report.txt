@@ -1,0 +1,222 @@
+# High Quality Clean - October 2025 Performance Report
+
+**Reporting Period:** October 1-31, 2025
+**Report Date:** November 2025
+**Prepared by:** Jack, Aspect Studio
+
+---
+
+## Executive Summary
+
+The site has been live for approximately one month, and the October data reveals some strong foundations to build upon. Here's what the numbers are telling us and the specific improvements I'm implementing over the next few weeks.
+
+---
+
+## October Performance Overview
+
+**Traffic Metrics:**
+- **3,304 total pageviews** from 747 unique visitors across 857 visits
+- **Average visit duration: 1 minute 25 seconds** – visitors who engage are spending meaningful time on the site
+- **Peak traffic days:** October 16th saw exceptional performance with 901 pageviews and 65 sessions in a single day. Additional spikes on October 8th and 21st suggest strong response to external activity (likely social media or referrals)
+
+**User Behaviour:**
+- **85.77% bounce rate** – indicates an opportunity to better capture first-time visitors
+- **Desktop dominates:** 644 desktop users vs 92 mobile users (86% desktop traffic)
+- **Chrome is primary browser:** 654 users on Chrome, with iOS Safari at 46 users
+
+**Geographic Distribution:**
+- **UK visitors: 130** (your target market)
+- **Singapore: 310 visitors** (likely bot traffic – will be filtered out)
+- **US: 95 visitors**, Brazil: 79, Germany: 34
+
+**Traffic Sources:**
+- **Google organic: 58 visits** (primary referral source)
+- **Yell.com: 7 visits**
+- **Bing: 6 visits**
+- **LinkedIn: 2 visits**
+- **ChatGPT: 3 visits** (interesting new channel)
+
+---
+
+## Top Performing Pages
+
+| Page | Pageviews | Performance Notes |
+|------|-----------|-------------------|
+| Homepage (/) | 237 | Primary entry point – 7.2% of total traffic |
+| Services (/services/) | 41 | Strong interest in service offerings |
+| Terms & Conditions | 24 | Unusually high – may indicate pre-purchase research |
+| Areas We Cover | 22 | Local SEO working effectively |
+| Case Studies | 21 | Good engagement with social proof |
+| Contact Us | 21 | High conversion intent |
+| Commercial Office Cleaning | 21 | Specialist service interest |
+| Why Us | 19 | Trust-building page performing well |
+| Process | 19 | Clients researching how you work |
+| Areas Category Page | 16 | Location-specific searches driving traffic |
+
+---
+
+## What's Working Well
+
+**Strong Foundations:**
+- Your homepage is successfully acting as the main gateway, capturing 237 pageviews
+- Services page engagement (41 views) shows people are actively researching what you offer
+- Location pages are performing excellently, proving your local SEO strategy is effective
+- Google is your primary referral source, exactly where you want to be for premium service positioning
+- Case Studies and Contact pages both hitting 21 pageviews shows good conversion intent
+- Peak days show you can generate significant traffic when external factors align
+
+**Technical Performance:**
+- Chrome dominance (654 users) means your site is performing well on the most common browser
+- Desktop-heavy traffic (644 users) aligns with your professional, high-value client profile
+
+---
+
+## Optimization Actions I'm Implementing
+
+### Week 1: Homepage Conversion Enhancement
+
+**What I'm doing:**
+- Refining the hero section to make the value proposition instantly clear
+- Strengthening calls-to-action with more prominent placement
+- Adding trust signals (insurance coverage, testimonials, credentials) above the fold
+- Testing different headline variations to reduce the 85.77% bounce rate
+
+**Expected Impact:** Reduce bounce rate by 15-20 percentage points, increase quote requests by 25%
+
+---
+
+### Week 2: Mobile Experience Overhaul
+
+**Current State:** Only 92 of 747 visitors (12.3%) are on mobile devices
+
+**What I'm doing:**
+- Comprehensive mobile UX audit and improvements
+- Optimizing tap targets and form fields for mobile
+- Improving mobile page load speeds
+- Ensuring WhatsApp integration works seamlessly on mobile
+
+**Expected Impact:** Unlock 30-40% more traffic from busy professionals who browse during commutes
+
+---
+
+### Week 2-3: Service Page Conversion Optimization
+
+**Focus Pages:** Services (41 views), Case Studies (21 views), Contact (21 views)
+
+**What I'm doing:**
+- Creating clear pathways between related pages
+- Adding "Next Steps" sections to guide visitors toward booking
+- Implementing strategic internal linking between service tiers
+- Building dedicated landing pages for high-intent searches ("premium cleaning Knightsbridge", "Airbnb cleaning Chelsea")
+
+**Expected Impact:** Increase quote request rate from service pages by 35%
+
+---
+
+### Week 3: Analytics & Tracking Enhancement
+
+**Current Gap:** No event tracking is currently set up
+
+**What I'm implementing:**
+- Google Analytics 4 event tracking for:
+  - Form submissions
+  - Button clicks (all CTAs)
+  - Phone number taps
+  - WhatsApp message initiations
+  - Quote calculator interactions
+- Meta Pixel for future Instagram/TikTok campaign optimization
+- Search Console integration for SEO performance monitoring
+- Custom dashboard showing conversion metrics that matter
+
+**Expected Impact:** Clear visibility into which pages and actions are converting visitors into clients
+
+---
+
+### Week 4: Geographic & Audience Refinement
+
+**Current Issue:** 310 Singapore visitors (41% of traffic) skewing data
+
+**What I'm doing:**
+- Setting up geographic filters to focus analytics on UK traffic
+- Creating region-specific performance reports
+- Implementing IP filtering to remove bot traffic
+- Building location-based landing pages for target areas (Mayfair, Knightsbridge, Holland Park, Wimbledon)
+
+**Expected Impact:** Clearer data showing actual UK client behaviour, better local SEO performance
+
+---
+
+### Ongoing: Traffic Spike Analysis & Replication
+
+**Notable Pattern:** October 16th generated 901 pageviews and 65 sessions
+
+**What I'm investigating:**
+- What drove the October 8th, 16th, and 21st traffic spikes?
+- Can we identify the source (social posts, referrals, PR) and replicate it?
+- Setting up alerts to catch and analyze future traffic spikes in real-time
+
+**Expected Impact:** Understanding what drives your best traffic days so we can create more of them
+
+---
+
+## 30-Day Action Timeline
+
+**Week 1 (Now):**
+- Homepage optimization
+- Event tracking implementation
+- Analytics dashboard setup
+
+**Week 2:**
+- Mobile experience improvements
+- Service page conversion enhancements
+- Meta Pixel integration
+
+**Week 3:**
+- Landing page creation for high-intent keywords
+- Internal linking strategy implementation
+- Geographic filtering setup
+
+**Week 4:**
+- Location-specific page optimization
+- A/B testing on primary CTAs
+- Performance review and adjustment
+
+---
+
+## Key Metrics We'll Track Going Forward
+
+**Conversion Metrics:**
+- Quote request submissions
+- Phone call initiations
+- WhatsApp message starts
+- Contact form completions
+
+**Engagement Metrics:**
+- Bounce rate (target: reduce from 85.77% to 65%)
+- Average session duration (target: increase from 1:25 to 2:30)
+- Pages per session (establish baseline, then improve by 40%)
+
+**Traffic Quality:**
+- UK visitor percentage (filter out international bot traffic)
+- Service page engagement rate
+- Service tier interest distribution
+
+**Business Outcomes:**
+- Cost per qualified lead
+- Conversion rate from website visit to booked appointment
+- Average booking value by traffic source
+
+---
+
+## Next Steps
+
+I'll send you a quick update at the end of each week showing progress on these optimizations. If you'd like to jump on a 15-minute call to walk through any of this in more detail, just WhatsApp me on 07917453885.
+
+The foundation is solid, Pedro – now we're making it work harder for you.
+
+---
+
+**Jack**
+Aspect Studio
+07917453885
+jack@aspectstudio.co.uk
