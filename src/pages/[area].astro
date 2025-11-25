@@ -25,44 +25,62 @@ function repeat(count: number): number[] {
   <main class="page-transition pt-16 overflow-x-hidden">
     <!-- Page Header -->
     <section class="bg-navy relative">
-      <div class="ar-16-9">
+      <div class="relative w-full h-[70vh] min-h-[500px] max-h-[800px] md:h-[60vh] lg:h-[70vh]">
         <img
           src={areaInfo.heroImage}
           alt={areaInfo.heroImageAlt}
-          class="w-full h-full object-cover opacity-40"
+          class="w-full h-full object-cover"
           fetchpriority="high"
         />
-        <div class="absolute inset-0 flex items-end pb-10 md:pb-16 px-4 sm:px-6 lg:px-8 grain">
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-0 flex items-end pb-8 md:pb-12 lg:pb-20 px-4 sm:px-6 lg:px-8"
+        >
           <div class="mx-auto max-w-5xl w-full">
-            <h1 class="font-serif text-3xl md:text-5xl text-gold mb-4">
-              {areaInfo.heroHeading}
-            </h1>
-            <p class="text-white/85 text-sm md:text-base max-w-3xl leading-relaxed">
-              {areaInfo.heroSubheading}
-            </p>
-
-            <div class="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#services" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
+            <div class="text-transition">
+              <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-3 md:mb-4">
+                {areaInfo.heroHeading}
+              </h1>
+              <p class="text-white/90 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
+                {areaInfo.heroSubheading}
+              </p>
+            </div>
+            <div class="text-transition mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
+              <a
+                href="#services"
+                class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 text-sm sm:text-base font-medium border border-gold hover:bg-gold/90 transition-colors min-h-[48px]"
+              >
                 <i class="fas fa-list mr-2"></i>View Services
               </a>
-              <a href="#quote" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9A961; padding: 0.75rem 1.25rem; color: #C9A961; font-size: 0.875rem; background-color: transparent; transition: all 0.2s; text-decoration: none;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.05)'" onmouseout="this.style.backgroundColor='transparent'">
+              <a
+                href="#quote"
+                class="inline-flex items-center justify-center rounded-md border border-gold px-6 py-3 text-gold text-sm sm:text-base bg-navy/50 backdrop-blur-sm hover:bg-navy/70 transition-colors min-h-[48px]"
+              >
                 <i class="fas fa-phone mr-2"></i>Get Quote
               </a>
             </div>
 
-            <div class="mt-6 flex items-center gap-6 text-xs text-white/70 flex-wrap">
-              <span class="inline-flex items-center gap-2 max-w-full overflow-hidden">
-                <i class="fas fa-map-marked-alt text-gold flex-shrink-0"></i>
+            <div class="mt-6 md:mt-8 flex items-center gap-4 md:gap-6 text-xs sm:text-sm text-white/80 flex-wrap">
+              <span class="inline-flex items-center gap-1.5 sm:gap-2 max-w-full overflow-hidden">
+                <div class="h-5 w-5 sm:h-6 sm:w-6 rounded border border-gold bg-gold/20 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-map-marked-alt text-gold text-xs"></i>
+                </div>
                 <span class="truncate">{areaInfo.postcodes.join(', ')} Postcodes</span>
               </span>
-              <span class="h-3 w-px bg-white/30"></span>
-              <span class="inline-flex items-center gap-2">
-                <i class="fas fa-award text-gold"></i>
+              <span class="h-4 w-px bg-white/30"></span>
+              <span class="inline-flex items-center gap-1.5 sm:gap-2">
+                <div class="h-5 w-5 sm:h-6 sm:w-6 rounded border border-gold bg-gold/20 flex items-center justify-center">
+                  <i class="fas fa-award text-gold text-xs"></i>
+                </div>
                 Premium Service Standards
               </span>
-              <span class="h-3 w-px bg-white/30"></span>
-              <span class="inline-flex items-center gap-2">
-                <i class="fas fa-clock text-gold"></i>
+              <span class="h-4 w-px bg-white/30"></span>
+              <span class="inline-flex items-center gap-1.5 sm:gap-2">
+                <div class="h-5 w-5 sm:h-6 sm:w-6 rounded border border-gold bg-gold/20 flex items-center justify-center">
+                  <i class="fas fa-clock text-gold text-xs"></i>
+                </div>
                 Flexible Scheduling
               </span>
             </div>
@@ -112,13 +130,20 @@ function repeat(count: number): number[] {
     <section class="py-16 bg-mist">
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-serif text-2xl md:text-3xl text-navy mb-8 text-center">{areaInfo.serviceAreas.heading}</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {areaInfo.serviceAreas.areas.map(area => (
-            <div class="service-card bg-white rounded-xl p-6 border border-gold/20 shadow-soft">
-              <h3 class="font-semibold text-navy mb-3">{area.name}</h3>
-              <p class="text-ink/70 text-sm leading-relaxed">{area.description}</p>
-            </div>
-          ))}
+        <div class={`service-areas-grid grid md:grid-cols-2 lg:grid-cols-3 gap-6`} data-total-cards={areaInfo.serviceAreas.areas.length}>
+          {areaInfo.serviceAreas.areas.map((area, index) => {
+            const totalCards = areaInfo.serviceAreas.areas.length;
+            const isLastRow = index >= totalCards - (totalCards % 3 || 3);
+            const lastRowCount = totalCards % 3 || 3;
+            const isLastRowWithTwoCards = isLastRow && lastRowCount === 2;
+            
+            return (
+              <div class={`service-card bg-white rounded-xl p-6 border border-gold/20 shadow-soft ${isLastRowWithTwoCards ? 'last-row-card' : ''}`}>
+                <h3 class="font-semibold text-navy mb-3">{area.name}</h3>
+                <p class="text-ink/70 text-sm leading-relaxed">{area.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -462,6 +487,19 @@ function repeat(count: number): number[] {
     .service-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 15px 35px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.08);
+    }
+    
+    /* Service areas grid - handle last row with 2 cards */
+    @media (min-width: 1024px) {
+      .service-areas-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .service-areas-grid .service-card:not(.last-row-card) {
+        grid-column: span 2;
+      }
+      .service-areas-grid .service-card.last-row-card {
+        grid-column: span 3;
+      }
     }
     
     /* FAQ styling */
