@@ -5,10 +5,14 @@ import Header from '../components/Header.astro';
 
 export async function getStaticPaths() {
   const areas = Object.keys(areaData) as Array<keyof typeof areaData>;
-  return areas.map(area => ({
-    params: { area },
-    props: { areaInfo: areaData[area] }
-  }));
+  return areas.map(areaKey => {
+    // Convert camelCase to kebab-case for URL slugs
+    const slug = areaKey.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+    return {
+      params: { area: slug },
+      props: { areaInfo: areaData[areaKey] }
+    };
+  });
 }
 
 const { area } = Astro.params;

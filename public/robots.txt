@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://highqualityclean.co.uk/sitemap-0.xml

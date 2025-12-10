@@ -1,3 +1,5 @@
+/sitemap.xml /sitemap-0.xml 301
+
 # Flatten service URLs - serve files from /services/ at root level
 /concierge-laundry /services/concierge-laundry 200
 /moving-out /services/moving-out 200
