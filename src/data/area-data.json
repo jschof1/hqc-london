@@ -3,7 +3,7 @@
     "name": "Mayfair",
     "postcodes": ["W1K", "W1J"],
     "region": "Central London",
-    "heroImage": "/images/areas/mayfair.jpg",
+    "heroImage": "/images/areas/mayfair.webp",
     "heroImageAlt": "Luxury Georgian townhouses and elegant architecture in Mayfair, London's most exclusive district",
     "metaDescription": "Discreet, luxury cleaning for Mayfair's most discerning residents. White-glove residential care, Airbnb turnovers & concierge service. Trusted by Mayfair's finest homes.",
     "pageTitle": "Premium Cleaning Services Mayfair | High Quality Clean",
@@ -129,7 +129,7 @@
       },
       {
         "quote": "Finally found a cleaning service that matches Mayfair standards. Discreet, professional, and they treat our home with the respect it deserves.",
-        "author": "International Resident, Grosvenor Square", 
+        "author": "International Resident, Grosvenor Square",
         "rating": 5
       },
       {
@@ -141,7 +141,7 @@
     "localInfo": {
       "transportLinks": [
         "Bond Street Station (Central & Jubilee Lines)",
-        "Green Park Station (Jubilee, Piccadilly & Victoria Lines)", 
+        "Green Park Station (Jubilee, Piccadilly & Victoria Lines)",
         "Oxford Circus Station (Central, Northern & Victoria Lines)",
         "Marble Arch Station (Central Line)"
       ],
@@ -177,7 +177,7 @@
           ]
         },
         {
-          "name": "Executive Residence Service", 
+          "name": "Executive Residence Service",
           "price": "From £150 per visit",
           "duration": "4-6 hours",
           "features": [
@@ -241,7 +241,7 @@
     "name": "Belgravia",
     "postcodes": ["SW1W", "SW1X"],
     "region": "Central London",
-    "heroImage": "/images/areas/belgravia.jpg",
+    "heroImage": "/images/areas/belgravia.webp",
     "heroImageAlt": "Elegant Georgian and Victorian townhouses in Belgravia's prestigious garden squares",
     "metaDescription": "Trusted cleaning for Belgravia's Georgian townhouses and luxury apartments. Museum-quality care for fine furnishings, art & antiques. Fully insured, DBS-checked teams.",
     "pageTitle": "Luxury Cleaning Services Belgravia | High Quality Clean",
@@ -479,7 +479,7 @@
     "name": "Knightsbridge",
     "postcodes": ["SW1X", "SW7"],
     "region": "Central London",
-    "heroImage": "/images/areas/knightsbridge.jpg",
+    "heroImage": "/images/areas/knightsbridge.webp",
     "heroImageAlt": "Luxury shopping district and high-end residential properties in Knightsbridge",
     "metaDescription": "Hotel-standard cleaning for Knightsbridge properties. Specialist care for luxury materials, silk furnishings & valuable possessions. Discretion guaranteed for high-profile clients.",
     "pageTitle": "Knightsbridge Cleaning Services | Premium Home Care",
@@ -717,14 +717,14 @@
     "name": "Kensington",
     "postcodes": ["SW7", "SW5", "W8"],
     "region": "West London", 
-    "heroImage": "/images/areas/kensington.jpg",
+    "heroImage": "/images/areas/kensington.webp",
     "heroImageAlt": "Royal Borough of Kensington elegant Victorian mansions and cultural district",
     "metaDescription": "Elegant cleaning solutions for Kensington homes and wellness studios. From period properties to modern apartments, we deliver impeccable results with refined care.",
     "pageTitle": "Premium Cleaning Services Kensington | High Quality Clean",
     "heroHeading": "Professional Cleaning Services in Kensington, London",
     "heroSubheading": "Royal Borough cleaning excellence for Victorian mansions, cultural properties and luxury residences. Expert care for heritage homes in London's museum district.",
     "aboutArea": {
-      "heading": "About Our Kensington Cleaning Services", 
+      "heading": "About Our Kensington Cleaning Services",
       "content": [
         "The Royal Borough of Kensington represents the pinnacle of London's cultural sophistication, home to world-renowned museums, elegant Victorian architecture, and some of the capital's most prestigious residences. From South Kensington's museum district to the garden squares of Holland Park, this area demands cleaning services that understand both heritage preservation and contemporary luxury.",
         "Our High Quality Clean Kensington specialists are trained to work with the unique characteristics of Royal Borough properties. Many homes feature original Victorian and Edwardian architectural details, valuable antiques, and extensive book collections that require careful, knowledgeable handling.",
@@ -765,7 +765,7 @@
           "description": "Our team is trained in conservation-level cleaning techniques, perfect for properties housing valuable art, antiques, and rare collections."
         },
         {
-          "title": "Royal Borough Expertise", 
+          "title": "Royal Borough Expertise",
           "description": "Deep understanding of conservation area requirements and heritage property maintenance specific to the Royal Borough of Kensington."
         },
         {
@@ -861,7 +861,7 @@
       ],
       "nearbyAttractions": [
         "Victoria & Albert Museum",
-        "Natural History Museum", 
+        "Natural History Museum",
         "Science Museum",
         "Royal Albert Hall",
         "Hyde Park and Kensington Gardens",
@@ -893,7 +893,7 @@
         },
         {
           "name": "Cultural Family Service",
-          "price": "From £120 per visit", 
+          "price": "From £120 per visit",
           "duration": "4-5 hours",
           "features": [
             "Child and pet safe protocols",
@@ -946,7 +946,7 @@
     "contact": {
       "heading": "Contact Our Kensington Cleaning Team",
       "phone": "0203 342 5260",
-      "email": "sales@highqualityclean.co.uk", 
+      "email": "sales@highqualityclean.co.uk",
       "whatsapp": "+447824390336",
       "hours": "Monday-Saturday 7AM-8PM, Sunday 9AM-6PM",
       "emergencyNote": "Same-day service available for registered Kensington clients"
@@ -956,7 +956,7 @@
     "name": "Chelsea",
     "postcodes": ["SW3", "SW10"],
     "region": "West London",
-    "heroImage": "/images/areas/chelsea.jpg",
+    "heroImage": "/images/areas/chelsea.webp",
     "heroImageAlt": "Chelsea riverside luxury properties and historic charm along the Thames",
     "metaDescription": "Sophisticated cleaning for Chelsea's designer homes and luxury rentals. Trusted by property managers and homeowners who demand excellence. Concierge-level attention to detail.",
     "pageTitle": "Chelsea Cleaning Services | Luxury Residential Care",
@@ -966,7 +966,7 @@
       "heading": "About Our Chelsea Cleaning Services",
       "content": [
         "Chelsea epitomizes London's creative sophistication, where artistic heritage meets contemporary luxury along the Thames. This historic borough, stretching from Sloane Square to the river, attracts artists, writers, and discerning residents who appreciate both cultural richness and modern amenities.",
-        "Our High Quality Clean Chelsea team understands the unique character of this area, from the elegant Victorian terraces of King's Road to the contemporary riverside developments overlooking the Thames. Many properties feature a blend of period charm and modern luxury that requires Specialised cleaning expertise.",
+        "High Quality Clean's Chelsea team understands the unique character of this area, from the elegant Victorian terraces of King's Road to the contemporary riverside developments overlooking the Thames. Many properties feature a blend of period charm and modern luxury that requires Specialised cleaning expertise.",
         "The area's artistic legacy means many homes house valuable collections, from contemporary art to vintage furnishings, requiring careful, knowledgeable handling. Our team is trained in gallery-quality cleaning techniques, ensuring your treasured possessions receive appropriate care.",
         "Chelsea's reputation as a creative hub attracts international residents, young professionals, and established artists who value both style and substance. Our WellClean™ services are designed to maintain the sophisticated yet relaxed atmosphere that makes Chelsea so distinctive."
       ]
@@ -1196,7 +1196,7 @@
     "name": "Notting Hill",
     "postcodes": ["W11", "W2"],
     "region": "West London",
-    "heroImage": "/images/areas/nottinghill.jpg",
+    "heroImage": "/images/areas/notting-hill.webp",
     "heroImageAlt": "Charming Victorian terraces and colorful houses in vibrant Notting Hill",
     "metaDescription": "Boutique cleaning for Notting Hill's characterful homes and high-end Airbnbs. Specialist care for period features, delicate materials & design-conscious spaces.",
     "pageTitle": "Notting Hill Cleaning Services | Premium Home Care",
@@ -1435,7 +1435,7 @@
     "name": "Holland Park",
     "postcodes": ["W8", "W11"],
     "region": "West London",
-    "heroImage": "/images/areas/holland-park.jpg",
+    "heroImage": "/images/areas/holland-park.webp",
     "heroImageAlt": "Elegant Victorian villas and peaceful garden squares surrounding Holland Park",
     "metaDescription": "Refined cleaning for Holland Park's prestigious addresses. Expert care for family homes, artwork & luxury interiors. Trusted by clients who value quality and discretion.",
     "pageTitle": "Holland Park Cleaning Services | Luxury Home Specialists",
@@ -1674,7 +1674,7 @@
     "name": "Hampstead",
     "postcodes": ["NW3", "NW11"],
     "region": "North London",
-    "heroImage": "/images/areas/hampstead.jpg",
+    "heroImage": "/images/areas/hampstead.webp",
     "heroImageAlt": "Historic village charm and elegant Georgian houses in leafy Hampstead",
     "metaDescription": "Trusted by Hampstead's discerning homeowners for impeccable residential cleaning. From listed properties to modern villas, we deliver excellence with emotional intelligence.",
     "pageTitle": "Hampstead Cleaning Services | Premium Residential Care",
@@ -1913,7 +1913,7 @@
     "name": "Highgate",
     "postcodes": ["N6", "N19"],
     "region": "North London",
-    "heroImage": "/images/areas/highgate.jpg",
+    "heroImage": "/images/areas/highgate.webp",
     "heroImageAlt": "Historic village atmosphere and elegant Victorian houses in elevated Highgate",
     "metaDescription": "Premium cleaning for Highgate's elegant homes and garden properties. Specialist attention for high-value interiors, antiques & family spaces. Discreet, professional service.",
     "pageTitle": "Highgate Cleaning Services | Luxury Home Care",
@@ -2152,7 +2152,7 @@
     "name": "Primrose Hill",
     "postcodes": ["NW1", "NW3"],
     "region": "North London",
-    "heroImage": "/images/areas/primrose-hill.jpg",
+    "heroImage": "/images/areas/primrose-hill.webp",
     "heroImageAlt": "Elegant Victorian terraces and panoramic London views from Primrose Hill",
     "metaDescription": "Boutique cleaning for Primrose Hill's stylish homes and creative spaces. Wellness-focused care that transforms your home into a sanctuary of calm and cleanliness.",
     "pageTitle": "Primrose Hill Cleaning Services | High Quality Clean",
@@ -2391,7 +2391,7 @@
     "name": "St John's Wood",
     "postcodes": ["NW8"],
     "region": "North London",
-    "heroImage": "/images/areas/st-johns-wood.jpg",
+    "heroImage": "/images/areas/st-johns-wood.webp",
     "heroImageAlt": "Elegant Victorian villas and tree-lined avenues in prestigious St John's Wood",
     "metaDescription": "Elegant cleaning solutions for St John's Wood residences. Trusted by families and professionals for consistent, high-standard care. DBS-checked teams, fully insured service.",
     "pageTitle": "St John's Wood Cleaning | High Quality Clean",
@@ -3108,7 +3108,7 @@
     "name": "Wandsworth",
     "postcodes": ["SW18", "SW19"],
     "region": "South London",
-    "heroImage": "/images/areas/wandsworth.jpg",
+    "heroImage": "/images/areas/wandsworth-town.webp",
     "heroImageAlt": "Riverside family living and Victorian terraces in thriving Wandsworth",
     "metaDescription": "Expert residential cleaning across Wandsworth, Earlsfield and Southfields. Concierge-level care for discerning homeowners. DBS-checked teams, wellness-focused approach.",
     "pageTitle": "Wandsworth Cleaning Services | Premium Home Care",
@@ -3347,7 +3347,7 @@
     "name": "Weybridge",
     "postcodes": ["KT13"],
     "region": "Surrey",
-    "heroImage": "/images/areas/weybridge.jpg",
+    "heroImage": "/images/areas/weybridge.webp",
     "heroImageAlt": "Luxury riverside living and prestigious St Georges Hill in affluent Weybridge",
     "metaDescription": "Premium cleaning for Weybridge's executive homes and family residences. Specialist care for large properties, high-value interiors and lifestyle-focused clients.",
     "pageTitle": "Weybridge Cleaning Services | Luxury Home Specialists",
@@ -3586,7 +3586,7 @@
     "name": "Hersham",
     "postcodes": ["KT12"],
     "region": "Surrey",
-    "heroImage": "/images/areas/hersham.jpg",
+    "heroImage": "/images/areas/hersham.webp",
     "heroImageAlt": "Exclusive Burwood Park estate and luxury family homes in prestigious Hersham",
     "metaDescription": "Professional home cleaning in Hersham and surrounding areas. Trusted by families for reliable, high-standard residential care. Consistent quality, personal attention.",
     "pageTitle": "Hersham Cleaning Services | High Quality Clean",
@@ -3825,7 +3825,7 @@
     "name": "Walton-on-Thames",
     "postcodes": ["KT12"],
     "region": "Surrey",
-    "heroImage": "/images/areas/walton-on-thames.jpg",
+    "heroImage": "/images/areas/walton-on-thames.webp",
     "heroImageAlt": "Elegant riverside living and exclusive Ashley Park estate in prestigious Walton-on-Thames",
     "metaDescription": "Elegant cleaning solutions for Walton-on-Thames properties. From riverside homes to family residences, we deliver exceptional care with attention to every detail.",
     "pageTitle": "Walton-on-Thames Cleaning | High Quality Clean",
