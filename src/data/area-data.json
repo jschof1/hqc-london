@@ -1,242 +1,295 @@
 {
-  "mayfair": {
-    "name": "Mayfair",
-    "postcodes": ["W1K", "W1J"],
-    "region": "Central London",
-    "heroImage": "/images/areas/mayfair.webp",
-    "heroImageAlt": "Luxury Georgian townhouses and elegant architecture in Mayfair, London's most exclusive district",
-    "metaDescription": "Discreet, luxury cleaning for Mayfair's most discerning residents. White-glove residential care, Airbnb turnovers & concierge service. Trusted by Mayfair's finest homes.",
-    "pageTitle": "Premium Cleaning Services Mayfair | High Quality Clean",
-    "heroHeading": "Professional Cleaning Services in Mayfair, London",
-    "heroSubheading": "Luxury domestic cleaning for London's most exclusive address. Serving Georgian mansions, private clubs and high-net-worth residences with discretion and expertise.",
-    "aboutArea": {
-      "heading": "About Our Mayfair Cleaning Services",
-      "content": [
-        "Mayfair stands as London's most prestigious address, home to Georgian mansions, exclusive private clubs, and some of the world's most expensive real estate. This historic district, bounded by Hyde Park, Oxford Street, Regent Street, and Piccadilly, demands cleaning services that match its exceptional standards.",
-        "Our High Quality Clean Mayfair team understands the unique requirements of this ultra-exclusive area. From the grand townhouses of Grosvenor Square to the luxury apartments overlooking Hyde Park, we provide discreet, professional cleaning services that preserve the elegance and heritage of your property.",
-        "The area's rich history dating back to the early 18th century means many properties feature period details, antique furnishings, and valuable art collections that require specialist care. Our trained professionals are experienced in handling delicate surfaces, fine fabrics, and irreplaceable items with the utmost care.",
-        "As the heart of London's luxury district, Mayfair attracts international residents, diplomats, and business leaders who expect nothing less than perfection. Our WellClean™ Premium services are tailored to meet these exacting standards, providing a level of service that matches the prestige of your address."
-      ]
-    },
-    "serviceAreas": {
-      "heading": "Our Mayfair Service Areas",
-      "areas": [
-        {
-          "name": "Berkeley Square",
-          "description": "Historic garden square surrounded by Georgian architecture and prestigious offices. Home to some of London's most expensive properties and exclusive members' clubs."
-        },
-        {
-          "name": "Grosvenor Square",
-          "description": "Grand residential square known for its diplomatic missions and luxury residences. Features some of Mayfair's largest and most impressive townhouses."
-        },
-        {
-          "name": "Bond Street Area",
-          "description": "Shopping district with luxury apartments above world-famous boutiques. High-security properties requiring Specialised cleaning protocols."
-        },
-        {
-          "name": "Hyde Park Corner",
-          "description": "Premium location with penthouse apartments overlooking Hyde Park. Modern luxury developments with state-of-the-art amenities."
-        },
-        {
-          "name": "Mount Street",
-          "description": "Elegant Victorian street with boutique hotels, fine dining, and luxury residential properties. Historic charm meets contemporary luxury."
-        }
-      ]
-    },
-    "whyChooseUs": {
-      "heading": "Why Choose High Quality Clean for Mayfair",
-      "points": [
-        {
-          "title": "Ultra-High Security Clearance",
-          "description": "All our Mayfair team members undergo extensive background checks and security clearance suitable for high-net-worth residences and diplomatic properties."
-        },
-        {
-          "title": "Heritage Property Expertise",
-          "description": "Specialised training in caring for Georgian and Victorian period features, antique furnishings, and valuable art collections without causing damage."
-        },
-        {
-          "title": "Absolute Discretion",
-          "description": "We understand the importance of privacy in Mayfair. Our team operates with complete confidentiality and respects the private nature of your residence."
-        },
-        {
-          "title": "Flexible Premium Scheduling",
-          "description": "Available 24/7 to accommodate international schedules, last-minute events, and the demanding lifestyles of Mayfair residents."
-        },
-        {
-          "title": "Luxury Product Selection",
-          "description": "Only the finest, eco-friendly cleaning products that are safe for antiques, fine fabrics, and sensitive surfaces found in luxury properties."
-        },
-        {
-          "title": "Concierge-Level Service",
-          "description": "Beyond cleaning, we offer property care services including plant care, silver polishing, and coordination with other household staff."
-        }
-      ]
-    },
-    "services": {
-      "heading": "Services We Provide in Mayfair",
-      "categories": [
-        {
-          "name": "Regular Domestic Cleaning",
-          "services": [
-            "Weekly, bi-weekly, or monthly cleaning schedules",
-            "Deep cleaning of reception rooms and entertaining spaces",
-            "Kitchen cleaning including premium appliances",
-            "Bathroom sanitization and luxury fixture care",
-            "Bedroom and dressing room organization",
-            "Hallway and staircase maintenance"
-          ]
-        },
-        {
-          "name": "Specialist Property Services",
-          "services": [
-            "Antique furniture cleaning and polishing",
-            "Crystal chandelier cleaning and maintenance",
-            "Fine art and sculpture dusting (insured)",
-            "Oriental rug and carpet specialist cleaning",
-            "Silver and brass polishing services",
-            "Leather furniture conditioning and care"
-          ]
-        },
-        {
-          "name": "Event and Entertaining Support",
-          "services": [
-            "Pre-event deep cleaning and preparation",
-            "Post-event cleanup and restoration",
-            "Same-day emergency cleaning services",
-            "Entertaining space setup and breakdown",
-            "Wine cellar and bar area maintenance",
-            "Guest bedroom preparation services"
-          ]
-        },
-        {
-          "name": "Property Care and Maintenance",
-          "services": [
-            "Plant and flower arrangement care",
-            "Window cleaning (interior specialist service)",
-            "Wardrobe organization and garment care",
-            "Seasonal property preparation",
-            "Holiday home preparation and maintenance",
-            "Move-in and move-out comprehensive cleaning"
-          ]
-        }
-      ]
-    },
-    "testimonials": [
-      {
-        "quote": "Exceptional service for our Berkeley Square property. They understand the level of care required for our antique collection and always deliver beyond expectations.",
-        "author": "Private Family Office, Berkeley Square",
-        "rating": 5
+  {
+    "mayfair": {
+      "name": "Mayfair",
+      "postcodes": ["W1K", "W1J"],
+      "region": "London",
+      "heroImage": "/images/areas/mayfair.webp",
+      "heroImageAlt": "Luxury Georgian townhouses and elegant architecture in Mayfair, London's most exclusive district",
+      "metaDescription": "London's most exclusive address demands unmatched service and discretion.",
+      "pageTitle": "Mayfair Cleaning Services | Premium Standards",
+      "heroHeading": "Mayfair",
+      "heroSubheading": "Mayfair stands as London's most prestigious address—home to some of the world's most valuable real estate—bordered by Hyde Park, Oxford Street, Regent Street, and Piccadilly—and demands cleaning services that protect and enhance its exceptional properties.",
+      "aboutArea": {
+        "heading": "About Mayfair",
+        "content": [
+          "High Quality Clean's Mayfair team specialises in servicing the grand townhouses of Grosvenor Square and luxury apartments overlooking Hyde Park—delivering discreet, professional care that preserves your property's elegance and heritage.",
+          "With Mayfair's rich history and period details, many homes feature antique furnishings and valuable art collections—requiring specialist care—using proven, safe techniques and fully insured for your complete peace of mind.",
+          "Residents here—including international executives and dignitaries—expect nothing less than perfection. Our WellClean™ Premium service delivers the exceptional care your address deserves."
+        ]
       },
-      {
-        "quote": "Finally found a cleaning service that matches Mayfair standards. Discreet, professional, and they treat our home with the respect it deserves.",
-        "author": "International Resident, Grosvenor Square",
-        "rating": 5
+      "serviceAreas": {
+        "heading": "Our Mayfair Service Areas",
+        "areas": [
+          {
+            "name": "Berkeley Square",
+            "description": "Historic garden square—home to some of London's most valuable residences and exclusive members' clubs."
+          },
+          {
+            "name": "Grosvenor Square",
+            "description": "Grand residential square with diplomatic missions and luxury homes, featuring Mayfair's most impressive townhouses."
+          },
+          {
+            "name": "Bond Street Area",
+            "description": "World-famous shopping district with luxury apartments—requiring specialist cleaning protocols and high-security standards."
+          },
+          {
+            "name": "Hyde Park Corner",
+            "description": "Premium penthouses overlooking Hyde Park with state-of-the-art amenities."
+          },
+          {
+            "name": "Mount Street",
+            "description": "Elegant Victorian street where historic elegance meets contemporary luxury—boutique hotels, fine dining, and sought-after residential addresses."
+          }
+        ]
       },
-      {
-        "quote": "Their attention to detail is remarkable. From our Georgian moldings to our modern art collection, everything is perfectly maintained.",
-        "author": "Diplomat, Hyde Park Corner",
-        "rating": 5
-      }
-    ],
-    "localInfo": {
-      "transportLinks": [
-        "Bond Street Station (Central & Jubilee Lines)",
-        "Green Park Station (Jubilee, Piccadilly & Victoria Lines)",
-        "Oxford Circus Station (Central, Northern & Victoria Lines)",
-        "Marble Arch Station (Central Line)"
+      "whyChooseUs": {
+        "heading": "Why Choose High Quality Clean for Mayfair?",
+        "points": [
+          {
+            "title": "Ultra-High Security Clearance",
+            "description": "Extensive background checks suitable for Mayfair's high-net-worth residences and diplomatic properties."
+          },
+          {
+            "title": "Heritage Property Expertise",
+            "description": "Specialist training in caring for period features, antique furnishings, and valuable art collections—handled with precision and insured for your reassurance."
+          },
+          {
+            "title": "Absolute Discretion",
+            "description": "Your privacy is paramount—we operate with complete confidentiality and utmost respect for your residence."
+          },
+          {
+            "title": "Flexible Premium Scheduling",
+            "description": "Available 24/7 to accommodate Mayfair's international schedules and demanding lifestyles."
+          },
+          {
+            "title": "Luxury Product Selection",
+            "description": "We use only premium, eco-friendly products—safe for antiques, fine fabrics, and the sensitive surfaces found in luxury homes."
+          },
+          {
+            "title": "Concierge-Level Service",
+            "description": "Beyond cleaning—seamless property care and coordination with household staff."
+          }
+        ]
+      },
+      "services": {
+        "heading": "Services We Provide in Mayfair",
+        "categories": [
+          {
+            "name": "Regular Domestic Cleaning",
+            "services": [
+              "Weekly, bi-weekly, or monthly cleaning schedules",
+              "Deep cleaning of reception rooms and entertaining spaces",
+              "Premium kitchen and appliance care",
+              "Bathroom sanitization and luxury fixture care",
+              "Bedroom and dressing room organization",
+              "Hallway and staircase maintenance"
+            ]
+          },
+          {
+            "name": "Specialist Property Services",
+            "services": [
+              "Antique furniture cleaning and polishing",
+              "Crystal chandelier cleaning and maintenance",
+              "Fine art and sculpture dusting (fully insured)",
+              "Oriental rug and carpet specialist cleaning",
+              "Silver and brass polishing services",
+              "Leather furniture conditioning and care"
+            ]
+          },
+          {
+            "name": "Event and Entertaining Support",
+            "services": [
+              "Pre-event deep cleaning and preparation",
+              "Post-event cleanup and restoration",
+              "Same-day emergency cleaning services",
+              "Entertaining space setup and breakdown",
+              "Wine cellar and bar area maintenance",
+              "Guest bedroom preparation"
+            ]
+          },
+          {
+            "name": "Property Care and Maintenance",
+            "services": [
+              "Plant and flower arrangement care",
+              "Interior specialist window cleaning",
+              "Wardrobe organization and garment care",
+              "Seasonal property preparation",
+              "Holiday home setup and maintenance",
+              "Move-in and move-out comprehensive cleaning"
+            ]
+          }
+        ]
+      },
+      "testimonials": [
+        {
+          "quote": "Exceptional service for our Berkeley Square property. They understand the level of care required for our antique collection and always deliver beyond expectations.",
+          "author": "Private Family Office, Berkeley Square",
+          "rating": 5
+        },
+        {
+          "quote": "Finally found a cleaning service that matches Mayfair standards. Discreet, professional, and they treat our home with the respect it deserves.",
+          "author": "International Resident, Grosvenor Square",
+          "rating": 5
+        },
+        {
+          "quote": "Their attention to detail is remarkable. From our Georgian moldings to our modern art collection, everything is perfectly maintained.",
+          "author": "Diplomat, Hyde Park Corner",
+          "rating": 5
+        }
       ],
-      "nearbyAttractions": [
-        "Hyde Park and Speaker's Corner",
-        "Royal Academy of Arts",
-        "Wallace Collection",
-        "Handel & Hendrix Museum",
-        "Berkeley Square Gardens"
-      ],
-      "shoppingAndDining": [
-        "Bond Street luxury shopping",
-        "Selfridges department store",
-        "Michelin-starred restaurants",
-        "Exclusive members' clubs",
-        "Fine art galleries and auction houses"
-      ]
-    },
-    "pricing": {
-      "heading": "Pricing & Packages for Mayfair Properties",
-      "note": "All Mayfair services include our premium care standards, full insurance coverage, and 24/7 availability.",
-      "packages": [
+      "localInfo": {
+        "transportLinks": [
+          "Bond Street Station (Central & Jubilee Lines)",
+          "Green Park Station (Jubilee, Piccadilly & Victoria Lines)",
+          "Oxford Circus Station (Central, Northern & Victoria Lines)",
+          "Marble Arch Station (Central Line)"
+        ],
+        "nearbyAttractions": [
+          "Hyde Park and Speaker's Corner",
+          "Royal Academy of Arts",
+          "Wallace Collection",
+          "Handel & Hendrix Museum",
+          "Berkeley Square Gardens"
+        ],
+        "shoppingAndDining": [
+          "Bond Street luxury shopping",
+          "Selfridges department store",
+          "Michelin-starred restaurants",
+          "Exclusive members' clubs",
+          "Fine art galleries and auction houses"
+        ]
+      },
+      "pricing": {
+        "heading": "Pricing & Packages for Mayfair Properties",
+        "note": "All Mayfair services include our premium care standards, full insurance coverage, and 24/7 availability.",
+        "packages": [
+          {
+            "name": "Heritage Property Care",
+            "price": "From £95 per visit",
+            "duration": "3-4 hours",
+            "features": [
+              "Specialist antique and period feature care",
+              "Fine art and sculpture maintenance",
+              "Premium eco-friendly products only",
+              "Full insurance coverage up to £2M",
+              "Detailed care report after each visit"
+            ]
+          },
+          {
+            "name": "Executive Residence Service",
+            "price": "From £150 per visit",
+            "duration": "4-6 hours",
+            "features": [
+              "Comprehensive property maintenance",
+              "Event preparation and post-event cleanup",
+              "Coordination with household staff",
+              "Flexible scheduling including weekends",
+              "Concierge-level additional services"
+            ]
+          },
+          {
+            "name": "Diplomatic Standard Service",
+            "price": "Quote on application",
+            "duration": "Customized",
+            "features": [
+              "Enhanced security clearance",
+              "Protocol-aware service delivery",
+              "Multi-language communication available",
+              "Coordination with security teams",
+              "Specialised diplomatic residence care"
+            ]
+          }
+        ]
+      },
+      "faqs": [
         {
-          "name": "Heritage Property Care",
-          "price": "From £95 per visit",
-          "duration": "3-4 hours",
-          "features": [
-            "Specialist antique and period feature care",
-            "Fine art and sculpture maintenance",
-            "Premium eco-friendly products only",
-            "Full insurance coverage up to £2M",
-            "Detailed care report after each visit"
-          ]
+          "question": "Do you provide cleaning services throughout all Mayfair postcodes?",
+          "answer": "Yes, we serve all Mayfair areas including W1K and W1J postcodes. Our team is familiar with the unique requirements of different Mayfair locations, from the grand townhouses of Grosvenor Square to the luxury apartments of Bond Street."
         },
         {
-          "name": "Executive Residence Service",
-          "price": "From £150 per visit",
-          "duration": "4-6 hours",
-          "features": [
-            "Comprehensive property maintenance",
-            "Event preparation and post-event cleanup",
-            "Coordination with household staff",
-            "Flexible scheduling including weekends",
-            "Concierge-level additional services"
-          ]
+          "question": "Are your cleaning products safe for antique furniture and valuable items?",
+          "answer": "Absolutely. We use only premium, pH-neutral cleaning products that are safe for antiques, fine fabrics, and delicate surfaces. Our team is trained in specialist techniques for caring for period furniture, artwork, and luxury fixtures."
         },
         {
-          "name": "Diplomatic Standard Service",
-          "price": "Quote on application",
-          "duration": "Customized",
-          "features": [
-            "Enhanced security clearance",
-            "Protocol-aware service delivery",
-            "Multi-language communication available",
-            "Coordination with security teams",
-            "Specialised diplomatic residence care"
-          ]
+          "question": "How do you ensure security and discretion in Mayfair properties?",
+          "answer": "All our Mayfair staff undergo comprehensive background checks and security clearance. We sign strict confidentiality agreements and operate with complete discretion. Our team understands the privacy requirements of high-profile residents."
+        },
+        {
+          "question": "Is it safe to give my cleaner a key to my property?",
+          "answer": "Absolutely. Entrusting us with access to your home is never taken lightly. All our Mayfair cleaners are thoroughly vetted, including comprehensive background and reference checks, before joining our team. We maintain up-to-date records and require ongoing training and assessments to ensure the highest standards of security and professionalism. For added peace of mind, our service is fully insured—with coverage up to £2M—protecting you against accidental damage or loss. Key handling protocols are strictly adhered to, and we only grant property access to trusted, designated team members. Your privacy and property security remain paramount at every stage."
+        },
+        {
+          "question": "Will I have the same cleaner for each cleaning session?",
+          "answer": "Consistency is a cornerstone of our service. We always strive to assign you the same trusted cleaner for every visit, ensuring they become familiar with your preferences and the unique requirements of your Mayfair property. In the rare event your regular cleaner is unavailable—whether due to illness, holiday, or unforeseen circumstances—we will promptly provide an equally experienced substitute from our dedicated team, typically sourced from nearby Mayfair or surrounding areas. If you ever feel a change is needed, simply let us know and we will address it discreetly and efficiently, all while maintaining the standards you expect."
+        },
+        {
+          "question": "Can you accommodate irregular schedules and last-minute requests?",
+          "answer": "Yes, we offer 24/7 availability for Mayfair clients. We understand that international schedules and business demands can be unpredictable, so we maintain flexible booking options and emergency response capability."
+        },
+        {
+          "question": "What is the process for booking a regular cleaning service?",
+          "answer": "Arranging a regular cleaning service for your Mayfair property is a seamless, personalised experience from start to finish. Here's how it works: Initial Enquiry: Reach out to us any time via our online form or give our team a call during office hours—whichever is most convenient. Tailored Consultation: We'll discuss your needs, confirm availability, and provide you with a bespoke quote, ensuring that your specific requirements and schedule are fully understood. Service Confirmation: Once you're ready to proceed, we'll finalise the details, set up a simple payment plan, and introduce you to your dedicated cleaning professional. Welcoming Your Cleaner: On the arranged date, your trusted cleaner arrives, familiar with your preferences and equipped to deliver the high standards expected in Mayfair residences. We pride ourselves on effortless onboarding, clear communication, and reliability—so your property stays immaculate without any hassle."
+        },
+        {
+          "question": "Do I have to be at home during the cleaning session?",
+          "answer": "It's entirely up to you. Many Mayfair clients prefer to provide access and return later to a thoroughly cleaned residence, while others choose to be present—or nearby—during the appointment. Whichever you decide, our team will respect your preferences and privacy, ensuring minimal disruption to your routine. If you won't be at home, we can arrange key collection or work seamlessly with your concierge or house manager, so your experience remains convenient and effortless."
+        },
+        {
+          "question": "How do you confirm availability and assign cleaners in Mayfair?",
+          "answer": "Once you enquire, we promptly verify both our availability and your preferred appointment slot. We take the time to discuss any specific care instructions or requirements you may have—whether it's the handling of period features, sensitive art collections, or particular scheduling needs. After we've matched you with the ideal team member for your property, you receive a detailed confirmation that includes your assigned specialist's name and credentials. All scheduling and payment arrangements are handled seamlessly, ensuring a smooth and transparent setup from the very start."
+        },
+        {
+          "question": "Can I book a trial cleaning session before committing to regular service?",
+          "answer": "Of course. Your first visit serves as a no-obligation trial, giving you the opportunity to experience our full-service approach. If our team meets your expectations, we'll seamlessly arrange ongoing visits at your preferred schedule. If you'd like to try a different housekeeper, we're happy to accommodate replacements to ensure the perfect fit for your home."
+        },
+        {
+          "question": "What is included in an end of tenancy cleaning service?",
+          "answer": "Our end of tenancy cleaning covers every detail required to return your Mayfair property to a pristine, move-in-ready state. Services include: Thorough cleaning of all rooms, including reception areas, bedrooms, kitchens, and bathrooms. Appliance cleaning, with the option for professional oven detailing. Interior windows, window sills, and frames dusted and polished. Full sanitisation of kitchens and bathrooms, including tiles, sinks, taps, and fittings. Vacuuming and mopping all floors and carpets, using approved solutions safe for delicate interiors. Wipe-down and treatment of all surfaces, including doors, skirting boards, and built-in cupboards. Removal of limescale, grease, and household residue. We provide all necessary eco-friendly cleaning products, and our experienced team is available at short notice to meet tight moving schedules. Each service is carried out by fully trained professionals, ensuring your property meets the highest standards for new tenants or handover."
+        },
+        {
+          "question": "What happens if I go on holiday or my regular cleaner is unavailable due to sickness or holiday?",
+          "answer": "We understand that plans change and that your trusted cleaner may occasionally be unavailable due to illness or a well-deserved break. If you're away on holiday or need to pause your service, simply let us know in advance—there's no charge for missed sessions. Should your regular cleaner be on leave, we're happy to arrange a vetted replacement to maintain your routine. Prefer to wait for your usual cleaner's return? No problem. We'll adjust your bookings or process a prompt refund as needed, ensuring your peace of mind throughout."
+        },
+        {
+          "question": "Can I cancel my regular domestic cleaning arrangement, and what is the notice period?",
+          "answer": "Of course. Should you ever wish to pause or end your cleaning service, we ask for one month's notice in line with our commitment to reliable scheduling for all Mayfair clients. We're also dedicated to ensuring the right fit—if your current cleaner isn't meeting expectations, let us know and we'll arrange a suitable replacement promptly, typically within a week. Simply reach out to our team, and we'll guide you through the cancellation process or any adjustments required."
+        },
+        {
+          "question": "What is involved in after builders cleaning services?",
+          "answer": "After builders cleaning is a thorough top-to-bottom service designed to restore your Mayfair home to perfect condition following renovations or construction work. Our specialist team handles everything from the finest dust on cornices to paint splatters and builders' residue on flooring and fixtures. What's included: Deep cleaning of all rooms, including removal of dust, plaster, and debris. Careful attention to delicate finishes, period moldings, and valuable fittings. Removal of stickers, paint spots, and excess grout from surfaces. Use of premium, non-abrasive cleaning agents to protect antique furniture, artwork, and luxury fixtures. Windows and glass polished to a streak-free shine. Full floor care, including parquet and marble restoration techniques. Careful odour neutralisation to remove any lingering dust or chemical smells. Comprehensive insurance coverage for your peace of mind. Our after builders cleaning is scheduled to fit your post-project timeline, with specialist cleaners trained to care for both heritage and contemporary Mayfair properties. A detailed cleaning report is provided after every visit, ensuring full transparency and the highest standards—so you can enjoy your renewed space, stress-free."
+        },
+        {
+          "question": "Do you coordinate with other household staff and service providers?",
+          "answer": "Certainly. We're experienced in working alongside housekeepers, property managers, security teams, and other service providers. We can coordinate schedules and ensure seamless service delivery."
+        },
+        {
+          "question": "Is it okay if my pets are at home during the cleaning?",
+          "answer": "Of course—your pets are welcome to stay at home while we work. Many of our Mayfair clients have beloved dogs, cats, or even more exotic companions. Just let us know about your pets and any special instructions they might need. We'll assign experienced, animal-friendly staff who understand how to keep your home both spotless and stress-free for your four-legged family members."
+        },
+        {
+          "question": "Can I put my cleaning service account on hold, and what happens if I do?",
+          "answer": "Yes, we understand that travel, renovations, or changing schedules may require you to pause your service. Simply let us know if you wish to place your account on hold for a month or longer—we'll adjust your booking accordingly with no extra fees. While we aim to provide continuity, please note that we may not always be able to guarantee the availability of your usual cleaner when you resume. However, we'll always ensure that any team member assigned is fully briefed on your preferences and property needs to maintain our signature standards."
+        },
+        {
+          "question": "What insurance coverage do you provide for Mayfair properties?",
+          "answer": "We carry comprehensive insurance coverage up to £2 million, specifically designed for high-value properties. This includes coverage for antiques, artwork, and luxury fixtures commonly found in Mayfair residences."
+        },
+        {
+          "question": "What insurance coverage is provided for commercial cleaning?",
+          "answer": "Our commercial cleaning services are backed by extensive insurance protection, tailored for businesses operating in prestigious areas like Mayfair. We maintain comprehensive public liability insurance—covering up to £10 million—ensuring your office, retail, and communal spaces are fully protected during every visit. This includes coverage for high-value fixtures, fittings, and office artwork. All commercial team members are carefully background checked and vetted, so you can be confident in secure and professional service at every level."
         }
-      ]
-    },
-    "faqs": [
-      {
-        "question": "Do you provide cleaning services throughout all Mayfair postcodes?",
-        "answer": "Yes, we serve all Mayfair areas including W1K and W1J postcodes. Our team is familiar with the unique requirements of different Mayfair locations, from the grand townhouses of Grosvenor Square to the luxury apartments of Bond Street."
-      },
-      {
-        "question": "Are your cleaning products safe for antique furniture and valuable items?",
-        "answer": "Absolutely. We use only premium, pH-neutral cleaning products that are safe for antiques, fine fabrics, and delicate surfaces. Our team is trained in specialist techniques for caring for period furniture, artwork, and luxury fixtures."
-      },
-      {
-        "question": "How do you ensure security and discretion in Mayfair properties?",
-        "answer": "All our Mayfair staff undergo comprehensive background checks and security clearance. We sign strict confidentiality agreements and operate with complete discretion. Our team understands the privacy requirements of high-profile residents."
-      },
-      {
-        "question": "Can you accommodate irregular schedules and last-minute requests?",
-        "answer": "Yes, we offer 24/7 availability for Mayfair clients. We understand that international schedules and business demands can be unpredictable, so we maintain flexible booking options and emergency response capability."
-      },
-      {
-        "question": "Do you coordinate with other household staff and service providers?",
-        "answer": "Certainly. We're experienced in working alongside housekeepers, property managers, security teams, and other service providers. We can coordinate schedules and ensure seamless service delivery."
-      },
-      {
-        "question": "What insurance coverage do you provide for Mayfair properties?",
-        "answer": "We carry comprehensive insurance coverage up to £2 million, specifically designed for high-value properties. This includes coverage for antiques, artwork, and luxury fixtures commonly found in Mayfair residences."
+      ],
+      "contact": {
+        "heading": "Contact Our Mayfair Cleaning Team",
+        "phone": "020 3342 5260",
+        "email": "sales@highqualityclean.co.uk",
+        "whatsapp": "+447824390336",
+        "hours": "Available 24/7 for Mayfair clients",
+        "emergencyNote": "Emergency and same-day services available for registered Mayfair clients"
       }
-    ],
-    "contact": {
-      "heading": "Contact Our Mayfair Cleaning Team",
-      "phone": "0203 342 5260",
-      "email": "sales@highqualityclean.co.uk",
-      "whatsapp": "+447824390336",
-      "hours": "Available 24/7 for Mayfair clients",
-      "emergencyNote": "Emergency and same-day services available for registered Mayfair clients"
     }
-  },
+  }
   "belgravia": {
     "name": "Belgravia",
     "postcodes": ["SW1W", "SW1X"],
@@ -3343,245 +3396,248 @@
       "emergencyNote": "Family emergency and school-time services available for registered clients"
     }
   },
-  "weybridge": {
-    "name": "Weybridge",
-    "postcodes": ["KT13"],
-    "region": "Surrey",
-    "heroImage": "/images/areas/weybridge.webp",
-    "heroImageAlt": "Luxury riverside living and prestigious St Georges Hill in affluent Weybridge",
-    "metaDescription": "Premium cleaning for Weybridge's executive homes and family residences. Specialist care for large properties, high-value interiors and lifestyle-focused clients.",
-    "pageTitle": "Weybridge Cleaning Services | Luxury Home Specialists",
-    "heroHeading": "Professional Cleaning Services in Weybridge, Surrey",
-    "heroSubheading": "Exclusive riverside luxury in Surrey's premier address. Professional cleaning for estate homes, river properties and executive residences including the prestigious St Georges Hill enclave.",
-    "aboutArea": {
-      "heading": "About Our Weybridge Cleaning Services",
-      "content": [
-        "Weybridge represents the pinnacle of Surrey luxury living, combining riverside elegance with some of the UK's most exclusive residential estates. This prestigious town, home to St Georges Hill and numerous celebrity residents, demands cleaning services that match its exceptional standards and sophisticated lifestyle requirements.",
-        "High Quality Clean's Weybridge specialists understand the unique demands of this affluent community, from substantial family estates to luxury riverside properties along the Thames and Wey. Our clients include successful business leaders, international executives, and high-profile residents who expect nothing less than perfection.",
-        "The area's reputation for discretion and exclusivity means our team is specially trained in privacy protocols and high-security procedures. Many properties feature valuable collections, extensive grounds, and luxury amenities that require specialist care and comprehensive maintenance approaches.",
-        "From the gated communities of St Georges Hill to the elegant riverside addresses, our WellClean™ Premium service is designed to support the sophisticated Surrey lifestyle while maintaining the absolute discretion and professionalism expected in one of the UK's most exclusive postal codes."
-      ]
-    },
-    "serviceAreas": {
-      "heading": "Our Weybridge Service Areas",
-      "areas": [
-        {
-          "name": "St Georges Hill",
-          "description": "Exclusive gated estate with luxury mansions and celebrity residences. Ultra-high-value properties requiring discretion, security protocols, and estate-level cleaning services."
-        },
-        {
-          "name": "Weybridge Riverside",
-          "description": "Prime Thames and Wey riverside properties with moorings and water access. Luxury homes requiring Specialised waterside property care and outdoor maintenance."
-        },
-        {
-          "name": "Oatlands Village",
-          "description": "Historic village area with luxury family homes and period properties. Exclusive residential community requiring heritage property care and family estate services."
-        },
-        {
-          "name": "Brooklands",
-          "description": "Prestigious residential area with modern luxury homes and historic significance. Executive properties requiring comprehensive cleaning and lifestyle support."
-        },
-        {
-          "name": "Weybridge Town Centre",
-          "description": "Elegant apartments and period conversions in the heart of Weybridge. Luxury residential properties requiring sophisticated urban cleaning services."
-        }
-      ]
-    },
-    "whyChooseUs": {
-      "heading": "Why Choose High Quality Clean for Weybridge",
-      "points": [
-        {
-          "title": "Ultra-High Net Worth Expertise",
-          "description": "Specialised experience serving UHNW individuals with absolute discretion, security consciousness, and the impeccable standards expected in Weybridge's exclusive community."
-        },
-        {
-          "title": "Estate-Level Service Delivery",
-          "description": "Comprehensive cleaning for substantial properties including multiple buildings, guest houses, staff quarters, and extensive grounds requiring coordinated maintenance."
-        },
-        {
-          "title": "Celebrity and VIP Protocols",
-          "description": "Enhanced security clearance, confidentiality agreements, and privacy protection suitable for high-profile residents including celebrities and business leaders."
-        },
-        {
-          "title": "Riverside Property Specialists",
-          "description": "Expert knowledge of waterside property maintenance, boat house care, and the unique requirements of Thames and Wey riverside luxury living."
-        },
-        {
-          "title": "Luxury Lifestyle Coordination",
-          "description": "Understanding of sophisticated entertaining requirements, household staff management, and the seamless service delivery expected in prestigious Surrey addresses."
-        },
-        {
-          "title": "Gated Community Access",
-          "description": "Authorized access and security protocol compliance for exclusive developments including St Georges Hill and other private residential estates."
-        }
-      ]
-    },
-    "services": {
-      "heading": "Services We Provide in Weybridge",
-      "categories": [
-        {
-          "name": "Luxury Estate Services",
-          "services": [
-            "Multi-building estate coordination",
-            "Main house comprehensive cleaning",
-            "Guest house and staff quarter maintenance",
-            "Pool house and leisure facility care",
-            "Wine cellar and storage area cleaning",
-            "Garage and vehicle storage maintenance"
-          ]
-        },
-        {
-          "name": "Riverside Property Care",
-          "services": [
-            "Waterside property specialist cleaning",
-            "Boat house and mooring area maintenance",
-            "River view window optimization",
-            "Outdoor entertaining space preparation",
-            "Garden room and conservatory care",
-            "Waterfront terrace and patio cleaning"
-          ]
-        },
-        {
-          "name": "Executive Lifestyle Support",
-          "services": [
-            "Home office and study specialist cleaning",
-            "Entertainment and reception area preparation",
-            "Executive wardrobe and clothing care",
-            "Business entertaining space coordination",
-            "Library and collection maintenance",
-            "Technology and media room care"
-          ]
-        },
-        {
-          "name": "VIP and Celebrity Services",
-          "services": [
-            "High-security property protocols",
-            "Privacy-protected service delivery",
-            "Celebrity family home maintenance",
-            "VIP guest accommodation preparation",
-            "Event preparation and post-event cleanup",
-            "Household staff coordination"
-          ]
-        }
-      ]
-    },
-    "testimonials": [
-      {
-        "quote": "Outstanding discretion and exceptional standards for our St Georges Hill property. They understand our security requirements while delivering impeccable results.",
-        "author": "Private Estate, St Georges Hill",
-        "rating": 5
+    "weybridge": {
+      "name": "Weybridge",
+      "postcodes": ["KT13"],
+      "region": "Surrey",
+      "heroImage": "/images/areas/weybridge.webp",
+      "heroImageAlt": "Luxury riverside living and prestigious St Georges Hill in affluent Weybridge",
+      "metaDescription": "Experience exclusive, discreet cleaning for Weybridge's luxury estates, riverside homes, and executive residences—including the prestigious St Georges Hill enclave.",
+      "pageTitle": "Weybridge Cleaning Services | Luxury Home Specialists",
+      "heroHeading": "Weybridge",
+      "heroSubheading": "Weybridge stands as Surrey's premier address—blending riverside elegance with the UK's most exclusive residential estates. In this prestigious town—home to St Georges Hill and discerning celebrity residents—exceptional cleaning is an absolute must.",
+      "aboutArea": {
+        "heading": "About Weybridge",
+        "content": [
+          "High Quality Clean's Weybridge team specializes in servicing luxury estates and riverside properties along the Thames and Wey—where discretion, security, and impeccable standards are simply expected.",
+          "Discretion and privacy are non-negotiable. Our staff are trained in confidentiality protocols and high-security procedures, so your valuable collections and luxury amenities are always in trusted hands.",
+          "From St Georges Hill's gated communities to elegant riverside addresses, our WellClean™ Premium service supports your sophisticated Surrey lifestyle—delivered with absolute discretion and professionalism in KT13's exclusive postcodes."
+        ]
       },
-      {
-        "quote": "Perfect for our riverside lifestyle. They maintain our waterside property beautifully and coordinate seamlessly with our household staff.",
-        "author": "Executive Family, Weybridge Riverside",
-        "rating": 5
+      "serviceAreas": {
+        "heading": "Our Weybridge Service Areas",
+        "areas": [
+          {
+            "name": "St Georges Hill",
+            "description": "Exclusive gated estate with strict security protocols, celebrity residents, and estate-level cleaning."
+          },
+          {
+            "name": "Weybridge Riverside",
+            "description": "Prime Thames and Wey riverside homes with moorings. Specialist care for waterside properties and outdoor entertaining spaces."
+          },
+          {
+            "name": "Oatlands Village",
+            "description": "Heritage property care and bespoke estate services for exclusive residents."
+          },
+          {
+            "name": "Brooklands",
+            "description": "Prestigious residential area with modern executive properties. Comprehensive cleaning for executive lifestyles."
+          },
+          {
+            "name": "Weybridge Town Centre",
+            "description": "Elegant apartments and period conversions in central Weybridge. Sophisticated urban cleaning for luxury residential properties."
+          }
+        ]
       },
-      {
-        "quote": "Truly premium service that matches our expectations. Professional, reliable, and they handle our extensive property with complete competence.",
-        "author": "Business Leader, Oatlands Village",
-        "rating": 5
-      }
-    ],
-    "localInfo": {
-      "transportLinks": [
-        "Weybridge Station (National Rail to London Waterloo)",
-        "Byfleet & New Haw Station (National Rail)",
-        "West Byfleet Station (National Rail)",
-        "M25 Junction 11 (A3/M25 access)"
+      "whyChooseUs": {
+        "heading": "Why Choose High Quality Clean for Weybridge?",
+        "points": [
+          {
+            "title": "Ultra-High Net Worth Expertise",
+            "description": "Serving UHNW individuals with utmost discretion, security, and the impeccable standards Weybridge expects."
+          },
+          {
+            "title": "Estate-Level Service Delivery",
+            "description": "Complete cleaning for substantial estates—including guest houses, staff quarters, and extensive grounds."
+          },
+          {
+            "title": "Celebrity and VIP Protocols",
+            "description": "Enhanced security clearances, confidentiality agreements, and privacy protection for high-profile clients."
+          },
+          {
+            "title": "Riverside Property Specialists",
+            "description": "In-depth knowledge of waterside property maintenance, boathouse care, and Thames/Wey riverside living."
+          },
+          {
+            "title": "Luxury Lifestyle Coordination",
+            "description": "Seamless support for sophisticated entertaining, staff management, and the service excellence your address deserves."
+          },
+          {
+            "title": "Gated Community Access",
+            "description": "Authorized, protocol-compliant access to St Georges Hill and other private developments."
+          }
+        ]
+      },
+      "services": {
+        "heading": "Services We Provide in Weybridge",
+        "categories": [
+          {
+            "name": "Luxury Estate Services",
+            "services": [
+              "Multi-building estate coordination",
+              "Main house comprehensive cleaning",
+              "Guest house & staff quarter care",
+              "Pool house & leisure facility cleaning",
+              "Wine cellar & storage area detailing",
+              "Garage & vehicle storage maintenance"
+            ]
+          },
+          {
+            "name": "Riverside Property Care",
+            "services": [
+              "Specialist cleaning for waterside homes",
+              "Boathouse & mooring maintenance",
+              "River-view window optimization",
+              "Outdoor entertaining space preparation",
+              "Garden room & conservatory care",
+              "Waterfront terrace & patio cleaning"
+            ]
+          },
+          {
+            "name": "Executive Lifestyle Support",
+            "services": [
+              "Home office & study cleaning",
+              "Reception & entertainment area prep",
+              "Executive wardrobe & clothing care",
+              "Business entertaining coordination",
+              "Library & collection maintenance",
+              "Technology & media room cleaning"
+            ]
+          },
+          {
+            "name": "VIP & Celebrity Services",
+            "services": [
+              "High-security property protocols",
+              "Privacy-protected service delivery",
+              "Celebrity family home care",
+              "VIP guest accommodation prep",
+              "Event setup & post-event clean-up",
+              "Household staff coordination"
+            ]
+          }
+        ]
+      },
+      "testimonials": [
+        {
+          "quote": "Outstanding discretion and exceptional standards for our St Georges Hill property. They understand our security requirements while delivering impeccable results.",
+          "author": "Private Estate, St Georges Hill",
+          "rating": 5
+        },
+        {
+          "quote": "Perfect for our riverside lifestyle. They maintain our waterside property beautifully and coordinate seamlessly with our household staff.",
+          "author": "Executive Family, Weybridge Riverside",
+          "rating": 5
+        },
+        {
+          "quote": "Truly premium service that matches our expectations. Professional, reliable, and they handle our extensive property with complete competence.",
+          "author": "Business Leader, Oatlands Village",
+          "rating": 5
+        }
       ],
-      "nearbyAttractions": [
-        "Brooklands Museum",
-        "Mercedes-Benz World",
-        "Painshill Park",
-        "RHS Garden Wisley",
-        "River Thames and River Wey",
-        "Weybridge Cricket Club"
-      ],
-      "shoppingAndDining": [
-        "Weybridge High Street luxury shopping",
-        "Exclusive restaurants and gastropubs",
-        "Brooklands Hotel and spa",
-        "Local artisanal producers",
-        "Premium delicatessens and wine merchants"
-      ]
-    },
-    "pricing": {
-      "heading": "Pricing & Packages for Weybridge Properties",
-      "note": "All Weybridge services include UHNW protocols, estate-level coordination, and celebrity-standard discretion.",
-      "packages": [
+      "localInfo": {
+        "transportLinks": [
+          "Weybridge Station (National Rail to London Waterloo)",
+          "Byfleet & New Haw Station (National Rail)",
+          "West Byfleet Station (National Rail)",
+          "M25 Junction 11 (A3/M25 access)"
+        ],
+        "nearbyAttractions": [
+          "Brooklands Museum",
+          "Mercedes-Benz World",
+          "Painshill Park",
+          "RHS Garden Wisley",
+          "River Thames and River Wey",
+          "Weybridge Cricket Club"
+        ],
+        "shoppingAndDining": [
+          "Weybridge High Street luxury shopping",
+          "Exclusive restaurants and gastropubs",
+          "Brooklands Hotel and spa",
+          "Local artisanal producers",
+          "Premium delicatessens and wine merchants"
+        ]
+      },
+      "pricing": {
+        "heading": "Pricing & Packages for Weybridge Properties",
+        "note": "All Weybridge services include UHNW protocols, estate-level coordination, and celebrity-standard discretion.",
+        "packages": [
+          {
+            "name": "Executive Residence Care",
+            "price": "From £120 per visit",
+            "duration": "4-6 hours",
+            "features": [
+              "Luxury property specialist cleaning",
+              "Riverside property expertise",
+              "Executive lifestyle accommodation",
+              "Security-conscious service delivery",
+              "Premium Surrey standards"
+            ]
+          },
+          {
+            "name": "Weybridge Estate Service",
+            "price": "From £185 per visit",
+            "duration": "6-8 hours",
+            "features": [
+              "Multi-building estate coordination",
+              "Comprehensive grounds maintenance",
+              "VIP household management",
+              "Celebrity discretion protocols",
+              "Luxury amenity specialist care"
+            ]
+          },
+          {
+            "name": "St Georges Hill Concierge",
+            "price": "Quote on application",
+            "duration": "Customized",
+            "features": [
+              "Ultra-high net worth service delivery",
+              "Complete estate management support",
+              "Celebrity-level privacy protection",
+              "24/7 concierge availability",
+              "Bespoke luxury lifestyle coordination"
+            ]
+          }
+        ]
+      },
+      "faqs": [
         {
-          "name": "Executive Residence Care",
-          "price": "From £120 per visit",
-          "duration": "4-6 hours",
-          "features": [
-            "Luxury property specialist cleaning",
-            "Riverside property expertise",
-            "Executive lifestyle accommodation",
-            "Security-conscious service delivery",
-            "Premium Surrey standards"
-          ]
+          "question": "Do you have access authorization for St Georges Hill and other gated communities?",
+          "answer": "Yes, our team is authorized and security-cleared for access to exclusive developments including St Georges Hill. We work within all required security protocols."
         },
         {
-          "name": "Weybridge Estate Service",
-          "price": "From £185 per visit",
-          "duration": "6-8 hours",
-          "features": [
-            "Multi-building estate coordination",
-            "Comprehensive grounds maintenance",
-            "VIP household management",
-            "Celebrity discretion protocols",
-            "Luxury amenity specialist care"
-          ]
+          "question": "Can you provide celebrity and VIP-level discretion?",
+          "answer": "Absolutely. All our Weybridge staff undergo enhanced confidentiality training and security clearance. We maintain absolute discretion for high-profile clients."
         },
         {
-          "name": "St Georges Hill Concierge",
-          "price": "Quote on application",
-          "duration": "Customized",
-          "features": [
-            "Ultra-high net worth service delivery",
-            "Complete estate management support",
-            "Celebrity-level privacy protection",
-            "24/7 concierge availability",
-            "Bespoke luxury lifestyle coordination"
-          ]
+          "question": "Are you experienced with large estate properties and multiple buildings?",
+          "answer": "Yes, we specialize in substantial estate properties including main houses, guest houses, staff quarters, and outbuildings requiring coordinated cleaning services."
+        },
+        {
+          "question": "Do you understand the requirements of riverside properties?",
+          "answer": "Certainly. We're experienced with Thames and Wey waterside properties including boat houses, moorings, and the unique maintenance requirements of riverside luxury living."
+        },
+        {
+          "question": "Can you coordinate with existing household staff and security teams?",
+          "answer": "Yes, we're experienced in working alongside housekeepers, estate managers, security personnel, and other staff common in Weybridge's luxury properties."
+        },
+        {
+          "question": "Can you assist with laundry, ironing, and changing bed linen?",
+          "answer": "Yes. Our Weybridge team handles all aspects of household upkeep—including managing laundry, refreshing bed linen, and professional ironing—to ensure every detail aligns with the lifestyle standards of our clients. Whether it's preparing guest suites or coordinating seasonal wardrobe care, we deliver meticulous attention across your home."
+        },
+        {
+          "question": "What insurance coverage do you provide for high-value properties?",
+          "answer": "We carry comprehensive insurance coverage specifically designed for ultra-high-value properties, including coverage for valuable collections and luxury amenities."
         }
-      ]
-    },
-    "faqs": [
-      {
-        "question": "Do you have access authorization for St Georges Hill and other gated communities?",
-        "answer": "Yes, our team is authorized and security-cleared for access to exclusive developments including St Georges Hill. We work within all required security protocols."
-      },
-      {
-        "question": "Can you provide celebrity and VIP-level discretion?",
-        "answer": "Absolutely. All our Weybridge staff undergo enhanced confidentiality training and security clearance. We maintain absolute discretion for high-profile clients."
-      },
-      {
-        "question": "Are you experienced with large estate properties and multiple buildings?",
-        "answer": "Yes, we specialize in substantial estate properties including main houses, guest houses, staff quarters, and outbuildings requiring coordinated cleaning services."
-      },
-      {
-        "question": "Do you understand the requirements of riverside properties?",
-        "answer": "Certainly. We're experienced with Thames and Wey waterside properties including boat houses, moorings, and the unique maintenance requirements of riverside luxury living."
-      },
-      {
-        "question": "Can you coordinate with existing household staff and security teams?",
-        "answer": "Yes, we're experienced in working alongside housekeepers, estate managers, security personnel, and other staff common in Weybridge's luxury properties."
-      },
-      {
-        "question": "What insurance coverage do you provide for high-value properties?",
-        "answer": "We carry comprehensive insurance coverage specifically designed for ultra-high-value properties, including coverage for valuable collections and luxury amenities."
+      ],
+      "contact": {
+        "heading": "Contact Our Weybridge Cleaning Team",
+        "phone": "020 3342 5260",
+        "email": "sales@highqualityclean.co.uk",
+        "whatsapp": "+447824390336",
+        "hours": "Available 24/7 for VIP and estate clients",
+        "emergencyNote": "Celebrity and UHNW emergency services available with enhanced security protocols"
       }
-    ],
-    "contact": {
-      "heading": "Contact Our Weybridge Cleaning Team",
-      "phone": "020 3342 5260",
-      "email": "sales@highqualityclean.co.uk",
-      "whatsapp": "+447824390336",
-      "hours": "Available 24/7 for VIP and estate clients",
-      "emergencyNote": "Celebrity and UHNW emergency services available with enhanced security protocols"
-    }
-  },
+    },
   "hersham": {
     "name": "Hersham",
     "postcodes": ["KT12"],
