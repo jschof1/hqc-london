@@ -1,0 +1,231 @@
+---
+import ServiceTemplate from '../../components/ServiceTemplate.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+const officeCleaningPage = {
+    service: {
+      hero: {
+        headline: "Office Cleaning Services London: Premium Commercial Cleaning",
+        subheadline: "Reliable, discreet, and thorough office cleaning. We create pristine workspaces that impress clients and boost employee productivity. Tailored schedules for London's busy professionals.",
+        badges: [
+          "Daily or Weekly Contracts",
+          "Vetted & Insured Staff",
+          "Out-of-Hours Service", 
+          "Dedicated Account Manager"
+        ],
+        cta: {
+          text: "Get A Commercial Quote",
+          url: "/contact/office-consultation"
+        }
+      },
+      trustbar: {
+        logos: [
+          {
+            src: "/images/logos/london-chamber-commerce.svg",
+            alt: "London Chamber"
+          },
+          {
+            src: "/images/logos/security-cleared-cleaning.svg",
+            alt: "Security Cleared"
+          },
+          {
+            src: "/images/logos/professional-services-certified.svg",
+            alt: "Certified Service"
+          },
+          {
+            src: "/images/logos/boutique-business-partners.svg",
+            alt: "Boutique Partners"
+          }
+        ],
+        reviews: [
+          {
+            text: "Our office has never looked better. The team is consistent and proactive.",
+            author: "Sarah M., Investment Firm",
+            rating: 5
+          },
+          {
+            text: "Reliable and discreet. They respect our security protocols perfectly.",
+            author: "James K., Law Firm",
+            rating: 5
+          },
+          {
+            text: "Great communication and excellent standards of cleaning.",
+            author: "Victoria L., Consultant",
+            rating: 5
+          }
+        ]
+      },
+      painpoint: {
+        headline: "A Clean Office is Good for Business",
+        text: "A messy workspace creates a poor first impression for clients and lowers team morale. You need a cleaning partner who is invisible but effective – ensuring your office is spotless every morning.",
+        painpoints: [
+          {
+            text: "Dusty desks and overflowing bins affecting morale"
+          },
+          {
+            text: "Unreliable cleaners missing shifts"
+          },
+          {
+            text: "Security concerns with rotating staff"
+          },
+          {
+            text: "Poor communication when things go wrong"
+          },
+          {
+            text: "Cleaning disrupting your working hours"
+          },
+          {
+            text: "Inconsistent standards in client-facing areas"
+          }
+        ]
+      },
+      serviceExplanation: {
+        headline: "Our Office Cleaning Standards",
+        steps: [
+          {
+            icon: "fas fa-desktop",
+            title: "Workstation Hygiene",
+            description: "Detailed cleaning of desks, monitors, and phones to reduce germ spread."
+          },
+          {
+            icon: "fas fa-users",
+            title: "Common Area Maintenance",
+            description: "Kitchens and breakout areas kept impeccable and stocked."
+          },
+          {
+            icon: "fas fa-restroom",
+            title: "Washroom Sanitization",
+            description: "High-frequency disinfection and restocking of washroom facilities."
+          },
+          {
+            icon: "fas fa-trash",
+            title: "Waste Management",
+            description: "Daily emptying of recycling and waste bins."
+          },
+          {
+            icon: "fas fa-door-open",
+            title: "Reception & Boardroom",
+            description: "Priority focus on client-facing areas to ensure the perfect first impression."
+          },
+          {
+            icon: "fas fa-shield-alt",
+            title: "Secure Protocols",
+            description: "Alarms set, doors locked, and strict key management."
+          }
+        ]
+      },
+      benefits: {
+        headline: "Commercial Cleaning You Can Rely On",
+        bullets: [
+          "Consistent, dedicated cleaning teams – no strangers",
+          "Custom schedules (Early morning, Evening, Weekend)",
+          "Full insurance and strict security vetting",
+          "Monthly quality audits by your account manager",
+          "Eco-friendly products for a healthier workplace",
+          "Competitive commercial rates",
+          "One point of contact for all communication",
+          "Supply management (Restocking loo roll, soap, etc.)"
+        ]
+      },
+      gallery: {
+        headline: "Pristine Professional Spaces",
+        images: [
+          {
+            src: "/images/services/office-cleaning-services/office-cleaning-services-1.webp",
+            alt: "Boardroom ready for business",
+            caption: "Boardroom perfection"
+          },
+          {
+            src: "/images/services/office-cleaning-services/office-cleaning-services-2.webp",
+            alt: "Spotless reception desk",
+            caption: "Welcoming reception areas"
+          },
+          {
+            src: "/images/services/office-cleaning-services/office-cleaning-services-3.webp",
+            alt: "Clean open plan office",
+            caption: "Productive workspaces"
+          },
+          {
+            src: "/images/services/office-cleaning-services/office-cleaning-services-4.webp",
+            alt: "Executive office clean",
+            caption: "Executive standards"
+          },
+          {
+            src: "/images/services/office-cleaning-services/office-cleaning-services-5.webp",
+            alt: "Office kitchen cleaning",
+            caption: "Hygienic staff kitchens"
+          },
+          {
+            src: "/images/services/office-cleaning-services/office-cleaning-services-6.webp",
+            alt: "Commercial cleaning team",
+            caption: "Professional uniformed staff"
+          }
+        ]
+      },
+      socialProof: {
+        headline: "Trusted by London Businesses",
+        reviews: [
+          {
+            text: "Switched to HQC last year and the difference is night and day. The office actually feels clean.",
+            author: "Marcus, Hedge Fund"
+          },
+          {
+            text: "They handle our alarm codes and keys with total professionalism. Trusted partners.",
+            author: "James, Tech Startup"
+          },
+          {
+            text: "Flexible around our late hours. Highly appreciated.",
+            author: "Sarah, Architecture Studio"
+          },
+          {
+            text: "Good value and great service.",
+            author: "Victoria, Agency"
+          }
+        ],
+        cta: {
+          text: "Get A Quote",
+          url: "/contact/office-consultation"
+        }
+      },
+      offer: {
+        headline: "New Contract Offer",
+        details: "Sign a 12-month office cleaning contract and get the first week free plus a complimentary deep clean of your carpets.",
+        cta: {
+          text: "Enquire Now",
+          url: "/contact/office-consultation?offer=b2b"
+        }
+      },
+      objections: {
+        headline: "FAQ: Office Cleaning",
+        faqs: [
+          {
+            question: "Do you offer daily cleaning?",
+            answer: "Yes, we offer daily, weekly, or bi-weekly schedules to suit your office needs."
+          },
+          {
+            question: "Are you insured?",
+            answer: "Fully insured for public liability and damage, specifically for commercial premises."
+          },
+          {
+            question: "Can you provide references?",
+            answer: "Yes, we can provide references from other London businesses we currently serve."
+          }
+        ]
+      },
+      finalCta: {
+        headline: "Upgrade Your Workplace Standard",
+        cta: {
+          text: "Book Site Visit",
+          url: "/contact/office-consultation"
+        },
+        subtext: "Let us handle the cleaning so you can focus on your business."
+      }
+    }
+  };
+---
+
+<Layout title="Office Cleaning Services London | High Quality Clean">
+  <Header />
+  <ServiceTemplate service={officeCleaningPage.service} />
+</Layout>

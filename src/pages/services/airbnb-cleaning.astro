@@ -1,0 +1,223 @@
+---
+import ServiceTemplate from '../../components/ServiceTemplate.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+const airbnbCleaningPage = {
+  service: {
+    hero: {
+      headline: "Airbnb Cleaning Service London: 5-Star Turnovers",
+      subheadline: "Professional Airbnb, short-let, and holiday rental cleaning. We guarantee hotel-standard presentation, linen service, and reliability to protect your Superhost status.",
+      badges: [
+        "Specialist Airbnb Cleaners",
+        "Linen Rental Available",
+        "Photo Reporting",
+        "Inventory Checks"
+      ],
+      cta: {
+        text: "Get A Host Quote",
+        url: "/contact/airbnb-consultation"
+      }
+    },
+    trustbar: {
+      logos: [
+        {
+          src: "/images/logos/airbnb-superhost-partner.svg",
+          alt: "Superhost Partner"
+        },
+        {
+          src: "/images/logos/london-hospitality-association.svg", 
+          alt: "Hospitality Member"
+        },
+        {
+          src: "/images/logos/property-management-certified.svg",
+          alt: "Property Management"
+        },
+        {
+          src: "/images/logos/short-let-specialists.svg",
+          alt: "Short Let Expert"
+        }
+      ],
+      reviews: [
+        {
+          text: "My ratings went up since using HQC. Guests love the cleanliness.",
+          author: "James, Superhost",
+          rating: 5
+        },
+        {
+          text: "They never miss a checkout window. Total peace of mind.",
+          author: "Sarah, Property Manager",
+          rating: 5
+        },
+        {
+          text: "The photo reports are brilliant since I manage the flat remotely.",
+          author: "Marcus, Host",
+          rating: 5
+        }
+      ]
+    },
+    painpoint: {
+      headline: "Guest Expectations are Higher Than Ever",
+      text: "In the competitive London market, a single hair in the bathroom or a missed spot on the counter leads to a 4-star review. You need a cleaning partner who understands hospitality standards, not just domestic cleaning.",
+      painpoints: [
+        {
+          text: "Missed turnover windows causing check-in disasters"
+        },
+        {
+          text: "Inconsistent standard affecting guest reviews"
+        },
+        {
+          text: "Lack of communication about damages or low supplies"
+        },
+        {
+          text: "Staging not matching your listing photos"
+        },
+        {
+          text: "Managing linen and laundry logistics"
+        },
+        {
+          text: "No feedback on the property condition"
+        }
+      ]
+    },
+    serviceExplanation: {
+      headline: "The Airbnb Turnover Process",
+      steps: [
+        {
+          icon: "fas fa-clock",
+          title: "Timely Arrival",
+          description: "We arrive promptly after checkout to ensure the property is ready well before the next guest."
+        },
+        {
+          icon: "fas fa-search-plus",
+          title: "Damage & Theft Check",
+          description: "We inspect for damages or missing items immediately and report to you/your platform."
+        },
+        {
+          icon: "fas fa-bed",
+          title: "Hotel-Style Bed Making",
+          description: "Crisp hospital corners, perfectly fluffed pillows, and pristine presentation."
+        },
+        {
+          icon: "fas fa-bath",
+          title: "Spa Bathroom Reset",
+          description: "Deep sanitization, lime-scale removal, and perfect towel arrangement."
+        },
+        {
+          icon: "fas fa-camera",
+          title: "Staging & Photos",
+          description: "We arrange cushions and throws to match your photos, and send you confirmation images."
+        },
+        {
+          icon: "fas fa-archive",
+          title: "Restocking Essentials",
+          description: "Replenishing toilet roll, toiletries, coffee, and other guest essentials."
+        }
+      ]
+    },
+    benefits: {
+      headline: "Why Hosts Love Us",
+      bullets: [
+        "Guaranteed reliability - we never cancel a turnover",
+        "Hotel-quality linen hire and laundering service",
+        "Before/After photos provided for every stay",
+        "7-day support team for last-minute bookings",
+        "Key management and safe access protocols",
+        "Maintenance reporting (we spot the leak before the guest does)",
+        "Experience with Airbnb, Booking.com, and VRBO requirements",
+        "Consistently high cleaning ratings for your listing"
+      ]
+    },
+    gallery: {
+      headline: "Gallery: Guest-Ready Properties",
+      images: [
+        {
+          src: "/images/services/airbnb-turnover/airbnb-turnover-1.webp",
+          alt: "Staged bedroom",
+          caption: "Inviting bedrooms"
+        },
+        {
+          src: "/images/services/airbnb-turnover/airbnb-turnover-2.webp",
+          alt: "Clean kitchen",
+          caption: "Sparkling kitchens"
+        },
+        {
+          src: "/images/services/airbnb-turnover/airbnb-turnover-3.webp",
+          alt: "Sanitized bathroom",
+          caption: "Immaculate bathrooms"
+        },
+        {
+          src: "/images/services/airbnb-turnover/airbnb-turnover-4.webp",
+          alt: "Living room setup",
+          caption: "Photo-ready living areas"
+        },
+        {
+          src: "/images/services/airbnb-turnover/airbnb-turnover-5.webp",
+          alt: "Turnover team",
+          caption: "Efficient turnover teams"
+        },
+        {
+          src: "/images/services/airbnb-turnover/airbnb-turnover-6.webp",
+          alt: "Welcome pack",
+          caption: "Perfect presentation"
+        }
+      ]
+    },
+    socialProof: {
+      headline: "Host Success Stories",
+      reviews: [
+        {
+          text: "HQC helped me achieve Superhost status in 3 months. The cleaning is the one thing I don't worry about.",
+          author: "James, Kensington"
+        },
+        {
+          text: "They manage my entire portfolio of 5 flats. Professional, fast, and great quality.",
+          author: "Victoria, Property Investor"
+        }
+      ],
+      cta: {
+        text: "Get A Quote",
+        url: "/contact/airbnb-consultation"
+      }
+    },
+    offer: {
+      headline: "New Host Offer",
+      details: "Sign up for regular turnovers and get your first clean at 50% off.",
+      cta: {
+        text: "Claim Offer",
+        url: "/contact/airbnb-consultation?offer=host50"
+      }
+    },
+    objections: {
+      headline: "FAQ: Airbnb Cleaning",
+      faqs: [
+        {
+          question: "Can you provide linen?",
+          answer: "Yes, we offer a full linen rental and laundry service with hotel-quality sheets and towels."
+        },
+        {
+          question: "Do you cover weekends and bank holidays?",
+          answer: "Yes, we operate 7 days a week, 365 days a year to support your booking calendar."
+        },
+        {
+          question: "How do you handle keys?",
+          answer: "We can use key safes, collect from agents, or hold a set securely. We also work with smart locks."
+        }
+      ]
+    },
+    finalCta: {
+      headline: "Automate Your Cleaning",
+      cta: {
+        text: "Book Your First Clean",
+        url: "/contact/airbnb-consultation"
+      },
+      subtext: "Focus on your guests, we'll handle the rest."
+    }
+  }
+};
+---
+
+<Layout title="Airbnb Cleaning Service London | High Quality Clean">
+  <Header />
+  <ServiceTemplate service={airbnbCleaningPage.service} />
+</Layout>

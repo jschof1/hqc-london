@@ -1,0 +1,245 @@
+---
+import ServiceTemplate from '../../components/ServiceTemplate.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+const deepCleaningPage = {
+    service: {
+      hero: {
+        headline: "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+        subheadline: "A complete reset for your home. We go beyond standard cleaning with our WellClean™ method – combining deep hygiene protocols with wellness-grade products. Perfect for spring cleaning, post-renovation, or just a fresh start.",
+        badges: [
+          "Complete Home Reset",
+          "Wellness-Grade Products", 
+          "HSE Certified Protocols",
+          "Fully Insured & Vetted"
+        ],
+        cta: {
+          text: "Book Your Deep Clean",
+          url: "/contact/deep-clean"
+        }
+      },
+      trustbar: {
+        logos: [
+          {
+            src: "/images/checkatrade.png",
+            alt: "Checkatrade Approved"
+          },
+          {
+            src: "/images/logos/london-spa-association.svg",
+            alt: "Wellness Standard Cleaning"
+          },
+          {
+            src: "/images/logos/hse-compliant.svg",
+            alt: "HSE Compliant Protocols"
+          },
+          {
+            src: "/images/logos/eco-wellness-certified.svg",
+            alt: "Eco-Friendly Certified"
+          }
+        ],
+        reviews: [
+          {
+            text: "The WellClean deep clean transformed my home. It feels physically lighter and the air quality has noticeably improved.",
+            author: "Sarah M., Kensington",
+            rating: 5
+          },
+          {
+            text: "Incredible attention to detail. They reached places I haven't seen in years. Truly a premium service.",
+            author: "James P., Chelsea",
+            rating: 5
+          },
+          {
+            text: "Worth every penny for the peace of mind. My home is finally clinically clean but smells like a spa.",
+            author: "Emma W., Hampstead",
+            rating: 5
+          }
+        ]
+      },
+      painpoint: {
+        headline: "Is Your Current 'Deep Clean' Actually Deep?",
+        text: "Most cleaners wipe surfaces and vacuum. But true deep cleaning requires reaching the hidden dust, sanitizing neglected areas, and refreshing the entire atmosphere of your home. Standard cleaning often misses the details that matter most for hygiene and wellbeing.",
+        painpoints: [
+          {
+            text: "Hidden dust and allergens remain in carpets, upholstery, and behind furniture"
+          },
+          {
+            text: "Limescale and grime build up in bathrooms and kitchens despite regular cleaning"
+          },
+          {
+            text: "Chemical odors from harsh products disrupt your home's peaceful atmosphere"
+          },
+          {
+            text: "Standard cleaners lack the tools and training for a true top-to-bottom reset"
+          },
+          {
+            text: "Inconsistent results leave you feeling like the job wasn't finished"
+          },
+          {
+            text: "Stress of managing cleaners who don't understand your high standards"
+          }
+        ]
+      },
+      serviceExplanation: {
+        headline: "The WellClean™ Deep Cleaning Method",
+        steps: [
+          {
+            icon: "fas fa-search",
+            title: "Comprehensive Home Assessment", 
+            description: "We start with a walkthrough to identify high-traffic areas, specific concerns, and delicate surfaces requiring special care."
+          },
+          {
+            icon: "fas fa-hands-bubbles",
+            title: "Top-to-Bottom Hygiene Reset",
+            description: "From ceiling corners to skirting boards, we clean every inch. This includes inside cupboards, behind appliances, and detailed light fixture cleaning."
+          },
+          {
+            icon: "fas fa-wind",
+            title: "Air Quality & Wellness Focus",
+            description: "We use HEPA-filter vacuums and eco-wellness products to remove allergens and improve indoor air quality, leaving your home healthier."
+          },
+          {
+            icon: "fas fa-pump-soap",
+            title: "Sanitization of High-Touch Areas",
+            description: "Door handles, switches, and remotes are disinfected using hospital-grade but safe protocols to ensure a hygienic environment."
+          },
+          {
+            icon: "fas fa-spray-can",
+            title: "Fabric & Upholstery Refresh",
+            description: "Gentle steaming and refreshing of sofas, curtains, and carpets to lift surface dust and revitalize fabrics."
+          },
+          {
+            icon: "fas fa-check-double",
+            title: "Final White-Glove Inspection",
+            description: "A supervisor conducts a 50-point quality check to guarantee our premium standards are met before we hand the home back to you."
+          }
+        ]
+      },
+      benefits: {
+        headline: "Why Choose Our Deep House Cleaning Service?",
+        bullets: [
+          "Experience a true 'spring clean' feeling any time of year",
+          "Improve your home's air quality and hygiene levels significantly",
+          "Protect your family with eco-friendly, wellness-grade cleaning products",
+          "Save days of hard work with our efficient, multi-person professional teams",
+          "Enjoy a home that feels brand new, fresh, and revitalizing",
+          "Extend the life of your carpets, furniture, and fixtures",
+          "Perfect for pre-event preparation or post-party restoration",
+          "Trusted by London's most discerning homeowners for reliable excellence",
+          "Fully guaranteed service – we don't leave until you're delighted",
+          "Secure, vetted staff who respect your privacy and property"
+        ]
+      },
+      gallery: {
+        headline: "Deep Cleaning Results You Can See & Feel",
+        images: [
+          {
+            src: "/images/services/well-clean/well-clean-1.webp",
+            alt: "Kitchen deep clean transformation",
+            caption: "Restoring kitchens to showroom brilliance"
+          },
+          {
+            src: "/images/services/well-clean/well-clean-2.webp", 
+            alt: "Bathroom sanitization and limescale removal",
+            caption: "Spa-like hygiene for your bathrooms"
+          },
+          {
+            src: "/images/services/well-clean/well-clean-3.webp",
+            alt: "Living area dust-free perfection",
+            caption: "Dust-free living spaces that breathe"
+          },
+          {
+            src: "/images/services/well-clean/well-clean-4.webp",
+            alt: "Bedroom deep clean for better sleep",
+            caption: "Sanitized bedrooms for a restful sleep environment"
+          },
+          {
+            src: "/images/services/well-clean-advisory/gallery-1.jpg",
+            alt: "Detailed corner and skirting board cleaning",
+            caption: "We reach the corners others miss"
+          },
+          {
+            src: "/images/services/well-clean-advisory/gallery-2.jpg",
+            alt: "Eco-friendly product application",
+            caption: "Wellness-grade products safe for your home"
+          }
+        ]
+      },
+      socialProof: {
+        headline: "What Londoners Say About Our Deep Cleaning",
+        reviews: [
+          {
+            text: "I didn't realize how dusty my house was until High Quality Clean finished. The air feels different. It's the best investment I've made for my home this year.",
+            author: "Victoria S., Belgravia"
+          },
+          {
+            text: "Professional, polite, and incredibly thorough. They cleaned behind the fridge, the top of the wardrobes – everywhere. Highly recommend.",
+            author: "Michael R., Wandsworth"
+          },
+          {
+            text: "A completely different level of service. The 'WellClean' concept is real – the house felt therapeutic afterwards, not just clean.",
+            author: "Jessica T., Islington"
+          },
+          {
+            text: "Used them for a post-renovation deep clean. They removed dust I thought was permanent. The place sparkles now.",
+            author: "David L., Richmond"
+          }
+        ],
+        cta: {
+          text: "Book Your Deep Clean Today",
+          url: "/contact/deep-clean"
+        }
+      },
+      offer: {
+        headline: "Spring Clean Special Offer",
+        details: "Book a comprehensive Deep Clean this month and receive a complimentary 'Wellness Home Refresh' pack (worth £75), including eco-friendly air purifiers and a maintenance guide.",
+        cta: {
+          text: "Claim Your Offer",
+          url: "/contact/deep-clean?offer=spring"
+        }
+      },
+      objections: {
+        headline: "Common Questions About Deep Cleaning",
+        faqs: [
+          {
+            question: "How long does a deep clean take?",
+            answer: "It depends on the size and condition of your property, but typically a team of 2-3 professionals will settle in for a full day (6-8 hours) to ensure every detail is addressed."
+          },
+          {
+            question: "Do I need to be home?",
+            answer: "Not necessarily. We can arrange key collection or entry via concierge. Our team is fully vetted and insured for your peace of mind."
+          },
+          {
+            question: "What is included in the deep clean?",
+            answer: "Everything from inside kitchen cupboards (if emptied) and appliances, to descaling bathrooms, washing skirting boards, cleaning inside windows, and deep vacuuming all upholstery."
+          },
+          {
+            question: "Do you bring your own equipment?",
+            answer: "Yes, we bring all professional equipment and our specialized wellness-grade cleaning products. You don't need to provide anything."
+          },
+          {
+            question: "Can you clean carpets and upholstery too?",
+            answer: "Yes, we can add professional carpet and upholstery steam cleaning to your deep clean package for a complete soft furnishing restoration."
+          },
+          {
+            question: "How is this different from a regular weekly clean?",
+            answer: "A regular clean maintains cleanliness. A deep clean restores it. We tackle the build-up that regular cleaning misses – limescale, deep dust, grease, and hidden grime."
+          }
+        ]
+      },
+      finalCta: {
+        headline: "Ready for a Fresh Start?",
+        cta: {
+          text: "Get Your Deep Clean Quote",
+          url: "/contact/deep-clean"
+        },
+        subtext: "Experience the difference of a true professional deep clean. Your home deserves a WellClean reset."
+      }
+    }
+  };
+---
+
+<Layout title="Deep House Cleaning Service | High Quality Clean">
+  <Header />
+  <ServiceTemplate service={deepCleaningPage.service} />
+</Layout>

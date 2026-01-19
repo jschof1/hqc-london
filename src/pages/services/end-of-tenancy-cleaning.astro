@@ -1,0 +1,140 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import ServiceTemplate from '../../components/ServiceTemplate.astro';
+
+const endOfTenancyCleaningService = {
+  hero: {
+    headline: "End of Tenancy Cleaning London: Guaranteed Deposit Return",
+    subheadline: "Professional move-out cleaning that passes the strictest inventory checks. We work with London's leading estate agents to ensure your property is spotless.",
+    badges: ["100% Deposit Back Guarantee", "Agency Approved Checklists", "Free Re-Clean Promise", "Same Day Service"],
+    cta: {
+      text: "Get Your Quote Now",
+      url: "#quote"
+    }
+  },
+  trustbar: {
+    logos: [
+      {
+        src: "/images/checkatrade.png",
+        alt: "Checkatrade Verified"
+      },
+      {
+        src: "/images/google.png",
+        alt: "Google 5-Star Rated"
+      },
+      {
+        src: "/images/logos/london-landlord-association.svg",
+        alt: "Landlord Association Trusted"
+      }
+    ],
+    reviews: [
+      {
+        text: "The inventory clerk passed the flat immediately. Best money I spent on the move.",
+        author: "Claire, Notting Hill",
+        rating: 5
+      },
+      {
+        text: "My landlord is notoriously fussy, but even he was impressed. Full deposit returned.",
+        author: "Daniel, Shoreditch",
+        rating: 5
+      }
+    ]
+  },
+  painpoint: {
+    headline: "Don't Risk Your Deposit on Poor Cleaning",
+    text: "Cleaning disputes are the #1 reason for deposit deductions in London. Estate agent inventory checks are forensic – they check inside ovens, behind washing machines, and top of door frames. A standard clean isn't enough."
+  },
+  serviceExplanation: {
+    headline: "Our Agency-Approved Cleaning Checklist",
+    steps: [
+      {
+        icon: "fas fa-check-double",
+        title: "Kitchen Deep Clean",
+        description: "Degreasing oven/hob, descaling sink/taps, cleaning inside/out of all cupboards, fridge/freezer, and washing machine."
+      },
+      {
+        icon: "fas fa-bath",
+        title: "Bathroom Sanitization",
+        description: "Descaling shower heads and screens, scrubbing tiles and grout, polishing mirrors and chrome fixtures."
+      },
+      {
+        icon: "fas fa-home",
+        title: "All Rooms & General",
+        description: "Skirting boards, switches, sockets, inside windows, doors/frames rubbed down, cobwebs removed."
+      },
+      {
+        icon: "fas fa-broom",
+        title: "Floors & Carpets",
+        description: "Professional vacuuming and mopping. (Steam carpet cleaning available as an add-on)."
+      }
+    ]
+  },
+  benefits: {
+    headline: "Why London Tenants & Landlords Trust Us",
+    bullets: [
+      "100% Deposit Back Guarantee on cleaning issues",
+      "We re-clean for FREE if the inventory check fails",
+      "We provide the professional receipt required by your tenancy agreement",
+      "Short notice and weekend availability for last-minute moves",
+      "Fully equipped teams with industrial cleaning supplies",
+      "Experience with check-out criteria of Foxtons, Savills, Knight Frank, etc."
+    ]
+  },
+  socialProof: {
+    headline: "Success Stories",
+    reviews: [
+      {
+        text: "Saved my deposit. The agent said it was the cleanest she'd seen the flat in years.",
+        author: "Sophie, Fulham"
+      },
+      {
+        text: "Professional, efficient, and they honoured the guarantee when the clerk found a small spot missed - came back same day.",
+        author: "Marcus, Canary Wharf"
+      }
+    ],
+    cta: {
+      text: "Get A Quote",
+      url: "#quote"
+    }
+  },
+  offer: {
+    headline: "Move-Out Special",
+    details: "Book your End of Tenancy clean this week and get 50% off professional carpet steam cleaning.",
+    cta: {
+      text: "Claim Offer",
+      url: "#quote"
+    }
+  },
+  objections: {
+    headline: "FAQ: End of Tenancy",
+    faqs: [
+      {
+        question: "Do you guarantee the deposit return?",
+        answer: "We guarantee the cleaning portion of your deposit. If an inventory clerk finds a cleaning issue, we return to fix it for free."
+      },
+      {
+        question: "How much does it cost?",
+        answer: "Prices depend on property size. Contact us for a fixed-price quote based on your number of bedrooms and bathrooms."
+      },
+      {
+        question: "Do you clean the oven?",
+        answer: "Yes, professional oven cleaning is always included in our End of Tenancy packages."
+      }
+    ]
+  },
+  finalCta: {
+    headline: "Secure Your Full Deposit Today",
+    cta: {
+      text: "Book End of Tenancy Clean",
+      url: "#quote"
+    },
+    subtext: "Professional cleaning that passes the check-out, every time."
+  }
+};
+---
+
+<Layout title="End of Tenancy Cleaning London | High Quality Clean">
+  <Header />
+  <ServiceTemplate service={endOfTenancyCleaningService} />
+</Layout>

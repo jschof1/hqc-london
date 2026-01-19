@@ -1,0 +1,284 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import areaData from '../../../data/area-data.json';
+import Header from '../../../components/Header.astro';
+
+export async function getStaticPaths() {
+  const areas = Object.keys(areaData);
+  return areas.map(areaKey => {
+    // Convert camelCase to kebab-case for URL slugs if needed, or use the key if it matches
+    const slug = areaKey.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+    return {
+      params: { area: slug },
+      props: { areaInfo: areaData[areaKey], areaKey }
+    };
+  });
+}
+
+const { area } = Astro.params;
+const { areaInfo, areaKey } = Astro.props;
+
+// SEO Title & Description Overrides
+const pageTitle = `Domestic Cleaners ${areaInfo.name} | Premium House Cleaning`;
+const metaDescription = `Looking for reliable cleaners near ${areaInfo.name}? We provide high-end weekly housekeeping, deep cleaning, and ironing services in ${areaInfo.postcodes.join(', ')}. Book your local cleaner today.`;
+
+// JSON-LD Schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `High Quality Clean ${areaInfo.name}`,
+  "image": areaInfo.heroImage,
+  "@id": `https://highqualityclean.co.uk/locations/london/${area}`,
+  "url": `https://highqualityclean.co.uk/locations/london/${area}`,
+  "telephone": "020 3342 5260",
+  "priceRange": "£££",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressRegion": "Greater London",
+    "addressCountry": "UK"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": [areaInfo.name, ...areaInfo.postcodes]
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5074, // Default London, would be better with specific coords
+      "longitude": -0.1278
+    },
+    "geoRadius": "5000"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "20:00"
+  }
+};
+
+// Helper to get nearby areas (simple logic: same region or just next keys)
+const allAreas = Object.values(areaData);
+const nearbyAreas = allAreas
+  .filter(a => a.name !== areaInfo.name && a.region === areaInfo.region)
+  .slice(0, 4);
+
+// Helper for stars
+function repeat(count) {
+  return Array.from({ length: count }, (_, i) => i);
+}
+---
+
+<Layout title={pageTitle} description={metaDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Header />
+
+  <main class="page-transition pt-16 overflow-x-hidden">
+    
+    <!-- Hero Section: Maid2Clean Style Hook -->
+    <section class="relative bg-navy py-20 lg:py-28">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src={areaInfo.heroImage} alt={`Domestic cleaners in ${areaInfo.name}`} class="w-full h-full object-cover opacity-20" />
+        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/70"></div>
+      </div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block py-1 px-3 rounded-full bg-gold/20 border border-gold/40 text-gold text-sm font-medium mb-6">
+            <i class="fas fa-map-marker-alt mr-2"></i>Serving {areaInfo.name} & {areaInfo.postcodes.join(', ')}
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            Domestic Cleaners in {areaInfo.name}
+          </h1>
+          <p class="text-xl text-white/90 leading-relaxed mb-8">
+            Looking for reliable cleaners near {areaInfo.name}? We provide 5-star weekly housekeeping and deep cleaning services. Fully vetted, insured, and trusted by local residents.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#quote" class="inline-flex items-center justify-center rounded-full bg-gold text-navy px-8 py-4 text-base font-bold hover:bg-white transition-colors shadow-lg shadow-gold/20">
+              Get A Quote
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center rounded-full border border-white/30 text-white px-8 py-4 text-base font-medium hover:bg-white/10 transition-colors backdrop-blur-sm">
+              View Services
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Clarity Cards -->
+        <div class="grid gap-4">
+          <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy text-xl shrink-0">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div>
+              <h3 class="text-white font-bold">Weekly Cleaning</h3>
+              <p class="text-white/70 text-sm">Regular housekeeping from the same dedicated cleaner.</p>
+            </div>
+          </div>
+          <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy text-xl shrink-0">
+              <i class="fas fa-sparkles"></i>
+            </div>
+            <div>
+              <h3 class="text-white font-bold">One-Off Deep Cleans</h3>
+              <p class="text-white/70 text-sm">Spring cleaning, end of tenancy, and post-renovation.</p>
+            </div>
+          </div>
+          <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy text-xl shrink-0">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <div>
+              <h3 class="text-white font-bold">Ironing Service</h3>
+              <p class="text-white/70 text-sm">Professional ironing included in your hourly service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Differentiation -->
+    <section class="py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Why choose us over a standard agency?</h2>
+          <p class="text-ink/70 max-w-2xl mx-auto">
+            Most agencies just send a cleaner. We provide a managed service that guarantees quality, reliability, and peace of mind for {areaInfo.name} residents.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-mist rounded-2xl p-8 border border-gold/20">
+            <i class="fas fa-user-shield text-4xl text-gold mb-6"></i>
+            <h3 class="font-serif text-xl text-navy mb-3">Vetted & Insured</h3>
+            <p class="text-ink/70">
+              Every cleaner undergoes strict background checks, reference verification, and is fully insured. You can trust us with your keys and your home.
+            </p>
+          </div>
+          <div class="bg-mist rounded-2xl p-8 border border-gold/20">
+            <i class="fas fa-medal text-4xl text-gold mb-6"></i>
+            <h3 class="font-serif text-xl text-navy mb-3">Premium Standards</h3>
+            <p class="text-ink/70">
+              We don't just "wipe down". Our deeper cleaning protocols ensure hygiene and attention to detail that standard cleaners miss.
+            </p>
+          </div>
+          <div class="bg-mist rounded-2xl p-8 border border-gold/20">
+            <i class="fas fa-heart text-4xl text-gold mb-6"></i>
+            <h3 class="font-serif text-xl text-navy mb-3">Wellness Focused</h3>
+            <p class="text-ink/70">
+              We use eco-friendly, wellness-grade products that are safe for pets and children, improving your home's air quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local Info & Internal Linking -->
+    <section class="py-20 bg-mist">
+      <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-serif text-3xl text-navy mb-6">Cleaning Services in {areaInfo.name}</h2>
+          <div class="prose prose-lg text-ink/80 mb-8">
+            <p>
+              We have been serving the {areaInfo.name} ({areaInfo.postcodes[0]}) area for years. Our local team understands the specific needs of {areaInfo.propertyType || "local"} properties, ensuring a tailored service that respects your home.
+            </p>
+            <p>
+              Whether you are near {areaInfo.localInfo.nearbyAttractions[0]} or {areaInfo.localInfo.nearbyAttractions[1]}, our cleaners are locally based for reliability.
+            </p>
+          </div>
+          
+          <h3 class="font-serif text-xl text-navy mb-4">Areas Nearby</h3>
+          <ul class="grid grid-cols-2 gap-2">
+            {nearbyAreas.map(nearby => {
+             const nearbySlug = nearby.name.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+             return (
+              <li>
+                <a href={`/locations/london/${nearbySlug}`} class="text-gold hover:text-navy transition-colors font-medium">
+                  <i class="fas fa-map-marker-alt mr-2 text-xs"></i>
+                  Cleaners in {nearby.name}
+                </a>
+              </li>
+            )})}
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-soft">
+          <h3 class="font-serif text-xl text-navy mb-6">Service Area</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-gold mt-1"></i>
+              <div>
+                <strong class="block text-navy">Postcodes Covered</strong>
+                <span class="text-ink/70">{areaInfo.postcodes.join(', ')}</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-gold mt-1"></i>
+              <div>
+                <strong class="block text-navy">Service Types</strong>
+                <span class="text-ink/70">Regular, Deep Clean, End of Tenancy</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-gold mt-1"></i>
+              <div>
+                <strong class="block text-navy">Availability</strong>
+                <span class="text-ink/70">Mon-Sun, 7am - 8pm</span>
+              </div>
+            </li>
+          </ul>
+          
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <p class="text-sm text-center text-ink/60 mb-4">Rated 5/5 by local residents</p>
+            <a href="#quote" class="block w-full py-3 bg-navy text-white text-center rounded-lg hover:bg-navy/90 transition">
+              Get A Quote for {areaInfo.name}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="font-serif text-3xl text-navy text-center mb-12">What {areaInfo.name} Residents Say</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          {areaInfo.testimonials.map(t => (
+            <div class="p-6 bg-mist rounded-xl">
+              <div class="flex text-gold mb-3">
+                {repeat(t.rating).map(() => <i class="fas fa-star"></i>)}
+              </div>
+              <p class="text-ink/80 italic mb-4">"{t.quote}"</p>
+              <p class="text-sm font-bold text-navy">{t.author}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section id="quote" class="py-20 bg-navy">
+      <div class="mx-auto max-w-3xl px-6 text-center">
+        <h2 class="font-serif text-3xl md:text-4xl text-gold mb-6">Book Your Cleaner in {areaInfo.name}</h2>
+        <p class="text-white/80 mb-8">
+          Ready to experience a premium clean? Contact our local team today.
+        </p>
+        <a href="/contact" class="inline-block bg-gold text-navy font-bold py-4 px-12 rounded-full hover:bg-white transition text-lg">
+          Get A Quick Quote
+        </a>
+      </div>
+    </section>
+
+  </main>
+</Layout>
