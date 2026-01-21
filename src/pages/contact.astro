@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
+import { siteSettings } from '../data/site-config.js';
 ---
 
 <Layout 
@@ -170,13 +171,9 @@ import HeroSection from '../components/HeroSection.astro';
         </div>
 
         <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          class="bg-mist rounded-2xl p-8 md:p-10 border border-gold/50 shadow-soft"
+          id="contact-form"
+          class="bg-mist rounded-2xl p-8 md:p-10 border border-gold/50 shadow-soft transition-all duration-300"
         >
-          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
-          <input type="hidden" name="subject" value="Contact Form Submission from High Quality Clean Website">
-          
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <label class="block">
               <span class="block mb-2 text-navy font-medium">Full Name *</span>
@@ -262,6 +259,70 @@ import HeroSection from '../components/HeroSection.astro';
             </button>
           </div>
         </form>
+
+        <div id="contact-success" class="hidden bg-mist rounded-2xl p-12 text-center border border-gold/50 shadow-soft animate-fade-in">
+          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-check text-gold text-4xl"></i>
+          </div>
+          <h3 class="font-serif text-3xl font-bold text-navy mb-4">Message Sent</h3>
+          <p class="text-ink/70 text-lg mb-8">
+            Thank you for reaching out. We've received your message and our team will get back to you as soon as possible.
+          </p>
+          <button 
+            onclick="window.location.reload()" 
+            class="text-gold hover:text-navy transition-colors font-semibold"
+          >
+            Send another message
+          </button>
+        </div>
+
+        <script define:vars={{ webhookUrl: siteSettings.quickFormWebhook }}>
+          const form = document.getElementById('contact-form');
+          const successMessage = document.getElementById('contact-success');
+          const submitBtn = form?.querySelector('button[type="submit"]');
+          const originalBtnText = submitBtn?.innerHTML;
+
+          form?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (submitBtn) {
+              submitBtn.disabled = true;
+              submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+            }
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            data.source = 'contact_page';
+            data.timestamp = new Date().toISOString();
+
+            try {
+              const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+              });
+
+              if (response.ok) {
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              } else {
+                throw new Error('Submission failed');
+              }
+            } catch (error) {
+              console.error('Error submitting form:', error);
+              alert('Something went wrong. Please try again or call us directly at 020 3342 5260.');
+              
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+              }
+            }
+          });
+        </script>
       </div>
     </section>
 
