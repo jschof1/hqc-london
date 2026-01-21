@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { siteSettings } from '../data/siteConfig.js';
+
+const title = "Exclusive Offer | High Quality Clean";
+const description = "Claim your exclusive discount for High Quality Clean's luxury cleaning services.";
+---
+
+<Layout title={title} description={description} robots="noindex, nofollow">
+  <Header />
+  
+  <main class="min-h-screen bg-mist flex items-center justify-center p-4 pt-24 md:pt-32">
+    <div class="w-full max-w-md">
+      <div id="discount-card" class="bg-white rounded-2xl shadow-xl border border-gold/30 p-8 md:p-10 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-gold"></div>
+        
+        <div id="form-content" class="animate-fade-in">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 mb-4 border border-gold/20">
+              <i class="fas fa-percentage text-gold text-2xl"></i>
+            </div>
+            <h1 class="font-serif text-3xl text-navy font-bold mb-2">Exclusive Offer</h1>
+            <p class="text-ink/70">
+              Complete the form below to receive your bespoke discount for our luxury cleaning services.
+            </p>
+          </div>
+
+          <form id="discount-form" class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
+                placeholder="Your full name"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
+                placeholder="07xxx xxxxxx"
+              />
+            </div>
+
+            <div>
+              <label for="summary" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Summary of Cleaning Needs</label>
+              <textarea
+                id="summary"
+                name="summary"
+                required
+                rows="4"
+                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all resize-none"
+                placeholder="Briefly describe your home and what you're looking for..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              id="submit-btn"
+              class="w-full bg-navy text-white font-bold py-4 rounded-lg hover:bg-navy/90 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 group"
+            >
+              Claim My Discount
+              <i class="fas fa-paper-plane text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+            </button>
+            
+            <p class="text-[10px] text-ink/40 text-center italic">
+              *Limited time offer for new clients in our primary service areas.
+            </p>
+          </form>
+        </div>
+
+        <!-- Success Message -->
+        <div id="success-content" class="hidden text-center py-6 animate-fade-in">
+          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-check text-gold text-4xl"></i>
+          </div>
+          <h2 class="font-serif text-3xl text-navy font-bold mb-4">Request Received!</h2>
+          <p class="text-ink/70 text-lg mb-8 leading-relaxed">
+            Thank you for your interest. A specialist will contact you shortly via phone with your exclusive discount details and to discuss your requirements.
+          </p>
+          <a 
+            href="/" 
+            class="inline-block bg-gold text-navy px-8 py-3 rounded-lg font-bold hover:bg-gold/90 transition-all shadow-md"
+          >
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script define:vars={{ webhookUrl: siteSettings.discountFromWebhook }}>
+    const form = document.getElementById('discount-form');
+    const formContent = document.getElementById('form-content');
+    const successContent = document.getElementById('success-content');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
+      }
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      data.source = 'discount_page';
+      data.timestamp = new Date().toISOString();
+
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          formContent.classList.add('hidden');
+          successContent.classList.remove('hidden');
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        console.error('Error submitting discount request:', error);
+        alert('Something went wrong. Please try again or call us directly at 020 3342 5260.');
+        
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Claim My Discount <i class="fas fa-paper-plane text-sm"></i>';
+        }
+      }
+    });
+  </script>
+</Layout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

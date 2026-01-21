@@ -1,0 +1,446 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { siteSettings } from '../data/siteConfig.js';
+
+const title = "Personalised Quote | High Quality Clean";
+const description = "Request a bespoke quote for our luxury cleaning services. Tailored to your home and your schedule.";
+
+// Service options for the form
+const services = [
+  { id: "signature", label: "Signature Clean™", icon: "fas fa-star" },
+  { id: "essentials", label: "Essentials Clean™", icon: "fas fa-leaf" },
+  { id: "wellclean", label: "WellClean™", icon: "fas fa-sparkles" },
+  { id: "move-in-out", label: "Move In/Out Reset™", icon: "fas fa-truck-ramp-box" },
+  { id: "airbnb", label: "Airbnb Turnover", icon: "fas fa-key" },
+  { id: "office", label: "Office / Commercial", icon: "fas fa-building" },
+];
+
+const frequencies = [
+  { id: "weekly", label: "Weekly", description: "Most popular for maintenance" },
+  { id: "fortnightly", label: "Fortnightly", description: "Regular upkeep" },
+  { id: "one-off", label: "One-off / Deep Clean", description: "Single intensive session" },
+];
+
+const propertyTypes = [
+  { id: "flat", label: "Flat / Apartment" },
+  { id: "house", label: "House" },
+  { id: "estate", label: "Estate / Mansion" },
+];
+---
+
+<Layout title={title} description={description} robots="noindex, nofollow">
+  <Header />
+  
+  <main class="min-h-screen bg-mist pt-24 pb-12 md:pt-32 md:pb-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-10">
+          <div class="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-1.5 rounded-full text-sm font-semibold mb-4 border border-gold/20">
+            <i class="fas fa-clock text-xs"></i>
+            Takes less than 2 minutes
+          </div>
+          <h1 class="font-serif text-3xl md:text-5xl text-navy font-bold mb-4">Request Your Personalised Quote</h1>
+          <p class="text-ink/70 text-lg">Experience the gold standard of London home care.</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div id="form-progress-container" class="mb-8">
+          <div class="flex justify-between text-xs text-ink/50 mb-2 font-medium uppercase tracking-wider">
+            <span id="step-indicator">Step 1 of 3</span>
+            <span id="percent-indicator">33%</span>
+          </div>
+          <div class="h-1.5 bg-gold/10 rounded-full overflow-hidden border border-gold/10">
+            <div 
+              id="progress-bar"
+              class="h-full bg-gold transition-all duration-500 ease-out"
+              style="width: 33.33%"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="bg-white rounded-2xl shadow-2xl border border-gold/20 overflow-hidden">
+          <form id="quote-multi-step-form">
+            
+            <!-- Step 1: Service & Frequency -->
+            <div id="step-1" class="p-6 md:p-10 space-y-8 animate-fade-in">
+              <div>
+                <h2 class="font-serif text-2xl text-navy font-bold mb-6 flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center text-sm font-bold">1</span>
+                  Which service do you require?
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {services.map(service => (
+                    <label class="relative cursor-pointer group">
+                      <input type="radio" name="service" value={service.id} class="peer sr-only" required />
+                      <div class="p-4 rounded-xl border-2 border-mist bg-mist/30 text-center transition-all peer-checked:border-gold peer-checked:bg-gold/5 group-hover:border-gold/30">
+                        <i class={`${service.icon} text-2xl text-gold/60 mb-2 block peer-checked:text-gold`}></i>
+                        <span class="text-sm font-semibold text-navy block">{service.label}</span>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h2 class="font-serif text-2xl text-navy font-bold mb-6 flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center text-sm font-bold">2</span>
+                  How often should we visit?
+                </h2>
+                <div class="space-y-3">
+                  {frequencies.map(freq => (
+                    <label class="relative cursor-pointer group block">
+                      <input type="radio" name="frequency" value={freq.id} class="peer sr-only" required />
+                      <div class="p-4 px-6 rounded-xl border-2 border-mist bg-mist/30 flex items-center justify-between transition-all peer-checked:border-gold peer-checked:bg-gold/5 group-hover:border-gold/30">
+                        <div>
+                          <span class="font-semibold text-navy block">{freq.label}</span>
+                          <span class="text-xs text-ink/60">{freq.description}</span>
+                        </div>
+                        <div class="w-5 h-5 rounded-full border-2 border-gold/30 flex items-center justify-center peer-checked:border-gold">
+                          <div class="w-2.5 h-2.5 rounded-full bg-gold opacity-0 transition-opacity peer-checked:opacity-100"></div>
+                        </div>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Property Details -->
+            <div id="step-2" class="hidden p-6 md:p-10 space-y-8 animate-fade-in">
+              <div>
+                <h2 class="font-serif text-2xl text-navy font-bold mb-6 flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center text-sm font-bold">3</span>
+                  Tell us about your space
+                </h2>
+                
+                <div class="mb-8">
+                  <label class="block text-sm font-medium text-navy mb-3 uppercase tracking-wider">Property Type</label>
+                  <div class="grid grid-cols-3 gap-3">
+                    {propertyTypes.map(type => (
+                      <label class="relative cursor-pointer group">
+                        <input type="radio" name="property_type" value={type.id} class="peer sr-only" required />
+                        <div class="p-4 rounded-xl border-2 border-mist bg-mist/30 text-center transition-all peer-checked:border-gold peer-checked:bg-gold/5 group-hover:border-gold/30">
+                          <span class="text-sm font-semibold text-navy">{type.label}</span>
+                        </div>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                  <div>
+                    <label for="bedrooms" class="block text-sm font-medium text-navy mb-2 uppercase tracking-wider">Bedrooms</label>
+                    <select id="bedrooms" name="bedrooms" class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all">
+                      <option value="studio">Studio</option>
+                      <option value="1">1 Bedroom</option>
+                      <option value="2">2 Bedrooms</option>
+                      <option value="3">3 Bedrooms</option>
+                      <option value="4">4 Bedrooms</option>
+                      <option value="5+">5+ Bedrooms</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="bathrooms" class="block text-sm font-medium text-navy mb-2 uppercase tracking-wider">Bathrooms</label>
+                    <select id="bathrooms" name="bathrooms" class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all">
+                      <option value="1">1 Bathroom</option>
+                      <option value="2">2 Bathrooms</option>
+                      <option value="3">3 Bathrooms</option>
+                      <option value="4+">4+ Bathrooms</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="details" class="block text-sm font-medium text-navy mb-2 uppercase tracking-wider">Any specific requirements or delicate surfaces?</label>
+                  <textarea 
+                    id="details" 
+                    name="details" 
+                    rows="4" 
+                    class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all resize-none"
+                    placeholder="E.g. marble flooring, silk wallpapers, pets in home, etc."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Contact Details -->
+            <div id="step-3" class="hidden p-6 md:p-10 space-y-6 animate-fade-in">
+              <h2 class="font-serif text-2xl text-navy font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center text-sm font-bold">4</span>
+                Where should we send your quote?
+              </h2>
+              
+              <div class="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Full Name</label>
+                  <input type="text" id="name" name="name" required class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all" placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Email Address</label>
+                  <input type="email" id="email" name="email" required class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all" placeholder="your@email.com" />
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all" placeholder="07xxx xxxxxx" />
+                </div>
+                <div>
+                  <label for="postcode" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Postcode</label>
+                  <input type="text" id="postcode" name="postcode" required class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all" placeholder="e.g. SW1X 7XL" />
+                </div>
+              </div>
+
+              <p class="text-[10px] text-ink/40 text-center mt-4">
+                By submitting this form, you agree to our privacy policy. We will only use your details to provide your quote and discuss our services.
+              </p>
+            </div>
+
+            <!-- Success State -->
+            <div id="success-step" class="hidden p-10 md:p-16 text-center animate-fade-in">
+              <div class="w-24 h-24 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-gold/30">
+                <i class="fas fa-paper-plane text-gold text-4xl"></i>
+              </div>
+              <h2 class="font-serif text-3xl md:text-4xl text-navy font-bold mb-4">Quote Request Sent</h2>
+              <p class="text-ink/70 text-lg mb-10 leading-relaxed">
+                Thank you for choosing High Quality Clean. One of our specialists will review your requirements and provide a bespoke proposal within 24 hours.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:02033425260" class="bg-navy text-white px-8 py-4 rounded-lg font-semibold hover:bg-navy/90 transition-all flex items-center justify-center gap-2">
+                  <i class="fas fa-phone-alt"></i>
+                  Call Us Now
+                </a>
+                <a href="/" class="bg-gold text-navy px-8 py-4 rounded-lg font-semibold hover:bg-gold/90 transition-all flex items-center justify-center gap-2">
+                  <i class="fas fa-home"></i>
+                  Back to Home
+                </a>
+              </div>
+            </div>
+
+            <!-- Navigation -->
+            <div id="form-nav" class="px-6 md:px-10 py-6 bg-mist/50 border-t border-gold/10 flex justify-between items-center">
+              <button 
+                type="button" 
+                id="prev-btn" 
+                class="text-navy font-semibold flex items-center gap-2 hover:text-gold transition-colors disabled:opacity-0"
+                disabled
+              >
+                <i class="fas fa-chevron-left text-xs"></i>
+                Previous
+              </button>
+
+              <button 
+                type="button" 
+                id="next-btn" 
+                class="bg-gold text-navy px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all flex items-center gap-2"
+              >
+                Continue
+                <i class="fas fa-chevron-right text-xs"></i>
+              </button>
+
+              <button 
+                type="submit" 
+                id="submit-btn" 
+                class="hidden bg-gold text-navy px-10 py-4 rounded-lg font-bold shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all items-center gap-2"
+              >
+                Get My Bespoke Quote
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="text-center group">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
+              <i class="fas fa-shield-alt text-gold"></i>
+            </div>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Fully Insured</p>
+          </div>
+          <div class="text-center group">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
+              <i class="fas fa-id-card text-gold"></i>
+            </div>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">DBS Checked</p>
+          </div>
+          <div class="text-center group">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
+              <i class="fas fa-star text-gold"></i>
+            </div>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">5-Star Rated</p>
+          </div>
+          <div class="text-center group">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
+              <i class="fas fa-leaf text-gold"></i>
+            </div>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Eco-Friendly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script define:vars={{ webhookUrl: siteSettings.quickFormWebhook }}>
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    const form = document.getElementById('quote-multi-step-form');
+    const steps = [
+      document.getElementById('step-1'),
+      document.getElementById('step-2'),
+      document.getElementById('step-3')
+    ];
+    const successStep = document.getElementById('success-step');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const submitBtn = document.getElementById('submit-btn');
+    const navContainer = document.getElementById('form-nav');
+    const progressBar = document.getElementById('progress-bar');
+    const stepIndicator = document.getElementById('step-indicator');
+    const percentIndicator = document.getElementById('percent-indicator');
+    const progressContainer = document.getElementById('form-progress-container');
+
+    function updateStep() {
+      // Show/Hide Steps
+      steps.forEach((step, idx) => {
+        if (idx + 1 === currentStep) {
+          step.classList.remove('hidden');
+        } else {
+          step.classList.add('hidden');
+        }
+      });
+
+      // Update Navigation
+      if (currentStep === 1) {
+        prevBtn.disabled = true;
+      } else {
+        prevBtn.disabled = false;
+      }
+
+      if (currentStep === totalSteps) {
+        nextBtn.classList.add('hidden');
+        submitBtn.classList.remove('hidden');
+        submitBtn.classList.add('flex');
+      } else {
+        nextBtn.classList.remove('hidden');
+        submitBtn.classList.add('hidden');
+        submitBtn.classList.remove('flex');
+      }
+
+      // Update Progress
+      const percent = (currentStep / totalSteps) * 100;
+      progressBar.style.width = `${percent}%`;
+      stepIndicator.textContent = `Step ${currentStep} of ${totalSteps}`;
+      percentIndicator.textContent = `${Math.round(percent)}%`;
+
+      // Scroll to top of form
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    nextBtn.addEventListener('click', () => {
+      // Basic validation for Step 1 & 2
+      const currentStepElement = steps[currentStep - 1];
+      const inputs = currentStepElement.querySelectorAll('input[required], select[required]');
+      let isValid = true;
+
+      // Group radio buttons by name
+      const radioGroups = {};
+      inputs.forEach(input => {
+        if (input.type === 'radio') {
+          radioGroups[input.name] = true;
+        } else if (!input.value) {
+          isValid = false;
+          input.classList.add('border-red-500');
+        } else {
+          input.classList.remove('border-red-500');
+        }
+      });
+
+      // Check radio groups
+      for (const name in radioGroups) {
+        const checked = currentStepElement.querySelector(`input[name="${name}"]:checked`);
+        if (!checked) {
+          isValid = false;
+          // Could add visual feedback here
+        }
+      }
+
+      if (isValid && currentStep < totalSteps) {
+        currentStep++;
+        updateStep();
+      } else if (!isValid) {
+        alert('Please fill in all required fields to continue.');
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentStep > 1) {
+        currentStep--;
+        updateStep();
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      data.source = 'website_detailed_quote_page';
+      data.timestamp = new Date().toISOString();
+
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          steps.forEach(s => s.classList.add('hidden'));
+          navContainer.classList.add('hidden');
+          progressContainer.classList.add('hidden');
+          successStep.classList.remove('hidden');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        console.error('Error submitting quote:', error);
+        alert('Something went wrong. Please try again or call us directly at 020 3342 5260.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Get My Bespoke Quote';
+      }
+    });
+  </script>
+</Layout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Custom Select Arrow */
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C5A059'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5em;
+  }
+</style>

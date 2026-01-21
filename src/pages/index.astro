@@ -11,6 +11,7 @@ import FounderStory from '../components/FounderStory.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
 import GuaranteeSection from '../components/GuaranteeSection.astro';
 import TransformationGallery from '../components/TransformationGallery.astro';
+import { siteSettings } from '../data/siteConfig.js';
 ---
 
 <Layout title="High Quality Clean | London's Premier Luxury Home Cleaning Service">
@@ -64,11 +65,9 @@ import TransformationGallery from '../components/TransformationGallery.astro';
 		</div>
 
 		<form
-		  action="https://api.web3forms.com/submit"
-		  method="POST"
-		  class="mx-auto max-w-2xl bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8"
+		  id="quote-form"
+		  class="mx-auto max-w-2xl bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8 transition-all duration-300"
 		>
-		<input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
 		  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 			<div>
 			  <label for="name" class="block text-sm font-medium text-white mb-2"
@@ -163,6 +162,73 @@ import TransformationGallery from '../components/TransformationGallery.astro';
 			Request Your Personalised Quote
 		  </button>
 		</form>
+
+		<div id="form-success" class="hidden mx-auto max-w-2xl bg-white/10 backdrop-blur border border-gold/50 rounded-2xl p-12 text-center animate-fade-in">
+		  <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+			<i class="fas fa-check text-gold text-4xl"></i>
+		  </div>
+		  <h3 class="font-serif text-3xl font-bold text-gold mb-4">Request Received</h3>
+		  <p class="text-white/90 text-lg mb-8">
+			Thank you for your interest in High Quality Clean. We've received your details and one of our specialists will be in touch shortly to discuss your requirements.
+		  </p>
+		  <button 
+			onclick="window.location.reload()" 
+			class="text-gold hover:text-white transition-colors underline underline-offset-4"
+		  >
+			Send another request
+		  </button>
+		</div>
+
+		<script define:vars={{ webhookUrl: siteSettings.quickFormWebhook }}>
+		  const form = document.getElementById('quote-form');
+		  const successMessage = document.getElementById('form-success');
+		  const submitBtn = form?.querySelector('button[type="submit"]');
+		  const originalBtnText = submitBtn?.innerHTML;
+
+		  form?.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			
+			if (submitBtn) {
+			  submitBtn.disabled = true;
+			  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
+			}
+
+			const formData = new FormData(form);
+			const data = Object.fromEntries(formData.entries());
+			
+			// Add metadata similar to formExample.ts logic
+			data.source = 'website_final_cta';
+			data.form_type = 'detailed_quote_request';
+			data.timestamp = new Date().toISOString();
+			data.area = 'London'; // Default area for main site
+
+			try {
+			  const response = await fetch(webhookUrl, {
+				method: 'POST',
+				headers: {
+				  'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(data),
+			  });
+
+			  if (response.ok) {
+				form.style.display = 'none';
+				successMessage.classList.remove('hidden');
+				successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			  } else {
+				throw new Error('Submission failed');
+			  }
+			} catch (error) {
+			  console.error('Error submitting form:', error);
+			  alert('Something went wrong while sending your request. Please try again or call us directly at 020 3342 5260.');
+			  
+			  if (submitBtn) {
+				submitBtn.disabled = false;
+				submitBtn.innerHTML = originalBtnText;
+			  }
+			}
+		  });
+		</script>
 	  </div>
 	</section>
   </main>

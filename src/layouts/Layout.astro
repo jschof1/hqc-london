@@ -7,9 +7,14 @@ import { Schema } from 'astro-seo-schema';
 export interface Props {
   title: string;
   description?: string;
+  robots?: string;
 }
 
-const { title, description = "High Quality Clean — Luxury home cleaning for discerning London clients." } = Astro.props;
+const { 
+  title, 
+  description = "High Quality Clean — Luxury home cleaning for discerning London clients.",
+  robots = "index, follow"
+} = Astro.props;
 
 const baseUrl = 'https://highqualityclean.co.uk';
 const canonicalUrl = Astro.url ? Astro.url.href : baseUrl;
@@ -265,10 +270,10 @@ const schemaItem = {
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="bingbot" content="index, follow" />
-    <meta name="yandexbot" content="index, follow" />
+    <meta name="robots" content={robots} />
+    <meta name="googlebot" content={robots} />
+    <meta name="bingbot" content={robots} />
+    <meta name="yandexbot" content={robots} />
     <meta name="google" content="notranslate" />
     <meta name="google" content="notranslate" />
     <link rel="icon" href="/favicon.ico" />
@@ -286,6 +291,12 @@ const schemaItem = {
     <slot />
     <Footer />
     <script src="../scripts/main.js"></script>
+    <script 
+      is:inline
+      src="https://widgets.leadconnectorhq.com/loader.js"  
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+      data-widget-id="696e24618d6c38f8cfb1c78f" > 
+    </script>
     <script is:inline>
       // Load Keak script after user interaction to prevent flashing
       (function() {

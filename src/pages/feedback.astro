@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { siteSettings } from '../data/siteConfig.js';
+
+const title = "Feedback | High Quality Clean";
+const description = "We value your feedback. Please let us know about your experience with our luxury cleaning services.";
+---
+
+<Layout title={title} description={description} robots="noindex, nofollow">
+  <Header />
+  
+  <main class="min-h-screen bg-mist flex items-center justify-center p-4 pt-24 md:pt-32">
+    <div class="w-full max-w-xl">
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gold/30 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-gold"></div>
+        
+        <!-- Step 1: Rating Selection -->
+        <div id="rating-step" class="text-center animate-fade-in">
+          <h1 class="font-serif text-3xl md:text-4xl text-navy font-bold mb-4">How was your experience?</h1>
+          <p class="text-ink/70 text-lg mb-10">Your feedback helps us maintain the highest standards of luxury care.</p>
+
+          <div class="flex justify-center gap-3 mb-8">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <button
+                type="button"
+                data-star={star}
+                class="star-btn p-1 transition-all duration-300 hover:scale-110 group"
+                aria-label={`Rate ${star} star${star > 1 ? "s" : ""}`}
+              >
+                <i class="far fa-star text-4xl md:text-5xl text-gold/40 group-hover:text-gold transition-colors"></i>
+              </button>
+            ))}
+          </div>
+
+          <p class="text-sm text-ink/50 italic">Select a star to begin</p>
+        </div>
+
+        <!-- Step 2: Feedback Form (Hidden by default) -->
+        <div id="feedback-step" class="hidden animate-fade-in">
+          <div class="text-center mb-8">
+            <h2 class="font-serif text-2xl md:text-3xl text-navy font-bold mb-3">We're sorry to hear that</h2>
+            <p class="text-ink/70">
+              We truly apologise if we didn't meet your expectations. Please let us know what went wrong so we can make it right.
+            </p>
+          </div>
+
+          <form id="feedback-form" class="space-y-5">
+            <input type="hidden" name="rating" id="selected-rating" />
+            
+            <div class="grid md:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-navy mb-1.5">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-navy mb-1.5">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-navy mb-1.5">Phone (Optional)</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
+                placeholder="Your phone number"
+              />
+            </div>
+
+            <div>
+              <label for="feedback" class="block text-sm font-medium text-navy mb-1.5">How can we improve?</label>
+              <textarea
+                id="feedback"
+                name="feedback"
+                required
+                rows="4"
+                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all resize-none"
+                placeholder="Please share your experience with us..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              id="submit-feedback"
+              class="w-full bg-navy text-white font-semibold py-4 rounded-lg hover:bg-navy/90 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
+            >
+              Send Feedback
+            </button>
+            
+            <button 
+              type="button" 
+              onclick="window.location.reload()" 
+              class="w-full text-ink/50 text-sm hover:text-navy transition-colors"
+            >
+              Back to rating
+            </button>
+          </form>
+        </div>
+
+        <!-- Step 3: Success Message (Hidden by default) -->
+        <div id="success-step" class="hidden text-center py-8 animate-fade-in">
+          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-heart text-gold text-4xl"></i>
+          </div>
+          <h2 class="font-serif text-3xl text-navy font-bold mb-4">Thank you for your feedback</h2>
+          <p class="text-ink/70 text-lg mb-8 leading-relaxed">
+            We appreciate you taking the time to share your experience. Our management team will review your comments and reach out to discuss how we can make things right.
+          </p>
+          <a 
+            href="/" 
+            class="inline-block text-gold font-semibold hover:text-navy transition-colors border-b-2 border-gold hover:border-navy pb-1"
+          >
+            Return to Homepage
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script define:vars={{ 
+    webhookUrl: siteSettings.feedbackWebhook, 
+    googleReviewUrl: siteSettings.feedbackGoogleReviewUrl || "https://g.page/r/CVci07KZU9WxEBM/review" 
+  }}>
+    const ratingStep = document.getElementById('rating-step');
+    const feedbackStep = document.getElementById('feedback-step');
+    const successStep = document.getElementById('success-step');
+    const starBtns = document.querySelectorAll('.star-btn');
+    const feedbackForm = document.getElementById('feedback-form');
+    const ratingInput = document.getElementById('selected-rating');
+    const submitBtn = document.getElementById('submit-feedback');
+
+    // Star Hover and Click Logic
+    starBtns.forEach((btn, index) => {
+      btn.addEventListener('mouseenter', () => {
+        updateStars(index + 1, true);
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        updateStars(0, false);
+      });
+
+      btn.addEventListener('click', () => {
+        const rating = parseInt(btn.dataset.star);
+        ratingInput.value = rating;
+
+        if (rating >= 4) {
+          // Positive feedback: Redirect to Google
+          window.location.href = googleReviewUrl;
+        } else {
+          // Neutral/Negative feedback: Show internal form
+          ratingStep.classList.add('hidden');
+          feedbackStep.classList.remove('hidden');
+        }
+      });
+    });
+
+    function updateStars(count, isHover) {
+      starBtns.forEach((btn, i) => {
+        const icon = btn.querySelector('i');
+        if (i < count) {
+          icon.className = 'fas fa-star text-4xl md:text-5xl text-gold';
+        } else {
+          icon.className = 'far fa-star text-4xl md:text-5xl text-gold/40';
+        }
+      });
+    }
+
+    // Form Submission
+    feedbackForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+      }
+
+      const formData = new FormData(feedbackForm);
+      const data = Object.fromEntries(formData.entries());
+      
+      data.source = 'feedback_page';
+      data.timestamp = new Date().toISOString();
+
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          feedbackStep.classList.add('hidden');
+          successStep.classList.remove('hidden');
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        console.error('Error submitting feedback:', error);
+        alert('Something went wrong. Please try again or contact us directly.');
+        
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Feedback';
+        }
+      }
+    });
+  </script>
+</Layout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
