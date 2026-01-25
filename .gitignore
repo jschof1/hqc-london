@@ -28,7 +28,7 @@ pnpm-debug.log*
 .idea/
 Area-Page-Gen
 assets
-data
+/data
 docs
 ASTRO-SETUP.md
 templates
