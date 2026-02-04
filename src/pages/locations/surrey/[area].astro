@@ -5,11 +5,10 @@ import Header from '../../../components/Header.astro';
 
 export async function getStaticPaths() {
   const areas = Object.keys(areaData);
-  // Filter for London areas only
-  const londonAreas = areas.filter(areaKey => areaData[areaKey].region !== 'Surrey');
+  // Filter for Surrey areas only
+  const surreyAreas = areas.filter(areaKey => areaData[areaKey].region === 'Surrey');
   
-  return londonAreas.map(areaKey => {
-    // Convert camelCase to kebab-case for URL slugs if needed, or use the key if it matches
+  return surreyAreas.map(areaKey => {
     const slug = areaKey.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
     return {
       params: { area: slug },
@@ -31,14 +30,14 @@ const schema = {
   "@type": "LocalBusiness",
   "name": `High Quality Clean ${areaInfo.name}`,
   "image": areaInfo.heroImage,
-  "@id": `https://highqualityclean.co.uk/locations/london/${area}`,
-  "url": `https://highqualityclean.co.uk/locations/london/${area}`,
+  "@id": `https://highqualityclean.co.uk/locations/surrey/${area}`,
+  "url": `https://highqualityclean.co.uk/locations/surrey/${area}`,
   "telephone": "020 3342 5260",
   "priceRange": "£££",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "London",
-    "addressRegion": "Greater London",
+    "addressLocality": areaInfo.name,
+    "addressRegion": "Surrey",
     "addressCountry": "UK"
   },
   "areaServed": {
@@ -49,8 +48,8 @@ const schema = {
     "@type": "GeoCircle",
     "geoMidpoint": {
       "@type": "GeoCoordinates",
-      "latitude": 51.5074, // Default London, would be better with specific coords
-      "longitude": -0.1278
+      "latitude": 51.3656, // Surrey coordinates approximate
+      "longitude": -0.4331
     },
     "geoRadius": "5000"
   },
@@ -70,7 +69,7 @@ const schema = {
   }
 };
 
-// Helper to get nearby areas (simple logic: same region or just next keys)
+// Helper to get nearby areas
 const allAreas = Object.values(areaData);
 const nearbyAreas = allAreas
   .filter(a => a.name !== areaInfo.name && a.region === areaInfo.region)
@@ -88,7 +87,7 @@ function repeat(count) {
 
   <main class="page-transition pt-16 overflow-x-hidden">
     
-    <!-- Hero Section: Maid2Clean Style Hook -->
+    <!-- Hero Section -->
     <section class="relative bg-navy py-20 lg:py-28">
       <div class="absolute inset-0 overflow-hidden">
         <img src={areaInfo.heroImage} alt={`Domestic cleaners in ${areaInfo.name}`} class="w-full h-full object-cover opacity-20" />
@@ -151,7 +150,7 @@ function repeat(count) {
       </div>
     </section>
 
-    <!-- Why Choose Us Differentiation -->
+    <!-- Why Choose Us -->
     <section class="py-20 bg-white">
       <div class="mx-auto max-w-7xl px-6">
         <div class="text-center mb-16">
@@ -196,9 +195,11 @@ function repeat(count) {
             <p>
               We have been serving the {areaInfo.name} ({areaInfo.postcodes[0]}) area for years. Our local team understands the specific needs of {areaInfo.propertyType || "local"} properties, ensuring a tailored service that respects your home.
             </p>
-            <p>
-              Whether you are near {areaInfo.localInfo.nearbyAttractions[0]} or {areaInfo.localInfo.nearbyAttractions[1]}, our cleaners are locally based for reliability.
-            </p>
+            {areaInfo.localInfo && areaInfo.localInfo.nearbyAttractions && (
+              <p>
+                Whether you are near {areaInfo.localInfo.nearbyAttractions[0]} or {areaInfo.localInfo.nearbyAttractions[1]}, our cleaners are locally based for reliability.
+              </p>
+            )}
           </div>
           
           <h3 class="font-serif text-xl text-navy mb-4">Areas Nearby</h3>
@@ -207,7 +208,7 @@ function repeat(count) {
              const nearbySlug = nearby.name.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
              return (
               <li>
-                <a href={`/locations/london/${nearbySlug}`} class="text-gold hover:text-navy transition-colors font-medium">
+                <a href={`/locations/surrey/${nearbySlug}`} class="text-gold hover:text-navy transition-colors font-medium">
                   <i class="fas fa-map-marker-alt mr-2 text-xs"></i>
                   Cleaners in {nearby.name}
                 </a>
@@ -257,7 +258,7 @@ function repeat(count) {
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-serif text-3xl text-navy text-center mb-12">What {areaInfo.name} Residents Say</h2>
         <div class="grid md:grid-cols-3 gap-8">
-          {areaInfo.testimonials.map(t => (
+          {areaInfo.testimonials && areaInfo.testimonials.map(t => (
             <div class="p-6 bg-mist rounded-xl">
               <div class="flex text-gold mb-3">
                 {repeat(t.rating).map(() => <i class="fas fa-star"></i>)}
