@@ -16,7 +16,7 @@ export const faqData = [
         },
         {
           question: "How do I cancel or reschedule?",
-          answer: "Free cancellation/rescheduling with 48+ hours notice. Within 48 hours, a 50% fee applies."
+          answer: "A minimum of 48 hours’ notice is required to cancel or reschedule. Within 48 hours, a fee equal to the greater of £95 or 50% of the service price applies."
         }
       ]
     },
@@ -25,15 +25,15 @@ export const faqData = [
       items: [
         {
           question: "What supplies do you provide?",
-          answer: "For Standard cleans, you provide supplies. For Detailed cleans, we bring everything needed."
+          answer: "For Standard cleans, the Client provides supplies. For Detailed and specialized cleans, we can provide all professional equipment and eco-friendly solutions."
         },
         {
           question: "What is a deep clean?",
-          answer: "Ideal for first-time customers or if you haven't had professional cleaning in 3+ months. More detailed than standard cleaning."
+          answer: "A comprehensive service for properties that haven't had professional cleaning in 3+ months, or for first-time bookings to establish our high standard."
         },
         {
           question: "Do you offer carpet cleaning and end of tenancy cleans?",
-          answer: "Yes, both services are available. Select them on our booking form."
+          answer: "Yes, we provide specialized carpet cleaning and professional end-of-tenancy services. Please contact us for a detailed quote."
         }
       ]
     },
@@ -42,15 +42,15 @@ export const faqData = [
       items: [
         {
           question: "Do you offer discounts for regular customers?",
-          answer: "Yes."
+          answer: "Yes, we offer preferential rates for recurring residential and commercial contracts. Contact our team for a tailored proposal."
         },
         {
           question: "What is the guarantee?",
-          answer: "If you're not happy, email sales@highqualityclean.co.uk with evidence within 48 hours and we'll arrange a reclean."
+          answer: "We aim for perfection. If any area is missed, please report it within 72 hours with evidence, and we will re-attend or offer a service credit at our discretion."
         },
         {
           question: "Do you have insurance?",
-          answer: "Yes, we have £5m public liability insurance and use secure Stripe payment processing."
+          answer: "Yes, HQC holds comprehensive public and employer’s liability insurance for your peace of mind."
         }
       ]
     }
