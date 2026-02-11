@@ -4,7 +4,7 @@ export const faqData = [
       items: [
         {
           question: "How do I make a booking?",
-          answer: "Fill out our secure booking form online, or call 0203 342 5260. You'll receive instant confirmation and we'll contact you to finalize details."
+          answer: "Fill out our enquiry form online, or call 0203 342 5260. We'll contact you to confirm details and availability. See our <a href='/terms-and-conditions'>Terms and Conditions</a>."
         },
         {
           question: "Do I need to be home for my booking?",
@@ -12,11 +12,11 @@ export const faqData = [
         },
         {
           question: "When will my card be charged?",
-          answer: "Your card is charged the day after your cleaning is completed."
+          answer: "Your card is charged the day after your cleaning is completed. See our <a href='/terms-and-conditions'>Terms and Conditions</a>."
         },
         {
           question: "How do I cancel or reschedule?",
-          answer: "A minimum of 48 hours’ notice is required to cancel or reschedule. Within 48 hours, a fee equal to the greater of £95 or 50% of the service price applies."
+          answer: "A minimum of 48 hours’ notice is required to cancel or reschedule. Within 48 hours, a fee equal to the greater of £95 or 50% of the service price applies. See our <a href='/terms-and-conditions'>Terms and Conditions</a>."
         }
       ]
     },
@@ -25,7 +25,11 @@ export const faqData = [
       items: [
         {
           question: "What supplies do you provide?",
-          answer: "For Standard cleans, the Client provides supplies. For Detailed and specialized cleans, we can provide all professional equipment and eco-friendly solutions."
+          answer: "For Essential residential cleans, clients provide basic supplies. For deep or detailed cleans, we bring everything needed. Commercial supplies are provided as agreed in the service scope."
+        },
+        {
+          question: "What's included in a standard clean?",
+          answer: "A standard clean/ our Essential Clean covers routine cleaning tasks. The exact scope is confirmed when your service is agreed."
         },
         {
           question: "What is a deep clean?",

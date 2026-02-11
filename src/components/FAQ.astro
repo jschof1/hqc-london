@@ -46,9 +46,10 @@ import { faqData } from '../data/faq.js';
                     id={accordionId}
                     class="faq-content hidden overflow-hidden"
                   >
-                    <div class="p-4 md:p-6 pt-0 text-ink/70 leading-relaxed">
-                      {item.answer}
-                    </div>
+                    <div
+                      class="p-4 md:p-6 pt-0 text-ink/70 leading-relaxed"
+                      set:html={item.answer}
+                    ></div>
                   </div>
                 </div>
               );
