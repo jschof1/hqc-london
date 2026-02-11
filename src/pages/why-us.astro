@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection.astro';
 import TransformationGallery from '../components/TransformationGallery.astro';
 import CTABanner from '../components/CTABanner.astro';
 import ProcessStep from '../components/ProcessStep.astro';
+import FAQ from '../components/FAQ.astro';
 const WhyUsBlocks = [
   {
     step: 1,
@@ -695,102 +696,7 @@ const WhyUsBlocks = [
     </section>
 
     <!-- 9. FAQs -->
-    <section id="faqs" class="py-20 md:py-28 bg-navy">
-      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="font-serif text-3xl md:text-4xl text-white font-semibold">
-            Frequently Asked Questions
-          </h2>
-          <p class="mt-4 text-white/80 text-lg">Everything you need to know about our service</p>
-        </div>
-        <div class="space-y-4">
-          <div class="accordion rounded-xl bg-white border border-gold/50 shadow-soft-sm">
-            <button
-              class="accordion-toggle w-full text-left px-6 py-5 flex items-center justify-between focus-ring"
-              data-acc-toggle
-              aria-expanded="false"
-            >
-              <div class="flex items-center gap-4">
-                <i class="fas fa-question-circle text-gold text-lg"></i>
-                <span class="font-semibold text-navy text-lg">How do you ensure surface safety?</span>
-              </div>
-              <i class="fas fa-plus text-gold text-lg transition-transform duration-200"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5 text-navy/80 leading-relaxed">
-              We map materials during the walkthrough and use finish‑appropriate methods and products. Our team is trained to identify different surface types and select compatible cleaning solutions that preserve and protect your valuable finishes.
-            </div>
-          </div>
-          
-          <div class="accordion rounded-xl bg-white border border-gold/50 shadow-soft-sm">
-            <button
-              class="accordion-toggle w-full text-left px-6 py-5 flex items-center justify-between focus-ring"
-              data-acc-toggle
-              aria-expanded="false"
-            >
-              <div class="flex items-center gap-4">
-                <i class="fas fa-key text-gold text-lg"></i>
-                <span class="font-semibold text-navy text-lg">Can you work while I'm away?</span>
-              </div>
-              <i class="fas fa-plus text-gold text-lg transition-transform duration-200"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5 text-navy/80 leading-relaxed">
-              Yes. Our key‑holding concierge service is discreet and fully insured. We provide detailed photo handovers and comprehensive aftercare notes so you know exactly what was accomplished during your absence.
-            </div>
-          </div>
-          
-          <div class="accordion rounded-xl bg-white border border-gold/50 shadow-soft-sm">
-            <button
-              class="accordion-toggle w-full text-left px-6 py-5 flex items-center justify-between focus-ring"
-              data-acc-toggle
-              aria-expanded="false"
-            >
-              <div class="flex items-center gap-4">
-                <i class="fas fa-spray-can text-gold text-lg"></i>
-                <span class="font-semibold text-navy text-lg">Do you bring supplies?</span>
-              </div>
-              <i class="fas fa-plus text-gold text-lg transition-transform duration-200"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5 text-navy/80 leading-relaxed">
-              We bring wellness‑vetted products and HEPA filtration equipment as needed. We can also use client‑specified items when suitable and compatible with our quality standards and safety protocols.
-            </div>
-          </div>
-          
-          <div class="accordion rounded-xl bg-white border border-gold/50 shadow-soft-sm">
-            <button
-              class="accordion-toggle w-full text-left px-6 py-5 flex items-center justify-between focus-ring"
-              data-acc-toggle
-              aria-expanded="false"
-            >
-              <div class="flex items-center gap-4">
-                <i class="fas fa-list-ul text-gold text-lg"></i>
-                <span class="font-semibold text-navy text-lg">What's included at each tier?</span>
-              </div>
-              <i class="fas fa-plus text-gold text-lg transition-transform duration-200"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5 text-navy/80 leading-relaxed">
-              See our Services page for comprehensive tier summaries and detailed checklists. We tailor priorities to your home's specific needs and your lifestyle preferences during our initial consultation.
-            </div>
-          </div>
-          
-          <div class="accordion rounded-xl bg-white border border-gold/50 shadow-soft-sm">
-            <button
-              class="accordion-toggle w-full text-left px-6 py-5 flex items-center justify-between focus-ring"
-              data-acc-toggle
-              aria-expanded="false"
-            >
-              <div class="flex items-center gap-4">
-                <i class="fas fa-pound-sign text-gold text-lg"></i>
-                <span class="font-semibold text-navy text-lg">How are quotes priced?</span>
-              </div>
-              <i class="fas fa-plus text-gold text-lg transition-transform duration-200"></i>
-            </button>
-            <div class="accordion-content px-6 pb-5 text-navy/80 leading-relaxed">
-              Pricing reflects size, finishes, access requirements, and your specific preferences. After a brief consultation, you'll receive a bespoke proposal tailored to your home and service expectations.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FAQ />
 
     <!-- 10. Final CTA Banner -->
     <CTABanner />
