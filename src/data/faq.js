@@ -25,11 +25,11 @@ export const faqData = [
       items: [
         {
           question: "What supplies do you provide?",
-          answer: "For Essential residential cleans, clients provide basic supplies. For deep or detailed cleans, we bring everything needed. Commercial supplies are provided as agreed in the service scope."
+          answer: "For <a href='/services#essentials'>Essential residential cleans</a>, clients provide basic supplies. For deep or detailed cleans, we bring everything needed. Commercial supplies are provided as agreed in the service scope."
         },
         {
           question: "What's included in a standard clean?",
-          answer: "A standard clean/ our Essential Clean covers routine cleaning tasks. The exact scope is confirmed when your service is agreed."
+          answer: "A standard clean/ our <a href='/services#essentials'>Essential Clean</a> covers routine cleaning tasks. The exact scope is confirmed when your service is agreed."
         },
         {
           question: "What is a deep clean?",
