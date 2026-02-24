@@ -9,5 +9,8 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://highqualityclean.co.uk',
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+  redirects: {
+    '/get-quote': '/quote'
+  }
 });
