@@ -11,6 +11,12 @@
     --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.1), 0 4px 10px rgb(0 0 0 / 0.06);
     
     --radius-xl2: 1.25rem;
+
+    /* Typography – matches Layout.astro Google Fonts (Cormorant Garamond, Inter) */
+    --font-family-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+    --font-family-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+    --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
   }
 
   html {

@@ -1,0 +1,1873 @@
+---
+// src/pages/index.astro
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HQC London - Premium Cleaning Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <style>
+      :root {
+        --color-navy: #2c3e50;
+        --color-night: #1c2833;
+        --color-gold: #c9a961;
+        --color-mist: #f5f5f0;
+        --color-ink: #1a1a2e;
+        --font-display: Georgia, "Times New Roman", serif;
+        --font-body: system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+
+    <!-- SECTION 1: GLOBAL HEADER (STICKY) -->
+    <header id="site-header" class="site-header">
+      <div class="header-inner">
+        <div class="logo">HQC</div>
+
+        <nav class="header-nav">
+          <button
+            class="btn-outline"
+            data-form-type="home"
+            data-scroll-to-form
+          >
+            30% Home Cleaning Intro
+          </button>
+          <button
+            class="btn-outline"
+            data-form-type="commercial"
+            data-scroll-to-form
+          >
+            30% Commercial Intro
+          </button>
+          <a href="tel:+442012345678" class="btn-gold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SECTION 2: HERO -->
+    <section class="hero-section">
+      <div
+        class="hero-bg-image"
+        style="background-image: url('https://images.unsplash.com/photo-1766371900890-696edc6c7fc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBjbGVhbiUyMGludGVyaW9yfGVufDF8fHx8MTc3MTg0Mjk5OHww&ixlib=rb-4.1.0&q=80&w=1080');"
+      ></div>
+
+      <div class="hero-inner">
+        <div class="hero-grid">
+          <!-- LEFT: MESSAGE -->
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-h1">
+                30% Introductory Rate for Your First Month
+              </h1>
+              <p class="hero-sub">
+                When You Secure a 12-Month Cleaning Agreement
+              </p>
+              <p class="hero-body">
+                Premium, contract-led cleaning for homes and businesses.<br />
+                Clear pricing. Quality control. No surprises.
+              </p>
+            </div>
+
+            <div class="hero-buttons">
+              <button
+                class="btn-gold-lg"
+                data-form-type="home"
+                data-scroll-to-form
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Claim My Home Intro Rate
+              </button>
+              <button
+                class="btn-outline-lg"
+                data-form-type="commercial"
+                data-scroll-to-form
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                Claim My Commercial Intro Rate
+              </button>
+            </div>
+
+            <!-- TRUST SIGNALS -->
+            <div class="trust-grid-wrapper">
+              <div class="trust-grid">
+                <div class="trust-item">
+                  <div class="trust-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div>
+                    <p class="trust-title">Fully Insured</p>
+                    <p class="trust-sub">£5M Coverage</p>
+                  </div>
+                </div>
+                <div class="trust-item">
+                  <div class="trust-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <div>
+                    <p class="trust-title">Quality Guaranteed</p>
+                    <p class="trust-sub">100% Satisfaction</p>
+                  </div>
+                </div>
+                <div class="trust-item">
+                  <div class="trust-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <p class="trust-title">500+ Clients</p>
+                    <p class="trust-sub">Across London</p>
+                  </div>
+                </div>
+                <div class="trust-item">
+                  <div class="trust-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="trust-title">15+ Years</p>
+                    <p class="trust-sub">In Business</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BADGES -->
+            <div class="badge-row">
+              <div class="stars">
+                {
+                  [1, 2, 3, 4, 5].map(() => (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  ))
+                }
+                <span class="badge-text">5/5 Rating</span>
+              </div>
+              <div class="divider-v"></div>
+              <span class="badge-text">DBS Checked Staff</span>
+              <div class="divider-v"></div>
+              <span class="badge-text">Eco-Friendly Products</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: FORM -->
+          <div id="lead-form" class="hero-form-col">
+            <!-- LeadForm island goes here -->
+            <!-- Replace with your React/Svelte/etc. island -->
+            <div class="form-placeholder">
+              <div class="form-box">
+                <h3 class="form-title">Get Your 30% Intro Rate</h3>
+                <p class="form-sub">Fill in your details and we'll be in touch within 24 hours.</p>
+                <form class="enquiry-form" id="enquiry-form">
+                  <input type="hidden" name="type" id="form-type" value="home" />
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+44..." />
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Tell us about your property</label>
+                    <textarea id="message" name="message" rows="3" placeholder="e.g. 3-bed house, weekly clean..."></textarea>
+                  </div>
+                  <button type="submit" class="btn-form-submit">
+                    Claim My Introductory Rate
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WHO THIS IS FOR -->
+    <section class="section-mist py-20">
+      <div class="container">
+        <h2 class="section-heading-dark">
+          Trusted by clients who value consistency and control
+        </h2>
+        <div class="gold-divider"></div>
+
+        <div class="two-col-grid mt-12">
+          <!-- Residential -->
+          <div class="service-card">
+            <div
+              class="card-image"
+              style="background-image: url('https://images.unsplash.com/photo-1767050321604-a2654be8fad0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZXNpZGVudGlhbCUyMGhvbWUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzE4NDMyOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080');"
+            >
+              <div class="card-image-overlay"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-icon-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <h3 class="card-title">Residential Plans</h3>
+              </div>
+              <ul class="check-list">
+                {["Essentials Clean™", "Signature Clean™", "WellClean™"].map((s) => (
+                  <li class="check-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold); flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="card-footer">
+                <p>12-month plans • 30% first month • fixed pricing</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Commercial -->
+          <div class="service-card">
+            <div
+              class="card-image"
+              style="background-image: url('https://images.unsplash.com/photo-1758630737900-a28682c5aa69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb21tZXJjaWFsJTIwb2ZmaWNlJTIwc3BhY2V8ZW58MXx8fHwxNzcxODQzMjkzfDA&ixlib=rb-4.1.0&q=80&w=1080');"
+            >
+              <div class="card-image-overlay"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-icon-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                <h3 class="card-title">Commercial &amp; Advisory</h3>
+              </div>
+              <ul class="check-list">
+                {
+                  [
+                    "HQC Office Clean™",
+                    "WellClean™ Studio Advisory",
+                    "WellClean™ Studio Edition",
+                  ].map((s) => (
+                    <li class="check-item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold); flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                      <span>{s}</span>
+                    </li>
+                  ))
+                }
+              </ul>
+              <div class="card-footer">
+                <p>Contract-led • priority service • predictable costs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: HOW IT WORKS -->
+    <section class="section-white py-20">
+      <div class="container-sm">
+        <h2 class="section-heading-dark">How the Introductory Rate Works</h2>
+
+        <div class="steps-grid">
+          {
+            [
+              { step: "1", text: "Join on a 12-month agreement" },
+              { step: "2", text: "Receive 30% off your first month" },
+              { step: "3", text: "Ongoing rate is agreed upfront and locked" },
+              { step: "4", text: "Normal plan pricing applies from month two" },
+            ].map((item) => (
+              <div class="step-item">
+                <div class="step-number">{item.step}</div>
+                <p class="step-text">{item.text}</p>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="transparency-bar">
+          {
+            ["No stacked discounts", "No surprises", "Full transparency"].map(
+              (point) => (
+                <div class="transparency-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span>{point}</span>
+                </div>
+              )
+            )
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PROJECT SERVICES -->
+    <section class="section-navy py-20">
+      <div class="container">
+        <h2 class="section-heading-light">
+          Project &amp; Specialist Cleaning Services
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="section-body-light">
+          Professional project-based cleaning tailored to your specific needs.
+          Each service is delivered with the same quality standards that define
+          HQC.
+        </p>
+
+        <div class="three-col-grid">
+          {
+            [
+              {
+                title: "Post-Construction Clean",
+                cta: "Request an Assessment",
+                image:
+                  "https://images.unsplash.com/photo-1634674346387-63c94e4fdae7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwY2xlYW5pbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcxODQzMjkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+                description:
+                  "Transform construction sites into move-in ready spaces with our comprehensive post-build cleaning service.",
+                features: [
+                  "Dust & debris removal",
+                  "Window & fixture cleaning",
+                  "Surface sanitization",
+                  "Final inspection ready",
+                ],
+              },
+              {
+                title: "Airbnb Turnover Clean",
+                cta: "Discuss Your Property",
+                image:
+                  "https://images.unsplash.com/photo-1521783593447-5702b9bfd267?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaXJibmIlMjB2YWNhdGlvbiUyMHJlbnRhbCUyMGludGVyaW9yfGVufDF8fHx8MTc3MTg0MzI5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+                description:
+                  "Keep your rental property pristine between guests with our rapid-response turnover cleaning service.",
+                features: [
+                  "Same-day availability",
+                  "Linen & towel service",
+                  "Guest-ready standards",
+                  "Photo-ready presentation",
+                ],
+              },
+              {
+                title: "Move In / Move Out Reset™",
+                cta: "Get a Reset Quote",
+                image:
+                  "https://images.unsplash.com/photo-1580451299338-3658f5b11930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3ZpbmclMjBib3hlcyUyMG5ldyUyMGhvbWV8ZW58MXx8fHwxNzcxODE2NDcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+                description:
+                  "Start fresh or leave perfectly with our deep-clean service designed for property transitions.",
+                features: [
+                  "Deep clean all rooms",
+                  "Appliance detailing",
+                  "Deposit protection",
+                  "Landlord approved",
+                ],
+              },
+            ].map((service) => (
+              <div class="project-card">
+                <div
+                  class="project-card-image"
+                  style={`background-image: url('${service.image}');`}
+                >
+                  <div class="project-card-overlay">
+                    <div class="project-card-title-area">
+                      <div class="gold-line" />
+                      <h3 class="project-card-title">{service.title}</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-card-body">
+                  <p class="project-desc">{service.description}</p>
+                  <ul class="check-list mb-6">
+                    {service.features.map((f) => (
+                      <li class="check-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold); flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span class="text-sm">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div class="quality-badge-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span class="quality-badge-text">HQC Quality Assured</span>
+                  </div>
+                  <button
+                    class="btn-full-gold"
+                    data-form-type="general"
+                    data-scroll-to-form
+                  >
+                    {service.cta}
+                  </button>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="portfolio-note">
+          <p class="portfolio-note-title">
+            Looking for portfolio or multi-site solutions?
+          </p>
+          <p class="portfolio-note-sub">
+            Selective 30% introductory rates available for landlords and
+            commercial property managers
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: SPECIALIST ADD-ONS -->
+    <section class="section-mist py-16">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="section-heading-navy">Specialist Add-On Services</h2>
+          <div class="gold-divider"></div>
+          <p class="section-body-navy max-w-2xl mx-auto">
+            Elevate your cleaning plan with premium add-ons. Available with any
+            12-month agreement.
+          </p>
+        </div>
+
+        <div class="addon-grid">
+          {
+            [
+              {
+                title: "Professional Ironing & Laundry",
+                description:
+                  "Expert garment care with collection and delivery service included",
+                benefits: [
+                  "Pick-up & drop-off",
+                  "Same-week turnaround",
+                  "Delicate fabric expertise",
+                ],
+                image:
+                  "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpcm9uaW5nJTIwbGF1bmRyeSUyMHNlcnZpY2V8ZW58MXx8fHwxNzcxODQ5MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+              {
+                title: "Premium Window Cleaning",
+                description:
+                  "Streak-free clarity inside and out using professional equipment",
+                benefits: [
+                  "Interior & exterior",
+                  "Frame & sill detailing",
+                  "High-reach capability",
+                ],
+                image:
+                  "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aW5kb3clMjBjbGVhbmluZyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzE4NDkwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+              {
+                title: "Carpet & Upholstery Deep Clean",
+                description:
+                  "Hot water extraction for thorough restoration of fabrics",
+                benefits: [
+                  "Stain removal",
+                  "Odour elimination",
+                  "Fast-dry technology",
+                ],
+                image:
+                  "https://images.unsplash.com/photo-1581578731548-c64695cc6952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJwZXQlMjBjbGVhbmluZyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzE4NDkwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+              {
+                title: "Oven Deep Cleaning",
+                description:
+                  "Restore your oven to showroom condition with eco-friendly solutions",
+                benefits: [
+                  "Non-toxic products",
+                  "All oven types",
+                  "Hob & extractor included",
+                ],
+                image:
+                  "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMG92ZW4lMjBraXRjaGVufGVufDF8fHx8MTc3MTg0OTAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+              {
+                title: "Exterior Pressure Washing",
+                description:
+                  "High-power cleaning for driveways, patios, and building facades",
+                benefits: [
+                  "Concrete & stone safe",
+                  "Moss & algae removal",
+                  "Sealed finish option",
+                ],
+                image:
+                  "https://images.unsplash.com/photo-1600334129128-685c5582fd35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVzc3VyZSUyMHdhc2hpbmclMjBkcml2ZXdheXxlbnwxfHx8fDE3NzE4NDkwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+              {
+                title: "End of Tenancy Package",
+                description:
+                  "Comprehensive final clean meeting agency and landlord standards",
+                benefits: [
+                  "Deposit guarantee",
+                  "All areas covered",
+                  "Re-clean if needed",
+                ],
+                image:
+                  "https://images.unsplash.com/photo-1556911220-bff31c812dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMGFwYXJ0bWVudCUyMGNsZWFufGVufDF8fHx8MTc3MTg0OTAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+            ].map((service) => (
+              <div class="addon-card">
+                <div
+                  class="addon-card-image"
+                  style={`background-image: url('${service.image}');`}
+                >
+                  <div class="addon-card-overlay">
+                    <div class="addon-card-title-area">
+                      <div class="gold-line-sm" />
+                      <h3 class="addon-card-title">{service.title}</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="addon-card-body">
+                  <p class="addon-desc">{service.description}</p>
+                  <ul class="check-list-sm">
+                    {service.benefits.map((b) => (
+                      <li class="check-item-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold); flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div class="addon-footer">
+                    <p>Add-on available</p>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <!-- Build package CTA -->
+        <div class="build-package-box">
+          <div class="build-package-inner">
+            <div class="build-package-content">
+              <h3 class="build-package-title">Build Your Perfect Service Package</h3>
+              <p class="build-package-desc">
+                Combine any of these specialist services with your regular
+                cleaning plan for comprehensive property maintenance.
+              </p>
+              <div class="build-package-points">
+                {
+                  [
+                    "Add to any 12-month plan",
+                    "Flexible scheduling",
+                    "Bundle discounts available",
+                    "HQC quality standards",
+                  ].map((point) => (
+                    <div class="check-item-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold); flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                      <span class="text-xs">{point}</span>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+            <div class="build-package-badge">
+              <div class="quality-badge-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold); display: block; margin: 0 auto 8px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <p class="quality-badge-label">Quality Guarantee</p>
+                <p class="quality-badge-sub">Satisfaction promise</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button
+            class="btn-gold-border"
+            data-form-type="general"
+            data-scroll-to-form
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Build My Custom Package
+          </button>
+          <p class="cta-sub-note">Get a personalised quote within 24 hours</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: TRUST & AUTHORITY -->
+    <section class="section-navy py-24">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="section-heading-light" style="font-size: 3rem;">
+            Why Clients Choose HQC
+          </h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="four-col-grid mb-16">
+          {
+            [
+              {
+                icon: "trending-up",
+                title: "High Conversion Rate",
+                text: "Most consultations become long-term partnerships",
+              },
+              {
+                icon: "users",
+                title: "Trusted Expertise",
+                text: "Proven across residential & commercial spaces",
+              },
+              {
+                icon: "check-circle",
+                title: "Total Transparency",
+                text: "Clear scope, clear pricing, clear standards",
+              },
+              {
+                icon: "shield",
+                title: "Long-Term Focus",
+                text: "Relationships built on consistency, not one-offs",
+              },
+            ].map((item) => (
+              <div class="why-card">
+                <div class="why-card-icon">
+                  {item.icon === "trending-up" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                  )}
+                  {item.icon === "users" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  )}
+                  {item.icon === "check-circle" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  )}
+                  {item.icon === "shield" && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  )}
+                </div>
+                <h3 class="why-card-title">{item.title}</h3>
+                <p class="why-card-text">{item.text}</p>
+              </div>
+            ))
+          }
+        </div>
+
+        <!-- Rating block -->
+        <div class="rating-block">
+          <div class="rating-block-inner">
+            <div>
+              <div class="stars mb-4">
+                {
+                  [1, 2, 3, 4, 5].map(() => (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  ))
+                }
+              </div>
+              <h3 class="rating-title">Rated 5/5 by Our Long-Term Clients</h3>
+              <p class="rating-body">
+                Our clients stay with us because we deliver on our promises
+                every single time.
+              </p>
+              <ul class="check-list">
+                {
+                  [
+                    "Consistent quality across every visit",
+                    "Same trusted team members",
+                    "Responsive customer service",
+                    "Proactive communication",
+                  ].map((point) => (
+                    <li class="check-item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold); flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                      <span class="font-medium">{point}</span>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+            <div class="rating-badge-col">
+              <div class="rating-badge">
+                <div class="rating-badge-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-gold);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <p class="rating-badge-title">100% Quality Guarantee</p>
+                <p class="rating-badge-sub">
+                  Every service backed by our<br />satisfaction promise
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+          <h3 class="cta-banner-title">Join Hundreds of Satisfied Clients</h3>
+          <p class="cta-banner-sub">
+            Lock in your 30% introductory rate today and experience the HQC
+            difference
+          </p>
+          <div class="cta-banner-buttons">
+            <button
+              class="btn-gold-xl"
+              data-form-type="home"
+              data-scroll-to-form
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Get My 30% Home Intro Rate
+            </button>
+            <button
+              class="btn-white-xl"
+              data-form-type="commercial"
+              data-scroll-to-form
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+              Get My 30% Commercial Intro Rate
+            </button>
+          </div>
+          <p class="cta-banner-note">
+            Limited availability • 12-month agreement required • No credit card
+            needed to enquire
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FINAL CTA -->
+    <section class="section-mist py-20">
+      <div class="container-sm text-center">
+        <h2 class="section-heading-navy">
+          Ready to Secure Your Introductory Rate?
+        </h2>
+        <div class="final-cta-buttons">
+          <button
+            class="btn-gold-lg"
+            data-form-type="home"
+            data-scroll-to-form
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Claim My Home 30% Intro
+          </button>
+          <button
+            class="btn-navy-lg"
+            data-form-type="commercial"
+            data-scroll-to-form
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+            Claim My Commercial 30% Intro
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container text-center">
+        <div class="footer-logo">High Quality Clean London</div>
+        <p class="footer-tagline">
+          Premium contract-led cleaning services for homes and businesses
+        </p>
+        <p class="footer-copy">© 2026 HQC London. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* ── Layout helpers ──────────────────────────────────────────── */
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .container-sm {
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .text-center { text-align: center; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+  .max-w-2xl { max-width: 42rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  .mb-6 { margin-bottom: 1.5rem; }
+  .mb-12 { margin-bottom: 3rem; }
+  .mb-16 { margin-bottom: 4rem; }
+  .mt-12 { margin-top: 3rem; }
+  .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+  .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+  .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+  .font-medium { font-weight: 500; }
+  .text-xs { font-size: 0.75rem; }
+  .text-sm { font-size: 0.875rem; }
+  .text-base { font-size: 1rem; }
+
+  /* ── Backgrounds ─────────────────────────────────────────────── */
+  .section-mist  { background-color: var(--color-mist); }
+  .section-white { background-color: #ffffff; }
+  .section-navy  { background-color: var(--color-navy); }
+
+  /* ── Header ──────────────────────────────────────────────────── */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    background-color: var(--color-navy);
+    border-bottom: 2px solid var(--color-gold);
+    transition: all 0.3s;
+  }
+  .site-header.scrolled {
+    background-color: rgba(44, 62, 80, 0.95);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    backdrop-filter: blur(12px);
+  }
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--font-display);
+    color: var(--color-gold);
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* ── Buttons ─────────────────────────────────────────────────── */
+  button, a.btn-gold {
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-body);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  button:hover { transform: scale(1.05); }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-gold) !important;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+  }
+
+  .btn-gold, a.btn-gold {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  a.btn-gold:hover { transform: scale(1.05); }
+
+  .btn-gold-lg {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  .btn-gold-lg:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+
+  .btn-outline-lg {
+    background: transparent;
+    border: 2px solid var(--color-gold) !important;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  .btn-outline-lg:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+
+  .btn-full-gold {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.375rem;
+    border: 2px solid var(--color-navy) !important;
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+  }
+  .btn-full-gold:hover { box-shadow: 0 16px 32px rgba(0,0,0,0.3); }
+
+  .btn-gold-border {
+    background-color: var(--color-gold);
+    border: 2px solid var(--color-navy) !important;
+    color: var(--color-navy);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-gold-xl {
+    background-color: var(--color-gold);
+    border: 4px solid white !important;
+    color: var(--color-navy);
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .btn-gold-xl:hover { transform: scale(1.1); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+  .btn-white-xl {
+    background-color: white;
+    border: 4px solid var(--color-gold) !important;
+    color: var(--color-navy);
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .btn-white-xl:hover { transform: scale(1.1); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+  .btn-navy-lg {
+    background-color: var(--color-navy);
+    color: white;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* ── Hero ────────────────────────────────────────────────────── */
+  .hero-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-night) 100%);
+  }
+  .hero-bg-image {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+  .hero-grid {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .hero-content { display: flex; flex-direction: column; gap: 2.5rem; }
+  .hero-text { display: flex; flex-direction: column; gap: 1.5rem; }
+  .hero-h1 {
+    font-family: var(--font-display);
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  @media (min-width: 1024px) { .hero-h1 { font-size: 3.75rem; } }
+  .hero-sub {
+    font-family: var(--font-display);
+    color: var(--color-gold);
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  @media (min-width: 1024px) { .hero-sub { font-size: 1.875rem; } }
+  .hero-body {
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    line-height: 1.7;
+  }
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) {
+    .hero-buttons { flex-direction: row; }
+  }
+
+  /* Trust signals */
+  .trust-grid-wrapper {
+    padding-top: 2rem;
+    border-top: 2px solid rgba(201, 169, 97, 0.3);
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .trust-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gold);
+    border: 2px solid white;
+    flex-shrink: 0;
+    color: var(--color-navy);
+  }
+  .trust-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+  }
+  .trust-sub { font-size: 0.75rem; color: #d1d5db; }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  .stars { display: flex; align-items: center; gap: 0.25rem; }
+  .badge-text { font-size: 0.875rem; color: #d1d5db; }
+  .divider-v { width:1px; height:1rem; background-color: #6b7280; }
+
+  /* ── Hero Form ───────────────────────────────────────────────── */
+  .hero-form-col {
+    padding-left: 0;
+  }
+  @media (min-width: 1024px) {
+    .hero-form-col { padding-left: 2rem; }
+  }
+  .form-placeholder { width: 100%; }
+  .form-box {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 2px solid var(--color-gold);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  }
+  .form-title {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .form-sub {
+    font-size: 0.875rem;
+    color: var(--color-navy);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  .enquiry-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.375rem; }
+  .form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.375rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--color-ink);
+    transition: border-color 0.2s;
+    outline: none;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--color-gold);
+  }
+  .form-group textarea { resize: vertical; }
+  .btn-form-submit {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 2px solid var(--color-navy) !important;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-family: var(--font-body);
+  }
+  .btn-form-submit:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  /* Type toggle tabs */
+  .form-type-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .form-tab {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 2px solid var(--color-gold) !important;
+    background: transparent;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+    transition: background 0.2s, color 0.2s;
+  }
+  .form-tab.active {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+  }
+
+  /* ── Section headings ────────────────────────────────────────── */
+  .section-heading-dark {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section-heading-light {
+    font-family: var(--font-display);
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section-heading-navy {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section-body-light {
+    color: white;
+    font-size: 1.125rem;
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+  }
+  .section-body-navy {
+    color: var(--color-navy);
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  /* ── Gold divider ────────────────────────────────────────────── */
+  .gold-divider {
+    height: 4px;
+    width: 8rem;
+    background-color: var(--color-gold);
+    margin: 0 auto 3rem;
+  }
+  .gold-line {
+    height: 2px;
+    width: 3rem;
+    background-color: var(--color-gold);
+    margin-bottom: 0.5rem;
+  }
+  .gold-line-sm {
+    height: 2px;
+    width: 2rem;
+    background-color: var(--color-gold);
+    margin-bottom: 0.25rem;
+  }
+
+  /* ── Grids ───────────────────────────────────────────────────── */
+  .two-col-grid {
+    display: grid;
+    gap: 2rem;
+  }
+  @media (min-width: 768px) {
+    .two-col-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .three-col-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 768px) {
+    .three-col-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .four-col-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .four-col-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1024px) {
+    .four-col-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .addon-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .addon-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1024px) {
+    .addon-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ── Service cards (Section 3) ───────────────────────────────── */
+  .service-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid var(--color-gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  }
+  .card-image {
+    height: 12rem;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(44, 62, 80, 0.7) 100%
+    );
+  }
+  .card-body { padding: 2rem; }
+  .card-icon-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .card-title {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .card-footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-gold);
+    font-size: 0.875rem;
+    color: var(--color-navy);
+  }
+
+  /* ── Check lists ─────────────────────────────────────────────── */
+  .check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    font-size: 1.125rem;
+  }
+  .check-list-sm {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    margin-bottom: 0.75rem;
+  }
+  .check-item-sm {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    font-size: 0.75rem;
+  }
+
+  /* ── Steps (Section 4) ───────────────────────────────────────── */
+  .steps-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 640px) {
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1024px) {
+    .steps-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .step-item { text-align: center; }
+  .step-number {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: var(--color-gold);
+    border: 4px solid var(--color-navy);
+    color: var(--color-navy);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .step-text {
+    font-size: 1.125rem;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+  }
+  .transparency-bar {
+    background-color: var(--color-mist);
+    border: 2px solid var(--color-gold);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .transparency-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+  }
+
+  /* ── Project cards (Section 5) ───────────────────────────────── */
+  .project-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid var(--color-gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  }
+  .project-card-image {
+    height: 16rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .project-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 30%,
+      rgba(201, 169, 97, 0.15) 60%,
+      rgba(28, 40, 51, 0.9) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+  }
+  .project-card-title-area {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .project-card-title {
+    font-family: var(--font-display);
+    color: white;
+    font-size: 1.875rem;
+    font-weight: 600;
+  }
+  .project-card-body { padding: 2rem; }
+  .project-desc {
+    font-size: 1rem;
+    color: var(--color-navy);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .quality-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-gold);
+    margin-bottom: 1.5rem;
+  }
+  .quality-badge-text {
+    font-size: 0.875rem;
+    color: var(--color-navy);
+    font-weight: 600;
+    font-family: var(--font-body);
+  }
+
+  /* Portfolio note */
+  .portfolio-note {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+  .portfolio-note > * {
+    display: inline-block;
+    background: white;
+    border: 2px solid var(--color-gold);
+    border-radius: 0.75rem;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  .portfolio-note-title {
+    font-size: 0.875rem;
+    color: var(--color-navy);
+    font-weight: 600;
+    font-family: var(--font-body);
+    margin-bottom: 0.25rem;
+  }
+  .portfolio-note-sub {
+    font-size: 0.75rem;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+  }
+
+  /* ── Add-on cards (Section 6) ────────────────────────────────── */
+  .addon-card {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 2px solid var(--color-gold);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .addon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  }
+  .addon-card-image {
+    height: 9rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .addon-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(44, 62, 80, 0.85) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+  }
+  .addon-card-title-area {
+    padding: 0.75rem;
+    width: 100%;
+  }
+  .addon-card-title {
+    font-family: var(--font-display);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .addon-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .addon-desc {
+    font-size: 0.75rem;
+    color: var(--color-navy);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  .addon-footer {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-gold);
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+  }
+
+  /* Build package box */
+  .build-package-box {
+    background: white;
+    border: 2px solid var(--color-gold);
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .build-package-inner {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .build-package-inner { grid-template-columns: 2fr 1fr; }
+  }
+  .build-package-title {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .build-package-desc {
+    font-size: 0.875rem;
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .build-package-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .build-package-badge { text-align: center; }
+  .quality-badge-box {
+    display: inline-block;
+    background-color: var(--color-mist);
+    border: 2px solid var(--color-gold);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+  }
+  .quality-badge-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+    margin-bottom: 0.25rem;
+  }
+  .quality-badge-sub {
+    font-size: 0.75rem;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+  }
+
+  .cta-sub-note {
+    font-size: 0.75rem;
+    color: var(--color-navy);
+    margin-top: 0.75rem;
+    font-family: var(--font-body);
+  }
+
+  /* ── Why cards (Section 7) ───────────────────────────────────── */
+  .why-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    border: 4px solid var(--color-gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .why-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  }
+  .why-card-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--color-navy);
+    border: 4px solid var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+  .why-card-title {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .why-card-text {
+    font-size: 0.875rem;
+    color: var(--color-ink);
+    line-height: 1.6;
+    font-family: var(--font-body);
+  }
+
+  /* Rating block */
+  .rating-block {
+    background: white;
+    border: 4px solid var(--color-gold);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .rating-block-inner {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .rating-block-inner { grid-template-columns: 1fr 1fr; }
+  }
+  .rating-title {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .rating-body {
+    font-size: 1.125rem;
+    color: var(--color-navy);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-body);
+  }
+  .rating-badge-col { text-align: center; }
+  .rating-badge {
+    display: inline-block;
+    background-color: var(--color-mist);
+    border: 4px solid var(--color-gold);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  .rating-badge-icon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: var(--color-navy);
+    border: 4px solid var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+  }
+  .rating-badge-title {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .rating-badge-sub {
+    font-size: 0.875rem;
+    color: var(--color-navy);
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    border-radius: 1rem;
+    padding: 3rem;
+    border: 4px solid var(--color-gold);
+    text-align: center;
+    background: linear-gradient(
+      135deg,
+      rgba(201, 169, 97, 0.15) 0%,
+      rgba(201, 169, 97, 0.05) 100%
+    );
+  }
+  .cta-banner-title {
+    font-family: var(--font-display);
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .cta-banner-sub {
+    font-size: 1.25rem;
+    color: white;
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+    font-family: var(--font-body);
+  }
+  .cta-banner-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 640px) {
+    .cta-banner-buttons { flex-direction: row; }
+  }
+  .cta-banner-note {
+    font-size: 0.875rem;
+    color: white;
+    opacity: 0.9;
+    margin-top: 1.5rem;
+    font-family: var(--font-body);
+  }
+
+  /* ── Final CTA (Section 8) ───────────────────────────────────── */
+  .final-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  @media (min-width: 640px) {
+    .final-cta-buttons { flex-direction: row; }
+  }
+
+  /* ── Footer ──────────────────────────────────────────────────── */
+  .site-footer {
+    background-color: var(--color-navy);
+    padding: 2rem 0;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    color: var(--color-gold);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .footer-tagline {
+    color: #d1d5db;
+    font-size: 0.875rem;
+    font-family: var(--font-body);
+  }
+  .footer-copy {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    font-family: var(--font-body);
+  }
+</style>
+
+<script>
+  // ── Sticky header scroll effect ────────────────────────────────
+  const header = document.getElementById("site-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header?.classList.add("scrolled");
+    } else {
+      header?.classList.remove("scrolled");
+    }
+  });
+
+  // ── Scroll-to-form + set active type ──────────────────────────
+  const formTypeInput = document.getElementById(
+    "form-type"
+  ) as HTMLInputElement | null;
+  const formTitleEl = document.querySelector(".form-title");
+  const formSubEl = document.querySelector(".form-sub");
+
+  const typeLabels: Record<string, { title: string; sub: string }> = {
+    home: {
+      title: "Claim Your 30% Home Intro Rate",
+      sub: "Fill in your details and we'll be in touch within 24 hours.",
+    },
+    commercial: {
+      title: "Claim Your 30% Commercial Intro Rate",
+      sub: "Fill in your details and we'll be in touch within 24 hours.",
+    },
+    general: {
+      title: "Build Your Custom Package",
+      sub: "Tell us what you need and we'll put together a tailored quote.",
+    },
+  };
+
+  function scrollToForm(type: string) {
+    const formEl = document.getElementById("lead-form");
+    if (formEl) {
+      formEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    if (formTypeInput) formTypeInput.value = type;
+
+    const labels = typeLabels[type];
+    if (labels) {
+      if (formTitleEl) formTitleEl.textContent = labels.title;
+      if (formSubEl) formSubEl.textContent = labels.sub;
+    }
+
+    // Update tab active state
+    document.querySelectorAll<HTMLButtonElement>(".form-tab").forEach((tab) => {
+      tab.classList.toggle("active", tab.dataset.type === type);
+    });
+  }
+
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-scroll-to-form]")
+    .forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const type = btn.dataset.formType ?? "general";
+        scrollToForm(type);
+      });
+    });
+
+  // Tab clicks inside the form
+  document
+    .querySelectorAll<HTMLButtonElement>(".form-tab")
+    .forEach((tab) => {
+      tab.addEventListener("click", () => {
+        scrollToForm(tab.dataset.type ?? "general");
+      });
+    });
+
+  // ── Basic form submission handler ─────────────────────────────
+  document
+    .getElementById("enquiry-form")
+    ?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const form = e.target as HTMLFormElement;
+      const submitBtn = form.querySelector<HTMLButtonElement>(
+        ".btn-form-submit"
+      );
+      if (submitBtn) {
+        submitBtn.textContent = "Thank you! We'll be in touch soon.";
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = "0.7";
+      }
+      // Wire up your actual submission logic here (fetch, formspree, etc.)
+    });
+</script>
