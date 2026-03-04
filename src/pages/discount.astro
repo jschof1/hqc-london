@@ -3,103 +3,183 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import siteSettings from '../data/site-settings.json';
 
-const title = "Exclusive Offer | High Quality Clean";
-const description = "Claim your exclusive discount for High Quality Clean's luxury cleaning services.";
+const title = "30% Introductory Rate | High Quality Clean";
+const description = "Claim your exclusive 30% introductory rate for High Quality Clean's luxury cleaning services. Limited availability for new clients.";
 ---
 
 <Layout title={title} description={description} robots="noindex, nofollow">
   <Header />
-  
-  <main class="min-h-screen bg-mist flex items-center justify-center p-4 pt-24 md:pt-32">
-    <div class="w-full max-w-md">
-      <div id="discount-card" class="bg-white rounded-2xl shadow-xl border border-gold/30 p-8 md:p-10 relative overflow-hidden">
-        <!-- Decoration -->
-        <div class="absolute top-0 left-0 w-full h-2 bg-gold"></div>
-        
-        <div id="form-content" class="animate-fade-in">
-          <div class="text-center mb-8">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 mb-4 border border-gold/20">
-              <i class="fas fa-percentage text-gold text-2xl"></i>
-            </div>
-            <h1 class="font-serif text-3xl text-navy font-bold mb-2">Exclusive Offer</h1>
-            <p class="text-ink/70">
-              Complete the form below to receive your bespoke discount for our luxury cleaning services.
-            </p>
-          </div>
 
-          <form id="discount-form" class="space-y-5">
-            <div>
-              <label for="name" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
-                placeholder="Your full name"
-              />
-            </div>
+  <main class="min-h-screen pt-16 relative" style="background-color: var(--color-navy);">
+    <!-- Background image overlay -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=900&fit=crop&auto=format&q=80"
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+        aria-hidden="true"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, var(--color-navy) 40%, rgba(44,62,80,0.85) 100%);"></div>
+    </div>
 
-            <div>
-              <label for="phone" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
-                placeholder="07xxx xxxxxx"
-              />
-            </div>
+    <div class="relative z-10 flex items-center justify-center min-h-[calc(100vh-4rem)] px-4 py-10">
+      <div class="w-full max-w-2xl">
 
-            <div>
-              <label for="summary" class="block text-sm font-medium text-navy mb-1.5 uppercase tracking-wider">Summary of Cleaning Needs</label>
-              <textarea
-                id="summary"
-                name="summary"
-                required
-                rows="4"
-                class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all resize-none"
-                placeholder="Briefly describe your home and what you're looking for..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              id="submit-btn"
-              class="w-full bg-navy text-white font-bold py-4 rounded-lg hover:bg-navy/90 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 group"
-            >
-              Claim My Discount
-              <i class="fas fa-paper-plane text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-            </button>
-            
-            <p class="text-[10px] text-ink/40 text-center italic">
-              *Limited time offer for new clients in our primary service areas.
-            </p>
-          </form>
-        </div>
-
-        <!-- Success Message -->
-        <div id="success-content" class="hidden text-center py-6 animate-fade-in">
-          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-check text-gold text-4xl"></i>
-          </div>
-          <h2 class="font-serif text-3xl text-navy font-bold mb-4">Request Received!</h2>
-          <p class="text-ink/70 text-lg mb-8 leading-relaxed">
-            Thank you for your interest. A specialist will contact you shortly via phone with your exclusive discount details and to discuss your requirements.
-          </p>
-          <a 
-            href="/" 
-            class="inline-block bg-gold text-navy px-8 py-3 rounded-lg font-bold hover:bg-gold/90 transition-all shadow-md"
+        <!-- Badge + Heading inline -->
+        <div class="text-center mb-5">
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-semibold tracking-widest uppercase mb-3"
+            style="background: rgba(201,169,97,0.15); border: 1px solid var(--color-gold); color: var(--color-gold); font-family: var(--font-body); font-size: 0.6rem;"
           >
-            Back to Home
-          </a>
+            <i class="fas fa-tag" style="font-size: 0.55rem;"></i>
+            Introductory Offer
+          </span>
+          <h1 class="font-serif text-4xl md:text-5xl text-white font-semibold leading-tight mb-2">
+            Claim Your <span style="color: var(--color-gold);">30% Rate</span>
+          </h1>
+          <p class="text-white/60 text-sm max-w-md mx-auto" style="font-family: var(--font-body);">
+            A specialist will be in touch to lock in your rate before availability closes.
+          </p>
         </div>
+
+        <!-- Card -->
+        <div
+          id="discount-card"
+          class="rounded-2xl overflow-hidden"
+          style="background: rgba(255,255,255,0.04); border: 1px solid rgba(201,169,97,0.3); backdrop-filter: blur(12px);"
+        >
+          <!-- Gold top bar -->
+          <div class="h-1 w-full" style="background: linear-gradient(90deg, var(--color-gold), rgba(201,169,97,0.4));"></div>
+
+          <div class="p-8 md:p-10">
+            <div id="form-content" class="animate-fade-in">
+              <form id="discount-form" class="space-y-5">
+
+                <div>
+                  <label for="name" class="block text-xs font-semibold uppercase tracking-widest mb-2" style="color: var(--color-gold); font-family: var(--font-body);">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="discount-input w-full rounded-lg px-4 py-3.5 text-white placeholder-white/30 outline-none transition-all"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.25); font-family: var(--font-body);"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                <div>
+                  <label for="phone" class="block text-xs font-semibold uppercase tracking-widest mb-2" style="color: var(--color-gold); font-family: var(--font-body);">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="discount-input w-full rounded-lg px-4 py-3.5 text-white placeholder-white/30 outline-none transition-all"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.25); font-family: var(--font-body);"
+                    placeholder="07xxx xxxxxx"
+                  />
+                </div>
+
+                <div>
+                  <label for="type" class="block text-xs font-semibold uppercase tracking-widest mb-2" style="color: var(--color-gold); font-family: var(--font-body);">Service Type</label>
+                  <select
+                    id="type"
+                    name="type"
+                    class="discount-input w-full rounded-lg px-4 py-3.5 text-white outline-none transition-all appearance-none"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.25); font-family: var(--font-body);"
+                  >
+                    <option value="home" style="background: #2C3E50;">Residential / Home</option>
+                    <option value="commercial" style="background: #2C3E50;">Commercial / Office</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="summary" class="block text-xs font-semibold uppercase tracking-widest mb-2" style="color: var(--color-gold); font-family: var(--font-body);">Your Cleaning Needs</label>
+                  <textarea
+                    id="summary"
+                    name="summary"
+                    required
+                    rows="3"
+                    class="discount-input w-full rounded-lg px-4 py-3.5 text-white placeholder-white/30 outline-none transition-all resize-none"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.25); font-family: var(--font-body);"
+                    placeholder="Briefly describe your property and requirements..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  id="submit-btn"
+                  class="w-full font-bold py-4 rounded-lg transition-all duration-300 shadow-lg flex items-center justify-center gap-2 group hover:opacity-90 hover:scale-[1.02]"
+                  style="background-color: var(--color-gold); color: var(--color-navy); font-family: var(--font-body); font-size: 1rem;"
+                >
+                  Claim My 30% Rate
+                  <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                </button>
+
+                <p class="text-xs text-white/30 text-center italic" style="font-family: var(--font-body);">
+                  Limited availability &bull; New clients only &bull; No credit card required
+                </p>
+              </form>
+            </div>
+
+            <!-- Success State -->
+            <div id="success-content" class="hidden text-center py-8 animate-fade-in">
+              <div
+                class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                style="background: rgba(201,169,97,0.15); border: 1px solid var(--color-gold);"
+              >
+                <i class="fas fa-check text-3xl" style="color: var(--color-gold);"></i>
+              </div>
+              <h2 class="font-serif text-3xl text-white font-semibold mb-3">You're on the List</h2>
+              <p class="text-white/60 text-base mb-8 leading-relaxed max-w-sm mx-auto" style="font-family: var(--font-body);">
+                A specialist will call you shortly to confirm your 30% introductory rate and arrange your first clean.
+              </p>
+              <a
+                href="/"
+                class="inline-flex items-center gap-2 px-8 py-3 rounded-lg font-bold transition-all hover:opacity-90"
+                style="background-color: var(--color-gold); color: var(--color-navy); font-family: var(--font-body);"
+              >
+                <i class="fas fa-home text-sm"></i>
+                Back to Home
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust signals -->
+        <div class="flex items-center justify-center gap-6 mt-8 flex-wrap">
+          <span class="inline-flex items-center gap-2 text-xs text-white/40" style="font-family: var(--font-body);">
+            <i class="fas fa-shield-alt" style="color: var(--color-gold);"></i>
+            £5M Insured
+          </span>
+          <span class="h-3 w-px bg-white/10"></span>
+          <span class="inline-flex items-center gap-2 text-xs text-white/40" style="font-family: var(--font-body);">
+            <i class="fas fa-id-card" style="color: var(--color-gold);"></i>
+            DBS Checked
+          </span>
+          <span class="h-3 w-px bg-white/10"></span>
+          <span class="inline-flex items-center gap-2 text-xs text-white/40" style="font-family: var(--font-body);">
+            <i class="fas fa-star" style="color: var(--color-gold);"></i>
+            Five-Star Average
+          </span>
+        </div>
+
       </div>
     </div>
   </main>
 
   <script define:vars={{ webhookUrl: siteSettings.discountFromWebhook }}>
+    // Pre-select type from URL param
+    const params = new URLSearchParams(window.location.search);
+    const typeParam = params.get('type');
+    if (typeParam) {
+      const typeSelect = document.getElementById('type');
+      if (typeSelect && (typeParam === 'home' || typeParam === 'commercial')) {
+        typeSelect.value = typeParam;
+      }
+    }
+
     const form = document.getElementById('discount-form');
     const formContent = document.getElementById('form-content');
     const successContent = document.getElementById('success-content');
@@ -107,7 +187,7 @@ const description = "Claim your exclusive discount for High Quality Clean's luxu
 
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
@@ -115,16 +195,14 @@ const description = "Claim your exclusive discount for High Quality Clean's luxu
 
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
-      
+
       data.source = 'discount_page';
       data.timestamp = new Date().toISOString();
 
       try {
         const response = await fetch(webhookUrl, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
         });
 
@@ -137,10 +215,10 @@ const description = "Claim your exclusive discount for High Quality Clean's luxu
       } catch (error) {
         console.error('Error submitting discount request:', error);
         alert('Something went wrong. Please try again or call us directly at 020 3342 5260.');
-        
+
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = 'Claim My Discount <i class="fas fa-paper-plane text-sm"></i>';
+          submitBtn.innerHTML = 'Claim My 30% Rate <i class="fas fa-arrow-right text-sm"></i>';
         }
       }
     });
@@ -153,7 +231,12 @@ const description = "Claim your exclusive discount for High Quality Clean's luxu
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .discount-input:focus {
+    border-color: var(--color-gold) !important;
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
   }
 </style>
