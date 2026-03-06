@@ -282,7 +282,7 @@ const propertyTypes = [
     </div>
   </main>
 
-  <script define:vars={{ webhookUrl: siteSettings.quickFormWebhook }}>
+  <script>
     let currentStep = 1;
     const totalSteps = 3;
 
@@ -395,7 +395,7 @@ const propertyTypes = [
       data.timestamp = new Date().toISOString();
 
       try {
-        const response = await fetch(webhookUrl, {
+        const response = await fetch('/api/quote', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

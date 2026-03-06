@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
+import IntroRateBanner from '../components/IntroRateBanner.astro';
 
 // Import area data from JSON file
 import areaData from '../data/area-data.json';
@@ -46,6 +47,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
       ]}
       backgroundClass="bg-navy relative"
     />
+    <IntroRateBanner />
 
     <!-- Coverage Overview -->
     <section id="coverage" class="py-16 md:py-20 bg-white">

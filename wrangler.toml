@@ -1,0 +1,26 @@
+# Cloudflare Pages / Workers config for hqc-london
+# https://developers.cloudflare.com/workers/wrangler/configuration/
+
+name = "hqc-london"
+# For multi-account: set CLOUDFLARE_ACCOUNT_ID=1d7541992ccacf0931ee0e385daa5e08 when running wrangler
+compatibility_date = "2025-03-06"
+compatibility_flags = ["nodejs_compat"]
+
+# Webhook URLs are set as secrets (never commit real values):
+#   npx wrangler secret put FEEDBACK_WEBHOOK
+#   npx wrangler secret put QUICK_FORM_WEBHOOK
+#   npx wrangler secret put QUOTE_FORM_WEBHOOK
+#   npx wrangler secret put DISCOUNT_FORM_WEBHOOK
+# For local dev, use .dev.vars (see .dev.vars.example).
+# For Pages: npx wrangler pages secret put <NAME> --project-name=hqc-london
+
+# Cloudflare Pages (for: pages deploy, pages secret put)
+pages_build_output_dir = "dist"
+
+# For Cloudflare Pages (Git deploy): set secrets in Dashboard → Pages → your project → Settings → Environment variables.
+# Use "Encrypt" for production so values are available as env.FEEDBACK_WEBHOOK etc.
+
+# Optional: only needed if you use Astro sessions. Create with: npx wrangler kv namespace create "SESSION"
+# [[kv_namespaces]]
+# binding = "SESSION"
+# id = "<YOUR_KV_NAMESPACE_ID>"

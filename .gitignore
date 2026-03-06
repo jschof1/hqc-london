@@ -20,6 +20,7 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+.dev.vars
 
 # macOS-specific files
 .DS_Store
@@ -41,3 +42,4 @@ archive/index-clean.astro
 archive/index-backup.astro
 archive/index-clean.astro
 loom.html
+.dev.vars.example

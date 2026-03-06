@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
+import IntroRateBanner from '../components/IntroRateBanner.astro';
 import siteSettings from '../data/site-settings.json';
 ---
 
@@ -36,6 +37,7 @@ import siteSettings from '../data/site-settings.json';
       ]}
       backgroundClass="bg-navy relative overflow-hidden"
     />
+    <IntroRateBanner />
 
     <!-- Contact Information Cards -->
     <section class="py-20 md:py-28 bg-mist">
@@ -276,7 +278,7 @@ import siteSettings from '../data/site-settings.json';
           </button>
         </div>
 
-        <script define:vars={{ webhookUrl: siteSettings.quickFormWebhook }}>
+        <script>
           const form = document.getElementById('contact-form');
           const successMessage = document.getElementById('contact-success');
           const submitBtn = form?.querySelector('button[type="submit"]');
@@ -297,7 +299,7 @@ import siteSettings from '../data/site-settings.json';
             data.timestamp = new Date().toISOString();
 
             try {
-              const response = await fetch(webhookUrl, {
+              const response = await fetch('/api/quick-form', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',

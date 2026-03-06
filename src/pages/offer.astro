@@ -1747,7 +1747,7 @@ import siteSettings from '../data/site-settings.json';
   }
 </style>
 
-<script define:vars={{ webhookUrl: siteSettings.discountFromWebhook, phoneFormatted: siteSettings.phoneFormatted }}>
+<script define:vars={{ phoneFormatted: siteSettings.phoneFormatted }}>
   // ── Sticky header scroll effect ────────────────────────────────
   const header = document.getElementById("site-header");
   window.addEventListener("scroll", () => {
@@ -1782,7 +1782,7 @@ import siteSettings from '../data/site-settings.json';
     data.timestamp = new Date().toISOString();
 
     try {
-      const response = await fetch(webhookUrl, {
+      const response = await fetch("/api/discount", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

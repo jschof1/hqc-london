@@ -46,7 +46,7 @@ import siteSettings from '../data/site-settings.json';
 	<!-- 9. Recent Work / Case Studies -->
 	<TransformationGallery />
 
-	<!-- 10. Final CTA -->
+		<!-- 10. Final CTA -->
 	<section
 	  id="quote"
 	  class="relative py-20 md:py-24 text-white parallax"
@@ -59,178 +59,43 @@ import siteSettings from '../data/site-settings.json';
 	  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
 		  <h2 class="font-serif text-3xl md:text-5xl font-bold text-gold mb-6">
-			Ready for Your Next Clean?
+			Claim Your 30% Introductory Rate Today
 		  </h2>
 		  <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-			Experience the High Quality Clean difference in your space. Completely bespoke, surface-safe, and designed around your schedule.
+			Join hundreds of satisfied clients and experience the High Quality Clean difference. Limited availability for new clients.
 		  </p>
 		</div>
 
-		<form
-		  id="quote-form"
-		  class="mx-auto max-w-2xl bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8 transition-all duration-300"
-		>
-		  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-			<div>
-			  <label for="name" class="block text-sm font-medium text-white mb-2"
-				>Name</label
-			  >
-			  <input
-				type="text"
-				id="name"
-				name="name"
-				required
-				class="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-				placeholder="Your full name"
-			  />
-			</div>
-			<div>
-			  <label for="email" class="block text-sm font-medium text-white mb-2"
-				>Email</label
-			  >
-			  <input
-				type="email"
-				id="email"
-				name="email"
-				required
-				class="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-				placeholder="your.email@example.com"
-			  />
-			</div>
-		  </div>
-		  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-			<div>
-			  <label for="phone" class="block text-sm font-medium text-white mb-2"
-				>Phone</label
-			  >
-			  <input
-				type="tel"
-				id="phone"
-				name="phone"
-				class="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-				placeholder="Your phone number"
-			  />
-			</div>
-			<div>
-			  <label for="postcode" class="block text-sm font-medium text-white mb-2"
-				>Postcode</label
-			  >
-			  <input
-				type="text"
-				id="postcode"
-				name="postcode"
-				required
-				class="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-				placeholder="e.g., SW1X 7XL"
-			  />
-			</div>
-		  </div>
-		  <div class="mb-6">
-			<label for="service" class="block text-sm font-medium text-white mb-2"
-			  >Service Interest</label
+		<div class="text-center">
+		  <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+			<a
+			  href="/discount?type=home"
+			  class="px-10 py-5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-3 border-2 font-bold text-lg no-underline"
+			  style="background-color: var(--color-gold); border-color: white; color: var(--color-navy);"
 			>
-			<select
-			  id="service"
-			  name="service"
-			  required
-			  class="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+			  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+				<polyline points="9 22 9 12 15 12 15 22"/>
+			  </svg>
+			  Claim 30% Home Rate
+			</a>
+			<a
+			  href="/discount?type=commercial"
+			  class="px-10 py-5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-3 border-2 font-bold text-lg no-underline"
+			  style="background-color: white; border-color: var(--color-gold); color: var(--color-navy);"
 			>
-			  <option value="" disabled selected>Choose your service type</option>
-			  <option value="essentials">Essentials Clean™</option>
-			  <option value="signature">Signature Clean™</option>
-			  <option value="wellclean">WellClean™</option>
-			  <option value="move-in-out">Move In/Out Reset™</option>
-			  <option value="airbnb">Airbnb Turnover</option>
-			  <option value="office">Office Clean</option>
-			  <option value="other">Other / Not Sure</option>
-			</select>
+			  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<rect x="3" y="2" width="18" height="20" rx="2" ry="2"/>
+				<path d="M9 22V12h6v10"/>
+				<path d="M9 6h.01M12 6h.01M15 6h.01M9 10h.01M12 10h.01M15 10h.01"/>
+			  </svg>
+			  Claim 30% Commercial Rate
+			</a>
 		  </div>
-		  <div class="mb-6">
-			<label for="message" class="block text-sm font-medium text-white mb-2"
-			  >Tell us about your space</label
-			>
-			<textarea
-			  id="message"
-			  name="message"
-			  rows="4"
-			  class="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-none"
-			  placeholder="Brief description: property type, rooms, any specific requirements..."
-			></textarea>
-		  </div>
-		  <button
-			type="submit"
-			class="w-full bg-gold text-navy font-semibold py-4 px-6 rounded-lg hover:bg-gold/90 transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-		  >
-			Request Your Personalised Quote
-		  </button>
-		</form>
-
-		<div id="form-success" class="hidden mx-auto max-w-2xl bg-white/10 backdrop-blur border border-gold/50 rounded-2xl p-12 text-center animate-fade-in">
-		  <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
-			<i class="fas fa-check text-gold text-4xl"></i>
-		  </div>
-		  <h3 class="font-serif text-3xl font-bold text-gold mb-4">Request Received</h3>
-		  <p class="text-white/90 text-lg mb-8">
-			Thank you for your interest in High Quality Clean. We've received your details and one of our specialists will be in touch shortly to discuss your requirements.
+		  <p class="text-white/60 text-sm">
+			Limited availability &bull; 12-month agreement required &bull; No credit card needed
 		  </p>
-		  <button 
-			onclick="window.location.reload()" 
-			class="text-gold hover:text-white transition-colors underline underline-offset-4"
-		  >
-			Send another request
-		  </button>
 		</div>
-
-		<script define:vars={{ webhookUrl: siteSettings.quickFormWebhook }}>
-		  const form = document.getElementById('quote-form');
-		  const successMessage = document.getElementById('form-success');
-		  const submitBtn = form?.querySelector('button[type="submit"]');
-		  const originalBtnText = submitBtn?.innerHTML;
-
-		  form?.addEventListener('submit', async (e) => {
-			e.preventDefault();
-			
-			if (submitBtn) {
-			  submitBtn.disabled = true;
-			  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
-			}
-
-			const formData = new FormData(form);
-			const data = Object.fromEntries(formData.entries());
-			
-			// Add metadata similar to formExample.ts logic
-			data.source = 'website_final_cta';
-			data.form_type = 'detailed_quote_request';
-			data.timestamp = new Date().toISOString();
-			data.area = 'London'; // Default area for main site
-
-			try {
-			  const response = await fetch(webhookUrl, {
-				method: 'POST',
-				headers: {
-				  'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(data),
-			  });
-
-			  if (response.ok) {
-				form.style.display = 'none';
-				successMessage.classList.remove('hidden');
-				successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-			  } else {
-				throw new Error('Submission failed');
-			  }
-			} catch (error) {
-			  console.error('Error submitting form:', error);
-			  alert('Something went wrong while sending your request. Please try again or call us directly at 020 3342 5260.');
-			  
-			  if (submitBtn) {
-				submitBtn.disabled = false;
-				submitBtn.innerHTML = originalBtnText;
-			  }
-			}
-		  });
-		</script>
 	  </div>
 	</section>
   </main>

@@ -136,7 +136,6 @@ const description = "We value your feedback. Please let us know about your exper
   </main>
 
   <script define:vars={{ 
-    webhookUrl: siteSettings.feedbackWebhook, 
     googleReviewUrl: siteSettings.feedbackGoogleReviewUrl || "https://g.page/r/CVci07KZU9WxEBM/review" 
   }}>
     const ratingStep = document.getElementById('rating-step');
@@ -199,7 +198,7 @@ const description = "We value your feedback. Please let us know about your exper
       data.timestamp = new Date().toISOString();
 
       try {
-        const response = await fetch(webhookUrl, {
+        const response = await fetch('/api/feedback', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

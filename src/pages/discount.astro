@@ -22,10 +22,9 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
       <div class="absolute inset-0" style="background: linear-gradient(135deg, var(--color-navy) 40%, rgba(44,62,80,0.85) 100%);"></div>
     </div>
 
-    <div class="relative z-10 flex items-center justify-center min-h-[calc(100vh-4rem)] px-4 py-10">
+    <div class="relative z-10 flex flex-col items-center px-4 py-10">
       <div class="w-full max-w-2xl">
-
-        <!-- Badge + Heading inline -->
+        <!-- Hero: Badge + Heading + Card -->
         <div class="text-center mb-5">
           <span
             class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-semibold tracking-widest uppercase mb-3"
@@ -78,6 +77,19 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
                     class="discount-input w-full rounded-lg px-4 py-3.5 text-white placeholder-white/30 outline-none transition-all"
                     style="background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.25); font-family: var(--font-body);"
                     placeholder="07xxx xxxxxx"
+                  />
+                </div>
+
+                <div>
+                  <label for="email" class="block text-xs font-semibold uppercase tracking-widest mb-2" style="color: var(--color-gold); font-family: var(--font-body);">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="discount-input w-full rounded-lg px-4 py-3.5 text-white placeholder-white/30 outline-none transition-all"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.25); font-family: var(--font-body);"
+                    placeholder="your.email@example.com"
                   />
                 </div>
 
@@ -169,7 +181,7 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
     </div>
   </main>
 
-  <script define:vars={{ webhookUrl: siteSettings.discountFromWebhook }}>
+  <script>
     // Pre-select type from URL param
     const params = new URLSearchParams(window.location.search);
     const typeParam = params.get('type');
@@ -197,10 +209,11 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
       const data = Object.fromEntries(formData.entries());
 
       data.source = 'discount_page';
+      data.tag = 'discount offer';
       data.timestamp = new Date().toISOString();
 
       try {
-        const response = await fetch(webhookUrl, {
+        const response = await fetch('/api/discount', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
