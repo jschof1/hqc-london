@@ -1,8 +1,9 @@
 import type { APIRoute } from 'astro';
+import siteSettings from '../../data/site-settings.json';
 
 export const POST: APIRoute = async ({ request, locals }) => {
   const env = (locals as { runtime?: { env?: Record<string, string> } }).runtime?.env;
-  const webhookUrl = env?.DISCOUNT_FORM_WEBHOOK;
+  const webhookUrl = env?.DISCOUNT_FORM_WEBHOOK ?? siteSettings.discountFromWebhook;
   if (!webhookUrl) {
     return new Response(JSON.stringify({ error: 'Webhook not configured' }), {
       status: 503,
