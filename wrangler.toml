@@ -11,7 +11,6 @@ compatibility_flags = ["nodejs_compat"]
 #   npx wrangler secret put QUICK_FORM_WEBHOOK
 #   npx wrangler secret put QUOTE_FORM_WEBHOOK
 #   npx wrangler secret put DISCOUNT_FORM_WEBHOOK
-#   (optional; when unset, discount form uses discountFromWebhook in src/data/site-settings.json)
 # For local dev, use .dev.vars (see .dev.vars.example).
 # For Pages: npx wrangler pages secret put <NAME> --project-name=hqc-london
 
