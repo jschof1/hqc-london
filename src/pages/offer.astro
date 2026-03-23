@@ -1748,6 +1748,12 @@ import siteSettings from '../data/site-settings.json';
 </style>
 
 <script define:vars={{ phoneFormatted: siteSettings.phoneFormatted }}>
+  const normalizeDiscountType = (value) => {
+    if (value === "home") return "Residential";
+    if (value === "commercial") return "Commercial";
+    return value;
+  };
+
   // ── Sticky header scroll effect ────────────────────────────────
   const header = document.getElementById("site-header");
   window.addEventListener("scroll", () => {
@@ -1778,6 +1784,7 @@ import siteSettings from '../data/site-settings.json';
       data.summary = data.message;
       delete data.message;
     }
+    data.type = normalizeDiscountType(data.type);
     data.source = "offer_page";
     data.timestamp = new Date().toISOString();
 

@@ -182,6 +182,12 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
   </main>
 
   <script>
+    const normalizeDiscountType = (value) => {
+      if (value === 'home') return 'Residential';
+      if (value === 'commercial') return 'Commercial';
+      return value;
+    };
+
     // Pre-select type from URL param
     const params = new URLSearchParams(window.location.search);
     const typeParam = params.get('type');
@@ -208,6 +214,7 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
 
+      data.type = normalizeDiscountType(data.type);
       data.source = 'discount_page';
       data.tag = 'discount offer';
       data.timestamp = new Date().toISOString();
