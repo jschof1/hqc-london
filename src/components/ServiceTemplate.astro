@@ -374,7 +374,10 @@ const { service } = Astro.props;
             {service.objections.faqs.map((faq) => (
               <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
                 <h4 class="font-semibold text-gold mb-3">{faq.question}</h4>
-                <p class="text-white/80">{faq.answer}</p>
+                <p
+                  class="text-white/80 [&_a]:text-gold [&_a]:underline [&_a:hover]:text-white"
+                  set:html={faq.answer}
+                ></p>
               </div>
             ))}
           </div>
