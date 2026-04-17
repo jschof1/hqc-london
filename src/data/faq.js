@@ -4,7 +4,7 @@ export const faqData = [
       items: [
         {
           question: "How do I make a booking?",
-          answer: "Fill out our enquiry form online, or call 0203 342 5260. We'll contact you to confirm details and availability. See our <a href='/terms-and-conditions'>Terms and Conditions</a>."
+          answer: "Fill out our enquiry form online, or call 0208 8703925. We'll contact you to confirm details and availability. See our <a href='/terms-and-conditions'>Terms and Conditions</a>."
         },
         {
           question: "Do I need to be home for my booking?",
