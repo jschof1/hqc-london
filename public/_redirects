@@ -1,11 +1,10 @@
 /sitemap.xml /sitemap-0.xml 301
 
-# Flatten service URLs - serve files from /services/ at root level
-/concierge-laundry /services/concierge-laundry 200
-/moving-out /services/moving-out 200
-/carpet-cleaning /services/carpet-cleaning 200
-/well-clean-advisory /services/well-clean-advisory 200
-/office-cleaning-services /services/office-cleaning-services 200
-/airbnb-turnover /services/airbnb-turnover 200
-/well-clean /services/well-clean 200
-
+# Legacy service URL redirects (301 = permanent, consolidates ranking signals)
+/concierge-laundry /services/ironing-and-laundry/ 301
+/moving-out /services/end-of-tenancy-cleaning/ 301
+/carpet-cleaning /services/carpet-cleaning/ 301
+/well-clean-advisory / 301
+/office-cleaning-services /services/office-cleaning/ 301
+/airbnb-turnover /services/airbnb-cleaning/ 301
+/well-clean / 301

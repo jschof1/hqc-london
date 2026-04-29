@@ -5,7 +5,7 @@
   "description": "High Quality Cleaning London website with Astro and Tailwind CSS",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/inject-location-sitemap.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "generate:all": "node scripts/generate-area-pages.js all",
