@@ -1,6 +1,7 @@
 ---
 // Define the props interface
 interface Props {
+  showIntroRateBanner?: boolean;
   service: {
     hero: {
       headline: string;
@@ -88,7 +89,7 @@ interface Props {
 
 import IntroRateBanner from './IntroRateBanner.astro';
 
-const { service } = Astro.props;
+const { service, showIntroRateBanner = true } = Astro.props;
 ---
 
 <main class="pt-16 relative">
@@ -125,7 +126,7 @@ const { service } = Astro.props;
       </div>
     </div>
   </section>
-  <IntroRateBanner />
+  {showIntroRateBanner && <IntroRateBanner />}
 
   <!-- Trust Bar -->
   <!-- <section class="bg-white py-8 border-b border-gold/20">

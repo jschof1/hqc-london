@@ -13,13 +13,12 @@ const description = "We value your feedback. Please let us know about your exper
   <main class="min-h-screen bg-mist flex items-center justify-center p-4 pt-24 md:pt-32">
     <div class="w-full max-w-xl">
       <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gold/30 relative overflow-hidden">
-        <!-- Decoration -->
         <div class="absolute top-0 left-0 w-full h-2 bg-gold"></div>
         
         <!-- Step 1: Rating Selection -->
         <div id="rating-step" class="text-center animate-fade-in">
-          <h1 class="font-serif text-3xl md:text-4xl text-navy font-bold mb-4">How was your experience?</h1>
-          <p class="text-ink/70 text-lg mb-10">Your feedback helps us maintain the highest standards of luxury care.</p>
+          <h1 class="font-serif text-3xl md:text-4xl text-navy font-bold mb-4">How did we do today?</h1>
+          <p class="text-ink/70 text-lg mb-10">We aim for 5-star service every time. Tap a star below to continue.</p>
 
           <div class="flex justify-center gap-3 mb-8">
             {[1, 2, 3, 4, 5].map((star) => (
@@ -37,12 +36,42 @@ const description = "We value your feedback. Please let us know about your exper
           <p class="text-sm text-ink/50 italic">Select a star to begin</p>
         </div>
 
-        <!-- Step 2: Feedback Form (Hidden by default) -->
+        <!-- Step 2a: Positive Review CTA (5 stars) -->
+        <div id="review-step" class="hidden text-center animate-fade-in">
+          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-star text-gold text-4xl"></i>
+          </div>
+          <h2 class="font-serif text-3xl text-navy font-bold mb-4">Thank you — we’re so glad you’re happy!</h2>
+          <p class="text-ink/70 text-lg mb-8 leading-relaxed">
+            Would you mind sharing your experience publicly? It helps our small team grow and serve more clients.
+          </p>
+          <a
+            id="google-review-link"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center gap-2 bg-navy text-white font-semibold py-4 px-8 rounded-lg hover:bg-navy/90 transition-all duration-300 shadow-lg"
+          >
+            <i class="fab fa-google"></i>
+            Leave a Google Review
+          </a>
+          <div class="mt-6">
+            <button
+              type="button"
+              onclick="window.location.reload()"
+              class="text-ink/50 text-sm hover:text-navy transition-colors"
+            >
+              Back to rating
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2b: Private Feedback Form (1–4 stars) -->
         <div id="feedback-step" class="hidden animate-fade-in">
           <div class="text-center mb-8">
-            <h2 class="font-serif text-2xl md:text-3xl text-navy font-bold mb-3">We're sorry to hear that</h2>
+            <h2 class="font-serif text-2xl md:text-3xl text-navy font-bold mb-3">We’re sorry we didn’t exceed expectations.</h2>
             <p class="text-ink/70">
-              We truly apologise if we didn't meet your expectations. Please let us know what went wrong so we can make it right.
+              Please tell us what we could have done better — our team will review this personally.
             </p>
           </div>
 
@@ -75,18 +104,18 @@ const description = "We value your feedback. Please let us know about your exper
             </div>
 
             <div>
-              <label for="phone" class="block text-sm font-medium text-navy mb-1.5">Phone (Optional)</label>
+              <label for="reference" class="block text-sm font-medium text-navy mb-1.5">Service address or booking reference (optional)</label>
               <input
-                type="tel"
-                id="phone"
-                name="phone"
+                type="text"
+                id="reference"
+                name="reference"
                 class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all"
-                placeholder="Your phone number"
+                placeholder="e.g. 12 Example Street, SW3 / Booking #1234"
               />
             </div>
 
             <div>
-              <label for="feedback" class="block text-sm font-medium text-navy mb-1.5">How can we improve?</label>
+              <label for="feedback" class="block text-sm font-medium text-navy mb-1.5">What could we have done better?</label>
               <textarea
                 id="feedback"
                 name="feedback"
@@ -102,7 +131,7 @@ const description = "We value your feedback. Please let us know about your exper
               id="submit-feedback"
               class="w-full bg-navy text-white font-semibold py-4 rounded-lg hover:bg-navy/90 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
             >
-              Send Feedback
+              Send Private Feedback
             </button>
             
             <button 
@@ -115,14 +144,14 @@ const description = "We value your feedback. Please let us know about your exper
           </form>
         </div>
 
-        <!-- Step 3: Success Message (Hidden by default) -->
+        <!-- Step 3: Success Message -->
         <div id="success-step" class="hidden text-center py-8 animate-fade-in">
           <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <i class="fas fa-heart text-gold text-4xl"></i>
           </div>
-          <h2 class="font-serif text-3xl text-navy font-bold mb-4">Thank you for your feedback</h2>
+          <h2 class="font-serif text-3xl text-navy font-bold mb-4">Thank you for your feedback.</h2>
           <p class="text-ink/70 text-lg mb-8 leading-relaxed">
-            We appreciate you taking the time to share your experience. Our management team will review your comments and reach out to discuss how we can make things right.
+            A member of our team will review this and contact you if needed.
           </p>
           <a 
             href="/" 
@@ -139,39 +168,40 @@ const description = "We value your feedback. Please let us know about your exper
     googleReviewUrl: siteSettings.feedbackGoogleReviewUrl || "https://g.page/r/CVci07KZU9WxEBM/review" 
   }}>
     const ratingStep = document.getElementById('rating-step');
+    const reviewStep = document.getElementById('review-step');
     const feedbackStep = document.getElementById('feedback-step');
     const successStep = document.getElementById('success-step');
     const starBtns = document.querySelectorAll('.star-btn');
     const feedbackForm = document.getElementById('feedback-form');
     const ratingInput = document.getElementById('selected-rating');
     const submitBtn = document.getElementById('submit-feedback');
+    const googleLink = document.getElementById('google-review-link');
 
-    // Star Hover and Click Logic
+    if (googleLink) {
+      googleLink.setAttribute('href', googleReviewUrl);
+    }
+
     starBtns.forEach((btn, index) => {
-      btn.addEventListener('mouseenter', () => {
-        updateStars(index + 1, true);
-      });
-
-      btn.addEventListener('mouseleave', () => {
-        updateStars(0, false);
-      });
+      btn.addEventListener('mouseenter', () => updateStars(index + 1));
+      btn.addEventListener('mouseleave', () => updateStars(0));
 
       btn.addEventListener('click', () => {
         const rating = parseInt(btn.dataset.star);
         ratingInput.value = rating;
 
-        if (rating >= 4) {
-          // Positive feedback: Redirect to Google
-          window.location.href = googleReviewUrl;
+        if (rating === 5) {
+          // 5 stars: show button-only CTA. User must click intentionally to leave a Google review.
+          ratingStep.classList.add('hidden');
+          reviewStep.classList.remove('hidden');
         } else {
-          // Neutral/Negative feedback: Show internal form
+          // 1–4 stars: private feedback form, never sent to Google.
           ratingStep.classList.add('hidden');
           feedbackStep.classList.remove('hidden');
         }
       });
     });
 
-    function updateStars(count, isHover) {
+    function updateStars(count) {
       starBtns.forEach((btn, i) => {
         const icon = btn.querySelector('i');
         if (i < count) {
@@ -182,7 +212,6 @@ const description = "We value your feedback. Please let us know about your exper
       });
     }
 
-    // Form Submission
     feedbackForm?.addEventListener('submit', async (e) => {
       e.preventDefault();
       
@@ -200,9 +229,7 @@ const description = "We value your feedback. Please let us know about your exper
       try {
         const response = await fetch('/api/feedback', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
         });
 
@@ -218,7 +245,7 @@ const description = "We value your feedback. Please let us know about your exper
         
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Feedback';
+          submitBtn.textContent = 'Send Private Feedback';
         }
       }
     });

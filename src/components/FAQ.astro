@@ -1,5 +1,5 @@
 ---
-import { faqData } from '../data/faq.js';
+import { faqData, faqIntro } from '../data/faq.js';
 ---
 
 <section class="bg-white py-16 md:py-24">
@@ -9,7 +9,7 @@ import { faqData } from '../data/faq.js';
         Frequently Asked Questions
       </h2>
       <p class="text-ink/70 text-lg max-w-2xl mx-auto">
-        Everything you need to know about our premium cleaning services
+        {faqIntro}
       </p>
     </div>
 
@@ -20,10 +20,10 @@ import { faqData } from '../data/faq.js';
             <div class="h-8 w-8 rounded-full bg-navy border-2 border-gold flex items-center justify-center">
               <i class={`fas ${
                 section.section === 'General' ? 'fa-info-circle' :
-                section.section === 'Cleaning' ? 'fa-spray-can' :
-                section.section === 'Quality' ? 'fa-star' :
-                section.section === 'Price' ? 'fa-pound-sign' :
-                section.section === 'Security' ? 'fa-shield-alt' :
+                section.section === 'Cleaning Services' ? 'fa-spray-can' :
+                section.section === 'Pricing & Payments' ? 'fa-pound-sign' :
+                section.section === 'Quality & Trust' ? 'fa-shield-alt' :
+                section.section === 'Access & Outcomes' ? 'fa-key' :
                 'fa-question-circle'
               } text-gold text-sm`}></i>
             </div>
@@ -69,11 +69,11 @@ import { faqData } from '../data/faq.js';
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="tel:02088703925"
+          href="tel:0208703925"
           class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 font-medium btn-hover focus-visible"
         >
           <i class="fas fa-phone mr-2"></i>
-          Call 0208 8703925
+          Call 0208 870 3925
         </a>
         <a
           href="mailto:sales@highqualityclean.co.uk"
