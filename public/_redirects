@@ -8,3 +8,29 @@
 /office-cleaning-services /services/office-cleaning/ 301
 /airbnb-turnover /services/airbnb-cleaning/ 301
 /well-clean / 301
+
+# Legacy /services/<old-slug>/ paths still indexed by Google -> live pages
+/services/concierge-laundry /services/ironing-and-laundry/ 301
+/services/concierge-laundry/ /services/ironing-and-laundry/ 301
+/services/moving-out /services/end-of-tenancy-cleaning/ 301
+/services/moving-out/ /services/end-of-tenancy-cleaning/ 301
+/services/office-cleaning-services /services/office-cleaning/ 301
+/services/office-cleaning-services/ /services/office-cleaning/ 301
+/services/airbnb-turnover /services/airbnb-cleaning/ 301
+/services/airbnb-turnover/ /services/airbnb-cleaning/ 301
+/services/well-clean /services/deep-cleaning/ 301
+/services/well-clean/ /services/deep-cleaning/ 301
+/services/well-clean-advisory /contact/ 301
+/services/well-clean-advisory/ /contact/ 301
+
+# Legacy navigation/CTA paths -> closest live destination
+/book /quote/ 301
+/book/ /quote/ 301
+/concierge /contact/ 301
+/concierge/ /contact/ 301
+/consulting /contact/ 301
+/consulting/ /contact/ 301
+/protocols /process/ 301
+/protocols/ /process/ 301
+/resources/material-care /services/deep-cleaning/ 301
+/resources/material-care/ /services/deep-cleaning/ 301

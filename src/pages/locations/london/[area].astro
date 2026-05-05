@@ -4,6 +4,8 @@ import areaData from '../../../data/area-data.json';
 import Header from '../../../components/Header.astro';
 import IntroRateBanner from '../../../components/IntroRateBanner.astro';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const areas = Object.keys(areaData);
   // Filter for London areas only
@@ -22,9 +24,9 @@ export async function getStaticPaths() {
 const { area } = Astro.params;
 const { areaInfo, areaKey } = Astro.props;
 
-// SEO Title & Description Overrides
-const pageTitle = `Domestic Cleaners ${areaInfo.name} | Premium House Cleaning`;
-const metaDescription = `Looking for reliable cleaners near ${areaInfo.name}? We provide high-end weekly housekeeping, deep cleaning, and ironing services in ${areaInfo.postcodes.join(', ')}. Book your local cleaner today.`;
+// SEO Title & Description Overrides — prefer rich per-area data when present
+const pageTitle = areaInfo.pageTitle || `Luxury Cleaners ${areaInfo.name} | High Quality Clean London`;
+const metaDescription = areaInfo.metaDescription || `Premium home, deep, and end-of-tenancy cleaning in ${areaInfo.name} (${areaInfo.postcodes.join(', ')}). DBS-checked, insured cleaners. Request a quote today.`;
 
 // JSON-LD Schema
 const schema = {
@@ -198,9 +200,11 @@ function repeat(count) {
             <p>
               We have been serving the {areaInfo.name} ({areaInfo.postcodes[0]}) area for years. Our local team understands the specific needs of {areaInfo.propertyType || "local"} properties, ensuring a tailored service that respects your home.
             </p>
-            <p>
-              Whether you are near {areaInfo.localInfo.nearbyAttractions[0]} or {areaInfo.localInfo.nearbyAttractions[1]}, our cleaners are locally based for reliability.
-            </p>
+            {areaInfo.localInfo && areaInfo.localInfo.nearbyAttractions && areaInfo.localInfo.nearbyAttractions.length >= 2 && (
+              <p>
+                Whether you are near {areaInfo.localInfo.nearbyAttractions[0]} or {areaInfo.localInfo.nearbyAttractions[1]}, our cleaners are locally based for reliability.
+              </p>
+            )}
           </div>
           
           <h3 class="font-serif text-xl text-navy mb-4">Areas Nearby</h3>
@@ -259,7 +263,7 @@ function repeat(count) {
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-serif text-3xl text-navy text-center mb-12">What {areaInfo.name} Residents Say</h2>
         <div class="grid md:grid-cols-3 gap-8">
-          {areaInfo.testimonials.map(t => (
+          {areaInfo.testimonials && areaInfo.testimonials.map(t => (
             <div class="p-6 bg-mist rounded-xl">
               <div class="flex text-gold mb-3">
                 {repeat(t.rating).map(() => <i class="fas fa-star"></i>)}

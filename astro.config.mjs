@@ -7,7 +7,17 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    // When automatic _routes.json rules exceed Cloudflare's limit, Astro falls
+    // back to include "/*" and slices excludes — deep prerender paths like
+    // /locations/london/*/ can drop out, so the worker runs and errors (500)
+    // while static HTML exists. Extended excludes are always appended last.
+    routes: {
+      extend: {
+        exclude: [{ pattern: '/locations/*' }]
+      }
+    }
+  }),
   trailingSlash: 'always',
   vite: {
     plugins: [tailwindcss()]

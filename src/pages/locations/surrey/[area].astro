@@ -4,6 +4,8 @@ import areaData from '../../../data/area-data.json';
 import Header from '../../../components/Header.astro';
 import IntroRateBanner from '../../../components/IntroRateBanner.astro';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const areas = Object.keys(areaData);
   // Filter for Surrey areas only
@@ -21,9 +23,9 @@ export async function getStaticPaths() {
 const { area } = Astro.params;
 const { areaInfo, areaKey } = Astro.props;
 
-// SEO Title & Description Overrides
-const pageTitle = `Domestic Cleaners ${areaInfo.name} | Premium House Cleaning`;
-const metaDescription = `Looking for reliable cleaners near ${areaInfo.name}? We provide high-end weekly housekeeping, deep cleaning, and ironing services in ${areaInfo.postcodes.join(', ')}. Book your local cleaner today.`;
+// SEO Title & Description Overrides — prefer rich per-area data when present
+const pageTitle = areaInfo.pageTitle || `Luxury Cleaners ${areaInfo.name} | High Quality Clean Surrey`;
+const metaDescription = areaInfo.metaDescription || `Premium home, deep, and end-of-tenancy cleaning in ${areaInfo.name} (${areaInfo.postcodes.join(', ')}). DBS-checked, insured cleaners. Request a quote today.`;
 
 // JSON-LD Schema
 const schema = {

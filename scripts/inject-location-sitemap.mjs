@@ -56,14 +56,20 @@ function buildUrlEntry(path) {
 // Read the existing sitemap
 let xml = readFileSync(sitemapPath, 'utf-8');
 
-// Build location URL entries
-const locationEntries = [
-  ...londonAreas.map(area => buildUrlEntry(`/locations/london/${area}/`)),
-  ...surreyAreas.map(area => buildUrlEntry(`/locations/surrey/${area}/`)),
-].join('\n');
+// Only inject URLs that aren't already in the sitemap (prerendered routes are
+// auto-added by @astrojs/sitemap; we don't want duplicates).
+const allLocationPaths = [
+  ...londonAreas.map(area => `/locations/london/${area}/`),
+  ...surreyAreas.map(area => `/locations/surrey/${area}/`),
+];
 
-// Insert before closing </urlset>
-xml = xml.replace('</urlset>', `${locationEntries}\n</urlset>`);
+const missingPaths = allLocationPaths.filter(path => !xml.includes(`<loc>${baseUrl}${path}</loc>`));
 
-writeFileSync(sitemapPath, xml);
-console.log(`✓ Injected ${londonAreas.length + surreyAreas.length} location URLs into sitemap-0.xml`);
+if (missingPaths.length === 0) {
+  console.log(`✓ All ${allLocationPaths.length} location URLs already present in sitemap-0.xml — nothing to inject`);
+} else {
+  const locationEntries = missingPaths.map(buildUrlEntry).join('\n');
+  xml = xml.replace('</urlset>', `${locationEntries}\n</urlset>`);
+  writeFileSync(sitemapPath, xml);
+  console.log(`✓ Injected ${missingPaths.length} missing location URL(s) into sitemap-0.xml`);
+}
