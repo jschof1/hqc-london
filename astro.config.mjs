@@ -22,11 +22,13 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://highqualityclean.co.uk',
+  site: 'https://highqualityclean.co.uk/',
   integrations: [sitemap()],
   redirects: {
-    '/get-quote': '/quote',
-    '/areas/areas': '/areas',
+    // Utility and bug-path redirects.
+    '/get-quote': '/quote/',
+
+    // Legacy London area URLs -> canonical location pages.
     '/mayfair': '/locations/london/mayfair/',
     '/knightsbridge': '/locations/london/knightsbridge/',
     '/chelsea': '/locations/london/chelsea/',
@@ -40,11 +42,14 @@ export default defineConfig({
     '/nottingHill': '/locations/london/notting-hill/',
     '/holland-park': '/locations/london/holland-park/',
     '/hollandPark': '/locations/london/holland-park/',
+    '/areas/hollandPark': '/locations/london/holland-park/',
     '/primrose-hill': '/locations/london/primrose-hill/',
     '/primroseHill': '/locations/london/primrose-hill/',
     '/highgate': '/locations/london/highgate/',
     '/st-johns-wood': '/locations/london/st-johns-wood/',
     '/stJohnsWood': '/locations/london/st-johns-wood/',
+
+    // Legacy Surrey area URLs -> canonical location pages.
     '/weybridge': '/locations/surrey/weybridge/',
     '/hersham': '/locations/surrey/hersham/',
     '/walton-on-thames': '/locations/surrey/walton-on-thames/',

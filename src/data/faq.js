@@ -1,7 +1,7 @@
 const linkClass = "text-gold font-medium underline underline-offset-2 hover:text-navy transition-colors";
 
 const tcLink = (anchor, label = 'Terms and Conditions') =>
-  `<a href="/terms-and-conditions${anchor ? `#${anchor}` : ''}" class="${linkClass}">${label}</a>`;
+  `<a href="/terms-and-conditions/${anchor ? `#${anchor}` : ''}" class="${linkClass}">${label}</a>`;
 
 export const faqIntro = "Where clarity meets confidence — answers to help you understand how our premium cleaning service works before we speak.";
 

@@ -17,7 +17,10 @@ const {
 } = Astro.props;
 
 const baseUrl = 'https://highqualityclean.co.uk';
-const canonicalUrl = Astro.url ? Astro.url.href : baseUrl;
+const canonicalPath = Astro.url?.pathname
+  ? Astro.url.pathname.toLowerCase().replace(/\/?$/, '/')
+  : '/';
+const canonicalUrl = new URL(canonicalPath, baseUrl).href;
 const defaultImage = `${baseUrl}/images/areas/mayfair.webp`;
 const ServiceAreaNames = [
   'Belgravia',
@@ -47,7 +50,7 @@ const sameAs = [
 const areaNodes = [
   {
     '@type': 'Area',
-    '@id': `${baseUrl}/belgravia`,
+    '@id': `${baseUrl}/locations/london/belgravia/`,
     name: 'Belgravia',
     areaType: 'Luxury maintenance cleaning programme',
     description:
@@ -61,7 +64,7 @@ const areaNodes = [
   },
   {
     '@type': 'Area',
-    '@id': `${baseUrl}/chelsea`,
+    '@id': `${baseUrl}/locations/london/chelsea/`,
     name: 'Chelsea',
     areaType: 'Comprehensive deep cleaning programme in Chelsea',
     description:
@@ -75,7 +78,7 @@ const areaNodes = [
   },
   {
     '@type': 'Area',
-    '@id': `${baseUrl}/kensington`,
+    '@id': `${baseUrl}/locations/london/kensington/`,
     name: 'Kensington',
     areaType: 'Wellness-led premium cleaning programme in Kensington',
     description:
@@ -89,7 +92,7 @@ const areaNodes = [
   },
   {
     '@type': 'Area',
-    '@id': `${baseUrl}/mayfair`,
+    '@id': `${baseUrl}/locations/london/mayfair/`,
     name: 'Mayfair',
     areaType: 'Wellness-led premium cleaning programme in Mayfair',
     description:
@@ -103,7 +106,7 @@ const areaNodes = [
   },
   {
     '@type': 'Area',
-    '@id': `${baseUrl}/knightsbridge`,
+    '@id': `${baseUrl}/locations/london/knightsbridge/`,
     name: 'Knightsbridge',
     areaType: 'Wellness-led premium cleaning programme in Knightsbridge',
     description:
@@ -117,7 +120,7 @@ const areaNodes = [
   },
   {
     '@type': 'Area',
-    '@id': `${baseUrl}/st-johns-wood`,
+    '@id': `${baseUrl}/locations/london/st-johns-wood/`,
     name: 'St John\'s Wood',
     areaType: 'Wellness-led premium cleaning programme in St John\'s Wood',
     description:
@@ -131,7 +134,7 @@ const areaNodes = [
   },
   {
     '@type': 'Area',
-    '@id': `${baseUrl}/hampstead`,
+    '@id': `${baseUrl}/locations/london/hampstead/`,
     name: 'Hampstead',
     areaType: 'Wellness-led premium cleaning programme in Hampstead',
     description:
@@ -278,14 +281,14 @@ const schemaItem = {
     <meta name="google" content="notranslate" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href="/sitemap-0.xml" />
     <title>{title}</title>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="95c24898-5333-41ef-8fbf-a17bcac067af"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <Schema item={schemaItem} />
+    <Schema item={schemaItem as any} />
   </head>
   <body class="bg-mist text-ink font-display antialiased">
     <slot />
