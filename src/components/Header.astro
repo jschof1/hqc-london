@@ -17,7 +17,7 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center gap-5 text-sm">
+    <nav class="hidden xl:flex items-center gap-5 text-sm">
       <a
         href="/property-and-facilities-cleaning/"
         class="hover:text-gold text-white"
@@ -49,8 +49,10 @@
     <!-- Mobile Hamburger Button -->
     <button
       id="mobile-menu-toggle"
-      class="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5 focus:outline-none"
+      class="xl:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5 focus:outline-none"
       aria-label="Toggle mobile menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
     >
       <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out"></span>
       <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out"></span>
@@ -61,10 +63,10 @@
   <!-- Mobile Full-Screen Navigation Overlay -->
   <div
     id="mobile-menu"
-    class="md:hidden fixed inset-0 z-50 bg-navy/98 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out min-h-screen"
+    class="xl:hidden fixed inset-0 z-50 bg-navy/98 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out min-h-screen overflow-y-auto"
     style="height: 100vh; height: 100dvh;"
   >
-    <div class="flex flex-col h-full">
+    <div class="flex min-h-full flex-col">
       <!-- Mobile Header with Close Button -->
       <div class="flex items-center justify-between p-4 border-b border-gold">
         <a href="/" class="flex items-center gap-3">
@@ -85,7 +87,7 @@
       </div>
 
       <!-- Mobile Navigation Links -->
-      <nav class="flex-1 flex flex-col justify-center px-8 space-y-8">
+      <nav class="flex-1 flex flex-col justify-center px-8 py-8 space-y-5 sm:space-y-8">
         <a 
           href="/property-and-facilities-cleaning/" 
           class="mobile-nav-link text-2xl font-light text-white hover:text-gold transition-colors duration-200 border-b border-transparent hover:border-gold pb-2"
@@ -124,7 +126,7 @@
         </a>
         
         <!-- Mobile CTA Button -->
-        <div class="pt-8">
+        <div class="pt-3 sm:pt-8">
           <a
             href="/quote/"
             class="mobile-nav-link inline-flex items-center justify-center w-full rounded-md bg-gold text-navy px-6 py-4 text-lg font-medium border border-gold hover:bg-transparent hover:text-gold transition-all duration-200"
@@ -159,6 +161,7 @@
       scrollPosition = window.pageYOffset || window.scrollY || 0;
       mobileMenu.classList.remove('translate-x-full');
       mobileMenu.classList.add('translate-x-0');
+      mobileMenuToggle.setAttribute('aria-expanded', 'true');
       body.classList.add('overflow-hidden');
       body.style.top = `-${scrollPosition}px`;
       body.dataset.scrollPosition = `${scrollPosition}`;
@@ -177,6 +180,7 @@
       
       mobileMenu.classList.remove('translate-x-0');
       mobileMenu.classList.add('translate-x-full');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
       const lastScrollPosition = scrollPosition || parseInt(body.dataset.scrollPosition || '0', 10) || 0;
       body.classList.remove('overflow-hidden');
       body.style.top = '';
