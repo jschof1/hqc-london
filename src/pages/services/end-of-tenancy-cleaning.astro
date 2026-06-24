@@ -1,140 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
-import ServiceTemplate from '../../components/ServiceTemplate.astro';
+import PriorityServicePage from '../../components/PriorityServicePage.astro';
+import { servicePageBySlug } from '../../data/servicePages';
 
-const endOfTenancyCleaningService = {
-  hero: {
-    headline: "End of Tenancy Cleaning London for a Smoother Move-Out",
-    subheadline: "Moving out is stressful enough. Let us take care of the cleaning. We provide professional end of tenancy cleaning in London for tenants, landlords, letting agents, and property managers who need a property left spotless and ready for inspection.",
-    badges: ["Detailed", "Professional", "Trusted", "Fixed Quote"],
-    cta: {
-      text: "Get My Fixed Quote",
-      url: "/quote"
-    }
-  },
-  trustbar: {
-    logos: [],
-    reviews: []
-  },
-  painpoint: {
-    headline: "A Detailed Clean for the Moments That Matter",
-    text: [
-      "A standard clean is not the same as an end of tenancy clean.",
-      "When a tenancy ends, the property is usually checked more carefully. Marks on skirting boards, grease in the kitchen, limescale in the bathroom, dust on doors, fingerprints on switches, and overlooked corners can all be picked up during an inspection.",
-      "That is why our end of tenancy cleaning service is focused on the details that matter most. We clean with care, precision, and a high standard throughout, so you can move forward with one less thing to worry about."
-    ]
-  },
-  serviceExplanation: {
-    headline: "What’s Included in Our End of Tenancy Cleaning Service",
-    steps: [
-      {
-        icon: "fas fa-utensils",
-        title: "Kitchen Deep Clean",
-        description: "We pay close attention to the kitchen, as this is one of the most heavily inspected areas in any property. Worktops and splashbacks, sink and taps, hob and extractor, oven exterior and accessible interior, cupboards and drawers (inside and out where emptied), inside fridge / freezer, inside washing machine, deep appliance cleaning, tiles, edges, and high-touch surfaces."
-      },
-      {
-        icon: "fas fa-bath",
-        title: "Bathroom Deep Clean and Sanitisation",
-        description: "Bathrooms are cleaned and sanitised with a focus on presentation and hygiene. Toilet, seat, and surrounding areas, bath and shower, shower screen and tiles, basin and taps, mirrors, chrome fittings, and limescale-prone areas where accessible."
-      },
-      {
-        icon: "fas fa-bed",
-        title: "Bedrooms, Living Areas and Hallways",
-        description: "All general rooms are cleaned with attention to visible dust, marks, and finishing detail. Skirting boards, doors and frames, light switches and sockets, window ledges, wardrobes and shelving (where emptied), reachable surfaces, and dust and cobweb removal."
-      },
-      {
-        icon: "fas fa-broom",
-        title: "Floors and Final Presentation",
-        description: "We finish the clean by restoring the overall presentation of the property. Vacuuming carpets and rugs, mopping hard floors, edging where accessible, and final touch-point checks for a neat finish."
-      }
-    ]
-  },
-  benefits: {
-    headline: "Why Clients Choose High Quality Clean",
-    bullets: [
-      "Detailed move-out and move-in cleaning",
-      "Professional and dependable service",
-      "Fixed quotes based on your property",
-      "Clear communication before and after the clean",
-      "Trusted by tenants, landlords, agents, and property managers",
-      "Add-on services for carpets, upholstery, and window cleaning",
-      "High standards with strong attention to detail"
-    ]
-  },
-  socialProof: {
-    headline: "Who This Service Is For",
-    reviews: [
-      {
-        text: "Tenants preparing for check-out, landlords getting a property ready for new occupants, and letting agents arranging a professional reset between tenancies.",
-        author: "Tenants, Landlords & Agents"
-      },
-      {
-        text: "Property managers who need dependable cleaning support, and homeowners preparing a property for sale or handover.",
-        author: "Property Managers & Homeowners"
-      }
-    ],
-    cta: {
-      text: "Get My Fixed Quote",
-      url: "/quote"
-    }
-  },
-  offer: {
-    headline: "Optional Add-Ons",
-    details: "You can also request additional services to complete the move-out clean: carpet cleaning, upholstery cleaning, balcony cleaning, and interior or external window cleaning. If you need more than one service, we can provide a combined quote.",
-    cta: {
-      text: "Request a Combined Quote",
-      url: "/quote"
-    }
-  },
-  objections: {
-    headline: "Frequently Asked Questions",
-    faqs: [
-      {
-        question: "Do you guarantee I will get my full deposit back?",
-        answer: "We cannot guarantee decisions made by landlords, agents, or deposit protection schemes. What we do guarantee is the quality of our cleaning service. If a cleaning-related issue is identified in the areas we cleaned, we will return and re-clean those areas free of charge, subject to our terms."
-      },
-      {
-        question: "How much does end of tenancy cleaning cost?",
-        answer: "The price depends on the size, condition, and layout of the property, as well as any extras requested such as carpet cleaning or appliance cleaning. <a href=\"/#quote\">Contact us</a> for a fixed quote."
-      },
-      {
-        question: "Do you clean ovens and appliances?",
-        answer: "Yes. Oven cleaning is included as part of the service, and other appliances can also be cleaned depending on your requirements and access."
-      },
-      {
-        question: "Do you work with landlords and letting agents?",
-        answer: "Yes. We regularly support tenants, landlords, letting agents, and property managers."
-      },
-      {
-        question: "Can I book carpet cleaning at the same time?",
-        answer: "Yes. Carpet cleaning can be added to your booking and quoted together with your end of tenancy clean."
-      },
-      {
-        question: "How far in advance should I book?",
-        answer: "As early as possible is always best, especially during busy moving periods. That said, we may also be able to help at short notice depending on availability."
-      },
-      {
-        question: "Do I need to provide cleaning products or equipment?",
-        answer: "No. Our team arrives with the equipment and products needed for the clean, unless otherwise agreed in advance."
-      }
-    ]
-  },
-  finalCta: {
-    headline: "Get Your End of Tenancy Cleaning Quote",
-    cta: {
-      text: "Get My Fixed Quote",
-      url: "/quote"
-    },
-    subtext: "Tell us about your property and we will provide a fixed quote based on the size, layout, and condition of the space. If you also need carpet cleaning or appliance cleaning, we can include that in the same quote."
-  }
+const page = {
+  ...servicePageBySlug['end-of-tenancy-cleaning'],
+  h1: 'End of tenancy cleaning in London for move-outs and handovers',
+  seoTitle: 'End of Tenancy Cleaning London | Move-Out & Handover Cleaning | HQC',
+  metaDescription:
+    'End of tenancy cleaning in London for tenants, landlords, agents and property managers preparing homes for check-out, move-out, handover or re-let.',
 };
 ---
 
-<Layout
-  title="End of Tenancy Cleaning London | High Quality Clean"
-  description="Professional end of tenancy cleaning in London for tenants, landlords and agents. Detailed move-out cleans, fixed quotes, and high standards throughout."
->
+<Layout title={page.seoTitle} description={page.metaDescription}>
   <Header />
-  <ServiceTemplate service={endOfTenancyCleaningService} showIntroRateBanner={false} />
+  <PriorityServicePage
+    page={page}
+    eyebrow="Move-out cleaning"
+    intro="High Quality Clean provides detailed end of tenancy and move-out cleaning across London for tenants, landlords, agents and property managers who need a property prepared for check-out, handover or the next occupier."
+    inclusions={[
+      'Kitchen cleaning including worktops, splashbacks, sinks, accessible cupboards and appliance exteriors',
+      'Bathroom cleaning with attention to limescale-prone fittings, mirrors, tiles and sanitary areas',
+      'Bedrooms, living rooms and hallways cleaned for dust, marks, touchpoints and presentation',
+      'Vacuuming, mopping and floor-detailing based on the property surfaces',
+      'Optional add-ons such as carpet cleaning, upholstery cleaning, balcony cleaning or internal window cleaning',
+      'Access and timing arranged around check-out, inventory, landlord visit or handover windows',
+    ]}
+    audiences={[
+      'Tenants preparing a home for check-out',
+      'Landlords and homeowners getting a property ready for the next stage',
+      'Estate and lettings agents arranging move-out or pre-let cleaning',
+      'Property managers coordinating cleaning between occupancy, maintenance and handover',
+    ]}
+    process={[
+      'We confirm the property size, layout, access, timing and any known condition issues.',
+      'We agree the main cleaning scope and any practical add-ons before the quote is confirmed.',
+      'The clean focuses on presentation-critical areas including kitchens, bathrooms, floors and touchpoints.',
+      'Where a cleaning-related issue is raised after the visit, we handle it against the agreed scope.',
+    ]}
+    links={[
+      { label: 'Home cleaning', href: '/home-cleaning/' },
+      { label: 'Property and facilities cleaning', href: '/property-and-facilities-cleaning/' },
+      { label: 'End of tenancy cleaning Wandsworth', href: '/services/end-of-tenancy-cleaning-wandsworth/' },
+      { label: 'Void and post-tenancy cleaning', href: '/services/void-and-post-tenancy-cleaning/' },
+      { label: 'Estate and lettings agents cleaning', href: '/services/estate-and-lettings-agents-cleaning/' },
+      { label: 'Post-renovation cleaning', href: '/services/post-renovation-cleaning/' },
+    ]}
+    faqs={[
+      {
+        question: 'Can cleaning affect a tenancy deposit decision?',
+        answer:
+          'A detailed clean can help prepare the property for check-out, but deposit decisions sit with the landlord, agent, inventory process or deposit scheme. We avoid promising outcomes we do not control.',
+      },
+      {
+        question: 'Do you clean ovens and appliances?',
+        answer:
+          'We can include appliance cleaning in the scope where access and condition allow. Tell us what needs attention when requesting the quote.',
+      },
+      {
+        question: 'Can carpets be added?',
+        answer:
+          'Yes. Carpet cleaning can be scoped with the tenancy clean so the quote reflects the full handover requirement.',
+      },
+    ]}
+  />
 </Layout>

@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PriorityServicePage from '../../components/PriorityServicePage.astro';
+import { servicePageBySlug } from '../../data/servicePages';
+
+const page = {
+  ...servicePageBySlug['post-renovation-cleaning'],
+  h1: 'Post-renovation cleaning in London for homes and properties after the work is done',
+  seoTitle: 'Post-Renovation Cleaning London | After-Builders Cleaning | HQC',
+  metaDescription:
+    'Post-renovation and after-builders cleaning in London for homes, managed properties and handover projects after building, repair or refurbishment work.',
+};
+---
+
+<Layout title={page.seoTitle} description={page.metaDescription}>
+  <Header />
+  <PriorityServicePage
+    page={page}
+    eyebrow="After-works cleaning"
+    intro="High Quality Clean provides post-renovation and after-builders cleaning for London homes, managed properties and handover projects that need fine dust, residue and disturbed presentation brought back under control."
+    inclusions={[
+      'Fine dust removal from reachable surfaces, ledges, skirting, switches and fittings',
+      'Kitchen and bathroom cleaning after installation, repair or refurbishment work',
+      'Careful cleaning around fixtures, finishes, doors, frames and visible contact points',
+      'Vacuuming and mopping suited to the floors and the level of post-works dust',
+      'Presentation cleaning before photography, viewing, occupation, sale, rental or handover',
+      'Optional add-ons for carpets, upholstery, windows or repeat visits after phased works',
+    ]}
+    audiences={[
+      'Homeowners after renovation, decorating, repairs or improvement work',
+      'Landlords and agents preparing a property after maintenance or void works',
+      'Developers and property teams before a handover or client walkthrough',
+      'Property managers coordinating cleaning after contractors have finished',
+    ]}
+    process={[
+      'We confirm the type of works completed and the current condition of the property.',
+      'We identify priority surfaces, rooms, access details and any delicate finishes to treat carefully.',
+      'The team cleans to the agreed post-works scope, with extra attention to dust and final presentation.',
+      'If phased works are still happening, we can quote around the practical timing and return requirements.',
+    ]}
+    links={[
+      { label: 'Home cleaning', href: '/home-cleaning/' },
+      { label: 'Property and facilities cleaning', href: '/property-and-facilities-cleaning/' },
+      { label: 'Void and post-tenancy cleaning', href: '/services/void-and-post-tenancy-cleaning/' },
+      { label: 'Estate and lettings agents cleaning', href: '/services/estate-and-lettings-agents-cleaning/' },
+      { label: 'End of tenancy cleaning', href: '/services/end-of-tenancy-cleaning/' },
+      { label: 'Block management cleaning', href: '/services/block-management-cleaning/' },
+    ]}
+    faqs={[
+      {
+        question: 'Is post-renovation cleaning the same as after-builders cleaning?',
+        answer:
+          'There is overlap. We scope the work around what has happened in the property, how much dust or residue remains and what the next handover moment requires.',
+      },
+      {
+        question: 'Should all contractors be finished first?',
+        answer:
+          'The best final result usually comes after works are complete. If trades are still returning, we can discuss a practical staged clean.',
+      },
+    ]}
+  />
+</Layout>

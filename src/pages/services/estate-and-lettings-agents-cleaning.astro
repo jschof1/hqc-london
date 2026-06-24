@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PriorityServicePage from '../../components/PriorityServicePage.astro';
+import { servicePageBySlug } from '../../data/servicePages';
+
+const page = {
+  ...servicePageBySlug['estate-and-lettings-agents-cleaning'],
+  h1: 'Cleaning support for London estate and lettings agents',
+};
+---
+
+<Layout title={page.seoTitle} description={page.metaDescription}>
+  <Header />
+  <PriorityServicePage
+    page={page}
+    eyebrow="Agent cleaning support"
+    intro="High Quality Clean helps London estate and lettings teams prepare properties for viewings, move-ins, checkouts, landlord handovers and new occupants with cleaning scopes that are clear before work starts."
+    inclusions={[
+      'Pre-viewing and pre-photography cleaning for presentable rooms and touchpoints',
+      'Move-out, end-of-tenancy, post-tenancy and handover cleaning',
+      'Kitchen, bathroom, living area and floor cleaning based on the property requirement',
+      'Cleaning after light maintenance, contractor visits or landlord preparation work',
+      'Add-ons such as carpet cleaning, upholstery cleaning, internal windows and appliance cleaning',
+      'Clear access notes for keys, concierge, tenant handover or property manager coordination',
+    ]}
+    audiences={[
+      'Estate agents preparing properties for sale, viewing or photography',
+      'Lettings agents arranging changeover or move-in cleaning',
+      'Property coordinators who need cleaner scopes without extra chasing',
+      'Landlords and property managers working through agent-led handovers',
+    ]}
+    process={[
+      'You tell us the property stage: viewing, checkout, move-in, re-let, sale or handover.',
+      'We confirm access, priority rooms, timing and any add-ons that need a separate quote line.',
+      'The cleaning team works to the agreed scope with practical focus on presentation and readiness.',
+      'Repeat work can be scoped consistently so property teams know what to request next time.',
+    ]}
+    links={[
+      { label: 'Property and facilities cleaning', href: '/property-and-facilities-cleaning/' },
+      { label: 'End of tenancy cleaning', href: '/services/end-of-tenancy-cleaning/' },
+      { label: 'Void and post-tenancy cleaning', href: '/services/void-and-post-tenancy-cleaning/' },
+      { label: 'End of tenancy cleaning Wandsworth', href: '/services/end-of-tenancy-cleaning-wandsworth/' },
+      { label: 'Post-renovation cleaning', href: '/services/post-renovation-cleaning/' },
+      { label: 'Block management cleaning', href: '/services/block-management-cleaning/' },
+    ]}
+    faqs={[
+      {
+        question: 'Can you support both sales and lettings teams?',
+        answer:
+          'Yes. The scope depends on whether the property is being prepared for viewing, photography, checkout, move-in, re-let or handover.',
+      },
+      {
+        question: 'Can you quote from property details and photos?',
+        answer:
+          'Often, yes. For more complex properties or heavy condition issues, we may ask for extra detail before confirming the scope.',
+      },
+    ]}
+  />
+</Layout>

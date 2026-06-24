@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PriorityServicePage from '../../components/PriorityServicePage.astro';
+import { servicePageBySlug } from '../../data/servicePages';
+
+const page = {
+  ...servicePageBySlug['void-and-post-tenancy-cleaning'],
+  h1: 'Void and post-tenancy cleaning for London properties',
+};
+---
+
+<Layout title={page.seoTitle} description={page.metaDescription}>
+  <Header />
+  <PriorityServicePage
+    page={page}
+    eyebrow="Vacant property cleaning"
+    intro="High Quality Clean provides void and post-tenancy cleaning for empty and recently vacated London properties that need to be ready for viewing, re-let, inspection, handover, occupation or follow-on works."
+    inclusions={[
+      'Vacant property cleaning after a tenant has left or before a new stage begins',
+      'Kitchen and bathroom cleaning with attention to visible build-up and presentation',
+      'Room-by-room cleaning for dust, marks, doors, skirting, ledges and touchpoints',
+      'Floor cleaning, vacuuming and mopping according to the property surfaces',
+      'Preparation before viewing, sale, re-let, inspection, maintenance or occupation',
+      'Optional extras such as carpet cleaning, internal windows, appliances or upholstery',
+    ]}
+    audiences={[
+      'Landlords preparing an empty property for the next occupier',
+      'Letting agents and estate agents managing a property between stages',
+      'Property managers handling voids, post-tenancy resets and maintenance handovers',
+      'Portfolio owners who need repeatable cleaning scopes for vacant homes',
+    ]}
+    process={[
+      'We confirm whether the property is empty, partly furnished or awaiting works.',
+      'We scope priority rooms, access, condition issues and any add-ons.',
+      'The clean is completed around the next milestone, such as viewing, re-let or handover.',
+      'For repeat voids, we can keep the scope practical and consistent across properties.',
+    ]}
+    links={[
+      { label: 'Property and facilities cleaning', href: '/property-and-facilities-cleaning/' },
+      { label: 'Estate and lettings agents cleaning', href: '/services/estate-and-lettings-agents-cleaning/' },
+      { label: 'End of tenancy cleaning', href: '/services/end-of-tenancy-cleaning/' },
+      { label: 'End of tenancy cleaning Wandsworth', href: '/services/end-of-tenancy-cleaning-wandsworth/' },
+      { label: 'Post-renovation cleaning', href: '/services/post-renovation-cleaning/' },
+      { label: 'Block management cleaning', href: '/services/block-management-cleaning/' },
+    ]}
+    faqs={[
+      {
+        question: 'Is void cleaning different from end of tenancy cleaning?',
+        answer:
+          'There is overlap. Void and post-tenancy cleaning is usually framed around an empty or recently vacated property being prepared for its next practical stage.',
+      },
+      {
+        question: 'Can you clean before maintenance or after maintenance?',
+        answer:
+          'Yes. We can discuss whether the clean should happen before works, after works or in stages depending on the property plan.',
+      },
+    ]}
+  />
+</Layout>

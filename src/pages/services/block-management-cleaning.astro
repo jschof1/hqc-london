@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PriorityServicePage from '../../components/PriorityServicePage.astro';
+import { servicePageBySlug } from '../../data/servicePages';
+
+const page = {
+  ...servicePageBySlug['block-management-cleaning'],
+  h1: 'Block management cleaning for London communal areas',
+};
+---
+
+<Layout title={page.seoTitle} description={page.metaDescription}>
+  <Header />
+  <PriorityServicePage
+    page={page}
+    eyebrow="Communal area cleaning"
+    intro="High Quality Clean provides block management and communal area cleaning for London managed buildings where entrances, corridors, stairwells, lifts and shared spaces need consistent presentation."
+    inclusions={[
+      'Cleaning for entrances, lobbies, corridors, stairs, lifts and shared circulation areas',
+      'High-touch detail around doors, handles, switches, rails and visible resident-facing areas',
+      'Floor vacuuming, mopping and presentation cleaning based on the building surfaces',
+      'Bin store, amenity or shared-space cleaning where included in the agreed scope',
+      'One-off refreshes or repeat communal cleaning schedules where practical',
+      'Access planning for managing agents, concierge, site contacts or key arrangements',
+    ]}
+    audiences={[
+      'Block managers and managing agents responsible for resident-facing spaces',
+      'Landlords and property teams looking after shared entrances and common parts',
+      'RTM or building contacts who need a clear communal cleaning scope',
+      'Managed buildings that need practical cleaning support rather than vague promises',
+    ]}
+    process={[
+      'We confirm the building type, shared areas, frequency needs and access details.',
+      'We scope the communal areas and any sensitive or high-traffic points.',
+      'The cleaning plan focuses on visible standards residents and visitors notice quickly.',
+      'For repeat work, the scope can be kept consistent so expectations stay clear.',
+    ]}
+    links={[
+      { label: 'Property and facilities cleaning', href: '/property-and-facilities-cleaning/' },
+      { label: 'Estate and lettings agents cleaning', href: '/services/estate-and-lettings-agents-cleaning/' },
+      { label: 'Void and post-tenancy cleaning', href: '/services/void-and-post-tenancy-cleaning/' },
+      { label: 'Post-renovation cleaning', href: '/services/post-renovation-cleaning/' },
+      { label: 'Commercial and wellness cleaning', href: '/commercial-and-wellness-cleaning/' },
+      { label: 'All services', href: '/services/' },
+    ]}
+    faqs={[
+      {
+        question: 'Can communal areas be cleaned on a repeat schedule?',
+        answer:
+          'Yes, where the building, access and frequency are practical. We would scope the areas and agree what is included before quoting.',
+      },
+      {
+        question: 'Do you clean lifts and stairwells?',
+        answer:
+          'Lifts, stairwells, entrances and corridors can all be included when they are part of the agreed communal area scope.',
+      },
+    ]}
+  />
+</Layout>

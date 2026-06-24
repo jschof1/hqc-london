@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PriorityServicePage from '../../components/PriorityServicePage.astro';
+import { servicePageBySlug } from '../../data/servicePages';
+
+const page = {
+  ...servicePageBySlug['end-of-tenancy-cleaning-wandsworth'],
+  h1: 'End of tenancy cleaning in Wandsworth for move-outs and handovers',
+  seoTitle: 'End of Tenancy Cleaning Wandsworth | Move-Out Cleaning SW18 | HQC',
+  metaDescription:
+    'End of tenancy cleaning in Wandsworth and SW18 for tenants, landlords, agents and property managers preparing homes for check-out, move-out or handover.',
+};
+---
+
+<Layout title={page.seoTitle} description={page.metaDescription}>
+  <Header />
+  <PriorityServicePage
+    page={page}
+    eyebrow="Wandsworth move-out cleaning"
+    intro="High Quality Clean provides end of tenancy and move-out cleaning in Wandsworth for homes, flats, landlords, estate agents and property managers who need the property prepared for its next stage."
+    coverageNote="We can scope Wandsworth, SW18 and nearby south-west London postcodes where availability and timing fit the job."
+    inclusions={[
+      'Move-out cleaning for flats, houses and managed homes in Wandsworth',
+      'Kitchen, bathroom, bedrooms, living areas, hallways and high-touch presentation details',
+      'Cleaning before check-out, landlord review, inventory, move-in, re-let or handover',
+      'Practical add-ons such as carpets, upholstery, appliance cleaning or internal windows',
+      'Access planning for tenants, agents, landlords, concierge teams or key collection',
+      'Clear scope and quote before the visit so the clean matches the property condition',
+    ]}
+    audiences={[
+      'Wandsworth tenants preparing for move-out',
+      'Local landlords getting a property ready for new occupants',
+      'Estate and lettings agents arranging check-out or pre-let cleaning',
+      'Property managers handling SW18 and nearby south-west London homes',
+    ]}
+    process={[
+      'We confirm the Wandsworth address, property type, timing and access route.',
+      'We agree rooms, add-ons and any condition notes before quoting.',
+      'The clean focuses on the areas normally noticed during move-out and handover checks.',
+      'We keep deposit language careful because final decisions are made outside the cleaning visit.',
+    ]}
+    links={[
+      { label: 'End of tenancy cleaning London', href: '/services/end-of-tenancy-cleaning/' },
+      { label: 'Void and post-tenancy cleaning', href: '/services/void-and-post-tenancy-cleaning/' },
+      { label: 'Estate and lettings agents cleaning', href: '/services/estate-and-lettings-agents-cleaning/' },
+      { label: 'Home cleaning', href: '/home-cleaning/' },
+      { label: 'Property and facilities cleaning', href: '/property-and-facilities-cleaning/' },
+      { label: 'Post-renovation cleaning', href: '/services/post-renovation-cleaning/' },
+    ]}
+    faqs={[
+      {
+        question: 'Do you provide end of tenancy cleaning in Wandsworth?',
+        answer:
+          'Yes. We can quote for Wandsworth, SW18 and nearby south-west London postcodes where the timing, access and scope are practical.',
+      },
+      {
+        question: 'Can you work with my agent or landlord?',
+        answer:
+          'Yes. We can coordinate practical access and scope details with tenants, landlords, estate agents or property managers.',
+      },
+      {
+        question: 'Can this help with check-out?',
+        answer:
+          'It can help prepare the property for check-out, but check-out and deposit outcomes depend on the wider tenancy, inventory and property condition.',
+      },
+    ]}
+  />
+</Layout>
