@@ -20,22 +20,22 @@ const routes = [...buyerRoutes]
         Cleaning routes
       </p>
       <h2 class="font-serif mt-3 text-3xl md:text-5xl font-semibold text-navy">
-        Choose the cleaning support that matches your space
+        Choose the cleaning route that matches the job
       </h2>
       <p class="mt-5 text-lg leading-relaxed text-ink/75">
-        Start with the route closest to your need, then HQC can confirm the scope, access requirements, standards and quote before work begins.
+        Start with the route closest to your property, then HQC can confirm the scope, access requirements, standards and quote before work begins.
       </p>
     </div>
 
     <div class="mt-10 grid gap-5 lg:grid-cols-3">
       {routes.map((route) => {
-        const isPriorityRoute = route.key !== 'homes';
+        const isPriorityRoute = route.key === 'propertyAndFacilities';
         const displayTitle =
           route.key === 'propertyAndFacilities'
             ? 'Property Cleaning Support'
             : route.key === 'commercialAndWellness'
-              ? 'Commercial and Wellness Cleaning'
-              : 'Homes';
+              ? 'Commercial Cleaning'
+              : 'Home Cleaning';
 
         return (
           <article
@@ -50,7 +50,7 @@ const routes = [...buyerRoutes]
               </h3>
               {isPriorityRoute && (
                 <span class="shrink-0 rounded-full border border-gold/50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-gold">
-                  Priority
+                  Lead route
                 </span>
               )}
             </div>

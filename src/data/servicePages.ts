@@ -30,7 +30,7 @@ export const servicePages: ServicePageEntry[] = [
   {
     slug: 'property-and-facilities-cleaning',
     routeKey: 'propertyAndFacilities',
-    title: 'Property and Facilities Cleaning',
+    title: 'Property Cleaning Support',
     seoTitle: 'Property & Facilities Cleaning London | HQC',
     metaDescription:
       'Property cleaning support in London for agents, landlords, property managers and developers. Void, handover, communal and portfolio cleaning scopes.',
@@ -50,13 +50,13 @@ export const servicePages: ServicePageEntry[] = [
     title: 'Home Cleaning',
     seoTitle: 'Home Cleaning London | Regular, Deep & Move-Out Cleaning | HQC',
     metaDescription:
-      'Home cleaning in London for regular upkeep, deep cleans, move-outs, end of tenancy and post-renovation resets with clear scopes and careful handling.',
-    h1: 'Home cleaning in London without standards slipping',
+      'Home cleaning in London for regular upkeep, deep cleans, end of tenancy, move-out and post-renovation work with clear scopes and careful handling.',
+    h1: 'Home cleaning in London without the standards slipping',
     audience: 'Households, busy professionals, families, tenants, landlords and homeowners',
     problem:
       'A home needs regular upkeep, a first reset, or a one-off detailed clean without the owner managing every detail.',
     positioning:
-      'Premium practical home cleaning built around agreed scopes, careful handling and consistent presentation.',
+      'Practical premium home cleaning built around agreed scopes, careful handling and consistent presentation.',
     primaryCtaText: 'Get a Home Cleaning Quote',
     primaryCtaUrl: '/quote/',
     priority: 2,
@@ -68,12 +68,12 @@ export const servicePages: ServicePageEntry[] = [
     seoTitle: 'End of Tenancy Cleaning London | Move-Out Cleaning | HQC',
     metaDescription:
       'Detailed end of tenancy cleaning in London for tenants, landlords, agents and property managers preparing a property for check-out or handover.',
-    h1: 'End of tenancy cleaning for inspection-ready London properties',
+    h1: 'End of tenancy cleaning in London for move-outs and handovers',
     audience: 'Tenants, landlords, agents and property managers',
     problem:
       'The property needs a detailed clean before check-out, handover, move-in or re-let without overpromising deposit outcomes.',
     positioning:
-      'Detailed move-out and move-in cleaning to an agreed scope, with careful attention to kitchens, bathrooms, floors and presentation.',
+      'Detailed end-of-tenancy and move-out cleaning to an agreed scope, with careful attention to kitchens, bathrooms, floors and presentation.',
     primaryCtaText: 'Get an End of Tenancy Quote',
     primaryCtaUrl: '/quote/',
     priority: 3,
@@ -85,7 +85,7 @@ export const servicePages: ServicePageEntry[] = [
     seoTitle: 'Post-Renovation Cleaning London | After-Builders Cleaning | HQC',
     metaDescription:
       'Post-renovation and after-builders cleaning in London for homes and managed properties that need fine dust removed and presentation restored.',
-    h1: 'Post-renovation cleaning for London properties after building work',
+    h1: 'Post-renovation cleaning in London for fine dust, finishes and handover readiness',
     audience: 'Homeowners, landlords, developers, agents and property managers',
     problem:
       'Building dust, residue and disturbed finishes need careful cleaning before the property is viewed, occupied or handed over.',
@@ -102,7 +102,7 @@ export const servicePages: ServicePageEntry[] = [
     seoTitle: 'End of Tenancy Cleaning Wandsworth | Move-Out Cleaning SW18 | HQC',
     metaDescription:
       'End of tenancy cleaning in Wandsworth and SW18 for tenants, landlords and agents preparing homes for check-out, handover or move-in.',
-    h1: 'End of tenancy cleaning in Wandsworth for check-out and handover',
+    h1: 'End of tenancy cleaning in Wandsworth for move-outs and handovers',
     audience: 'Wandsworth tenants, landlords, homeowners, agents and property managers',
     problem:
       'A local move-out or handover needs a detailed clean with clear scope, practical add-ons and careful deposit language.',
@@ -136,7 +136,7 @@ export const servicePages: ServicePageEntry[] = [
     seoTitle: 'Void & Post-Tenancy Cleaning London | HQC',
     metaDescription:
       'Void and post-tenancy cleaning in London for landlords, agents and property managers preparing empty properties for next steps.',
-    h1: 'Void and post-tenancy cleaning for London properties',
+    h1: 'Void and post-tenancy cleaning in London for re-let readiness',
     audience: 'Landlords, agents, property managers and portfolio owners',
     problem:
       'An empty or recently vacated property needs cleaning before re-let, sale, maintenance, photography or new occupancy.',
@@ -153,7 +153,7 @@ export const servicePages: ServicePageEntry[] = [
     seoTitle: 'Block Management Cleaning London | Communal Area Cleaning | HQC',
     metaDescription:
       'Block management cleaning in London for communal entrances, lobbies, corridors, stairwells, lifts and resident-facing shared areas.',
-    h1: 'Block management cleaning for London communal areas',
+    h1: 'Block management cleaning in London for communal areas and managed buildings',
     audience: 'Block managers, managing agents, landlords and property teams',
     problem:
       'Shared areas need consistent cleaning because residents, visitors and managing agents notice missed details quickly.',
@@ -166,11 +166,11 @@ export const servicePages: ServicePageEntry[] = [
   {
     slug: 'commercial-and-wellness-cleaning',
     routeKey: 'commercialAndWellness',
-    title: 'Commercial and Wellness Cleaning',
+    title: 'Commercial Cleaning',
     seoTitle: 'Commercial & Wellness Cleaning London | Offices, Studios & Client-Facing Spaces | HQC',
     metaDescription:
       'Commercial and wellness cleaning in London for boutique offices, studios, gyms, clinics and client-facing spaces needing hygiene-led presentation.',
-    h1: 'Commercial and wellness cleaning for London spaces where presentation matters',
+    h1: 'Cleaning for London offices, studios and wellness spaces that need consistency',
     audience: 'Boutique offices, studios, gyms, clinics, wellness spaces and client-facing premises',
     problem:
       'Staff, visitors and clients notice hygiene, high-touch areas and presentation before they trust the space.',

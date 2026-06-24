@@ -13,7 +13,7 @@ export interface Props {
 
 const { 
   title, 
-  description = "High Quality Clean — Luxury home cleaning for discerning London clients.",
+  description = "High Quality Clean provides practical premium cleaning for London homes, property teams and client-facing spaces.",
   robots = PRODUCTION_ROBOTS
 } = Astro.props;
 const robotsContent = getRobotsContent(robots);
@@ -54,98 +54,98 @@ const areaNodes = [
     '@type': 'Area',
     '@id': `${baseUrl}/locations/london/belgravia/`,
     name: 'Belgravia',
-    areaType: 'Luxury maintenance cleaning programme',
+    areaType: 'Home and property cleaning support',
     description:
-      'Weekly upkeep service for maintaining pristine residences between deep cleans, tailored to Central London homes.',
+      'Cleaning support for Central London homes and managed properties, with scopes agreed around the space and timing.',
     provider: { '@id': `${baseUrl}/#organization` },
     areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
-      audienceType: 'Discerning homeowners and busy professionals'
+      audienceType: 'Homeowners, tenants, landlords and property teams'
     }
   },
   {
     '@type': 'Area',
     '@id': `${baseUrl}/locations/london/chelsea/`,
     name: 'Chelsea',
-    areaType: 'Comprehensive deep cleaning programme in Chelsea',
+    areaType: 'Home and property cleaning support in Chelsea',
     description:
-      'Meticulous deep cleaning with wellness-grade products, designed for luxury interiors that demand elevated detail.',
+      'Cleaning support for Chelsea homes, move-outs, managed properties and client-facing spaces where presentation matters.',
     provider: { '@id': `${baseUrl}/#organization` },
     areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
-      audienceType: 'Luxury property managers and high-net-worth households'
+      audienceType: 'Households, agents, landlords and property managers'
     }
   },
   {
     '@type': 'Area',
     '@id': `${baseUrl}/locations/london/kensington/`,
     name: 'Kensington',
-    areaType: 'Wellness-led premium cleaning programme in Kensington',
+    areaType: 'Home and property cleaning support in Kensington',
     description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+      'Cleaning support for Kensington homes and managed properties that need careful handling and ready presentation.',
     provider: { '@id': `${baseUrl}/#organization` },
     areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
+      audienceType: 'Households, agents, landlords and property managers'
     }
   },
   {
     '@type': 'Area',
     '@id': `${baseUrl}/locations/london/mayfair/`,
     name: 'Mayfair',
-    areaType: 'Wellness-led premium cleaning programme in Mayfair',
+    areaType: 'Home and property cleaning support in Mayfair',
     description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+      'Cleaning support for Mayfair homes, handovers and client-facing spaces where scope, access and presentation matter.',
     provider: { '@id': `${baseUrl}/#organization` },
     areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
+      audienceType: 'Households, agents, landlords and property managers'
     }
   },
   {
     '@type': 'Area',
     '@id': `${baseUrl}/locations/london/knightsbridge/`,
     name: 'Knightsbridge',
-    areaType: 'Wellness-led premium cleaning programme in Knightsbridge',
+    areaType: 'Home and property cleaning support in Knightsbridge',
     description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+      'Cleaning support for Knightsbridge homes and properties that need careful handling and practical presentation standards.',
     provider: { '@id': `${baseUrl}/#organization` },
     areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
+      audienceType: 'Households, agents, landlords and property managers'
     }
   },
   {
     '@type': 'Area',
     '@id': `${baseUrl}/locations/london/st-johns-wood/`,
     name: 'St John\'s Wood',
-    areaType: 'Wellness-led premium cleaning programme in St John\'s Wood',
+    areaType: 'Home and property cleaning support in St John\'s Wood',
     description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+      'Cleaning support for St John\'s Wood homes and managed properties with agreed scopes and careful presentation.',
     provider: { '@id': `${baseUrl}/#organization` },
     areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
+      audienceType: 'Households, agents, landlords and property managers'
     }
   },
   {
     '@type': 'Area',
     '@id': `${baseUrl}/locations/london/hampstead/`,
     name: 'Hampstead',
-    areaType: 'Wellness-led premium cleaning programme in Hampstead',
+    areaType: 'Home and property cleaning support in Hampstead',
     description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
+      'Cleaning support for Hampstead homes and property teams where reliability, access and presentation need to be agreed clearly.',
     provider: { '@id': `${baseUrl}/#organization` },
     areaServed: ServiceAreaNames,
     audience: {
       '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
+      audienceType: 'Households, agents, landlords and property managers'
     }
   }
 ];
@@ -201,24 +201,17 @@ const organizationNode = {
       availableLanguage: ['English']
     }
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    bestRating: '5',
-    ratingCount: 97
-  },
-  award: ['ISO 9001 Certified', 'DBS Checked Team', '97+ Five-star Reviews'],
   founder: {
     '@type': 'Person',
     name: 'Pedro',
     jobTitle: 'Founder',
     description:
-      'Luxury hospitality professional and wellness cleaning specialist leading High Quality Clean.',
+      'Cleaning business founder leading High Quality Clean with a focus on clear scopes, careful handling and practical standards.',
     knowsAbout: [
-      'Luxury home cleaning',
-      'Wellness-grade protocols',
-      'Concierge service',
-      'Quality management'
+      'Home cleaning',
+      'Property cleaning',
+      'End of tenancy cleaning',
+      'Post-renovation cleaning'
     ]
   },
   hasOfferCatalog: { '@id': offerCatalogNode['@id'] },
