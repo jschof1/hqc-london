@@ -1,9 +1,13 @@
 export type BuyerRouteKey = 'propertyAndFacilities' | 'homes' | 'commercialAndWellness';
+export type BuyerRouteSlug =
+  | 'property-and-facilities-cleaning'
+  | 'home-cleaning'
+  | 'commercial-and-wellness-cleaning';
 
 export interface BuyerRoute {
   key: BuyerRouteKey;
   title: string;
-  slug: string;
+  slug: BuyerRouteSlug;
   audience: string;
   buyerProblem: string;
   ctaText: string;
@@ -49,4 +53,8 @@ export const buyerRoutes: BuyerRoute[] = [
 
 export const routeBySlug = Object.fromEntries(
   buyerRoutes.map((route) => [route.slug, route]),
-) as Record<BuyerRoute['slug'], BuyerRoute>;
+) as Partial<Record<string, BuyerRoute>>;
+
+export function getBuyerRouteBySlug(slug: string): BuyerRoute | undefined {
+  return routeBySlug[slug];
+}
