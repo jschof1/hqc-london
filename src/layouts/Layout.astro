@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
-import { getRobotsContent, PRODUCTION_ROBOTS } from '../lib/env';
+import { DEVELOPMENT_ROBOTS, getRobotsContent, PRODUCTION_ROBOTS } from '../lib/env';
 
 import { Schema } from 'astro-seo-schema';
 
@@ -16,7 +16,8 @@ const {
   description = "High Quality Clean provides practical premium cleaning for London homes, property teams and client-facing spaces.",
   robots = PRODUCTION_ROBOTS
 } = Astro.props;
-const robotsContent = getRobotsContent(robots);
+const isCloudflarePreviewHost = Astro.url?.hostname.endsWith('.pages.dev') ?? false;
+const robotsContent = isCloudflarePreviewHost ? DEVELOPMENT_ROBOTS : getRobotsContent(robots);
 
 const baseUrl = 'https://highqualityclean.co.uk';
 const canonicalPath = Astro.url?.pathname
