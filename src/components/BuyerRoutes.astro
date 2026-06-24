@@ -1,0 +1,78 @@
+---
+import { buyerRoutes } from '../data/routes';
+
+const routes = [...buyerRoutes].sort((a, b) => a.priority - b.priority);
+---
+
+<section id="buyer-routes" class="bg-cream py-16 md:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+        Cleaning routes
+      </p>
+      <h2 class="font-serif mt-3 text-3xl md:text-5xl font-semibold text-navy">
+        Choose the cleaning support that matches your space
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-ink/75">
+        Start with the route closest to your need, then HQC can confirm the scope, access requirements, standards and quote before work begins.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-5 lg:grid-cols-3">
+      {routes.map((route) => {
+        const isPriorityRoute = route.key !== 'homes';
+        return (
+          <article
+            class:list={[
+              'flex min-h-full flex-col border bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl',
+              isPriorityRoute ? 'border-gold/60 lg:p-8' : 'border-navy/10',
+            ]}
+          >
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="font-serif text-2xl font-semibold text-navy">
+                {route.title}
+              </h3>
+              {isPriorityRoute && (
+                <span class="shrink-0 rounded-full border border-gold/50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-gold">
+                  Priority
+                </span>
+              )}
+            </div>
+            <p class="mt-4 text-sm font-semibold uppercase tracking-[0.12em] text-ink/55">
+              {route.audience}
+            </p>
+            <p class="mt-5 flex-1 text-base leading-relaxed text-ink/75">
+              {route.buyerProblem}
+            </p>
+            <a
+              href={route.ctaUrl}
+              class:list={[
+                'mt-8 inline-flex items-center justify-center rounded px-5 py-3 text-center font-semibold no-underline transition duration-300',
+                isPriorityRoute
+                  ? 'bg-gold text-navy hover:bg-gold/90'
+                  : 'border border-navy/20 text-navy hover:border-gold hover:text-gold',
+              ]}
+            >
+              {route.ctaText}
+              <svg
+                class="ml-2 h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 12H19M19 12L13 6M19 12L13 18"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>

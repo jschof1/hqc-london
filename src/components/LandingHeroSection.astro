@@ -24,7 +24,7 @@ export interface Props {
   videoSrc?: string;
   fallbackImage?: string;
   fallbackImageAlt?: string;
-  reviewBadge?: ReviewBadge;
+  reviewBadge?: ReviewBadge | null;
   starRating?: number;
   ctaButtons?: CtaButton[];
   trustText?: string;
@@ -33,54 +33,28 @@ export interface Props {
 }
 
 const {
-  title = "Where Profound Care Meets Perfected Detail",
-  subtitle = "Premium cleaning services designed for busy professionals and wellness-focused spaces across London. From Chelsea townhouses to Hampstead studios, we deliver the emotional reset you deserve.",
+  title = "Cleaning support for London homes, property teams and premium spaces",
+  subtitle = "High Quality Clean helps London clients keep homes, managed properties, offices and client-facing spaces clean, presentable and ready for the next stage.",
   videoSrc = "/videos/hero.mp4",
   fallbackImage = "/images/areas/mayfair.webp",
-  fallbackImageAlt = "Luxury living room interior",
-  reviewBadge = {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
-      <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
-    </svg>`,
-    text: "97+ reviews"
-  },
-  starRating = 5,
+  fallbackImageAlt = "Clean London home interior",
+  reviewBadge = null,
+  starRating = 0,
   ctaButtons = [
     {
-      text: "Request a Personalised Quote",
-      href: "#quote",
+      text: "Request a Cleaning Quote",
+      href: "/quote/",
       type: "primary",
       id: "hero-cta"
     },
     {
-      text: "Discover Our Difference",
-      href: "#differentiation",
+      text: "View Cleaning Routes",
+      href: "#buyer-routes",
       type: "secondary"
     }
   ],
-  trustText = "Trusted by London's most discerning homeowners",
-  trustLogos = [
-    {
-      type: "svg",
-      content: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
-        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
-      </svg>`,
-      alt: "Google",
-      link: "https://www.google.com/maps/place/High+Quality+Clean+Ltd/data=!4m2!3m1!1s0x0:0xade47bf255fda541?sa=X&ved=1t:2428&ictx=111",
-    },
-    {
-      type: "image",
-      content: "/images/bark.png",
-      alt: "Bark",
-      link: "https://www.bark.com/en/gb/company/high-quality-clean-ltd/LnAX9/"
-    },
-    {
-      type: "image",
-      content: "/images/yell.png",
-      link: "https://www.yell.com/biz/high-quality-clean-ltd-london-901756897/",
-      alt: "Yell"
-    }
-  ],
+  trustText = "Clear scopes, careful handling and consistent standards before work begins",
+  trustLogos = [],
   className = ""
 } = Astro.props;
 ---
@@ -91,25 +65,25 @@ const {
     <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
     </svg>
-    <span class="whitespace-nowrap">Fully Insured & Bonded</span>
+    <span class="whitespace-nowrap">Clear Scopes</span>
     </div>
     <div class="flex items-center gap-2">
     <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
       <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
     </svg>
-    <span class="whitespace-nowrap">DBS Checked Team</span>
+    <span class="whitespace-nowrap">Careful Handling</span>
     </div>
     <div class="flex items-center gap-2">
     <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
       <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
     </svg>
-    <span class="whitespace-nowrap">ISO 9001 Certified</span>
+    <span class="whitespace-nowrap">Consistent Standards</span>
     </div>
     <div class="flex items-center gap-2">
     <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
     </svg>
-    <span class="whitespace-nowrap">Same Day Response</span>
+    <span class="whitespace-nowrap">Quote Before Work Begins</span>
     </div>
   </div>
   </div>
