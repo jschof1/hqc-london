@@ -50,6 +50,7 @@ const legacyRedirects = new Map<string, string>([
 
 const skippedPrefixes = ['/api/'];
 const skippedExtensions = /\.[a-z0-9]+$/i;
+const localHostnames = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1']);
 
 function stripTrailingSlash(pathname: string) {
   return pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
@@ -61,9 +62,10 @@ function shouldNormalizePath(pathname: string) {
 
 export const onRequest = defineMiddleware(async ({ request }, next) => {
   const incomingUrl = new URL(request.url);
+  const canonicalOrigin = localHostnames.has(incomingUrl.hostname) ? incomingUrl.origin : CANONICAL_ORIGIN;
   const lowerPath = incomingUrl.pathname.toLowerCase();
   const legacyTarget = legacyRedirects.get(stripTrailingSlash(lowerPath));
-  const canonicalUrl = new URL(legacyTarget ?? incomingUrl.pathname, CANONICAL_ORIGIN);
+  const canonicalUrl = new URL(legacyTarget ?? incomingUrl.pathname, canonicalOrigin);
 
   if (!legacyTarget && shouldNormalizePath(incomingUrl.pathname)) {
     canonicalUrl.pathname = lowerPath.endsWith('/') ? lowerPath : `${lowerPath}/`;
