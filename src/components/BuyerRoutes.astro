@@ -1,7 +1,16 @@
 ---
 import { buyerRoutes } from '../data/routes';
 
-const routes = [...buyerRoutes].sort((a, b) => a.priority - b.priority);
+const routes = [...buyerRoutes]
+  .map(({ key, audience, buyerProblem, ctaText, ctaUrl, priority }) => ({
+    key,
+    audience,
+    buyerProblem,
+    ctaText,
+    ctaUrl,
+    priority,
+  }))
+  .sort((a, b) => a.priority - b.priority);
 ---
 
 <section id="buyer-routes" class="bg-cream py-16 md:py-20">
@@ -21,6 +30,13 @@ const routes = [...buyerRoutes].sort((a, b) => a.priority - b.priority);
     <div class="mt-10 grid gap-5 lg:grid-cols-3">
       {routes.map((route) => {
         const isPriorityRoute = route.key !== 'homes';
+        const displayTitle =
+          route.key === 'propertyAndFacilities'
+            ? 'Property Cleaning Support'
+            : route.key === 'commercialAndWellness'
+              ? 'Commercial and Wellness Cleaning'
+              : 'Homes';
+
         return (
           <article
             class:list={[
@@ -30,7 +46,7 @@ const routes = [...buyerRoutes].sort((a, b) => a.priority - b.priority);
           >
             <div class="flex items-start justify-between gap-4">
               <h3 class="font-serif text-2xl font-semibold text-navy">
-                {route.title}
+                {displayTitle}
               </h3>
               {isPriorityRoute && (
                 <span class="shrink-0 rounded-full border border-gold/50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-gold">
