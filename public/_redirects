@@ -26,6 +26,20 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 /airbnb-turnover/ /services/airbnb-cleaning/ 301
 /well-clean / 301
 /well-clean/ / 301
+/post-renovation-cleaning /services/post-renovation-cleaning/ 301
+/post-renovation-cleaning/ /services/post-renovation-cleaning/ 301
+/after-builders-cleaning /services/post-renovation-cleaning/ 301
+/after-builders-cleaning/ /services/post-renovation-cleaning/ 301
+/end-of-tenancy-cleaning-wandsworth /services/end-of-tenancy-cleaning-wandsworth/ 301
+/end-of-tenancy-cleaning-wandsworth/ /services/end-of-tenancy-cleaning-wandsworth/ 301
+/estate-agent-cleaning /services/estate-and-lettings-agents-cleaning/ 301
+/estate-agent-cleaning/ /services/estate-and-lettings-agents-cleaning/ 301
+/letting-agent-cleaning /services/estate-and-lettings-agents-cleaning/ 301
+/letting-agent-cleaning/ /services/estate-and-lettings-agents-cleaning/ 301
+/void-cleaning /services/void-and-post-tenancy-cleaning/ 301
+/void-cleaning/ /services/void-and-post-tenancy-cleaning/ 301
+/block-management-cleaning /services/block-management-cleaning/ 301
+/block-management-cleaning/ /services/block-management-cleaning/ 301
 
 # Legacy /services/<old-slug>/ paths still indexed by Google -> live pages
 /services/concierge-laundry /services/ironing-and-laundry/ 301
@@ -121,4 +135,3 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 /locations/surrey/weybridge /locations/surrey/weybridge/ 301
 /locations/surrey/hersham /locations/surrey/hersham/ 301
 /locations/surrey/walton-on-thames /locations/surrey/walton-on-thames/ 301
-
