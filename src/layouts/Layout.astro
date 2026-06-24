@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
+import { getRobotsContent, PRODUCTION_ROBOTS } from '../lib/env';
 
 import { Schema } from 'astro-seo-schema';
 
@@ -13,8 +14,9 @@ export interface Props {
 const { 
   title, 
   description = "High Quality Clean — Luxury home cleaning for discerning London clients.",
-  robots = "index, follow"
+  robots = PRODUCTION_ROBOTS
 } = Astro.props;
+const robotsContent = getRobotsContent(robots);
 
 const baseUrl = 'https://highqualityclean.co.uk';
 const canonicalPath = Astro.url?.pathname
@@ -273,10 +275,10 @@ const schemaItem = {
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="description" content={description} />
-    <meta name="robots" content={robots} />
-    <meta name="googlebot" content={robots} />
-    <meta name="bingbot" content={robots} />
-    <meta name="yandexbot" content={robots} />
+    <meta name="robots" content={robotsContent} />
+    <meta name="googlebot" content={robotsContent} />
+    <meta name="bingbot" content={robotsContent} />
+    <meta name="yandexbot" content={robotsContent} />
     <meta name="google" content="notranslate" />
     <meta name="google" content="notranslate" />
     <link rel="icon" href="/favicon.ico" />
