@@ -1,0 +1,278 @@
+---
+import Header from './Header.astro';
+import Layout from '../layouts/Layout.astro';
+import { getBuyerRouteBySlug, type BuyerRouteSlug } from '../data/routes';
+import { servicePages } from '../data/servicePages';
+
+interface Props {
+  slug: BuyerRouteSlug;
+}
+
+const { slug } = Astro.props;
+const route = getBuyerRouteBySlug(slug);
+
+if (!route) {
+  throw new Error(`Route page data not found for slug: ${slug}`);
+}
+
+const matchingPages = servicePages
+  .filter((page) => page.routeKey === route.key)
+  .sort((a, b) => a.priority - b.priority);
+
+const primaryPage = matchingPages.find((page) => page.slug === slug) ?? matchingPages[0];
+
+if (!primaryPage) {
+  throw new Error(`Service page data not found for route: ${route.key}`);
+}
+
+const isPropertyRoute = route.key === 'propertyAndFacilities';
+const displayTitle = isPropertyRoute ? primaryPage.h1 : primaryPage.title;
+const h1 = primaryPage.h1;
+const heroCopy = primaryPage.positioning || route.buyerProblem;
+const metaTitle = primaryPage.seoTitle || `${displayTitle} | High Quality Clean`;
+const metaDescription = primaryPage.metaDescription || route.buyerProblem;
+const ctaText = primaryPage.primaryCtaText || route.ctaText || 'Request a Cleaning Quote';
+const ctaUrl = primaryPage.primaryCtaUrl || route.ctaUrl || '/quote/';
+const supportingPages = matchingPages.filter((page) => page.slug !== slug);
+const liveRouteSlugs = new Set([
+  'property-and-facilities-cleaning',
+  'home-cleaning',
+  'commercial-and-wellness-cleaning',
+]);
+
+const relatedRoutes = [
+  {
+    href: '/property-and-facilities-cleaning/',
+    label: 'Property cleaning support',
+    active: route.key === 'propertyAndFacilities',
+  },
+  {
+    href: '/home-cleaning/',
+    label: 'Home cleaning',
+    active: route.key === 'homes',
+  },
+  {
+    href: '/commercial-and-wellness-cleaning/',
+    label: 'Commercial and wellness cleaning',
+    active: route.key === 'commercialAndWellness',
+  },
+];
+---
+
+<Layout title={metaTitle} description={metaDescription}>
+  <Header />
+
+  <main class="page-transition pt-16">
+    <section class="bg-navy py-20 text-white md:py-28">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+            High Quality Clean
+          </p>
+          <h1 class="mt-4 font-serif text-4xl font-semibold leading-tight text-white md:text-6xl">
+            {h1}
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg leading-relaxed text-white/82 md:text-xl">
+            {heroCopy}
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={ctaUrl}
+              class="inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 font-semibold text-navy transition duration-300 hover:bg-gold/90"
+            >
+              {ctaText}
+            </a>
+            <a
+              href="/contact/"
+              class="inline-flex items-center justify-center rounded-md border border-white/35 px-6 py-3 font-semibold text-white transition duration-300 hover:border-gold hover:text-gold"
+            >
+              Ask about scope
+            </a>
+          </div>
+        </div>
+
+        <aside class="border border-gold/35 bg-white/8 p-6 shadow-xl backdrop-blur md:p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-gold">
+            Built for
+          </p>
+          <p class="mt-3 text-lg leading-relaxed text-white/88">
+            {primaryPage.audience || route.audience}
+          </p>
+          <div class="mt-8 border-t border-white/15 pt-6">
+            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-gold">
+              Typical need
+            </p>
+            <p class="mt-3 leading-relaxed text-white/82">
+              {route.buyerProblem}
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 md:py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+            The buyer problem
+          </p>
+          <h2 class="mt-3 font-serif text-3xl font-semibold text-navy md:text-5xl">
+            Clean, ready spaces without vague promises
+          </h2>
+        </div>
+        <div class="space-y-5 text-lg leading-relaxed text-ink/75">
+          <p>{primaryPage.problem || route.buyerProblem}</p>
+          <p>
+            HQC starts with the space, access requirements, timing and expected finish, then confirms the cleaning scope before work begins.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+            Service route
+          </p>
+          <h2 class="mt-3 font-serif text-3xl font-semibold text-navy md:text-5xl">
+            {displayTitle}
+          </h2>
+          <p class="mt-5 text-lg leading-relaxed text-ink/75">
+            Use this route as the starting point. If a detailed page is still being expanded, the route still gives enough context to request the right cleaning quote.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {matchingPages.map((page) => (
+            <article class="flex min-h-full flex-col border border-navy/10 bg-cream p-6 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gold">
+                {page.audience}
+              </p>
+              <h3 class="mt-4 font-serif text-2xl font-semibold text-navy">
+                {page.title}
+              </h3>
+              <p class="mt-4 flex-1 leading-relaxed text-ink/75">
+                {page.positioning}
+              </p>
+              {
+                liveRouteSlugs.has(page.slug) ? (
+                  <a
+                    href={`/${page.slug}/`}
+                    class="mt-6 inline-flex font-semibold text-navy underline decoration-gold/50 underline-offset-4 transition hover:text-gold"
+                  >
+                    View this cleaning scope
+                  </a>
+                ) : (
+                  <a
+                    href={page.primaryCtaUrl || ctaUrl}
+                    class="mt-6 inline-flex font-semibold text-navy underline decoration-gold/50 underline-offset-4 transition hover:text-gold"
+                  >
+                    Discuss this scope
+                  </a>
+                )
+              }
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy py-16 text-white md:py-20">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+            Trust signals
+          </p>
+          <h2 class="mt-3 font-serif text-3xl font-semibold md:text-5xl">
+            Proof-safe, scope-first cleaning support
+          </h2>
+        </div>
+        <div class="border border-white/15 p-6">
+          <h3 class="font-serif text-2xl font-semibold text-gold">
+            Clear expectations
+          </h3>
+          <p class="mt-4 leading-relaxed text-white/80">
+            The quote conversation can cover rooms or areas, access, frequency, timing, priorities and any specialist add-ons before a booking is agreed.
+          </p>
+        </div>
+        <div class="border border-white/15 p-6">
+          <h3 class="font-serif text-2xl font-semibold text-gold">
+            Presentation-led detail
+          </h3>
+          <p class="mt-4 leading-relaxed text-white/80">
+            The focus stays on practical cleaning outcomes: hygiene, readiness, careful handling and a finished space that looks prepared for its next use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+              Internal links
+            </p>
+            <h2 class="mt-3 font-serif text-3xl font-semibold text-navy md:text-5xl">
+              Compare the main cleaning routes
+            </h2>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-3">
+            {relatedRoutes.map((relatedRoute) => (
+              <a
+                href={relatedRoute.href}
+                class:list={[
+                  'border p-5 font-semibold transition duration-300',
+                  relatedRoute.active
+                    ? 'border-gold bg-navy text-gold'
+                    : 'border-navy/10 bg-white text-navy hover:border-gold hover:text-gold',
+                ]}
+              >
+                {relatedRoute.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {supportingPages.length > 0 && (
+          <div class="mt-10 border-t border-navy/10 pt-8">
+            <h3 class="font-serif text-2xl font-semibold text-navy">
+              Related cleaning scopes
+            </h3>
+            <div class="mt-5 flex flex-wrap gap-3">
+              {supportingPages.map((page) => (
+                <a
+                  href={liveRouteSlugs.has(page.slug) ? `/${page.slug}/` : page.primaryCtaUrl || ctaUrl}
+                  class="rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-semibold text-navy transition hover:border-gold hover:text-gold"
+                >
+                  {page.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-20">
+      <div class="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+          Quote and scoping
+        </p>
+        <h2 class="mt-3 font-serif text-3xl font-semibold text-navy md:text-5xl">
+          Get the right cleaning scope before you book
+        </h2>
+        <p class="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-ink/75">
+          Tell HQC what kind of space needs cleaning, when it needs to be ready, and what level of finish matters. The next step is a practical quote conversation, not a one-size-fits-all package.
+        </p>
+        <a
+          href={ctaUrl}
+          class="mt-8 inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 font-semibold text-navy transition duration-300 hover:bg-gold/90"
+        >
+          {ctaText}
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
