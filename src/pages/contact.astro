@@ -7,8 +7,8 @@ import siteSettings from '../data/site-settings.json';
 ---
 
 <Layout 
-  title="Contact High Quality Clean | Luxury London Cleaners"
-  description="Speak to High Quality Clean about premium home, deep, office and Airbnb cleaning across London and Surrey. Call, WhatsApp, email or request a tailored quote online."
+  title="Contact High Quality Clean | London Cleaning Enquiries"
+  description="Speak to High Quality Clean about home, deep, office, tenancy, property and facilities cleaning across London and Surrey. Call, WhatsApp, email or request a quote online."
 >
   <Header />
   
@@ -16,9 +16,9 @@ import siteSettings from '../data/site-settings.json';
     <!-- Hero Section -->
     <HeroSection 
       title="Get in Touch"
-      subtitle="We're here to answer your questions and discuss how we can help maintain your home to the highest standards."
+      subtitle="Tell us what needs cleaning, where it is, and when it needs to be ready. We'll route the enquiry to the right home, commercial or property cleaning service."
       imageSrc="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1600&h=900&fit=crop&auto=format&q=80"
-      imageAlt="Professional cleaning service team ready to help with luxury home cleaning"
+      imageAlt="Professional cleaning service team ready to help with home and commercial cleaning"
       primaryCta={{
         text: "Request a Quote",
         href: "/#quote"
@@ -31,9 +31,9 @@ import siteSettings from '../data/site-settings.json';
         rel: "noopener nofollow"
       }}
       trustBadges={[
-        { icon: "fas fa-shield-alt", text: "£5M Insurance" },
-        { icon: "fas fa-id-card", text: "100% DBS-checked" },
-        { icon: "fas fa-star", text: "Five‑Star Average" }
+        { icon: "fas fa-home", text: "Home cleaning" },
+        { icon: "fas fa-building", text: "Commercial cleaning" },
+        { icon: "fas fa-key", text: "Tenancy & access notes" }
       ]}
       backgroundClass="bg-navy relative overflow-hidden"
     />
@@ -47,7 +47,7 @@ import siteSettings from '../data/site-settings.json';
             How to Reach Us
           </h2>
           <p class="text-ink/70 text-lg max-w-2xl mx-auto">
-            Choose the method that works best for you. Our team is ready to assist with your cleaning needs.
+            Choose the route that works best for you. Include the postcode, property type, deadline and access details where relevant.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ import siteSettings from '../data/site-settings.json';
               href="tel:+442088703925" 
               class="text-gold hover:text-navy transition-colors font-medium"
             >
-              0208 8703925
+              0208 870 3925
             </a>
           </div>
 
@@ -228,10 +228,11 @@ import siteSettings from '../data/site-settings.json';
               class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
             >
               <option value="">Select a topic...</option>
-              <option value="general-inquiry">General Inquiry</option>
+              <option value="general-inquiry">General enquiry</option>
               <option value="quote-request">Request a Quote</option>
               <option value="existing-client">Existing Client Support</option>
-              <option value="partnership">Partnership Opportunity</option>
+              <option value="property-facilities">Property / Facilities Cleaning</option>
+              <option value="office-commercial">Office / Commercial Cleaning</option>
               <option value="other">Other</option>
             </select>
           </label>
@@ -243,7 +244,7 @@ import siteSettings from '../data/site-settings.json';
               rows="6"
               required
               class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors resize-none"
-              placeholder="Tell us about your cleaning needs, questions, or how we can assist you..."
+              placeholder="Tell us the property type, postcode, preferred date, access notes and what needs cleaning."
             ></textarea>
           </label>
           
@@ -381,4 +382,3 @@ import siteSettings from '../data/site-settings.json';
     </section>
   </main>
 </Layout>
-

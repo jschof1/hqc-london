@@ -5,6 +5,7 @@ export type ServicePageSlug =
   | 'home-cleaning'
   | 'end-of-tenancy-cleaning'
   | 'post-renovation-cleaning'
+  | 'developer-handover-cleaning'
   | 'end-of-tenancy-cleaning-wandsworth'
   | 'estate-and-lettings-agents-cleaning'
   | 'void-and-post-tenancy-cleaning'
@@ -96,6 +97,23 @@ export const servicePages: ServicePageEntry[] = [
     priority: 4,
   },
   {
+    slug: 'developer-handover-cleaning',
+    routeKey: 'propertyAndFacilities',
+    title: 'Developer Handover Cleaning',
+    seoTitle: 'Developer Handover Cleaning London | New-Build & Snagging Cleans | HQC',
+    metaDescription:
+      'Developer handover cleaning in London for new-build homes, communal areas and managed properties before walkthroughs, sign-off or occupation.',
+    h1: 'Developer handover cleaning in London for new-builds, snagging and final presentation',
+    audience: 'Developers, contractors, property managers, agents and managed-property teams',
+    problem:
+      'New-build, refurbishment or snagging work can leave fine dust, marks and disturbed presentation before walkthroughs, sign-off or occupation.',
+    positioning:
+      'Handover-focused cleaning for finished spaces, communal areas and managed properties that need a clear final clean before the next stakeholder sees them.',
+    primaryCtaText: 'Discuss Developer Handover Cleaning',
+    primaryCtaUrl: '/quote/',
+    priority: 5,
+  },
+  {
     slug: 'end-of-tenancy-cleaning-wandsworth',
     routeKey: 'homes',
     title: 'End of Tenancy Cleaning Wandsworth',
@@ -110,7 +128,7 @@ export const servicePages: ServicePageEntry[] = [
       'Location-specific tenancy cleaning for Wandsworth properties, using practical check-out and handover language.',
     primaryCtaText: 'Get a Wandsworth Tenancy Cleaning Quote',
     primaryCtaUrl: '/quote/',
-    priority: 5,
+    priority: 6,
   },
   {
     slug: 'estate-and-lettings-agents-cleaning',
@@ -127,7 +145,7 @@ export const servicePages: ServicePageEntry[] = [
       'Cleaning-led property support for agents who need clear scopes, careful access arrangements and ready-looking spaces.',
     primaryCtaText: 'Speak to Us About Agent Cleaning',
     primaryCtaUrl: '/quote/',
-    priority: 6,
+    priority: 7,
   },
   {
     slug: 'void-and-post-tenancy-cleaning',
@@ -144,7 +162,7 @@ export const servicePages: ServicePageEntry[] = [
       'Practical vacant-property cleaning for the transition between tenancy, works, marketing and handover.',
     primaryCtaText: 'Discuss Void Property Cleaning',
     primaryCtaUrl: '/quote/',
-    priority: 7,
+    priority: 8,
   },
   {
     slug: 'block-management-cleaning',
@@ -161,7 +179,7 @@ export const servicePages: ServicePageEntry[] = [
       'Communal area cleaning for entrances, lobbies, corridors, stairwells, lifts and shared spaces in managed buildings.',
     primaryCtaText: 'Discuss Block Cleaning',
     primaryCtaUrl: '/quote/',
-    priority: 8,
+    priority: 9,
   },
   {
     slug: 'commercial-and-wellness-cleaning',
@@ -178,7 +196,7 @@ export const servicePages: ServicePageEntry[] = [
       'Commercial cleaning for client-facing spaces, with wellness language kept practical around hygiene, access and opening-hours fit.',
     primaryCtaText: 'Discuss Commercial Cleaning',
     primaryCtaUrl: '/quote/',
-    priority: 9,
+    priority: 10,
   },
 ];
 

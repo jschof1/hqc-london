@@ -19,31 +19,31 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
 ---
 
 <Layout 
-  title="Luxury Cleaners Across London & Surrey | High Quality Clean"
-  description="Premium cleaning across Mayfair, Belgravia, Chelsea, Kensington, Knightsbridge, Weybridge and nearby areas. DBS-checked, insured cleaners."
+  title="Cleaning Areas Across London & Surrey | High Quality Clean"
+  description="Home, tenancy, office, property and facilities cleaning across London and selected Surrey areas. Check coverage and request a practical quote."
 >
   <Header />
   
   <main class="page-transition pt-16">
     <!-- Page Header -->
     <HeroSection 
-      title="London's Premier Areas. Our Specialty."
-      subtitle="From Mayfair mansions to Belgravia townhouses, we understand the unique character and requirements of London's most prestigious postcodes."
+      title="Cleaning Coverage Across London and Surrey"
+      subtitle="Find the right route for home cleaning, tenancy resets, office cleaning, property management and facilities support."
       imageSrc="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
-      imageAlt="London skyline with luxury neighborhoods and prestigious areas"
+      imageAlt="London skyline and neighbourhood coverage for cleaning services"
       primaryCta={{
         text: "Explore Our Coverage",
         href: "#coverage"
       }}
       secondaryCta={{
-        text: "Book Your Area", 
+        text: "Request a Quote",
         href: "/#quote",
         icon: "fas fa-calendar-alt"
       }}
       trustBadges={[
-        { icon: "fas fa-map-marked-alt", text: "15+ Premium Postcodes" },
-        { icon: "fas fa-clock", text: "Same-Day Service Available" },
-        { icon: "fas fa-car", text: "Local Teams & Knowledge" }
+        { icon: "fas fa-map-marked-alt", text: "London & Surrey areas" },
+        { icon: "fas fa-home", text: "Home and property routes" },
+        { icon: "fas fa-building", text: "Commercial enquiries" }
       ]}
       backgroundClass="bg-navy relative"
     />
@@ -55,7 +55,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
         <div class="text-center mb-12">
           <h2 class="font-serif text-2xl md:text-3xl text-navy">Our London Coverage</h2>
           <p class="mt-3 text-ink/70 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-            Serving the capital's most discerning residents across Central, West, North, and South London areas.
+            Coverage for homes, flats, offices, managed properties and move-out cleans across Central, West, North and South London.
           </p>
         </div>
 
@@ -97,19 +97,19 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div class="text-center p-4 bg-mist rounded-xl border border-gold/30">
             <div class="text-2xl font-bold text-gold">15+</div>
-            <div class="text-sm text-navy">Premium Postcodes</div>
+            <div class="text-sm text-navy">Listed Areas</div>
           </div>
           <div class="text-center p-4 bg-mist rounded-xl border border-gold/30">
-            <div class="text-2xl font-bold text-gold">500+</div>
-            <div class="text-sm text-navy">Properties Served</div>
+            <div class="text-2xl font-bold text-gold">Home</div>
+            <div class="text-sm text-navy">Regular & Deep Cleaning</div>
           </div>
           <div class="text-center p-4 bg-mist rounded-xl border border-gold/30">
-            <div class="text-2xl font-bold text-gold">30min</div>
-            <div class="text-sm text-navy">Average Response</div>
+            <div class="text-2xl font-bold text-gold">Move</div>
+            <div class="text-sm text-navy">Tenancy & Handover Cleans</div>
           </div>
           <div class="text-center p-4 bg-mist rounded-xl border border-gold/30">
-            <div class="text-2xl font-bold text-gold">24/7</div>
-            <div class="text-sm text-navy">Emergency Cover</div>
+            <div class="text-2xl font-bold text-gold">Work</div>
+            <div class="text-sm text-navy">Office & Facilities</div>
           </div>
         </div>
 
@@ -127,14 +127,14 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="image-container">
               <img
                 src="/images/areas/mayfair.webp"
-                alt="Mayfair elegant Georgian architecture and luxury properties"
+                alt="Mayfair Georgian architecture and residential properties"
                 loading="lazy"
               />
             </div>
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Mayfair</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                London's most exclusive address. We understand the discretion required for private clubs, luxury hotels, and high-net-worth residences.
+                Central London homes, flats and managed properties where access, timing and clear instructions matter.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -143,16 +143,16 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-home text-gold"></i>
-                  <span>Georgian mansions, luxury apartments</span>
+                  <span>Townhouses, flats, offices and managed homes</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-star text-gold"></i>
-                  <span>Ultra-high net worth clientele</span>
+                  <span>Home, deep clean and property routes</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Exceptional service for our Berkeley Square property." — Private Family Office
+                  Route: home cleaning, deep cleans and property preparation.
                 </p>
                 <a href="/locations/london/mayfair/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Mayfair Services
@@ -173,7 +173,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Belgravia</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Historic garden squares and stucco terraces. Our team specializes in period features, fine art protection, and embassy-level security.
+                Homes, flats and managed buildings around garden squares where careful access and clear scope are important.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -182,16 +182,16 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-building text-gold"></i>
-                  <span>Period terraces, embassies</span>
+                  <span>Period terraces, flats and managed buildings</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-shield-alt text-gold"></i>
-                  <span>High-security protocols</span>
+                  <span>Access notes agreed before work starts</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "They understand our Eaton Square requirements perfectly." — Victoria S.
+                  Route: home cleaning, end-of-tenancy and property support.
                 </p>
                 <a href="/locations/london/belgravia/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Belgravia Services
@@ -205,14 +205,14 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="image-container">
               <img
                 src="/images/areas/knightsbridge.webp"
-                alt="Knightsbridge luxury shopping district and Hyde Park views"
+                alt="Knightsbridge streets and Hyde Park views"
                 loading="lazy"
               />
             </div>
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Knightsbridge</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                International residents and Hyde Park penthouses. We cater to global lifestyles with flexible scheduling and multilingual service.
+                Central London flats, apartments and commercial spaces needing practical scheduling and tidy presentation.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -221,16 +221,16 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-globe text-gold"></i>
-                  <span>International clientele</span>
+                  <span>Apartments, homes and commercial spaces</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-clock text-gold"></i>
-                  <span>24/7 availability</span>
+                  <span>Schedule and access confirmed by enquiry</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Perfect for our penthouse overlooking Hyde Park." — International Client
+                  Route: home cleaning, commercial cleaning and property preparation.
                 </p>
                 <a href="/locations/london/knightsbridge/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Knightsbridge Services
@@ -253,14 +253,14 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="image-container">
               <img
                 src="/images/areas/kensington.webp"
-                alt="Kensington Royal Borough museums and elegant Victorian architecture"
+                alt="Kensington museums and Victorian architecture"
                 loading="lazy"
               />
             </div>
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Kensington</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Royal Borough sophistication. From South Ken museums to Holland Park mansions, we preserve the cultural heritage of your home.
+                West London homes, flats and apartments needing reliable home cleaning, deep cleaning and move-out support.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -269,16 +269,16 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-university text-gold"></i>
-                  <span>Museum district, cultural properties</span>
+                  <span>Homes, flats and apartments</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-crown text-gold"></i>
-                  <span>Royal Borough standards</span>
+                  <span>Home and tenancy cleaning routes</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "They care for our antiques like museum curators." — Sarah B.
+                  Route: home cleaning, deep cleans and tenancy preparation.
                 </p>
                 <a href="/locations/london/kensington/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Kensington Services
@@ -292,14 +292,14 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="image-container">
               <img
                 src="/images/areas/chelsea.webp"
-                alt="Chelsea riverside luxury properties and historic charm"
+                alt="Chelsea riverside properties and historic streets"
                 loading="lazy"
               />
             </div>
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Chelsea</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Creative elegance by the Thames. We understand the artistic sensibilities and fine furnishings of this bohemian yet affluent enclave.
+                Residential and riverside properties where regular cleaning, one-off deep cleans and moving cleans need simple coordination.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -308,16 +308,16 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-palette text-gold"></i>
-                  <span>Artists, creatives, galleries</span>
+                  <span>Homes, flats and managed properties</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-water text-gold"></i>
-                  <span>Thames-side properties</span>
+                  <span>Regular, deep and move-out cleaning</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Sensitive to our gallery-quality collection." — Chelsea Collector
+                  Route: home cleaning, property support and end-of-tenancy.
                 </p>
                 <a href="/locations/london/chelsea/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Chelsea Services
@@ -338,7 +338,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Notting Hill</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Colorful Victorian charm meets modern luxury. We preserve the character of these iconic houses while delivering contemporary standards.
+                Victorian homes, conversions and flats needing regular cleaning, one-off resets or pre-let preparation.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -351,12 +351,12 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-paint-brush text-gold"></i>
-                  <span>Character preservation specialists</span>
+                  <span>Home and property cleaning routes</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "They maintain the soul of our Victorian home." — Media Executive
+                  Route: home cleaning and one-off deep cleans.
                 </p>
                 <a href="/locations/london/notting-hill/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Notting Hill Services
@@ -377,7 +377,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Holland Park</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Sophisticated residential area with park views. We understand the refined tastes and privacy requirements of this exclusive enclave.
+                Residential streets and apartment buildings where access, parking and timing should be agreed before the clean.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -390,12 +390,12 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-crown text-gold"></i>
-                  <span>Exclusive residential area</span>
+                  <span>Access and parking notes by enquiry</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Perfect service for our park-side home." — Holland Park Resident
+                  Route: home cleaning, deep cleaning and property support.
                 </p>
                 <a href="/locations/london/holland-park/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Holland Park Services
@@ -418,14 +418,14 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="image-container">
               <img
                 src="/images/areas/hampstead.webp"
-                alt="Hampstead Heath village atmosphere and luxury homes"
+                alt="Hampstead Heath village atmosphere and homes"
                 loading="lazy"
               />
             </div>
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Hampstead</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Intellectual elegance overlooking the Heath. We serve families who value privacy, extensive grounds, and heritage property maintenance.
+                Family homes, flats and larger properties where cleaning scope needs to fit around household routines.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -438,12 +438,12 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-book text-gold"></i>
-                  <span>Literary & academic heritage</span>
+                  <span>Family homes and larger properties</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Perfect for our Grade II listed home." — Academic Family
+                  Route: regular home cleaning and one-off deep cleans.
                 </p>
                 <a href="/locations/london/hampstead/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Hampstead Services
@@ -464,7 +464,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Highgate</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Historic village atmosphere with commanding views. Our services respect the conservation area requirements and period authenticity.
+                Homes and flats in a hilly, residential area where access details and timing are useful to confirm early.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -477,12 +477,12 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-landmark text-gold"></i>
-                  <span>Conservation area specialists</span>
+                  <span>Access and timing confirmed before booking</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Respectful of our Georgian features." — Heritage Property Owner
+                  Route: home cleaning and property preparation.
                 </p>
                 <a href="/locations/london/highgate/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Highgate Services
@@ -503,7 +503,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Primrose Hill</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Celebrity haven with village charm. We provide discreet service for high-profile clients who value privacy and contemporary luxury.
+                Village-style residential streets where quiet, scheduled cleaning and clear access notes matter.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -512,16 +512,16 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-star text-gold"></i>
-                  <span>Celebrity clientele</span>
+                  <span>Homes, flats and managed properties</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-user-secret text-gold"></i>
-                  <span>Maximum discretion protocols</span>
+                  <span>Access notes agreed before work starts</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Invisible excellence — exactly what we need." — Entertainment Industry
+                  Route: home cleaning and one-off deep cleans.
                 </p>
                 <a href="/locations/london/primrose-hill/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Primrose Hill Services
@@ -535,14 +535,14 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="image-container">
               <img
                 src="/images/areas/st-johns-wood.webp"
-                alt="St John's Wood elegant residential area with Lord's Cricket Ground"
+                alt="St John's Wood residential area near Lord's Cricket Ground"
                 loading="lazy"
               />
             </div>
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">St John's Wood</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Sophisticated residential area known for Lord's Cricket Ground. We provide tailored service for this prestigious neighborhood's unique character.
+                Residential properties near St John's Wood needing regular cleaning, deep cleaning or move-out preparation.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -551,7 +551,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-cricket text-gold"></i>
-                  <span>Lord's Cricket Ground area</span>
+                  <span>Homes, flats and apartment buildings</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-home text-gold"></i>
@@ -560,7 +560,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Perfect for our St John's Wood residence." — Cricket Enthusiast
+                  Route: home cleaning and property support.
                 </p>
                 <a href="/locations/london/st-johns-wood/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View St John's Wood Services
@@ -590,7 +590,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Clapham & Battersea</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Dynamic riverside living and modern family homes. We serve the new generation of luxury properties and contemporary lifestyle requirements.
+                Riverside flats, family homes and managed developments needing home, tenancy or property cleaning.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -603,12 +603,12 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-users text-gold"></i>
-                  <span>Young professional families</span>
+                  <span>Homes, flats and managed developments</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Perfect for our busy family lifestyle." — Tech Executive
+                  Route: home cleaning, tenancy cleans and property support.
                 </p>
                 <div class="flex gap-2">
                   <a href="/locations/london/battersea/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; flex: 1;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
@@ -634,7 +634,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Wandsworth</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Green spaces and growing families. We understand the demands of larger homes, children's areas, and the balance of luxury with practicality.
+                Family homes, flats and rental properties needing practical regular cleaning, deep cleaning and tenancy support.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -652,7 +652,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Safe for children, luxury for parents." — Banking Family
+                  Route: home cleaning and end-of-tenancy cleaning.
                 </p>
                 <a href="/locations/london/wandsworth/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Wandsworth Services
@@ -677,18 +677,18 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="bg-navy/70 border border-gold rounded-xl p-6 text-center">
             <i class="fas fa-shield-alt text-gold text-3xl mb-4"></i>
-            <h3 class="text-white font-semibold mb-2">Security Protocols</h3>
-            <p class="text-white/70 text-sm">Embassy-level security awareness for diplomatic and high-profile areas</p>
+            <h3 class="text-white font-semibold mb-2">Access Planning</h3>
+            <p class="text-white/70 text-sm">Access, keys, alarms and site notes agreed before work starts</p>
           </div>
           <div class="bg-navy/70 border border-gold rounded-xl p-6 text-center">
             <i class="fas fa-landmark text-gold text-3xl mb-4"></i>
             <h3 class="text-white font-semibold mb-2">Heritage Care</h3>
-            <p class="text-white/70 text-sm">Conservation area compliance and period feature preservation expertise</p>
+            <p class="text-white/70 text-sm">Careful cleaning plans for older homes, flats and shared buildings</p>
           </div>
           <div class="bg-navy/70 border border-gold rounded-xl p-6 text-center">
             <i class="fas fa-parking text-gold text-3xl mb-4"></i>
             <h3 class="text-white font-semibold mb-2">Access Solutions</h3>
-            <p class="text-white/70 text-sm">Permit parking, restricted access, and concierge coordination</p>
+            <p class="text-white/70 text-sm">Permit parking, restricted access and building contact details captured early</p>
           </div>
           <div class="bg-navy/70 border border-gold rounded-xl p-6 text-center">
             <i class="fas fa-clock text-gold text-3xl mb-4"></i>
@@ -760,7 +760,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             Now Serving Select Surrey Locations
           </h2>
           <p class="text-lg text-ink/70 max-w-3xl mx-auto leading-relaxed">
-            Extending our wellness-grade cleaning expertise to prestigious Surrey communities
+            Cleaning support for selected Surrey communities, with availability confirmed case by case
           </p>
         </div>
 
@@ -771,14 +771,14 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="image-container">
               <img
                 src="/images/areas/weybridge.webp"
-                alt="Weybridge St Georges Hill luxury properties"
+                alt="Weybridge residential properties"
                 loading="lazy"
               />
             </div>
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Weybridge</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Prestigious homes in one of Surrey's most coveted locations. Perfect for our premium cleaning services.
+                Home and property cleaning support in Weybridge, with scope and access agreed before work starts.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -787,16 +787,16 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-building text-gold"></i>
-                  <span>Luxury estates, executive homes</span>
+                  <span>Homes, flats and larger properties</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-leaf text-gold"></i>
-                  <span>Wellness-focused residents</span>
+                  <span>Home and property cleaning routes</span>
                 </div>
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Premium care for premium properties"
+                  Route: home cleaning and selected Surrey property support.
                 </p>
                 <a href="/locations/surrey/weybridge/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Weybridge Services
@@ -817,7 +817,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Hersham</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Family-focused community with beautiful properties requiring our signature attention to detail.
+                Family homes and local properties needing practical cleaning support.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -835,7 +835,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Trusted by local families"
+                  Route: home cleaning and one-off deep cleans.
                 </p>
                 <a href="/locations/surrey/hersham/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Hersham Services
@@ -856,7 +856,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             <div class="card-content">
               <h3 class="font-serif text-xl text-navy mb-2">Walton-on-Thames</h3>
               <p class="text-ink/70 text-sm mb-4 leading-relaxed">
-                Riverside living meets premium care. Our comprehensive cleaning services for discerning residents.
+                Riverside homes and local properties supported with clear cleaning scopes and practical scheduling.
               </p>
               <div class="space-y-2 text-xs text-ink/60 mb-4">
                 <div class="flex items-center gap-2">
@@ -865,7 +865,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-building text-gold"></i>
-                  <span>Riverside properties, luxury homes</span>
+                  <span>Riverside homes and local properties</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <i class="fas fa-water text-gold"></i>
@@ -874,7 +874,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
               </div>
               <div class="card-footer">
                 <p class="text-xs italic text-gold mb-3">
-                  "Serving the Thames-side community"
+                  Route: home cleaning and local property support.
                 </p>
                 <a href="/locations/surrey/walton-on-thames/" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s; text-decoration: none; width: 100%;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
                   <i class="fas fa-arrow-right mr-2"></i>View Walton-on-Thames Services
@@ -889,11 +889,10 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
           <div class="bg-white rounded-xl border border-gold/30 p-8 max-w-4xl mx-auto">
             <h3 class="font-serif text-xl text-navy mb-4">Expanding Our Footprint</h3>
             <p class="text-ink/70 leading-relaxed mb-4">
-              Our Surrey expansion represents a natural progression of our wellness-grade cleaning expertise. 
-              Each location has been carefully selected based on community values that align with our concierge-level service philosophy.
+              Our Surrey coverage is handled case by case. Share the postcode, property type and timing so we can confirm whether the work is practical for the team.
             </p>
             <p class="text-sm text-ink/60 italic">
-              If your Surrey location isn't listed, enquire—our concierge team can advise on availability and potential expansion.
+              If your Surrey location isn't listed, enquire and we can confirm whether the team can support the job.
             </p>
           </div>
         </div>
@@ -906,7 +905,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
         <div class="text-center mb-8">
           <h2 class="font-serif text-2xl md:text-3xl text-navy">Book Your Area</h2>
           <p class="mt-3 text-ink/70 leading-relaxed">
-            Tell us your location and requirements for a personalized service proposal.
+            Tell us your location and requirements for a practical cleaning quote.
           </p>
         </div>
         
@@ -964,23 +963,23 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
               <span class="block mb-1 text-navy font-medium">Property Type</span>
               <select class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
                 <option value="">Select...</option>
-                <option>Townhouse</option>
-                <option>Penthouse</option>
-                <option>Apartment</option>
-                <option>Mews</option>
-                <option>Mansion</option>
-                <option>Modern Development</option>
+                <option>House</option>
+                <option>Flat / Apartment</option>
+                <option>Rental property</option>
+                <option>Managed building</option>
+                <option>Office / commercial space</option>
+                <option>Other</option>
               </select>
             </label>
           </div>
           <label class="text-sm">
             <span class="block mb-1 text-navy font-medium">Local Requirements</span>
-            <textarea rows="4" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Parking restrictions, security requirements, access notes, special considerations..."></textarea>
+            <textarea rows="4" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Parking restrictions, access notes, timing, building contacts, special considerations..."></textarea>
           </label>
           <div class="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
             <label class="text-xs text-ink/80 inline-flex items-center gap-2">
               <input type="checkbox" required class="accent-gold h-4 w-4 border border-navy/30" />
-              I confirm this property is in a premium London area we serve.
+              I confirm the postcode and access details are accurate.
             </label>
             <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
               <i class="fas fa-map-marker-alt mr-2"></i>Submit Area Request

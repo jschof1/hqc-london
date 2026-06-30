@@ -3,17 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import siteSettings from '../data/site-settings.json';
 
-const title = "Request a Luxury Cleaning Quote | High Quality Clean London";
-const description = "Tell us about your London or Surrey property and receive a tailored cleaning quote from High Quality Clean's professional team. Same-week response, no obligation.";
+const title = "Request a Cleaning Quote | High Quality Clean London";
+const description = "Tell us whether you need home, commercial, tenancy, property or facilities cleaning and receive a practical quote from High Quality Clean.";
 
 // Service options for the form
 const services = [
-  { id: "signature", label: "Signature Clean™", icon: "fas fa-star" },
-  { id: "essentials", label: "Essentials Clean™", icon: "fas fa-leaf" },
-  { id: "wellclean", label: "WellClean™", icon: "fas fa-sparkles" },
-  { id: "move-in-out", label: "Move In/Out Reset™", icon: "fas fa-truck-ramp-box" },
+  { id: "home-cleaning", label: "Home Cleaning", icon: "fas fa-home" },
+  { id: "deep-cleaning", label: "Deep Cleaning", icon: "fas fa-broom" },
+  { id: "end-of-tenancy", label: "End of Tenancy", icon: "fas fa-truck-ramp-box" },
+  { id: "property-cleaning", label: "Property & Facilities", icon: "fas fa-building" },
   { id: "airbnb", label: "Airbnb Turnover", icon: "fas fa-key" },
-  { id: "office", label: "Office / Commercial", icon: "fas fa-building" },
+  { id: "office", label: "Office / Commercial", icon: "fas fa-briefcase" },
 ];
 
 const frequencies = [
@@ -25,7 +25,7 @@ const frequencies = [
 const propertyTypes = [
   { id: "flat", label: "Flat / Apartment" },
   { id: "house", label: "House" },
-  { id: "estate", label: "Estate / Mansion" },
+  { id: "commercial", label: "Commercial / Shared Space" },
 ];
 ---
 
@@ -41,8 +41,8 @@ const propertyTypes = [
             <i class="fas fa-clock text-xs"></i>
             Takes less than 2 minutes
           </div>
-          <h1 class="font-serif text-3xl md:text-5xl text-navy font-bold mb-4">Request Your Personalised Quote</h1>
-          <p class="text-ink/70 text-lg">Experience the gold standard of London home care.</p>
+          <h1 class="font-serif text-3xl md:text-5xl text-navy font-bold mb-4">Request a Scoped Cleaning Quote</h1>
+          <p class="text-ink/70 text-lg">Tell us the property type, deadline and cleaning scope so we can route your enquiry properly.</p>
         </div>
 
         <!-- Progress Bar -->
@@ -154,13 +154,13 @@ const propertyTypes = [
                 </div>
 
                 <div>
-                  <label for="details" class="block text-sm font-medium text-navy mb-2 uppercase tracking-wider">Any specific requirements or delicate surfaces?</label>
+                  <label for="details" class="block text-sm font-medium text-navy mb-2 uppercase tracking-wider">Any specific requirements, access notes or deadlines?</label>
                   <textarea 
                     id="details" 
                     name="details" 
                     rows="4" 
                     class="w-full rounded-lg px-4 py-3 bg-mist border border-gold/20 text-navy focus:border-gold outline-none transition-all resize-none"
-                    placeholder="E.g. marble flooring, silk wallpapers, pets in home, etc."
+                    placeholder="E.g. key collection, tenant checkout, office opening hours, pets in home, parking, deadline."
                   ></textarea>
                 </div>
               </div>
@@ -204,7 +204,7 @@ const propertyTypes = [
               </div>
               <h2 class="font-serif text-3xl md:text-4xl text-navy font-bold mb-4">Quote Request Sent</h2>
               <p class="text-ink/70 text-lg mb-10 leading-relaxed">
-                Thank you for choosing High Quality Clean. One of our specialists will review your requirements and provide a bespoke proposal within 24 hours.
+                Thank you for choosing High Quality Clean. We will review your requirements and respond with the next practical step.
               </p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:02088703925" class="bg-navy text-white px-8 py-4 rounded-lg font-semibold hover:bg-navy/90 transition-all flex items-center justify-center gap-2">
@@ -244,7 +244,7 @@ const propertyTypes = [
                 id="submit-btn" 
                 class="hidden bg-gold text-navy px-10 py-4 rounded-lg font-bold shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all items-center gap-2"
               >
-                Get My Bespoke Quote
+                Get My Cleaning Quote
               </button>
             </div>
 
@@ -257,25 +257,25 @@ const propertyTypes = [
             <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
               <i class="fas fa-shield-alt text-gold"></i>
             </div>
-            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Fully Insured</p>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Scope Confirmed</p>
           </div>
           <div class="text-center group">
             <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
               <i class="fas fa-id-card text-gold"></i>
             </div>
-            <p class="text-xs font-bold text-navy uppercase tracking-tighter">DBS Checked</p>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Access Notes</p>
           </div>
           <div class="text-center group">
             <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
               <i class="fas fa-star text-gold"></i>
             </div>
-            <p class="text-xs font-bold text-navy uppercase tracking-tighter">5-Star Rated</p>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Clear Follow-Up</p>
           </div>
           <div class="text-center group">
             <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm border border-gold/10 group-hover:border-gold/30 transition-all">
               <i class="fas fa-leaf text-gold"></i>
             </div>
-            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Eco-Friendly</p>
+            <p class="text-xs font-bold text-navy uppercase tracking-tighter">Practical Scope</p>
           </div>
         </div>
       </div>
@@ -416,7 +416,7 @@ const propertyTypes = [
         console.error('Error submitting quote:', error);
         alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Get My Bespoke Quote';
+        submitBtn.innerHTML = 'Get My Cleaning Quote';
       }
     });
   </script>

@@ -26,8 +26,8 @@ const { areaInfo, areaKey } = Astro.props;
 const typedAreaData = areaData as Record<string, any>;
 
 // SEO Title & Description Overrides — prefer rich per-area data when present
-const pageTitle = areaInfo.pageTitle || `Luxury Cleaners ${areaInfo.name} | High Quality Clean Surrey`;
-const metaDescription = areaInfo.metaDescription || `Premium home, deep, and end-of-tenancy cleaning in ${areaInfo.name} (${areaInfo.postcodes.join(', ')}). DBS-checked, insured cleaners. Request a quote today.`;
+const pageTitle = areaInfo.pageTitle || `Cleaners ${areaInfo.name} | High Quality Clean Surrey`;
+const metaDescription = areaInfo.metaDescription || `Home, deep and end-of-tenancy cleaning in ${areaInfo.name} (${areaInfo.postcodes.join(', ')}), with clear scopes and practical access planning. Request a quote today.`;
 
 // JSON-LD Schema
 const schema = {
@@ -83,10 +83,6 @@ const nearbyAreas = Object.entries(typedAreaData)
     slug: key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase()
   }));
 
-// Helper for stars
-function repeat(count: number) {
-  return Array.from({ length: count }, (_, i) => i);
-}
 ---
 
 <Layout title={pageTitle} description={metaDescription}>
@@ -111,7 +107,7 @@ function repeat(count: number) {
             Domestic Cleaners in {areaInfo.name}
           </h1>
           <p class="text-xl text-white/90 leading-relaxed mb-8">
-            Looking for reliable cleaners near {areaInfo.name}? We provide 5-star weekly housekeeping and deep cleaning services. Fully vetted, insured, and trusted by local residents.
+            Looking for reliable cleaners near {areaInfo.name}? We provide weekly housekeeping and deep cleaning services with clear scopes, practical access planning and careful presentation.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4">
@@ -165,16 +161,16 @@ function repeat(count: number) {
         <div class="text-center mb-16">
           <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Why choose us over a standard agency?</h2>
           <p class="text-ink/70 max-w-2xl mx-auto">
-            Most agencies just send a cleaner. We provide a managed service that guarantees quality, reliability, and peace of mind for {areaInfo.name} residents.
+            Most cleaning enquiries need more than a generic checklist. We agree the scope, access details and priorities before work starts for {areaInfo.name} residents.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-mist rounded-2xl p-8 border border-gold/20">
             <i class="fas fa-user-shield text-4xl text-gold mb-6"></i>
-            <h3 class="font-serif text-xl text-navy mb-3">Vetted & Insured</h3>
+            <h3 class="font-serif text-xl text-navy mb-3">Access Planned</h3>
             <p class="text-ink/70">
-              Every cleaner undergoes strict background checks, reference verification, and is fully insured. You can trust us with your keys and your home.
+              We discuss keys, parking, building contacts and timing before the clean so the team can arrive with the right context.
             </p>
           </div>
           <div class="bg-mist rounded-2xl p-8 border border-gold/20">
@@ -251,7 +247,7 @@ function repeat(count: number) {
           </ul>
           
           <div class="mt-8 pt-6 border-t border-gray-100">
-            <p class="text-sm text-center text-ink/60 mb-4">Rated 5/5 by local residents</p>
+            <p class="text-sm text-center text-ink/60 mb-4">Tell us what needs cleaning and when it needs to be ready.</p>
             <a href="#quote" class="block w-full py-3 bg-navy text-white text-center rounded-lg hover:bg-navy/90 transition">
               Get A Quote for {areaInfo.name}
             </a>
@@ -260,20 +256,14 @@ function repeat(count: number) {
       </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Local enquiry prompt -->
     <section class="py-20 bg-white">
       <div class="mx-auto max-w-7xl px-6">
-        <h2 class="font-serif text-3xl text-navy text-center mb-12">What {areaInfo.name} Residents Say</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          {areaInfo.testimonials && areaInfo.testimonials.map((t: any) => (
-            <div class="p-6 bg-mist rounded-xl">
-              <div class="flex text-gold mb-3">
-                {repeat(t.rating).map(() => <i class="fas fa-star"></i>)}
-              </div>
-              <p class="text-ink/80 italic mb-4">"{t.quote}"</p>
-              <p class="text-sm font-bold text-navy">{t.author}</p>
-            </div>
-          ))}
+        <h2 class="font-serif text-3xl text-navy text-center mb-12">Planning a Clean in {areaInfo.name}?</h2>
+        <div class="mx-auto max-w-3xl rounded-xl bg-mist p-6 text-center">
+          <p class="text-ink/80">
+            Share the property type, postcode, timing and access notes so we can confirm whether the scope is practical.
+          </p>
         </div>
       </div>
     </section>
@@ -283,7 +273,7 @@ function repeat(count: number) {
       <div class="mx-auto max-w-3xl px-6 text-center">
         <h2 class="font-serif text-3xl md:text-4xl text-gold mb-6">Book Your Cleaner in {areaInfo.name}</h2>
         <p class="text-white/80 mb-8">
-          Ready to experience a premium clean? Contact our local team today.
+          Ready to discuss a practical cleaning scope? Contact our local team today.
         </p>
         <a href="/contact/" class="inline-block bg-gold text-navy font-bold py-4 px-12 rounded-full hover:bg-white transition text-lg">
           Get A Quick Quote

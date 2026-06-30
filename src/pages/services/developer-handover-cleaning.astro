@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PriorityServicePage from '../../components/PriorityServicePage.astro';
+import { servicePageBySlug } from '../../data/servicePages';
+
+const page = {
+  ...servicePageBySlug['developer-handover-cleaning'],
+  h1: 'Developer handover cleaning in London for new-builds, snagging and final presentation',
+  seoTitle: 'Developer Handover Cleaning London | New-Build & Snagging Cleans | HQC',
+  metaDescription:
+    'Developer handover cleaning in London for new-build homes, communal areas and managed properties before walkthroughs, sign-off or occupation.',
+};
+---
+
+<Layout title={page.seoTitle} description={page.metaDescription}>
+  <Header />
+  <PriorityServicePage
+    page={page}
+    eyebrow="Property handover cleaning"
+    intro="High Quality Clean provides developer handover cleaning for London properties after build, refurbishment or snagging work, helping finished spaces look ready for walkthroughs, sign-off, marketing, occupation or management handover."
+    inclusions={[
+      'Fine dust removal from reachable surfaces, ledges, frames, skirting, switches and fittings',
+      'Post-build and snagging clean support for finished homes, apartments and managed-property areas',
+      'Kitchen, bathroom and utility-area cleaning after installation, remedial or finishing works',
+      'Communal and new-build area cleaning for entrances, corridors, stairs, lifts and shared spaces where scoped',
+      'Presentation cleaning before walkthroughs, photography, sign-off, occupation or management handover',
+      'Access planning around site contacts, property managers, contractors, key collection or phased works',
+    ]}
+    audiences={[
+      'Developers preparing completed homes, apartments or shared areas for handover',
+      'Contractors and project teams arranging a final clean after build, remedial or snagging works',
+      'Property managers taking over new-build, refurbished or recently completed spaces',
+      'Agents and managed-property teams coordinating viewings, photography or occupation after works',
+    ]}
+    process={[
+      'We confirm the property stage, works completed, handover timing and any areas still affected by snagging.',
+      'We agree the priority rooms, communal areas, surfaces, access notes and any practical exclusions.',
+      'The clean focuses on fine dust, visible presentation and the spaces stakeholders will inspect first.',
+      'If works are phased or trades are returning, we can quote around the practical clean timing and return needs.',
+    ]}
+    links={[
+      { label: 'Property cleaning support', href: '/property-and-facilities-cleaning/' },
+      { label: 'Post-renovation cleaning', href: '/services/post-renovation-cleaning/' },
+      { label: 'Estate and lettings agents cleaning', href: '/services/estate-and-lettings-agents-cleaning/' },
+      { label: 'Void and post-tenancy cleaning', href: '/services/void-and-post-tenancy-cleaning/' },
+      { label: 'Block management cleaning', href: '/services/block-management-cleaning/' },
+      { label: 'Commercial cleaning', href: '/commercial-and-wellness-cleaning/' },
+    ]}
+    faqs={[
+      {
+        question: 'Is this different from post-renovation cleaning?',
+        answer:
+          'There is overlap. Developer handover cleaning is framed around the project handover moment, including new-build, snagging, communal-area and contractor-led contexts.',
+      },
+      {
+        question: 'Can communal areas be included?',
+        answer:
+          'Yes, entrances, corridors, stairs, lifts and other shared spaces can be included when they are part of the agreed handover scope.',
+      },
+    ]}
+  />
+</Layout>

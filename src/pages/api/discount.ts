@@ -1,5 +1,11 @@
 import type { APIRoute } from 'astro';
 
+function normalizeDiscountType(value: unknown): unknown {
+  if (value === 'home') return 'Residential';
+  if (value === 'commercial') return 'Commercial';
+  return value;
+}
+
 export const POST: APIRoute = async ({ request, locals }) => {
   const env = (locals as { runtime?: { env?: Record<string, string> } }).runtime?.env;
   const webhookUrl = env?.DISCOUNT_FORM_WEBHOOK;
@@ -11,6 +17,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
   }
   try {
     const body = await request.json();
+    if (body && typeof body === 'object' && 'type' in body) {
+      body.type = normalizeDiscountType(body.type);
+    }
     const res = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
