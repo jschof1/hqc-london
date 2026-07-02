@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import LandingHeroSection from '../components/LandingHeroSection.astro';
-import TestimonialsSection from '../components/TestimonialsSection.astro';
 import SpecializedServicesSection from '../components/SpecializedServicesSection.astro';
 import DifferentiationSection from '../components/DifferentiationSection.astro';
 import AreasServed from '../components/AreasServed.astro';
@@ -10,88 +9,89 @@ import ProcessSteps from '../components/ProcessSteps.astro';
 import TransformationGallery from '../components/TransformationGallery.astro';
 import IntroRateBanner from '../components/IntroRateBanner.astro';
 import BuyerRoutes from '../components/BuyerRoutes.astro';
+import ServiceTierComparison from '../components/ServiceTierComparison.astro';
 ---
 
 <Layout
-  title="Cleaning Services London | Homes, Property Teams & Offices | HQC"
-  description="High Quality Clean provides high-standard cleaning for London homes, managed properties, offices and client-facing spaces with clear scopes, careful handling and consistent standards."
+  title="Premium Cleaning Services London | Homes & Commercial Spaces | HQC"
+  description="High Quality Clean provides premium, carefully scoped cleaning for London homes, commercial spaces and managed properties, with personalised quotes and calm property-care standards."
 >
   <Header />
-  
+
   <main class="page-transition pt-16 relative">
-	<!-- 1. Hero (Above the Fold) -->
-	<div class="hero-transition">
-		<LandingHeroSection />
-	</div>
-	<IntroRateBanner />
-	<BuyerRoutes />
+    <LandingHeroSection />
 
-	<!-- 2. Social Proof Strip -->
-	<TestimonialsSection />
-	<!-- 7. Process Transparency -->
-	<ProcessSteps />
-	<!-- 4. Blue Ocean Differentiation -->
-	<DifferentiationSection />
-	
-	<!-- 3b. Specialized Services -->
-	<SpecializedServicesSection />
-	
-	<!-- 5. Areas We Serve -->
-	<AreasServed />
-	<!-- 9. Recent Work / Case Studies -->
-	<TransformationGallery />
+    <section class="border-y border-stone bg-white py-6" aria-label="HQC assurance strip">
+      <div class="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
+        {[
+          ['London property care', 'Homes, studios, offices and managed spaces'],
+          ['Quote before work begins', 'Scope, access and finish confirmed first'],
+          ['Real proof below', 'Before-after and local in-property imagery'],
+          ['Built for consistency', 'Recurring fit, handover notes and clear standards'],
+        ].map(([label, detail]) => (
+          <div class="rounded-2xl border border-stone bg-porcelain px-4 py-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brass">{label}</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink/70">{detail}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
-		<!-- 10. Final CTA -->
-	<section
-	  id="quote"
-	  class="relative py-20 md:py-24 text-white parallax"
-	  style="background-image: url('https://images.unsplash.com/photo-1622015663319-e97e697503ee?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center; background-attachment: fixed;"
-	>
-	  <div
-		class="absolute inset-0 bg-navy/70 backdrop-blur-sm"
-		aria-hidden="true"
-	  ></div>
-	  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<div class="text-center">
-		  <h2 class="font-serif text-3xl md:text-5xl font-bold text-gold mb-6">
-			Introductory cleaning offer for recurring clients
-		  </h2>
-		  <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-			Ask about the 30% introductory rate when you enquire for a recurring home, property or commercial cleaning scope. HQC can confirm eligibility after the quote conversation.
-		  </p>
-		</div>
+    <BuyerRoutes />
 
-		<div class="text-center">
-		  <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-			<a
-			  href="/discount/?type=home"
-			  class="px-10 py-5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-3 border-2 font-bold text-lg no-underline"
-			  style="background-color: var(--color-gold); border-color: white; color: var(--color-navy);"
-			>
-			  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-				<polyline points="9 22 9 12 15 12 15 22"/>
-			  </svg>
-			  Enquire About a Home Cleaning Offer
-			</a>
-			<a
-			  href="/discount/?type=commercial"
-			  class="px-10 py-5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-3 border-2 font-bold text-lg no-underline"
-			  style="background-color: white; border-color: var(--color-gold); color: var(--color-navy);"
-			>
-			  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				<rect x="3" y="2" width="18" height="20" rx="2" ry="2"/>
-				<path d="M9 22V12h6v10"/>
-				<path d="M9 6h.01M12 6h.01M15 6h.01M9 10h.01M12 10h.01M15 10h.01"/>
-			  </svg>
-			  Enquire About a Commercial Cleaning Offer
-			</a>
-		  </div>
-		  <p class="text-white/60 text-sm">
-			Limited availability &bull; New recurring clients only &bull; 12-month loyalty rate available &bull; No card needed to enquire &bull; Offer confirmed after enquiry
-		  </p>
-		</div>
-	  </div>
-	</section>
+    <ServiceTierComparison
+      sectionId="service-tiers"
+      eyebrow="Residential tier preview"
+      title="Home cleaning tiers, all quoted around the real property"
+      subtitle="Essentials Clean™, Signature Clean™ and WellClean™ Premium give home clients a clearer starting point without duplicating scope copy across the site."
+      showComparison={false}
+      backgroundClass="bg-white"
+    />
+
+    <IntroRateBanner />
+
+    <ProcessSteps />
+
+    <TransformationGallery />
+
+    <DifferentiationSection />
+
+    <SpecializedServicesSection />
+
+    <AreasServed />
+
+    <section
+      id="personalised-quote"
+      class="relative overflow-hidden py-20 text-white md:py-24"
+      style="background-image: url('/images/instock/IMG-20250812-WA0018.jpg'); background-size: cover; background-position: center;"
+    >
+      <div class="absolute inset-0 bg-night/78" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Request your personalised quote</p>
+        <h2 class="mt-4 font-serif text-3xl font-semibold text-white md:text-5xl">
+          No standard homes. No standard packages. Start with the clean that fits yours.
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/82">
+          Tell HQC about the property, route, access, desired finish and any specialist requirements. The quote conversation confirms the right tier or support route before work begins.
+        </p>
+        <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a
+            href="/quote/"
+            class="inline-flex items-center justify-center rounded-full bg-brass px-8 py-4 font-semibold text-night no-underline transition duration-300 hover:bg-brass/90 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2 focus-visible:ring-offset-night"
+          >
+            Request Your Personalised Quote
+          </a>
+          <a
+            href="/contact/"
+            class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-8 py-4 font-semibold text-white no-underline transition duration-300 hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-night"
+          >
+            Speak to HQC first
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-white/68">
+          Introductory recurring-client rate may be discussed after scope confirmation. <a href="#offer" class="text-brass underline underline-offset-4 hover:text-white">See offer note</a>.
+        </p>
+      </div>
+    </section>
   </main>
 </Layout>

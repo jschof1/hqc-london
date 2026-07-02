@@ -1,6 +1,5 @@
 ---
 import type { Props, Testimonial } from "./TestimonialsSection.types";
-import { fetchGoogleTestimonials } from "../lib/googleReviews";
 
 const {
   headerText = "Trusted by residents of Mayfair, Belgravia & Kensington",
@@ -58,10 +57,7 @@ const fallbackTestimonials: Testimonial[] = [
   }
 ];
 
-const testimonials =
-  propTestimonials?.length
-    ? propTestimonials
-    : await fetchGoogleTestimonials({ fallback: fallbackTestimonials, pages: 1, limit: 50 });
+const testimonials = propTestimonials?.length ? propTestimonials : fallbackTestimonials;
 
 const normalizeWhitespace = (text: string) =>
   text.replace(/\s+/g, " ").trim();

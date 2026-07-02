@@ -2,807 +2,159 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
+import FounderStory from '../components/FounderStory.astro';
 import TransformationGallery from '../components/TransformationGallery.astro';
-import IntroRateBanner from "../components/IntroRateBanner.astro";
-import CTABanner from '../components/CTABanner.astro';
-import ProcessStep from '../components/ProcessStep.astro';
 import FAQ from '../components/FAQ.astro';
-const WhyUsBlocks = [
-  {
-    step: 1,
-    title: "Wellness Cleaning Protocols",
-    description:
-      "We screen every product for skin-sensitivity, indoor air quality, and surface compatibility. Methods respect stone, brass, and specialty finishes while delivering pristine results with minimum VOC impact.",
-    bulletPoints: [
-      "Finish-safe chemistry and tools",
-      "HEPA filtration for allergen control",
-      "Evidence-based disinfection on high-touch points",
-      "Low-VOC, fragrance-controlled options",
-      "Microfibre colour-coding to prevent cross-contamination",
-      "pH-appropriate routines for stone, metal, wood",
-      "Ventilation and dwell-time standards documented"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&h=600&fit=crop&auto=format&q=80",
-    imageAlt:
-      "Professional cleaning supplies and eco-friendly products arranged neatly showcasing wellness-grade cleaning protocols",
-    testimonial:
-      "No irritation, no harsh odours—just a home that feels noticeably clearer.",
-    testimonialAuthor: "Private Client, Marylebone",
-    timeframeIcon: "fas fa-clock",
-    timeframeText: "Weekly • Fortnightly • Monthly (60–150 min typical slot)",
-    isTextOnRight: false,
-    primaryButton: { text: "Book a consultation", href: "/quote/" },
-    secondaryButton: {
-      text: "View our process",
-      href: "/process/",
-      icon: "fas fa-arrow-right"
-    },
-    bottomNote: {
-      icon: "fas fa-shield-check",
-      text: "Finish-safe methods • Non-toxic options • Full MSDS on request"
-    }
-  },
-  {
-    step: 2,
-    title: "Concierge-Level Care",
-    description:
-      "Discreet key-holding, seamless scheduling, and proactive communication. We adapt to your rhythms and protect your time—quiet presence, precise timing, immaculate handover.",
-    bulletPoints: [
-      "Dedicated point of contact",
-      "Quiet, respectful on-site etiquette",
-      "Photo handover and aftercare notes",
-      "Calendar sync (Google/Apple/Outlook)",
-      "Unbranded uniforms/vehicles upon request",
-      "Clear escalation paths for urgent requests"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop&auto=format&q=80",
-    imageAlt:
-      "Professional cleaning staff member in uniform providing discreet, concierge-level service in an elegant home",
-    testimonial:
-      "Effortless. Keys are managed securely and every visit is perfectly timed.",
-    testimonialAuthor: "Townhouse Owner, Chelsea",
-    timeframeIcon: "fas fa-key",
-    timeframeText: "Secure key-holding • Preferred-day rota • 24h rescheduling",
-    isTextOnRight: true,
-    primaryButton: { text: "Set up key-holding", href: "/contact/" },
-    secondaryButton: {
-      text: "How we communicate",
-      href: "/#quote",
-      icon: "fas fa-envelope"
-    },
-    bottomNote: {
-      icon: "fas fa-lock",
-      text: "Key custody logged • Access protocols audited • NDA available"
-    }
-  },
-  {
-    step: 3,
-    title: "Technical Consulting",
-    description:
-      "From marble etching to protective finishes, we advise on the safest approach and maintenance cadence for your materials—including recovery plans after spills or contractor damage.",
-    bulletPoints: [
-      "Stone, metal, and wood care guidance",
-      "Product compatibility checks",
-      "Custom maintenance plans",
-      "Stain ID + spot-treat playbooks",
-      "Sealant and finish recommendations",
-      "Contractor coordination (post-renovation)"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=800&h=600&fit=crop&auto=format&q=80",
-    imageAlt:
-      "Close-up of marble surface being carefully cleaned with specialised tools showcasing technical expertise",
-    testimonial:
-      "Their guidance saved our marble island from further etching—and it looks new again.",
-    testimonialAuthor: "Penthouse Resident, Mayfair",
-    timeframeIcon: "fas fa-flask",
-    timeframeText: "Initial assessment 30–45 min (on-site or virtual)",
-    isTextOnRight: false,
-    primaryButton: { text: "Request an assessment", href: "/contact/" },
-    secondaryButton: {
-      text: "Material care guides",
-      href: "/services/deep-cleaning/",
-      icon: "fas fa-book-open"
-    },
-    bottomNote: {
-      icon: "fas fa-wand-magic-sparkles",
-      text: "Vendor-agnostic product advice • Finish-safe recovery methods"
-    }
-  },
-  {
-    step: 4,
-    title: "Emotional Outcomes",
-    description:
-      "Clients describe a sense of calm and control—spaces that feel lighter, quieter, and ready for living. We make the visual noise disappear so your home works for your day.",
-    bulletPoints: [
-      "Visual clarity and balance",
-      "Subtle fragrance options (or fragrance-free)",
-      "Less effort, more ease at home",
-      "Predictable rhythms, fewer decisions",
-      "Reset-ready before guests or travel"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop&auto=format&q=80",
-    imageAlt:
-      "Serene, perfectly cleaned living space with natural light creating a calm, peaceful atmosphere",
-    testimonial:
-      "It’s the first time our home has felt this calm. Everything breathes.",
-    testimonialAuthor: "Family Home, Notting Hill",
-    timeframeIcon: "fas fa-star",
-    timeframeText: "Noticeable from the first clean",
-    isTextOnRight: true,
-    primaryButton: { text: "Get My Quote", href: "/#quote" },
-    secondaryButton: {
-      text: "Message on WhatsApp",
-      href: "/#quote",
-      icon: "fas fa-envelope"
-    },
-    bottomNote: {
-      icon: "fas fa-heart",
-      text: "Hypoallergenic and fragrance-free options available"
-    }
-  },
-]
 
+const standardCards = [
+  {
+    icon: 'fas fa-clipboard-check',
+    title: 'Scoped before work starts',
+    text: 'We ask about property type, access, materials, priorities and the finish you want before recommending a clean.'
+  },
+  {
+    icon: 'fas fa-flask',
+    title: 'Technical product thinking',
+    text: 'Pedro\'s technical background shapes careful product choice, surface awareness and practical routines for homes and wellness spaces.'
+  },
+  {
+    icon: 'fas fa-key',
+    title: 'Access-aware service',
+    text: 'Keys, building contacts, alarms, pets and timings are treated as part of the service, not afterthoughts.'
+  },
+  {
+    icon: 'fas fa-camera',
+    title: 'Clear handover',
+    text: 'For suitable scopes, we can share practical handover notes or photos so remote owners and busy clients know what has been completed.'
+  }
+];
+
+const conciergeExamples = [
+  {
+    title: 'Archie and home care while travelling',
+    label: 'Pet care support, supplied story copy',
+    text: 'A Wandsworth client needed more than a clean while away. The supplied story describes feeding, attention for Archie and a simple home-security check, framed as concierge support rather than a standard cleaning promise.'
+  },
+  {
+    title: 'Belgravia repair coordination',
+    label: 'Property support, supplied story copy',
+    text: 'When a maintenance issue affected a window, the supplied story describes inspection coordination, contractor liaison, security awareness and reporting. Publish exact details only with client approval.'
+  },
+  {
+    title: 'Wellness-space consultation',
+    label: 'Technical advisory, approval-gated',
+    text: 'HQC can discuss wellness-space operational issues where Pedro\'s technical background is relevant. The specific LowLu consultation story should stay approval-gated before being presented as a named client claim.'
+  }
+];
 ---
 
-<Layout 
-  title="Why Choose High Quality Clean | Wellness-Grade London Cleaning"
-  description="Wellness-grade protocols, concierge-level care and careful cleaning teams for London's most discerning homes. See why clients trust High Quality Clean."
+<Layout
+  title="Why Choose High Quality Clean | Founder-Led London Cleaning"
+  description="Founder-led London cleaning shaped by Pedro's technical background, careful scoping, concierge care and proof-safe client stories."
 >
   <Header />
-  
+
   <main class="page-transition pt-16">
-    <!-- 1. Hero Section -->
-    <HeroSection 
-      title="Beyond Clean. Total Calm."
-      subtitle="Wellness-grade protocols, concierge-level care, and outcomes you feel—every visit, every room."
-      imageSrc="/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png"
-      imageAlt="Luxurious modern living room with pristine cleaning showcasing elegant furniture and spotless surfaces"
+    <HeroSection
+      title="Why HQC feels different"
+      subtitle="We do not just clean. We restore calm, confidence and control through founder-led standards, careful scoping and a service style built around trust."
+      imageSrc="/images/instock/IMG-20250812-WA0018.jpg"
+      imageAlt="Premium London apartment interior prepared for calm living"
       primaryCta={{
-        text: "Get My Quote",
-        href: "/#quote"
+        text: 'Request Your Personalised Quote',
+        href: '/quote/'
       }}
       secondaryCta={{
-        text: "Message on WhatsApp", 
-        href: "https://wa.me/442088703925",
-        icon: "fab fa-whatsapp",
-        target: "_blank",
-        rel: "noopener nofollow"
+        text: 'View Case Studies',
+        href: '/case-studies/',
+        icon: 'fas fa-book-open'
       }}
       trustBadges={[
-        { icon: "fas fa-shield-alt", text: "Scoped Cleaning" },
-        { icon: "fas fa-id-card", text: "100% carefully briefed" },
-        { icon: "fas fa-star", text: "Clear Follow-Up" }
+        { icon: 'fas fa-list-check', text: 'Scope-led cleaning' },
+        { icon: 'fas fa-user-tie', text: 'Founder-led standards' },
+        { icon: 'fas fa-heart', text: 'Peace, dignity, trust' }
       ]}
-      backgroundClass="bg-navy relative overflow-hidden"
+      backgroundClass="bg-night"
     />
 
-    <!-- Intro Rate Banner -->
-    <IntroRateBanner />
+    <FounderStory />
 
-    <!-- 2. Proof Bar -->
-    <section class="bg-gray-200 border-2 border-gold">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div
-            class="rounded-xl bg-navy border border-gold/30 p-6 flex items-center gap-4 shadow-soft-sm"
-          >
-            <i class="fas fa-gem text-gold text-2xl"></i>
-            <div>
-              <div class="text-white font-bold text-xl">Repeat</div>
-              <div class="text-sm text-white/80">client work</div>
-            </div>
-          </div>
-          <div
-            class="rounded-xl bg-navy border border-gold/30 p-6 flex items-center gap-4 shadow-soft-sm"
-          >
-            <i class="fas fa-shield-alt text-gold text-2xl"></i>
-            <div>
-              <div class="text-white font-bold text-xl">Scope</div>
-              <div class="text-sm text-white/80">scope planning</div>
-            </div>
-          </div>
-          <div
-            class="rounded-xl bg-navy border border-gold/30 p-6 flex items-center gap-4 shadow-soft-sm"
-          >
-            <i class="fas fa-clock text-gold text-2xl"></i>
-            <div>
-              <div class="text-white font-bold text-xl">Clear</div>
-              <div class="text-sm text-white/80">response steps</div>
-            </div>
-          </div>
-          <div
-            class="rounded-xl bg-navy border border-gold/30 p-6 flex items-center gap-4 shadow-soft-sm"
-          >
-            <i class="fas fa-user-check text-gold text-2xl"></i>
-            <div>
-              <div class="text-white font-bold text-xl">100%</div>
-              <div class="text-sm text-white/80">access-aware staff</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. Trusted by Leading Brands -->
-    <section class="py-24 md:py-32 bg-navy">
+    <section class="bg-white py-20 md:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">
-          Trusted by Leading Brands
-        </h2>
-        <p class="text-white/80 text-lg mb-12 max-w-2xl">
-          We're proud to serve some of London's most prestigious businesses and property agencies.
-        </p>
-  <div class="marquee group relative">
-    <div class="marquee__inner" aria-hidden="true">
-      <!-- TRACK 1 -->
-      <ul class="marquee__track">
-        <!-- ITEMS -->
-        <li class="marquee__item">
-          <a href="https://www.chestertons.co.uk" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/chestertons.webp" alt="Property teams" class="logo">
-            <h4 class="title">Property teams</h4>
-            <p class="copy">Property teams need cleaning scopes that support viewings, handovers and repeat standards.</p>
-          </a>
-        </li>
-
-        <li class="marquee__item">
-          <a href="https://www.lowlu.co" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/lowlu.webp" alt="Lowlu" class="logo">
-            <h4 class="title">Lowlu</h4>
-            <p class="copy">Boutique sauna company. Clean, calm, client-ready spaces.</p>
-          </a>
-        </li>
-
-        <li class="marquee__item">
-          <a href="https://youngguns.org" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/young-guns.webp" alt="Creative workplaces" class="logo">
-            <h4 class="title">Creative workplaces</h4>
-            <p class="copy">Creative workplaces need reliable cleaning around people, events and client-facing spaces.</p>
-          </a>
-        </li>
-
-        <li class="marquee__item">
-          <a href="https://www.knightfrank.co.uk" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/Property-Consultants.webp" alt="Property consultants" class="logo">
-            <h4 class="title">Property consultants</h4>
-            <p class="copy">Property consultants need spaces ready for clients, viewings and handover moments.</p>
-          </a>
-        </li>
-
-        <li class="marquee__item">
-          <a href="https://www.marshandparsons.co.uk" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/Estate-Agencies.webp" alt="Estate agencies" class="logo">
-            <h4 class="title">Estate agencies</h4>
-            <p class="copy">Estate agencies need practical cleaning support for managed properties.</p>
-          </a>
-        </li>
-
-        <li class="marquee__item">
-          <a href="https://sostrenegrene.com" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/Retail-Spaces.png" alt="Retail spaces" class="logo">
-            <h4 class="title">Retail spaces</h4>
-            <p class="copy">Retail spaces need presentable shared and customer-facing areas.</p>
-          </a>
-        </li>
-
-        <li class="marquee__item">
-          <a href="https://www.generateuk.co.uk" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/B2B-Workplaces.png" alt="B2B workplaces" class="logo">
-            <h4 class="title">B2B workplaces</h4>
-            <p class="copy">B2B workplaces need predictable cleaning with clear access notes.</p>
-          </a>
-        </li>
-
-        <li class="marquee__item">
-          <a href="https://www.londonluxproperty.com" target="_blank" rel="noopener" class="card">
-            <img src="/images/brand-logos/Lux.webp" alt="London Lux Property" class="logo">
-            <h4 class="title">London Lux Property</h4>
-            <p class="copy">Boutique PCL agency. Precision and polish.</p>
-          </a>
-        </li>
-      </ul>
-
-      <!-- TRACK 2 (duplicate for seamless loop) -->
-      <ul class="marquee__track" aria-hidden="true">
-        <!-- Duplicate the exact same items -->
-        <!-- You can literally copy the <li> blocks above or let a component render twice -->
-      </ul>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Tunables */
-  .marquee {
-    --speed: 28s;               /* overall cycle duration */
-    --gap: 2rem;                /* space between cards */
-    --fade: 80px;               /* edge fade width */
-    --card-w: 20rem;            /* 320px card width */
-    --card-p: 2rem;             /* card padding */
-  }
-
-  /* Container with edge fades via mask */
-  .marquee {
-    overflow: hidden;
-    mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      #000 var(--fade),
-      #000 calc(100% - var(--fade)),
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      #000 var(--fade),
-      #000 calc(100% - var(--fade)),
-      transparent 100%
-    );
-  }
-
-  .marquee__inner {
-    position: relative;
-  }
-
-  /* Track: two copies sliding left in lockstep */
-  .marquee__track {
-    display: flex;
-    align-items: stretch;
-    gap: var(--gap);
-    padding-block: .25rem;
-    will-change: transform;
-    animation: marquee var(--speed) linear infinite;
-  }
-
-  /* Second track starts immediately after the first */
-  .marquee__track + .marquee__track {
-    position: absolute;
-    inset: 0;
-    transform: translateX(100%);
-    animation-name: marquee-follow;
-    animation-duration: var(--speed);
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  /* Pause on hover/focus within */
-  .group:hover .marquee__track,
-  .group:focus-within .marquee__track {
-    animation-play-state: paused;
-  }
-
-  /* Items & cards */
-  .marquee__item {
-    flex: 0 0 auto;
-    width: var(--card-w);
-  }
-  .card {
-    display: block;
-    background: #fff;
-    border-radius: .875rem; /* ~14px */
-    padding: var(--card-p);
-    text-align: center;
-    border: 1px solid rgba(212, 175, 55, 0.25); /* gold/25 */
-    box-shadow: 0 6px 20px rgba(0,0,0,.08);
-    transition: box-shadow .2s ease, transform .2s ease;
-  }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
-  .logo { display:block; margin-inline:auto; height: 80px; width:auto; object-fit: contain; }
-  .title { font-family: ui-serif, Georgia, "Times New Roman", serif; font-size: 1.125rem; color: #0f1a2a; margin: .75rem 0  .5rem; }
-  .copy { font-size: .875rem; color: #4b5563; line-height: 1.5; }
-
-  /* Keyframes: classic marquee technique */
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
-  }
-  @keyframes marquee-follow {
-    from { transform: translateX(100%); }
-    to   { transform: translateX(0%); }
-  }
-
-  /* Responsiveness: slower on small screens, faster on desktop */
-  @media (min-width: 768px) {
-    .marquee { --speed: 72s; }
-  }
-  @media (min-width: 1280px) {
-    .marquee { --speed: 18s; }
-  }
-
-  /* Respect reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    .marquee__track { animation: none; }
-  }
-</style>
-<section class="py-14 md:py-18 bg-mist border-t-2 border-gold">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-28">
-{WhyUsBlocks.map((block) => (
-  <ProcessStep {...block} />
-))} 
-</div>
-</section>
-
-    <!-- 4. Comparative Snapshot -->
-    <section class="py-20 md:py-28 bg-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="font-serif text-3xl md:text-4xl text-navy ">
-            Essentials vs Others — At a Glance
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">The HQC Standard</p>
+          <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">
+            Practical care that still feels personal
           </h2>
-          <p class="mt-4 text-ink/70 text-base md:text-lg max-w-2xl mx-auto">
-            Clear comparison of our comprehensive service against typical cleaning firms.
+          <p class="mt-5 text-lg leading-relaxed text-ink/74">
+            The point is not to publish the loudest claims. It is to make the service feel calm, reliable and obvious from the first enquiry to the final handover.
           </p>
         </div>
 
-        <!-- Mobile: Card-based layout -->
-        <div class="md:hidden space-y-4">
-          <!-- Feature 1 -->
-          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
-            <div class="p-4 border-b border-gold/30">
-              <h3 class="text-white font-semibold text-base">Access Planning</h3>
-            </div>
-            <div class="grid grid-cols-2 divide-x divide-gold/30">
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
-                <i class="fas fa-check text-gold text-2xl"></i>
-              </div>
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
-                <i class="fas fa-times text-red-400 text-2xl"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
-            <div class="p-4 border-b border-gold/30">
-              <h3 class="text-white font-semibold text-base">Access and Scope Planning</h3>
-            </div>
-            <div class="grid grid-cols-2 divide-x divide-gold/30">
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
-                <i class="fas fa-check text-gold text-2xl"></i>
-              </div>
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
-                <i class="fas fa-times text-red-400 text-2xl"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
-            <div class="p-4 border-b border-gold/30">
-              <h3 class="text-white font-semibold text-base">Surface-Safe Product Selection</h3>
-            </div>
-            <div class="grid grid-cols-2 divide-x divide-gold/30">
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
-                <i class="fas fa-check text-gold text-2xl"></i>
-              </div>
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
-                <i class="fas fa-times text-red-400 text-2xl"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature 4 -->
-          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
-            <div class="p-4 border-b border-gold/30">
-              <h3 class="text-white font-semibold text-base">Key Holding Service</h3>
-            </div>
-            <div class="grid grid-cols-2 divide-x divide-gold/30">
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
-                <i class="fas fa-check text-gold text-2xl"></i>
-              </div>
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
-                <div class="text-white/60 text-sm">Extra charge</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature 5 -->
-          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
-            <div class="p-4 border-b border-gold/30">
-              <h3 class="text-white font-semibold text-base">Photo Handover Reports</h3>
-            </div>
-            <div class="grid grid-cols-2 divide-x divide-gold/30">
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
-                <i class="fas fa-check text-gold text-2xl"></i>
-              </div>
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
-                <i class="fas fa-times text-red-400 text-2xl"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature 6 -->
-          <div class="rounded-xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
-            <div class="p-4 border-b border-gold/30">
-              <h3 class="text-white font-semibold text-base">24/7 Support Line</h3>
-            </div>
-            <div class="grid grid-cols-2 divide-x divide-gold/30">
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">HQC Essentials</div>
-                <i class="fas fa-check text-gold text-2xl"></i>
-              </div>
-              <div class="p-4 text-center">
-                <div class="text-white/70 text-xs mb-2">Typical Firm</div>
-                <div class="text-white/60 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Desktop: Table layout -->
-        <div class="hidden md:block rounded-2xl border border-gold/50 overflow-hidden bg-navy shadow-soft">
-          <div class="overflow-x-auto">
-            <div class="min-w-full">
-              <!-- Header Row -->
-              <div class="grid grid-cols-3 bg-navy border-b border-gold/50">
-                <div class="p-6 font-semibold text-white text-lg">
-                  Service Features
-                </div>
-                <div class="p-6 text-center text-white font-semibold">HQC Essentials</div>
-                <div class="p-6 text-center text-white font-semibold">Typical Firm</div>
-              </div>
-
-              <!-- Comparison Rows -->
-              <div class="grid grid-cols-3 border-b border-gold/30">
-                <div class="p-4 text-white/90">Access Planning</div>
-                <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
-                <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
-              </div>
-
-              <div class="grid grid-cols-3 border-b border-gold/30 bg-navy/50">
-                <div class="p-4 text-white/90">Access and Scope Planning</div>
-                <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
-                <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
-              </div>
-
-              <div class="grid grid-cols-3 border-b border-gold/30">
-                <div class="p-4 text-white/90">Surface-Safe Product Selection</div>
-                <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
-                <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
-              </div>
-
-              <div class="grid grid-cols-3 border-b border-gold/30 bg-navy/50">
-                <div class="p-4 text-white/90">Key Holding Service</div>
-                <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
-                <div class="p-4 text-center text-white/60 text-sm">Extra charge</div>
-              </div>
-
-              <div class="grid grid-cols-3 border-b border-gold/30">
-                <div class="p-4 text-white/90">Photo Handover Reports</div>
-                <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
-                <div class="p-4 text-center"><i class="fas fa-times text-red-400 text-xl"></i></div>
-              </div>
-
-              <div class="grid grid-cols-3 bg-navy/50">
-                <div class="p-4 text-white/90">24/7 Support Line</div>
-                <div class="p-4 text-center"><i class="fas fa-check text-gold text-xl"></i></div>
-                <div class="p-4 text-center text-white/60 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 text-sm text-ink/60 text-center px-4">
-          <i class="fas fa-check text-gold mr-2"></i>Gold checkmarks indicate standard inclusions;
-          <i class="fas fa-times text-red-400 mx-2"></i>red crosses denote exclusions or additional charges with typical firms.
+        <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {standardCards.map((card) => (
+            <article class="rounded-[1.5rem] border border-stone bg-porcelain p-6 shadow-soft-sm">
+              <i class={`${card.icon} text-2xl text-brass`} aria-hidden="true"></i>
+              <h3 class="mt-5 font-serif text-2xl font-semibold text-night">{card.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/70">{card.text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
 
-    <!-- 5. Photo Story Strip -->
-    <TransformationGallery />
+    <TransformationGallery
+      title="Proof that stays grounded"
+      subtitle="Real local images and before-after details are used carefully, without implying every illustrative property image is a completed HQC case study."
+      ctaText="See case studies"
+      ctaLink="/case-studies/"
+    />
 
-
-    <!-- 6. Founder Vision -->
-    <section class="py-20 md:py-28 bg-white">
-      <div
-        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center"
-      >
-        <div class="flex justify-center">
-          <div class="relative">
-            <img
-              src="/images/pedro.jpg"
-              alt="Pedro, founder of High Quality Clean, professional portrait in business attire"
-              class="w-80 h-96 object-cover rounded-2xl border border-gold/30 shadow-soft"
-              loading="lazy"
-            />
-            <div class="absolute -bottom-4 -right-4 bg-gold rounded-full p-3">
-              <i class="fas fa-award text-navy text-xl"></i>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="flex items-center gap-3 mb-6">
-            <i class="fas fa-user-tie text-gold text-2xl"></i>
-            <h3 class="font-serif text-3xl md:text-4xl text-navy font-semibold">
-              Pedro's Vision
-            </h3>
-          </div>
-          <p class="text-ink/80 text-lg leading-relaxed mb-6">
-            After a decade in luxury hospitality, Pedro founded HQC to merge
-            wellness science with concierge etiquette. His engineering background and quality certifications ensure every service meets the highest standards.
-          </p>
-
-          <!-- Professional Qualifications -->
-          <div class="bg-white rounded-xl p-6 border border-gold/20 mb-8">
-            <h4 class="font-semibold text-navy mb-4 flex items-center gap-2">
-              <i class="fas fa-graduation-cap text-gold"></i>
-              Professional Accreditations & Certifications
-            </h4>
-            <div class="grid md:grid-cols-2 gap-3 text-sm text-ink/70">
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Bachelor's Degree - Chemical Engineering
-              </div>
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Masters in Digital Technology Solutions
-              </div>
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Quality process and service-scope training
-              </div>
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Certified Quality Auditor (CQA)
-              </div>
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Chartered Chemical Engineering (ICHemE)
-              </div>
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Chartered Quality Professional (CQI)
-              </div>
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Prochem Certified - Professional Upholstery Care (#2025/036)
-              </div>
-              <div class="flex items-center">
-                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                Prochem Certified - Carpet & Rug Maintenance (#2025/132)
-              </div>
-            </div>
-          </div>
-
-          <ul class="space-y-4 text-ink/80 mb-8">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-gold mt-1 flex-shrink-0"></i>
-              <span>Engineering precision meets wellness expertise</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-gold mt-1 flex-shrink-0"></i>
-              <span>Surface‑safe methods, long‑term care</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-gold mt-1 flex-shrink-0"></i>
-              <span>Predictable outcomes, photo handovers</span>
-            </li>
-          </ul>
-          <blockquote class="border-l-4 border-gold pl-6 py-4 bg-gold/5 rounded-r-lg">
-            <p class="italic text-gold text-xl font-medium">
-              "True luxury is the calm you feel when every detail is handled."
+    <section class="bg-porcelain py-20 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Beyond cleaning</p>
+            <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">
+              Concierge care, prepared proof-safely
+            </h2>
+            <p class="mt-5 text-lg leading-relaxed text-ink/74">
+              Some HQC stories go beyond cleaning. These examples are based on supplied copy and should stay carefully worded until client permission and exact evidence are confirmed.
             </p>
-            <footer class="mt-3 text-navy font-semibold">— Pedro, Founder</footer>
-          </blockquote>
+          </div>
+          <div class="grid gap-5">
+            {conciergeExamples.map((example) => (
+              <article class="rounded-[1.5rem] border border-stone bg-white p-6 shadow-soft-sm">
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brass">{example.label}</p>
+                <h3 class="mt-2 font-serif text-2xl font-semibold text-night">{example.title}</h3>
+                <p class="mt-3 leading-relaxed text-ink/72">{example.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 9. FAQs -->
-    <FAQ />
-
-    <!-- 10. Final CTA Banner -->
-    <CTABanner />
-    <!-- Quote Form Section -->
-    <section id="quote" class="py-20 md:py-28 bg-navy">
-      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="font-serif text-3xl md:text-4xl text-white font-semibold mb-4">
+    <section class="bg-night py-20 text-white md:py-24">
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Proof-safe trust</p>
+        <h2 class="mt-3 font-serif text-3xl font-semibold md:text-5xl">
+          No unsupported badges. No borrowed prestige.
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-white/78">
+          Public insurance amounts, background-check wording, exact regulated certificates, client logos and named case-study claims should only be shown when the evidence and permission are confirmed. Until then, HQC explains its standards plainly.
+        </p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="/quote/" class="inline-flex items-center justify-center rounded-md bg-brass px-6 py-3 text-sm font-semibold text-night transition-colors hover:bg-brass/90">
             Request Your Personalised Quote
-          </h2>
-          <p class="text-white/80 text-lg">Tell us about your home and preferences</p>
+          </a>
+          <a href="/contact/" class="inline-flex items-center justify-center rounded-md border border-brass px-6 py-3 text-sm font-semibold text-brass transition-colors hover:bg-white/10">
+            Ask about requirements
+          </a>
         </div>
-        <form
-          class="bg-white rounded-2xl p-8 md:p-10 border border-gold/50 shadow-soft"
-          action="#"
-          method="post"
-          onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');"
-        >
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <label class="block">
-              <span class="block mb-2 text-navy font-medium">Full Name *</span>
-              <input
-                type="text"
-                required
-                class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
-                placeholder="Your full name"
-              />
-            </label>
-            <label class="block">
-              <span class="block mb-2 text-navy font-medium">Email Address *</span>
-              <input
-                type="email"
-                required
-                class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
-                placeholder="sales@highqualityclean.co.uk"
-
-              />
-            </label>
-          </div>
-          
-          <div class="grid md:grid-cols-3 gap-6 mb-6">
-            <label class="block">
-              <span class="block mb-2 text-navy font-medium">Postcode *</span>
-              <input
-                type="text"
-                required
-                class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
-                placeholder="SW1, W8…"
-              />
-            </label>
-            <label class="block">
-              <span class="block mb-2 text-navy font-medium">Property Type *</span>
-              <select
-                class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
-                required
-              >
-                <option value="">Select property type…</option>
-                <option>Townhouse</option>
-                <option>Penthouse</option>
-                <option>Apartment</option>
-                <option>Mews</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="block mb-2 text-navy font-medium">Preferred Tier *</span>
-              <select
-                class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
-                required
-              >
-                <option value="">Select service tier…</option>
-                <option>Essentials Clean™</option>
-                <option>Signature Clean™</option>
-                <option>WellClean™</option>
-              </select>
-            </label>
-          </div>
-          
-          <label class="block mb-8">
-            <span class="block mb-2 text-navy font-medium">Notes & Preferences</span>
-            <textarea
-              rows="5"
-              class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors resize-none"
-              placeholder="Tell us about special surfaces, sensitivities, schedule preferences, access arrangements, or any specific requirements…"
-            ></textarea>
-          </label>
-          
-          <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:justify-between">
-            <label class="inline-flex items-start gap-3 text-sm text-navy/80 max-w-md">
-              <input type="checkbox" required class="mt-1 accent-gold scale-110" />
-              <span>I understand this is a premium service with bespoke pricing tailored to my home's specific requirements.</span>
-            </label>
-            <button
-              type="submit"
-              style="display: inline-flex; align-items: center; justify-content: center; border-radius: 0.375rem; background-color: #C9A961; color: #2C3E50; padding: 1rem 2rem; font-weight: 500; border: 1px solid #C9A961; transition: all 0.2s ease-in-out; text-decoration: none; font-size: 1.125rem; flex-shrink: 0;" onmouseover="this.style.backgroundColor='#B8955A'; this.style.borderColor='#B8955A'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(201, 169, 97, 0.3)'" onmouseout="this.style.backgroundColor='#C9A961'; this.style.borderColor='#C9A961'; this.style.transform='translateY(0)'; this.style.boxShadow='none'"
-            >
-              <i class="fas fa-paper-plane mr-2"></i>
-              Submit Request
-            </button>
-          </div>
-        </form>
       </div>
     </section>
+
+    <FAQ />
   </main>
 </Layout>

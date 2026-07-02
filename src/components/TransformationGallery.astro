@@ -3,81 +3,97 @@ export interface GalleryImage {
   src: string;
   alt: string;
   caption: string;
+  note?: string;
 }
 
 export interface Props {
   title?: string;
+  subtitle?: string;
   images?: GalleryImage[];
   className?: string;
   ctaText?: string;
+  ctaLink?: string;
 }
 
 import CtaButton from './CtaButton.astro';
 
 const {
-  title = "Transformation Gallery",
+  title = "Proof of care, not stock promises",
+  subtitle = "A small selection of local before-after, property and action images used as grounded proof points. Full case stories should always be confirmed before named publication.",
   images = [
     {
-      src: "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
-      alt: "Kitchen deep clean transformation",
-      caption: "Kitchen Deep Clean"
+      src: "/images/before-after/before-after-1.jpg",
+      alt: "Real kitchen surface before and after cleaning detail",
+      caption: "Kitchen detail reset",
+      note: "Before-after proof"
     },
     {
-      src: "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
-      alt: "Marble restoration before and after",
-      caption: "Marble Restoration"
+      src: "/images/before-after/after.jpg",
+      alt: "Room after a detailed cleaning reset",
+      caption: "Room reset finish",
+      note: "After-clean presentation"
     },
     {
-      src: "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
-      alt: "Living room detail cleaning",
-      caption: "Living Room Detail"
+      src: "/images/before-after/after-3.jpg",
+      alt: "Cleaned floor or exterior surface after transformation",
+      caption: "Surface recovery",
+      note: "Transformation detail"
     },
     {
-      src: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      alt: "Bathroom refresh transformation",
-      caption: "Bathroom Refresh"
+      src: "/images/instock/IMG-20250812-WA0018.jpg",
+      alt: "Premium London apartment interior after careful property preparation",
+      caption: "Calm home presentation",
+      note: "Local property imagery"
     },
     {
-      src: "/images/luxury-home/luxurious-chelsea-bedroom.png",
-      alt: "Bedroom sanctuary cleaning",
-      caption: "Bedroom Sanctuary"
+      src: "/images/instock/IMG-20250813-WA0062.jpg",
+      alt: "Team member carrying out window cleaning work",
+      caption: "Team at work",
+      note: "Local action image"
     },
     {
-      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
-      alt: "Office space refresh",
-      caption: "Office Refresh"
+      src: "/images/instock/IMG-20250813-WA0049.jpg",
+      alt: "Wellness space suitable for specialist cleaning or advisory discussion",
+      caption: "Wellness space care",
+      note: "Illustrative local context"
     }
   ],
   className = "",
-  ctaText = "View All Transformations",
+  ctaText = "View case studies",
   ctaLink = "/case-studies/"
 } = Astro.props;
---- 
+---
 
-<section class={`py-24 md:py-32 bg-navy ${className}`}>
+<section class={`bg-white py-20 md:py-24 ${className}`}>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h2 class="font-serif text-3xl md:text-4xl text-white mb-12 text-center">
-      {title}
-    </h2>
-    <div
-      class="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4"
-      aria-label="Photo story carousel"
-    >
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Proof and case studies</p>
+      <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">
+        {title}
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-ink/74">
+        {subtitle}
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {images.map((image) => (
-        <figure class="snap-start min-w-[320px]">
+        <figure class="overflow-hidden rounded-[1.5rem] border border-stone bg-porcelain shadow-soft-sm">
           <img
             src={image.src}
             alt={image.alt}
-            class="h-56 w-full object-cover rounded-lg border border-gold/50"
+            class="h-64 w-full object-cover"
             loading="lazy"
           />
-          <figcaption class="mt-3 text-center text-gold font-medium">
-            {image.caption}
+          <figcaption class="p-5">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brass">{image.note}</p>
+            <h3 class="mt-2 font-serif text-2xl font-semibold text-night">{image.caption}</h3>
           </figcaption>
         </figure>
       ))}
     </div>
-    <div class="text-center mt-8">
+
+    <div class="mt-10 text-center">
       <CtaButton href={ctaLink}>
         {ctaText}
       </CtaButton>

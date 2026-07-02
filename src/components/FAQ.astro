@@ -32,19 +32,25 @@ import { faqData, faqIntro } from '../data/faq.js';
           
           <div class="space-y-4">
             {section.items.map((item, itemIndex) => {
-              const accordionId = `faq-${sectionIndex}-${itemIndex}`;
+              const accordionId = `faq-panel-${sectionIndex}-${itemIndex}`;
+              const buttonId = `faq-trigger-${sectionIndex}-${itemIndex}`;
               return (
                 <div class="faq-item border border-gold/10 rounded-lg bg-white">
                   <button 
+                    id={buttonId}
                     class="faq-trigger w-full text-left p-4 md:p-6 flex items-center justify-between hover:bg-gold/5 transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-lg"
                     data-target={accordionId}
+                    aria-expanded="false"
+                    aria-controls={accordionId}
                   >
                     <span class="font-medium text-navy pr-4">{item.question}</span>
-                    <i class="fas fa-chevron-down text-gold transform transition-transform duration-200 flex-shrink-0"></i>
+                    <i class="fas fa-chevron-down text-gold transform transition-transform duration-200 flex-shrink-0" aria-hidden="true"></i>
                   </button>
                   <div 
                     id={accordionId}
                     class="faq-content hidden overflow-hidden"
+                    role="region"
+                    aria-labelledby={buttonId}
                   >
                     <div
                       class="p-4 md:p-6 pt-0 text-ink/70 leading-relaxed"
@@ -69,7 +75,7 @@ import { faqData, faqIntro } from '../data/faq.js';
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="tel:0208703925"
+          href="tel:+442088703925"
           class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 font-medium btn-hover focus-visible"
         >
           <i class="fas fa-phone mr-2"></i>
@@ -113,8 +119,10 @@ import { faqData, faqIntro } from '../data/faq.js';
         allItemsInSection.forEach((item) => {
           if (item !== currentItem) {
             const otherContent = item.querySelector('.faq-content');
+            const otherTrigger = item.querySelector('.faq-trigger');
             const otherIcon = item.querySelector('.faq-trigger i');
             if (otherContent) otherContent.classList.add('hidden');
+            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
             if (otherIcon) otherIcon.classList.remove('rotate-180');
           }
         });
@@ -123,9 +131,11 @@ import { faqData, faqIntro } from '../data/faq.js';
         if (isOpen) {
           content.classList.add('hidden');
           icon.classList.remove('rotate-180');
+          this.setAttribute('aria-expanded', 'false');
         } else {
           content.classList.remove('hidden');
           icon.classList.add('rotate-180');
+          this.setAttribute('aria-expanded', 'true');
         }
       });
     });

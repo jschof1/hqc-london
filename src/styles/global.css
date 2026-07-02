@@ -2,15 +2,40 @@
 
 @layer base {
   @theme {
-    --color-ink: #0E0E10;
-    --color-mist: #F7F7F9;
-    --color-gold: #C9A961;
-    --color-navy: #2C3E50;
-    --color-night: #1c2833;
-  
-    --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.1), 0 4px 10px rgb(0 0 0 / 0.06);
-    
+    /* Quiet Precision Concierge palette */
+    --color-ink: #101820;
+    --color-night: #17212b;
+    --color-porcelain: #f8f5ef;
+    --color-cream: #fbf8f1;
+    --color-stone: #e9e2d6;
+    --color-sage: #ddebe4;
+    --color-clean-blue: #d8e7ec;
+    --color-brass: #b9975b;
+
+    /* Legacy aliases kept so existing route URLs/pages continue to render. */
+    --color-mist: var(--color-porcelain);
+    --color-gold: var(--color-brass);
+    --color-navy: var(--color-night);
+
+    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: var(--font-sans);
+    --font-heading: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", serif;
+    --font-serif: var(--font-heading);
+    --font-display: var(--font-heading);
+
+    --radius-sm: 0.375rem;
+    --radius-md: 0.625rem;
+    --radius-lg: 0.875rem;
+    --radius-xl: 1rem;
     --radius-xl2: 1.25rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2rem;
+
+    --shadow-soft-sm: 0 6px 18px rgb(16 24 32 / 0.08);
+    --shadow-soft: 0 18px 50px rgb(16 24 32 / 0.10), 0 6px 18px rgb(16 24 32 / 0.07);
+    --shadow-panel: 0 24px 70px rgb(16 24 32 / 0.12);
+    --shadow-lift: 0 30px 80px rgb(16 24 32 / 0.16);
+    --shadow-brass: 0 12px 32px rgb(185 151 91 / 0.18);
   }
 
   html {
@@ -18,19 +43,20 @@
   }
 
   body {
-    font-family: var(--font-family-display);
-    background-color: var(--color-mist);
+    font-family: var(--font-body);
+    background-color: var(--color-porcelain);
     color: var(--color-ink);
-    
+    text-rendering: optimizeLegibility;
   }
 
   /* Typography improvements */
-  h1, h2, h3 { 
-    line-height: 1.2; 
+  h1, h2, h3 {
+    line-height: 1.12;
+    text-wrap: balance;
   }
-  
-  p { 
-    line-height: 1.6; 
+
+  p {
+    line-height: 1.65;
   }
 
   /* Image optimization - Remove global hover transforms */
@@ -40,8 +66,13 @@
 }
 
 @layer components {
-  .font-serif {
-    font-family: var(--font-family-serif);
+  .font-serif,
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
   }
 
   /* Gallery specific styles */

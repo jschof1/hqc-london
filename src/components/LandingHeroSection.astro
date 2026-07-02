@@ -33,177 +33,149 @@ export interface Props {
 }
 
 const {
-  title = "High-standard cleaning in London for homes, property teams, offices and studios",
-  subtitle = "High Quality Clean helps London clients keep homes, managed properties, offices and studios clean, presentable and ready for the next stage.",
+  title = "Calm, high-standard cleaning for London homes and client-facing spaces",
+  subtitle = "High Quality Clean restores calm, confidence and control with carefully scoped home, commercial and managed-property cleaning across London.",
   videoSrc = "/videos/hero.mp4",
-  fallbackImage = "/images/areas/mayfair.webp",
-  fallbackImageAlt = "Clean London home interior",
+  fallbackImage = "/images/instock/IMG-20250812-WA0018.jpg",
+  fallbackImageAlt = "Calm London apartment interior prepared for premium cleaning",
   reviewBadge = null,
   starRating = 0,
   ctaButtons = [
     {
-      text: "Request a Cleaning Quote",
+      text: "Request Your Personalised Quote",
       href: "/quote/",
       type: "primary",
       id: "hero-cta"
     },
     {
-      text: "View Cleaning Routes",
-      href: "#buyer-routes",
+      text: "View Home Cleaning Tiers",
+      href: "#service-tiers",
       type: "secondary"
     }
   ],
-  trustText = "Clear scopes, careful handling and consistent standards before work begins",
+  trustText = "Personalised quote before work begins. Clear scope, careful access and the finish agreed in advance.",
   trustLogos = [],
   className = ""
 } = Astro.props;
 ---
-<section class="bg-white border-b border-gold/20 py-3 md:py-4">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-  <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8 text-xs text-ink/60">
-    <div class="flex items-center gap-2">
-    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-    </svg>
-    <span class="whitespace-nowrap">Clear Scopes</span>
-    </div>
-    <div class="flex items-center gap-2">
-    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-    </svg>
-    <span class="whitespace-nowrap">Careful Handling</span>
-    </div>
-    <div class="flex items-center gap-2">
-    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-    </svg>
-    <span class="whitespace-nowrap">Consistent Standards</span>
-    </div>
-    <div class="flex items-center gap-2">
-    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-    </svg>
-    <span class="whitespace-nowrap">Quote Before Work Begins</span>
-    </div>
-  </div>
-  </div>
-</section>
-<section class={`relative bg-navy min-h-[calc(100vh-8rem)] flex items-center justify-center ${className}`}>
-  <div class="absolute inset-0 h-full w-full">
-    <!-- Video background -->
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      class="image-transition h-full w-full object-cover"
-    >
-      <source src={videoSrc} type="video/mp4">
-      <!-- Fallback image if video fails to load -->
-      <img
-        src={fallbackImage}
-        alt={fallbackImageAlt}
-        class="image-transition h-full w-full object-cover"
-      />
-    </video>
 
-    <!-- Enhanced overlay for better text visibility -->
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/60 to-navy/40"
-    ></div>
-  </div>
-  
-  <!-- Hero copy + CTAs - Centered within the hero section -->
-  <div class="font-serif relative z-10 flex flex-col items-center justify-center flex-1 w-full px-4 md:px-16 lg:px-24 xl:px-32">
-    <div class="text-transition">
-          <!-- Star Rating with Lines -->
+<section class={`relative overflow-hidden bg-porcelain ${className}`}>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(185,151,91,0.12),transparent_34%),linear-gradient(135deg,rgba(216,231,236,0.42),transparent_38%)]" aria-hidden="true"></div>
 
-    {reviewBadge && (
-      <div class="flex items-center justify-center pb-1">
-        <span class="inline-flex items-center bg-navy/60 rounded-full px-2 py-1 bg-auto">
+  <div class="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brass">
+        Premium London property care
+      </p>
+
+      {reviewBadge && (
+        <div class="mt-5 inline-flex items-center rounded-full border border-brass/30 bg-white/80 px-4 py-2 text-sm font-semibold text-night shadow-soft-sm">
           <span set:html={reviewBadge.icon}></span>
-          <span class="text-white font-semibold text-base ml-2">{reviewBadge.text}</span>
-        </span>
-      </div>
-    )}
-    {starRating > 0 && (
-      <div class="flex items-center justify-center gap-2 mb-4">
-        <div class="h-px w-8 bg-gold/60"></div>
-        <div class="flex items-center gap-1">
-          {Array.from({ length: starRating }).map((_, i) => (
-            <span
-              class="text-xl"
-              style="
-                background: linear-gradient(90deg, #C9A961 0%, #FFD700 50%, #FDE68A 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-fill-color: transparent;
-                display: inline-block;
-              "
-              aria-hidden="true"
-            >★</span>
+          <span class="ml-2">{reviewBadge.text}</span>
+        </div>
+      )}
+
+      {starRating > 0 && (
+        <div class="mt-5 flex items-center gap-2 text-brass" aria-label={`${starRating} star rating`}>
+          {Array.from({ length: starRating }).map(() => (
+            <span class="text-lg" aria-hidden="true">★</span>
           ))}
         </div>
-        <div class="h-px w-8 bg-yellow-200/60"></div>
-      </div>
-    )}
-    <h1 class="text-4xl md:text-7xl text-center font-medium max-w-4xl bg-gradient-to-r from-gold via-gold to-yellow-300 text-transparent bg-clip-text leading-tight">
-      {title}
-    </h1>
-    
-    <p class="text-slate-100 md:text-lg text-center max-w-2xl mt-4 leading-relaxed lg:text-center mx-auto">
-      {subtitle}
-    </p>
+      )}
+
+      <h1 class="mt-6 font-serif text-4xl font-semibold leading-[1.04] text-night sm:text-5xl md:text-6xl">
+        {title}
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink/74 md:text-xl">
+        {subtitle}
+      </p>
+
+      {ctaButtons.length > 0 && (
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+          {ctaButtons.map((button) => (
+            <a
+              id={button.id}
+              href={button.href}
+              class:list={[
+                'inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold no-underline transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2',
+                button.type === 'primary'
+                  ? 'bg-brass text-night shadow-brass hover:bg-brass/90 hover:-translate-y-0.5'
+                  : 'border border-night/15 bg-white/70 text-night hover:border-brass hover:bg-white',
+              ]}
+            >
+              <span>{button.text}</span>
+              {button.type === 'primary' && (
+                <svg class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M4.79688 11.5117H18.2274M18.2274 11.5117L11.5121 4.79639M18.2274 11.5117L11.5121 18.2269" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              )}
+            </a>
+          ))}
+        </div>
+      )}
+
+      {trustText && (
+        <p class="mt-7 max-w-xl text-sm leading-relaxed text-ink/62">
+          {trustText}
+        </p>
+      )}
+
+      {trustLogos.length > 0 && (
+        <div class="mt-6 flex flex-wrap items-center gap-5">
+          {trustLogos.map((logo) => (
+            <a href={logo.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-ink/62 no-underline hover:text-brass">
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border border-stone bg-white">
+                {logo.type === 'svg' ? (
+                  <span set:html={logo.content}></span>
+                ) : (
+                  <img src={logo.content} alt={logo.alt} class="h-full w-full object-contain opacity-70" />
+                )}
+              </span>
+              <span>{logo.alt}</span>
+            </a>
+          ))}
+        </div>
+      )}
     </div>
 
-    {ctaButtons.length > 0 && (
-      <div class="text-transition flex items-center gap-3 mt-8 sm:flex-row flex-col">
-        {ctaButtons.map((button) => (
-          <a
-            id={button.id}
-            href={button.href}
-            class={
-              button.type === 'primary'
-                ? "flex items-center gap-2 px-8 py-3 bg-gold hover:bg-gold/90 text-navy font-semibold transition rounded-full shadow-2xl hover:shadow-3xl hover:scale-105 duration-300"
-                : "bg-white/10 border border-white/15 rounded-full px-8 py-3 text-white hover:bg-white/20 transition duration-300"
-            }
+    <div class="relative">
+      <div class="absolute -left-6 top-8 h-32 w-32 rounded-full bg-sage/70 blur-3xl" aria-hidden="true"></div>
+      <div class="relative overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-panel">
+        <img
+          src={fallbackImage}
+          alt={fallbackImageAlt}
+          class="h-[420px] w-full rounded-[1.45rem] object-cover md:h-[560px]"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-x-6 bottom-6 rounded-2xl border border-white/35 bg-night/78 p-5 text-white backdrop-blur-sm">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brass">The HQC approach</p>
+          <p class="mt-2 text-sm leading-relaxed text-white/86">
+            A calmer service conversation: property type, access, surfaces, desired finish and recurring fit confirmed before the team starts.
+          </p>
+        </div>
+      </div>
+
+      {videoSrc && (
+        <div class="absolute -bottom-8 right-2 hidden w-56 overflow-hidden rounded-2xl border border-white bg-white p-2 shadow-soft md:block">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster={fallbackImage}
+            class="h-32 w-full rounded-xl object-cover"
+            aria-label="Temporary atmospheric cleaning video"
           >
-            <span>{button.text}</span>
-            {button.type === 'primary' && (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.79688 11.5117H18.2274M18.2274 11.5117L11.5121 4.79639M18.2274 11.5117L11.5121 18.2269"
-                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            )}
-          </a>
-        ))}
-      </div>
-    )}
-
-    {trustText && (
-      <p class="text-slate-300 mt-16 text-sm">{trustText}</p>
-    )}
-
-    {trustLogos.length > 0 && (
-      <div class="flex flex-wrap items-center justify-center gap-8 mt-6">
-        {trustLogos.map((logo) => (
-            <a href={logo.link} target="_blank" rel="noopener noreferrer">
-          <div class="flex items-center gap-2">
-            <div class="w-6 h-6 rounded-full flex items-center justify-center">
-              {logo.type === 'svg' ? (
-                <div set:html={logo.content}></div>
-              ) : (
-                <img src={logo.content} alt={logo.alt} class="w-full h-full object-contain opacity-60"
-                />  
-             
-              )}
-            </div>
-            <span class="text-xs text-slate-100">{logo.alt}</span>
-          </div>
-            </a>
-        ))}
-      </div>
-    )}
+            <source src={videoSrc} type="video/mp4" />
+            <img src={fallbackImage} alt="Premium cleaning atmosphere still" class="h-32 w-full object-cover" />
+          </video>
+          <p class="px-1 pt-2 text-[11px] leading-snug text-ink/58">
+            Temporary atmosphere only. Real proof appears below.
+          </p>
+        </div>
+      )}
+    </div>
   </div>
 </section>

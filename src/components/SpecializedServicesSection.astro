@@ -5,6 +5,7 @@ export interface SpecializedService {
   tagline: string;
   icon: string;
   link: string;
+  group?: string;
 }
 
 export interface Props {
@@ -19,106 +20,105 @@ export interface Props {
   textColor?: string;
 }
 
-import CtaButton from './CtaButton.astro'; 
+import CtaButton from './CtaButton.astro';
 
 const {
-  title = "Priority cleaning services",
-  subtitle = "Clear routes for the service types HQC is building around first",
+  title = "Specialised add-ons and support routes",
+  subtitle = "Once the main route is clear, HQC can scope specialist resets, turnover support, wellness spaces, laundry and property-team needs as part of a quote conversation.",
   services = [
     {
-      name: "End of Tenancy and Move-Out Cleaning",
-      description: "Detailed cleaning for tenants, landlords, agents and property managers preparing for check-out, handover or the next occupier.",
-      tagline: "Clear scope for the point where the property is checked.",
-      icon: "M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V3m6 4v10a2 2 0 01-2 2H10a2 2 0 01-2-2V7",
-      link: "/services/end-of-tenancy-cleaning/"
+      name: "Move In / Move Out Clean Reset™",
+      description: "Detailed reset for check-out, handover, move-in or next-occupant readiness, with cupboards, drawers and heavier details scoped before quoting.",
+      tagline: "Leave it spotless. Start fresh.",
+      icon: "reset",
+      link: "/services/end-of-tenancy-cleaning/",
+      group: "Home + property"
     },
     {
-      name: "Post-Renovation Cleaning",
-      description: "Fine-detail cleaning after building, repair or refurbishment work, with attention to dust, surfaces, fittings and final presentation.",
-      tagline: "Make finished work feel ready for living, viewing or handover.",
-      icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
-      link: "/services/post-renovation-cleaning/"
+      name: "Airbnb Turnover Clean™",
+      description: "Guest-ready cleaning around rapid changeovers, presentation details and repeatable hosting standards.",
+      tagline: "Five-star hosting, every time.",
+      icon: "turnover",
+      link: "/services/airbnb-cleaning/",
+      group: "Home + hosting"
     },
     {
-      name: "Estate and Lettings Agent Cleaning",
-      description: "Cleaning support for property teams preparing homes for viewings, photography, checkouts, move-ins and handovers.",
+      name: "HQC Office Clean™",
+      description: "Cleaning for boutique offices and client-facing spaces where hygiene, order and first impression matter.",
+      tagline: "Confidence in your first impression.",
+      icon: "office",
+      link: "/commercial-and-wellness-cleaning/",
+      group: "Commercial"
+    },
+    {
+      name: "WellClean™ Studio Edition",
+      description: "Considered cleaning for spas, saunas, cold plunges and wellness studios, with methods matched to the space and standard required.",
+      tagline: "Trust at a wellness level.",
+      icon: "wellness",
+      link: "/commercial-and-wellness-cleaning/",
+      group: "Commercial + wellness"
+    },
+    {
+      name: "HQC Concierge Laundry",
+      description: "Laundry and garment-care support can be discussed alongside recurring home, Airbnb or family requirements.",
+      tagline: "Your home, your wardrobe, five-star clean.",
+      icon: "laundry",
+      link: "/services/ironing-and-laundry/",
+      group: "Concierge"
+    },
+    {
+      name: "Property Team Support",
+      description: "Support for agents, landlords, block managers and developers preparing spaces for viewing, re-let, resident standards or handover.",
       tagline: "Fewer standards to chase between property stages.",
-      icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
-      link: "/services/estate-and-lettings-agents-cleaning/"
-    },
-    {
-      name: "Void and Post-Tenancy Cleaning",
-      description: "Cleaning for empty or recently vacated properties before viewing, re-let, maintenance, sale or occupation.",
-      tagline: "Move the property from not ready to ready.",
-      icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
-      link: "/services/void-and-post-tenancy-cleaning/"
-    },
-    {
-      name: "Block Management Cleaning",
-      description: "Communal area cleaning for entrances, lobbies, corridors, lifts, stairs and shared spaces in managed buildings.",
-      tagline: "Consistent presentation in the areas residents notice.",
-      icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
-      link: "/services/block-management-cleaning/"
-    },
-    {
-      name: "Commercial Cleaning",
-      description: "Cleaning for boutique offices, studios, clinics, gyms and client-facing spaces where hygiene and presentation affect trust.",
-      tagline: "Practical cleaning around clients, staff and opening hours.",
-      icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2V3zM21 3h-6a2 2 0 00-2 2v12a4 4 0 002 4h6V3z",
-      link: "/commercial-and-wellness-cleaning/"
+      icon: "property",
+      link: "/property-and-facilities-cleaning/",
+      group: "Commercial support"
     }
   ],
-  ctaText = "Request a Cleaning Quote",
-  ctaLink = "#quote",
+  ctaText = "Scope a specialist clean",
+  ctaLink = "/quote/",
   className = "",
   sectionId = "specialized-services",
-  backgroundColor = "bg-navy",
-  textColor = "text-white"
+  backgroundColor = "bg-porcelain",
+  textColor = "text-ink"
 } = Astro.props;
 ---
 
-<section id={sectionId} class={`py-14 md:py-18 ${backgroundColor} ${className}`}>
-  <div class="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
-    <div class={`rounded-3xl lg:md:p-8 ${textColor}`}>
-      <div class="text-center mb-12">
-        <h2 class="font-serif text-3xl md:text-4xl font-bold text-gold mb-4">
-          {title}
-        </h2>
-        <p class="text-white/90 text-lg max-w-2xl mx-auto">
-          {subtitle}
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service) => (
-          <div class="bg-white/10 backdrop-blur rounded-xl p-6 border border-gold/30">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mr-4">
-                <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}/>
-                </svg>
-              </div>
-              <h3 class="font-semibold text-gold">{service.name}</h3>
-            </div>
-            <p class="text-white/80 text-sm mb-3">{service.description}</p>
-            <p class="text-gold text-sm font-medium italic">"{service.tagline}"</p>
-            <a href={service.link} class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
-                      Learn More
-                      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                  </a>
-          </div>
-        ))}
-      </div>
-
-      {ctaText && ctaLink && (
-        <div class="text-center mt-8">
-          <CtaButton href={ctaLink}>
-            {ctaText}
-          </CtaButton>
-        </div>
-      )}
+<section id={sectionId} class={`py-16 md:py-20 ${backgroundColor} ${className}`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class={`mx-auto max-w-3xl text-center ${textColor}`}>
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Add-ons</p>
+      <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">
+        {title}
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-ink/74">
+        {subtitle}
+      </p>
     </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {services.map((service) => (
+        <article class="flex min-h-full flex-col rounded-[1.5rem] border border-stone bg-white p-6 shadow-soft-sm transition duration-300 hover:-translate-y-0.5 hover:border-brass/50">
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brass">{service.group || service.icon}</p>
+          <h3 class="mt-3 font-serif text-2xl font-semibold text-night">{service.name}</h3>
+          <p class="mt-4 flex-1 text-sm leading-relaxed text-ink/72">{service.description}</p>
+          <p class="mt-5 border-l-2 border-brass pl-3 text-sm font-semibold italic text-ink/76">“{service.tagline}”</p>
+          <a href={service.link} class="mt-6 inline-flex items-center text-sm font-semibold text-night no-underline transition-colors hover:text-brass">
+            Learn more
+            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </article>
+      ))}
+    </div>
+
+    {ctaText && ctaLink && (
+      <div class="mt-10 text-center">
+        <CtaButton href={ctaLink}>
+          {ctaText}
+        </CtaButton>
+      </div>
+    )}
   </div>
 </section>

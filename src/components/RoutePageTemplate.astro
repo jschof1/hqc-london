@@ -1,6 +1,7 @@
 ---
 import Header from './Header.astro';
 import Layout from '../layouts/Layout.astro';
+import ServiceTierComparison from './ServiceTierComparison.astro';
 import { getBuyerRouteBySlug, type BuyerRouteSlug } from '../data/routes';
 import { servicePages } from '../data/servicePages';
 
@@ -25,6 +26,8 @@ if (!primaryPage) {
   throw new Error(`Service page data not found for route: ${route.key}`);
 }
 
+const isHomeRoute = route.key === 'homes' && slug === 'home-cleaning';
+const isCommercialRoute = route.key === 'commercialAndWellness';
 const isPropertyRoute = route.key === 'propertyAndFacilities';
 const displayTitle = isPropertyRoute ? primaryPage.h1 : primaryPage.title;
 const h1 = primaryPage.h1;
@@ -43,11 +46,6 @@ const liveRouteSlugs = new Set([
 
 const relatedRoutes = [
   {
-    href: '/property-and-facilities-cleaning/',
-    label: 'Property cleaning support',
-    active: route.key === 'propertyAndFacilities',
-  },
-  {
     href: '/home-cleaning/',
     label: 'Home cleaning',
     active: route.key === 'homes',
@@ -56,6 +54,11 @@ const relatedRoutes = [
     href: '/commercial-and-wellness-cleaning/',
     label: 'Commercial cleaning',
     active: route.key === 'commercialAndWellness',
+  },
+  {
+    href: '/property-and-facilities-cleaning/',
+    label: 'Property team support',
+    active: route.key === 'propertyAndFacilities',
   },
 ];
 ---
@@ -124,11 +127,58 @@ const relatedRoutes = [
         <div class="space-y-5 text-lg leading-relaxed text-ink/75">
           <p>{primaryPage.problem || route.buyerProblem}</p>
           <p>
-            HQC starts with the space, access requirements, timing and expected finish, then confirms the cleaning scope before work begins.
+            HQC starts with the space, access requirements, timing and expected finish, then confirms the cleaning scope before work begins. The aim is a service that feels calm, precise and consistent, not a race to the lowest quote.
           </p>
         </div>
       </div>
     </section>
+
+    {isHomeRoute && (
+      <ServiceTierComparison
+        sectionId="home-cleaning-tiers"
+        title="Home cleaning tiers with clear boundaries"
+        subtitle="Essentials Clean™, Signature Clean™ and WellClean™ Premium give you a ladder from everyday calm to wellness-led renewal, while keeping exclusions and add-ons clear before you book."
+        backgroundClass="bg-white"
+      />
+    )}
+
+    {isCommercialRoute && (
+      <section class="bg-white py-16 md:py-20">
+        <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+          <div class="lg:col-span-1">
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Commercial and wellness fit</p>
+            <h2 class="mt-3 font-serif text-3xl font-semibold text-navy md:text-5xl">For spaces people need to trust</h2>
+          </div>
+          <div class="space-y-5 text-lg leading-relaxed text-ink/75 lg:col-span-2">
+            <p>
+              HQC supports boutique offices, clinics, gyms, wellness studios, spas, saunas and cold plunge operators where hygiene, touchpoints and presentation all affect how the space feels.
+            </p>
+            <p>
+              The quote conversation stays proof-safe and practical: areas, surfaces, opening hours, access, reporting needs and the standard clients or members expect to experience.
+            </p>
+          </div>
+        </div>
+      </section>
+    )}
+
+    {isPropertyRoute && (
+      <section class="bg-white py-16 md:py-20">
+        <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+          <div class="lg:col-span-1">
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Property-team route</p>
+            <h2 class="mt-3 font-serif text-3xl font-semibold text-navy md:text-5xl">Commercial support for managed properties</h2>
+          </div>
+          <div class="space-y-5 text-lg leading-relaxed text-ink/75 lg:col-span-2">
+            <p>
+              This page remains available for agents, landlords, property managers and developers, but it is framed as a specialist support route rather than a third public category alongside Home and Commercial Cleaning.
+            </p>
+            <p>
+              It is useful when a managed property needs calm coordination, precise presentation and consistent cleaning standards before viewings, handovers, resident use or next occupancy.
+            </p>
+          </div>
+        </div>
+      </section>
+    )}
 
     <section class="bg-white py-16 md:py-20">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -140,7 +190,7 @@ const relatedRoutes = [
             {displayTitle}
           </h2>
           <p class="mt-5 text-lg leading-relaxed text-ink/75">
-            Use this route as the starting point. If a detailed page is still being expanded, the route still gives enough context to request the right cleaning quote.
+            Use this route as the starting point for a personalised quote. HQC is a good fit when calm, precision and consistency matter more than finding the cheapest possible cleaner.
           </p>
         </div>
 
@@ -265,7 +315,7 @@ const relatedRoutes = [
           Get the right cleaning scope before you book
         </h2>
         <p class="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-ink/75">
-          Tell HQC what kind of space needs cleaning, when it needs to be ready, and what level of finish matters. The next step is a practical quote conversation, not a one-size-fits-all package.
+          Tell HQC what kind of space needs cleaning, when it needs to be ready, and what level of finish matters. The next step is a personalised quote conversation, not a one-size-fits-all package or cheapest-cleaner comparison.
         </p>
         <a
           href={ctaUrl}
