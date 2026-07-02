@@ -6,25 +6,25 @@ import IntroRateBanner from '../components/IntroRateBanner.astro';
 import siteSettings from '../data/site-settings.json';
 ---
 
-<Layout
+<Layout 
   title="Contact High Quality Clean | London Cleaning Enquiries"
   description="Speak to High Quality Clean about home, deep, office, tenancy, property and facilities cleaning across London and Surrey. Call, WhatsApp, email or request a quote online."
 >
   <Header />
-
+  
   <main class="page-transition pt-16">
     <!-- Hero Section -->
-    <HeroSection
+    <HeroSection 
       title="Get in Touch"
       subtitle="Tell us what needs cleaning, where it is, and when it needs to be ready. We'll route the enquiry to the right home, commercial or property cleaning service."
       imageSrc="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1600&h=900&fit=crop&auto=format&q=80"
       imageAlt="Professional cleaning service team ready to help with home and commercial cleaning"
       primaryCta={{
         text: "Request a Quote",
-        href: "/quote/"
+        href: "/#quote"
       }}
       secondaryCta={{
-        text: "Message on WhatsApp",
+        text: "Message on WhatsApp", 
         href: "https://wa.me/442088703925",
         icon: "fab fa-whatsapp",
         target: "_blank",
@@ -59,8 +59,8 @@ import siteSettings from '../data/site-settings.json';
             </div>
             <h3 class="font-semibold text-navy mb-2">Phone</h3>
             <p class="text-sm text-ink/70 mb-4">Call us directly</p>
-            <a
-              href="tel:+442088703925"
+            <a 
+              href="tel:+442088703925" 
               class="text-gold hover:text-navy transition-colors font-medium"
             >
               0208 870 3925
@@ -74,8 +74,8 @@ import siteSettings from '../data/site-settings.json';
             </div>
             <h3 class="font-semibold text-navy mb-2">Email</h3>
             <p class="text-sm text-ink/70 mb-4">Send us a message</p>
-            <a
-              href="mailto:sales@highqualityclean.co.uk"
+            <a 
+              href="mailto:sales@highqualityclean.co.uk" 
               class="text-gold hover:text-navy transition-colors font-medium break-all"
             >
               sales@highqualityclean.co.uk
@@ -91,8 +91,8 @@ import siteSettings from '../data/site-settings.json';
             </div>
             <h3 class="font-semibold text-navy mb-2">WhatsApp</h3>
             <p class="text-sm text-ink/70 mb-4">Chat with us</p>
-            <a
-              href="https://wa.me/442088703925"
+            <a 
+              href="https://wa.me/442088703925" 
               target="_blank"
               rel="noopener nofollow"
               class="text-gold hover:text-navy transition-colors font-medium"
@@ -119,37 +119,37 @@ import siteSettings from '../data/site-settings.json';
         <div class="text-center">
           <p class="text-ink/70 mb-4">Follow us on social media</p>
           <div class="flex items-center justify-center gap-4">
-            <a
-              href="https://www.instagram.com/highqualitycleanltd"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a 
+              href="https://www.instagram.com/highqualitycleanltd" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               class="w-12 h-12 rounded-full bg-white border border-gold/30 flex items-center justify-center text-ink/60 hover:text-gold hover:border-gold transition-all duration-300 hover:-translate-y-1"
               aria-label="Instagram"
             >
               <i class="fab fa-instagram text-xl"></i>
             </a>
-            <a
-              href="https://www.linkedin.com/company/high-quality-cleaning/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a 
+              href="https://www.linkedin.com/company/high-quality-cleaning/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               class="w-12 h-12 rounded-full bg-white border border-gold/30 flex items-center justify-center text-ink/60 hover:text-gold hover:border-gold transition-all duration-300 hover:-translate-y-1"
               aria-label="LinkedIn"
             >
               <i class="fab fa-linkedin text-xl"></i>
             </a>
-            <a
-              href="https://tiktok.com/@highqualityclean"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a 
+              href="https://tiktok.com/@highqualityclean" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               class="w-12 h-12 rounded-full bg-white border border-gold/30 flex items-center justify-center text-ink/60 hover:text-gold hover:border-gold transition-all duration-300 hover:-translate-y-1"
               aria-label="TikTok"
             >
               <i class="fab fa-tiktok text-xl"></i>
             </a>
-            <a
-              href="https://www.facebook.com/highqualityclean"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a 
+              href="https://www.facebook.com/highqualityclean" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               class="w-12 h-12 rounded-full bg-white border border-gold/30 flex items-center justify-center text-ink/60 hover:text-gold hover:border-gold transition-all duration-300 hover:-translate-y-1"
               aria-label="Facebook"
             >
@@ -198,7 +198,7 @@ import siteSettings from '../data/site-settings.json';
               />
             </label>
           </div>
-
+          
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <label class="block">
               <span class="block mb-2 text-navy font-medium">Phone Number</span>
@@ -236,7 +236,7 @@ import siteSettings from '../data/site-settings.json';
               <option value="other">Other</option>
             </select>
           </label>
-
+          
           <label class="block mb-8">
             <span class="block mb-2 text-navy font-medium">Message *</span>
             <textarea
@@ -247,7 +247,7 @@ import siteSettings from '../data/site-settings.json';
               placeholder="Tell us the property type, postcode, preferred date, access notes and what needs cleaning."
             ></textarea>
           </label>
-
+          
           <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:justify-between">
             <label class="inline-flex items-start gap-3 text-sm text-navy/80 max-w-md">
               <input type="checkbox" required class="mt-1 accent-gold scale-110" />
@@ -271,8 +271,8 @@ import siteSettings from '../data/site-settings.json';
           <p class="text-ink/70 text-lg mb-8">
             Thank you for reaching out. We've received your message and our team will get back to you as soon as possible.
           </p>
-          <button
-            onclick="window.location.reload()"
+          <button 
+            onclick="window.location.reload()" 
             class="text-gold hover:text-navy transition-colors font-semibold"
           >
             Send another message
@@ -287,7 +287,7 @@ import siteSettings from '../data/site-settings.json';
 
           form?.addEventListener('submit', async (e) => {
             e.preventDefault();
-
+            
             if (submitBtn) {
               submitBtn.disabled = true;
               submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
@@ -295,7 +295,7 @@ import siteSettings from '../data/site-settings.json';
 
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-
+            
             data.source = 'contact_page';
             data.timestamp = new Date().toISOString();
 
@@ -318,7 +318,7 @@ import siteSettings from '../data/site-settings.json';
             } catch (error) {
               console.error('Error submitting form:', error);
               alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
-
+              
               if (submitBtn) {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;

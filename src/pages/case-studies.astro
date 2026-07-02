@@ -2,189 +2,1375 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
-import TransformationGallery from '../components/TransformationGallery.astro';
-
-const featuredStories = [
-  {
-    title: 'Mr. Edwards, from disappointment to dependability',
-    eyebrow: 'Existing client-success story',
-    location: 'High-end residential',
-    image: '/images/instock/IMG-20250812-WA0015.jpg',
-    imageAlt: 'Calm London home interior used as local property imagery',
-    challenge: 'Mr. Edwards had been let down by previous cleaners and wanted his home treated with respect, not rushed through as another appointment.',
-    response: 'HQC started with a full top-to-bottom clean, protected surfaces properly, focused on detail in the kitchen and bathrooms, and dealt with an early hiccup openly rather than hiding it.',
-    outcome: 'The relationship became regular and referral-led because the service rebuilt trust as well as cleanliness.',
-    quote: "It wasn't just the clean. It was how you handled the whole situation that made me trust you."
-  },
-  {
-    title: 'Mrs. Dean, a Chelsea home restored before works began',
-    eyebrow: 'Existing client-success story',
-    location: 'Chelsea renovation project',
-    image: '/images/instock/IMG-20250813-WA0030.jpg',
-    imageAlt: 'Clean empty property room prepared for handover or works',
-    challenge: 'Mrs. Dean was away from London and needed a Chelsea flat cleaned before builders arrived. The first inspection showed the condition was worse than expected.',
-    response: 'HQC recorded a video walkthrough, cleaned top to bottom, removed rubbish, restored order and sent a follow-up video so the remote client could see the transformation.',
-    outcome: 'That first project led to post-build cleaning, regular maintenance, window cleaning, laundry coordination and trusted on-the-ground property support.',
-    quote: 'Please do what you can.'
-  },
-  {
-    title: 'Chelsea property management support',
-    eyebrow: 'Supplied story framework, approval-gated',
-    location: 'Chelsea flat and remote-client support',
-    image: '/images/instock/IMG-20250813-WA0007.jpg',
-    imageAlt: 'London property exterior used as local property management imagery',
-    challenge: 'The supplied planning copy describes a remote client, a property in poor condition and a need for restoration plus ongoing advice.',
-    response: 'The proof-safe version should describe comprehensive restoration, maintenance planning and consultancy support without naming a company or implying an endorsement.',
-    outcome: 'This story is useful for showing the property-care direction, but exact wording, photos and permissions should be confirmed before publishing more detail.',
-    quote: 'Supplied story copy, publish exact details only when approved.'
-  }
-];
-
-const conciergeCare = [
-  {
-    title: 'Archie and pet-care support',
-    text: 'Supplied copy describes a Wandsworth client who needed dog care, feeding, attention and a simple security check while travelling. This should be positioned as concierge support arranged by agreement.'
-  },
-  {
-    title: 'Belgravia repair coordination',
-    text: 'Supplied copy describes window-repair support after a maintenance issue, including inspection coordination, contractor liaison, security and reporting. Keep exact client details permission-gated.'
-  },
-  {
-    title: 'Wellness-centre technical advice',
-    text: 'The LowLu consultation story is referenced in the planning copy. Until permission is confirmed, the safe public wording is technical support for a wellness-space operator rather than a named endorsement.'
-  }
-];
+import IntroRateBanner from '../components/IntroRateBanner.astro';
 ---
 
-<Layout
-  title="Cleaning Case Studies | High Quality Clean London"
-  description="Founder-led High Quality Clean case studies and proof-safe client stories for London homes, Chelsea property support, turnovers and concierge care."
+<Layout 
+  title="Cleaning Case Studies & Gallery | High Quality Clean London"
+  description="Cleaning examples and service gallery for London homes, tenancy resets, property preparation and commercial spaces. See the types of work HQC can scope."
 >
   <Header />
 
-  <main class="page-transition pt-16">
-    <HeroSection
-      title="Case studies with real proof, carefully told"
-      subtitle="Named client stories are used where they already exist in HQC copy. Approval-gated examples are framed cautiously, without invented badges, client logos or unsupported claims."
-      imageSrc="/images/instock/IMG-20250812-WA0018.jpg"
-      imageAlt="Premium London apartment interior prepared for calm property care"
-      primaryCta={{
-        text: 'Read Featured Stories',
-        href: '#featured-stories'
-      }}
-      secondaryCta={{
-        text: 'Request Your Personalised Quote',
-        href: '/quote/',
-        icon: 'fas fa-paper-plane'
-      }}
-      trustBadges={[
-        { icon: 'fas fa-book-open', text: 'Existing stories first' },
-        { icon: 'fas fa-camera', text: 'Local proof imagery' },
-        { icon: 'fas fa-shield-alt', text: 'Approval-gated claims' }
-      ]}
-      backgroundClass="bg-night"
-    />
+  <main class="page-transition pt-16 relative">
+    <!-- Hero Section -->
+     <HeroSection 
+       title="Case Studies & Gallery"
+       subtitle="Browse practical examples of the spaces HQC can clean, from homes and kitchens to bathrooms, move-out resets and managed-property preparation."
+       imageSrc="/images/luxury-home/luxury-home-1.jpg"
+       imageAlt="Clean home interior showcase"
+       primaryCta={{
+         text: "View Featured Work",
+         href: "#featured-case"
+       }}
+       secondaryCta={{
+         text: "Browse Gallery",
+         href: "#gallery",
+         icon: "fas fa-th"
+       }}
+       trustBadges={[]}
+     />
+    <IntroRateBanner />
 
-    <section id="featured-stories" class="bg-white py-20 md:py-24">
+    <!-- Featured Case Study -->
+    <section id="featured-case" class="py-20 sm:py-24 bg-white fade-in">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Featured proof</p>
-          <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">
-            Client stories that show the HQC standard
-          </h2>
-          <p class="mt-5 text-lg leading-relaxed text-ink/74">
-            These stories focus on the practical pattern: listen carefully, scope properly, communicate clearly and leave the client with more trust than they had at the start.
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Example Cleaning Scope</h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: rgba(14, 14, 16, 0.7);">
+            An example of how a larger home clean can be scoped before a deadline
           </p>
         </div>
 
-        <div class="mt-14 space-y-10">
-          {featuredStories.map((story, index) => (
-            <article class="grid overflow-hidden rounded-[2rem] border border-stone bg-porcelain shadow-soft lg:grid-cols-2">
-              <div class={index % 2 === 1 ? 'lg:order-2' : ''}>
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <!-- Before/After Comparison -->
+          <div>
+            <div class="ba-container" style="aspect-ratio: 4/3;">
+              <img
+                class="ba-svg"
+                src="/images/before-after/transformation-mayfair-improved.png"
+                alt="Kitchen before deep cleaning - showing daily wear and accumulated grime"
+                loading="lazy"
+              />
+              <div class="ba-after-wrap" style="width: 50%">
                 <img
-                  src={story.image}
-                  alt={story.imageAlt}
-                  class="h-full min-h-[22rem] w-full object-cover"
+                  class="ba-svg"
+                  src="/images/before-after/transformation-mayfair.png"
+                  alt="Kitchen after comprehensive cleaning - gleaming surfaces and pristine finish"
                   loading="lazy"
                 />
               </div>
-              <div class="p-6 md:p-10">
-                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brass">{story.eyebrow}</p>
-                <h3 class="mt-3 font-serif text-3xl font-semibold text-night">{story.title}</h3>
-                <p class="mt-2 text-sm font-semibold text-ink/58">{story.location}</p>
-                <div class="mt-6 grid gap-5 text-ink/74">
-                  <div>
-                    <h4 class="font-semibold text-night">Challenge</h4>
-                    <p class="mt-2 leading-relaxed">{story.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-night">HQC response</h4>
-                    <p class="mt-2 leading-relaxed">{story.response}</p>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-night">Outcome</h4>
-                    <p class="mt-2 leading-relaxed">{story.outcome}</p>
-                  </div>
-                </div>
-                <blockquote class="mt-6 rounded-2xl border-l-4 border-brass bg-white p-5 font-serif text-xl text-night">
-                  “{story.quote}”
-                </blockquote>
+              <div class="ba-handle" style="left: 50%">
+                <div class="ba-dot"></div>
               </div>
-            </article>
-          ))}
+            </div>
+            <div class="mt-4 flex justify-between text-sm" style="color: rgba(14, 14, 16, 0.6);">
+              <span>← Before</span>
+              <span>After →</span>
+            </div>
+          </div>
+
+          <!-- Case Study Details -->
+          <div>
+            <div class="mb-6">
+              <h3 class="font-serif text-2xl text-navy mb-2">Larger Home Deep Clean</h3>
+              <p class="text-gold font-medium mb-4">Deep clean • Multi-room property • Deadline-led preparation</p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div>
+                <h4 class="font-semibold text-navy mb-2">The Challenge</h4>
+                <p style="color: rgba(14, 14, 16, 0.7);">
+                  A lived-in property needed a clear cleaning plan before guests arrived. The priority was to agree rooms, surfaces, access and timing before work started.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-navy mb-2">Our Solution</h4>
+                <p style="color: rgba(14, 14, 16, 0.7);">
+                  The scope focused on kitchens, bathrooms, high-touch areas, visible dust, floors and final presentation, with any delicate surfaces flagged before cleaning.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-navy mb-2">Results</h4>
+                <p style="color: rgba(14, 14, 16, 0.7);">
+                  The property was prepared against the agreed checklist, with practical attention to the rooms and surfaces that mattered most for the deadline.
+                </p>
+              </div>
+            </div>
+
+            <!-- Scope Note -->
+            <div class="testimonial-card rounded-xl p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-[60px] h-[60px] rounded-full border-2 border-gold bg-gold/10 flex items-center justify-center">
+                  <i class="fas fa-clipboard-check text-gold text-xl" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-navy">Proof note</h5>
+                  <p class="text-sm" style="color: rgba(14, 14, 16, 0.6);">Example scope, not a named client claim</p>
+                </div>
+              </div>
+              <blockquote class="text-navy italic">
+                This page uses general cleaning examples while named client case studies, review counts and regulated proof claims remain subject to evidence and approval.
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Images Grid -->
+        <div class="grid md:grid-cols-3 gap-6">
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop&crop=center&q=80"
+              alt="Pristine kitchen with gleaming marble countertops"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Kitchen Restoration</h3>
+                <p>Carrara marble deep-cleaned and sealed</p>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop&crop=center&q=80"
+              alt="Elegant living room with restored period features"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Drawing Room</h3>
+                <p>Period furniture and antiques carefully restored</p>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=400&h=300&fit=crop&crop=center&q=80"
+              alt="Luxurious bathroom with gleaming fixtures"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Master Bathroom</h3>
+                <p>Victorian fixtures polished to perfection</p>
+              </div>
+            </div>
+          </figure>
         </div>
       </div>
     </section>
 
-    <TransformationGallery
-      title="Local proof images, not borrowed stock"
-      subtitle="Before-after details, local property imagery and team-at-work photos are used as grounded proof points. Any illustrative image should remain labelled as context, not a completed client claim."
-      ctaText="Read more client success stories"
-      ctaLink="/client-success-stories/"
-    />
-
-    <section class="bg-porcelain py-20 md:py-24">
+    <!-- Client Portfolio Gallery -->
+    <section id="gallery" class="py-20 sm:py-24 bg-mist fade-in">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Beyond cleaning</p>
-            <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">
-              Concierge care examples ready for approval
-            </h2>
-            <p class="mt-5 text-lg leading-relaxed text-ink/74">
-              These examples are useful because they show how HQC can step in around the home, not just clean it. They should remain proof-safe until photos, permissions and exact wording are signed off.
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Client Portfolio</h2>
+          <p class="text-lg max-w-3xl mx-auto mb-8" style="color: rgba(14, 14, 16, 0.7);">
+            A curated selection of our finest work across London's most prestigious addresses
+          </p>
+          
+          <!-- Filter Buttons -->
+          <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="filter-btn active px-6 py-2 rounded-full border border-gold bg-gold text-navy font-medium transition-all" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-gold text-gold bg-white font-medium transition-all hover:bg-gold hover:text-navy" data-filter="kitchen">
+              Kitchens
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-gold text-gold bg-white font-medium transition-all hover:bg-gold hover:text-navy" data-filter="bathroom">
+              Bathrooms
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-gold text-gold bg-white font-medium transition-all hover:bg-gold hover:text-navy" data-filter="living">
+              Living Areas
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-gold text-gold bg-white font-medium transition-all hover:bg-gold hover:text-navy" data-filter="exterior">
+              Exteriors
+            </button>
+          </div>
+        </div>
+
+        <!-- Masonry Gallery -->
+        <div class="masonry" id="gallery-container">
+          <!-- Kitchen Items -->
+          <article class="masonry-item gallery-item" data-category="kitchen" data-index="0">
+            <img
+              src="/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png"
+              alt="Clean kitchen with polished surfaces and appliances"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Mayfair Penthouse Kitchen</h3>
+                <p>Signature Clean™ • Marble restoration • 6 hours</p>
+                <div class="project-details">
+                  <span class="badge">Kitchen</span>
+                  <span class="location">Mayfair, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="masonry-item gallery-item" data-category="kitchen" data-index="1">
+            <img
+              src="/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png"
+              alt="Modern kitchen island with gleaming quartz countertops"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Chelsea Townhouse</h3>
+                <p>Deep clean • Kitchen surfaces • Scope by enquiry</p>
+                <div class="project-details">
+                  <span class="badge">Kitchen</span>
+                  <span class="location">Chelsea, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bathroom Items -->
+          <article class="masonry-item gallery-item" data-category="bathroom" data-index="2">
+            <img
+              src="/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png"
+              alt="Spa-like bathroom with immaculate fixtures and surfaces"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Belgravia Master Bath</h3>
+                <p>Signature Clean™ • Tile restoration • 4 hours</p>
+                <div class="project-details">
+                  <span class="badge">Bathroom</span>
+                  <span class="location">Belgravia, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="masonry-item gallery-item" data-category="bathroom" data-index="3">
+            <img
+              src="/images/luxury-home/luxurious-kensington-ensuite.png"
+              alt="Clean bathroom vanity with spotless mirror and fixtures"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Kensington Ensuite</h3>
+                <p>Essentials Clean™ • Weekly service • 2 hours</p>
+                <div class="project-details">
+                  <span class="badge">Bathroom</span>
+                  <span class="location">Kensington, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Living Areas -->
+          <article class="masonry-item gallery-item" data-category="living" data-index="4">
+            <img
+              src="/images/luxury-home/richmond-living-room.png"
+              alt="Elegant living room with pristine upholstery and polished surfaces"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Knightsbridge Drawing Room</h3>
+                <p>Living area clean • Dust and surface care • Scope by enquiry</p>
+                <div class="project-details">
+                  <span class="badge">Living Area</span>
+                  <span class="location">Knightsbridge, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="masonry-item gallery-item" data-category="living" data-index="5">
+            <img
+              src="/images/luxury-home/mayfair-home-hallway.png"
+              alt="Modern living space with immaculate glass surfaces and furniture"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Mayfair Apartment</h3>
+                <p>Signature Clean™ • Glass specialist • 3 hours</p>
+                <div class="project-details">
+                  <span class="badge">Living Area</span>
+                  <span class="location">Mayfair, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Exterior Items -->
+          <article class="masonry-item gallery-item" data-category="exterior" data-index="6">
+            <img
+              src="/images/luxury-home/belgravia-stonework.png"
+              alt="Pristine Georgian townhouse exterior with cleaned stonework"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Belgravia Townhouse</h3>
+                <p>Exterior restoration • Stone cleaning • 12 hours</p>
+                <div class="project-details">
+                  <span class="badge">Exterior</span>
+                  <span class="location">Belgravia, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="masonry-item gallery-item" data-category="exterior" data-index="7">
+            <img
+              src="/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png"
+              alt="Chelsea mews house with spotless exterior details"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Chelsea Mews</h3>
+                <p>Pressure washing • Window cleaning • 6 hours</p>
+                <div class="project-details">
+                  <span class="badge">Exterior</span>
+                  <span class="location">Chelsea, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Additional Items -->
+          <article class="masonry-item gallery-item" data-category="kitchen" data-index="8">
+            <img
+              src="/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png"
+              alt="Contemporary kitchen with pristine stainless steel appliances"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Hyde Park Apartment</h3>
+                <p>Kitchen clean • Appliance detail • Scope by enquiry</p>
+                <div class="project-details">
+                  <span class="badge">Kitchen</span>
+                  <span class="location">Hyde Park, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="masonry-item gallery-item" data-category="living" data-index="9">
+            <img
+              src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=380&fit=crop&crop=center&q=80"
+              alt="Clean bedroom with tidy linens and surfaces"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h3>Mayfair Master Suite</h3>
+                <p>Signature Clean™ • Textile care • 3 hours</p>
+                <div class="project-details">
+                  <span class="badge">Living Area</span>
+                  <span class="location">Mayfair, London</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cleaning Routes -->
+    <section class="py-20 sm:py-24 bg-navy text-white fade-in">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-4xl text-gold mb-4">Common Cleaning Routes</h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: rgba(255, 255, 255, 0.8);">
+            Use these examples to choose the closest route before requesting a quote.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="testimonial-card rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-[60px] h-[60px] rounded-full border-2 border-gold bg-gold/10 flex items-center justify-center">
+                <i class="fas fa-home text-gold text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gold">Home Cleaning</h3>
+                <p class="text-sm" style="color: rgba(255, 255, 255, 0.7);">Regular or one-off domestic scopes</p>
+              </div>
+            </div>
+            <blockquote class="text-white mb-4">
+              Kitchens, bathrooms, bedrooms, living areas, floors and high-touch points can be scoped around the household routine.
+            </blockquote>
+          </article>
+
+          <article class="testimonial-card rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-[60px] h-[60px] rounded-full border-2 border-gold bg-gold/10 flex items-center justify-center">
+                <i class="fas fa-key text-gold text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gold">Tenancy & Move-Out</h3>
+                <p class="text-sm" style="color: rgba(255, 255, 255, 0.7);">Checkout, re-let and handover support</p>
+              </div>
+            </div>
+            <blockquote class="text-white mb-4">
+              Scope can include kitchens, appliances, bathrooms, internal surfaces, floors and final presentation before review.
+            </blockquote>
+          </article>
+
+          <article class="testimonial-card rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-[60px] h-[60px] rounded-full border-2 border-gold bg-gold/10 flex items-center justify-center">
+                <i class="fas fa-building text-gold text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gold">Commercial Spaces</h3>
+                <p class="text-sm" style="color: rgba(255, 255, 255, 0.7);">Offices, shared areas and client-facing rooms</p>
+              </div>
+            </div>
+            <blockquote class="text-white mb-4">
+              Routines can be planned around opening hours, access notes, washrooms, kitchens, bins, meeting rooms and reception areas.
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Showcase -->
+    <section class="py-20 sm:py-24 bg-white fade-in">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">How Scopes Are Planned</h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: rgba(14, 14, 16, 0.7);">
+            A useful cleaning quote starts with the property type, access, deadline and the rooms or shared areas that matter most.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service Feature 1 -->
+          <div class="text-center">
+            <div class="w-20 h-20 bg-gold rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
+              <i class="fas fa-leaf text-white text-3xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-semibold text-navy text-xl mb-3">Surface Notes</h3>
+            <p style="color: rgba(14, 14, 16, 0.7);">
+              Flag delicate materials, appliances, limescale, heavy dust, pets or any products that should not be used.
             </p>
           </div>
-          <div class="grid gap-5 md:grid-cols-3">
-            {conciergeCare.map((item) => (
-              <article class="rounded-[1.5rem] border border-stone bg-white p-6 shadow-soft-sm">
-                <h3 class="font-serif text-2xl font-semibold text-night">{item.title}</h3>
-                <p class="mt-3 text-sm leading-relaxed text-ink/72">{item.text}</p>
-              </article>
-            ))}
+
+          <!-- Service Feature 2 -->
+          <div class="text-center">
+            <div class="w-20 h-20 bg-navy rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
+              <i class="fas fa-users text-white text-3xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-semibold text-navy text-xl mb-3">Access Details</h3>
+            <p style="color: rgba(14, 14, 16, 0.7);">
+              Share parking, keys, building contact, alarm and timing notes before the clean is booked.
+            </p>
+          </div>
+
+          <!-- Service Feature 3 -->
+          <div class="text-center">
+            <div class="w-20 h-20 bg-gold rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
+              <i class="fas fa-shield text-white text-3xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-semibold text-navy text-xl mb-3">Priority Areas</h3>
+            <p style="color: rgba(14, 14, 16, 0.7);">
+              Agree the must-finish areas first, especially for move-outs, viewings, commercial openings and deadline-led work.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-night py-20 text-white md:py-24">
-      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Start with your scope</p>
-        <h2 class="mt-3 font-serif text-3xl font-semibold md:text-5xl">
-          Tell us what calm needs to look like in your property.
-        </h2>
-        <p class="mt-5 text-lg leading-relaxed text-white/78">
-          Share the property type, location, access notes and what matters most. We will recommend the right route rather than forcing every home into the same package.
-        </p>
-        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-          <a href="/quote/" class="inline-flex items-center justify-center rounded-md bg-brass px-6 py-3 text-sm font-semibold text-night transition-colors hover:bg-brass/90">
-            Request Your Personalised Quote
-          </a>
-          <a href="/client-success-stories/" class="inline-flex items-center justify-center rounded-md border border-brass px-6 py-3 text-sm font-semibold text-brass transition-colors hover:bg-white/10">
-            Browse success stories
+    <!-- Proof-Gated Stories Section -->
+    <section class="py-20 sm:py-24 bg-navy text-white fade-in">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-4xl text-gold mb-4">Case Study Approval</h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: rgba(255, 255, 255, 0.8);">
+            Named client stories, testimonials, review counts and regulated proof claims should only be published once evidence and permission are confirmed.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div class="testimonial-card rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                <i class="fas fa-user text-navy text-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gold">Home Examples</h3>
+                <p class="text-sm" style="color: rgba(255, 255, 255, 0.7);">Publish only with approval</p>
+              </div>
+            </div>
+            <blockquote class="text-white mb-4">
+              Home examples can be added once photos, consent and wording have been checked.
+            </blockquote>
+          </div>
+
+          <div class="testimonial-card rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                <i class="fas fa-home text-navy text-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gold">Property Examples</h3>
+                <p class="text-sm" style="color: rgba(255, 255, 255, 0.7);">Keep claims evidence-backed</p>
+              </div>
+            </div>
+            <blockquote class="text-white mb-4">
+              Agent, landlord and property-manager examples should avoid named clients unless permission is explicit.
+            </blockquote>
+          </div>
+
+          <div class="testimonial-card rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                <i class="fas fa-cogs text-navy text-lg" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gold">Commercial Examples</h3>
+                <p class="text-sm" style="color: rgba(255, 255, 255, 0.7);">Confirm before naming businesses</p>
+              </div>
+            </div>
+            <blockquote class="text-white mb-4">
+              Office and business examples can describe the cleaning route without implying certification or client endorsement.
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a
+            href="/contact/"
+            class="inline-flex items-center px-8 py-4 bg-gold text-navy font-semibold rounded-lg border border-gold btn-hover focus-visible"
+          >
+            <i class="fas fa-book-open mr-2" aria-hidden="true"></i>
+            Discuss a Cleaning Scope
           </a>
         </div>
       </div>
     </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 md:py-24 bg-mist fade-in">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">
+          Ready to Scope Your Clean?
+        </h2>
+        <p class="text-lg max-w-3xl mx-auto mb-8" style="color: rgba(14, 14, 16, 0.7);">
+          Tell us the property type, postcode, access details and deadline so the enquiry can be routed to the right service.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/#quote"
+            class="inline-flex items-center px-8 py-4 bg-gold text-navy font-semibold rounded-lg border border-gold btn-hover focus-visible"
+          >
+            <i class="fas fa-calendar-check mr-2" aria-hidden="true"></i>
+            Request a Cleaning Quote
+          </a>
+          <a
+            href="/process/"
+            class="inline-flex items-center px-8 py-4 border-2 border-gold text-gold font-semibold rounded-lg btn-hover focus-visible bg-white"
+          >
+            <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>
+            Learn About Our Process
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- Gallery Carousel Modal -->
+  <div id="galleryModal" class="modal">
+    <div class="modal-header">
+      <button class="modal-close" aria-label="Close gallery">&times;</button>
+      <div class="modal-counter">
+        <span id="modalCurrentIndex">1</span> of <span id="modalTotalCount">10</span>
+      </div>
+    </div>
+    
+    <div class="modal-content">
+      <div class="carousel-container">
+        <!-- Navigation Arrows -->
+        <button class="carousel-nav carousel-prev" aria-label="Previous image">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="carousel-nav carousel-next" aria-label="Next image">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        
+        <!-- Main Image -->
+        <div class="carousel-main">
+          <img id="modalImage" src="" alt="" />
+        </div>
+        
+        <!-- Image Information -->
+        <div class="carousel-info">
+          <div class="info-content">
+            <h3 id="modalTitle" class="font-serif text-2xl text-gold mb-2"></h3>
+            <p id="modalDescription" class="text-white mb-3"></p>
+            <div class="modal-badges">
+              <span id="modalBadge" class="badge"></span>
+              <span id="modalLocation" class="location"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Thumbnail Strip -->
+  
+    </div>
+  </div>
 </Layout>
+
+<style>
+/* CSS Custom Properties */
+:root {
+  --color-ink: #0E0E10;
+  --color-mist: #F7F7F9;
+  --color-gold: #C9A961;
+  --color-navy: #2C3E50;
+  --color-night: #1c2833;
+}
+
+/* Custom Color Classes */
+.text-ink { color: var(--color-ink); }
+.text-mist { color: var(--color-mist); }
+.text-gold { color: var(--color-gold); }
+.text-navy { color: var(--color-navy); }
+.text-night { color: var(--color-night); }
+
+.bg-ink { background-color: var(--color-ink); }
+.bg-mist { background-color: var(--color-mist); }
+.bg-gold { background-color: var(--color-gold); }
+.bg-navy { background-color: var(--color-navy); }
+.bg-night { background-color: var(--color-night); }
+
+.border-gold { border-color: var(--color-gold); }
+.border-navy { border-color: var(--color-navy); }
+
+/* Gallery specific styles */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(44, 62, 80, 0.8), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay-content h3 {
+  color: var(--color-gold);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-overlay-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+}
+
+/* Before/After comparison */
+.ba-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid var(--color-gold);
+}
+
+.ba-img,
+.ba-svg {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ba-after-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-gold);
+  cursor: ew-resize;
+  z-index: 10;
+}
+
+.ba-dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ba-dot::before {
+  content: "↔";
+  color: var(--color-navy);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Animations - Updated to match global styles */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Button hover effects - Subtle */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Gallery Modal Styles - Specific to prevent conflicts with global.css */
+#galleryModal {
+  display: none !important;
+  position: fixed;
+  z-index: 2000 !important;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile */
+  background-color: rgba(0,0,0,0.95);
+  overflow: auto;
+}
+
+#galleryModal.active {
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* Hide any conflicting modal systems when our gallery is active */
+#galleryModal.active ~ .modal:not(#galleryModal),
+#galleryModal.active ~ .basic-modal,
+body:has(#galleryModal.active) .modal:not(#galleryModal),
+body:has(#galleryModal.active) .basic-modal {
+  display: none !important;
+}
+
+/* Ensure other modals don't interfere */
+.modal:not(#galleryModal).active,
+.basic-modal.active {
+  z-index: 999 !important;
+}
+
+.modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+  min-height: 60px;
+}
+
+.modal-counter {
+  color: var(--color-gold);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.modal-close {
+  color: var(--color-gold);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(201, 169, 97, 0.1);
+  border: 2px solid var(--color-gold);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  transform: scale(1.05);
+}
+
+.modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px);
+  min-height: calc(100dvh - 60px); /* Dynamic viewport height for mobile */
+  position: relative;
+}
+
+.carousel-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: calc(100vh - 60px); /* Account for header only since thumbnail strip is removed */
+}
+
+.carousel-main {
+  max-width: 90%;
+  max-height: calc(100vh - 120px); /* Full height minus header */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-main img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  border: 2px solid var(--color-gold);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(201, 169, 97, 0.95);
+  color: var(--color-navy);
+  border: 2px solid var(--color-gold);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  visibility: visible !important;
+  opacity: 1;
+}
+
+.carousel-nav:hover,
+.carousel-nav:focus {
+  background: var(--color-gold);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+.carousel-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(44, 62, 80, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  z-index: 50;
+  max-width: calc(100% - 2rem);
+}
+
+.info-content h3 {
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.info-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.modal-badges {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.badge {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.location {
+  color: var(--color-gold);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.thumbnail-strip {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+  position: sticky;
+  bottom: 0;
+  z-index: 60;
+  min-height: 60px;
+  max-height: 80px;
+  pointer-events: auto;
+  isolation: isolate;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.25rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) transparent;
+  align-items: center;
+}
+
+.thumbnail-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnail-container::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 38px;
+  border-radius: 0.375rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  object-fit: cover;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.thumbnail:hover {
+  border-color: rgba(201, 169, 97, 0.7);
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(201, 169, 97, 0.5);
+}
+
+/* Project details styling */
+.project-details {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* Focus visible for keyboard navigation */
+.focus-visible:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Transition classes */
+.transition-colors {
+  transition: color 0.2s ease;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced CSS Grid Masonry layout - Fixed spacing and overlap prevention */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  grid-auto-flow: dense;
+  align-items: start;
+}
+
+.masonry-item {
+  display: block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0; /* Ensure no extra bottom margin */
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.masonry-item .gallery-item {
+  height: 100%;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Varying heights for masonry effect - using more predictable sizing */
+.masonry-item:nth-child(6n+1) {
+  height: 320px;
+}
+
+.masonry-item:nth-child(6n+2) {
+  height: 400px;
+}
+
+.masonry-item:nth-child(6n+3) {
+  height: 280px;
+}
+
+.masonry-item:nth-child(6n+4) {
+  height: 360px;
+}
+
+.masonry-item:nth-child(6n+5) {
+  height: 340px;
+}
+
+.masonry-item:nth-child(6n+6) {
+  height: 300px;
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) {
+  .masonry {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .masonry-item:nth-child(4n+1) {
+    height: 300px;
+  }
+
+  .masonry-item:nth-child(4n+2) {
+    height: 380px;
+  }
+
+  .masonry-item:nth-child(4n+3) {
+    height: 260px;
+  }
+
+  .masonry-item:nth-child(4n+4) {
+    height: 320px;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .masonry {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .masonry-item {
+    height: 280px !important; /* Uniform height on mobile for cleaner layout */
+  }
+}
+
+/* Additional spacing fixes */
+.masonry-item * {
+  box-sizing: border-box;
+}
+
+.masonry-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Filter states */
+.masonry-item.filtered-out {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.masonry-item.filtered-in {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* Modal responsive design */
+@media (max-width: 768px) {
+  .modal-header {
+    padding: 0.75rem 1rem;
+    min-height: 56px;
+  }
+  
+  .modal-counter {
+    font-size: 0.875rem;
+  }
+  
+  .modal-close {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  
+  .modal-content {
+    min-height: calc(100vh - 56px);
+  }
+  
+  .carousel-container {
+    padding: 0.5rem;
+    min-height: calc(100vh - 56px);
+    min-height: calc(100dvh - 56px);
+  }
+  
+  .carousel-main {
+    max-width: 95%;
+    max-height: calc(100vh - 112px);
+    max-height: calc(100dvh - 112px);
+  }
+  
+  .carousel-nav {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+  
+  .carousel-prev {
+    left: 0.5rem;
+  }
+  
+  .carousel-next {
+    right: 0.5rem;
+  }
+  
+  .carousel-info {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    padding: 1rem;
+    max-width: calc(100% - 1rem);
+  }
+  
+  .info-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .info-content p {
+    font-size: 0.875rem;
+  }
+  
+  .thumbnail-strip {
+    padding: 0.5rem 1rem;
+    min-height: 65px;
+    max-height: 70px;
+  }
+  
+  .thumbnail {
+    width: 45px;
+    height: 34px;
+  }
+  
+  .modal-badges {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header {
+    padding: 0.5rem;
+    min-height: 48px;
+  }
+  
+  .modal-close {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 1.25rem;
+  }
+  
+  .modal-content {
+    min-height: calc(100vh - 48px);
+  }
+  
+  .carousel-container {
+    padding: 0.25rem;
+    min-height: calc(100vh - 48px);
+    min-height: calc(100dvh - 48px);
+  }
+  
+  .carousel-main {
+    max-width: 98%;
+    max-height: calc(100vh - 96px);
+    max-height: calc(100dvh - 96px);
+  }
+  
+  .carousel-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+  
+  .carousel-prev {
+    left: 0.25rem;
+  }
+  
+  .carousel-next {
+    right: 0.25rem;
+  }
+  
+  .carousel-info {
+    left: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    padding: 0.75rem;
+    max-width: calc(100% - 0.5rem);
+  }
+  
+  .info-content h3 {
+    font-size: 1.125rem;
+  }
+  
+  .info-content p {
+    font-size: 0.8rem;
+  }
+  
+  .thumbnail-strip {
+    padding: 0.375rem;
+    min-height: 55px;
+    max-height: 60px;
+  }
+  
+  .thumbnail {
+    width: 40px;
+    height: 30px;
+  }
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 169, 97, 0.3);
+}
+</style>
+
+<script>
+// Case studies functionality is now handled by the main.js script
+// which automatically initializes when navigating to this page
+document.addEventListener('DOMContentLoaded', function() {
+  // Update copyright year
+  const yearElement = document.getElementById("current-year");
+  if (yearElement) {
+    yearElement.textContent = String(new Date().getFullYear());
+  }
+  
+  // Prevent conflicts with old modal implementations
+  // Remove any conflicting modal elements that might exist
+  const oldModal = document.getElementById('imageModal');
+  if (oldModal) {
+    oldModal.remove();
+    console.log('🧹 Removed conflicting old modal');
+  }
+  
+  // Ensure only our gallery modal functionality is active
+  const existingModalHandlers = document.querySelectorAll('.masonry-item[data-old-handler]');
+  existingModalHandlers.forEach(item => {
+    // Remove old event listeners by cloning and replacing the element
+    const newItem = item.cloneNode(true);
+    const parent = item.parentNode;
+    if (parent) {
+      parent.replaceChild(newItem, item);
+    }
+  });
+});
+</script>

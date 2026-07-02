@@ -18,15 +18,15 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
 }));
 ---
 
-<Layout
+<Layout 
   title="Cleaning Areas Across London & Surrey | High Quality Clean"
   description="Home, tenancy, office, property and facilities cleaning across London and selected Surrey areas. Check coverage and request a practical quote."
 >
   <Header />
-
+  
   <main class="page-transition pt-16">
     <!-- Page Header -->
-    <HeroSection
+    <HeroSection 
       title="Cleaning Coverage Across London and Surrey"
       subtitle="Find the right route for home cleaning, tenancy resets, office cleaning, property management and facilities support."
       imageSrc="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
@@ -37,7 +37,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
       }}
       secondaryCta={{
         text: "Request a Quote",
-        href: "/quote/",
+        href: "/#quote",
         icon: "fas fa-calendar-alt"
       }}
       trustBadges={[
@@ -121,7 +121,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-serif text-2xl md:text-3xl text-navy mb-8">Central London</h2>
         <div class="grid md:grid-cols-3 gap-8">
-
+          
           <!-- Mayfair -->
           <article class="area-card bg-white rounded-xl border border-gold shadow-soft overflow-hidden">
             <div class="image-container">
@@ -247,7 +247,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-serif text-2xl md:text-3xl text-navy mb-8">West London</h2>
         <div class="grid md:grid-cols-3 gap-8">
-
+          
           <!-- Kensington -->
           <article class="area-card bg-mist rounded-xl border border-gold shadow-soft overflow-hidden">
             <div class="image-container">
@@ -412,7 +412,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-serif text-2xl md:text-3xl text-navy mb-8">North London</h2>
         <div class="grid md:grid-cols-3 gap-8">
-
+          
           <!-- Hampstead -->
           <article class="area-card bg-white rounded-xl border border-gold shadow-soft overflow-hidden">
             <div class="image-container">
@@ -577,7 +577,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-serif text-2xl md:text-3xl text-navy mb-8">South London</h2>
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
+          
           <!-- Clapham/Battersea -->
           <article class="area-card bg-mist rounded-xl border border-gold shadow-soft overflow-hidden">
             <div class="image-container">
@@ -707,22 +707,22 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
           <p class="text-ink/70 mb-6 leading-relaxed">
             Enter your postcode to confirm service availability and get area-specific information.
           </p>
-
+          
           <div class="max-w-md mx-auto">
             <div class="flex gap-3">
-              <input
-                type="text"
+              <input 
+                type="text" 
                 placeholder="e.g. SW1A, W1K, NW3"
                 class="flex-1 rounded-full px-4 py-3 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-center"
               />
-            <a href="/quote/">
+            <a href="/#quote">
             <button type="button" class="rounded-full px-4 py-3 border border-gold/30 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-center bg-gold">
                 <i class="fas fa-search"></i>
               </button>
             </a>
             </div>
             <p class="text-xs text-ink/60 mt-3">
-              Don't see your area? <a href="/contact/" class="text-gold hover:underline">Contact us</a> — we're always expanding.
+              Don't see your area? <a href="/#quote" class="text-gold hover:underline">Contact us</a> — we're always expanding.
             </p>
           </div>
 
@@ -765,7 +765,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
+          
           <!-- Weybridge -->
           <article class="area-card bg-white rounded-xl border border-gold shadow-soft overflow-hidden">
             <div class="image-container">
@@ -899,24 +899,93 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
       </div>
     </section>
 
-    <!-- Quote Route CTA -->
+    <!-- Quote Form -->
     <section id="quote" class="py-14 md:py-18 bg-white">
       <div class="mx-auto max-w-3xl px-6">
-        <div class="rounded-2xl bg-mist p-6 md:p-8 border border-gold shadow-soft text-center">
-          <p class="text-gold text-sm font-semibold uppercase tracking-[0.2em] mb-3">Coverage enquiry</p>
-          <h2 class="font-serif text-2xl md:text-3xl text-navy">Request an Area Quote</h2>
+        <div class="text-center mb-8">
+          <h2 class="font-serif text-2xl md:text-3xl text-navy">Book Your Area</h2>
           <p class="mt-3 text-ink/70 leading-relaxed">
-            Share your postcode, property type and timing on the dedicated quote page so we can confirm coverage and the practical next step.
+            Tell us your location and requirements for a practical cleaning quote.
           </p>
-          <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/quote/" class="inline-flex items-center justify-center rounded-full bg-gold text-navy px-5 py-3 text-sm font-medium border border-gold shadow-[0_10px_30px_rgba(0,0,0,0.10),0_4px_10px_rgba(0,0,0,0.06)] transition-colors duration-200 no-underline hover:bg-gold/90">
-              Open Quote Form
-            </a>
-            <a href="/contact/" class="inline-flex items-center justify-center rounded-full border border-gold px-5 py-3 text-sm text-navy bg-white transition-colors duration-200 no-underline hover:bg-gold/5">
-              Contact the Team
-            </a>
-          </div>
         </div>
+        
+        <form class="grid gap-4 bg-mist rounded-2xl p-5 md:p-7 border border-gold shadow-soft" action="https://api.web3forms.com/submit" method="POST" onsubmit="event.preventDefault(); alert('Thank you — our local team will be in touch shortly.');">
+          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="text-sm">
+              <span class="block mb-1 text-navy font-medium">Full Name</span>
+              <input type="text" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Your name" />
+            </label>
+            <label class="text-sm">
+              <span class="block mb-1 text-navy font-medium">Email</span>
+              <input type="email" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="you@example.com" />
+            </label>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            <label class="text-sm">
+              <span class="block mb-1 text-navy font-medium">Postcode</span>
+              <input type="text" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="SW1A, W1K, NW3..." />
+            </label>
+            <label class="text-sm">
+              <span class="block mb-1 text-navy font-medium">Area</span>
+              <select class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
+                <option value="">Select your area...</option>
+                <optgroup label="Central London">
+                  <option>Mayfair</option>
+                  <option>Belgravia</option>
+                  <option>Knightsbridge</option>
+                </optgroup>
+                <optgroup label="West London">
+                  <option>Kensington</option>
+                  <option>Chelsea</option>
+                  <option>Notting Hill</option>
+                  <option>Holland Park</option>
+                </optgroup>
+                <optgroup label="North London">
+                  <option>Hampstead</option>
+                  <option>Highgate</option>
+                  <option>Primrose Hill</option>
+                  <option>St John's Wood</option>
+                </optgroup>
+                <optgroup label="South London">
+                  <option>Clapham</option>
+                  <option>Battersea</option>
+                  <option>Wandsworth</option>
+                </optgroup>
+                <optgroup label="Surrey">
+                  <option>Weybridge</option>
+                  <option>Hersham</option>
+                  <option>Walton-on-Thames</option>
+                </optgroup>
+              </select>
+            </label>
+            <label class="text-sm">
+              <span class="block mb-1 text-navy font-medium">Property Type</span>
+              <select class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
+                <option value="">Select...</option>
+                <option>House</option>
+                <option>Flat / Apartment</option>
+                <option>Rental property</option>
+                <option>Managed building</option>
+                <option>Office / commercial space</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <label class="text-sm">
+            <span class="block mb-1 text-navy font-medium">Local Requirements</span>
+            <textarea rows="4" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Parking restrictions, access notes, timing, building contacts, special considerations..."></textarea>
+          </label>
+          <div class="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
+            <label class="text-xs text-ink/80 inline-flex items-center gap-2">
+              <input type="checkbox" required class="accent-gold h-4 w-4 border border-navy/30" />
+              I confirm the postcode and access details are accurate.
+            </label>
+            <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">
+              <i class="fas fa-map-marker-alt mr-2"></i>Submit Area Request
+            </button>
+          </div>
+        </form>
       </div>
     </section>
   </main>

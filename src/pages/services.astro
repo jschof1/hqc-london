@@ -6,7 +6,6 @@ import HeroSection from '../components/HeroSection.astro';
 import TransformationGallery from '../components/TransformationGallery.astro';
 import IntroRateBanner from "../components/IntroRateBanner.astro";
 import CTABanner from '../components/CTABanner.astro';
-import ServiceTierComparison from '../components/ServiceTierComparison.astro';
 ---
 
 <Layout 
@@ -80,13 +79,204 @@ import ServiceTierComparison from '../components/ServiceTierComparison.astro';
     </section>
 
     <!-- 2.5. Service Tiers Detail -->
-    <ServiceTierComparison
-      sectionId="services"
-      title="Signature home cleaning tiers"
-      subtitle="Choose from Essentials Clean™, Signature Clean™ and WellClean™ Premium with clear inclusions, exclusions and indicative ranges before your personalised quote is confirmed."
-      eyebrow="Home cleaning tiers"
-      backgroundClass="bg-white"
-    />
+    <section id="services" class="py-20 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+              <h2 class="font-serif text-4xl md:text-6xl font-bold text-navy mb-4">
+                  Choose Your Perfect 
+                  <span class="text-gold">
+                      Clean
+                  </span>
+              </h2>
+              <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                  Three meticulously designed programmes, each tailored to your home, schedule, and lifestyle preferences
+              </p>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
+              <!-- Essentials Clean -->
+              <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
+                  <div class="flex items-start justify-between mb-6">
+                      <div class="tier-icon w-20 h-20 bg-gold rounded-2xl flex items-center justify-center shadow-lg">
+                          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+                          </svg>
+                      </div>
+                      <div class="pricing-hint text-sm text-gray-600">£100-£285+</div>
+                  </div>
+                  
+                  <div class="mb-6">
+                      <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+                          Essentials Clean™
+                      </h3>
+                      <p class="text-gray-600 font-medium mb-2">
+                          A pristine reset for everyday peace of mind
+                      </p>
+                      <p class="text-sm text-gray-500 italic">
+                          Ideal for busy professionals and families
+                      </p>
+                  </div>
+
+                  <ul class="space-y-3 mb-8">
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Standard home cleaning
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Kitchen & bathroom hygiene
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Dusting, hoovering, bins
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Light refresh of main spaces
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Floors mopped & rubbish emptied
+                      </li>
+                  </ul>
+
+                  <a href="/#quote" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Get Started
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- Signature Clean (Most Popular) -->
+              <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
+                  <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-navy text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
+                  
+                  <div class="flex items-start justify-between mb-6">
+                      <div class="tier-icon w-20 h-20 bg-navy rounded-2xl flex items-center justify-center shadow-lg">
+                          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/>
+                          </svg>
+                      </div>
+                      <div class="pricing-hint text-sm text-gray-600">£175-£320+</div>
+                  </div>
+                  
+                  <div class="mb-6">
+                      <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+                          Signature Clean™
+                      </h3>
+                      <p class="text-gray-600 font-medium mb-2">
+                          Our most requested – deeper detail, care, and attention
+                      </p>
+                      <p class="text-sm text-gray-500 italic">
+                          Tailored to your lifestyle
+                      </p>
+                  </div>
+
+                  <ul class="space-y-3 mb-8">
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Everything in Essentials, plus:
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Deeper attention to detail
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Interior windows & upholstery vacuuming
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Inside fridge & microwave
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Premium finishing touches
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Linen changed (on request)
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-navy rounded-full mr-3"></span>
+                          Scented finishing touches
+                      </li>
+                  </ul>
+
+                  <a href="/#quote" class="inline-flex items-center justify-center w-full px-6 py-3 bg-navy text-white font-semibold rounded-xl hover:bg-navy/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Choose Signature
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+
+              <!-- WellClean Premium -->
+              <div class="card relative rounded-3xl border-2 border-gold p-8 bg-white shadow-soft hover:shadow-lg transform hover:-translate-y-2 transition-all duration-400">
+                  <div class="absolute -top-3 right-4 bg-gradient-to-r from-gold to-yellow-500 text-navy px-3 py-1 rounded-full text-xs font-bold">FLAGSHIP</div>
+                  
+                  <div class="flex items-start justify-between mb-6">
+                      <div class="tier-icon w-20 h-20 bg-gold rounded-2xl flex items-center justify-center shadow-lg">
+                          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
+                          </svg>
+                      </div>
+                      <div class="pricing-hint text-sm text-gray-600">£250-£375+</div>
+                  </div>
+                  
+                  <div class="mb-6">
+                      <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">
+                          WellClean™
+                      </h3>
+                      <p class="text-gray-600 font-medium mb-2">
+                          Flagship Wellness Offering
+                      </p>
+                      <p class="text-sm text-gray-500 italic">
+                          For wellness studios, spa clients, luxury homes
+                      </p>
+                  </div>
+
+                  <ul class="space-y-3 mb-8">
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Everything in Signature, plus:
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Steam or chemical-free options
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Spa-grade sanitisation of touchpoints
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Aromatherapy scenting (optional)
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Personalised cleaner briefing
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          Deep degreasing & eco-conscious disinfecting
+                      </li>
+                      <li class="feature-item text-sm text-gray-700 flex items-center">
+                          <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                          High dusting & detailing of fixtures
+                      </li>
+                  </ul>
+                  <a href="/#quote" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Go WellClean™
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </section>
 
     <!-- 2.6. Specialised Services -->
     <section class="py-20 sm:py-24 bg-navy">
@@ -173,9 +363,9 @@ import ServiceTierComparison from '../components/ServiceTierComparison.astro';
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                           </svg>
                       </div>
-                      <h4 class="font-semibold text-gold">WellClean™ Studio Edition</h4>
+                      <h4 class="font-semibold text-gold">WellClean™ Deep Cleaning</h4>
                   </div>
-                  <p class="text-white/80 text-sm mb-3">Cleaning support for spas, saunas, cold plunges and wellness studios, scoped around touchpoints, limescale, hygiene and guest confidence.</p>
+                  <p class="text-white/80 text-sm mb-3">Flagship deep cleaning for luxury homes and wellness spaces. Limescale removal, air purity, hygiene.</p>
                   <p class="text-gold text-sm font-medium italic mb-4">"Trust at a wellness level"</p>
                   <a href="/services/deep-cleaning/" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
                       Learn More
@@ -213,10 +403,10 @@ import ServiceTierComparison from '../components/ServiceTierComparison.astro';
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M7 4h10M9 9h6m-6 4h6"/>
                           </svg>
                       </div>
-                      <h4 class="font-semibold text-gold">HQC Concierge Laundry</h4>
+                      <h4 class="font-semibold text-gold">Ironing & Laundry</h4>
                   </div>
                   <p class="text-white/80 text-sm mb-3">Wellness-grade care, luxury presentation, trustworthy consistency — far beyond the bulk wash-and-fold apps.</p>
-                  <p class="text-gold text-sm font-medium italic mb-4">"Your Home, Your Wardrobe, Five-Star Clean"</p>
+                  <p class="text-gold text-sm font-medium italic mb-4">"Your Home, Your Wardrobe, Clearly Scoped Clean"</p>
                   <a href="/services/ironing-and-laundry/" class="inline-flex items-center text-white/80 hover:text-gold transition-colors text-sm">
                       Learn More
                       <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -227,8 +417,8 @@ import ServiceTierComparison from '../components/ServiceTierComparison.astro';
           </div>
 
           <div class="text-center mt-12">
-              <p class="text-white/80 text-sm mb-6">Specialised services can be booked separately or added to your home, commercial or property-team scope</p>
-              <a href="/quote/" class="inline-flex items-center justify-center px-8 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+              <p class="text-white/80 text-sm mb-6">All Specialised services can be booked separately or added to your regular cleaning programme</p>
+              <a href="/#quote" class="inline-flex items-center justify-center px-8 py-3 bg-gold text-navy font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                   Enquire About Specialised Services
                   <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -238,22 +428,92 @@ import ServiceTierComparison from '../components/ServiceTierComparison.astro';
       </div>
     </section>
 
-    <!-- 2.7. Pricing and fit language -->
+    <!-- 2.7. Transparent Pricing Structure -->
     <section class="py-20 sm:py-24 bg-white">
-      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div class="rounded-3xl border border-gold/25 bg-cream p-8 text-center shadow-soft-sm md:p-12">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-gold">Bespoke quote, clear tiering</p>
-          <h2 class="mt-3 font-serif text-3xl font-semibold text-navy md:text-5xl">Pricing is guided by the standard you want to feel</h2>
-          <p class="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-ink/75">
-            The ranges above are indicative. Your final quote reflects size, condition, frequency, access, add-ons and the level of calm, precision and consistency required. HQC is not positioned as the cheapest cleaner, it is for clients who want the clean to feel considered and dependable.
-          </p>
-          <a href="/quote/" class="mt-8 inline-flex items-center justify-center rounded-xl bg-navy px-8 py-3 font-semibold text-white transition duration-300 hover:bg-navy/90">
-            Request Your Personalised Quote
-            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+              <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy mb-4">
+                  Transparent 
+                  <span class="text-gold">
+                      Pricing
+                  </span>
+              </h2>
+              <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                  Clear, upfront pricing based on property size — no hidden fees, no surprises
+              </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-navy/5 to-gold/5 rounded-2xl p-8 md:p-12 border border-gold/20">
+              <div class="overflow-x-auto">
+                  <table class="w-full text-sm">
+                      <thead>
+                          <tr class="border-b-2 border-gold/30">
+                              <th class="text-left p-4 font-semibold text-navy">Service Tier</th>
+                              <th class="text-center p-4 font-semibold text-navy">Studio/1-Bed</th>
+                              <th class="text-center p-4 font-semibold text-navy">2-Bed</th>
+                              <th class="text-center p-4 font-semibold text-navy">3-Bed</th>
+                              <th class="text-center p-4 font-semibold text-navy">4-Bed+</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="border-b border-gold/20">
+                              <td class="p-4 font-semibold text-navy">Essentials Clean™</td>
+                              <td class="p-4 text-center text-ink/70">£100 – £170</td>
+                              <td class="p-4 text-center text-ink/70">£175 – £240</td>
+                              <td class="p-4 text-center text-ink/70">£245 – £280</td>
+                              <td class="p-4 text-center text-ink/70">£285+</td>
+                          </tr>
+                          <tr class="border-b border-gold/20 bg-gold/5">
+                              <td class="p-4 font-semibold text-navy">Signature Clean™</td>
+                              <td class="p-4 text-center text-ink/70">£175 – £200</td>
+                              <td class="p-4 text-center text-ink/70">£245 – £260</td>
+                              <td class="p-4 text-center text-ink/70">£285 – £315</td>
+                              <td class="p-4 text-center text-ink/70">£320+</td>
+                          </tr>
+                          <tr class="border-b border-gold/20">
+                              <td class="p-4 font-semibold text-navy">WellClean™ Premium</td>
+                              <td class="p-4 text-center text-ink/70">£250 – £270</td>
+                              <td class="p-4 text-center text-ink/70">£280 – £310</td>
+                              <td class="p-4 text-center text-ink/70">£325 – £350</td>
+                              <td class="p-4 text-center text-ink/70">£375+</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm text-ink/70">
+                  <div class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-gold rounded-full mt-2"></div>
+                      <div>
+                          <span class="font-medium text-navy">Add-ons</span> (oven clean, inside fridge, carpet, etc.) are priced separately based on need
+                      </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-gold rounded-full mt-2"></div>
+                      <div>
+                          <span class="font-medium text-navy">Repeat clients</span> receive loyalty pricing or bundled packages
+                      </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-gold rounded-full mt-2"></div>
+                      <div>
+                          <span class="font-medium text-navy">All pricing</span> does not include VAT, and full insurance cover
+                      </div>
+                  </div>
+              </div>
+
+              <div class="mt-8 text-center">
+                  <p class="text-ink/60 italic mb-4">
+                      Indicative pricing — final quotes subject to property assessment and specific requirements
+                  </p>
+                  <a href="/#quote" class="inline-flex items-center justify-center px-8 py-3 bg-navy text-white font-semibold rounded-xl hover:bg-navy/90 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Get Your Exact Quote
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
       </div>
     </section>
 
@@ -316,25 +576,120 @@ import ServiceTierComparison from '../components/ServiceTierComparison.astro';
     <!-- 10. Final CTA Banner -->
     <CTABanner />
 
-    <!-- Quote Route CTA -->
+    <!-- Quote Form -->
     <section id="quote" class="py-24 md:py-32 bg-white">
       <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div class="rounded-2xl bg-navy p-8 md:p-12 border border-gold/50 shadow-xl text-center">
-          <p class="text-gold text-sm font-semibold uppercase tracking-[0.2em] mb-3">Secure quote route</p>
-          <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">Request Your Personalised Quote</h2>
-          <p class="text-white/80 text-lg max-w-2xl mx-auto">
-            Tell us about your service, property and preferred outcome on the dedicated quote page so we can respond with the right scope.
-          </p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/quote/" class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 text-base font-medium border border-gold hover:bg-gold/90 transition-colors">
-              <i class="fas fa-paper-plane mr-2"></i>
-              Open Quote Form
-            </a>
-            <a href="/contact/" class="inline-flex items-center justify-center rounded-md border border-gold text-gold px-6 py-3 text-base font-medium hover:bg-gold/10 transition-colors">
-              Speak to the Team
-            </a>
-          </div>
+        <div class="text-center mb-12">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Get Your Personalised Quote</h2>
+          <p class="text-slate-600 text-lg">Tell us about your home and preferences</p>
         </div>
+        <form
+          class="bg-navy rounded-2xl p-8 md:p-12 border border-gold/50 shadow-xl"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');"
+        >
+          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-user text-gold"></i>
+                Full Name
+              </span>
+              <input
+                type="text"
+                required
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+                placeholder="Your name"
+              />
+            </label>
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-envelope text-gold"></i>
+                Email
+              </span>
+              <input
+                type="email"
+                required
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+                placeholder="you@example.com"
+              />
+            </label>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6 mb-6">
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-gold"></i>
+                Postcode
+              </span>
+              <input
+                type="text"
+                required
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+                placeholder="SW1, W8…"
+              />
+            </label>
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-home text-gold"></i>
+                Property Type
+              </span>
+              <select
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-2 focus:ring-gold/20"
+                required
+              >
+                <option value="">Select…</option>
+                <option>Townhouse</option>
+                <option>Penthouse</option>
+                <option>Apartment</option>
+                <option>Mews</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="block mb-2 text-white font-medium flex items-center gap-2">
+                <i class="fas fa-sparkles text-gold"></i>
+                Preferred Tier
+              </span>
+              <select
+                class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-2 focus:ring-gold/20"
+                required
+              >
+                <option value="">Select…</option>
+                <option>Essentials Clean™</option>
+                <option>Signature Clean™</option>
+                <option>WellClean™</option>
+              </select>
+            </label>
+          </div>
+          <label class="block mb-8">
+            <span class="block mb-2 text-white font-medium flex items-center gap-2">
+              <i class="fas fa-comment text-gold"></i>
+              Notes & Preferences
+            </span>
+            <textarea
+              rows="4"
+              class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
+              placeholder="Surfaces, sensitivities, schedule, access requirements…"
+            ></textarea>
+          </label>
+          <div
+            class="flex flex-col md:flex-row md:items-center gap-6 md:justify-between"
+          >
+            <label
+              class="text-sm text-white/80 inline-flex items-start gap-3"
+            >
+              <input type="checkbox" required class="accent-gold mt-1" />
+              <span>I understand this is a premium service with bespoke pricing tailored to my specific requirements.</span>
+            </label>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-6 py-3 text-base font-medium border border-gold hover:bg-gold/90 transition-colors min-w-[200px]"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>
+              Submit Request
+            </button>
+          </div>
+        </form>
       </div>
     </section>
   </main>

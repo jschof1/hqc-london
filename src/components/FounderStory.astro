@@ -23,95 +23,96 @@ export interface Props {
   backgroundColor?: string;
 }
 
-const defaultBiography =
-  "I started High Quality Clean with just two things: a mop and a mindset. After years in technical engineering, I knew how to build systems. But during lockdown, I saw a bigger need, people did not just want clean homes. They wanted peace. Dignity. Trust. HQC became my way of delivering that and empowering others to do the same.";
-
 const {
   name = "Pedro",
-  title = "Meet Pedro, Founder of High Quality Clean",
-  biography = defaultBiography,
+  title = "Meet Pedro",
+  biography = "After a decade serving luxury hospitality, Pedro founded High Quality Clean to bring hotel-grade methods and concierge etiquette to private homes. Every detail is considered; every visit is calm, discreet, and precise.",
   image = "/images/pedro.jpg",
-  imageAlt = "Pedro, founder of High Quality Clean",
+  imageAlt = "Pedro - Founder and luxury service expert",
   qualifications = [
     { title: "Bachelor's Degree - Chemical Engineering" },
     { title: "Masters in Digital Technology Solutions" },
+    { title: "Quality process and service-scope training" },
     { title: "Certified Quality Auditor (CQA)" },
     { title: "Chartered Chemical Engineering (ICHemE)" },
     { title: "Chartered Quality Professional (CQI)" },
-    { title: "Prochem Certificate 2025/036 - Professional Cleaning & Upholstery" },
-    { title: "Prochem Certificate 2025/132 - Carpets, Rugs & Soft Floor Coverings" }
+    { title: "Prochem Certified - Upholstery Care (#2025/036)" },
+    { title: "Prochem Certified - Carpet & Rug Care (#2025/132)" },
+    { title: "Wellness Consulting Specialist" }
   ],
-  qualificationsTitle = "Credentials already used in HQC copy",
+  qualificationsTitle = "Professional Accreditations",
   features = [
-    { icon: "fas fa-list-check", text: "Scope-led cleaning plans before work begins" },
-    { icon: "fas fa-hand-holding-heart", text: "Peace, dignity and trust as part of the service standard" },
-    { icon: "fas fa-vial", text: "Technical thinking applied to surfaces, products and routines" },
-    { icon: "fas fa-camera", text: "Clear communication and practical handover notes" }
+    { icon: "fas fa-check-circle", text: "Quiet presence, precise standards" },
+    { icon: "fas fa-check-circle", text: "Surface‑safe methods, long‑term care" },
+    { icon: "fas fa-check-circle", text: "Predictable outcomes, photo handovers" },
+    { icon: "fas fa-check-circle", text: "Engineering precision meets wellness expertise" }
   ],
-  ctaText = "Request Your Personalised Quote",
-  ctaLink = "/quote/",
+  ctaText = "Speak with Pedro's Team",
+  ctaLink = "#quote",
   className = "",
-  backgroundColor = "bg-porcelain"
+  backgroundColor = "bg-mist"
 } = Astro.props;
 ---
 
 <section class={`py-20 sm:py-24 ${backgroundColor} ${className}`}>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-      <figure class="overflow-hidden rounded-[2rem] border border-stone bg-white shadow-soft">
-        <img
-          src={image}
-          alt={imageAlt}
-          class="h-auto w-full object-cover lg:h-[44rem]"
-          loading="lazy"
-        />
-      </figure>
-
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Founder credibility</p>
-        <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">
-          {title}
-        </h2>
-        <div class="mt-6 space-y-4 text-lg leading-relaxed text-ink/76">
-          <p>{biography}</p>
-          <p>
-            {name}'s background gives HQC its blend of structure and care: cleaning is planned, products are considered, and communication stays calm before, during and after the visit.
-          </p>
-        </div>
-
+    <div
+      class="grid md:grid-cols-5 gap-8 items-center md:items-start md:gap-12"
+    >
+      <!-- Founder Image -->
+      <div class="md:col-span-3 flex justify-center items-center">
+        <figure
+          class="rounded-2xl overflow-hidden border border-gold shadow-soft w-full max-w-sm sm:max-w-md md:max-w-none md:w-[32rem]"
+        >
+          <img
+            src={image}
+            alt={imageAlt}
+            class="w-full h-auto md:h-[32rem] object-cover"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+      
+      <!-- Founder Details -->
+      <div class="md:col-span-2">
+        <h2 class="font-serif text-3xl md:text-6xl">{title}</h2>
+        <p class="mt-4 text-ink/80 text-lg md:text-xl">
+          {biography}
+        </p>
+        
+        <!-- Professional Qualifications -->
         {qualifications.length > 0 && (
-          <div class="mt-8 rounded-[1.5rem] border border-stone bg-white p-6 shadow-soft-sm">
-            <h3 class="font-serif text-2xl font-semibold text-night">{qualificationsTitle}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-ink/64">
-              Exact public credentials are limited here to qualifications already present in current HQC site copy. Additional regulated claims should be confirmed before publishing.
-            </p>
-            <div class="mt-5 grid gap-3 text-sm text-ink/76 sm:grid-cols-2">
+          <div class="mt-6 bg-white/50 rounded-xl p-4 border border-gold/20">
+            <h3 class="font-semibold text-navy mb-3">{qualificationsTitle}</h3>
+            <div class="grid md:grid-cols-2 gap-3 text-sm text-ink/70">
               {qualifications.map((qualification) => (
-                <div class="flex items-start gap-3">
-                  <span class="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-brass"></span>
-                  <span>{qualification.title}</span>
+                <div class="flex items-center">
+                  <span class="w-2 h-2 bg-gold rounded-full mr-2"></span>
+                  {qualification.title}
                 </div>
               ))}
             </div>
           </div>
         )}
 
+        <!-- Features/Benefits -->
         {features.length > 0 && (
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="mt-6 space-y-3">
             {features.map((feature) => (
-              <div class="rounded-2xl border border-stone bg-white p-5 shadow-soft-sm">
-                <i class={`${feature.icon} text-brass`} aria-hidden="true"></i>
-                <p class="mt-3 text-sm leading-relaxed text-ink/76">{feature.text}</p>
+              <div class="flex items-center text-ink/80 text-lg">
+                <i class={`${feature.icon} text-gold text-xl mr-3`} aria-hidden="true"></i>
+                <span>{feature.text}</span>
               </div>
             ))}
           </div>
         )}
-
+        
+        <!-- CTA Button -->
         {ctaText && ctaLink && (
-          <div class="mt-8">
+          <div class="mt-6">
             <a
               href={ctaLink}
-              class="inline-flex items-center justify-center rounded-md bg-night px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-night/90"
+              class="inline-flex items-center rounded-md bg-navy text-white px-4 py-2 text-sm border border-gold"
             >
               {ctaText}
             </a>

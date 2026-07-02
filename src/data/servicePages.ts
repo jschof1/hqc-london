@@ -31,19 +31,19 @@ export const servicePages: ServicePageEntry[] = [
   {
     slug: 'property-and-facilities-cleaning',
     routeKey: 'propertyAndFacilities',
-    title: 'Property Team Support',
-    seoTitle: 'Property Team Cleaning Support London | HQC',
+    title: 'Property Cleaning Support',
+    seoTitle: 'Property & Facilities Cleaning London | HQC',
     metaDescription:
-      'Commercial and property-team cleaning support in London for agents, landlords, property managers and developers. Void, handover, communal and portfolio cleaning scopes.',
-    h1: 'Commercial cleaning support for London property teams',
+      'Property cleaning support in London for agents, landlords, property managers and developers. Void, handover, communal and portfolio cleaning scopes.',
+    h1: 'Property cleaning support for London agents, landlords and property managers',
     audience: 'Agents, landlords, property managers, block managers and developers',
     problem:
-      'Managed properties need to be ready for viewings, handovers, residents or next occupants, often with multiple contacts and tight timing.',
+      'Properties need to be ready for viewings, handovers, residents or next occupants, often with multiple contacts and tight timing.',
     positioning:
-      'A secondary commercial/property-team route for managed properties, voids, handovers, communal areas and repeat portfolio work.',
-    primaryCtaText: 'Discuss Property Team Support',
+      'Cleaning-led support for managed properties, voids, handovers, communal areas and repeat property work.',
+    primaryCtaText: 'Discuss Property Cleaning Support',
     primaryCtaUrl: '/quote/',
-    priority: 3,
+    priority: 1,
   },
   {
     slug: 'home-cleaning',
@@ -51,16 +51,16 @@ export const servicePages: ServicePageEntry[] = [
     title: 'Home Cleaning',
     seoTitle: 'Home Cleaning London | Regular, Deep & Move-Out Cleaning | HQC',
     metaDescription:
-      'Home cleaning in London with Essentials Clean, Signature Clean and WellClean Premium tiers for calm, precision and consistent presentation.',
-    h1: 'Home cleaning in London for calm, precision and consistency',
+      'Home cleaning in London for regular upkeep, deep cleans, end of tenancy, move-out and post-renovation work with clear scopes and careful handling.',
+    h1: 'Home cleaning in London without the standards slipping',
     audience: 'Households, busy professionals, families, tenants, landlords and homeowners',
     problem:
-      'A home needs regular upkeep, a first reset, or a deeper renewal without the owner managing every detail or accepting standards that drift.',
+      'A home needs regular upkeep, a first reset, or a one-off detailed clean without the owner managing every detail.',
     positioning:
-      'Premium home cleaning organised around Essentials Clean™, Signature Clean™ and WellClean™ Premium so the quote reflects the standard, finish and feeling you want at home.',
-    primaryCtaText: 'Request Your Personalised Quote',
+      'Practical premium home cleaning built around agreed scopes, careful handling and consistent presentation.',
+    primaryCtaText: 'Get a Home Cleaning Quote',
     primaryCtaUrl: '/quote/',
-    priority: 1,
+    priority: 2,
   },
   {
     slug: 'end-of-tenancy-cleaning',
@@ -187,16 +187,16 @@ export const servicePages: ServicePageEntry[] = [
     title: 'Commercial Cleaning',
     seoTitle: 'Commercial & Wellness Cleaning London | Offices, Studios & Client-Facing Spaces | HQC',
     metaDescription:
-      'Commercial and wellness cleaning in London for boutique offices, studios, gyms, clinics, spas, saunas, cold plunges and client-facing spaces needing consistent hygiene-led presentation.',
-    h1: 'Commercial cleaning for London offices, studios and wellness spaces',
-    audience: 'Boutique offices, wellness studios, spas, saunas, cold plunges, gyms, clinics and client-facing premises',
+      'Commercial and wellness cleaning in London for boutique offices, studios, gyms, clinics and client-facing spaces needing hygiene-led presentation.',
+    h1: 'Cleaning for London offices, studios and wellness spaces that need consistency',
+    audience: 'Boutique offices, studios, gyms, clinics, wellness spaces and client-facing premises',
     problem:
-      'Staff, visitors and clients notice hygiene, high-touch areas and presentation before they trust the space, especially where wellness facilities are part of the experience.',
+      'Staff, visitors and clients notice hygiene, high-touch areas and presentation before they trust the space.',
     positioning:
-      'Commercial cleaning for client-facing spaces and wellness operators, with careful scoping around hygiene, access, opening hours, spa-style touchpoints and the standard clients expect to feel.',
-    primaryCtaText: 'Request a Commercial Cleaning Quote',
+      'Commercial cleaning for client-facing spaces, with wellness language kept practical around hygiene, access and opening-hours fit.',
+    primaryCtaText: 'Discuss Commercial Cleaning',
     primaryCtaUrl: '/quote/',
-    priority: 2,
+    priority: 10,
   },
 ];
 

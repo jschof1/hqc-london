@@ -11,8 +11,8 @@ export interface Props {
   robots?: string;
 }
 
-const {
-  title,
+const { 
+  title, 
   description = "High Quality Clean provides practical premium cleaning for London homes, property teams and client-facing spaces.",
   robots = PRODUCTION_ROBOTS
 } = Astro.props;
@@ -155,7 +155,7 @@ const offerNodes = areaNodes.map((area) => ({
   '@type': 'Offer',
   '@id': `${area['@id']}-offer`,
   itemOffered: { '@id': area['@id'] },
-  url: `${baseUrl}/quote/`,
+  url: `${baseUrl}/#quote`,
   availability: 'https://schema.org/InStock',
   description: `Discuss cleaning support in ${area.name} with High Quality Clean.`
 }));
@@ -281,33 +281,33 @@ const schemaItem = {
     <title>{title}</title>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="95c24898-5333-41ef-8fbf-a17bcac067af"></script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <Schema item={schemaItem as any} />
   </head>
-  <body class="bg-porcelain text-ink font-sans antialiased">
+  <body class="bg-mist text-ink font-display antialiased">
     <slot />
     <Footer />
     <script src="../scripts/main.js"></script>
-    <script
+    <script 
       is:inline
-      src="https://widgets.leadconnectorhq.com/loader.js"
-      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="696e24618d6c38f8cfb1c78f" >
+      src="https://widgets.leadconnectorhq.com/loader.js"  
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+      data-widget-id="696e24618d6c38f8cfb1c78f" > 
     </script>
     <script is:inline>
       // Load Keak script after user interaction to prevent flashing
       (function() {
         let keakLoaded = false;
         let interactionOccurred = false;
-
+        
         function loadKeakScript() {
           if (keakLoaded || document.getElementById('keak-script')) {
             keakLoaded = true;
             return;
           }
-
+          
           const script = document.createElement('script');
           script.id = 'keak-script';
           script.src = 'https://zzontar2hsjaawcn.public.blob.vercel-storage.com/scripts/domain-402-httpshighqualityclean.co.uk.js';
@@ -316,7 +316,7 @@ const schemaItem = {
           document.head.appendChild(script);
           keakLoaded = true;
         }
-
+        
         // Load after user interaction (scroll, click, touch, keypress)
         function handleInteraction() {
           if (!interactionOccurred) {
@@ -325,12 +325,12 @@ const schemaItem = {
             setTimeout(loadKeakScript, 100);
           }
         }
-
+        
         // Listen for various user interactions
         ['scroll', 'click', 'touchstart', 'keydown'].forEach(eventType => {
           document.addEventListener(eventType, handleInteraction, { once: true, passive: true });
         });
-
+        
         // Fallback: Load after a delay if no interaction occurs
         // This ensures the script still loads for analytics purposes
         document.addEventListener('astro:page-load', () => {
@@ -345,7 +345,7 @@ const schemaItem = {
             }
           }, 1000);
         }, { once: false });
-
+        
         // Initial page load fallback
         if (document.readyState === 'complete') {
           setTimeout(() => {

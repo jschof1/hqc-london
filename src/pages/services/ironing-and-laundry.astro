@@ -6,13 +6,13 @@ import Header from '../../components/Header.astro';
 const ironingLaundryPage = {
     service: {
       hero: {
-        headline: "HQC Concierge Laundry: Your Home, Your Wardrobe, Five-Star Clean",
-        subheadline: "A 360-degree premium living service for laundry, dry cleaning coordination, wash and fold, wash and iron, ironing-only care, and Airbnb linen support by arrangement.",
+        headline: "Ironing & Laundry Service: Specialist Fabric Care in London",
+        subheadline: "From bespoke suits to delicate silks, our concierge laundry and ironing service delivers artisan care. Wellness-grade products, hand-finished pressing, and convenient pick-up & delivery.",
         badges: [
-          "Dry Cleaning Coordination",
-          "Wash & Fold Loads",
-          "Wash & Iron",
-          "Ironing Only"
+          "Bespoke Hand Ironing",
+          "Eco-Luxury Detergents",
+          "Pick-up & Delivery",
+          "Silk & Wool Specialists"
         ],
         cta: {
           text: "Schedule Your Collection",
@@ -20,51 +20,68 @@ const ironingLaundryPage = {
         }
       },
       trustbar: {
-        logos: [],
+        logos: [
+          {
+            src: "/images/logos/luxury-fabric-care-certified.svg",
+            alt: "Fabric Care Certified"
+          },
+          {
+            src: "/images/logos/savile-row-trusted.svg",
+            alt: "Trusted by Tailors"
+          },
+          {
+            src: "/images/logos/eco-luxury-accredited.svg",
+            alt: "Eco-Friendly Accredited"
+          },
+          {
+            src: "/images/logos/british-cleaning-council.svg",
+            alt: "BCC Member"
+          }
+        ],
         reviews: [
           {
-            text: "Weekly shirts, suit care and collection preferences can be scoped as a professional package.",
-            author: "Professional package",
+            text: "My shirts have never looked better. The hand-ironing finish is superb.",
+            author: "Jonathan P., Mayfair",
             rating: 5
           },
           {
-            text: "Family loads, bedding and ironing credits can be grouped into a practical recurring plan.",
-            author: "Family package",
+            text: "They saved my favourite silk dress. Incredible knowledge of fabrics.",
+            author: "Sarah F., Chelsea",
             rating: 5
           },
           {
-            text: "Sheets and towels for short-let turnovers can be discussed alongside Airbnb cleaning routes.",
-            author: "Airbnb partner package",
+            text: "So convenient. The pick-up and delivery service fits perfectly around my work.",
+            author: "David M., Canary Wharf",
             rating: 5
           }
         ]
       },
       painpoint: {
-        headline: "Laundry support that fits the way your home runs",
-        text: "HQC Concierge Laundry brings wardrobe and linen care into the same premium-living conversation as home cleaning. Choose dry cleaning coordination, wash and fold loads, wash and iron, ironing-only support or a recurring package for professionals, families or Airbnb hosts.",
+        headline: "Is Your Wardrobe Getting the Care It Deserves?",
+        text: "Standard dry cleaners and laundromats use harsh chemicals and industrial presses that damage fibers. For your investment pieces, you need a service that understands the difference between a cotton shirt and a silk blouse.",
         painpoints: [
           {
-            text: "Dry cleaning: suits, dresses, outerwear, casual wear and household textiles by arrangement"
+            text: "Harsh chemicals fading colours and weakening fabrics"
           },
           {
-            text: "Wash & Fold: regular 16kg, large 20kg and extra-large 25kg load options"
+            text: "Industrial pressing crushing buttons and flattening textures"
           },
           {
-            text: "Wash & Iron: service-wash loads with per-item ironing added where needed"
+            text: "Inconvenient drop-off and collection times"
           },
           {
-            text: "Ironing Only: per-item pressing for shirts, bedding and household textiles"
+            text: "Risk of damage to delicate items like silk and cashmere"
           },
           {
-            text: "Professional Package: weekly shirts plus suit-cleaning coordination"
+            text: "Lack of personal attention to stains or specific care instructions"
           },
           {
-            text: "Family and Airbnb Partner Packages: recurring loads, bedding, sheets, towels and pickup or delivery notes"
+            text: "Poor presentation and packaging wrinkling clothes before you wear them"
           }
         ]
       },
       serviceExplanation: {
-        headline: "The HQC Concierge Laundry Process",
+        headline: "Our Premium Laundry & Ironing Process",
         steps: [
           {
             icon: "fas fa-tshirt",
@@ -104,12 +121,12 @@ const ironingLaundryPage = {
           "Extend the life of your wardrobe with gentle, expert care",
           "Save hours of ironing and laundry time every week",
           "Look your professional best with perfectly pressed shirts and suits",
-          "Product preferences and sensitivity notes can be discussed before collection",
+          "Safe for sensitive skin and allergies thanks to eco-products",
           "Convenient door-to-door service saves you trips to the dry cleaner",
           "Care notes agreed for delicate or high-value items",
           "Flexible scheduling to fit your busy lifestyle",
           "Competitive pricing for a premium, hand-finished service",
-          "Care notes agreed for delicate, high-value or household items",
+          "Comprehensive insurance for total peace of mind",
           "Emergency express service available for last-minute needs"
         ]
       },
@@ -149,23 +166,23 @@ const ironingLaundryPage = {
         ]
       },
       socialProof: {
-        headline: "Package Options",
+        headline: "Client Reviews",
         reviews: [
           {
-            text: "Weekly shirts, one suit clean and ironing preferences can be scoped as a professional routine.",
-            author: "Professional Package"
+            text: "The best ironing service in London, hands down. My shirts are perfect every week.",
+            author: "Thomas H., Fulham"
           },
           {
-            text: "Two service washes, one bed set and ironing credits can be grouped for a family household.",
-            author: "Family Package"
+            text: "I trust them with my most expensive dresses. They really know what they are doing.",
+            author: "Amanda B., Kensington"
           },
           {
-            text: "Sheets and towels can be discussed alongside short-let pickup, delivery and turnover notes.",
-            author: "Airbnb Partner Package"
+            text: "Reliable, friendly, and high quality. The collection service is a lifesaver.",
+            author: "Chris R., Clapham"
           },
           {
-            text: "Dry cleaning, wash and fold, wash and iron, and ironing-only routes can be quoted separately.",
-            author: "Service menu"
+            text: "Finally, a laundry service that doesn't smell of chemicals. Love the eco-friendly approach.",
+            author: "Sophie L., Richmond"
           }
         ],
         cta: {
@@ -174,10 +191,10 @@ const ironingLaundryPage = {
         }
       },
       offer: {
-        headline: "Start With Your Laundry Architecture",
-        details: "Send the item types, load size, collection area, turnaround needs and whether this is home, professional, family or Airbnb laundry support.",
+        headline: "First Order Offer",
+        details: "New clients receive 20% off their first laundry and ironing order. Experience the premium difference today.",
         cta: {
-          text: "Request Laundry Support",
+          text: "Claim 20% Off",
           url: "/contact/laundry-consultation?offer=first20"
         }
       },
@@ -190,15 +207,15 @@ const ironingLaundryPage = {
           },
           {
             question: "Do you handle dry cleaning?",
-            answer: "Dry cleaning can be coordinated for suits, dresses, outerwear, casual wear and household textiles. Share item details so the route can be confirmed before collection."
+            answer: "Yes, we offer specialized eco-friendly dry cleaning for items that cannot be water washed."
           },
           {
             question: "How do I pay?",
             answer: "We send a secure digital invoice upon delivery of your items."
           },
           {
-            question: "What load sizes can you support?",
-            answer: "The supplied package architecture includes regular 16kg, large 20kg and extra-large 25kg wash-and-fold loads, plus wash-and-iron and ironing-only routes."
+            question: "Is there a minimum order?",
+            answer: "Yes, our minimum order for collection and delivery is £30."
           },
           {
             question: "Do you iron bedding?",
@@ -211,20 +228,20 @@ const ironingLaundryPage = {
         ]
       },
       finalCta: {
-        headline: "Build Your Concierge Laundry Plan",
+        headline: "Love Your Clothes Again",
         cta: {
           text: "Get in Touch",
           url: "/contact/laundry-consultation"
         },
-        subtext: "Your home, your wardrobe, five-star clean."
+        subtext: "Give your wardrobe the artisan care it deserves."
       }
     }
   };
 ---
 
 <Layout
-  title="HQC Concierge Laundry London | High Quality Clean"
-  description="HQC Concierge Laundry across London: dry cleaning coordination, wash and fold, wash and iron, ironing-only care, family packages and Airbnb linen support."
+  title="Ironing & Laundry Service London | High Quality Clean"
+  description="Concierge-grade ironing and laundry across London: shirts, linens, delicates and wardrobe care, hand-finished and beautifully presented. Pickup and drop-off available."
 >
   <Header />
   <ServiceTemplate service={ironingLaundryPage.service} />

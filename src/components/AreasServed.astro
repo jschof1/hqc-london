@@ -11,7 +11,7 @@ export interface AreaImage {
   caption: string;
   link?: string;
 }
-import CtaButton from './CtaButton.astro';
+import CtaButton from './CtaButton.astro';    
 export interface AreaLink {
   name: string;
   link: string;
@@ -34,178 +34,234 @@ export interface Props {
   ctaLink?: string;
 }
 
+
+
 const {
-  title = "Areas served across London",
-  subtitle = "HQC focuses on South West, Central and North West London, with select outer-London and Surrey support discussed by availability.",
+  title = "Areas We Serve",
+  subtitle = "Central and prime West London postcodes, plus select Surrey locations including Weybridge, Hersham, and Walton-on-Thames. If your area isn't listed, enquire—our concierge team can advise availability.",
   areasListText = [
-    { name: "Wandsworth", link: "/locations/london/wandsworth/" },
+    { name: "Belgravia", link: "/locations/london/belgravia/" },
     { name: "Chelsea", link: "/locations/london/chelsea/" },
     { name: "Kensington", link: "/locations/london/kensington/" },
-    { name: "Belgravia", link: "/locations/london/belgravia/" },
     { name: "Mayfair", link: "/locations/london/mayfair/" },
-    { name: "Hampstead", link: "/locations/london/hampstead/" }
+    { name: "Knightsbridge", link: "/locations/london/knightsbridge/" },
+    { name: "Surrey", link: "/areas/" }
   ],
-  mapImage = "/images/london.jpg",
-  mapImageAlt = "London skyline representing HQC coverage areas",
-  surreyTitle = "Select Surrey support by arrangement",
+mapImage = "/images/london.jpg",
+  mapImageAlt = "London map showing luxury neighborhoods",
+  surreyTitle = "Now Serving Select Surrey Locations",
   surreyLocations = [
     {
       name: "Weybridge",
-      postcode: "KT13",
+      postcode: "St Georges Hill KT13",
       link: "/locations/surrey/weybridge/"
     },
     {
-      name: "Hersham",
-      postcode: "KT12",
+      name: "Hersham", 
+      postcode: "Burwood Park KT12",
       link: "/locations/surrey/hersham/"
     },
     {
       name: "Walton-on-Thames",
-      postcode: "KT12",
+      postcode: "Ashley Park KT12",
       link: "/locations/surrey/walton-on-thames/"
     }
   ],
   featuredAreas = [
     {
-      src: "/images/areas/wandsworth-town.webp",
-      alt: "Wandsworth residential streets and homes",
-      caption: "South West London",
-      link: "/locations/london/wandsworth/"
+      src: "/images/areas/belgravia.webp",
+      alt: "Belgravia luxury Georgian architecture",
+      caption: "Belgravia SW1",
+      link: "/locations/london/belgravia/"
     },
     {
       src: "/images/areas/chelsea.webp",
-      alt: "Chelsea townhouses and premium London property",
-      caption: "Central London",
+      alt: "Chelsea luxury townhouses and tree-lined streets", 
+      caption: "Chelsea SW3",
       link: "/locations/london/chelsea/"
     },
     {
-      src: "/images/areas/hampstead.webp",
-      alt: "Hampstead homes and streets",
-      caption: "North West London",
-      link: "/locations/london/hampstead/"
+      src: "/images/areas/kensington.webp",
+      alt: "Kensington elegant Victorian mansions",
+      caption: "Kensington W8",
+      link: "/locations/london/kensington/"
+    }
+  ],
+  mobileAreas = [
+    {
+      src: "/images/areas/belgravia.webp",
+      alt: "Belgravia",
+      caption: "SW1",
+      link: "/locations/london/belgravia/"
+    },
+    {
+      src: "/images/areas/chelsea.webp",
+      alt: "Chelsea", 
+      caption: "SW3",
+      link: "/locations/london/chelsea/"
+    },
+    {
+      src: "/images/areas/kensington.webp",
+      alt: "Kensington",
+      caption: "W8",
+      link: "/locations/london/kensington/"
     }
   ],
   className = "",
   sectionId = "areas",
-  backgroundColor = "bg-cream",
-  ctaText = "Request availability with your quote",
-  ctaLink = "/quote/"
+  backgroundColor = "bg-white",
+  ctaText = "Enquire About Availability",
+  ctaLink = "#quote"
 } = Astro.props;
-
-const coverageGroups = [
-  {
-    name: 'South West London',
-    areas: 'Wandsworth, Clapham, Putney, Wimbledon, Balham and Battersea',
-  },
-  {
-    name: 'Central London',
-    areas: 'Chelsea, Knightsbridge, Kensington, Belgravia, Mayfair and Marylebone',
-  },
-  {
-    name: 'North West London',
-    areas: 'Hampstead, Highgate, Maida Vale and St John’s Wood',
-  },
-  {
-    name: 'Available on request',
-    areas: 'Richmond, Barnes, Notting Hill, Holland Park, Dulwich, Blackheath, City of London and select Surrey locations',
-  },
-];
 ---
 
 <section id={sectionId} class={`py-20 sm:py-24 ${backgroundColor} ${className}`}>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brass">Coverage</p>
-        <h2 class="mt-3 font-serif text-3xl font-semibold text-night md:text-5xl">{title}</h2>
-        <p class="mt-5 max-w-3xl text-base leading-relaxed text-ink/72 md:text-lg">
-          {subtitle}
-        </p>
-      </div>
-      <div class="flex flex-wrap gap-3 text-sm text-ink/64">
-        {areasListText.map((area) => (
-          <a href={area.link} class="rounded-full border border-stone bg-white px-4 py-2 no-underline transition-colors hover:border-brass hover:text-brass">
-            {area.name}
-          </a>
+    <div class="flex items-end justify-between gap-6">
+      <h2 class="font-serif text-3xl md:text-6xl">{title}</h2>
+      <div class="hidden md:flex gap-3 text-sm text-ink/60">
+        {areasListText.map((area, index) => (
+          <span class="flex items-center gap-3">
+            <a 
+              href={area.link} 
+              class="hover:text-gold transition-colors cursor-pointer"
+            >
+              {area.name}
+            </a>
+            {index < areasListText.length - 1 && <span>•</span>}
+          </span>
         ))}
       </div>
     </div>
+    <p class="mt-2 text-ink/70 max-w-3xl text-sm md:text-base">
+      {subtitle}
+    </p>
 
-    <div class="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-      <div class="overflow-hidden rounded-[1.5rem] border border-stone bg-white shadow-soft-sm">
-        <img
-          src={mapImage}
-          alt={mapImageAlt}
-          class="h-72 w-full object-cover"
-          loading="lazy"
-        />
-        <div class="p-6">
-          <h3 class="font-serif text-2xl font-semibold text-night">Priority coverage groups</h3>
-          <div class="mt-5 grid gap-4">
-            {coverageGroups.map((group) => (
-              <div class="border-t border-stone pt-4 first:border-t-0 first:pt-0">
-                <p class="text-sm font-semibold text-night">{group.name}</p>
-                <p class="mt-1 text-sm leading-relaxed text-ink/70">{group.areas}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div class="grid gap-5 md:grid-cols-3 lg:grid-cols-1">
-        {featuredAreas.map((area) => (
-          <figure class="overflow-hidden rounded-[1.5rem] border border-stone bg-white shadow-soft-sm transition duration-300 hover:-translate-y-0.5 hover:border-brass/50">
-            {area.link ? (
-              <a href={area.link} class="block no-underline">
-                <img
-                  src={area.src}
-                  alt={area.alt}
-                  class="h-40 w-full object-cover"
-                  loading="lazy"
-                />
-                <figcaption class="p-5">
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-brass">{area.caption}</p>
-                  <p class="mt-2 text-sm text-ink/70">View local coverage details</p>
-                </figcaption>
-              </a>
-            ) : (
-              <>
-                <img src={area.src} alt={area.alt} class="h-40 w-full object-cover" loading="lazy" />
-                <figcaption class="p-5 text-sm font-semibold text-night">{area.caption}</figcaption>
-              </>
-            )}
-          </figure>
-        ))}
-      </div>
-    </div>
-
+    <!-- Surrey Areas Highlight -->
     {surreyLocations.length > 0 && (
-      <div class="mt-8 rounded-[1.5rem] border border-brass/20 bg-white p-6">
-        <h3 class="font-serif text-2xl font-semibold text-night">{surreyTitle}</h3>
-        <div class="mt-4 grid gap-4 text-sm text-ink/70 md:grid-cols-3">
+      <div class="mt-8 bg-gradient-to-r from-gold/10 to-navy/10 rounded-xl p-6 border border-gold/30">
+        <h3 class="font-semibold text-navy mb-3">{surreyTitle}</h3>
+        <div class="grid md:grid-cols-3 gap-4 text-sm text-ink/70">
           {surreyLocations.map((location) => (
-            <div class="flex items-start gap-3">
-              <span class="mt-2 h-1.5 w-1.5 rounded-full bg-brass"></span>
+            <div class="flex items-center">
+              <span class="w-2 h-2 bg-gold rounded-full mr-2"></span>
               <div>
                 {location.link ? (
-                  <a href={location.link} class="font-semibold text-night no-underline hover:text-brass">{location.name}</a>
+                  <a href={location.link}>
+                    <div class="font-medium">{location.name}</div>
+                  </a>
                 ) : (
-                  <div class="font-semibold text-night">{location.name}</div>
+                  <div class="font-medium">{location.name}</div>
                 )}
-                <div class="text-xs text-ink/58">{location.postcode}</div>
+                <div class="text-xs">{location.postcode}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
     )}
-  </div>
 
+    <div
+      class="mt-12 grid gap-8 md:grid-cols-2 items-stretch md:items-start"
+    >
+      <!-- Map (navy base layer) -->
+      <div class="md:col-span-1 order-2 md:order-1">
+        <div
+          class="rounded-xl overflow-hidden border border-gold aspect-[4/3] bg-navy grid place-items-center"
+        >
+          <img
+            src={mapImage}
+            alt={mapImageAlt}
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Featured Areas Gallery (Desktop) -->
+      <div class="order-1 md:order-2 space-y-8">
+        {featuredAreas.map((area) => (
+          <figure
+            class="relative rounded-xl overflow-hidden border border-gold group cursor-pointer transition-transform hover:scale-[1.02]"
+          >
+            {area.link ? (
+              <a href={area.link} class="block">
+                <img
+                  src={area.src}
+                  alt={area.alt}
+                  class="w-full h-40 object-cover"
+                  loading="lazy"
+                />
+                <figcaption
+                  class="absolute bottom-2 left-2 bg-navy/80 text-gold backdrop-blur rounded px-2 py-1 text-xs border border-gold group-hover:bg-gold group-hover:text-navy transition-colors"
+                >
+                  {area.caption}
+                </figcaption>
+              </a>
+            ) : (
+              <>
+                <img
+                  src={area.src}
+                  alt={area.alt}
+                  class="w-full h-40 object-cover"
+                  loading="lazy"
+                />
+                <figcaption
+                  class="absolute bottom-2 left-2 bg-navy/80 text-gold backdrop-blur rounded px-2 py-1 text-xs border border-gold"
+                >
+                  {area.caption}
+                </figcaption>
+              </>
+            )}
+          </figure>
+        ))}
+      </div>
+
+      <!-- Mobile stacked gallery -->
+      <div class="md:hidden order-3">
+        <div class="grid grid-cols-3 gap-4">
+          {mobileAreas.map((area) => (
+            <div class="relative group">
+              {area.link ? (
+                <a href={area.link} class="block">
+                  <img
+                    src={area.src}
+                    alt={area.alt}
+                    class="w-full h-20 object-cover rounded border border-gold transition-transform group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 text-[10px] bg-navy/80 text-gold rounded px-1 border border-gold group-hover:bg-gold group-hover:text-navy transition-colors"
+                  >
+                    {area.caption}
+                  </span>
+                </a>
+              ) : (
+                <>
+                  <img
+                    src={area.src}
+                    alt={area.alt}
+                    class="w-full h-20 object-cover rounded border border-gold"
+                    loading="lazy"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 text-[10px] bg-navy/80 text-gold rounded px-1 border border-gold"
+                  >
+                    {area.caption}
+                  </span>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
   {ctaText && ctaLink && (
-    <div class="mt-10 text-center">
+    <div class="text-center mt-8">
       <CtaButton href={ctaLink}>
         {ctaText}
-      </CtaButton>
+      </CtaButton>  
     </div>
   )}
 </section>
