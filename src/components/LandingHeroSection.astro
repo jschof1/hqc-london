@@ -88,7 +88,7 @@ const {
   </div>
   </div>
 </section>
-<section class={`relative bg-navy min-h-[72dvh] w-screen max-w-[100vw] flex items-center justify-center overflow-hidden ${className}`}>
+<section class={`relative bg-navy min-h-[72dvh] w-full max-w-full flex items-center justify-center overflow-hidden ${className}`}>
   <div class="absolute inset-0 h-full w-full">
     <!-- Video background -->
     <video
@@ -114,8 +114,8 @@ const {
   </div>
   
   <!-- Hero copy + CTAs - Centered within the hero section -->
-  <div class="font-serif relative z-10 flex min-w-0 flex-col items-center justify-center flex-1 w-full px-4 md:px-16 lg:px-24 xl:px-32">
-    <div class="text-transition">
+  <div class="font-serif relative z-10 mx-auto flex min-w-0 flex-col items-center justify-center flex-1 w-full max-w-7xl px-4 md:px-16 lg:px-24 xl:px-32">
+    <div class="text-transition mx-auto w-full max-w-5xl text-center">
           <!-- Star Rating with Lines -->
 
     {reviewBadge && (
@@ -148,7 +148,7 @@ const {
         <div class="h-px w-8 bg-yellow-200/60"></div>
       </div>
     )}
-    <h1 class="w-full min-w-0 text-3xl sm:text-4xl lg:text-6xl text-center font-medium max-w-[min(64rem,100%)] bg-gradient-to-r from-gold via-gold to-yellow-300 text-transparent bg-clip-text leading-tight break-words">
+    <h1 class="mx-auto w-full min-w-0 max-w-[18rem] text-center text-[2rem] font-medium leading-tight bg-gradient-to-r from-gold via-gold to-yellow-300 text-transparent bg-clip-text break-words sm:max-w-3xl sm:text-4xl lg:max-w-5xl lg:text-6xl">
       {title}
     </h1>
     
