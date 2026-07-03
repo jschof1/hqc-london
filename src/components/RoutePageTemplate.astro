@@ -34,12 +34,30 @@ const metaDescription = primaryPage.metaDescription || route.buyerProblem;
 const ctaText = primaryPage.primaryCtaText || route.ctaText || 'Request a Cleaning Quote';
 const ctaUrl = primaryPage.primaryCtaUrl || route.ctaUrl || '/quote/';
 const supportingPages = matchingPages.filter((page) => page.slug !== slug);
-const liveRouteSlugs = new Set([
+const topLevelRouteSlugs = new Set([
   'property-and-facilities-cleaning',
-  'developer-handover-cleaning',
   'home-cleaning',
   'commercial-and-wellness-cleaning',
 ]);
+const liveServiceSlugs = new Set([
+  'end-of-tenancy-cleaning',
+  'post-renovation-cleaning',
+  'developer-handover-cleaning',
+  'end-of-tenancy-cleaning-wandsworth',
+  'void-and-post-tenancy-cleaning',
+  'block-management-cleaning',
+]);
+const getPageHref = (page: { slug: string; primaryCtaUrl?: string }) => {
+  if (topLevelRouteSlugs.has(page.slug)) {
+    return `/${page.slug}/`;
+  }
+
+  if (liveServiceSlugs.has(page.slug)) {
+    return `/services/${page.slug}/`;
+  }
+
+  return page.primaryCtaUrl || ctaUrl;
+};
 
 const relatedRoutes = [
   {
@@ -157,9 +175,9 @@ const relatedRoutes = [
                 {page.positioning}
               </p>
               {
-                liveRouteSlugs.has(page.slug) ? (
+                topLevelRouteSlugs.has(page.slug) || liveServiceSlugs.has(page.slug) ? (
                   <a
-                    href={`/${page.slug}/`}
+                    href={getPageHref(page)}
                     class="mt-6 inline-flex font-semibold text-navy underline decoration-gold/50 underline-offset-4 transition hover:text-gold"
                   >
                     View this cleaning scope
@@ -244,7 +262,7 @@ const relatedRoutes = [
             <div class="mt-5 flex flex-wrap gap-3">
               {supportingPages.map((page) => (
                 <a
-                  href={liveRouteSlugs.has(page.slug) ? `/${page.slug}/` : page.primaryCtaUrl || ctaUrl}
+                  href={getPageHref(page)}
                   class="rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-semibold text-navy transition hover:border-gold hover:text-gold"
                 >
                   {page.title}

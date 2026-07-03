@@ -18,12 +18,12 @@ export interface BuyerRoute {
 export const buyerRoutes: BuyerRoute[] = [
   {
     key: 'propertyAndFacilities',
-    title: 'Property Cleaning Support',
+    title: 'Property & Facilities Cleaning',
     slug: 'property-and-facilities-cleaning',
     audience: 'Agents, landlords, property managers, block managers, and developers',
     buyerProblem:
-      'Managed properties need cleaning support that keeps viewings, handovers, residents, and next occupants moving without repeated supplier chasing.',
-    ctaText: 'Explore Property Cleaning',
+      'For property teams that need homes, shared spaces and handovers cleaned, presented and ready without repeated supplier chasing.',
+    ctaText: 'Explore Property & Facilities',
     ctaUrl: '/property-and-facilities-cleaning/',
     priority: 1,
   },
@@ -33,19 +33,19 @@ export const buyerRoutes: BuyerRoute[] = [
     slug: 'home-cleaning',
     audience: 'Households, busy professionals, families, tenants, landlords, and homeowners',
     buyerProblem:
-      'Homes need reliable cleaning, careful handling, and agreed standards for regular upkeep, end-of-tenancy cleans, deeper resets, or post-renovation work.',
+      'For London homes that need dependable regular cleaning, deeper resets, end-of-tenancy cleaning or careful post-renovation support.',
     ctaText: 'Explore Home Cleaning',
     ctaUrl: '/home-cleaning/',
     priority: 2,
   },
   {
     key: 'commercialAndWellness',
-    title: 'Commercial Cleaning',
+    title: 'Commercial & Wellness Cleaning',
     slug: 'commercial-and-wellness-cleaning',
     audience: 'Boutique offices, studios, clinics, gyms, and client-facing spaces',
     buyerProblem:
-      'Client-facing premises need consistent hygiene, careful access, and presentation-led cleaning that fits around staff, clients, and opening hours.',
-    ctaText: 'Explore Commercial Cleaning',
+      'For client-facing premises where hygiene, opening hours, careful access and first impressions all shape the customer experience.',
+    ctaText: 'Explore Commercial & Wellness',
     ctaUrl: '/commercial-and-wellness-cleaning/',
     priority: 3,
   },

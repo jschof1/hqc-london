@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import siteSettings from '../data/site-settings.json';
 
-const title = "30% Introductory Rate | High Quality Clean";
-const description = "Claim a 30% introductory rate for High Quality Clean's home or commercial cleaning. Limited availability for new clients.";
+const title = "30% HQC Loyalty Welcome Offer | High Quality Clean";
+const description = "Enquire about the 30% HQC Loyalty Welcome Offer for new recurring home or commercial cleaning clients. Eligibility is confirmed after review.";
 ---
 
 <Layout title={title} description={description} robots="noindex, nofollow">
@@ -31,13 +31,13 @@ const description = "Claim a 30% introductory rate for High Quality Clean's home
             style="background: rgba(201,169,97,0.15); border: 1px solid var(--color-gold); color: var(--color-gold); font-family: var(--font-body); font-size: 0.6rem;"
           >
             <i class="fas fa-tag" style="font-size: 0.55rem;"></i>
-            Introductory Offer
+            Loyalty Welcome Offer
           </span>
           <h1 class="font-serif text-4xl md:text-5xl text-white font-semibold leading-tight mb-2">
-            Claim Your <span style="color: var(--color-gold);">30% Rate</span>
+            Claim Your <span style="color: var(--color-gold);">30% HQC Loyalty Welcome Offer</span>
           </h1>
           <p class="text-white/60 text-sm max-w-md mx-auto" style="font-family: var(--font-body);">
-            A specialist will be in touch to lock in your rate before availability closes.
+            For new recurring clients who want a clearer, longer-term cleaning relationship with HQC.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ const description = "Claim a 30% introductory rate for High Quality Clean's home
                     style="background: rgba(255,255,255,0.06); border: 1px solid rgba(201,169,97,0.25); font-family: var(--font-body);"
                   >
                     <option value="home" style="background: #2C3E50;">Residential / Home</option>
-                    <option value="commercial" style="background: #2C3E50;">Commercial / Office</option>
+                    <option value="commercial" style="background: #2C3E50;">Commercial / Property</option>
                   </select>
                 </div>
 
@@ -125,13 +125,18 @@ const description = "Claim a 30% introductory rate for High Quality Clean's home
                   class="w-full font-bold py-4 rounded-lg transition-all duration-300 shadow-lg flex items-center justify-center gap-2 group hover:opacity-90 hover:scale-[1.02]"
                   style="background-color: var(--color-gold); color: var(--color-navy); font-family: var(--font-body); font-size: 1rem;"
                 >
-                  Claim My 30% Rate
+                  Claim My Offer
                   <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
                 </button>
 
-                <p class="text-xs text-white/30 text-center italic" style="font-family: var(--font-body);">
-                  Limited availability &bull; New clients only &bull; No credit card required
-                </p>
+                <div class="space-y-2 text-center" style="font-family: var(--font-body);">
+                  <p class="text-xs text-white/40 italic">
+                    Limited availability &bull; New recurring clients only &bull; 12-month loyalty pricing available &bull; No card required to enquire &bull; Offer confirmed following review of your enquiry
+                  </p>
+                  <p class="text-[11px] leading-relaxed text-white/35">
+                    The 30% HQC Loyalty Welcome Offer is for new recurring clients with a minimum three-month service agreement. If the agreement is cancelled by the customer within the first three months, the introductory loyalty saving will be recalculated against the applicable standard one-off rate and the difference will become payable.
+                  </p>
+                </div>
               </form>
             </div>
 
@@ -143,9 +148,9 @@ const description = "Claim a 30% introductory rate for High Quality Clean's home
               >
                 <i class="fas fa-check text-3xl" style="color: var(--color-gold);"></i>
               </div>
-              <h2 class="font-serif text-3xl text-white font-semibold mb-3">You're on the List</h2>
+              <h2 class="font-serif text-3xl text-white font-semibold mb-3">Enquiry Received</h2>
               <p class="text-white/60 text-base mb-8 leading-relaxed max-w-sm mx-auto" style="font-family: var(--font-body);">
-                A specialist will call you shortly to confirm your 30% introductory rate and arrange your first clean.
+                HQC will review your recurring cleaning enquiry and confirm whether the loyalty welcome offer applies before any booking is agreed.
               </p>
               <a
                 href="/"
@@ -173,7 +178,7 @@ const description = "Claim a 30% introductory rate for High Quality Clean's home
           <span class="h-3 w-px bg-white/10"></span>
           <span class="inline-flex items-center gap-2 text-xs text-white/40" style="font-family: var(--font-body);">
             <i class="fas fa-star" style="color: var(--color-gold);"></i>
-            Clear follow-up
+            Offer reviewed
           </span>
         </div>
 
@@ -216,7 +221,7 @@ const description = "Claim a 30% introductory rate for High Quality Clean's home
 
       data.type = normalizeDiscountType(data.type);
       data.source = 'discount_page';
-      data.tag = 'discount offer';
+      data.tag = 'loyalty welcome offer';
       data.timestamp = new Date().toISOString();
 
       try {
@@ -238,7 +243,7 @@ const description = "Claim a 30% introductory rate for High Quality Clean's home
 
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = 'Claim My 30% Rate <i class="fas fa-arrow-right text-sm"></i>';
+          submitBtn.innerHTML = 'Claim My Offer <i class="fas fa-arrow-right text-sm"></i>';
         }
       }
     });

@@ -15,12 +15,14 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     font-family: var(--font-family-display);
     background-color: var(--color-mist);
     color: var(--color-ink);
+    overflow-x: hidden;
     
   }
 

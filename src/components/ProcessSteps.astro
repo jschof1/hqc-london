@@ -16,39 +16,39 @@ export interface Props {
 }
 import CtaButton from './CtaButton.astro'; 
 const {
-  title = "How It Works",
-  subtitle = "Transparent steps, predictable outcomes, and visuals at each stage.",
+  title = "How HQC scopes your clean",
+  subtitle = "A practical route from enquiry to agreed scope, clean and next step.",
   steps = [
     {
-      icon: "fas fa-phone-volume",
+      icon: "fas fa-message",
       stepNumber: 1,
-      title: "Consult",
-      description: "A short call to understand goals, finishes, and sensitivities."
+      title: "Tell us",
+      description: "Share the property type, location, deadline and what needs to be ready."
     },
     {
-      icon: "fas fa-person-walking",
+      icon: "fas fa-clipboard-list",
       stepNumber: 2,
-      title: "Walkthrough",
-      description: "Priority mapping and surface assessment."
+      title: "Agree the scope",
+      description: "HQC confirms priorities, access notes, add-ons and the quote basis before work begins."
     },
     {
       icon: "fas fa-broom",
       stepNumber: 3,
-      title: "Precision Clean",
-      description: "Dedicated team with HEPA filtration and wellness protocols."
+      title: "Clean to standard",
+      description: "The clean is carried out around the agreed rooms, surfaces, timing and presentation needs."
     },
     {
       icon: "fas fa-clipboard-check",
       stepNumber: 4,
-      title: "Handover",
-      description: "Photo report, fragrance preferences, and aftercare notes."
+      title: "Confirm next steps",
+      description: "We help you decide whether the space needs handover, maintenance, repeat support or a deeper reset."
     }
   ],
   className = "",
   sectionId = "process",
   backgroundColor = "bg-white",
-  ctaText = "Start Your Personalised Service Design",
-  ctaLink = "/#quote"
+  ctaText = "Request a Cleaning Quote",
+  ctaLink = "/quote/"
 
 } = Astro.props;
 ---
