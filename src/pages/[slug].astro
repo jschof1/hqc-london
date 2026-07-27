@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import OutcomePage from '../components/OutcomePage.astro';
+import { outcomePages, type OutcomePage as OutcomePageData } from '../data/outcome-pages';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return outcomePages
+    .filter((page) => !['request-a-quote', 'cleaning-faqs'].includes(page.slug))
+    .map((page) => ({
+    params: { slug: page.slug },
+    props: { page }
+  }));
+}
+
+interface Props {
+  page: OutcomePageData;
+}
+
+const { page } = Astro.props;
+const title = `${page.title} | High Quality Clean`;
+---
+
+<Layout title={title} description={page.description}>
+  <Header />
+  <OutcomePage page={page} />
+</Layout>

@@ -1,0 +1,99 @@
+<section id="find-my-service" class="scroll-mt-20 bg-copper py-20 md:py-28">
+  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+    <div class="grid gap-8 lg:grid-cols-[.75fr_1.25fr] lg:items-end">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-midnight/55">Find my service</p>
+        <h2 class="mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-midnight md:text-6xl">What needs to be ready?</h2>
+      </div>
+      <p class="max-w-2xl text-lg leading-8 text-midnight/70">Choose the closest result. Only suitable Essential Clean™ enquiries continue towards direct booking. Every other route is reviewed before quotation.</p>
+    </div>
+
+    <div class="mt-12 grid gap-4 md:grid-cols-3">
+      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-porcelain p-7 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl" data-result="maintain">
+        <span class="font-serif text-4xl text-copper">01</span>
+        <span class="mt-10 block text-xs font-bold uppercase tracking-[.18em] text-slate">Maintain</span>
+        <strong class="mt-3 block font-serif text-3xl font-medium leading-tight text-midnight">A suitable home, weekly or fortnightly</strong>
+        <span class="mt-4 block leading-7 text-slate">Check whether Essential Clean™ is the right direct-booking route.</span>
+      </button>
+      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-midnight p-7 text-left text-white transition duration-300 hover:-translate-y-1 hover:shadow-2xl" data-result="restore">
+        <span class="font-serif text-4xl text-copper">02</span>
+        <span class="mt-10 block text-xs font-bold uppercase tracking-[.18em] text-white/50">Restore or move</span>
+        <strong class="mt-3 block font-serif text-3xl font-medium leading-tight">Deep clean, tenancy, move-in or post-work</strong>
+        <span class="mt-4 block leading-7 text-white/65">Send the condition and property details for a tailored quotation.</span>
+      </button>
+      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-porcelain p-7 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl" data-result="professional">
+        <span class="font-serif text-4xl text-copper">03</span>
+        <span class="mt-10 block text-xs font-bold uppercase tracking-[.18em] text-slate">Manage</span>
+        <strong class="mt-3 block font-serif text-3xl font-medium leading-tight text-midnight">A workplace, portfolio or complex project</strong>
+        <span class="mt-4 block leading-7 text-slate">Use the professional quotation or assessment route.</span>
+      </button>
+    </div>
+
+    <div id="selector-result" class="mt-5 hidden rounded-2xl bg-white p-7 text-midnight shadow-2xl md:p-10" aria-live="polite">
+      <p id="selector-label" class="text-xs font-bold uppercase tracking-[0.2em] text-copper"></p>
+      <h3 id="selector-heading" class="mt-4 max-w-4xl font-serif text-3xl font-medium md:text-5xl">Your recommended route</h3>
+      <p id="selector-copy" class="mt-5 max-w-3xl leading-7 text-slate"></p>
+      <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+        <a id="selector-primary" class="button button-dark" href="/request-a-quote/">Continue to your enquiry</a>
+        <a id="selector-secondary" class="button border border-midnight/20 text-midnight hover:border-copper" href="/home-cleaning-london/">Compare home services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const results = {
+    maintain: {
+      label: 'Essential Clean™ suitability',
+      heading: 'First, check whether the home is maintenance-ready',
+      copy: 'Weekly and fortnightly Essential Clean™ can be booked online when the home is suitable. Heavy build-up, monthly requests and restoration work are routed to manual review.',
+      href: '/essential-clean-london/?next=booking',
+      cta: 'Check suitability',
+      secondaryHref: '/deep-cleaning-london/',
+      secondary: 'The home needs restoration'
+    },
+    restore: {
+      label: 'Tailored residential quotation',
+      heading: 'Tell us the condition and the outcome you need',
+      copy: 'Deep Clean™, Move-In Reset™, End of Tenancy™ and Post-Construction™ are quoted manually so scope, access, parking and condition can be reviewed.',
+      href: '/request-a-quote/?route=residential',
+      cta: 'Request a tailored quote',
+      secondaryHref: '/home-cleaning-london/',
+      secondary: 'Compare home services'
+    },
+    professional: {
+      label: 'Professional or complex enquiry',
+      heading: 'Route the site or portfolio to the right assessment',
+      copy: 'Workplaces, managed properties and complex projects enter the GHL quotation or assessment route. They are not publicly bookable services.',
+      href: '/request-a-quote/?route=commercial',
+      cta: 'Start a professional enquiry',
+      secondaryHref: '/complex-property-cleaning-london/',
+      secondary: 'Complex service assessment'
+    }
+  };
+
+  const resultPanel = document.getElementById('selector-result');
+  const label = document.getElementById('selector-label');
+  const heading = document.getElementById('selector-heading');
+  const copy = document.getElementById('selector-copy');
+  const primary = document.getElementById('selector-primary');
+  const secondary = document.getElementById('selector-secondary');
+
+  document.querySelectorAll<HTMLButtonElement>('.service-choice').forEach((button) => {
+    button.addEventListener('click', () => {
+      const key = button.dataset.result as keyof typeof results;
+      const result = results[key];
+      if (!result || !resultPanel || !label || !heading || !copy || !primary || !secondary) return;
+      label.textContent = result.label;
+      heading.textContent = result.heading;
+      copy.textContent = result.copy;
+      primary.textContent = result.cta;
+      primary.setAttribute('href', result.href);
+      secondary.textContent = result.secondary;
+      secondary.setAttribute('href', result.secondaryHref);
+      resultPanel.classList.remove('hidden');
+      resultPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'service_selector_result', result: key } }));
+    });
+  });
+</script>

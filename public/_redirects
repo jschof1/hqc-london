@@ -6,6 +6,50 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 # Sitemap legacy alias.
 /sitemap.xml /sitemap-0.xml 301
 
+# HQC sitemap matrix v2.0 canonical routes.
+/services/office-cleaning /office-cleaning-london/ 301
+/services/office-cleaning/ /office-cleaning-london/ 301
+/services/deep-cleaning /deep-cleaning-london/ 301
+/services/deep-cleaning/ /deep-cleaning-london/ 301
+/services/end-of-tenancy-cleaning /end-of-tenancy-cleaning-london/ 301
+/services/end-of-tenancy-cleaning/ /end-of-tenancy-cleaning-london/ 301
+/services/airbnb-cleaning /home-cleaning-london/ 301
+/services/airbnb-cleaning/ /home-cleaning-london/ 301
+/services/carpet-cleaning /home-cleaning-london/ 301
+/services/carpet-cleaning/ /home-cleaning-london/ 301
+/services/ironing-and-laundry /home-cleaning-london/ 301
+/services/ironing-and-laundry/ /home-cleaning-london/ 301
+/services /#find-my-service 301
+/services/ /#find-my-service 301
+/why-us /why-choose-hqc/ 301
+/why-us/ /why-choose-hqc/ 301
+/process /how-we-work/ 301
+/process/ /how-we-work/ 301
+/case-studies /reviews-case-studies/ 301
+/case-studies/ /reviews-case-studies/ 301
+/client-success-stories /reviews-case-studies/ 301
+/client-success-stories/ /reviews-case-studies/ 301
+/areas /areas-we-cover/ 301
+/areas/ /areas-we-cover/ 301
+/quote /request-a-quote/ 301
+/quote/ /request-a-quote/ 301
+/discount /offer/ 301
+/discount/ /offer/ 301
+
+# Merge overlapping service intents into their single owning pages.
+/post-renovation-cleaning /post-construction-cleaning-london/ 301
+/post-renovation-cleaning/ /post-construction-cleaning-london/ 301
+/after-builders-cleaning /post-construction-cleaning-london/ 301
+/after-builders-cleaning/ /post-construction-cleaning-london/ 301
+/developer-handover-cleaning /post-construction-cleaning-london/ 301
+/developer-handover-cleaning/ /post-construction-cleaning-london/ 301
+/regular-residential-cleaning /essential-clean-london/ 301
+/regular-residential-cleaning/ /essential-clean-london/ 301
+/luxury-cleaning-services /home-cleaning-london/ 301
+/luxury-cleaning-services/ /home-cleaning-london/ 301
+/commercial-wellness-cleaning /commercial-cleaning-london/ 301
+/commercial-wellness-cleaning/ /commercial-cleaning-london/ 301
+
 # Retired bug path
 /areas/areas /areas/ 301
 /areas/areas/ /areas/ 301
@@ -121,4 +165,3 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 /locations/surrey/weybridge /locations/surrey/weybridge/ 301
 /locations/surrey/hersham /locations/surrey/hersham/ 301
 /locations/surrey/walton-on-thames /locations/surrey/walton-on-thames/ 301
-

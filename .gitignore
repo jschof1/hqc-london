@@ -16,6 +16,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# SEO analysis cache
+.seo-cache/
+
 
 # environment variables
 .env

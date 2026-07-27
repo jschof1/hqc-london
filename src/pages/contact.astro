@@ -7,8 +7,8 @@ import siteSettings from '../data/site-settings.json';
 ---
 
 <Layout 
-  title="Contact High Quality Clean | Luxury London Cleaners"
-  description="Speak to High Quality Clean about premium home, deep, office and Airbnb cleaning across London and Surrey. Call, WhatsApp, email or request a tailored quote online."
+  title="Contact High Quality Clean | London Cleaning Services"
+  description="Contact High Quality Clean about home, workplace, managed-property or complex cleaning requirements in London."
 >
   <Header />
   
@@ -16,12 +16,12 @@ import siteSettings from '../data/site-settings.json';
     <!-- Hero Section -->
     <HeroSection 
       title="Get in Touch"
-      subtitle="We're here to answer your questions and discuss how we can help maintain your home to the highest standards."
+      subtitle="For bookings and quotations, use the correct service route. For everything else, contact HQC here."
       imageSrc="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1600&h=900&fit=crop&auto=format&q=80"
       imageAlt="Professional cleaning service team ready to help with luxury home cleaning"
       primaryCta={{
         text: "Request a Quote",
-        href: "/#quote"
+        href: "/request-a-quote/"
       }}
       secondaryCta={{
         text: "Message on WhatsApp", 
@@ -31,9 +31,9 @@ import siteSettings from '../data/site-settings.json';
         rel: "noopener nofollow"
       }}
       trustBadges={[
-        { icon: "fas fa-shield-alt", text: "£5M Insurance" },
-        { icon: "fas fa-id-card", text: "100% DBS-checked" },
-        { icon: "fas fa-star", text: "Five‑Star Average" }
+        { icon: "fas fa-list-check", text: "Clear scope" },
+        { icon: "fas fa-calculator", text: "Labour-based quotations" },
+        { icon: "fas fa-hand-sparkles", text: "Careful delivery" }
       ]}
       backgroundClass="bg-navy relative overflow-hidden"
     />
@@ -381,4 +381,3 @@ import siteSettings from '../data/site-settings.json';
     </section>
   </main>
 </Layout>
-

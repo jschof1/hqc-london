@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
+import ConversionPrompt from '../components/ConversionPrompt.astro';
 
 import { Schema } from 'astro-seo-schema';
 
@@ -12,7 +13,7 @@ export interface Props {
 
 const { 
   title, 
-  description = "High Quality Clean — Luxury home cleaning for discerning London clients.",
+  description = "High Quality Clean — outcome-led cleaning for London homes, workplaces, managed properties and complex projects.",
   robots = "index, follow"
 } = Astro.props;
 
@@ -21,21 +22,8 @@ const canonicalPath = Astro.url?.pathname
   ? Astro.url.pathname.toLowerCase().replace(/\/?$/, '/')
   : '/';
 const canonicalUrl = new URL(canonicalPath, baseUrl).href;
-const defaultImage = `${baseUrl}/images/areas/mayfair.webp`;
-const ServiceAreaNames = [
-  'Belgravia',
-  'Chelsea',
-  'Kensington',
-  'Mayfair',
-  'Knightsbridge',
-  'St John\'s Wood',
-  'Hampstead',
-  'Primrose Hill',
-  'Highgate',
-  'Weybridge',
-  'Hersham',
-  'Walton-on-Thames'
-];
+const defaultImage = `${baseUrl}/images/luxury-home/hyde-park-apartment.webp`;
+const serviceAreaNames = ['London', 'Central London', 'West London', 'South West London', 'North London', 'East London'];
 
 const sameAs = [
   'https://www.facebook.com/highqualityclean',
@@ -46,127 +34,6 @@ const sameAs = [
   'https://www.bark.com/en/gb/company/high-quality-clean-ltd/LnAX9/'
 
 ];
-
-const areaNodes = [
-  {
-    '@type': 'Area',
-    '@id': `${baseUrl}/locations/london/belgravia/`,
-    name: 'Belgravia',
-    areaType: 'Luxury maintenance cleaning programme',
-    description:
-      'Weekly upkeep service for maintaining pristine residences between deep cleans, tailored to Central London homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: ServiceAreaNames,
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Discerning homeowners and busy professionals'
-    }
-  },
-  {
-    '@type': 'Area',
-    '@id': `${baseUrl}/locations/london/chelsea/`,
-    name: 'Chelsea',
-    areaType: 'Comprehensive deep cleaning programme in Chelsea',
-    description:
-      'Meticulous deep cleaning with wellness-grade products, designed for luxury interiors that demand elevated detail.',
-    provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: ServiceAreaNames,
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Luxury property managers and high-net-worth households'
-    }
-  },
-  {
-    '@type': 'Area',
-    '@id': `${baseUrl}/locations/london/kensington/`,
-    name: 'Kensington',
-    areaType: 'Wellness-led premium cleaning programme in Kensington',
-    description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: ServiceAreaNames,
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
-    }
-  },
-  {
-    '@type': 'Area',
-    '@id': `${baseUrl}/locations/london/mayfair/`,
-    name: 'Mayfair',
-    areaType: 'Wellness-led premium cleaning programme in Mayfair',
-    description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: ServiceAreaNames,
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
-    }
-  },
-  {
-    '@type': 'Area',
-    '@id': `${baseUrl}/locations/london/knightsbridge/`,
-    name: 'Knightsbridge',
-    areaType: 'Wellness-led premium cleaning programme in Knightsbridge',
-    description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: ServiceAreaNames,
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
-    }
-  },
-  {
-    '@type': 'Area',
-    '@id': `${baseUrl}/locations/london/st-johns-wood/`,
-    name: 'St John\'s Wood',
-    areaType: 'Wellness-led premium cleaning programme in St John\'s Wood',
-    description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: ServiceAreaNames,
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
-    }
-  },
-  {
-    '@type': 'Area',
-    '@id': `${baseUrl}/locations/london/hampstead/`,
-    name: 'Hampstead',
-    areaType: 'Wellness-led premium cleaning programme in Hampstead',
-    description:
-      'Concierge-level, wellness-focused cleaning protocol delivering spa-like calm across exclusive London and Surrey homes.',
-    provider: { '@id': `${baseUrl}/#organization` },
-    areaServed: ServiceAreaNames,
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Wellness-focused households and executive residences'
-    }
-  }
-];
-
-const offerNodes = areaNodes.map((area) => ({
-  '@type': 'Offer',
-  '@id': `${area['@id']}-offer`,
-  itemOffered: { '@id': area['@id'] },
-  url: `${baseUrl}/#quote`,
-  availability: 'https://schema.org/InStock',
-  description: `Arrange ${area.name} with a bespoke proposal from High Quality Clean.`
-}));
-
-const offerCatalogNode = {
-  '@type': 'OfferCatalog',
-  '@id': `${baseUrl}/#offer-catalog`,
-  name: 'High Quality Clean areas',
-  itemListElement: offerNodes.map((offer, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    item: { '@id': offer['@id'] }
-  }))
-};
 
 const organizationNode = {
   '@type': ['LocalBusiness', 'CleaningService'],
@@ -179,15 +46,16 @@ const organizationNode = {
   logo: `${baseUrl}/favicon.ico`,
   email: 'sales@highqualityclean.co.uk',
   telephone: '+44 20 8870 3925',
-  priceRange: '£££',
+  priceRange: '££',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '9 Swanage Road',
     addressLocality: 'London',
     addressRegion: 'Greater London',
-    postalCode: 'SW1',
+    postalCode: 'SW18 2DZ',
     addressCountry: 'GB'
   },
-  areaServed: ServiceAreaNames,
+  areaServed: serviceAreaNames,
   sameAs,
   contactPoint: [
     {
@@ -195,32 +63,23 @@ const organizationNode = {
       contactType: 'Customer Service',
       telephone: '+44 20 8870 3925',
       email: 'sales@highqualityclean.co.uk',
-      areaServed: ServiceAreaNames,
+      areaServed: serviceAreaNames,
       availableLanguage: ['English']
     }
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    bestRating: '5',
-    ratingCount: 97
-  },
-  award: ['ISO 9001 Certified', 'DBS Checked Team', '97+ Five-star Reviews'],
   founder: {
     '@type': 'Person',
-    name: 'Pedro',
-    jobTitle: 'Founder',
+    name: 'Pedro Ndombasi',
+    jobTitle: 'Founder and Managing Director',
     description:
-      'Luxury hospitality professional and wellness cleaning specialist leading High Quality Clean.',
+      'Founder of High Quality Clean, focused on clear scope, labour-based quotations and careful delivery.',
     knowsAbout: [
-      'Luxury home cleaning',
-      'Wellness-grade protocols',
-      'Concierge service',
-      'Quality management'
+      'Residential cleaning',
+      'Commercial cleaning',
+      'Property and facilities cleaning',
+      'Complex cleaning projects'
     ]
-  },
-  hasOfferCatalog: { '@id': offerCatalogNode['@id'] },
-  makesOffer: offerNodes.map((offer) => ({ '@id': offer['@id'] }))
+  }
 };
 
 const websiteNode = {
@@ -232,9 +91,8 @@ const websiteNode = {
   inLanguage: 'en-GB',
   publisher: { '@id': organizationNode['@id'] },
   potentialAction: {
-    '@type': 'SearchAction',
-    target: `${baseUrl}/?s={search_term_string}`,
-    'query-input': 'required name=search_term_string'
+    '@type': 'ContactAction',
+    target: `${baseUrl}/request-a-quote/`
   }
 };
 
@@ -254,11 +112,8 @@ const schemaItem = {
   '@context': 'https://schema.org',
   '@graph': [
     websiteNode,
-    offerCatalogNode,
     organizationNode,
-    webpageNode,
-    ...areaNodes,
-    ...offerNodes
+    webpageNode
   ]
 };
 ---
@@ -273,32 +128,66 @@ const schemaItem = {
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#0e2a31" />
     <meta name="robots" content={robots} />
     <meta name="googlebot" content={robots} />
     <meta name="bingbot" content={robots} />
     <meta name="yandexbot" content={robots} />
     <meta name="google" content="notranslate" />
-    <meta name="google" content="notranslate" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="sitemap" href="/sitemap-0.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="High Quality Clean" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={defaultImage} />
+    <meta property="og:image:alt" content="A carefully prepared London interior by High Quality Clean" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={defaultImage} />
     <title>{title}</title>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="95c24898-5333-41ef-8fbf-a17bcac067af"></script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <Schema item={schemaItem as any} />
   </head>
-  <body class="bg-mist text-ink font-display antialiased">
+  <body class="bg-porcelain text-ink antialiased">
     <slot />
+    <ConversionPrompt />
     <Footer />
-    <script src="../scripts/main.js"></script>
+    <script src="/src/scripts/main.js"></script>
     <script 
       is:inline
       src="https://widgets.leadconnectorhq.com/loader.js"  
       data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
       data-widget-id="696e24618d6c38f8cfb1c78f" > 
+    </script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      window.addEventListener('hqc:conversion', function(event) {
+        const detail = event.detail || {};
+        window.dataLayer.push(detail);
+        if (window.umami && typeof window.umami.track === 'function' && detail.event) {
+          window.umami.track(detail.event, detail);
+        }
+      });
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[data-track], a[href^="tel:"], a[href*="wa.me"]');
+        if (!link) return;
+        const href = link.getAttribute('href') || '';
+        const eventName = link.dataset.track || (href.startsWith('tel:') ? 'phone_click' : 'whatsapp_click');
+        window.dispatchEvent(new CustomEvent('hqc:conversion', {
+          detail: { event: eventName, href, service: link.dataset.service || undefined }
+        }));
+      });
     </script>
     <script is:inline>
       // Load Keak script after user interaction to prevent flashing

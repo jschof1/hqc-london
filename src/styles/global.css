@@ -2,11 +2,15 @@
 
 @layer base {
   @theme {
-    --color-ink: #0E0E10;
-    --color-mist: #F7F7F9;
-    --color-gold: #C9A961;
-    --color-navy: #2C3E50;
-    --color-night: #1c2833;
+    --color-ink: #14272c;
+    --color-slate: #52656a;
+    --color-mist: #f5f2eb;
+    --color-porcelain: #f7f5ef;
+    --color-gold: #cda76b;
+    --color-copper: #d1a467;
+    --color-navy: #18363c;
+    --color-midnight: #0e2a31;
+    --color-night: #091f25;
   
     --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.1), 0 4px 10px rgb(0 0 0 / 0.06);
     
@@ -18,15 +22,16 @@
   }
 
   body {
-    font-family: var(--font-family-display);
-    background-color: var(--color-mist);
+    font-family: "Manrope", sans-serif;
+    background-color: var(--color-porcelain);
     color: var(--color-ink);
-    
+    text-rendering: optimizeLegibility;
   }
 
   /* Typography improvements */
   h1, h2, h3 { 
     line-height: 1.2; 
+    text-wrap: balance;
   }
   
   p { 
@@ -37,11 +42,52 @@
   img {
     object-fit: cover;
   }
+
+  ::selection {
+    background: var(--color-copper);
+    color: var(--color-midnight);
+  }
+
+  /* The third-party chat welcome card obscures most of a phone viewport. */
+  @media (max-width: 639px) {
+    chat-widget {
+      display: none !important;
+    }
+  }
 }
 
 @layer components {
   .font-serif {
-    font-family: var(--font-family-serif);
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-[1440px] px-5 py-20 sm:px-8 md:py-28 lg:px-14;
+  }
+
+  .section-kicker,
+  .meta-label {
+    @apply text-xs font-bold uppercase tracking-[0.22em] text-copper;
+  }
+
+  .section-title {
+    @apply mt-4 max-w-4xl font-serif text-4xl font-medium leading-[1.02] tracking-[-0.025em] text-midnight md:text-6xl;
+  }
+
+  .button {
+    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full px-7 py-3.5 text-sm font-bold no-underline transition duration-300;
+  }
+
+  .button-primary {
+    @apply bg-copper text-midnight hover:-translate-y-0.5 hover:bg-white;
+  }
+
+  .button-ghost {
+    @apply border border-white/40 bg-white/5 text-white backdrop-blur hover:border-copper hover:text-copper;
+  }
+
+  .button-dark {
+    @apply bg-midnight text-white hover:-translate-y-0.5 hover:bg-white hover:text-midnight;
   }
 
   /* Gallery specific styles */

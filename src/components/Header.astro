@@ -1,259 +1,89 @@
----
-// Header component
----
+<header class="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-midnight/95 text-white backdrop-blur-xl">
+  <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-14">
+    <a href="/" class="flex items-center gap-3 text-white no-underline">
+      <span class="flex h-9 w-9 items-center justify-center rounded-full border border-copper font-serif text-lg text-copper">H</span>
+      <span class="font-serif text-xl font-semibold tracking-wide">High Quality Clean</span>
+    </a>
 
-<header
-  class="nav-transition fixed inset-x-0 top-0 z-40 backdrop-blur supports-backdrop-blur:bg-navy/80 bg-navy/85 border-b border-gold"
->
-  <div
-    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-white"
-  >
-    <div class="flex items-center gap-3">
-      <a href="/">    
-        <span class="font-serif text-xl tracking-wide text-gold"
-          >High Quality Clean</span
-        >
-      </a>
-    </div>
-
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center gap-8 text-sm">
-      <a href="/services/" class="hover:text-gold text-white"
-        >Our Services</a
-      >
-      <a href="/why-us/" class="hover:text-gold text-white"
-        >Why Us</a
-      >
-      <a href="/areas/" class="hover:text-gold text-white">Areas</a>
-      <a href="/process/" class="hover:text-gold text-white">Process</a>
-      <a href="/case-studies/" class="hover:text-gold text-white"
-        >Case Studies</a
-      >
-      <a href="/contact/" class="hover:text-gold text-white"
-        >Contact</a
-      >
-      <a
-        href="/quote/"
-        class="inline-flex items-center text-md font-medium rounded-md bg-gold text-navy px-4 py-2 border-1 border-stone-300 hover:bg-navy/60 hover:text-gold hover:border-gold transition-all duration-100"
-      >
-        Request a Personalised Quote
-      </a>
+    <nav class="hidden items-center gap-6 text-sm lg:flex" aria-label="Primary navigation">
+      <div class="group relative">
+        <button class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true">Property & Facilities <span aria-hidden="true">⌄</span></button>
+        <div class="invisible absolute left-0 top-full w-72 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+          <a class="nav-sub" href="/property-facilities-cleaning-london/">Property & Facilities hub</a>
+          <a class="nav-sub" href="/communal-area-cleaning-london/">Communal area cleaning</a>
+          <a class="nav-sub" href="/estate-letting-agent-cleaning-london/">Estate & letting agents</a>
+          <a class="nav-sub" href="/portfolio-cleaning-support-london/">Portfolio support</a>
+        </div>
+      </div>
+      <div class="group relative">
+        <button class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true">Workplaces <span aria-hidden="true">⌄</span></button>
+        <div class="invisible absolute left-0 top-full w-64 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+          <a class="nav-sub" href="/commercial-cleaning-london/">Commercial cleaning</a>
+          <a class="nav-sub" href="/office-cleaning-london/">Office cleaning</a>
+          <a class="nav-sub" href="/commercial-deep-cleaning-london/">Commercial deep cleaning</a>
+        </div>
+      </div>
+      <div class="group relative">
+        <button class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true">Homes <span aria-hidden="true">⌄</span></button>
+        <div class="invisible absolute left-0 top-full w-64 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+          <a class="nav-sub" href="/home-cleaning-london/">Home cleaning</a>
+          <a class="nav-sub" href="/essential-clean-london/">Essential Clean™</a>
+          <a class="nav-sub" href="/deep-cleaning-london/">Deep cleaning</a>
+          <a class="nav-sub" href="/move-in-cleaning-london/">Move-In Reset™</a>
+        </div>
+      </div>
+      <a href="/how-we-work/" class="hover:text-gold">How It Works</a>
+      <a href="/reviews-case-studies/" class="hover:text-gold">Proof</a>
+      <a href="/contact/" class="hover:text-gold">Contact</a>
+      <a href="/request-a-quote/" class="rounded-full bg-copper px-5 py-2.5 font-bold text-midnight no-underline hover:bg-white">Request a Quote</a>
     </nav>
 
-    <!-- Mobile Hamburger Button -->
-    <button
-      id="mobile-menu-toggle"
-      class="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5 focus:outline-none"
-      aria-label="Toggle mobile menu"
-    >
-      <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out"></span>
-      <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out"></span>
-      <span class="hamburger-line w-6 h-0.5 bg-gold transition-all duration-300 ease-in-out"></span>
+    <button id="mobile-menu-toggle" class="flex h-10 w-10 items-center justify-center rounded-full border border-copper/50 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span class="text-xl text-copper" aria-hidden="true">☰</span>
     </button>
   </div>
 
-  <!-- Mobile Full-Screen Navigation Overlay -->
-  <div
-    id="mobile-menu"
-    class="md:hidden fixed inset-0 z-50 bg-navy/98 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out min-h-screen"
-    style="height: 100vh; height: 100dvh;"
-  >
-    <div class="flex flex-col h-full">
-      <!-- Mobile Header with Close Button -->
-      <div class="flex items-center justify-between p-4 border-b border-gold">
-        <a href="/" class="flex items-center gap-3">
-          <span class="font-serif text-xl tracking-wide text-gold"
-            >High Quality Clean</span
-          >
-        </a>
-        <button
-          id="mobile-menu-close"
-          class="flex items-center justify-center w-8 h-8 focus:outline-none"
-          aria-label="Close mobile menu"
-        >
-          <span class="sr-only">Close menu</span>
-          <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation Links -->
-      <nav class="flex-1 flex flex-col justify-center px-8 space-y-8">
-        <a 
-          href="/services/" 
-          class="mobile-nav-link text-2xl font-light text-white hover:text-gold transition-colors duration-200 border-b border-transparent hover:border-gold pb-2"
-        >
-          Our Services
-        </a>
-        <a 
-          href="/why-us/" 
-          class="mobile-nav-link text-2xl font-light text-white hover:text-gold transition-colors duration-200 border-b border-transparent hover:border-gold pb-2"
-        >
-          Why Us
-        </a>
-        <a 
-          href="/areas/" 
-          class="mobile-nav-link text-2xl font-light text-white hover:text-gold transition-colors duration-200 border-b border-transparent hover:border-gold pb-2"
-        >
-          Areas
-        </a>
-        <a 
-          href="/process/" 
-          class="mobile-nav-link text-2xl font-light text-white hover:text-gold transition-colors duration-200 border-b border-transparent hover:border-gold pb-2"
-        >
-          Process
-        </a>
-        <a 
-          href="/case-studies/" 
-          class="mobile-nav-link text-2xl font-light text-white hover:text-gold transition-colors duration-200 border-b border-transparent hover:border-gold pb-2"
-        >
-          Case Studies
-        </a>
-        <a 
-          href="/contact/" 
-          class="mobile-nav-link text-2xl font-light text-white hover:text-gold transition-colors duration-200 border-b border-transparent hover:border-gold pb-2"
-        >
-          Contact
-        </a>
-        
-        <!-- Mobile CTA Button -->
-        <div class="pt-8">
-          <a
-            href="/quote/"
-            class="mobile-nav-link inline-flex items-center justify-center w-full rounded-md bg-gold text-navy px-6 py-4 text-lg font-medium border border-gold hover:bg-transparent hover:text-gold transition-all duration-200"
-          >
-            Request a Personalised Quote
-          </a>
-        </div>
-      </nav>
-    </div>
+  <div id="mobile-menu" class="hidden max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-white/10 bg-midnight lg:hidden">
+    <nav class="mx-auto grid max-w-[1440px] gap-1 px-5 py-6" aria-label="Mobile navigation">
+      <p class="mobile-label">Property & Facilities</p>
+      <a class="mobile-link" href="/property-facilities-cleaning-london/">Property & Facilities hub</a>
+      <a class="mobile-link" href="/communal-area-cleaning-london/">Communal area cleaning</a>
+      <p class="mobile-label mt-3">Workplaces</p>
+      <a class="mobile-link" href="/commercial-cleaning-london/">Commercial cleaning</a>
+      <a class="mobile-link" href="/office-cleaning-london/">Office cleaning</a>
+      <p class="mobile-label mt-3">Homes</p>
+      <a class="mobile-link" href="/home-cleaning-london/">Home cleaning</a>
+      <a class="mobile-link" href="/essential-clean-london/">Essential Clean™</a>
+      <a class="mobile-link" href="/deep-cleaning-london/">Deep cleaning</a>
+      <p class="mobile-label mt-3">Company</p>
+      <a class="mobile-link" href="/how-we-work/">How it works</a>
+      <a class="mobile-link" href="/reviews-case-studies/">Reviews & case studies</a>
+      <a class="mobile-link" href="/contact/">Contact</a>
+      <a class="mt-4 rounded-md bg-gold px-5 py-3 text-center font-semibold text-navy no-underline" href="/request-a-quote/">Request a Quote</a>
+    </nav>
   </div>
 </header>
 
 <script>
-  // Mobile menu toggle functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
-    const hamburgerLines = document.querySelectorAll('.hamburger-line');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    const body = document.body;
-    let scrollPosition = 0;
-
-    // Early return if required elements are not found
-    if (!mobileMenuToggle || !mobileMenu || !mobileMenuClose) {
-      return;
-    }
-
-    function openMobileMenu() {
-      if (!mobileMenu) return;
-      
-      scrollPosition = window.pageYOffset || window.scrollY || 0;
-      mobileMenu.classList.remove('translate-x-full');
-      mobileMenu.classList.add('translate-x-0');
-      body.classList.add('overflow-hidden');
-      body.style.top = `-${scrollPosition}px`;
-      body.dataset.scrollPosition = `${scrollPosition}`;
-      
-      // Animate hamburger to X
-      if (hamburgerLines.length >= 3) {
-        hamburgerLines[0].classList.add('rotate-45', 'translate-y-2');
-        hamburgerLines[1].classList.add('opacity-0');
-        hamburgerLines[2].classList.add('-rotate-45', '-translate-y-2');
-      }
-    }
-
-    function closeMobileMenu(options = {}) {
-      const { restoreScroll = true } = options;
-      if (!mobileMenu) return;
-      
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
-      const lastScrollPosition = scrollPosition || parseInt(body.dataset.scrollPosition || '0', 10) || 0;
-      body.classList.remove('overflow-hidden');
-      body.style.top = '';
-      delete body.dataset.scrollPosition;
-
-      if (restoreScroll) {
-        requestAnimationFrame(() => {
-          window.scrollTo({ top: lastScrollPosition, behavior: 'auto' });
-        });
-      }
-      
-      // Reset hamburger animation
-      if (hamburgerLines.length >= 3) {
-        hamburgerLines[0].classList.remove('rotate-45', 'translate-y-2');
-        hamburgerLines[1].classList.remove('opacity-0');
-        hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-2');
-      }
-    }
-
-    // Toggle mobile menu
-    mobileMenuToggle.addEventListener('click', openMobileMenu);
-    mobileMenuClose.addEventListener('click', () => closeMobileMenu({ restoreScroll: true }));
-
-    // Close menu when clicking on navigation links
-    mobileNavLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        closeMobileMenu({ restoreScroll: false });
-      });
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', open);
+      toggle.setAttribute('aria-expanded', String(!open));
+      toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
     });
-
-    // Close menu when pressing Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
-        closeMobileMenu({ restoreScroll: true });
-      }
-    });
-
-    // Close menu when clicking outside (on overlay)
-    mobileMenu.addEventListener('click', function(event) {
-      if (event.target === mobileMenu) {
-        closeMobileMenu({ restoreScroll: true });
-      }
-    });
-  });
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
 </script>
 
 <style>
-  .hamburger-line {
-    transform-origin: center;
-  }
-  
-  .mobile-nav-link {
-    animation: slideInFromRight 0.5s ease-out forwards;
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  
-  .mobile-nav-link:nth-child(1) { animation-delay: 0.1s; }
-  .mobile-nav-link:nth-child(2) { animation-delay: 0.2s; }
-  .mobile-nav-link:nth-child(3) { animation-delay: 0.3s; }
-  .mobile-nav-link:nth-child(4) { animation-delay: 0.4s; }
-  .mobile-nav-link:nth-child(5) { animation-delay: 0.5s; }
-  .mobile-nav-link:nth-child(6) { animation-delay: 0.6s; }
-  .mobile-nav-link:nth-child(7) { animation-delay: 0.7s; }
-  
-  @keyframes slideInFromRight {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /* Ensure mobile menu covers full viewport */
-  #mobile-menu {
-    background-color: rgba(44, 62, 80, 0.98); /* Dark navy with high opacity */
-    min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
-  }
-
-  /* Prevent scrolling when mobile menu is open */
-  body.overflow-hidden {
-    overflow: hidden !important;
-    position: fixed;
-    width: 100%;
-  }
+  .nav-sub { display: block; border-radius: .5rem; padding: .65rem .75rem; color: white; text-decoration: none; }
+  .nav-sub:hover, .nav-sub:focus { background: rgb(255 255 255 / .08); color: var(--color-gold); }
+  .mobile-label { color: var(--color-gold); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  .mobile-link { border-bottom: 1px solid rgb(255 255 255 / .08); padding: .6rem 0; color: white; text-decoration: none; }
 </style>

@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout
+  title="Request a Cleaning Quote | High Quality Clean"
+  description="Choose the correct residential, commercial, property or complex-service enquiry route and send the details HQC needs to review the work."
+  robots="noindex, follow"
+>
+  <Header />
+  <main class="min-h-screen bg-mist px-4 pb-20 pt-28 sm:px-6">
+    <div class="mx-auto max-w-4xl">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-gold">Request a quote</p>
+        <h1 class="mt-4 font-serif text-4xl text-navy md:text-6xl">Choose the right enquiry route</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">We will confirm receipt immediately and personally review the requirement within one working day.</p>
+      </div>
+
+      <div class="mt-10 grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Enquiry type">
+        <button class="route-tab rounded-xl border border-gold bg-white p-4 text-left" type="button" data-route="residential" aria-selected="true">
+          <strong class="block text-navy">Home or private client</strong><span class="mt-1 block text-sm text-ink/65">Deep, moving, tenancy or quoted home work</span>
+        </button>
+        <button class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" data-route="commercial" aria-selected="false">
+          <strong class="block text-navy">Workplace or managed property</strong><span class="mt-1 block text-sm text-ink/65">Commercial, office, agency or portfolio</span>
+        </button>
+        <button class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" data-route="complex" aria-selected="false">
+          <strong class="block text-navy">Large or complex requirement</strong><span class="mt-1 block text-sm text-ink/65">Assessment before quotation</span>
+        </button>
+      </div>
+
+      <form id="routed-quote-form" class="mt-6 rounded-2xl border border-gold/30 bg-white p-6 shadow-xl md:p-10">
+        <input type="hidden" name="route" id="form-route" value="residential" />
+        <input type="hidden" name="source_page" value={Astro.url.pathname} />
+
+        <div class="mb-8 rounded-xl bg-navy p-5 text-white">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Selected route</p>
+          <h2 id="route-heading" class="mt-2 font-serif text-2xl">Residential quotation</h2>
+          <p id="route-help" class="mt-2 text-sm text-white/75">Tell us the service, property condition, full address, access and parking details.</p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          <label class="block"><span class="form-label">Full name *</span><input class="form-input" name="name" autocomplete="name" required /></label>
+          <label class="block"><span class="form-label">Email *</span><input class="form-input" name="email" type="email" autocomplete="email" required /></label>
+          <label class="block"><span class="form-label">Phone *</span><input class="form-input" name="phone" type="tel" autocomplete="tel" required /></label>
+          <label class="block"><span class="form-label">Postcode *</span><input class="form-input" name="postcode" autocomplete="postal-code" required /></label>
+          <label class="block md:col-span-2"><span class="form-label">Service or outcome needed *</span>
+            <select class="form-input" name="service" id="service-options" required>
+              <option value="">Choose one</option>
+              <option>Deep Clean™</option><option>Move-In Reset™</option><option>End of Tenancy™</option><option>Post-Construction™</option><option>Other residential requirement</option>
+            </select>
+          </label>
+          <label class="block md:col-span-2"><span class="form-label">Property or site address</span><input class="form-input" name="address" autocomplete="street-address" /></label>
+          <label class="block"><span class="form-label">Required date or desired start date</span><input class="form-input" name="desired_date" type="date" /></label>
+          <label class="block"><span class="form-label">Approximate size or area</span><input class="form-input" name="size" placeholder="For example 1,800 sq ft" /></label>
+          <label id="frequency-field" class="hidden block"><span class="form-label">Frequency</span><select class="form-input" name="frequency"><option value="">Choose one</option><option>Daily</option><option>Weekly</option><option>Fortnightly</option><option>One-off</option></select></label>
+          <label id="tupe-field" class="hidden block"><span class="form-label">Current cleaner / TUPE context</span><input class="form-input" name="tupe_context" placeholder="Current provider, team or not known" /></label>
+          <label class="block md:col-span-2"><span class="form-label">Condition, access, parking and important requirements *</span><textarea class="form-input min-h-36 resize-y" name="details" required></textarea></label>
+          <label id="complex-files-note" class="hidden md:col-span-2 rounded-xl border border-gold/30 bg-mist p-5 text-sm text-ink/75">
+            <strong class="block text-navy">Supporting material</strong>
+            Mention any floor plans, photos, video or project documents you can provide. The team will reply with a secure route for anything too large or sensitive to email.
+          </label>
+        </div>
+
+        <label class="mt-6 flex items-start gap-3 text-sm text-ink/70">
+          <input class="mt-1" type="checkbox" name="privacy_consent" value="yes" required />
+          <span>I agree that HQC may use these details to respond to this enquiry. See the <a href="/privacy-policy/">privacy policy</a>.</span>
+        </label>
+
+        <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" aria-live="polite"></div>
+        <button id="quote-submit" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy transition hover:bg-navy hover:text-white" type="submit">Submit Your Requirement</button>
+      </form>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const routes = {
+    residential: {
+      heading: 'Residential quotation',
+      help: 'Tell us the service, property condition, full address, access and parking details.',
+      options: ['Deep Clean™', 'Move-In Reset™', 'End of Tenancy™', 'Post-Construction™', 'Other residential requirement']
+    },
+    commercial: {
+      heading: 'Commercial or managed-property enquiry',
+      help: 'Tell us the site type, approximate area, hours, frequency, current provider and desired start date.',
+      options: ['Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Communal Area Cleaning', 'Agency or Portfolio Support', 'Other professional requirement']
+    },
+    complex: {
+      heading: 'Complex-service assessment',
+      help: 'Describe the property or project, why it is outside a routine service and the supporting material available.',
+      options: ['Large or Executive Property', 'Post-Construction Project', 'Multi-Site or Portfolio Project', 'Other Complex Requirement']
+    }
+  };
+
+  const routeInput = document.getElementById('form-route') as HTMLInputElement | null;
+  const heading = document.getElementById('route-heading');
+  const help = document.getElementById('route-help');
+  const service = document.getElementById('service-options') as HTMLSelectElement | null;
+  const frequency = document.getElementById('frequency-field');
+  const tupe = document.getElementById('tupe-field');
+  const complexNote = document.getElementById('complex-files-note');
+
+  function setRoute(route: keyof typeof routes) {
+    const config = routes[route];
+    if (!config || !routeInput || !heading || !help || !service) return;
+    routeInput.value = route;
+    heading.textContent = config.heading;
+    help.textContent = config.help;
+    service.innerHTML = '<option value="">Choose one</option>' + config.options.map((item) => `<option>${item}</option>`).join('');
+    frequency?.classList.toggle('hidden', route === 'residential');
+    tupe?.classList.toggle('hidden', route !== 'commercial');
+    complexNote?.classList.toggle('hidden', route !== 'complex');
+    document.querySelectorAll<HTMLButtonElement>('.route-tab').forEach((tab) => {
+      const selected = tab.dataset.route === route;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.classList.toggle('border-gold', selected);
+      tab.classList.toggle('border-gold/30', !selected);
+      tab.classList.toggle('bg-gold/10', selected);
+    });
+    window.history.replaceState({}, '', `${window.location.pathname}?route=${route}`);
+    window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'enquiry_route_selected', route } }));
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('.route-tab').forEach((tab) => tab.addEventListener('click', () => setRoute(tab.dataset.route as keyof typeof routes)));
+  const initial = new URLSearchParams(window.location.search).get('route');
+  setRoute(initial && initial in routes ? initial as keyof typeof routes : 'residential');
+
+  const form = document.getElementById('routed-quote-form') as HTMLFormElement | null;
+  const message = document.getElementById('form-message');
+  const submit = document.getElementById('quote-submit') as HTMLButtonElement | null;
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!submit || !message) return;
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    message.className = 'mt-6 hidden rounded-lg p-4 text-sm';
+    const payload = Object.fromEntries(new FormData(form).entries());
+    try {
+      const response = await fetch('/api/quote', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      if (!response.ok) throw new Error('Submission failed');
+      message.textContent = 'Thank you. Your requirement has been received and will be personally reviewed within one working day.';
+      message.className = 'mt-6 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-900';
+      form.reset();
+      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'form_submit', route: payload.route } }));
+    } catch {
+      message.innerHTML = 'We could not send this form just now. Please call <a href="tel:+44208703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
+      message.className = 'mt-6 rounded-lg bg-red-50 p-4 text-sm text-red-900';
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Submit Your Requirement';
+    }
+  });
+</script>
+
+<style>
+  .form-label { display: block; margin-bottom: .45rem; color: var(--color-navy); font-size: .85rem; font-weight: 700; }
+  .form-input { width: 100%; border: 1px solid rgb(196 163 84 / .45); border-radius: .5rem; background: white; padding: .8rem .9rem; color: var(--color-navy); }
+  .form-input:focus { border-color: var(--color-gold); outline: 2px solid rgb(196 163 84 / .2); outline-offset: 1px; }
+</style>

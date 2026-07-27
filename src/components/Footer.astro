@@ -1,87 +1,71 @@
-<footer class="bg-white relative">
-    <div class="absolute inset-0 opacity-5" aria-hidden="true">
-      <img
-        src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80"
-        alt="Granite texture"
-        class="w-full h-full object-cover"
-      />
+<footer class="bg-night text-white">
+  <div class="mx-auto max-w-[1440px] px-5 pb-9 pt-16 sm:px-8 md:pt-20 lg:px-14">
+    <div class="flex flex-col justify-between gap-10 border-b border-white/12 pb-14 md:flex-row md:items-end">
+      <div class="max-w-2xl">
+        <a href="/" class="flex items-center gap-3 text-white no-underline">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full border border-copper font-serif text-xl text-copper">H</span>
+          <span class="font-serif text-2xl font-semibold">High Quality Clean</span>
+        </a>
+        <p class="mt-6 max-w-xl font-serif text-3xl font-medium leading-tight text-white/85 md:text-4xl">Cleaning defined by the outcome.</p>
+      </div>
+      <a href="/request-a-quote/" class="button button-primary shrink-0">Request a quote <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid gap-10 md:grid-cols-4">
-        <div class="md:col-span-2">
-          <div class="flex items-center gap-3">
-            <div class="font-serif text-lg text-navy">
-              High Quality Clean
-            </div>
-          </div>
-          <p class="mt-4 text-sm text-ink/70 max-w-md">
-            Luxury home cleaning with wellness expertise and concierge care.
-            Serving prime Central and West London.
-          </p>
-          <div class="mt-6 flex items-center gap-4">
-            <a href="https://www.instagram.com/highqualitycleanltd" target="_blank" rel="noopener noreferrer" class="text-ink/60 hover:text-gold transition-colors" aria-label="Instagram">
-              <i class="fab fa-instagram text-xl"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/high-quality-cleaning/" target="_blank" rel="noopener noreferrer" class="text-ink/60 hover:text-gold transition-colors" aria-label="LinkedIn">
-              <i class="fab fa-linkedin text-xl"></i>
-            </a>
-            <a href="https://tiktok.com/@highqualityclean" target="_blank" rel="noopener noreferrer" class="text-ink/60 hover:text-gold transition-colors" aria-label="Twitter">
-              <i class="fab fa-tiktok text-xl"></i>
-            </a>
-          </div>
-          <div class="mt-4 text-sm text-ink/60">
-            © <span id="y"></span> High Quality Clean. All rights
-            reserved.
-          </div>
+
+    <div class="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+      <div>
+        <p class="meta-label">Contact</p>
+        <div class="mt-5 space-y-3 text-sm text-white/65">
+          <a href="tel:+442088703925" class="block text-lg font-semibold text-white no-underline hover:text-copper">0208 870 3925</a>
+          <a href="mailto:sales@highqualityclean.co.uk" class="block no-underline hover:text-copper">sales@highqualityclean.co.uk</a>
+          <p>9 Swanage Road, London SW18 2DZ</p>
         </div>
-        <div>
-          <div class="font-medium text-navy">Company</div>
-          <ul class="mt-4 space-y-3 text-sm text-ink/70">
-            <li>
-              <a href="/services/" class="hover:text-gold transition-colors">Services</a>
-            </li>
-            <li>
-              <a href="/why-us/" class="hover:text-gold transition-colors">Why Us</a>
-            </li>
-            <li>
-              <a href="/process/" class="hover:text-gold transition-colors">Process</a>
-            </li>
-            <li>
-              <a href="/#quote" class="hover:text-gold transition-colors">Request Quote</a>
-            </li>
-            <li>
-              <a href="/contact/" class="hover:text-gold transition-colors">Contact Us</a>
-            </li>
-            <li>
-              <a href="/disclaimer/" class="hover:text-gold transition-colors">Disclaimer</a>
-            </li>
-            <li>
-              <a href="/terms-and-conditions/" class="hover:text-gold transition-colors">Terms & Conditions</a>
-            </li>
-            <li>
-              <a href="/privacy-policy/" class="hover:text-gold transition-colors">Privacy Policy</a>
-            </li>
-          </ul>
+        <div class="mt-7 flex gap-4 text-white/55">
+          <a href="https://www.instagram.com/highqualitycleanltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-copper"><i class="fab fa-instagram text-xl"></i></a>
+          <a href="https://www.linkedin.com/company/high-quality-cleaning/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-copper"><i class="fab fa-linkedin text-xl"></i></a>
+          <a href="https://www.tiktok.com/@highqualityclean" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hover:text-copper"><i class="fab fa-tiktok text-xl"></i></a>
         </div>
-        <div>
-            <div class="font-medium text-ink/70 mb-3">Contact</div>
-            <ul class="space-y-2 text-sm text-ink/70">
-              <li class="flex items-center gap-2">
-                <i class="fas fa-phone text-gold"></i>
-                <a href="tel:+442088703925" class="hover:text-gold transition-colors">0208 8703925</a>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"/>
-                </svg>
-                <a href="https://wa.me/442088703925" class="hover:text-gold transition-colors">WhatsApp</a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-envelope text-gold"></i>
-                <a href="mailto:sales@highqualityclean.co.uk" class="hover:text-gold transition-colors">sales@highqualityclean.co.uk</a>
-              </li>
-            </ul>
-          </div>
+      </div>
+
+      <div>
+        <p class="meta-label">Services</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/65">
+          <li><a href="/property-facilities-cleaning-london/" class="hover:text-copper">Property & Facilities</a></li>
+          <li><a href="/commercial-cleaning-london/" class="hover:text-copper">Commercial Cleaning</a></li>
+          <li><a href="/home-cleaning-london/" class="hover:text-copper">Home Cleaning</a></li>
+          <li><a href="/complex-property-cleaning-london/" class="hover:text-copper">Complex Services</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="meta-label">HQC</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/65">
+          <li><a href="/about-high-quality-clean/" class="hover:text-copper">About HQC</a></li>
+          <li><a href="/how-we-work/" class="hover:text-copper">How We Work</a></li>
+          <li><a href="/reviews-case-studies/" class="hover:text-copper">Reviews & Case Studies</a></li>
+          <li><a href="/areas-we-cover/" class="hover:text-copper">Areas We Cover</a></li>
+          <li><a href="/contact/" class="hover:text-copper">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="meta-label">Information</p>
+        <ul class="mt-5 space-y-3 text-sm text-white/65">
+          <li><a href="/cleaning-faqs/" class="hover:text-copper">FAQs</a></li>
+          <li><a href="/cleaning-prices-london/" class="hover:text-copper">How Pricing Works</a></li>
+          <li><a href="/privacy-policy/" class="hover:text-copper">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/" class="hover:text-copper">Terms & Conditions</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+
+    <div class="flex flex-col gap-3 border-t border-white/12 pt-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+      <p>© <span id="y"></span> High Quality Clean Ltd. All rights reserved.</p>
+      <p>London cleaning for homes, workplaces and managed property.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const year = document.getElementById('y');
+  if (year) year.textContent = String(new Date().getFullYear());
+</script>

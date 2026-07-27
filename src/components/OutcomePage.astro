@@ -1,0 +1,184 @@
+---
+import type { OutcomePage as OutcomePageData } from '../data/outcome-pages';
+import { getPageVisual } from '../data/page-visuals';
+
+interface Props {
+  page: OutcomePageData;
+}
+
+const { page } = Astro.props;
+const visual = getPageVisual(page.slug);
+const enquiryType = page.assessment
+  ? 'Assessment before quotation'
+  : page.slug === 'essential-clean-london'
+    ? 'Suitability check before booking'
+    : 'Tailored quotation';
+---
+
+<main class="bg-porcelain pt-20">
+  <section class="relative min-h-[700px] overflow-hidden bg-midnight text-white">
+    <img
+      src={visual.hero}
+      alt={visual.heroAlt}
+      class="absolute inset-0 h-full w-full object-cover"
+      width="1600"
+      height="1100"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(12,30,36,.96)_0%,rgba(12,30,36,.88)_44%,rgba(12,30,36,.22)_78%,rgba(12,30,36,.08)_100%)]"></div>
+    <div class="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-midnight/70 to-transparent"></div>
+
+    <div class="relative mx-auto flex min-h-[700px] max-w-[1440px] flex-col justify-end px-5 pb-16 pt-28 sm:px-8 md:pb-24 lg:px-14">
+      <nav aria-label="Breadcrumb" class="mb-auto flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/65">
+        <a href="/" class="text-white/65 no-underline hover:text-copper">Home</a>
+        <span aria-hidden="true">/</span>
+        <span>{page.cluster}</span>
+      </nav>
+
+      <div class="max-w-4xl">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-copper md:text-sm">{page.eyebrow}</p>
+        <h1 class="font-serif text-[clamp(3rem,6.2vw,6.6rem)] font-medium leading-[.92] tracking-[-0.035em] text-white">{page.title}</h1>
+        <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/82 md:text-2xl">{page.message}</p>
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a class="button button-primary" href={page.primaryHref} data-track="primary_cta" data-service={page.slug}>
+            {page.primaryCta}<span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-ghost" href={page.secondaryHref} data-track="secondary_cta" data-service={page.slug}>
+            {page.secondaryCta}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-midnight/10 bg-white">
+    <div class="mx-auto grid max-w-[1440px] divide-y divide-midnight/10 px-5 sm:px-8 md:grid-cols-3 md:divide-x md:divide-y-0 lg:px-14">
+      <div class="py-6 md:pr-8">
+        <p class="meta-label">Service route</p>
+        <p class="mt-2 font-semibold text-midnight">{page.cluster}</p>
+      </div>
+      <div class="py-6 md:px-8">
+        <p class="meta-label">Designed for</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate">{page.audience}</p>
+      </div>
+      <div class="py-6 md:pl-8">
+        <p class="meta-label">Next step</p>
+        <p class="mt-2 font-semibold text-midnight">{enquiryType}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <div class="grid items-start gap-14 lg:grid-cols-[.88fr_1.12fr] lg:gap-24">
+      <div class="lg:sticky lg:top-28">
+        <p class="section-kicker">The outcome comes first</p>
+        <h2 class="section-title">A service shaped around what has to be ready.</h2>
+        <p class="mt-7 text-lg leading-8 text-slate">{page.description}</p>
+        <p class="mt-5 leading-7 text-slate">{visual.note}</p>
+      </div>
+
+      <div>
+        <div class="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_70px_rgba(14,36,42,.12)]">
+          <img src={visual.gallery[0].src} alt={visual.gallery[0].alt} class="aspect-[4/3] w-full object-cover" loading="lazy" width="1000" height="750" />
+        </div>
+        <div class="mt-8 grid gap-px overflow-hidden rounded-2xl border border-midnight/10 bg-midnight/10 sm:grid-cols-3">
+          {visual.outcomes.map((item, index) => (
+            <div class="bg-white p-6">
+              <span class="font-serif text-3xl text-copper">0{index + 1}</span>
+              <p class="mt-5 font-semibold leading-snug text-midnight">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-midnight py-20 text-white md:py-28">
+    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+      <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
+        <div>
+          <p class="section-kicker">What we establish</p>
+          <h2 class="font-serif text-4xl font-medium leading-tight tracking-tight md:text-6xl">Clear inputs. A realistic scope. No guesswork.</h2>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2">
+          {visual.scope.map((item, index) => (
+            <article class:list={['rounded-2xl border p-6 md:p-8', index === 0 ? 'border-copper bg-copper text-midnight' : 'border-white/15 bg-white/[.04]']}>
+              <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 0 ? 'text-midnight/60' : 'text-copper']}>Scope {index + 1}</span>
+              <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">{item}</h3>
+            </article>
+          ))}
+          <article class="rounded-2xl border border-white/15 bg-white/[.04] p-6 md:p-8">
+            <span class="text-xs font-bold uppercase tracking-[.2em] text-copper">Confirmed before work</span>
+            <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">Inclusions, timing and the handover standard</h3>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <div class="max-w-3xl">
+        <p class="section-kicker">HQC work</p>
+        <h2 class="section-title">Real spaces. Visible care.</h2>
+      </div>
+      <p class="max-w-md text-sm leading-6 text-slate">Selected imagery from the HQC project library. The exact scope and finish varies by property, condition and agreed service.</p>
+    </div>
+    <div class="mt-12 grid auto-rows-[220px] gap-4 md:grid-cols-12 md:auto-rows-[250px]">
+      {visual.gallery.map((image, index) => (
+        <figure class:list={['group relative overflow-hidden rounded-2xl bg-midnight', index === 0 ? 'md:col-span-7 md:row-span-2' : 'md:col-span-5']}>
+          <img src={image.src} alt={image.alt} class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" loading="lazy" width="1000" height="750" />
+          <div class="absolute inset-0 bg-gradient-to-t from-midnight/50 via-transparent to-transparent opacity-70"></div>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-y border-midnight/10 bg-white py-20 md:py-28">
+    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+      <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
+        <div>
+          <p class="section-kicker">What happens next</p>
+          <h2 class="section-title">A calm route from enquiry to result.</h2>
+        </div>
+        <ol class="divide-y divide-midnight/10 border-y border-midnight/10">
+          {[
+            ['Tell us what has to be achieved', 'Share the property, condition, timing and any access or operational constraints.'],
+            ['HQC confirms the right route', page.slug === 'essential-clean-london' ? 'We check suitability for Essential Clean before providing the booking route.' : page.assessment ? 'We arrange the information or assessment needed to define a responsible scope.' : 'We review the details and prepare the appropriate tailored quotation.'],
+            ['The scope is agreed', 'You receive a clear route forward with the relevant inclusions, assumptions and next steps.']
+          ].map(([title, copy], index) => (
+            <li class="grid gap-4 py-7 sm:grid-cols-[4rem_1fr]">
+              <span class="font-serif text-3xl text-copper">0{index + 1}</span>
+              <div><h3 class="font-serif text-2xl font-medium text-midnight">{title}</h3><p class="mt-2 leading-7 text-slate">{copy}</p></div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-porcelain py-20">
+    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+      <p class="section-kicker">Related routes</p>
+      <div class="mt-7 grid gap-4 md:grid-cols-3">
+        {page.related.map((link, index) => (
+          <a class="group flex min-h-40 flex-col justify-between rounded-2xl border border-midnight/10 bg-white p-6 text-midnight no-underline transition hover:-translate-y-1 hover:border-copper hover:shadow-xl" href={link.href}>
+            <span class="meta-label">0{index + 1}</span>
+            <span class="flex items-end justify-between gap-5 font-serif text-2xl font-medium">{link.label}<span class="text-copper transition group-hover:translate-x-1" aria-hidden="true">→</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="relative overflow-hidden bg-copper py-16 text-midnight md:py-20">
+    <div class="absolute -right-16 -top-32 h-80 w-80 rounded-full border border-midnight/15"></div>
+    <div class="relative mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 px-5 sm:px-8 md:flex-row md:items-center lg:px-14">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[.22em] text-midnight/60">The next step is simple</p>
+        <h2 class="mt-3 max-w-3xl font-serif text-4xl font-medium leading-tight md:text-6xl">{page.primaryCta}</h2>
+      </div>
+      <a class="button button-dark shrink-0" href={page.primaryHref}>{page.primaryCta}<span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>
