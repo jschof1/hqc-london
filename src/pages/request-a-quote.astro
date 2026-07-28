@@ -144,7 +144,7 @@ import Header from '../components/Header.astro';
       form.reset();
       window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'form_submit', route: payload.route } }));
     } catch {
-      message.innerHTML = 'We could not send this form just now. Please call <a href="tel:+44208703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
+      message.innerHTML = 'We could not send this form just now. Please call <a href="tel:+442088703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
       message.className = 'mt-6 rounded-lg bg-red-50 p-4 text-sm text-red-900';
     } finally {
       submit.disabled = false;
