@@ -12,34 +12,10 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { canonicalSitemapPaths, locationSitemapPaths } from './sitemap-routes.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const sitemapPath = resolve(__dirname, '../dist/sitemap-0.xml');
-
-// London areas (must match slugs from area-data.json)
-const londonAreas = [
-  'battersea',
-  'belgravia',
-  'chelsea',
-  'clapham',
-  'hampstead',
-  'highgate',
-  'holland-park',
-  'kensington',
-  'knightsbridge',
-  'mayfair',
-  'notting-hill',
-  'primrose-hill',
-  'st-johns-wood',
-  'wandsworth',
-];
-
-// Surrey areas
-const surreyAreas = [
-  'hersham',
-  'walton-on-thames',
-  'weybridge',
-];
 
 const baseUrl = 'https://highqualityclean.co.uk';
 const today = new Date().toISOString().split('T')[0];
@@ -53,23 +29,36 @@ function buildUrlEntry(path) {
   </url>`;
 }
 
-// Read the existing sitemap
+// Read the existing sitemap and retain only the explicit canonical allowlist.
+// This guards against legacy source files being rediscovered by Astro.
 let xml = readFileSync(sitemapPath, 'utf-8');
+const urlEntries = xml.match(/<url>.*?<\/url>/gs) ?? [];
+const canonicalEntries = new Map();
 
-// Only inject URLs that aren't already in the sitemap (prerendered routes are
-// auto-added by @astrojs/sitemap; we don't want duplicates).
-const allLocationPaths = [
-  ...londonAreas.map(area => `/locations/london/${area}/`),
-  ...surreyAreas.map(area => `/locations/surrey/${area}/`),
-];
-
-const missingPaths = allLocationPaths.filter(path => !xml.includes(`<loc>${baseUrl}${path}</loc>`));
-
-if (missingPaths.length === 0) {
-  console.log(`✓ All ${allLocationPaths.length} location URLs already present in sitemap-0.xml — nothing to inject`);
-} else {
-  const locationEntries = missingPaths.map(buildUrlEntry).join('\n');
-  xml = xml.replace('</urlset>', `${locationEntries}\n</urlset>`);
-  writeFileSync(sitemapPath, xml);
-  console.log(`✓ Injected ${missingPaths.length} missing location URL(s) into sitemap-0.xml`);
+for (const entry of urlEntries) {
+  const loc = entry.match(/<loc>([^<]+)<\/loc>/)?.[1];
+  if (!loc) continue;
+  const path = new URL(loc).pathname;
+  if (canonicalSitemapPaths.has(path)) canonicalEntries.set(path, entry);
 }
+
+const missingLocationPaths = locationSitemapPaths.filter((path) => !canonicalEntries.has(path));
+for (const path of missingLocationPaths) canonicalEntries.set(path, buildUrlEntry(path));
+
+const canonicalEntriesInOrder = [...canonicalSitemapPaths]
+  .map((path) => canonicalEntries.get(path))
+  .filter(Boolean)
+  .join('');
+
+const openingTag = xml.match(/^.*?<urlset[^>]*>/s)?.[0];
+if (!openingTag) throw new Error('sitemap-0.xml does not contain a <urlset> element');
+
+xml = `${openingTag}${canonicalEntriesInOrder}</urlset>`;
+writeFileSync(sitemapPath, xml);
+
+const missingControlledPaths = [...canonicalSitemapPaths].filter((path) => !canonicalEntries.has(path));
+if (missingControlledPaths.length > 0) {
+  throw new Error(`Sitemap is missing ${missingControlledPaths.length} controlled URL(s): ${missingControlledPaths.join(', ')}`);
+}
+
+console.log(`✓ Wrote ${canonicalEntries.size} controlled canonical URL(s); injected ${missingLocationPaths.length} retained location URL(s)`);

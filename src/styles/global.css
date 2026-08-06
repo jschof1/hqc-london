@@ -48,6 +48,11 @@
     color: var(--color-midnight);
   }
 
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid var(--color-copper);
+    outline-offset: 3px;
+  }
+
   /* The third-party chat welcome card obscures most of a phone viewport. */
   @media (max-width: 639px) {
     chat-widget {

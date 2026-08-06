@@ -1,8 +1,3 @@
-# Canonical host/protocol redirects.
-http://www.highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
-https://www.highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
-http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
-
 # Sitemap legacy alias.
 /sitemap.xml /sitemap-0.xml 301
 
@@ -31,6 +26,8 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 /client-success-stories/ /reviews-case-studies/ 301
 /areas /areas-we-cover/ 301
 /areas/ /areas-we-cover/ 301
+/get-quote /request-a-quote/ 301
+/get-quote/ /request-a-quote/ 301
 /quote /request-a-quote/ 301
 /quote/ /request-a-quote/ 301
 /discount /offer/ 301
@@ -53,7 +50,6 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 # Retired bug path
 /areas/areas /areas-we-cover/ 301
 /areas/areas/ /areas-we-cover/ 301
-/areas/areas/* /areas-we-cover/ 301
 
 # Legacy service URL redirects direct to the final canonical owner.
 /concierge-laundry /home-cleaning-london/ 301
@@ -97,54 +93,32 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 /resources/material-care /deep-cleaning-london/ 301
 /resources/material-care/ /deep-cleaning-london/ 301
 
-# Legacy London area URLs -> canonical location pages
-/mayfair /locations/london/mayfair/ 301
+# Legacy London area URLs -> canonical location pages. Astro owns the matching
+# no-trailing-slash sources; this file keeps the explicit trailing-slash forms.
 /mayfair/ /locations/london/mayfair/ 301
-/knightsbridge /locations/london/knightsbridge/ 301
 /knightsbridge/ /locations/london/knightsbridge/ 301
-/belgravia /locations/london/belgravia/ 301
 /belgravia/ /locations/london/belgravia/ 301
-/chelsea /locations/london/chelsea/ 301
 /chelsea/ /locations/london/chelsea/ 301
-/kensington /locations/london/kensington/ 301
 /kensington/ /locations/london/kensington/ 301
-/hampstead /locations/london/hampstead/ 301
 /hampstead/ /locations/london/hampstead/ 301
-/wandsworth /locations/london/wandsworth/ 301
 /wandsworth/ /locations/london/wandsworth/ 301
-/battersea /locations/london/battersea/ 301
 /battersea/ /locations/london/battersea/ 301
-/clapham /locations/london/clapham/ 301
 /clapham/ /locations/london/clapham/ 301
-/notting-hill /locations/london/notting-hill/ 301
 /notting-hill/ /locations/london/notting-hill/ 301
-/nottingHill /locations/london/notting-hill/ 301
 /nottingHill/ /locations/london/notting-hill/ 301
-/holland-park /locations/london/holland-park/ 301
 /holland-park/ /locations/london/holland-park/ 301
-/hollandPark /locations/london/holland-park/ 301
 /hollandPark/ /locations/london/holland-park/ 301
-/areas/hollandPark /locations/london/holland-park/ 301
 /areas/hollandPark/ /locations/london/holland-park/ 301
-/primrose-hill /locations/london/primrose-hill/ 301
 /primrose-hill/ /locations/london/primrose-hill/ 301
-/primroseHill /locations/london/primrose-hill/ 301
 /primroseHill/ /locations/london/primrose-hill/ 301
-/highgate /locations/london/highgate/ 301
 /highgate/ /locations/london/highgate/ 301
-/st-johns-wood /locations/london/st-johns-wood/ 301
 /st-johns-wood/ /locations/london/st-johns-wood/ 301
-/stJohnsWood /locations/london/st-johns-wood/ 301
 /stJohnsWood/ /locations/london/st-johns-wood/ 301
 
 # Legacy Surrey area URLs -> canonical location pages
-/weybridge /locations/surrey/weybridge/ 301
 /weybridge/ /locations/surrey/weybridge/ 301
-/hersham /locations/surrey/hersham/ 301
 /hersham/ /locations/surrey/hersham/ 301
-/walton-on-thames /locations/surrey/walton-on-thames/ 301
 /walton-on-thames/ /locations/surrey/walton-on-thames/ 301
-/waltonOnThames /locations/surrey/walton-on-thames/ 301
 /waltonOnThames/ /locations/surrey/walton-on-thames/ 301
 
 # Canonical trailing slashes for prerendered location pages
@@ -165,3 +139,8 @@ http://highqualityclean.co.uk/* https://highqualityclean.co.uk/:splat 301
 /locations/surrey/weybridge /locations/surrey/weybridge/ 301
 /locations/surrey/hersham /locations/surrey/hersham/ 301
 /locations/surrey/walton-on-thames /locations/surrey/walton-on-thames/ 301
+
+# Keep wildcard rules after every exact rule: Cloudflare Pages treats later
+# rules as dynamic after a splat/placeholder. Canonical host/protocol handling
+# remains in src/middleware.ts because Pages _redirects accepts relative paths.
+/areas/areas/* /areas-we-cover/ 301

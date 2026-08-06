@@ -6,7 +6,7 @@ import Header from '../components/Header.astro';
 <Layout
   title="Request a Cleaning Quote | High Quality Clean"
   description="Choose the correct residential, commercial, property or complex-service enquiry route and send the details HQC needs to review the work."
-  robots="noindex, follow"
+  pageType="ContactPage"
 >
   <Header />
   <main class="min-h-screen bg-mist px-4 pb-20 pt-28 sm:px-6">
@@ -14,17 +14,17 @@ import Header from '../components/Header.astro';
       <div class="text-center">
         <p class="text-sm font-semibold uppercase tracking-[0.22em] text-gold">Request a quote</p>
         <h1 class="mt-4 font-serif text-4xl text-navy md:text-6xl">Choose the right enquiry route</h1>
-        <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">We will confirm receipt immediately and personally review the requirement within one working day.</p>
+        <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">Choose the route that best matches the work, then send the details needed for a considered review.</p>
       </div>
 
       <div class="mt-10 grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Enquiry type">
-        <button class="route-tab rounded-xl border border-gold bg-white p-4 text-left" type="button" data-route="residential" aria-selected="true">
+        <button id="residential-route-tab" class="route-tab rounded-xl border border-gold bg-white p-4 text-left" type="button" role="tab" data-route="residential" aria-selected="true" aria-controls="quote-route-panel" tabindex="0">
           <strong class="block text-navy">Home or private client</strong><span class="mt-1 block text-sm text-ink/65">Deep, moving, tenancy or quoted home work</span>
         </button>
-        <button class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" data-route="commercial" aria-selected="false">
+        <button id="commercial-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="commercial" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
           <strong class="block text-navy">Workplace or managed property</strong><span class="mt-1 block text-sm text-ink/65">Commercial, office, agency or portfolio</span>
         </button>
-        <button class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" data-route="complex" aria-selected="false">
+        <button id="complex-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="complex" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
           <strong class="block text-navy">Large or complex requirement</strong><span class="mt-1 block text-sm text-ink/65">Assessment before quotation</span>
         </button>
       </div>
@@ -32,8 +32,19 @@ import Header from '../components/Header.astro';
       <form id="routed-quote-form" class="mt-6 rounded-2xl border border-gold/30 bg-white p-6 shadow-xl md:p-10">
         <input type="hidden" name="route" id="form-route" value="residential" />
         <input type="hidden" name="source_page" value={Astro.url.pathname} />
+        <input type="hidden" name="buyer" id="buyer-context" />
+        <input type="hidden" name="area" id="area-context" />
+        <input type="hidden" name="service_context" id="service-context" />
+        <input type="hidden" name="landing_page" id="landing-page-context" />
+        <input type="hidden" name="referrer" id="referrer-context" />
+        <input type="hidden" name="utm_source" id="utm-source-context" />
+        <input type="hidden" name="utm_medium" id="utm-medium-context" />
+        <input type="hidden" name="utm_campaign" id="utm-campaign-context" />
+        <input type="hidden" name="utm_term" id="utm-term-context" />
+        <input type="hidden" name="utm_content" id="utm-content-context" />
+        <input type="hidden" name="utm_id" id="utm-id-context" />
 
-        <div class="mb-8 rounded-xl bg-navy p-5 text-white">
+        <div id="quote-route-panel" class="mb-8 rounded-xl bg-navy p-5 text-white" role="tabpanel" tabindex="-1" aria-labelledby="residential-route-tab">
           <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Selected route</p>
           <h2 id="route-heading" class="mt-2 font-serif text-2xl">Residential quotation</h2>
           <p id="route-help" class="mt-2 text-sm text-white/75">Tell us the service, property condition, full address, access and parking details.</p>
@@ -47,14 +58,16 @@ import Header from '../components/Header.astro';
           <label class="block md:col-span-2"><span class="form-label">Service or outcome needed *</span>
             <select class="form-input" name="service" id="service-options" required>
               <option value="">Choose one</option>
-              <option>Deep Clean™</option><option>Move-In Reset™</option><option>End of Tenancy™</option><option>Post-Construction™</option><option>Other residential requirement</option>
+              <option>Essential Clean™ suitability</option><option>Deep Clean™</option><option>Move-In Reset™</option><option>End of Tenancy™</option><option>Post-Construction™</option><option>Other residential requirement</option>
             </select>
           </label>
           <label class="block md:col-span-2"><span class="form-label">Property or site address</span><input class="form-input" name="address" autocomplete="street-address" /></label>
           <label class="block"><span class="form-label">Required date or desired start date</span><input class="form-input" name="desired_date" type="date" /></label>
           <label class="block"><span class="form-label">Approximate size or area</span><input class="form-input" name="size" placeholder="For example 1,800 sq ft" /></label>
-          <label id="frequency-field" class="hidden block"><span class="form-label">Frequency</span><select class="form-input" name="frequency"><option value="">Choose one</option><option>Daily</option><option>Weekly</option><option>Fortnightly</option><option>One-off</option></select></label>
-          <label id="tupe-field" class="hidden block"><span class="form-label">Current cleaner / TUPE context</span><input class="form-input" name="tupe_context" placeholder="Current provider, team or not known" /></label>
+          <label id="frequency-field" class="hidden block"><span class="form-label">Frequency *</span><select class="form-input" name="frequency" disabled><option value="">Choose one</option></select></label>
+          <label id="tupe-field" class="hidden block"><span class="form-label">Current cleaner / TUPE context</span><input class="form-input" name="tupe_context" placeholder="Current provider, team or not known" disabled /></label>
+          <label id="operating-hours-field" class="hidden block md:col-span-2"><span class="form-label">Operating hours or required service window *</span><input class="form-input" name="operating_hours" placeholder="For example: office open Mon–Fri, 8am–6pm; cleaning after 6.30pm" disabled /></label>
+          <label id="mobilisation-field" class="hidden block md:col-span-2"><span class="form-label">Mobilisation or start requirements *</span><textarea class="form-input min-h-28 resize-y" name="mobilisation_requirements" placeholder="Target start, handover needs, access setup, current contract or other mobilisation details" disabled></textarea></label>
           <label class="block md:col-span-2"><span class="form-label">Condition, access, parking and important requirements *</span><textarea class="form-input min-h-36 resize-y" name="details" required></textarea></label>
           <label id="complex-files-note" class="hidden md:col-span-2 rounded-xl border border-gold/30 bg-mist p-5 text-sm text-ink/75">
             <strong class="block text-navy">Supporting material</strong>
@@ -67,7 +80,7 @@ import Header from '../components/Header.astro';
           <span>I agree that HQC may use these details to respond to this enquiry. See the <a href="/privacy-policy/">privacy policy</a>.</span>
         </label>
 
-        <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" aria-live="polite"></div>
+        <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" role="status" aria-live="polite"></div>
         <button id="quote-submit" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy transition hover:bg-navy hover:text-white" type="submit">Submit Your Requirement</button>
       </form>
     </div>
@@ -79,17 +92,56 @@ import Header from '../components/Header.astro';
     residential: {
       heading: 'Residential quotation',
       help: 'Tell us the service, property condition, full address, access and parking details.',
-      options: ['Deep Clean™', 'Move-In Reset™', 'End of Tenancy™', 'Post-Construction™', 'Other residential requirement']
+      options: ['Essential Clean™ suitability', 'Deep Clean™', 'Move-In Reset™', 'End of Tenancy™', 'Post-Construction™', 'Other residential requirement']
     },
     commercial: {
       heading: 'Commercial or managed-property enquiry',
       help: 'Tell us the site type, approximate area, hours, frequency, current provider and desired start date.',
-      options: ['Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Communal Area Cleaning', 'Agency or Portfolio Support', 'Other professional requirement']
+      options: ['Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Communal Area Cleaning', 'Agency or Portfolio Support', 'Move-In and Void Property Cleaning', 'Other professional requirement']
     },
     complex: {
       heading: 'Complex-service assessment',
       help: 'Describe the property or project, why it is outside a routine service and the supporting material available.',
-      options: ['Large or Executive Property', 'Post-Construction Project', 'Multi-Site or Portfolio Project', 'Other Complex Requirement']
+      options: ['Large or Executive Property', 'Office or Workplace Project', 'Commercial Deep-Clean Project', 'Communal Site Assessment', 'Post-Construction Project', 'Multi-Site or Portfolio Project', 'Other Complex Requirement']
+    }
+  };
+
+  const serviceAliases: Record<keyof typeof routes, Record<string, string>> = {
+    residential: {
+      'essential-clean': 'Essential Clean™ suitability',
+      essential: 'Essential Clean™ suitability',
+      'deep-clean': 'Deep Clean™',
+      'deep-cleaning': 'Deep Clean™',
+      'move-in': 'Move-In Reset™',
+      'move-in-cleaning': 'Move-In Reset™',
+      'end-of-tenancy': 'End of Tenancy™',
+      'end-of-tenancy-cleaning': 'End of Tenancy™',
+      'post-construction': 'Post-Construction™',
+      'post-construction-cleaning': 'Post-Construction™'
+    },
+    commercial: {
+      office: 'Office Cleaning',
+      'office-cleaning': 'Office Cleaning',
+      commercial: 'Commercial Cleaning',
+      'commercial-cleaning': 'Commercial Cleaning',
+      'commercial-deep': 'Commercial Deep Cleaning',
+      'commercial-deep-cleaning': 'Commercial Deep Cleaning',
+      communal: 'Communal Area Cleaning',
+      'communal-area': 'Communal Area Cleaning',
+      'communal-area-cleaning': 'Communal Area Cleaning',
+      portfolio: 'Agency or Portfolio Support',
+      void: 'Move-In and Void Property Cleaning',
+      'move-in-void': 'Move-In and Void Property Cleaning'
+    },
+    complex: {
+      office: 'Office or Workplace Project',
+      'commercial-deep': 'Commercial Deep-Clean Project',
+      communal: 'Communal Site Assessment',
+      'large-property': 'Large or Executive Property',
+      'complex-property': 'Large or Executive Property',
+      'post-construction': 'Post-Construction Project',
+      portfolio: 'Multi-Site or Portfolio Project',
+      'multi-site': 'Multi-Site or Portfolio Project'
     }
   };
 
@@ -99,36 +151,140 @@ import Header from '../components/Header.astro';
   const service = document.getElementById('service-options') as HTMLSelectElement | null;
   const frequency = document.getElementById('frequency-field');
   const tupe = document.getElementById('tupe-field');
+  const frequencyInput = frequency?.querySelector<HTMLSelectElement>('[name="frequency"]');
+  const tupeInput = tupe?.querySelector<HTMLInputElement>('[name="tupe_context"]');
+  const operatingHours = document.getElementById('operating-hours-field');
+  const operatingHoursInput = operatingHours?.querySelector<HTMLInputElement>('[name="operating_hours"]');
+  const mobilisation = document.getElementById('mobilisation-field');
+  const mobilisationInput = mobilisation?.querySelector<HTMLTextAreaElement>('[name="mobilisation_requirements"]');
   const complexNote = document.getElementById('complex-files-note');
+  const routePanel = document.getElementById('quote-route-panel');
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.route-tab'));
+  const pageUrl = new URL(window.location.href);
+  const initialService = pageUrl.searchParams.get('service')?.trim().toLowerCase() ?? '';
+  const storedAttribution = (() => {
+    try {
+      const value = window.sessionStorage.getItem('hqc:attribution');
+      return value ? JSON.parse(value) as { landingPage?: string; referrer?: string; utm?: Record<string, string> } : {};
+    } catch {
+      return {};
+    }
+  })();
 
-  function setRoute(route: keyof typeof routes) {
+  const setContextValue = (id: string, value: string | null) => {
+    const field = document.getElementById(id) as HTMLInputElement | null;
+    if (field) field.value = value ?? '';
+  };
+
+  const currentOrStored = (key: string) => pageUrl.searchParams.has(key)
+    ? pageUrl.searchParams.get(key)
+    : storedAttribution.utm?.[key] ?? null;
+
+  const populateContext = () => {
+    setContextValue('buyer-context', pageUrl.searchParams.get('buyer'));
+    setContextValue('area-context', pageUrl.searchParams.get('area'));
+    setContextValue('service-context', initialService);
+    setContextValue('landing-page-context', storedAttribution.landingPage ?? pageUrl.href);
+    setContextValue('referrer-context', storedAttribution.referrer ?? '');
+    setContextValue('utm-source-context', currentOrStored('utm_source'));
+    setContextValue('utm-medium-context', currentOrStored('utm_medium'));
+    setContextValue('utm-campaign-context', currentOrStored('utm_campaign'));
+    setContextValue('utm-term-context', currentOrStored('utm_term'));
+    setContextValue('utm-content-context', currentOrStored('utm_content'));
+    setContextValue('utm-id-context', currentOrStored('utm_id'));
+  };
+  populateContext();
+
+  function updateConditionalFields() {
+    if (!routeInput || !service || !frequencyInput || !tupeInput || !operatingHoursInput || !mobilisationInput) return;
+    const isCommercial = routeInput.value === 'commercial';
+    const isEssentialClean = routeInput.value === 'residential' && service.value === 'Essential Clean™ suitability';
+    const needsFrequency = isCommercial || isEssentialClean;
+    const frequencyOptions = isCommercial
+      ? ['Daily', 'Weekly', 'Fortnightly', 'One-off']
+      : ['Weekly', 'Fortnightly'];
+
+    frequency?.classList.toggle('hidden', !needsFrequency);
+    frequencyInput.disabled = !needsFrequency;
+    frequencyInput.required = needsFrequency;
+    frequencyInput.innerHTML = '<option value="">Choose one</option>' + frequencyOptions.map((item) => `<option>${item}</option>`).join('');
+
+    tupe?.classList.toggle('hidden', !isCommercial);
+    tupeInput.disabled = !isCommercial;
+    if (!isCommercial) tupeInput.value = '';
+
+    for (const [container, input] of [[operatingHours, operatingHoursInput], [mobilisation, mobilisationInput]] as const) {
+      container?.classList.toggle('hidden', !isCommercial);
+      input.disabled = !isCommercial;
+      input.required = isCommercial;
+      if (!isCommercial) input.value = '';
+    }
+  }
+
+  function setRoute(route: keyof typeof routes, options: { updateUrl?: boolean; track?: boolean; requestedService?: string } = {}) {
     const config = routes[route];
     if (!config || !routeInput || !heading || !help || !service) return;
     routeInput.value = route;
     heading.textContent = config.heading;
     help.textContent = config.help;
     service.innerHTML = '<option value="">Choose one</option>' + config.options.map((item) => `<option>${item}</option>`).join('');
-    frequency?.classList.toggle('hidden', route === 'residential');
-    tupe?.classList.toggle('hidden', route !== 'commercial');
+    const requestedService = options.requestedService?.trim().toLowerCase() ?? '';
+    const matchedService = serviceAliases[route][requestedService];
+    if (matchedService && config.options.includes(matchedService)) service.value = matchedService;
+    updateConditionalFields();
     complexNote?.classList.toggle('hidden', route !== 'complex');
-    document.querySelectorAll<HTMLButtonElement>('.route-tab').forEach((tab) => {
+    tabs.forEach((tab) => {
       const selected = tab.dataset.route === route;
       tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
       tab.classList.toggle('border-gold', selected);
       tab.classList.toggle('border-gold/30', !selected);
       tab.classList.toggle('bg-gold/10', selected);
     });
-    window.history.replaceState({}, '', `${window.location.pathname}?route=${route}`);
-    window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'enquiry_route_selected', route } }));
+    routePanel?.setAttribute('aria-labelledby', `${route}-route-tab`);
+    if (options.updateUrl !== false) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('route', route);
+      window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+    }
+    if (options.track !== false) {
+      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'enquiry_route_selected', route } }));
+    }
   }
 
-  document.querySelectorAll<HTMLButtonElement>('.route-tab').forEach((tab) => tab.addEventListener('click', () => setRoute(tab.dataset.route as keyof typeof routes)));
-  const initial = new URLSearchParams(window.location.search).get('route');
-  setRoute(initial && initial in routes ? initial as keyof typeof routes : 'residential');
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => setRoute(tab.dataset.route as keyof typeof routes));
+    tab.addEventListener('keydown', (event) => {
+      const keys = ['ArrowRight', 'ArrowLeft', 'Home', 'End'];
+      if (!keys.includes(event.key)) return;
+      event.preventDefault();
+      const nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      const nextTab = tabs[nextIndex];
+      nextTab.focus();
+      setRoute(nextTab.dataset.route as keyof typeof routes);
+    });
+  });
+  service?.addEventListener('change', updateConditionalFields);
+  const initial = pageUrl.searchParams.get('route');
+  setRoute(initial && initial in routes ? initial as keyof typeof routes : 'residential', {
+    updateUrl: false,
+    track: false,
+    requestedService: initialService
+  });
 
   const form = document.getElementById('routed-quote-form') as HTMLFormElement | null;
   const message = document.getElementById('form-message');
   const submit = document.getElementById('quote-submit') as HTMLButtonElement | null;
+  pageUrl.searchParams.forEach((value, key) => {
+    const alreadyCaptured = Array.from(form?.elements ?? []).some((element) => element instanceof HTMLInputElement && element.name === key);
+    if (!key.startsWith('utm_') || alreadyCaptured) return;
+    const field = document.createElement('input');
+    field.type = 'hidden';
+    field.name = key;
+    field.value = value;
+    field.defaultValue = value;
+    form?.append(field);
+  });
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!submit || !message) return;
@@ -139,9 +295,12 @@ import Header from '../components/Header.astro';
     try {
       const response = await fetch('/api/quote', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       if (!response.ok) throw new Error('Submission failed');
-      message.textContent = 'Thank you. Your requirement has been received and will be personally reviewed within one working day.';
+      message.textContent = 'Thank you. Your requirement has been sent.';
       message.className = 'mt-6 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-900';
+      const selectedRoute = routeInput?.value as keyof typeof routes;
       form.reset();
+      populateContext();
+      setRoute(selectedRoute in routes ? selectedRoute : 'residential', { updateUrl: false, track: false, requestedService: initialService });
       window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'form_submit', route: payload.route } }));
     } catch {
       message.innerHTML = 'We could not send this form just now. Please call <a href="tel:+442088703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';

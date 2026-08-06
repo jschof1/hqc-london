@@ -206,13 +206,13 @@ export const outcomePages: OutcomePage[] = [
     slug: 'essential-clean-london',
     cluster: 'Homes & Private Clients',
     title: 'Essential Clean™ for London Homes',
-    eyebrow: 'The only HQC service available for direct online booking',
+    eyebrow: 'A recurring service assessed for suitability',
     primaryKeyword: 'regular home cleaning London',
     description: 'A weekly or fortnightly cleaning service for suitable, maintenance-ready London homes.',
     message: 'Maintain and improve a suitable home through a clear recurring service.',
-    audience: 'Clients seeking weekly, fortnightly or suitable one-off maintenance cleaning.',
-    primaryCta: 'Check Whether Your Home Is Suitable',
-    primaryHref: `${selector}`,
+    audience: 'Clients seeking weekly or fortnightly maintenance cleaning for a suitable home.',
+    primaryCta: 'Request an Essential Clean Suitability Review',
+    primaryHref: `${quote}?route=residential&service=essential-clean&buyer=home`,
     secondaryCta: 'View the 30% First-Clean Offer',
     secondaryHref: '/offer/',
     proof: ['Weekly or fortnightly commitment', 'Heavy build-up is routed to manual review', '30% first-clean offer requires a three-month commitment'],
@@ -280,7 +280,7 @@ export const outcomePages: OutcomePage[] = [
     primaryHref: quote,
     secondaryCta: 'See How HQC Works',
     secondaryHref: '/how-we-work/',
-    proof: ['More than 300 clients have chosen HQC', 'Clear scope and labour-based quotations', 'An outcome-led route for homes, workplaces and managed property'],
+    proof: ['Clear scope and labour-based quotations', 'An outcome-led route for homes, workplaces and managed property', 'Founder information is kept separate from service scope'],
     related: [{ label: 'Why choose HQC', href: '/why-choose-hqc/' }, { label: 'Reviews and case studies', href: '/reviews-case-studies/' }]
   },
   {
@@ -296,7 +296,7 @@ export const outcomePages: OutcomePage[] = [
     primaryHref: selector,
     secondaryCta: 'Read Client Success Stories',
     secondaryHref: '/reviews-case-studies/',
-    proof: ['More than 300 clients have chosen HQC', 'Requirements are scoped before delivery', 'No unsupported guarantee or retention claim'],
+    proof: ['Requirements are scoped before delivery', 'Clear inclusions and exclusions are agreed before work', 'No unsupported guarantee or retention claim'],
     related: [{ label: 'How we work', href: '/how-we-work/' }, { label: 'How we price', href: '/cleaning-prices-london/' }, { label: 'About HQC', href: '/about-high-quality-clean/' }]
   },
   {
@@ -304,14 +304,14 @@ export const outcomePages: OutcomePage[] = [
     cluster: 'Trust',
     title: 'How Our Cleaning Service Works',
     eyebrow: 'A clear route from requirement to result',
-    description: 'See how HQC routes each enquiry to direct booking, tailored quotation or complex-service assessment.',
+    description: 'See how HQC routes each enquiry to Essential Clean suitability, a tailored quotation or a complex-service assessment.',
     message: 'A clear route from requirement to result.',
     audience: 'Home, workplace, commercial and property clients.',
     primaryCta: 'Start Your Enquiry',
     primaryHref: quote,
     secondaryCta: 'Find My Service',
     secondaryHref: selector,
-    proof: ['Eligible Essential Clean clients can book online', 'Quoted work is reviewed manually', 'Complex requirements receive a separate assessment'],
+    proof: ['Essential Clean suitability is reviewed separately', 'Quoted work is reviewed manually', 'Complex requirements receive a separate assessment'],
     related: [{ label: 'How HQC pricing works', href: '/cleaning-prices-london/' }, { label: 'Cleaning FAQs', href: '/cleaning-faqs/' }]
   },
   {
@@ -352,8 +352,8 @@ export const outcomePages: OutcomePage[] = [
     title: 'Cleaning Reviews and Client Success Stories',
     eyebrow: 'Evidence from homes, workplaces and property clients',
     primaryKeyword: 'High Quality Clean reviews',
-    description: 'Verified reviews and evidence-led examples of the outcomes High Quality Clean has delivered.',
-    message: 'See how HQC has helped homes, workplaces and property clients achieve the required result.',
+    description: 'Permissioned reviews and evidence-led examples, published only where the supporting approval is in place.',
+    message: 'See relevant approved evidence when it is available for publication.',
     audience: 'Prospective clients seeking proof and relevant examples.',
     primaryCta: 'Request a Similar Service',
     primaryHref: quote,
@@ -374,7 +374,7 @@ export const outcomePages: OutcomePage[] = [
     primaryHref: selector,
     secondaryCta: 'Contact HQC',
     secondaryHref: '/contact/',
-    proof: ['Immediate on-screen confirmation', 'Personal review within one working day', 'Eligible Essential Clean enquiries are routed to booking'],
+    proof: ['On-screen submission status', 'Route and campaign context are retained', 'Essential Clean suitability is reviewed separately'],
     related: [{ label: 'Home cleaning', href: '/home-cleaning-london/' }, { label: 'Commercial cleaning', href: '/commercial-cleaning-london/' }, { label: 'Property and facilities cleaning', href: '/property-facilities-cleaning-london/' }]
   },
   {

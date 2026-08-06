@@ -19,13 +19,13 @@ import ServiceSelector from '../components/ServiceSelector.astro';
           <h1 class="mt-6 max-w-3xl font-serif text-[clamp(3.8rem,7vw,7.2rem)] font-medium leading-[.88] tracking-[-.045em]">
             The right clean.<br /><em class="font-medium text-copper">Clearly defined.</em>
           </h1>
-          <p class="mt-8 max-w-xl text-lg leading-8 text-white/75 md:text-xl">For London homes, workplaces, managed properties and complex projects. Tell us what has to be ready, and HQC will guide you to the right booking, quotation or assessment.</p>
+          <p class="mt-8 max-w-xl text-lg leading-8 text-white/75 md:text-xl">For London homes, workplaces, managed properties and complex projects. Tell us what has to be ready, and HQC will guide you to the right service, quotation or assessment.</p>
           <div class="mt-10 flex flex-col gap-3 sm:flex-row">
             <a href="#find-my-service" class="button button-primary" data-track="find_my_service">Find my service <span aria-hidden="true">↓</span></a>
             <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote">Request a tailored quote</a>
           </div>
           <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-7 text-xs font-semibold uppercase tracking-[.14em] text-white/55">
-            <span>London-based</span><span>300+ clients</span><span>Founder-led</span>
+            <span>London-based</span><span>Outcome-led</span><span>Founder-led</span>
           </div>
         </div>
 
@@ -41,19 +41,6 @@ import ServiceSelector from '../components/ServiceSelector.astro';
             <p class="mt-4 font-serif text-2xl font-semibold leading-tight">Maintenance, restoration, handover or a recurring programme.</p>
           </div>
           <div class="absolute right-[2%] top-[9%] flex h-24 w-24 items-center justify-center rounded-full border border-copper/50 bg-midnight/80 text-center text-[10px] font-bold uppercase tracking-[.15em] text-copper backdrop-blur">Careful<br />delivery</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="border-b border-midnight/10 bg-white">
-      <div class="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-14">
-        <p class="max-w-xs text-xs font-bold uppercase tracking-[.2em] text-slate">Selected organisations represented in the HQC project library</p>
-        <div class="flex flex-wrap items-center gap-x-9 gap-y-5 opacity-60 grayscale">
-          <img src="/images/brand-logos/Knight-Frank.webp" alt="Knight Frank logo" class="h-8 w-auto object-contain" loading="lazy" width="250" height="250" />
-          <img src="/images/brand-logos/Marsh-and-Parsons.webp" alt="Marsh & Parsons logo" class="h-7 w-auto object-contain" loading="lazy" width="200" height="160" />
-          <img src="/images/brand-logos/Sostrene-Grene.png" alt="Søstrene Grene logo" class="h-8 w-auto object-contain" loading="lazy" width="300" height="100" />
-          <img src="/images/brand-logos/chestertons.webp" alt="Chestertons logo" class="h-8 w-auto object-contain" loading="lazy" width="480" height="172" />
-          <img src="/images/brand-logos/Lux.webp" alt="Lux logo" class="h-7 w-auto object-contain" loading="lazy" width="227" height="177" />
         </div>
       </div>
     </section>
@@ -124,7 +111,7 @@ import ServiceSelector from '../components/ServiceSelector.astro';
           {[
             ['01', 'Define the outcome', 'Maintenance, restoration, handover, recurring programme or complex project.'],
             ['02', 'Capture the detail', 'Condition, access, parking, timing, frequency, constraints and supporting files.'],
-            ['03', 'Confirm the route', 'Direct booking for eligible Essential Clean, a tailored quote or a formal assessment.']
+            ['03', 'Confirm the route', 'Essential Clean suitability, a tailored quote or a formal assessment.']
           ].map(([number, title, copy], index) => (
             <article class:list={['min-h-72 p-7 md:p-9', index === 1 ? 'bg-copper text-midnight' : 'bg-midnight']}>
               <span class:list={['font-serif text-4xl', index === 1 ? 'text-midnight/55' : 'text-copper']}>{number}</span>
@@ -147,9 +134,9 @@ import ServiceSelector from '../components/ServiceSelector.astro';
         <div class="flex flex-col justify-center">
           <p class="section-kicker">Evidence, not adjectives</p>
           <h2 class="section-title">The work should be visible.</h2>
-          <p class="mt-7 text-lg leading-8 text-slate">HQC’s project library covers maintained homes, property handovers, detailed resets and operational sites. We use relevant evidence while keeping each quotation grounded in the property in front of us.</p>
+          <p class="mt-7 text-lg leading-8 text-slate">Each quotation starts with the property, workplace or project in front of us. Relevant evidence is added only where it is approved for use and helps explain the required outcome.</p>
           <div class="mt-8 grid grid-cols-2 gap-4 border-y border-midnight/10 py-7">
-            <div><strong class="font-serif text-5xl font-medium text-midnight">300+</strong><span class="mt-1 block text-sm text-slate">clients have chosen HQC</span></div>
+            <div><strong class="font-serif text-5xl font-medium text-midnight">1</strong><span class="mt-1 block text-sm text-slate">clear route from requirement to review</span></div>
             <div><strong class="font-serif text-5xl font-medium text-midnight">3</strong><span class="mt-1 block text-sm text-slate">clear enquiry routes</span></div>
           </div>
           <a href="/reviews-case-studies/" class="mt-8 font-bold text-midnight no-underline">View project evidence <span class="text-copper">→</span></a>
@@ -159,8 +146,8 @@ import ServiceSelector from '../components/ServiceSelector.astro';
 
     <section class="overflow-hidden bg-white">
       <div class="mx-auto grid max-w-[1440px] lg:grid-cols-2">
-        <figure class="min-h-[520px]">
-          <img src="/images/pedro-founder.webp" alt="Pedro Ndombasi, founder of High Quality Clean" class="h-full w-full object-cover object-top" loading="lazy" width="1152" height="2048" />
+        <figure class="min-h-[320px] bg-mist sm:min-h-[520px]" style="background-image: url('/images/pedro-founder.webp'); background-position: center top; background-size: cover;">
+          <img src="/images/pedro-founder.webp" alt="Pedro Ndombasi, founder of High Quality Clean" class="h-full w-full object-cover object-top" loading="eager" decoding="async" width="1152" height="2048" />
         </figure>
         <div class="flex items-center px-5 py-20 sm:px-8 lg:px-20">
           <div>

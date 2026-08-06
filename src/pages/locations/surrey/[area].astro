@@ -2,294 +2,133 @@
 import Layout from '../../../layouts/Layout.astro';
 import areaData from '../../../data/area-data.json';
 import Header from '../../../components/Header.astro';
-import IntroRateBanner from '../../../components/IntroRateBanner.astro';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
   const typedAreaData = areaData as Record<string, any>;
-  const areas = Object.keys(typedAreaData);
-  // Filter for Surrey areas only
-  const surreyAreas = areas.filter(areaKey => typedAreaData[areaKey].region === 'Surrey');
-  
-  return surreyAreas.map(areaKey => {
-    const slug = areaKey.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-    return {
-      params: { area: slug },
-      props: { areaInfo: typedAreaData[areaKey], areaKey }
-    };
-  });
+
+  return Object.entries(typedAreaData)
+    .filter(([, info]) => info.region === 'Surrey')
+    .map(([areaKey, areaInfo]) => ({
+      params: { area: areaKey.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase() },
+      props: { areaInfo }
+    }));
 }
 
 const { area } = Astro.params;
-const { areaInfo, areaKey } = Astro.props;
+const { areaInfo } = Astro.props;
 const typedAreaData = areaData as Record<string, any>;
+const pageTitle = `Home Cleaning Enquiries in ${areaInfo.name} | High Quality Clean`;
+const metaDescription = `Request a considered home-cleaning quote for ${areaInfo.name}. Tell High Quality Clean about the property, condition, access and the outcome you need.`;
+const quoteHref = `/request-a-quote/?route=residential&area=${encodeURIComponent(areaInfo.name)}`;
 
-// SEO Title & Description Overrides — prefer rich per-area data when present
-const pageTitle = areaInfo.pageTitle || `Luxury Cleaners ${areaInfo.name} | High Quality Clean Surrey`;
-const metaDescription = areaInfo.metaDescription || `Premium home, deep, and end-of-tenancy cleaning in ${areaInfo.name} (${areaInfo.postcodes.join(', ')}). DBS-checked, insured cleaners. Request a quote today.`;
-
-// JSON-LD Schema
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": `High Quality Clean ${areaInfo.name}`,
-  "image": areaInfo.heroImage,
-  "@id": `https://highqualityclean.co.uk/locations/surrey/${area}/`,
-  "url": `https://highqualityclean.co.uk/locations/surrey/${area}/`,
-  "telephone": "0208 8703925",
-  "priceRange": "£££",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": areaInfo.name,
-    "addressRegion": "Surrey",
-    "addressCountry": "UK"
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": [areaInfo.name, ...areaInfo.postcodes]
-  },
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 51.3656, // Surrey coordinates approximate
-      "longitude": -0.4331
-    },
-    "geoRadius": "5000"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "08:00",
-    "closes": "20:00"
-  }
-};
-
-// Helper to get nearby areas
 const nearbyAreas = Object.entries(typedAreaData)
-  .filter(([, info]) => info.name !== areaInfo.name && info.region === areaInfo.region)
+  .filter(([, info]) => info.name !== areaInfo.name && info.region === 'Surrey')
   .slice(0, 4)
   .map(([key, info]) => ({
-    ...info,
+    name: info.name,
     slug: key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase()
   }));
 
-// Helper for stars
-function repeat(count: number) {
-  return Array.from({ length: count }, (_, i) => i);
-}
+const schema = {
+  '@type': 'Service',
+  name: `Home cleaning enquiries in ${areaInfo.name}`,
+  serviceType: 'Home cleaning enquiry review',
+  image: areaInfo.heroImage,
+  '@id': `https://highqualityclean.co.uk/locations/surrey/${area}/#service`,
+  url: `https://highqualityclean.co.uk/locations/surrey/${area}/`,
+  provider: { '@id': 'https://highqualityclean.co.uk/#organization' },
+  areaServed: {
+    '@type': 'Place',
+    name: [areaInfo.name, ...areaInfo.postcodes]
+  }
+};
 ---
 
-<Layout title={pageTitle} description={metaDescription}>
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<Layout title={pageTitle} description={metaDescription} schemaNodes={[schema]}>
   <Header />
 
-  <main class="page-transition pt-16 overflow-x-hidden">
-    
-    <!-- Hero Section -->
+  <main class="page-transition overflow-x-hidden pt-16">
     <section class="relative bg-navy py-20 lg:py-28">
       <div class="absolute inset-0 overflow-hidden">
-        <img src={areaInfo.heroImage} alt={`Domestic cleaners in ${areaInfo.name}`} class="w-full h-full object-cover opacity-20" />
+        <img src={areaInfo.heroImage} alt={`Homes and properties in ${areaInfo.name}`} class="h-full w-full object-cover opacity-20" />
         <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/70"></div>
       </div>
-      
-      <div class="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
         <div>
-          <span class="inline-block py-1 px-3 rounded-full bg-gold/20 border border-gold/40 text-gold text-sm font-medium mb-6">
-            <i class="fas fa-map-marker-alt mr-2"></i>Serving {areaInfo.name} & {areaInfo.postcodes.join(', ')}
-          </span>
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
-            Domestic Cleaners in {areaInfo.name}
-          </h1>
-          <p class="text-xl text-white/90 leading-relaxed mb-8">
-            Looking for reliable cleaners near {areaInfo.name}? We provide 5-star weekly housekeeping and deep cleaning services. Fully vetted, insured, and trusted by local residents.
+          <p class="mb-6 inline-block rounded-full border border-gold/40 bg-gold/20 px-3 py-1 text-sm font-medium text-gold">
+            <i class="fas fa-map-marker-alt mr-2"></i>{areaInfo.name} · {areaInfo.postcodes.join(', ')}
           </p>
-          
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#quote" class="inline-flex items-center justify-center rounded-full bg-gold text-navy px-8 py-4 text-base font-bold hover:bg-white transition-colors shadow-lg shadow-gold/20">
-              Get A Quote
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <a href="#services" class="inline-flex items-center justify-center rounded-full border border-white/30 text-white px-8 py-4 text-base font-medium hover:bg-white/10 transition-colors backdrop-blur-sm">
-              View Services
-            </a>
+          <h1 class="mb-6 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">Home cleaning enquiries for {areaInfo.name}</h1>
+          <p class="max-w-2xl text-xl leading-relaxed text-white/85">Tell us what needs attention at your {areaInfo.name} property. We will review the condition, access and required outcome before preparing the appropriate next step.</p>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href={quoteHref} class="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-bold text-navy shadow-lg shadow-gold/20 transition-colors hover:bg-white">Request a quote <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="#what-to-share" class="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-base font-medium text-white transition-colors hover:bg-white/10">What to share</a>
           </div>
         </div>
 
-        <!-- Service Clarity Cards -->
-        <div class="grid gap-4">
-          <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy text-xl shrink-0">
-              <i class="fas fa-calendar-check"></i>
-            </div>
-            <div>
-              <h3 class="text-white font-bold">Weekly Cleaning</h3>
-              <p class="text-white/70 text-sm">Regular housekeeping from the same dedicated cleaner.</p>
-            </div>
+        <aside class="grid gap-4" aria-label="Quote review steps">
+          <div class="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><i class="fas fa-clipboard-list"></i></span>
+            <div><h2 class="font-serif text-xl text-white">Explain the outcome</h2><p class="mt-1 text-sm leading-6 text-white/70">Choose the service route and describe the result you need.</p></div>
           </div>
-          <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy text-xl shrink-0">
-              <i class="fas fa-sparkles"></i>
-            </div>
-            <div>
-              <h3 class="text-white font-bold">One-Off Deep Cleans</h3>
-              <p class="text-white/70 text-sm">Spring cleaning, end of tenancy, and post-renovation.</p>
-            </div>
+          <div class="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><i class="fas fa-house"></i></span>
+            <div><h2 class="font-serif text-xl text-white">Share property context</h2><p class="mt-1 text-sm leading-6 text-white/70">Include the address, approximate size, condition, access and parking details.</p></div>
           </div>
-          <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-navy text-xl shrink-0">
-              <i class="fas fa-tshirt"></i>
-            </div>
-            <div>
-              <h3 class="text-white font-bold">Ironing Service</h3>
-              <p class="text-white/70 text-sm">Professional ironing included in your hourly service.</p>
-            </div>
+          <div class="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><i class="fas fa-comments"></i></span>
+            <div><h2 class="font-serif text-xl text-white">Receive a considered response</h2><p class="mt-1 text-sm leading-6 text-white/70">The enquiry is reviewed against the work requested before a quotation is discussed.</p></div>
           </div>
-        </div>
-      </div>
-    </section>
-    <IntroRateBanner />
-
-    <!-- Why Choose Us -->
-    <section class="py-20 bg-white">
-      <div class="mx-auto max-w-7xl px-6">
-        <div class="text-center mb-16">
-          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">Why choose us over a standard agency?</h2>
-          <p class="text-ink/70 max-w-2xl mx-auto">
-            Most agencies just send a cleaner. We provide a managed service that guarantees quality, reliability, and peace of mind for {areaInfo.name} residents.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-mist rounded-2xl p-8 border border-gold/20">
-            <i class="fas fa-user-shield text-4xl text-gold mb-6"></i>
-            <h3 class="font-serif text-xl text-navy mb-3">Vetted & Insured</h3>
-            <p class="text-ink/70">
-              Every cleaner undergoes strict background checks, reference verification, and is fully insured. You can trust us with your keys and your home.
-            </p>
-          </div>
-          <div class="bg-mist rounded-2xl p-8 border border-gold/20">
-            <i class="fas fa-medal text-4xl text-gold mb-6"></i>
-            <h3 class="font-serif text-xl text-navy mb-3">Premium Standards</h3>
-            <p class="text-ink/70">
-              We don't just "wipe down". Our deeper cleaning protocols ensure hygiene and attention to detail that standard cleaners miss.
-            </p>
-          </div>
-          <div class="bg-mist rounded-2xl p-8 border border-gold/20">
-            <i class="fas fa-heart text-4xl text-gold mb-6"></i>
-            <h3 class="font-serif text-xl text-navy mb-3">Wellness Focused</h3>
-            <p class="text-ink/70">
-              We use eco-friendly, wellness-grade products that are safe for pets and children, improving your home's air quality.
-            </p>
-          </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <!-- Local Info & Internal Linking -->
-    <section class="py-20 bg-mist">
-      <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
+    <section id="what-to-share" class="bg-white py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.15fr_.85fr] lg:items-start">
         <div>
-          <h2 class="font-serif text-3xl text-navy mb-6">Cleaning Services in {areaInfo.name}</h2>
-          <div class="prose prose-lg text-ink/80 mb-8">
-            <p>
-              We have been serving the {areaInfo.name} ({areaInfo.postcodes[0]}) area for years. Our local team understands the specific needs of {areaInfo.propertyType || "local"} properties, ensuring a tailored service that respects your home.
-            </p>
-            {areaInfo.localInfo && areaInfo.localInfo.nearbyAttractions && (
-              <p>
-                Whether you are near {areaInfo.localInfo.nearbyAttractions[0]} or {areaInfo.localInfo.nearbyAttractions[1]}, our cleaners are locally based for reliability.
-              </p>
-            )}
-          </div>
-          
-          <h3 class="font-serif text-xl text-navy mb-4">Areas Nearby</h3>
-          <ul class="grid grid-cols-2 gap-2">
-            {nearbyAreas.map(nearby => (
-              <li>
-                <a href={`/locations/surrey/${nearby.slug}/`} class="text-gold hover:text-navy transition-colors font-medium">
-                  <i class="fas fa-map-marker-alt mr-2 text-xs"></i>
-                  Cleaners in {nearby.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        
-        <div class="bg-white p-8 rounded-2xl shadow-soft">
-          <h3 class="font-serif text-xl text-navy mb-6">Service Area</h3>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-gold mt-1"></i>
-              <div>
-                <strong class="block text-navy">Postcodes Covered</strong>
-                <span class="text-ink/70">{areaInfo.postcodes.join(', ')}</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-gold mt-1"></i>
-              <div>
-                <strong class="block text-navy">Service Types</strong>
-                <span class="text-ink/70">Regular, Deep Clean, End of Tenancy</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-gold mt-1"></i>
-              <div>
-                <strong class="block text-navy">Availability</strong>
-                <span class="text-ink/70">Mon-Sun, 7am - 8pm</span>
-              </div>
-            </li>
-          </ul>
-          
-          <div class="mt-8 pt-6 border-t border-gray-100">
-            <p class="text-sm text-center text-ink/60 mb-4">Rated 5/5 by local residents</p>
-            <a href="#quote" class="block w-full py-3 bg-navy text-white text-center rounded-lg hover:bg-navy/90 transition">
-              Get A Quote for {areaInfo.name}
-            </a>
+          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Plan the enquiry</p>
+          <h2 class="mt-4 max-w-3xl font-serif text-4xl text-navy">Useful detail for a {areaInfo.name} home-cleaning review</h2>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-ink/70">The quickest route to a considered response is a clear picture of the property and what needs to be ready. Postcodes help us understand the location; the scope and condition help us assess the work.</p>
+          <div class="mt-9 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-gold/20 bg-mist p-6"><h3 class="font-serif text-2xl text-navy">Property and access</h3><p class="mt-3 leading-7 text-ink/70">Share the full address, property type, approximate size, access notes and parking information.</p></div>
+            <div class="rounded-2xl border border-gold/20 bg-mist p-6"><h3 class="font-serif text-2xl text-navy">Condition and timing</h3><p class="mt-3 leading-7 text-ink/70">Describe the current condition, desired date and any areas or requirements that need particular attention.</p></div>
           </div>
         </div>
+
+        <aside class="rounded-2xl border border-gold/30 bg-mist p-7 shadow-soft">
+          <h2 class="font-serif text-3xl text-navy">{areaInfo.name} coverage</h2>
+          <dl class="mt-6 space-y-5">
+            <div><dt class="text-sm font-semibold uppercase tracking-[.14em] text-ink/55">Postcodes</dt><dd class="mt-1 text-lg text-navy">{areaInfo.postcodes.join(', ')}</dd></div>
+            <div><dt class="text-sm font-semibold uppercase tracking-[.14em] text-ink/55">Enquiry route</dt><dd class="mt-1 leading-7 text-ink/70">Residential requirements are reviewed with property, access and condition context before a quotation is discussed.</dd></div>
+          </dl>
+          <a href={quoteHref} class="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-navy px-6 py-3 text-center font-semibold text-white transition hover:bg-navy/90">Request a {areaInfo.name} quote</a>
+        </aside>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="py-20 bg-white">
-      <div class="mx-auto max-w-7xl px-6">
-        <h2 class="font-serif text-3xl text-navy text-center mb-12">What {areaInfo.name} Residents Say</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          {areaInfo.testimonials && areaInfo.testimonials.map((t: any) => (
-            <div class="p-6 bg-mist rounded-xl">
-              <div class="flex text-gold mb-3">
-                {repeat(t.rating).map(() => <i class="fas fa-star"></i>)}
-              </div>
-              <p class="text-ink/80 italic mb-4">"{t.quote}"</p>
-              <p class="text-sm font-bold text-navy">{t.author}</p>
-            </div>
-          ))}
+    <section class="bg-mist py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Nearby areas</p>
+          <h2 class="mt-4 font-serif text-4xl text-navy">Explore nearby Surrey locations</h2>
+          <p class="mt-5 max-w-xl leading-7 text-ink/70">If the property is closer to another area, use the page that best reflects its postcode and location context.</p>
         </div>
+        <ul class="grid gap-3 sm:grid-cols-2">
+          {nearbyAreas.map((nearby) => <li><a href={`/locations/surrey/${nearby.slug}/`} class="flex min-h-16 items-center rounded-xl border border-gold/20 bg-white px-5 font-medium text-navy transition hover:border-gold hover:text-gold"><i class="fas fa-map-marker-alt mr-3 text-gold"></i>{nearby.name}</a></li>)}
+        </ul>
       </div>
     </section>
 
-    <!-- Quote Form -->
-    <section id="quote" class="py-20 bg-navy">
+    <section class="bg-navy py-20">
       <div class="mx-auto max-w-3xl px-6 text-center">
-        <h2 class="font-serif text-3xl md:text-4xl text-gold mb-6">Book Your Cleaner in {areaInfo.name}</h2>
-        <p class="text-white/80 mb-8">
-          Ready to experience a premium clean? Contact our local team today.
-        </p>
-        <a href="/contact/" class="inline-block bg-gold text-navy font-bold py-4 px-12 rounded-full hover:bg-white transition text-lg">
-          Get A Quick Quote
-        </a>
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Start with the right details</p>
+        <h2 class="mt-4 font-serif text-4xl text-white">Request a home-cleaning review for {areaInfo.name}</h2>
+        <p class="mt-5 text-lg leading-8 text-white/75">Use the residential enquiry route to share the property details and outcome you need.</p>
+        <a href={quoteHref} class="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-gold px-8 py-4 text-lg font-bold text-navy transition hover:bg-white">Request a quote <i class="fas fa-arrow-right ml-2"></i></a>
       </div>
     </section>
-
   </main>
 </Layout>

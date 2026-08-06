@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import { canonicalSitemapPaths } from './scripts/sitemap-routes.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,11 +24,12 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://highqualityclean.co.uk/',
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    // The repository retains legacy route files for redirects. Only the agreed
+    // canonical pages and retained location URLs belong in the XML sitemap.
+    filter: (page) => canonicalSitemapPaths.has(new URL(page).pathname)
+  })],
   redirects: {
-    // Utility and bug-path redirects.
-    '/get-quote': '/quote/',
-
     // Legacy London area URLs -> canonical location pages.
     '/mayfair': '/locations/london/mayfair/',
     '/knightsbridge': '/locations/london/knightsbridge/',

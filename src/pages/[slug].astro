@@ -21,9 +21,38 @@ interface Props {
 
 const { page } = Astro.props;
 const title = `${page.title} | High Quality Clean`;
+const baseUrl = 'https://highqualityclean.co.uk';
+const servicePage = ![
+  'about-high-quality-clean',
+  'why-choose-hqc',
+  'how-we-work',
+  'cleaning-prices-london',
+  'reviews-case-studies',
+  'areas-we-cover'
+].includes(page.slug);
+const pageType: 'AboutPage' | 'CollectionPage' | 'WebPage' | ['CollectionPage', 'WebPage'] = page.slug === 'about-high-quality-clean'
+  ? 'AboutPage'
+  : page.slug === 'home-cleaning-london'
+    ? ['CollectionPage', 'WebPage']
+    : ['reviews-case-studies', 'areas-we-cover'].includes(page.slug)
+    ? 'CollectionPage'
+    : 'WebPage';
+const schemaNodes = servicePage ? [{
+  '@type': 'Service',
+  '@id': `${baseUrl}/${page.slug}/#service`,
+  name: page.title,
+  description: page.description,
+  url: `${baseUrl}/${page.slug}/`,
+  serviceType: page.primaryKeyword ?? page.title,
+  provider: { '@id': `${baseUrl}/#organization` },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'London'
+  }
+}] : [];
 ---
 
-<Layout title={title} description={page.description}>
+<Layout title={title} description={page.description} pageType={pageType} schemaNodes={schemaNodes}>
   <Header />
   <OutcomePage page={page} />
 </Layout>

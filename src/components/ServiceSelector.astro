@@ -5,23 +5,23 @@
         <p class="text-xs font-bold uppercase tracking-[0.22em] text-midnight/55">Find my service</p>
         <h2 class="mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-midnight md:text-6xl">What needs to be ready?</h2>
       </div>
-      <p class="max-w-2xl text-lg leading-8 text-midnight/70">Choose the closest result. Only suitable Essential Clean™ enquiries continue towards direct booking. Every other route is reviewed before quotation.</p>
+      <p class="max-w-2xl text-lg leading-8 text-midnight/70">Choose the closest result. Essential Clean™ enquiries are reviewed for recurring suitability. Every other route is reviewed before quotation.</p>
     </div>
 
     <div class="mt-12 grid gap-4 md:grid-cols-3">
-      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-porcelain p-7 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl" data-result="maintain">
+      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-porcelain p-7 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl" data-result="maintain" aria-pressed="false" aria-controls="selector-result">
         <span class="font-serif text-4xl text-copper">01</span>
         <span class="mt-10 block text-xs font-bold uppercase tracking-[.18em] text-slate">Maintain</span>
         <strong class="mt-3 block font-serif text-3xl font-medium leading-tight text-midnight">A suitable home, weekly or fortnightly</strong>
-        <span class="mt-4 block leading-7 text-slate">Check whether Essential Clean™ is the right direct-booking route.</span>
+        <span class="mt-4 block leading-7 text-slate">Check whether Essential Clean™ is the right recurring-service route.</span>
       </button>
-      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-midnight p-7 text-left text-white transition duration-300 hover:-translate-y-1 hover:shadow-2xl" data-result="restore">
+      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-midnight p-7 text-left text-white transition duration-300 hover:-translate-y-1 hover:shadow-2xl" data-result="restore" aria-pressed="false" aria-controls="selector-result">
         <span class="font-serif text-4xl text-copper">02</span>
         <span class="mt-10 block text-xs font-bold uppercase tracking-[.18em] text-white/50">Restore or move</span>
         <strong class="mt-3 block font-serif text-3xl font-medium leading-tight">Deep clean, tenancy, move-in or post-work</strong>
         <span class="mt-4 block leading-7 text-white/65">Send the condition and property details for a tailored quotation.</span>
       </button>
-      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-porcelain p-7 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl" data-result="professional">
+      <button type="button" class="service-choice group min-h-72 rounded-2xl border border-midnight/15 bg-porcelain p-7 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl" data-result="professional" aria-pressed="false" aria-controls="selector-result">
         <span class="font-serif text-4xl text-copper">03</span>
         <span class="mt-10 block text-xs font-bold uppercase tracking-[.18em] text-slate">Manage</span>
         <strong class="mt-3 block font-serif text-3xl font-medium leading-tight text-midnight">A workplace, portfolio or complex project</strong>
@@ -46,9 +46,9 @@
     maintain: {
       label: 'Essential Clean™ suitability',
       heading: 'First, check whether the home is maintenance-ready',
-      copy: 'Weekly and fortnightly Essential Clean™ can be booked online when the home is suitable. Heavy build-up, monthly requests and restoration work are routed to manual review.',
-      href: '/essential-clean-london/?next=booking',
-      cta: 'Check suitability',
+      copy: 'Weekly and fortnightly Essential Clean™ enquiries are checked for suitability. Heavy build-up, monthly requests and restoration work are routed to manual review.',
+      href: '/request-a-quote/?route=residential&service=essential-clean&buyer=home',
+      cta: 'Request a suitability review',
       secondaryHref: '/deep-cleaning-london/',
       secondary: 'The home needs restoration'
     },
@@ -64,7 +64,7 @@
     professional: {
       label: 'Professional or complex enquiry',
       heading: 'Route the site or portfolio to the right assessment',
-      copy: 'Workplaces, managed properties and complex projects enter the GHL quotation or assessment route. They are not publicly bookable services.',
+      copy: 'Workplaces, managed properties and complex projects use the tailored quotation or assessment route. They are not publicly bookable services.',
       href: '/request-a-quote/?route=commercial',
       cta: 'Start a professional enquiry',
       secondaryHref: '/complex-property-cleaning-london/',
@@ -91,6 +91,9 @@
       primary.setAttribute('href', result.href);
       secondary.textContent = result.secondary;
       secondary.setAttribute('href', result.secondaryHref);
+      document.querySelectorAll<HTMLButtonElement>('.service-choice').forEach((choice) => {
+        choice.setAttribute('aria-pressed', String(choice === button));
+      });
       resultPanel.classList.remove('hidden');
       resultPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'service_selector_result', result: key } }));

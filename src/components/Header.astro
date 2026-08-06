@@ -6,26 +6,26 @@
     </a>
 
     <nav class="hidden items-center gap-6 text-sm lg:flex" aria-label="Primary navigation">
-      <div class="group relative">
-        <button class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true">Property & Facilities <span aria-hidden="true">⌄</span></button>
-        <div class="invisible absolute left-0 top-full w-72 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+      <div class="group relative" data-nav-group>
+        <button id="property-menu-toggle" class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="property-menu">Property & Facilities <span aria-hidden="true">⌄</span></button>
+        <div id="property-menu" class="invisible absolute left-0 top-full w-72 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition" data-nav-menu>
           <a class="nav-sub" href="/property-facilities-cleaning-london/">Property & Facilities hub</a>
           <a class="nav-sub" href="/communal-area-cleaning-london/">Communal area cleaning</a>
           <a class="nav-sub" href="/estate-letting-agent-cleaning-london/">Estate & letting agents</a>
           <a class="nav-sub" href="/portfolio-cleaning-support-london/">Portfolio support</a>
         </div>
       </div>
-      <div class="group relative">
-        <button class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true">Workplaces <span aria-hidden="true">⌄</span></button>
-        <div class="invisible absolute left-0 top-full w-64 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+      <div class="group relative" data-nav-group>
+        <button id="workplaces-menu-toggle" class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="workplaces-menu">Workplaces <span aria-hidden="true">⌄</span></button>
+        <div id="workplaces-menu" class="invisible absolute left-0 top-full w-64 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition" data-nav-menu>
           <a class="nav-sub" href="/commercial-cleaning-london/">Commercial cleaning</a>
           <a class="nav-sub" href="/office-cleaning-london/">Office cleaning</a>
           <a class="nav-sub" href="/commercial-deep-cleaning-london/">Commercial deep cleaning</a>
         </div>
       </div>
-      <div class="group relative">
-        <button class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true">Homes <span aria-hidden="true">⌄</span></button>
-        <div class="invisible absolute left-0 top-full w-64 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+      <div class="group relative" data-nav-group>
+        <button id="homes-menu-toggle" class="flex items-center gap-1 py-5 text-white hover:text-gold" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="homes-menu">Homes <span aria-hidden="true">⌄</span></button>
+        <div id="homes-menu" class="invisible absolute left-0 top-full w-64 rounded-b-xl border border-gold/30 bg-navy p-3 opacity-0 shadow-2xl transition" data-nav-menu>
           <a class="nav-sub" href="/home-cleaning-london/">Home cleaning</a>
           <a class="nav-sub" href="/essential-clean-london/">Essential Clean™</a>
           <a class="nav-sub" href="/deep-cleaning-london/">Deep cleaning</a>
@@ -65,25 +65,74 @@
 </header>
 
 <script>
+  const desktopGroups = Array.from(document.querySelectorAll<HTMLElement>('[data-nav-group]'));
+  const closeDesktopMenu = (group: HTMLElement, returnFocus = false) => {
+    const menuToggle = group.querySelector<HTMLButtonElement>('button[aria-controls]');
+    group.classList.remove('is-open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    if (returnFocus) menuToggle?.focus();
+  };
+
+  desktopGroups.forEach((group) => {
+    const menuToggle = group.querySelector<HTMLButtonElement>('button[aria-controls]');
+    if (!menuToggle) return;
+    menuToggle.addEventListener('click', () => {
+      const willOpen = menuToggle.getAttribute('aria-expanded') !== 'true';
+      desktopGroups.forEach((otherGroup) => closeDesktopMenu(otherGroup));
+      group.classList.toggle('is-open', willOpen);
+      menuToggle.setAttribute('aria-expanded', String(willOpen));
+    });
+    group.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeDesktopMenu(group, true);
+      }
+    });
+    group.addEventListener('focusout', () => {
+      requestAnimationFrame(() => {
+        if (!group.contains(document.activeElement)) closeDesktopMenu(group);
+      });
+    });
+  });
+  document.addEventListener('click', (event) => {
+    if (!desktopGroups.some((group) => group.contains(event.target as Node))) {
+      desktopGroups.forEach((group) => closeDesktopMenu(group));
+    }
+  });
+
   const toggle = document.getElementById('mobile-menu-toggle');
   const menu = document.getElementById('mobile-menu');
   if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const open = !menu.classList.contains('hidden');
-      menu.classList.toggle('hidden', open);
-      toggle.setAttribute('aria-expanded', String(!open));
-      toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
-    });
-    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+    const closeMobileMenu = (returnFocus = false) => {
       menu.classList.add('hidden');
       toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      if (returnFocus) toggle.focus();
+    };
+    toggle.addEventListener('click', () => {
+      const open = !menu.classList.contains('hidden');
+      if (open) {
+        closeMobileMenu(true);
+      } else {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
+        menu.querySelector<HTMLAnchorElement>('a')?.focus();
+      }
+    });
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      closeMobileMenu();
     }));
+    menu.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMobileMenu(true);
+    });
   }
 </script>
 
 <style>
   .nav-sub { display: block; border-radius: .5rem; padding: .65rem .75rem; color: white; text-decoration: none; }
   .nav-sub:hover, .nav-sub:focus { background: rgb(255 255 255 / .08); color: var(--color-gold); }
+  [data-nav-group].is-open > [data-nav-menu] { visibility: visible; opacity: 1; }
   .mobile-label { color: var(--color-gold); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
   .mobile-link { border-bottom: 1px solid rgb(255 255 255 / .08); padding: .6rem 0; color: white; text-decoration: none; }
 </style>

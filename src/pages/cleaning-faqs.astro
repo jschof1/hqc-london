@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 const topFaqs = [
   {
     question: 'How do I make a booking?',
-    answer: 'Eligible Essential Clean™ clients can continue to online booking after the suitability check. All other services require a quotation or assessment before the booking is scheduled.'
+    answer: 'Start with the suitability and quote form. We review the service, property and access details, then confirm the appropriate next step with you.'
   },
   {
     question: 'Are your prices fixed?',
@@ -51,15 +51,30 @@ const faqGroups = [
   {
     title: 'Quality & Trust',
     items: [
-      { question: 'What is the guarantee?', answer: 'We commit to a professional standard of service. Any issue must be reported within 72 hours so it can be reviewed in line with our Terms and Conditions.' },
+      { question: 'How are service issues handled?', answer: 'Please report any issue within 72 hours so it can be reviewed and handled in line with our Terms and Conditions.' },
       { question: 'What happens if I can’t provide access on the day?', answer: 'If we cannot access the property or proceed as agreed, the visit may be limited or treated as an aborted visit.' },
       { question: 'Will a professional clean remove all stains or marks?', answer: 'Professional cleaning improves appearance but cannot guarantee the removal of permanent stains or damage.' }
     ]
   }
 ];
+
+const allFaqs = [...topFaqs, ...faqGroups.flatMap((group) => group.items)];
+const faqEntities = allFaqs.map((faq) => ({
+  '@type': 'Question',
+  name: faq.question,
+  acceptedAnswer: {
+    '@type': 'Answer',
+    text: faq.answer
+  }
+}));
 ---
 
-<Layout title="Cleaning FAQs | High Quality Clean" description="Clear answers about HQC booking, pricing, cleaning scope, access, payments and service standards.">
+<Layout
+  title="Cleaning FAQs | High Quality Clean"
+  description="Clear answers about HQC booking, pricing, cleaning scope, access, payments and service standards."
+  pageType="FAQPage"
+  mainEntity={faqEntities}
+>
   <Header />
   <main class="bg-white pt-16">
     <section class="bg-navy px-4 py-16 text-white sm:px-6 md:py-20">

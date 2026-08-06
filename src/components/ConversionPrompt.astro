@@ -1,8 +1,8 @@
-<aside id="conversion-prompt" class="fixed inset-x-4 bottom-4 z-30 hidden max-w-md rounded-2xl border border-gold/40 bg-navy p-6 text-white shadow-2xl md:left-auto md:right-6" role="dialog" aria-labelledby="conversion-prompt-title">
-  <button id="conversion-prompt-close" class="absolute right-3 top-3 rounded-full px-3 py-1 text-xs text-white/70 hover:bg-white/10 hover:text-white" type="button">Close ×</button>
+<aside id="conversion-prompt" class="fixed inset-x-4 bottom-4 z-30 hidden max-w-md rounded-2xl border border-gold/40 bg-navy p-6 text-white shadow-2xl md:left-auto md:right-6" role="region" aria-live="polite" aria-labelledby="conversion-prompt-title">
+  <button id="conversion-prompt-close" class="absolute right-3 top-3 rounded-full px-3 py-1 text-xs text-white/70 hover:bg-white/10 hover:text-white" type="button" aria-label="Dismiss help prompt">Close <span aria-hidden="true">×</span></button>
   <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Need help choosing?</p>
   <h2 id="conversion-prompt-title" class="mt-2 font-serif text-2xl">Start with the outcome.</h2>
-  <p class="mt-3 text-sm leading-relaxed text-white/75">The service selector will route you to booking, quotation or assessment without making you guess.</p>
+  <p class="mt-3 text-sm leading-relaxed text-white/75">The service selector will route you to the right quotation or assessment without making you guess.</p>
   <a href="/#find-my-service" class="mt-5 inline-flex rounded-md bg-gold px-5 py-3 font-semibold text-navy no-underline">Find My Service</a>
 </aside>
 
@@ -11,16 +11,23 @@
   const close = document.getElementById('conversion-prompt-close');
   const key = 'hqc_conversion_prompt_dismissed';
   let shown = false;
+  let returnFocus: HTMLElement | null = null;
   const canShow = () => prompt && !shown && sessionStorage.getItem(key) !== '1' && !location.pathname.includes('request-a-quote');
   const show = (trigger: string) => {
     if (!canShow()) return;
     shown = true;
+    returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     prompt?.classList.remove('hidden');
     window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'conversion_prompt_view', trigger } }));
   };
-  close?.addEventListener('click', () => {
+  const dismiss = () => {
     prompt?.classList.add('hidden');
     sessionStorage.setItem(key, '1');
+    returnFocus?.focus();
+  };
+  close?.addEventListener('click', dismiss);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && shown && !prompt?.classList.contains('hidden')) dismiss();
   });
   if (matchMedia('(pointer: fine)').matches) {
     document.addEventListener('mouseout', (event) => {

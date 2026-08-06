@@ -197,10 +197,10 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Your postcode', 'The service and frequency', 'Timing and access requirements']
   },
   'cleaning-services-east-london': {
-    hero: '/images/areas/highgate.webp',
-    heroAlt: 'London streetscape representing HQC coverage',
+    hero: '/images/instock/london-property-living-room.webp',
+    heroAlt: 'Prepared London living room representing a home cleaning enquiry',
     gallery: [
-      { src: '/images/areas/highgate.webp', alt: 'London residential architecture' },
+      { src: '/images/instock/london-property-living-room.webp', alt: 'Prepared London living room' },
       { src: '/images/services/office-cleaning/office-cleaning-1.webp', alt: 'London office cleaning result' },
       { src: '/images/luxury-home/richmond-living-room.webp', alt: 'London home cleaning result' }
     ],
