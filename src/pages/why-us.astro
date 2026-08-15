@@ -715,15 +715,18 @@ const WhyUsBlocks = [
         </div>
         <form
           class="bg-white rounded-2xl p-8 md:p-10 border border-gold/50 shadow-soft"
-          action="#"
-          method="post"
-          onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');"
+          action="/api/quick-form"
+          method="POST"
+          data-hqc-form
+          data-hqc-endpoint="/api/quick-form"
+          data-hqc-source="why_us_page"
         >
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <label class="block">
               <span class="block mb-2 text-navy font-medium">Full Name *</span>
               <input
                 type="text"
+                name="name"
                 required
                 class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
                 placeholder="Your full name"
@@ -733,6 +736,7 @@ const WhyUsBlocks = [
               <span class="block mb-2 text-navy font-medium">Email Address *</span>
               <input
                 type="email"
+                name="email"
                 required
                 class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
                 placeholder="sales@highqualityclean.co.uk"
@@ -746,6 +750,7 @@ const WhyUsBlocks = [
               <span class="block mb-2 text-navy font-medium">Postcode *</span>
               <input
                 type="text"
+                name="postcode"
                 required
                 class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
                 placeholder="SW1, W8…"
@@ -754,6 +759,7 @@ const WhyUsBlocks = [
             <label class="block">
               <span class="block mb-2 text-navy font-medium">Property Type *</span>
               <select
+                name="property_type"
                 class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
                 required
               >
@@ -768,6 +774,7 @@ const WhyUsBlocks = [
             <label class="block">
               <span class="block mb-2 text-navy font-medium">Preferred Tier *</span>
               <select
+                name="service"
                 class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-gold focus:ring-1 transition-colors"
                 required
               >
@@ -782,6 +789,7 @@ const WhyUsBlocks = [
           <label class="block mb-8">
             <span class="block mb-2 text-navy font-medium">Notes & Preferences</span>
             <textarea
+              name="details"
               rows="5"
               class="w-full rounded-lg px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-navy/40 focus:border-gold focus:ring-gold focus:ring-1 transition-colors resize-none"
               placeholder="Tell us about special surfaces, sensitivities, schedule preferences, access arrangements, or any specific requirements…"
@@ -790,7 +798,7 @@ const WhyUsBlocks = [
           
           <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:justify-between">
             <label class="inline-flex items-start gap-3 text-sm text-navy/80 max-w-md">
-              <input type="checkbox" required class="mt-1 accent-gold scale-110" />
+              <input type="checkbox" name="privacy_consent" value="yes" required class="mt-1 accent-gold scale-110" />
               <span>I understand this is a premium service with bespoke pricing tailored to my home's specific requirements.</span>
             </label>
             <button

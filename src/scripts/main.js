@@ -227,30 +227,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function initializeForms() {
     const forms = document.querySelectorAll('form[data-hqc-form]');
-    
+
     forms.forEach(form => {
-      // Clone to remove existing listeners
-      const newForm = form.cloneNode(true);
-      form.parentNode?.replaceChild(newForm, form);
-      
-      newForm.addEventListener('submit', function(e) {
+      if (form.dataset.hqcInitialized === 'true') return;
+      form.dataset.hqcInitialized = 'true';
+
+      form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
-        const requiredFields = this.querySelectorAll('[required]');
-        let isValid = true;
-        
-        requiredFields.forEach(field => {
-          if (!field.value.trim()) {
-            isValid = false;
-            field.classList.add('border-red-500');
-          } else {
-            field.classList.remove('border-red-500');
+
+        if (!this.reportValidity()) return;
+
+        const endpoint = this.dataset.hqcEndpoint || this.getAttribute('action');
+        if (!endpoint || !endpoint.startsWith('/api/')) {
+          console.error('HQC form endpoint is missing or invalid');
+          return;
+        }
+
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton?.textContent;
+        const status = this.querySelector('[data-hqc-status]') || document.createElement('p');
+        status.dataset.hqcStatus = 'true';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        status.className = 'text-sm mt-3';
+        if (!status.parentNode) this.appendChild(status);
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Sending...';
+        }
+        status.textContent = '';
+
+        const payload = Object.fromEntries(new FormData(this).entries());
+        if (payload.type === 'home') payload.type = 'Residential';
+        if (payload.type === 'commercial') payload.type = 'Commercial';
+        if (endpoint === '/api/discount' && !payload.summary) {
+          payload.summary = payload.message || '';
+        }
+        payload.source = this.dataset.hqcSource || 'website_form';
+        payload.page_url = window.location.href;
+        payload.timestamp = new Date().toISOString();
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            throw new Error(`Submission failed with status ${response.status}`);
           }
-        });
-        
-        if (isValid) {
-          console.log('Form is valid and ready to submit');
-          alert('Thank you for your inquiry! We will contact you soon.');
+
+          status.classList.remove('text-red-700');
+          status.classList.add('text-green-700');
+          status.textContent = 'Thank you. Your enquiry has been received and our team will be in touch shortly.';
+          this.reset();
+          if (submitButton) submitButton.textContent = 'Enquiry sent';
+          window.dispatchEvent(new CustomEvent('hqc:conversion', {
+            detail: { endpoint, source: payload.source },
+          }));
+        } catch (error) {
+          console.error('HQC form submission failed:', error);
+          status.classList.remove('text-green-700');
+          status.classList.add('text-red-700');
+          status.textContent = 'We could not send your enquiry. Please call 0208 870 3925 or email sales@highqualityclean.co.uk.';
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText || 'Submit';
+          }
         }
       });
     });

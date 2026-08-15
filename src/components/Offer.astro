@@ -172,7 +172,7 @@
               <div class="form-box">
                 <h3 class="form-title">Get Your 30% Intro Rate</h3>
                 <p class="form-sub">Fill in your details and we'll be in touch within 24 hours.</p>
-                <form class="enquiry-form" id="enquiry-form">
+                <form class="enquiry-form" id="enquiry-form" action="/api/discount" method="POST" data-hqc-form data-hqc-endpoint="/api/discount" data-hqc-source="offer_component">
                   <input type="hidden" name="type" id="form-type" value="home" />
                   <div class="form-group">
                     <label for="name">Full Name</label>
@@ -1854,20 +1854,4 @@
       });
     });
 
-  // ── Basic form submission handler ─────────────────────────────
-  document
-    .getElementById("enquiry-form")
-    ?.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const form = e.target as HTMLFormElement;
-      const submitBtn = form.querySelector<HTMLButtonElement>(
-        ".btn-form-submit"
-      );
-      if (submitBtn) {
-        submitBtn.textContent = "Thank you! We'll be in touch soon.";
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = "0.7";
-      }
-      // Wire up your actual submission logic here (fetch, formspree, etc.)
-    });
 </script>

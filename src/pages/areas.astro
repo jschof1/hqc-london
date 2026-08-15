@@ -910,26 +910,25 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
           </p>
         </div>
         
-        <form class="grid gap-4 bg-mist rounded-2xl p-5 md:p-7 border border-gold shadow-soft" action="https://api.web3forms.com/submit" method="POST" onsubmit="event.preventDefault(); alert('Thank you — our local team will be in touch shortly.');">
-          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
+        <form class="grid gap-4 bg-mist rounded-2xl p-5 md:p-7 border border-gold shadow-soft" action="/api/quick-form" method="POST" data-hqc-form data-hqc-endpoint="/api/quick-form" data-hqc-source="areas_page">
           <div class="grid md:grid-cols-2 gap-4">
             <label class="text-sm">
               <span class="block mb-1 text-navy font-medium">Full Name</span>
-              <input type="text" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Your name" />
+              <input type="text" name="name" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Your name" />
             </label>
             <label class="text-sm">
               <span class="block mb-1 text-navy font-medium">Email</span>
-              <input type="email" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="you@example.com" />
+              <input type="email" name="email" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="you@example.com" />
             </label>
           </div>
           <div class="grid md:grid-cols-3 gap-4">
             <label class="text-sm">
               <span class="block mb-1 text-navy font-medium">Postcode</span>
-              <input type="text" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="SW1A, W1K, NW3..." />
+              <input type="text" name="postcode" required class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="SW1A, W1K, NW3..." />
             </label>
             <label class="text-sm">
               <span class="block mb-1 text-navy font-medium">Area</span>
-              <select class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
+              <select name="area" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
                 <option value="">Select your area...</option>
                 <optgroup label="Central London">
                   <option>Mayfair</option>
@@ -962,7 +961,7 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
             </label>
             <label class="text-sm">
               <span class="block mb-1 text-navy font-medium">Property Type</span>
-              <select class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
+              <select name="property_type" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" required>
                 <option value="">Select...</option>
                 <option>Townhouse</option>
                 <option>Penthouse</option>
@@ -975,11 +974,11 @@ const areas = Object.entries(areaData).map(([slug, data]) => ({
           </div>
           <label class="text-sm">
             <span class="block mb-1 text-navy font-medium">Local Requirements</span>
-            <textarea rows="4" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Parking restrictions, security requirements, access notes, special considerations..."></textarea>
+            <textarea name="details" rows="4" class="w-full rounded-md px-3 py-2 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold bg-white transition" placeholder="Parking restrictions, security requirements, access notes, special considerations..."></textarea>
           </label>
           <div class="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
             <label class="text-xs text-ink/80 inline-flex items-center gap-2">
-              <input type="checkbox" required class="accent-gold h-4 w-4 border border-navy/30" />
+              <input type="checkbox" name="privacy_consent" value="yes" required class="accent-gold h-4 w-4 border border-navy/30" />
               I confirm this property is in a premium London area we serve.
             </label>
             <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background-color: #C9A961; color: #2C3E50; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500; border: 1px solid #C9A961; box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.06); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.backgroundColor='rgba(201, 169, 97, 0.9)'" onmouseout="this.style.backgroundColor='#C9A961'">

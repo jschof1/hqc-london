@@ -585,11 +585,12 @@ import CTABanner from '../components/CTABanner.astro';
         </div>
         <form
           class="bg-navy rounded-2xl p-8 md:p-12 border border-gold/50 shadow-xl"
-          action="https://api.web3forms.com/submit"
+          action="/api/quick-form"
           method="POST"
-          onsubmit="event.preventDefault(); alert('Thank you — our concierge team will be in touch shortly.');"
+          data-hqc-form
+          data-hqc-endpoint="/api/quick-form"
+          data-hqc-source="services_page"
         >
-          <input type="hidden" name="access_key" value="7b89af3e-dcb0-44ef-a37a-6e2b3c93d8da">
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <label class="block">
               <span class="block mb-2 text-white font-medium flex items-center gap-2">
@@ -598,6 +599,7 @@ import CTABanner from '../components/CTABanner.astro';
               </span>
               <input
                 type="text"
+                name="name"
                 required
                 class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
                 placeholder="Your name"
@@ -610,6 +612,7 @@ import CTABanner from '../components/CTABanner.astro';
               </span>
               <input
                 type="email"
+                name="email"
                 required
                 class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
                 placeholder="you@example.com"
@@ -624,6 +627,7 @@ import CTABanner from '../components/CTABanner.astro';
               </span>
               <input
                 type="text"
+                name="postcode"
                 required
                 class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
                 placeholder="SW1, W8…"
@@ -635,6 +639,7 @@ import CTABanner from '../components/CTABanner.astro';
                 Property Type
               </span>
               <select
+                name="property_type"
                 class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-2 focus:ring-gold/20"
                 required
               >
@@ -651,6 +656,7 @@ import CTABanner from '../components/CTABanner.astro';
                 Preferred Tier
               </span>
               <select
+                name="service"
                 class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy focus:border-gold focus:ring-2 focus:ring-gold/20"
                 required
               >
@@ -667,6 +673,7 @@ import CTABanner from '../components/CTABanner.astro';
               Notes & Preferences
             </span>
             <textarea
+              name="details"
               rows="4"
               class="w-full rounded-md px-4 py-3 bg-white border border-gold/30 text-navy placeholder:text-slate-400 focus:border-gold focus:ring-2 focus:ring-gold/20"
               placeholder="Surfaces, sensitivities, schedule, access requirements…"
@@ -678,7 +685,7 @@ import CTABanner from '../components/CTABanner.astro';
             <label
               class="text-sm text-white/80 inline-flex items-start gap-3"
             >
-              <input type="checkbox" required class="accent-gold mt-1" />
+              <input type="checkbox" name="privacy_consent" value="yes" required class="accent-gold mt-1" />
               <span>I understand this is a premium service with bespoke pricing tailored to my specific requirements.</span>
             </label>
             <button
