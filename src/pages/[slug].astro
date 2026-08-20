@@ -20,7 +20,7 @@ interface Props {
 }
 
 const { page } = Astro.props;
-const title = `${page.title} | High Quality Clean`;
+const title = page.seoTitle ?? `${page.title} | High Quality Clean`;
 const baseUrl = 'https://highqualityclean.co.uk';
 const servicePage = ![
   'about-high-quality-clean',

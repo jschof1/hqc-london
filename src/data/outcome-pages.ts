@@ -1,7 +1,14 @@
+export type OutcomePageSection = {
+  title: string;
+  copy?: string[];
+  items?: { title: string; copy: string; href?: string; cta?: string }[];
+};
+
 export type OutcomePage = {
   slug: string;
   cluster: string;
   title: string;
+  seoTitle?: string;
   eyebrow: string;
   primaryKeyword?: string;
   description: string;
@@ -13,6 +20,7 @@ export type OutcomePage = {
   secondaryHref: string;
   proof: string[];
   related: { label: string; href: string }[];
+  sections?: OutcomePageSection[];
   assessment?: boolean;
 };
 
@@ -23,11 +31,12 @@ export const outcomePages: OutcomePage[] = [
   {
     slug: 'property-facilities-cleaning-london',
     cluster: 'Property & Facilities',
-    title: 'Property and Facilities Cleaning in London',
+    title: 'Cleaning Support for London Property Managers, Agents and Facilities Teams',
+    seoTitle: 'Property Management Cleaning London | HQC',
     eyebrow: 'For managed properties, portfolios and projects',
     primaryKeyword: 'property management cleaning London',
-    description: 'One trusted cleaning partner for managed properties, occupied spaces, turnovers and project handovers across London.',
-    message: 'One trusted cleaning partner across properties, projects and occupied spaces.',
+    description: 'Cleaning support for London property managers, agents, developers and portfolio teams. One partner for turnovers, communal areas, post-works cleaning and repeat property requirements.',
+    message: 'One property may need a tenancy handover. Another may need a move-in reset, communal cleaning or post-construction support. HQC gives property professionals one controlled route for coordinating different cleaning requirements without forcing every property into the same service.',
     audience: 'Property managers, facilities managers, managing agents, developers, block managers and multi-property landlords.',
     primaryCta: 'Discuss Your Property Requirements',
     primaryHref: `${quote}?route=commercial&buyer=property`,
@@ -38,6 +47,19 @@ export const outcomePages: OutcomePage[] = [
       { label: 'Communal area cleaning', href: '/communal-area-cleaning-london/' },
       { label: 'Estate and letting agent support', href: '/estate-letting-agent-cleaning-london/' },
       { label: 'Portfolio cleaning support', href: '/portfolio-cleaning-support-london/' }
+    ],
+    sections: [
+      { title: 'One Partner Across the Property Lifecycle', copy: ['HQC can support estate and letting agents, property managers, block managers, developers, multi-property landlords, relocation teams, family offices, facilities and operations teams.', 'Our role can range from a single property instruction to ongoing cleaning support across a portfolio.'] },
+      { title: 'Cleaning Defined by the Property Outcome', items: [
+        { title: 'Prepare for occupation', copy: 'Move-In Reset™ and void-property preparation.', href: '/move-in-void-property-cleaning-london/', cta: 'Explore move-in and void cleaning' },
+        { title: 'Prepare for handover', copy: 'End of Tenancy™ cleaning with a defined handover scope.', href: '/end-of-tenancy-cleaning-london/', cta: 'Explore end of tenancy cleaning' },
+        { title: 'Remove construction residue', copy: 'Post-Construction™ cleaning after refurbishment, fit-out or construction work.', href: '/post-construction-cleaning-london/', cta: 'Explore post-construction cleaning' },
+        { title: 'Maintain shared spaces', copy: 'Recurring communal-area programmes with agreed access and checks.', href: '/communal-area-cleaning-london/', cta: 'Explore communal-area cleaning' },
+        { title: 'Coordinate repeat requirements', copy: 'Portfolio support for repeated instructions across multiple properties.', href: '/portfolio-cleaning-support-london/', cta: 'Explore portfolio support' },
+        { title: 'Manage unusual or complex work', copy: 'A structured assessment before scope, labour and price are confirmed.', href: '/complex-property-cleaning-london/', cta: 'Request an assessment' }
+      ] },
+      { title: 'A Clearer Way to Mobilise Recurring Property Cleaning', copy: ['Where a recurring site or building requires a formal programme, HQC can establish a Site Service Profile covering areas, tasks, frequencies, access, equipment, site requirements, communication and quality checks.'] },
+      { title: 'When the Requirement Is More Complex', copy: ['Large properties, unusual finishes, specialist amenities, access restrictions, live construction environments or multi-supplier projects may require a formal assessment before HQC confirms the service.', 'That assessment helps define scope, labour, programme, specialist involvement, practical controls and handover.'] }
     ]
   },
   {
@@ -156,18 +178,34 @@ export const outcomePages: OutcomePage[] = [
   {
     slug: 'office-cleaning-london',
     cluster: 'Workplaces & Commercial Sites',
-    title: 'Office Cleaning in London',
+    title: 'Office Cleaning Programmes Built Around Your Workplace',
+    seoTitle: 'Office Cleaning London | Workplace Cleaning Programmes | HQC',
     eyebrow: 'Recurring office cleaning programmes',
     primaryKeyword: 'office cleaning London',
     description: 'Office cleaning programmes built around your workplace, with an agreed service profile and mobilisation plan.',
-    message: 'Office cleaning programmes built around your workplace, with an agreed service profile and mobilisation plan.',
+    message: 'A good office-cleaning service should reflect how the workplace is used, when cleaning can take place and what standard must be maintained. HQC develops recurring office cleaning around an agreed service profile rather than relying on a generic checklist.',
     audience: 'Office managers, practice managers, operations teams, founders and facilities managers.',
     primaryCta: 'Request an Office Cleaning Proposal',
     primaryHref: `${quote}?route=commercial&service=office`,
     secondaryCta: 'Arrange a Site Visit',
     secondaryHref: `${quote}?route=complex&service=office`,
     proof: ['Area, hours and frequency recorded', 'Incumbent and TUPE context captured where relevant', 'Desired start date and mobilisation requirements reviewed'],
-    related: [{ label: 'Commercial cleaning', href: '/commercial-cleaning-london/' }, { label: 'How we work', href: '/how-we-work/' }, { label: 'How we price', href: '/cleaning-prices-london/' }]
+    related: [{ label: 'Commercial cleaning', href: '/commercial-cleaning-london/' }, { label: 'How we work', href: '/how-we-work/' }, { label: 'How we price', href: '/cleaning-prices-london/' }],
+    sections: [
+      { title: 'Cleaning That Fits the Way Your Workplace Operates', copy: ['Every office is different. The cleaning requirement may depend on staff numbers, operating hours, kitchens and tea points, washrooms, meeting rooms, client-facing areas, flooring, waste arrangements, security, access windows and periodic requirements.', 'We use that information to establish an appropriate programme.'] },
+      { title: 'What an HQC Office Cleaning Programme Can Cover', items: [
+        { title: 'Workspaces and shared areas', copy: 'Desks where authorised, meeting rooms, reception areas and circulation areas.' },
+        { title: 'Core facilities', copy: 'Washrooms, kitchens, tea points, floors, bins and agreed waste handling.' },
+        { title: 'Planned detail', copy: 'Internal glass, touchpoints, periodic detail cleaning and selected specialist services.' }
+      ] },
+      { title: 'From Site Review to Mobilisation', items: [
+        { title: '1. Understand the workplace', copy: 'We review the site, operating pattern and required outcome.' },
+        { title: '2. Define the service profile', copy: 'We agree the areas, tasks and frequencies.' },
+        { title: '3. Plan delivery', copy: 'We establish access, cleaner allocation, equipment and practical requirements.' },
+        { title: '4. Mobilise and review', copy: 'The team receives relevant site instructions, with cleaning quality reviewed as requirements change.' }
+      ] },
+      { title: 'Clear Scope. Labour-Based Quotations. Careful Delivery.', copy: ['A commercial quotation considers the agreed scope, site size and layout, frequency, access, operating hours, labour required, equipment, periodic work, specialist services and practical site complexity.', 'HQC does not publish a universal hourly or square-metre price and pretend every workplace requires the same level of work.'] }
+    ]
   },
   {
     slug: 'commercial-deep-cleaning-london',
@@ -189,18 +227,32 @@ export const outcomePages: OutcomePage[] = [
   {
     slug: 'home-cleaning-london',
     cluster: 'Homes & Private Clients',
-    title: 'Home Cleaning Services in London',
+    title: 'Home Cleaning Starts with the Result You Need',
+    seoTitle: 'Home Cleaning Services London | High Quality Clean',
     eyebrow: 'Find the service that matches the outcome',
     primaryKeyword: 'home cleaning services London',
     description: 'Tell us the result you need and HQC will route you to the right home cleaning service.',
-    message: 'Tell us the result you need and HQC will route you to the right service.',
+    message: 'Some homes need regular maintenance. Others need restoring after build-up, preparing before a move or clearing residue after building work. HQC helps you identify the right service before you book.',
     audience: 'Homeowners, tenants, busy professionals, household managers and private clients.',
     primaryCta: 'Find the Right Home Cleaning Service',
     primaryHref: selector,
     secondaryCta: 'Request a Quote',
     secondaryHref: `${quote}?route=residential`,
     proof: ['Essential Clean for maintenance-ready homes', 'Manual quotes for restoration and moving services', 'Assessment route for large or complex properties'],
-    related: [{ label: 'Essential Clean', href: '/essential-clean-london/' }, { label: 'Deep cleaning', href: '/deep-cleaning-london/' }, { label: 'Move-In Reset', href: '/move-in-cleaning-london/' }]
+    related: [{ label: 'Essential Clean', href: '/essential-clean-london/' }, { label: 'Deep cleaning', href: '/deep-cleaning-london/' }, { label: 'Move-In Reset', href: '/move-in-cleaning-london/' }],
+    sections: [
+      { title: 'Which Home Cleaning Service Is Right for You?', items: [
+        { title: 'Keep my home consistently clean — Essential Clean™', copy: 'For maintenance-ready homes requiring a one-off, weekly or fortnightly maintenance service.', href: '/essential-clean-london/', cta: 'Check Essential Clean™ suitability' },
+        { title: 'My home needs more attention — Deep Clean™', copy: 'For build-up, neglected detail and homes that require restoration before maintenance cleaning is appropriate.', href: '/deep-cleaning-london/', cta: 'Request a deep-clean quote' },
+        { title: 'I am moving into a property — Move-In Reset™', copy: 'For preparing a home before occupation.', href: '/move-in-cleaning-london/', cta: 'Request a Move-In Reset™ quote' },
+        { title: 'I am moving out — End of Tenancy™', copy: 'For preparing a property for tenancy handover.', href: '/end-of-tenancy-cleaning-london/', cta: 'Request an end of tenancy quote' },
+        { title: 'Building work has finished — Post-Construction™', copy: 'For appropriate construction and refurbishment residue.', href: '/post-construction-cleaning-london/', cta: 'Request a post-construction assessment' },
+        { title: 'The property is large, unusual or complex', copy: 'For requirements that need assessment before scope and price can be confirmed.', href: '/complex-property-cleaning-london/', cta: 'Request a complex-service assessment' }
+      ] },
+      { title: 'Essential Clean™: Maintain and Improve', copy: ['Essential Clean™ is designed for homes that are already suitable for maintenance cleaning. Direct online booking may be available for maintenance-ready one-off, weekly and fortnightly cleans.', 'Eligible new weekly and fortnightly clients can receive 30% off their first Essential Clean™ with a minimum three-month recurring commitment. A one-off Essential Clean™ does not qualify for that recurring-client offer.'] },
+      { title: 'When Essential Clean™ Is Not the Right Service', copy: ['HQC may recommend a different service where there is heavy build-up, neglected areas, restoration-level cleaning, an end-of-tenancy requirement, a move-in requirement, construction residue, specialist cleaning or unusual property complexity.', 'That protects both the client and the cleaning team from beginning with a service that does not match the actual requirement.'] },
+      { title: 'We Do Not Price Bedrooms Alone', copy: ['Property size matters, but it does not tell the whole story. Bathrooms, additional rooms, contents, current condition, floors, access and specialist requirements can all change the work required to achieve the agreed outcome.'] }
+    ]
   },
   {
     slug: 'essential-clean-london',

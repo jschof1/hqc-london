@@ -1,0 +1,162 @@
+---
+const proofPoints = [
+  {
+    number: '01',
+    title: 'Start with the outcome',
+    copy: 'Tell HQC what needs to be ready, not which package you think you need.',
+    detail: 'Home, workplace, managed property or complex project.'
+  },
+  {
+    number: '02',
+    title: 'Give the work its real context',
+    copy: 'Condition, access, timing, parking and constraints are considered before a route is confirmed.',
+    detail: 'The details shape the right scope.'
+  },
+  {
+    number: '03',
+    title: 'Choose a considered route',
+    copy: 'HQC guides each enquiry to an Essential Clean suitability check, tailored quotation or assessment.',
+    detail: 'No one-size-fits-all booking path.'
+  },
+  {
+    number: '04',
+    title: 'Agree the scope before the visit',
+    copy: 'The relevant inclusions, assumptions and next steps are made clear before work is confirmed.',
+    detail: 'Clear expectations, then careful delivery.'
+  },
+  {
+    number: '05',
+    title: 'Let the work do the talking',
+    copy: 'Project imagery and client evidence are used only when they are relevant and approved for publication.',
+    detail: 'See the evidence HQC can share.'
+  }
+];
+---
+
+<section class="overflow-hidden bg-white py-20 md:py-28" aria-labelledby="trust-rail-title">
+  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+    <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+      <div class="max-w-3xl">
+        <p class="section-kicker">Confidence before commitment</p>
+        <h2 id="trust-rail-title" class="section-title">A clear standard from the first conversation.</h2>
+        <p class="mt-6 text-lg leading-8 text-slate">Good cleaning starts long before the visit. Move through the checks that keep the right service, scope and handover in view.</p>
+      </div>
+      <div class="flex items-center gap-3" aria-label="Proof rail controls">
+        <button type="button" class="trust-rail-control" data-trust-prev aria-label="Show previous proof point">←</button>
+        <button type="button" class="trust-rail-control" data-trust-next aria-label="Show next proof point">→</button>
+      </div>
+    </div>
+
+    <div class="trust-rail mt-12" data-trust-rail tabindex="0" aria-label="How HQC builds confidence before a clean">
+      {proofPoints.map((point, index) => (
+        <article class:list={['trust-rail-card', index === 0 && 'trust-rail-card-featured']}>
+          <span class="font-serif text-5xl text-copper">{point.number}</span>
+          <h3 class="mt-16 font-serif text-3xl font-medium leading-[1.02] text-midnight">{point.title}</h3>
+          <p class="mt-5 leading-7 text-slate">{point.copy}</p>
+          <p class="mt-auto border-t border-midnight/10 pt-5 text-xs font-bold uppercase tracking-[.16em] text-midnight/60">{point.detail}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-8 flex flex-col justify-between gap-4 border-t border-midnight/10 pt-6 sm:flex-row sm:items-center">
+      <p class="max-w-2xl text-sm leading-6 text-slate">Evidence is more useful when it is specific. Client names, reviews and logos are added only when their publication is approved.</p>
+      <a href="/reviews-case-studies/" class="font-bold text-midnight no-underline hover:text-copper">View project evidence <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust-rail {
+    display: grid;
+    grid-auto-columns: minmax(18rem, 24rem);
+    grid-auto-flow: column;
+    gap: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-bottom: 0.75rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(209 164 103 / .7) transparent;
+  }
+
+  .trust-rail-card {
+    display: flex;
+    min-height: 25rem;
+    flex-direction: column;
+    scroll-snap-align: start;
+    border: 1px solid rgb(14 42 49 / .11);
+    border-radius: 1.25rem;
+    background: var(--color-porcelain);
+    padding: 1.75rem;
+    transition: transform 300ms ease, border-color 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .trust-rail-card:hover {
+    transform: translateY(-0.35rem);
+    border-color: var(--color-copper);
+    background: white;
+    box-shadow: 0 1.5rem 4rem rgb(14 42 49 / .1);
+  }
+
+  .trust-rail-card-featured {
+    border-color: var(--color-midnight);
+    background: var(--color-midnight);
+  }
+
+  .trust-rail-card-featured h3 { color: white; }
+  .trust-rail-card-featured p { color: rgb(255 255 255 / .72); }
+  .trust-rail-card-featured p:last-child { border-color: rgb(255 255 255 / .15); color: rgb(255 255 255 / .55); }
+
+  .trust-rail-control {
+    display: inline-flex;
+    height: 3rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(14 42 49 / .2);
+    border-radius: 9999px;
+    background: white;
+    color: var(--color-midnight);
+    font-size: 1.25rem;
+    transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+  }
+
+  .trust-rail-control:hover { border-color: var(--color-copper); background: var(--color-copper); }
+
+  @media (min-width: 1024px) {
+    .trust-rail { grid-auto-columns: minmax(20rem, 25%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .trust-rail { scroll-behavior: auto; }
+    .trust-rail-card, .trust-rail-control { transition: none; }
+  }
+</style>
+
+<script>
+  const rail = document.querySelector<HTMLElement>('[data-trust-rail]');
+  const previous = document.querySelector<HTMLButtonElement>('[data-trust-prev]');
+  const next = document.querySelector<HTMLButtonElement>('[data-trust-next]');
+
+  const scrollRail = (direction: 1 | -1) => {
+    if (!rail) return;
+    const firstCard = rail.querySelector<HTMLElement>('.trust-rail-card');
+    const distance = firstCard ? firstCard.offsetWidth + 16 : rail.clientWidth * 0.8;
+    rail.scrollBy({ left: distance * direction, behavior: 'smooth' });
+  };
+
+  previous?.addEventListener('click', () => scrollRail(-1));
+  next?.addEventListener('click', () => scrollRail(1));
+
+  rail?.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      scrollRail(-1);
+    }
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      scrollRail(1);
+    }
+  });
+</script>

@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ServiceSelector from '../components/ServiceSelector.astro';
+import TrustRail from '../components/TrustRail.astro';
 ---
 
 <Layout
-  title="Cleaning Services London | High Quality Clean"
-  description="Outcome-led cleaning for London homes, workplaces, managed properties and complex projects. Find the correct service, quotation or assessment route."
+  title="Professional Cleaning Services London | High Quality Clean"
+  description="Professional cleaning services for London homes, workplaces and managed properties. Find the right HQC service for the condition, outcome and work required."
 >
   <Header />
 
@@ -17,9 +18,9 @@ import ServiceSelector from '../components/ServiceSelector.astro';
         <div class="relative z-10 py-8">
           <p class="section-kicker">Cleaning Defined by the Outcome</p>
           <h1 class="mt-6 max-w-3xl font-serif text-[clamp(3.8rem,7vw,7.2rem)] font-medium leading-[.88] tracking-[-.045em]">
-            The right clean.<br /><em class="font-medium text-copper">Clearly defined.</em>
+            The right cleaning service<br /><em class="font-medium text-copper">for the result you need.</em>
           </h1>
-          <p class="mt-8 max-w-xl text-lg leading-8 text-white/75 md:text-xl">For London homes, workplaces, managed properties and complex projects. Tell us what has to be ready, and HQC will guide you to the right service, quotation or assessment.</p>
+          <p class="mt-8 max-w-xl text-lg leading-8 text-white/75 md:text-xl">From recurring home cleaning to workplace programmes, property handovers and complex projects, High Quality Clean matches the service, labour and delivery approach to the condition of the space and the outcome required.</p>
           <div class="mt-10 flex flex-col gap-3 sm:flex-row">
             <a href="#find-my-service" class="button button-primary" data-track="find_my_service">Find my service <span aria-hidden="true">↓</span></a>
             <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote">Request a tailored quote</a>
@@ -31,10 +32,10 @@ import ServiceSelector from '../components/ServiceSelector.astro';
 
         <div class="relative min-h-[570px] lg:min-h-[670px]">
           <figure class="absolute left-[4%] top-[3%] h-[62%] w-[67%] overflow-hidden rounded-[2.2rem]">
-            <img src="/images/luxury-home/hyde-park-apartment.webp" alt="Carefully maintained London apartment living room" class="h-full w-full object-cover" width="1024" height="1024" fetchpriority="high" />
+            <img src="/images/generated/hqc-home-hero.png" alt="Illustrative London living room prepared for a home-cleaning enquiry" class="h-full w-full object-cover" width="1024" height="1024" fetchpriority="high" />
           </figure>
           <figure class="absolute bottom-[2%] right-0 h-[53%] w-[55%] overflow-hidden rounded-[2.2rem] border-[10px] border-midnight">
-            <img src="/images/instock/IMG-20250813-WA0033.jpg" alt="Finished London kitchen after a professional clean" class="h-full w-full object-cover" width="1284" height="850" fetchpriority="high" />
+            <img src="/images/generated/hqc-property-hero.png" alt="Illustrative London property prepared for a professional handover" class="h-full w-full object-cover" width="1284" height="850" fetchpriority="high" />
           </figure>
           <div class="absolute bottom-[11%] left-0 max-w-[17rem] rounded-2xl bg-copper p-6 text-midnight shadow-2xl">
             <span class="text-xs font-bold uppercase tracking-[.18em] text-midnight/55">Start with the result</span>
@@ -60,7 +61,7 @@ import ServiceSelector from '../components/ServiceSelector.astro';
               title: 'Managed properties, portfolios and projects',
               copy: 'Repeat instructions, communal areas, voids, handovers and portfolio support.',
               href: '/property-facilities-cleaning-london/',
-              image: '/images/instock/IMG-20250813-WA0024.jpg'
+              image: '/images/generated/hqc-property-hero.png'
             },
             {
               number: '02',
@@ -68,7 +69,7 @@ import ServiceSelector from '../components/ServiceSelector.astro';
               title: 'Recurring programmes and operational resets',
               copy: 'Office cleaning and commercial deep cleaning planned around the working site.',
               href: '/commercial-cleaning-london/',
-              image: '/images/services/office-cleaning/office-cleaning-1.webp'
+              image: '/images/generated/hqc-office-hero.png'
             },
             {
               number: '03',
@@ -76,7 +77,7 @@ import ServiceSelector from '../components/ServiceSelector.astro';
               title: 'Maintenance, restoration and moving services',
               copy: 'A clear route to Essential Clean, deep cleaning, moving or complex-property assessment.',
               href: '/home-cleaning-london/',
-              image: '/images/luxury-home/richmond-living-room.webp'
+              image: '/images/generated/hqc-home-hero.png'
             }
           ].map((route) => (
             <a href={route.href} class="group grid min-h-56 overflow-hidden rounded-2xl border border-midnight/10 bg-white text-inherit no-underline transition duration-500 hover:-translate-y-1 hover:border-copper hover:shadow-[0_25px_70px_rgba(14,42,49,.12)] sm:grid-cols-[1fr_15rem]">
@@ -97,6 +98,8 @@ import ServiceSelector from '../components/ServiceSelector.astro';
     </section>
 
     <ServiceSelector />
+
+    <TrustRail />
 
     <section class="bg-midnight py-20 text-white md:py-28">
       <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
@@ -127,8 +130,8 @@ import ServiceSelector from '../components/ServiceSelector.astro';
     <section class="section-shell">
       <div class="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
         <div class="grid auto-rows-[210px] grid-cols-2 gap-4 md:auto-rows-[260px]">
-          <figure class="row-span-2 overflow-hidden rounded-[2rem]"><img src="/images/before-after/transformation-mayfair-improved.webp" alt="Before and after cleaning transformation by HQC" class="h-full w-full object-cover" loading="lazy" width="1536" height="1024" /></figure>
-          <figure class="overflow-hidden rounded-[2rem]"><img src="/images/instock/IMG-20250813-WA0033.jpg" alt="Finished kitchen after HQC cleaning" class="h-full w-full object-cover" loading="lazy" width="1284" height="833" /></figure>
+          <figure class="row-span-2 overflow-hidden rounded-[2rem]"><img src="/images/generated/hqc-restoration-interior.png" alt="Illustrative London living space prepared with careful attention to detail" class="h-full w-full object-cover" loading="lazy" width="1536" height="1024" /></figure>
+          <figure class="overflow-hidden rounded-[2rem]"><img src="/images/generated/hqc-kitchen-detail.png" alt="Illustrative London kitchen prepared to a detailed clean standard" class="h-full w-full object-cover" loading="lazy" width="1284" height="833" /></figure>
           <figure class="overflow-hidden rounded-[2rem]"><img src="/images/instock/london-property-living-room.webp" alt="Bright prepared living space" class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" /></figure>
         </div>
         <div class="flex flex-col justify-center">

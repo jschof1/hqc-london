@@ -93,6 +93,37 @@ const enquiryType = page.assessment
     </div>
   </section>
 
+  {page.sections && (
+    <section class="border-t border-midnight/10 bg-white py-20 md:py-28">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+        <div class="space-y-20 md:space-y-28">
+          {page.sections.map((section, sectionIndex) => (
+            <article class="grid gap-8 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-20">
+              <div>
+                <p class="section-kicker">{String(sectionIndex + 1).padStart(2, '0')} / {page.cluster}</p>
+                <h2 class="section-title">{section.title}</h2>
+              </div>
+              <div>
+                {section.copy?.map((paragraph) => <p class="max-w-3xl text-lg leading-8 text-slate [&+p]:mt-5">{paragraph}</p>)}
+                {section.items && (
+                  <div class:list={['grid gap-4', section.items.length > 3 ? 'sm:grid-cols-2' : 'sm:grid-cols-3']}>
+                    {section.items.map((item) => (
+                      <div class="rounded-2xl border border-midnight/10 bg-porcelain p-6">
+                        <h3 class="font-serif text-2xl font-medium leading-tight text-midnight">{item.title}</h3>
+                        <p class="mt-4 leading-7 text-slate">{item.copy}</p>
+                        {item.href && <a class="mt-5 inline-flex font-bold text-midnight no-underline hover:text-copper" href={item.href}>{item.cta ?? 'Find out more'} <span aria-hidden="true">→</span></a>}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="bg-midnight py-20 text-white md:py-28">
     <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
       <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">

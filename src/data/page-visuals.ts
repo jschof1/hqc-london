@@ -20,15 +20,15 @@ const propertyGallery = [
 ];
 
 const commercialGallery = [
-  { src: '/images/services/office-cleaning/office-cleaning-1.webp', alt: 'Prepared London meeting room' },
-  { src: '/images/services/office-cleaning/office-cleaning-3.webp', alt: 'HQC cleaner working in a commercial space' },
-  { src: '/images/services/office-cleaning/office-cleaning-5.webp', alt: 'Commercial workspace prepared for use' }
+  { src: '/images/generated/hqc-office-hero.png', alt: 'Illustrative London meeting room prepared for the working day' },
+  { src: '/images/generated/hqc-workplace-detail.png', alt: 'Illustrative London workplace kitchen and breakout area prepared for use' },
+  { src: '/images/generated/hqc-kitchen-detail.png', alt: 'Illustrative kitchen detail prepared to a careful cleaning standard' }
 ];
 
 const restorationGallery = [
-  { src: '/images/before-after/IMG-20250813-WA0035.jpg', alt: 'Living area before a restorative clean' },
-  { src: '/images/before-after/after-2.jpg', alt: 'Living area after a restorative clean' },
-  { src: '/images/before-after/transformation-mayfair-improved.webp', alt: 'Before and after result from an HQC cleaning project' }
+  { src: '/images/generated/hqc-restoration-interior.png', alt: 'Illustrative London living space prepared with careful attention to detail' },
+  { src: '/images/generated/hqc-kitchen-detail.png', alt: 'Illustrative London kitchen prepared to a detailed clean standard' },
+  { src: '/images/generated/hqc-home-hero.png', alt: 'Illustrative London home prepared for a cleaning enquiry' }
 ];
 
 const defaultVisual: PageVisual = {
@@ -42,8 +42,8 @@ const defaultVisual: PageVisual = {
 
 const visualBySlug: Record<string, Partial<PageVisual>> = {
   'property-facilities-cleaning-london': {
-    hero: '/images/instock/IMG-20250813-WA0025.jpg',
-    heroAlt: 'Clean vacant property ready for professional handover',
+    hero: '/images/generated/hqc-property-hero.png',
+    heroAlt: 'Illustrative London property prepared for a professional handover',
     gallery: propertyGallery,
     outcomes: ['One accountable cleaning route', 'Repeatable scopes across properties', 'Clear reporting and handover'],
     scope: ['Portfolio and site requirements', 'Keys, access and parking', 'Frequency, reporting and escalation']
@@ -91,29 +91,29 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Property list and service types', 'Local access arrangements', 'Reporting, approvals and invoicing needs']
   },
   'commercial-cleaning-london': {
-    hero: '/images/services/office-cleaning/office-cleaning-6.webp',
-    heroAlt: 'Prepared London commercial meeting space',
+    hero: '/images/generated/hqc-office-hero.png',
+    heroAlt: 'Illustrative London commercial meeting space prepared for the working day',
     gallery: commercialGallery,
     outcomes: ['A programme that fits operations', 'Visible standards and accountability', 'A route for periodic deeper work'],
     scope: ['Occupancy and operating hours', 'Washrooms, kitchens and work areas', 'Security, keys and site procedures']
   },
   'office-cleaning-london': {
-    hero: '/images/services/office-cleaning/office-cleaning-1.webp',
-    heroAlt: 'London office meeting room ready for the working day',
+    hero: '/images/generated/hqc-office-hero.png',
+    heroAlt: 'Illustrative London office meeting room prepared for the working day',
     gallery: commercialGallery,
     outcomes: ['Work-ready spaces', 'Reliable recurring attendance', 'A clearly managed service scope'],
     scope: ['Desks and shared workspaces', 'Washrooms and staff kitchens', 'Floors, waste and agreed touchpoints']
   },
   'commercial-deep-cleaning-london': {
-    hero: '/images/services/office-cleaning/office-cleaning-4.webp',
-    heroAlt: 'Commercial interior prepared through detailed cleaning',
+    hero: '/images/generated/hqc-workplace-detail.png',
+    heroAlt: 'Illustrative London workplace prepared through detailed cleaning',
     gallery: commercialGallery,
     outcomes: ['A planned operational reset', 'Detailed attention beyond routine visits', 'A handover aligned to reopening'],
     scope: ['Current condition and build-up', 'Equipment, access and specialist needs', 'Shutdown windows and reinstatement']
   },
   'home-cleaning-london': {
-    hero: '/images/luxury-home/hyde-park-apartment.webp',
-    heroAlt: 'Calm, carefully maintained London living room',
+    hero: '/images/generated/hqc-home-hero.png',
+    heroAlt: 'Illustrative London living room prepared for a home-cleaning enquiry',
     gallery: homeGallery,
     outcomes: ['The right level of cleaning', 'A clear recurring or one-off route', 'Care around your home and routines'],
     scope: ['Maintenance or restoration need', 'Property condition and priorities', 'Access, products and household requirements']
@@ -127,8 +127,8 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     note: 'Essential Clean is for suitable maintenance-ready homes. Heavy build-up or restoration work is quoted separately.'
   },
   'deep-cleaning-london': {
-    hero: '/images/before-after/after-2.jpg',
-    heroAlt: 'Living area restored through detailed cleaning',
+    hero: '/images/generated/hqc-kitchen-detail.png',
+    heroAlt: 'Illustrative London kitchen prepared through detailed cleaning',
     gallery: restorationGallery,
     outcomes: ['A reset beyond routine maintenance', 'Priorities agreed before arrival', 'A finish matched to the actual condition'],
     scope: ['Build-up and problem areas', 'Inside agreed fixtures and appliances', 'Time, labour and specialist treatment needs']
@@ -165,8 +165,8 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Real property information', 'Clear inclusions and exclusions', 'The route for questions or changes']
   },
   'how-we-work': {
-    hero: '/images/services/office-cleaning/office-cleaning-3.webp',
-    heroAlt: 'HQC team carrying out a planned cleaning service',
+    hero: '/images/generated/hqc-office-hero.png',
+    heroAlt: 'Illustrative London workplace prepared for a planned cleaning programme',
     gallery: commercialGallery,
     outcomes: ['Enquiry routed correctly', 'Scope agreed before delivery', 'Result checked at handover'],
     scope: ['1. Understand the outcome', '2. Assess and quote', '3. Plan, deliver and review']
@@ -179,8 +179,8 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Size and current condition', 'Access, timing and parking', 'Special surfaces, equipment and required finish']
   },
   'reviews-case-studies': {
-    hero: '/images/before-after/transformation-mayfair-improved.webp',
-    heroAlt: 'Before and after example from an HQC cleaning project',
+    hero: '/images/generated/hqc-restoration-interior.png',
+    heroAlt: 'Illustrative London interior prepared to a detailed cleaning standard',
     gallery: restorationGallery,
     outcomes: ['See the condition before work', 'Understand the requested outcome', 'Review the visible result'],
     scope: ['Permissioned project imagery', 'Relevant service context', 'Client privacy where required']
@@ -201,7 +201,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     heroAlt: 'Prepared London living room representing a home cleaning enquiry',
     gallery: [
       { src: '/images/instock/london-property-living-room.webp', alt: 'Prepared London living room' },
-      { src: '/images/services/office-cleaning/office-cleaning-1.webp', alt: 'London office cleaning result' },
+      { src: '/images/generated/hqc-office-hero.png', alt: 'Illustrative London office prepared for the working day' },
       { src: '/images/luxury-home/richmond-living-room.webp', alt: 'London home cleaning result' }
     ],
     outcomes: ['One East London service hub', 'Availability checked before commitment', 'Home, workplace and property routes'],
