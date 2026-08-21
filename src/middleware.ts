@@ -83,8 +83,15 @@ export const onRequest = defineMiddleware(async ({ request }, next) => {
   const incomingUrl = new URL(request.url);
   const lowerPath = incomingUrl.pathname.toLowerCase();
   const legacyTarget = legacyRedirects.get(stripTrailingSlash(lowerPath));
-  const localRequest = ['localhost', '127.0.0.1', '::1'].includes(incomingUrl.hostname);
-  const canonicalUrl = new URL(legacyTarget ?? incomingUrl.pathname, localRequest ? incomingUrl.origin : CANONICAL_ORIGIN);
+  // Cloudflare Pages previews must retain their preview host for QA. The
+  // production custom domain continues to enforce the canonical host.
+  const localOrPreviewRequest =
+    ['localhost', '127.0.0.1', '::1'].includes(incomingUrl.hostname) ||
+    incomingUrl.hostname.endsWith('.hqc-london.pages.dev');
+  const canonicalUrl = new URL(
+    legacyTarget ?? incomingUrl.pathname,
+    localOrPreviewRequest ? incomingUrl.origin : CANONICAL_ORIGIN
+  );
 
   if (!legacyTarget && shouldNormalizePath(incomingUrl.pathname)) {
     canonicalUrl.pathname = lowerPath.endsWith('/') ? lowerPath : `${lowerPath}/`;

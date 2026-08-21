@@ -31,7 +31,7 @@ for (const [path, source, fields] of quickForms) {
 const connectedForms = [
   ['src/pages/contact.astro', '/api/quick-form', ['name', 'email', 'phone', 'postcode', 'service', 'message']],
   ['src/pages/request-a-quote.astro', '/api/quote', [
-    'route', 'buyer', 'service', 'service_context', 'name', 'email', 'phone', 'postcode',
+    'route', 'buyer', 'intent', 'service', 'service_context', 'name', 'email', 'phone', 'postcode',
     'address', 'area', 'size', 'frequency', 'desired_date', 'details', 'operating_hours',
     'mobilisation_requirements', 'tupe_context', 'privacy_consent', 'source_page',
     'landing_page', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content',

@@ -110,20 +110,59 @@ import TrustRail from '../components/TrustRail.astro';
           </div>
           <p class="max-w-xl text-lg leading-8 text-white/65">The condition, access, timing and required finish are captured before the work is confirmed. That means the service can be staffed and delivered responsibly.</p>
         </div>
-        <div class="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 lg:grid-cols-3">
+        <div class="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 lg:grid-cols-5">
           {[
-            ['01', 'Define the outcome', 'Maintenance, restoration, handover, recurring programme or complex project.'],
-            ['02', 'Capture the detail', 'Condition, access, parking, timing, frequency, constraints and supporting files.'],
-            ['03', 'Confirm the route', 'Essential Clean suitability, a tailored quote or a formal assessment.']
+            ['01', 'Site review', 'Understand the outcome, condition, access and operating constraints.'],
+            ['02', 'Service profile', 'Define the areas, tasks, frequencies and relevant site requirements.'],
+            ['03', 'Mobilisation', 'Confirm access, allocation, equipment and practical controls before delivery.'],
+            ['04', 'Delivery', 'Work from the authorised service and property information, not assumptions.'],
+            ['05', 'Quality review', 'Review the standard and adjust the service as requirements change.']
           ].map(([number, title, copy], index) => (
-            <article class:list={['min-h-72 p-7 md:p-9', index === 1 ? 'bg-copper text-midnight' : 'bg-midnight']}>
-              <span class:list={['font-serif text-4xl', index === 1 ? 'text-midnight/55' : 'text-copper']}>{number}</span>
+            <article class:list={['min-h-72 p-7 md:p-9', index === 2 ? 'bg-copper text-midnight' : 'bg-midnight']}>
+              <span class:list={['font-serif text-4xl', index === 2 ? 'text-midnight/55' : 'text-copper']}>{number}</span>
               <h3 class="mt-16 font-serif text-3xl font-medium">{title}</h3>
-              <p class:list={['mt-4 leading-7', index === 1 ? 'text-midnight/75' : 'text-white/65']}>{copy}</p>
+              <p class:list={['mt-4 leading-7', index === 2 ? 'text-midnight/75' : 'text-white/65']}>{copy}</p>
             </article>
           ))}
         </div>
         <a href="/how-we-work/" class="button button-ghost mt-9">See how the service works <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="bg-white py-20 md:py-28">
+      <div class="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-24 lg:px-14">
+        <div>
+          <p class="section-kicker">Complex service route</p>
+          <h2 class="section-title">When a standard cleaning route is not responsible.</h2>
+          <p class="mt-7 text-lg leading-8 text-slate">Large properties, specialist materials, live projects and unusual access requirements are qualified before anyone confirms scope, labour or price.</p>
+        </div>
+        <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Complex service process">
+          {['Qualification', 'Assessment', 'Defined scope', 'Delivery plan', 'Controlled delivery', 'Handover'].map((step, index) => (
+            <li class="rounded-2xl border border-midnight/10 bg-porcelain p-6">
+              <span class="font-serif text-3xl text-copper">0{index + 1}</span>
+              <p class="mt-10 font-serif text-2xl leading-tight text-midnight">{step}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="border-y border-midnight/10 bg-porcelain py-20 md:py-24" aria-labelledby="proof-release-title">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+        <div class="max-w-3xl">
+          <p class="section-kicker">Client evidence</p>
+          <h2 id="proof-release-title" class="section-title">Proof is published only when it is approved.</h2>
+          <p class="mt-6 text-lg leading-8 text-slate">The three approved proof positions are retained below. Named reviews and case studies will appear only after the relevant client permissions are confirmed.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          {['Private client result', 'Property or portfolio result', 'Workplace programme result'].map((label, index) => (
+            <article class="min-h-56 rounded-2xl border border-midnight/10 bg-white p-7">
+              <span class="font-serif text-4xl text-copper">0{index + 1}</span>
+              <h3 class="mt-12 font-serif text-3xl font-medium text-midnight">{label}</h3>
+              <p class="mt-4 leading-7 text-slate">Evidence release pending client permission.</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
 
@@ -157,6 +196,10 @@ import TrustRail from '../components/TrustRail.astro';
             <p class="section-kicker">Founder-led</p>
             <h2 class="section-title">“The client should know what is being delivered before the team arrives.”</h2>
             <p class="mt-7 text-lg leading-8 text-slate">Pedro built High Quality Clean around a straightforward principle: understand the required outcome, define the labour and deliver with care. That approach now guides every route through the site.</p>
+            <div class="mt-7 rounded-xl border border-midnight/10 bg-porcelain p-5">
+              <p class="text-xs font-bold uppercase tracking-[.18em] text-copper">Founder video</p>
+              <p class="mt-2 text-sm leading-6 text-slate">Reserved for the approved 45–60 second founder film, including captions, transcript and hosting hand-off.</p>
+            </div>
             <p class="mt-7 font-bold text-midnight">Pedro Ndombasi <span class="ml-2 font-normal text-slate">Founder & Managing Director</span></p>
             <a href="/about-high-quality-clean/" class="button button-dark mt-8">Meet Pedro and HQC <span aria-hidden="true">→</span></a>
           </div>
