@@ -21,6 +21,8 @@ export type OutcomePage = {
   proof: string[];
   related: { label: string; href: string }[];
   sections?: OutcomePageSection[];
+  process?: { label: string; title: string; steps: string[] };
+  proofModule?: { title: string; copy: string };
   assessment?: boolean;
 };
 
@@ -41,7 +43,7 @@ export const outcomePages: OutcomePage[] = [
     primaryCta: 'Discuss Your Property Requirements',
     primaryHref: `${quote}?route=commercial&buyer=property`,
     secondaryCta: 'Request a Site or Portfolio Assessment',
-    secondaryHref: `${quote}?route=complex&buyer=property`,
+    secondaryHref: `${quote}?route=commercial&buyer=property&intent=site-assessment`,
     proof: ['A defined scope before mobilisation', 'One route for repeat property instructions', 'Site, access and reporting requirements captured from the start'],
     related: [
       { label: 'Communal area cleaning', href: '/communal-area-cleaning-london/' },
@@ -60,7 +62,16 @@ export const outcomePages: OutcomePage[] = [
       ] },
       { title: 'A Clearer Way to Mobilise Recurring Property Cleaning', copy: ['Where a recurring site or building requires a formal programme, HQC can establish a Site Service Profile covering areas, tasks, frequencies, access, equipment, site requirements, communication and quality checks.'] },
       { title: 'When the Requirement Is More Complex', copy: ['Large properties, unusual finishes, specialist amenities, access restrictions, live construction environments or multi-supplier projects may require a formal assessment before HQC confirms the service.', 'That assessment helps define scope, labour, programme, specialist involvement, practical controls and handover.'] }
-    ]
+    ],
+    process: {
+      label: 'Site Service Profile',
+      title: 'A clearer way to mobilise recurring property cleaning.',
+      steps: ['Site review', 'Service profile', 'Mobilisation', 'Delivery', 'Quality review']
+    },
+    proofModule: {
+      title: 'Property-sector evidence is release-controlled.',
+      copy: 'Relevant case studies and client proof are added only once the permission record is complete. The approved proof position is retained here.'
+    }
   },
   {
     slug: 'communal-area-cleaning-london',
@@ -188,7 +199,7 @@ export const outcomePages: OutcomePage[] = [
     primaryCta: 'Request an Office Cleaning Proposal',
     primaryHref: `${quote}?route=commercial&service=office`,
     secondaryCta: 'Arrange a Site Visit',
-    secondaryHref: `${quote}?route=complex&service=office`,
+    secondaryHref: `${quote}?route=commercial&service=office&intent=site-visit`,
     proof: ['Area, hours and frequency recorded', 'Incumbent and TUPE context captured where relevant', 'Desired start date and mobilisation requirements reviewed'],
     related: [{ label: 'Commercial cleaning', href: '/commercial-cleaning-london/' }, { label: 'How we work', href: '/how-we-work/' }, { label: 'How we price', href: '/cleaning-prices-london/' }],
     sections: [
@@ -205,7 +216,16 @@ export const outcomePages: OutcomePage[] = [
         { title: '4. Mobilise and review', copy: 'The team receives relevant site instructions, with cleaning quality reviewed as requirements change.' }
       ] },
       { title: 'Clear Scope. Labour-Based Quotations. Careful Delivery.', copy: ['A commercial quotation considers the agreed scope, site size and layout, frequency, access, operating hours, labour required, equipment, periodic work, specialist services and practical site complexity.', 'HQC does not publish a universal hourly or square-metre price and pretend every workplace requires the same level of work.'] }
-    ]
+    ],
+    process: {
+      label: 'Office mobilisation',
+      title: 'A five-stage process from site review to quality review.',
+      steps: ['Site review', 'Service profile', 'Mobilisation', 'Delivery', 'Quality review']
+    },
+    proofModule: {
+      title: 'Workplace case-study position retained.',
+      copy: 'HQC will add named workplace evidence only when it is verified and approved for publication.'
+    }
   },
   {
     slug: 'commercial-deep-cleaning-london',
@@ -252,7 +272,11 @@ export const outcomePages: OutcomePage[] = [
       { title: 'Essential Clean™: Maintain and Improve', copy: ['Essential Clean™ is designed for homes that are already suitable for maintenance cleaning. Direct online booking may be available for maintenance-ready one-off, weekly and fortnightly cleans.', 'Eligible new weekly and fortnightly clients can receive 30% off their first Essential Clean™ with a minimum three-month recurring commitment. A one-off Essential Clean™ does not qualify for that recurring-client offer.'] },
       { title: 'When Essential Clean™ Is Not the Right Service', copy: ['HQC may recommend a different service where there is heavy build-up, neglected areas, restoration-level cleaning, an end-of-tenancy requirement, a move-in requirement, construction residue, specialist cleaning or unusual property complexity.', 'That protects both the client and the cleaning team from beginning with a service that does not match the actual requirement.'] },
       { title: 'We Do Not Price Bedrooms Alone', copy: ['Property size matters, but it does not tell the whole story. Bathrooms, additional rooms, contents, current condition, floors, access and specialist requirements can all change the work required to achieve the agreed outcome.'] }
-    ]
+    ],
+    proofModule: {
+      title: 'Chosen by More Than 300 Clients',
+      copy: 'HQC has worked with private clients across London, including clients who live abroad and rely on us to look after their London properties. Named client proof remains subject to confirmed permission.'
+    }
   },
   {
     slug: 'essential-clean-london',

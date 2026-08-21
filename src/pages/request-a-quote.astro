@@ -33,6 +33,7 @@ import Header from '../components/Header.astro';
         <input type="hidden" name="route" id="form-route" value="residential" />
         <input type="hidden" name="source_page" value={Astro.url.pathname} />
         <input type="hidden" name="buyer" id="buyer-context" />
+        <input type="hidden" name="intent" id="intent-context" />
         <input type="hidden" name="area" id="area-context" />
         <input type="hidden" name="service_context" id="service-context" />
         <input type="hidden" name="landing_page" id="landing-page-context" />
@@ -182,6 +183,7 @@ import Header from '../components/Header.astro';
 
   const populateContext = () => {
     setContextValue('buyer-context', pageUrl.searchParams.get('buyer'));
+    setContextValue('intent-context', pageUrl.searchParams.get('intent'));
     setContextValue('area-context', pageUrl.searchParams.get('area'));
     setContextValue('service-context', initialService);
     setContextValue('landing-page-context', storedAttribution.landingPage ?? pageUrl.href);

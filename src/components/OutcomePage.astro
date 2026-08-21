@@ -124,6 +124,35 @@ const enquiryType = page.assessment
     </section>
   )}
 
+  {page.process && (
+    <section class="bg-midnight py-20 text-white md:py-28">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+        <p class="section-kicker">{page.process.label}</p>
+        <h2 class="mt-4 max-w-4xl font-serif text-4xl font-medium leading-tight md:text-6xl">{page.process.title}</h2>
+        <ol class="mt-12 grid gap-3 md:grid-cols-5" aria-label={page.process.title}>
+          {page.process.steps.map((step, index) => (
+            <li class="rounded-2xl border border-white/15 bg-white/[.04] p-6">
+              <span class="font-serif text-3xl text-copper">0{index + 1}</span>
+              <p class="mt-10 font-serif text-2xl leading-tight">{step}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+
+  {page.proofModule && (
+    <section class="border-y border-midnight/10 bg-white py-16 md:py-20">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+        <div class="max-w-3xl rounded-2xl border border-midnight/10 bg-porcelain p-8 md:p-10">
+          <p class="section-kicker">Evidence and permission</p>
+          <h2 class="mt-4 font-serif text-4xl font-medium leading-tight text-midnight md:text-5xl">{page.proofModule.title}</h2>
+          <p class="mt-6 text-lg leading-8 text-slate">{page.proofModule.copy}</p>
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="bg-midnight py-20 text-white md:py-28">
     <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
       <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
