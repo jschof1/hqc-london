@@ -17,8 +17,8 @@ const quickForms = [
 
 for (const [path, source, fields] of quickForms) {
   const sourceText = await read(path);
-  expect(sourceText.includes('action="/api/quick-form"'), `${path} must post to /api/quick-form`);
-  expect(sourceText.includes('data-hqc-endpoint="/api/quick-form"'), `${path} must declare its same-origin endpoint`);
+  expect(sourceText.includes('action="/api/quick-form/"'), `${path} must post to /api/quick-form/`);
+  expect(sourceText.includes('data-hqc-endpoint="/api/quick-form/"'), `${path} must declare its same-origin endpoint`);
   expect(sourceText.includes(`data-hqc-source="${source}"`), `${path} must declare source ${source}`);
   for (const field of fields) {
     expect(sourceText.includes(`name="${field}"`), `${path} is missing named field ${field}`);
@@ -29,20 +29,20 @@ for (const [path, source, fields] of quickForms) {
 }
 
 const connectedForms = [
-  ['src/pages/contact.astro', '/api/quick-form', ['name', 'email', 'phone', 'postcode', 'service', 'message']],
-  ['src/pages/request-a-quote.astro', '/api/quote', [
+  ['src/pages/contact.astro', '/api/quick-form/', ['name', 'email', 'phone', 'postcode', 'service', 'message']],
+  ['src/pages/request-a-quote.astro', '/api/quote/', [
     'route', 'buyer', 'service', 'service_context', 'name', 'email', 'phone', 'postcode',
     'address', 'area', 'size', 'frequency', 'desired_date', 'details', 'operating_hours',
     'mobilisation_requirements', 'tupe_context', 'privacy_consent', 'source_page',
     'landing_page', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content',
     'utm_term', 'utm_id',
   ]],
-  ['src/pages/quote.astro', '/api/quote', [
+  ['src/pages/quote.astro', '/api/quote/', [
     'name', 'email', 'phone', 'postcode', 'service', 'property_type', 'bedrooms', 'bathrooms',
     'frequency', 'details',
   ]],
-  ['src/pages/discount.astro', '/api/discount', ['name', 'email', 'phone', 'type', 'summary']],
-  ['src/pages/feedback.astro', '/api/feedback', ['rating', 'name', 'email', 'reference', 'feedback']],
+  ['src/pages/discount.astro', '/api/discount/', ['name', 'email', 'phone', 'type', 'summary']],
+  ['src/pages/feedback.astro', '/api/feedback/', ['rating', 'name', 'email', 'reference', 'feedback']],
 ];
 
 for (const [path, endpoint, fields] of connectedForms) {
@@ -54,7 +54,7 @@ for (const [path, endpoint, fields] of connectedForms) {
 }
 
 const offer = await read('src/components/Offer.astro');
-expect(offer.includes('action="/api/discount"'), 'Offer form must post to /api/discount');
+expect(offer.includes('action="/api/discount/"'), 'Offer form must post to /api/discount/');
 expect(offer.includes('data-hqc-source="offer_component"'), 'Offer form must declare its source');
 for (const field of ['type', 'name', 'email', 'phone', 'message']) {
   expect(offer.includes(`name="${field}"`), `Offer form is missing named field ${field}`);

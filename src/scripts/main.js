@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const payload = Object.fromEntries(new FormData(this).entries());
         if (payload.type === 'home') payload.type = 'Residential';
         if (payload.type === 'commercial') payload.type = 'Commercial';
-        if (endpoint === '/api/discount' && !payload.summary) {
+        if ((endpoint === '/api/discount' || endpoint === '/api/discount/') && !payload.summary) {
           payload.summary = payload.message || '';
         }
         payload.source = this.dataset.hqcSource || 'website_form';

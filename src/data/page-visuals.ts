@@ -98,8 +98,8 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Occupancy and operating hours', 'Washrooms, kitchens and work areas', 'Security, keys and site procedures']
   },
   'office-cleaning-london': {
-    hero: '/images/generated/hqc-office-hero.png',
-    heroAlt: 'Illustrative London office meeting room prepared for the working day',
+    hero: '/images/generated/hqc-workplace-detail.png',
+    heroAlt: 'Illustrative unbranded workplace kitchen and breakout area prepared for use',
     gallery: commercialGallery,
     outcomes: ['Work-ready spaces', 'Reliable recurring attendance', 'A clearly managed service scope'],
     scope: ['Desks and shared workspaces', 'Washrooms and staff kitchens', 'Floors, waste and agreed touchpoints']

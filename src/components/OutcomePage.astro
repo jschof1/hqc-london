@@ -105,7 +105,43 @@ const enquiryType = page.assessment
               </div>
               <div>
                 {section.copy?.map((paragraph) => <p class="max-w-3xl text-lg leading-8 text-slate [&+p]:mt-5">{paragraph}</p>)}
-                {section.items && (
+                {section.presentation === 'profile' && (
+                  <div class="mt-8 overflow-hidden rounded-2xl border border-copper/35 bg-midnight p-6 text-white md:p-8">
+                    <p class="text-xs font-bold uppercase tracking-[.2em] text-copper">Site Service Profile</p>
+                    <div class="mt-6 grid gap-px overflow-hidden rounded-xl bg-white/15 sm:grid-cols-2 lg:grid-cols-3">
+                      {['Areas and tasks', 'Frequencies', 'Access and equipment', 'Site requirements', 'Communication', 'Quality checks'].map((label, index) => (
+                        <div class="bg-midnight p-5">
+                          <span class="font-serif text-2xl text-copper">0{index + 1}</span>
+                          <p class="mt-3 font-semibold text-white">{label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {section.items && section.presentation === 'lifecycle' && (
+                  <ol class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                    {section.items.map((item, index) => (
+                      <li class="relative rounded-2xl border border-midnight/10 bg-porcelain p-6">
+                        <span class="text-xs font-bold uppercase tracking-[.2em] text-copper">Outcome {String(index + 1).padStart(2, '0')}</span>
+                        <h3 class="mt-5 font-serif text-2xl font-medium leading-tight text-midnight">{item.title}</h3>
+                        <p class="mt-4 leading-7 text-slate">{item.copy}</p>
+                        {item.href && <a class="mt-5 inline-flex font-bold text-midnight no-underline hover:text-copper" href={item.href}>{item.cta ?? 'Find out more'} <span aria-hidden="true">→</span></a>}
+                      </li>
+                    ))}
+                  </ol>
+                )}
+                {section.items && section.presentation === 'process' && (
+                  <ol class="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+                    {section.items.map((item, index) => (
+                      <li class:list={['rounded-2xl border p-5', index === 1 ? 'border-copper bg-copper text-midnight' : 'border-midnight/10 bg-porcelain text-midnight']}>
+                        <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 1 ? 'text-midnight/55' : 'text-copper']}>Stage {String(index + 1).padStart(2, '0')}</span>
+                        <h3 class="mt-8 font-serif text-2xl font-medium leading-tight">{item.title}</h3>
+                        <p class:list={['mt-4 text-sm leading-6', index === 1 ? 'text-midnight/75' : 'text-slate']}>{item.copy}</p>
+                      </li>
+                    ))}
+                  </ol>
+                )}
+                {section.items && !['lifecycle', 'process'].includes(section.presentation ?? 'cards') && (
                   <div class:list={['grid gap-4', section.items.length > 3 ? 'sm:grid-cols-2' : 'sm:grid-cols-3']}>
                     {section.items.map((item) => (
                       <div class="rounded-2xl border border-midnight/10 bg-porcelain p-6">
@@ -119,6 +155,38 @@ const enquiryType = page.assessment
               </div>
             </article>
           ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.slug === 'home-cleaning-london' && (
+    <section class="border-t border-midnight/10 bg-midnight py-20 text-white md:py-28">
+      <div class="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-14">
+        <div>
+          <p class="section-kicker">Approved trust section</p>
+          <h2 class="mt-4 font-serif text-4xl font-medium leading-tight md:text-6xl">Chosen by More Than 300 Clients</h2>
+        </div>
+        <div>
+          <p class="max-w-3xl text-lg leading-8 text-white/75">HQC has worked with private clients across London, including clients who live abroad and rely on us to look after their London properties.</p>
+          <div class="mt-8 rounded-2xl border border-copper/35 bg-white/[.04] p-6 md:p-8">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-copper">Client proof reserved</p>
+            <p class="mt-4 leading-7 text-white/65">Named Chelsea and Fulham stories will be added only after publication permission is confirmed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {['property-facilities-cleaning-london', 'office-cleaning-london'].includes(page.slug) && (
+    <section class="border-t border-midnight/10 bg-white py-16 md:py-20">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+        <div class="rounded-2xl border border-midnight/10 bg-porcelain p-7 md:flex md:items-center md:justify-between md:gap-10 md:p-10">
+          <div>
+            <p class="section-kicker">Proof module reserved</p>
+            <h2 class="mt-3 font-serif text-3xl font-medium text-midnight md:text-4xl">{page.slug === 'office-cleaning-london' ? 'Workplace delivery evidence' : 'Property and portfolio evidence'}</h2>
+          </div>
+          <p class="mt-5 max-w-xl leading-7 text-slate md:mt-0">Case studies, review cards and client identifiers will appear here only when the relevant publication permissions are confirmed.</p>
         </div>
       </div>
     </section>

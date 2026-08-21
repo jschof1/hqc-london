@@ -395,7 +395,7 @@ const propertyTypes = [
       data.timestamp = new Date().toISOString();
 
       try {
-        const response = await fetch('/api/quote', {
+        const response = await fetch('/api/quote/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

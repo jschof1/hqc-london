@@ -2,6 +2,7 @@ export type OutcomePageSection = {
   title: string;
   copy?: string[];
   items?: { title: string; copy: string; href?: string; cta?: string }[];
+  presentation?: 'cards' | 'lifecycle' | 'process' | 'profile';
 };
 
 export type OutcomePage = {
@@ -41,7 +42,7 @@ export const outcomePages: OutcomePage[] = [
     primaryCta: 'Discuss Your Property Requirements',
     primaryHref: `${quote}?route=commercial&buyer=property`,
     secondaryCta: 'Request a Site or Portfolio Assessment',
-    secondaryHref: `${quote}?route=complex&buyer=property`,
+    secondaryHref: `${quote}?route=commercial&buyer=property&intent=site-assessment`,
     proof: ['A defined scope before mobilisation', 'One route for repeat property instructions', 'Site, access and reporting requirements captured from the start'],
     related: [
       { label: 'Communal area cleaning', href: '/communal-area-cleaning-london/' },
@@ -50,7 +51,7 @@ export const outcomePages: OutcomePage[] = [
     ],
     sections: [
       { title: 'One Partner Across the Property Lifecycle', copy: ['HQC can support estate and letting agents, property managers, block managers, developers, multi-property landlords, relocation teams, family offices, facilities and operations teams.', 'Our role can range from a single property instruction to ongoing cleaning support across a portfolio.'] },
-      { title: 'Cleaning Defined by the Property Outcome', items: [
+      { title: 'Cleaning Defined by the Property Outcome', presentation: 'lifecycle', items: [
         { title: 'Prepare for occupation', copy: 'Move-In Reset™ and void-property preparation.', href: '/move-in-void-property-cleaning-london/', cta: 'Explore move-in and void cleaning' },
         { title: 'Prepare for handover', copy: 'End of Tenancy™ cleaning with a defined handover scope.', href: '/end-of-tenancy-cleaning-london/', cta: 'Explore end of tenancy cleaning' },
         { title: 'Remove construction residue', copy: 'Post-Construction™ cleaning after refurbishment, fit-out or construction work.', href: '/post-construction-cleaning-london/', cta: 'Explore post-construction cleaning' },
@@ -58,7 +59,7 @@ export const outcomePages: OutcomePage[] = [
         { title: 'Coordinate repeat requirements', copy: 'Portfolio support for repeated instructions across multiple properties.', href: '/portfolio-cleaning-support-london/', cta: 'Explore portfolio support' },
         { title: 'Manage unusual or complex work', copy: 'A structured assessment before scope, labour and price are confirmed.', href: '/complex-property-cleaning-london/', cta: 'Request an assessment' }
       ] },
-      { title: 'A Clearer Way to Mobilise Recurring Property Cleaning', copy: ['Where a recurring site or building requires a formal programme, HQC can establish a Site Service Profile covering areas, tasks, frequencies, access, equipment, site requirements, communication and quality checks.'] },
+      { title: 'A Clearer Way to Mobilise Recurring Property Cleaning', presentation: 'profile', copy: ['Where a recurring site or building requires a formal programme, HQC can establish a Site Service Profile covering areas, tasks, frequencies, access, equipment, site requirements, communication and quality checks.'] },
       { title: 'When the Requirement Is More Complex', copy: ['Large properties, unusual finishes, specialist amenities, access restrictions, live construction environments or multi-supplier projects may require a formal assessment before HQC confirms the service.', 'That assessment helps define scope, labour, programme, specialist involvement, practical controls and handover.'] }
     ]
   },
@@ -188,7 +189,7 @@ export const outcomePages: OutcomePage[] = [
     primaryCta: 'Request an Office Cleaning Proposal',
     primaryHref: `${quote}?route=commercial&service=office`,
     secondaryCta: 'Arrange a Site Visit',
-    secondaryHref: `${quote}?route=complex&service=office`,
+    secondaryHref: `${quote}?route=commercial&service=office&intent=site-visit`,
     proof: ['Area, hours and frequency recorded', 'Incumbent and TUPE context captured where relevant', 'Desired start date and mobilisation requirements reviewed'],
     related: [{ label: 'Commercial cleaning', href: '/commercial-cleaning-london/' }, { label: 'How we work', href: '/how-we-work/' }, { label: 'How we price', href: '/cleaning-prices-london/' }],
     sections: [
@@ -198,11 +199,12 @@ export const outcomePages: OutcomePage[] = [
         { title: 'Core facilities', copy: 'Washrooms, kitchens, tea points, floors, bins and agreed waste handling.' },
         { title: 'Planned detail', copy: 'Internal glass, touchpoints, periodic detail cleaning and selected specialist services.' }
       ] },
-      { title: 'From Site Review to Mobilisation', items: [
-        { title: '1. Understand the workplace', copy: 'We review the site, operating pattern and required outcome.' },
-        { title: '2. Define the service profile', copy: 'We agree the areas, tasks and frequencies.' },
-        { title: '3. Plan delivery', copy: 'We establish access, cleaner allocation, equipment and practical requirements.' },
-        { title: '4. Mobilise and review', copy: 'The team receives relevant site instructions, with cleaning quality reviewed as requirements change.' }
+      { title: 'From Site Review to Mobilisation', presentation: 'process', items: [
+        { title: 'Site Review', copy: 'We review the site, operating pattern and required outcome.' },
+        { title: 'Service Profile', copy: 'We agree the areas, tasks and frequencies.' },
+        { title: 'Mobilisation', copy: 'We establish access, cleaner allocation, equipment and practical requirements.' },
+        { title: 'Delivery', copy: 'The team receives the relevant site instructions and begins the agreed programme.' },
+        { title: 'Review', copy: 'Cleaning quality is reviewed as requirements change.' }
       ] },
       { title: 'Clear Scope. Labour-Based Quotations. Careful Delivery.', copy: ['A commercial quotation considers the agreed scope, site size and layout, frequency, access, operating hours, labour required, equipment, periodic work, specialist services and practical site complexity.', 'HQC does not publish a universal hourly or square-metre price and pretend every workplace requires the same level of work.'] }
     ]

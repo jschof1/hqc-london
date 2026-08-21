@@ -101,6 +101,38 @@ import TrustRail from '../components/TrustRail.astro';
 
     <TrustRail />
 
+    <section class="border-y border-midnight/10 bg-white py-20 md:py-28">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
+          <article class="rounded-[2rem] border border-midnight/10 bg-porcelain p-7 md:p-10">
+            <p class="section-kicker">Site Service Profile</p>
+            <h2 class="mt-4 font-serif text-4xl font-medium leading-tight text-midnight">A visible operating plan for recurring sites.</h2>
+            <div class="mt-9 grid gap-px overflow-hidden rounded-xl bg-midnight/10 sm:grid-cols-2">
+              {['Areas and tasks', 'Frequencies', 'Access and equipment', 'Site requirements', 'Communication', 'Quality checks'].map((item, index) => (
+                <div class="bg-white p-5">
+                  <span class="font-serif text-2xl text-copper">0{index + 1}</span>
+                  <p class="mt-3 font-semibold text-midnight">{item}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article class="rounded-[2rem] bg-midnight p-7 text-white md:p-10">
+            <p class="section-kicker">Complex Service route</p>
+            <h2 class="mt-4 font-serif text-4xl font-medium leading-tight">A controlled path for unusual requirements.</h2>
+            <ol class="mt-9 divide-y divide-white/12 border-y border-white/12">
+              {['Qualification', 'Assessment', 'Defined Scope', 'Delivery Plan', 'Controlled Delivery', 'Handover'].map((item, index) => (
+                <li class="grid grid-cols-[3rem_1fr] items-center py-4">
+                  <span class="font-serif text-2xl text-copper">0{index + 1}</span>
+                  <span class="font-semibold text-white">{item}</span>
+                </li>
+              ))}
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-midnight py-20 text-white md:py-28">
       <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
         <div class="grid items-end gap-10 lg:grid-cols-[1fr_.7fr]">
@@ -158,6 +190,7 @@ import TrustRail from '../components/TrustRail.astro';
             <h2 class="section-title">“The client should know what is being delivered before the team arrives.”</h2>
             <p class="mt-7 text-lg leading-8 text-slate">Pedro built High Quality Clean around a straightforward principle: understand the required outcome, define the labour and deliver with care. That approach now guides every route through the site.</p>
             <p class="mt-7 font-bold text-midnight">Pedro Ndombasi <span class="ml-2 font-normal text-slate">Founder & Managing Director</span></p>
+            <p class="mt-5 rounded-xl border border-copper/35 bg-porcelain p-4 text-sm leading-6 text-slate"><strong class="text-midnight">Founder video module reserved.</strong> The approved video will replace this holding state when the final asset is supplied.</p>
             <a href="/about-high-quality-clean/" class="button button-dark mt-8">Meet Pedro and HQC <span aria-hidden="true">→</span></a>
           </div>
         </div>

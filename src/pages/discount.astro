@@ -220,7 +220,7 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
       data.timestamp = new Date().toISOString();
 
       try {
-        const response = await fetch('/api/discount', {
+        const response = await fetch('/api/discount/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),

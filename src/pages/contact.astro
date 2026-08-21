@@ -300,7 +300,7 @@ import siteSettings from '../data/site-settings.json';
             data.timestamp = new Date().toISOString();
 
             try {
-              const response = await fetch('/api/quick-form', {
+              const response = await fetch('/api/quick-form/', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',

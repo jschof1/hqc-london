@@ -227,7 +227,7 @@ const description = "We value your feedback. Please let us know about your exper
       data.timestamp = new Date().toISOString();
 
       try {
-        const response = await fetch('/api/feedback', {
+        const response = await fetch('/api/feedback/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
