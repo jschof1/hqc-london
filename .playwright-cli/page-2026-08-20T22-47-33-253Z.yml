@@ -1,0 +1,307 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "H High Quality Clean" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e5]: H
+        - generic [ref=f1e6]: High Quality Clean
+      - navigation "Primary navigation" [ref=f1e7]:
+        - button "Property & Facilities" [ref=f1e9]:
+          - text: Property & Facilities
+          - generic [ref=f1e10]: ⌄
+        - button "Workplaces" [ref=f1e12]:
+          - text: Workplaces
+          - generic [ref=f1e13]: ⌄
+        - button "Homes" [ref=f1e15]:
+          - text: Homes
+          - generic [ref=f1e16]: ⌄
+        - link "How It Works" [ref=f1e17] [cursor=pointer]:
+          - /url: /how-we-work/
+        - link "Proof" [ref=f1e18] [cursor=pointer]:
+          - /url: /reviews-case-studies/
+        - link "Contact" [ref=f1e19] [cursor=pointer]:
+          - /url: /contact/
+        - link "Request a Quote" [ref=f1e20] [cursor=pointer]:
+          - /url: /request-a-quote/
+  - main [ref=f1e21]:
+    - generic [ref=f1e22]:
+      - img "Clean vacant property ready for professional handover" [ref=f1e23]
+      - generic [ref=f1e26]:
+        - navigation "Breadcrumb" [ref=f1e27]:
+          - link "Home" [ref=f1e28] [cursor=pointer]:
+            - /url: /
+          - generic [ref=f1e29]: /
+          - generic [ref=f1e30]: Property & Facilities
+        - generic [ref=f1e31]:
+          - paragraph [ref=f1e32]: For managed properties, portfolios and projects
+          - heading "Cleaning Support for London Property Managers, Agents and Facilities Teams" [level=1] [ref=f1e33]
+          - paragraph [ref=f1e34]: One property may need a tenancy handover. Another may need a move-in reset, communal cleaning or post-construction support. HQC gives property professionals one controlled route for coordinating different cleaning requirements without forcing every property into the same service.
+          - generic [ref=f1e35]:
+            - link "Discuss Your Property Requirements" [ref=f1e36] [cursor=pointer]:
+              - /url: /request-a-quote/?route=commercial&buyer=property
+              - text: Discuss Your Property Requirements
+              - generic [ref=f1e37]: ↗
+            - link "Request a Site or Portfolio Assessment" [ref=f1e38] [cursor=pointer]:
+              - /url: /request-a-quote/?route=complex&buyer=property
+    - generic [ref=f1e40]:
+      - generic [ref=f1e41]:
+        - paragraph [ref=f1e42]: Service route
+        - paragraph [ref=f1e43]: Property & Facilities
+      - generic [ref=f1e44]:
+        - paragraph [ref=f1e45]: Designed for
+        - paragraph [ref=f1e46]: Property managers, facilities managers, managing agents, developers, block managers and multi-property landlords.
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: Next step
+        - paragraph [ref=f1e49]: Tailored quotation
+    - generic [ref=f1e51]:
+      - generic [ref=f1e52]:
+        - paragraph [ref=f1e53]: The outcome comes first
+        - heading "A service shaped around what has to be ready." [level=2] [ref=f1e54]
+        - paragraph [ref=f1e55]: Cleaning support for London property managers, agents, developers and portfolio teams. One partner for turnovers, communal areas, post-works cleaning and repeat property requirements.
+        - paragraph [ref=f1e56]: Every enquiry is reviewed against the result, property and delivery conditions before work is confirmed.
+      - generic [ref=f1e57]:
+        - img "Vacant London property prepared for handover" [ref=f1e59]
+        - generic [ref=f1e60]:
+          - generic [ref=f1e61]:
+            - text: "01"
+            - paragraph [ref=f1e62]: One accountable cleaning route
+          - generic [ref=f1e63]:
+            - text: "02"
+            - paragraph [ref=f1e64]: Repeatable scopes across properties
+          - generic [ref=f1e65]:
+            - text: "03"
+            - paragraph [ref=f1e66]: Clear reporting and handover
+    - generic [ref=f1e69]:
+      - article [ref=f1e70]:
+        - generic [ref=f1e71]:
+          - paragraph [ref=f1e72]: 01 / Property & Facilities
+          - heading "One Partner Across the Property Lifecycle" [level=2] [ref=f1e73]
+        - generic [ref=f1e74]:
+          - paragraph [ref=f1e75]: HQC can support estate and letting agents, property managers, block managers, developers, multi-property landlords, relocation teams, family offices, facilities and operations teams.
+          - paragraph [ref=f1e76]: Our role can range from a single property instruction to ongoing cleaning support across a portfolio.
+      - article [ref=f1e77]:
+        - generic [ref=f1e78]:
+          - paragraph [ref=f1e79]: 02 / Property & Facilities
+          - heading "Cleaning Defined by the Property Outcome" [level=2] [ref=f1e80]
+        - generic [ref=f1e82]:
+          - generic [ref=f1e83]:
+            - heading "Prepare for occupation" [level=3] [ref=f1e84]
+            - paragraph [ref=f1e85]: Move-In Reset™ and void-property preparation.
+            - link "Explore move-in and void cleaning" [ref=f1e86] [cursor=pointer]:
+              - /url: /move-in-void-property-cleaning-london/
+              - text: Explore move-in and void cleaning
+              - generic [ref=f1e87]: →
+          - generic [ref=f1e88]:
+            - heading "Prepare for handover" [level=3] [ref=f1e89]
+            - paragraph [ref=f1e90]: End of Tenancy™ cleaning with a defined handover scope.
+            - link "Explore end of tenancy cleaning" [ref=f1e91] [cursor=pointer]:
+              - /url: /end-of-tenancy-cleaning-london/
+              - text: Explore end of tenancy cleaning
+              - generic [ref=f1e92]: →
+          - generic [ref=f1e93]:
+            - heading "Remove construction residue" [level=3] [ref=f1e94]
+            - paragraph [ref=f1e95]: Post-Construction™ cleaning after refurbishment, fit-out or construction work.
+            - link "Explore post-construction cleaning" [ref=f1e96] [cursor=pointer]:
+              - /url: /post-construction-cleaning-london/
+              - text: Explore post-construction cleaning
+              - generic [ref=f1e97]: →
+          - generic [ref=f1e98]:
+            - heading "Maintain shared spaces" [level=3] [ref=f1e99]
+            - paragraph [ref=f1e100]: Recurring communal-area programmes with agreed access and checks.
+            - link "Explore communal-area cleaning" [ref=f1e101] [cursor=pointer]:
+              - /url: /communal-area-cleaning-london/
+              - text: Explore communal-area cleaning
+              - generic [ref=f1e102]: →
+          - generic [ref=f1e103]:
+            - heading "Coordinate repeat requirements" [level=3] [ref=f1e104]
+            - paragraph [ref=f1e105]: Portfolio support for repeated instructions across multiple properties.
+            - link "Explore portfolio support" [ref=f1e106] [cursor=pointer]:
+              - /url: /portfolio-cleaning-support-london/
+              - text: Explore portfolio support
+              - generic [ref=f1e107]: →
+          - generic [ref=f1e108]:
+            - heading "Manage unusual or complex work" [level=3] [ref=f1e109]
+            - paragraph [ref=f1e110]: A structured assessment before scope, labour and price are confirmed.
+            - link "Request an assessment" [ref=f1e111] [cursor=pointer]:
+              - /url: /complex-property-cleaning-london/
+              - text: Request an assessment
+              - generic [ref=f1e112]: →
+      - article [ref=f1e113]:
+        - generic [ref=f1e114]:
+          - paragraph [ref=f1e115]: 03 / Property & Facilities
+          - heading "A Clearer Way to Mobilise Recurring Property Cleaning" [level=2] [ref=f1e116]
+        - paragraph [ref=f1e118]: Where a recurring site or building requires a formal programme, HQC can establish a Site Service Profile covering areas, tasks, frequencies, access, equipment, site requirements, communication and quality checks.
+      - article [ref=f1e119]:
+        - generic [ref=f1e120]:
+          - paragraph [ref=f1e121]: 04 / Property & Facilities
+          - heading "When the Requirement Is More Complex" [level=2] [ref=f1e122]
+        - generic [ref=f1e123]:
+          - paragraph [ref=f1e124]: Large properties, unusual finishes, specialist amenities, access restrictions, live construction environments or multi-supplier projects may require a formal assessment before HQC confirms the service.
+          - paragraph [ref=f1e125]: That assessment helps define scope, labour, programme, specialist involvement, practical controls and handover.
+    - generic [ref=f1e128]:
+      - generic [ref=f1e129]:
+        - paragraph [ref=f1e130]: What we establish
+        - heading "Clear inputs. A realistic scope. No guesswork." [level=2] [ref=f1e131]
+      - generic [ref=f1e132]:
+        - article [ref=f1e133]:
+          - text: Scope 1
+          - heading "Portfolio and site requirements" [level=3] [ref=f1e134]
+        - article [ref=f1e135]:
+          - text: Scope 2
+          - heading "Keys, access and parking" [level=3] [ref=f1e136]
+        - article [ref=f1e137]:
+          - text: Scope 3
+          - heading "Frequency, reporting and escalation" [level=3] [ref=f1e138]
+        - article [ref=f1e139]:
+          - text: Confirmed before work
+          - heading "Inclusions, timing and the handover standard" [level=3] [ref=f1e140]
+    - generic [ref=f1e141]:
+      - generic [ref=f1e142]:
+        - generic [ref=f1e143]:
+          - paragraph [ref=f1e144]: HQC work
+          - heading "Real spaces. Visible care." [level=2] [ref=f1e145]
+        - paragraph [ref=f1e146]: Selected imagery from the HQC project library. The exact scope and finish varies by property, condition and agreed service.
+      - generic [ref=f1e147]:
+        - figure [ref=f1e148]:
+          - img "Vacant London property prepared for handover" [ref=f1e149]
+        - figure [ref=f1e151]:
+          - img "Clean empty room ready for occupation" [ref=f1e152]
+        - figure [ref=f1e154]:
+          - img "Finished kitchen following property cleaning" [ref=f1e155]
+    - generic [ref=f1e159]:
+      - generic [ref=f1e160]:
+        - paragraph [ref=f1e161]: What happens next
+        - heading "A calm route from enquiry to result." [level=2] [ref=f1e162]
+      - list [ref=f1e163]:
+        - listitem [ref=f1e164]:
+          - generic [ref=f1e165]: "01"
+          - generic [ref=f1e166]:
+            - heading "Tell us what has to be achieved" [level=3] [ref=f1e167]
+            - paragraph [ref=f1e168]: Share the property, condition, timing and any access or operational constraints.
+        - listitem [ref=f1e169]:
+          - generic [ref=f1e170]: "02"
+          - generic [ref=f1e171]:
+            - heading "HQC confirms the right route" [level=3] [ref=f1e172]
+            - paragraph [ref=f1e173]: We review the details and prepare the appropriate tailored quotation.
+        - listitem [ref=f1e174]:
+          - generic [ref=f1e175]: "03"
+          - generic [ref=f1e176]:
+            - heading "The scope is agreed" [level=3] [ref=f1e177]
+            - paragraph [ref=f1e178]: You receive a clear route forward with the relevant inclusions, assumptions and next steps.
+    - generic [ref=f1e180]:
+      - paragraph [ref=f1e181]: Related routes
+      - generic [ref=f1e182]:
+        - link "01 Communal area cleaning" [ref=f1e183] [cursor=pointer]:
+          - /url: /communal-area-cleaning-london/
+          - generic [ref=f1e184]: "01"
+          - generic [ref=f1e185]:
+            - text: Communal area cleaning
+            - generic [ref=f1e186]: →
+        - link "02 Estate and letting agent support" [ref=f1e187] [cursor=pointer]:
+          - /url: /estate-letting-agent-cleaning-london/
+          - generic [ref=f1e188]: "02"
+          - generic [ref=f1e189]:
+            - text: Estate and letting agent support
+            - generic [ref=f1e190]: →
+        - link "03 Portfolio cleaning support" [ref=f1e191] [cursor=pointer]:
+          - /url: /portfolio-cleaning-support-london/
+          - generic [ref=f1e192]: "03"
+          - generic [ref=f1e193]:
+            - text: Portfolio cleaning support
+            - generic [ref=f1e194]: →
+    - generic [ref=f1e197]:
+      - generic [ref=f1e198]:
+        - paragraph [ref=f1e199]: The next step is simple
+        - heading "Discuss Your Property Requirements" [level=2] [ref=f1e200]
+      - link "Discuss Your Property Requirements" [ref=f1e201] [cursor=pointer]:
+        - /url: /request-a-quote/?route=commercial&buyer=property
+        - text: Discuss Your Property Requirements
+        - generic [ref=f1e202]: ↗
+  - contentinfo [ref=f1e203]:
+    - generic [ref=f1e204]:
+      - generic [ref=f1e205]:
+        - generic [ref=f1e206]:
+          - link "H High Quality Clean" [ref=f1e207] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f1e208]: H
+            - generic [ref=f1e209]: High Quality Clean
+          - paragraph [ref=f1e210]: Cleaning defined by the outcome.
+        - link "Request a quote" [ref=f1e211] [cursor=pointer]:
+          - /url: /request-a-quote/
+          - text: Request a quote
+          - generic [ref=f1e212]: ↗
+      - generic [ref=f1e213]:
+        - generic [ref=f1e214]:
+          - paragraph [ref=f1e215]: Contact
+          - generic [ref=f1e216]:
+            - link "0208 870 3925" [ref=f1e217] [cursor=pointer]:
+              - /url: tel:+442088703925
+            - link "sales@highqualityclean.co.uk" [ref=f1e218] [cursor=pointer]:
+              - /url: mailto:sales@highqualityclean.co.uk
+            - paragraph [ref=f1e219]: 9 Swanage Road, London SW18 2DZ
+          - generic [ref=f1e220]:
+            - link "Instagram" [ref=f1e221] [cursor=pointer]:
+              - /url: https://www.instagram.com/highqualitycleanltd/
+              - generic [ref=f1e222]: 
+            - link "LinkedIn" [ref=f1e223] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/high-quality-cleaning/
+              - generic [ref=f1e224]: 
+            - link "TikTok" [ref=f1e225] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@highqualityclean
+              - generic [ref=f1e226]: 
+        - generic [ref=f1e227]:
+          - paragraph [ref=f1e228]: Services
+          - list [ref=f1e229]:
+            - listitem [ref=f1e230]:
+              - link "Property & Facilities" [ref=f1e231] [cursor=pointer]:
+                - /url: /property-facilities-cleaning-london/
+            - listitem [ref=f1e232]:
+              - link "Commercial Cleaning" [ref=f1e233] [cursor=pointer]:
+                - /url: /commercial-cleaning-london/
+            - listitem [ref=f1e234]:
+              - link "Home Cleaning" [ref=f1e235] [cursor=pointer]:
+                - /url: /home-cleaning-london/
+            - listitem [ref=f1e236]:
+              - link "Complex Services" [ref=f1e237] [cursor=pointer]:
+                - /url: /complex-property-cleaning-london/
+        - generic [ref=f1e238]:
+          - paragraph [ref=f1e239]: HQC
+          - list [ref=f1e240]:
+            - listitem [ref=f1e241]:
+              - link "About HQC" [ref=f1e242] [cursor=pointer]:
+                - /url: /about-high-quality-clean/
+            - listitem [ref=f1e243]:
+              - link "How We Work" [ref=f1e244] [cursor=pointer]:
+                - /url: /how-we-work/
+            - listitem [ref=f1e245]:
+              - link "Reviews & Case Studies" [ref=f1e246] [cursor=pointer]:
+                - /url: /reviews-case-studies/
+            - listitem [ref=f1e247]:
+              - link "Areas We Cover" [ref=f1e248] [cursor=pointer]:
+                - /url: /areas-we-cover/
+            - listitem [ref=f1e249]:
+              - link "Contact" [ref=f1e250] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=f1e251]:
+          - paragraph [ref=f1e252]: Information
+          - list [ref=f1e253]:
+            - listitem [ref=f1e254]:
+              - link "FAQs" [ref=f1e255] [cursor=pointer]:
+                - /url: /cleaning-faqs/
+            - listitem [ref=f1e256]:
+              - link "How Pricing Works" [ref=f1e257] [cursor=pointer]:
+                - /url: /cleaning-prices-london/
+            - listitem [ref=f1e258]:
+              - link "Privacy Policy" [ref=f1e259] [cursor=pointer]:
+                - /url: /privacy-policy/
+            - listitem [ref=f1e260]:
+              - link "Terms & Conditions" [ref=f1e261] [cursor=pointer]:
+                - /url: /terms-and-conditions/
+      - generic [ref=f1e262]:
+        - paragraph [ref=f1e263]: © 2026 High Quality Clean Ltd. All rights reserved.
+        - paragraph [ref=f1e264]: London cleaning for homes, workplaces and managed property.
+  - generic [ref=f1e267]:
+    - button [ref=f1e268]
+    - button [ref=f1e274]
+    - button [ref=f1e278]
+    - button [ref=f1e283]

@@ -1,0 +1,235 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "H High Quality Clean" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: H
+        - generic [ref=e6]: High Quality Clean
+      - navigation "Primary navigation" [ref=e7]:
+        - button "Property & Facilities" [ref=e9]:
+          - text: Property & Facilities
+          - generic [ref=e10]: ⌄
+        - button "Workplaces" [ref=e12]:
+          - text: Workplaces
+          - generic [ref=e13]: ⌄
+        - button "Homes" [ref=e15]:
+          - text: Homes
+          - generic [ref=e16]: ⌄
+        - link "How It Works" [ref=e17] [cursor=pointer]:
+          - /url: /how-we-work/
+        - link "Proof" [ref=e18] [cursor=pointer]:
+          - /url: /reviews-case-studies/
+        - link "Contact" [ref=e19] [cursor=pointer]:
+          - /url: /contact/
+        - link "Request a Quote" [ref=e20] [cursor=pointer]:
+          - /url: /request-a-quote/
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - img "London skyline across the HQC service area" [ref=e23]
+      - generic [ref=e26]:
+        - navigation "Breadcrumb" [ref=e27]:
+          - link "Home" [ref=e28] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e29]: /
+          - generic [ref=e30]: Locations
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: London coverage depends on service and team availability
+          - heading "Areas We Cover" [level=1] [ref=e33]
+          - paragraph [ref=e34]: Professional cleaning services across London, subject to service type and team availability.
+          - generic [ref=e35]:
+            - link "Check Availability for Your Postcode" [ref=e36] [cursor=pointer]:
+              - /url: /request-a-quote/
+              - text: Check Availability for Your Postcode
+              - generic [ref=e37]: ↗
+            - link "Find My Service" [ref=e38] [cursor=pointer]:
+              - /url: /#find-my-service
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - paragraph [ref=e42]: Service route
+        - paragraph [ref=e43]: Locations
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Designed for
+        - paragraph [ref=e46]: Prospects checking geographic availability.
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: Next step
+        - paragraph [ref=e49]: Tailored quotation
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - paragraph [ref=e53]: The outcome comes first
+        - heading "A service shaped around what has to be ready." [level=2] [ref=e54]
+        - paragraph [ref=e55]: Check HQC availability across Central, West, South West, selected North and selected East London locations.
+        - paragraph [ref=e56]: Every enquiry is reviewed against the result, property and delivery conditions before work is confirmed.
+      - generic [ref=e57]:
+        - img "Mayfair street in London" [ref=e59]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - text: "01"
+            - paragraph [ref=e62]: Postcode checked with service type
+          - generic [ref=e63]:
+            - text: "02"
+            - paragraph [ref=e64]: Practical team availability confirmed
+          - generic [ref=e65]:
+            - text: "03"
+            - paragraph [ref=e66]: No blanket promise beyond capacity
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - paragraph [ref=e71]: What we establish
+        - heading "Clear inputs. A realistic scope. No guesswork." [level=2] [ref=e72]
+      - generic [ref=e73]:
+        - article [ref=e74]:
+          - text: Scope 1
+          - heading "Your postcode" [level=3] [ref=e75]
+        - article [ref=e76]:
+          - text: Scope 2
+          - heading "The service and frequency" [level=3] [ref=e77]
+        - article [ref=e78]:
+          - text: Scope 3
+          - heading "Timing and access requirements" [level=3] [ref=e79]
+        - article [ref=e80]:
+          - text: Confirmed before work
+          - heading "Inclusions, timing and the handover standard" [level=3] [ref=e81]
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - paragraph [ref=e85]: HQC work
+          - heading "Real spaces. Visible care." [level=2] [ref=e86]
+        - paragraph [ref=e87]: Selected imagery from the HQC project library. The exact scope and finish varies by property, condition and agreed service.
+      - generic [ref=e88]:
+        - figure [ref=e89]:
+          - img "Mayfair street in London" [ref=e90]
+        - figure [ref=e92]:
+          - img "Chelsea residential street" [ref=e93]
+        - figure [ref=e95]:
+          - img "Wandsworth in South West London" [ref=e96]
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - paragraph [ref=e102]: What happens next
+        - heading "A calm route from enquiry to result." [level=2] [ref=e103]
+      - list [ref=e104]:
+        - listitem [ref=e105]:
+          - generic [ref=e106]: "01"
+          - generic [ref=e107]:
+            - heading "Tell us what has to be achieved" [level=3] [ref=e108]
+            - paragraph [ref=e109]: Share the property, condition, timing and any access or operational constraints.
+        - listitem [ref=e110]:
+          - generic [ref=e111]: "02"
+          - generic [ref=e112]:
+            - heading "HQC confirms the right route" [level=3] [ref=e113]
+            - paragraph [ref=e114]: We review the details and prepare the appropriate tailored quotation.
+        - listitem [ref=e115]:
+          - generic [ref=e116]: "03"
+          - generic [ref=e117]:
+            - heading "The scope is agreed" [level=3] [ref=e118]
+            - paragraph [ref=e119]: You receive a clear route forward with the relevant inclusions, assumptions and next steps.
+    - generic [ref=e121]:
+      - paragraph [ref=e122]: Related routes
+      - generic [ref=e123]:
+        - link "01 East London cleaning services" [ref=e124] [cursor=pointer]:
+          - /url: /cleaning-services-east-london/
+          - generic [ref=e125]: "01"
+          - generic [ref=e126]:
+            - text: East London cleaning services
+            - generic [ref=e127]: →
+        - link "02 Home cleaning" [ref=e128] [cursor=pointer]:
+          - /url: /home-cleaning-london/
+          - generic [ref=e129]: "02"
+          - generic [ref=e130]:
+            - text: Home cleaning
+            - generic [ref=e131]: →
+        - link "03 Office cleaning" [ref=e132] [cursor=pointer]:
+          - /url: /office-cleaning-london/
+          - generic [ref=e133]: "03"
+          - generic [ref=e134]:
+            - text: Office cleaning
+            - generic [ref=e135]: →
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - paragraph [ref=e140]: The next step is simple
+        - heading "Check Availability for Your Postcode" [level=2] [ref=e141]
+      - link "Check Availability for Your Postcode" [ref=e142] [cursor=pointer]:
+        - /url: /request-a-quote/
+        - text: Check Availability for Your Postcode
+        - generic [ref=e143]: ↗
+  - contentinfo [ref=e144]:
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - link "H High Quality Clean" [ref=e148] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e149]: H
+            - generic [ref=e150]: High Quality Clean
+          - paragraph [ref=e151]: Cleaning defined by the outcome.
+        - link "Request a quote" [ref=e152] [cursor=pointer]:
+          - /url: /request-a-quote/
+          - text: Request a quote
+          - generic [ref=e153]: ↗
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - paragraph [ref=e156]: Contact
+          - generic [ref=e157]:
+            - link "0208 870 3925" [ref=e158] [cursor=pointer]:
+              - /url: tel:+442088703925
+            - link "sales@highqualityclean.co.uk" [ref=e159] [cursor=pointer]:
+              - /url: mailto:sales@highqualityclean.co.uk
+            - paragraph [ref=e160]: 9 Swanage Road, London SW18 2DZ
+          - generic [ref=e161]:
+            - link "Instagram" [ref=e162] [cursor=pointer]:
+              - /url: https://www.instagram.com/highqualitycleanltd/
+              - generic [ref=e163]: 
+            - link "LinkedIn" [ref=e164] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/high-quality-cleaning/
+              - generic [ref=e165]: 
+            - link "TikTok" [ref=e166] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@highqualityclean
+              - generic [ref=e167]: 
+        - generic [ref=e168]:
+          - paragraph [ref=e169]: Services
+          - list [ref=e170]:
+            - listitem [ref=e171]:
+              - link "Property & Facilities" [ref=e172] [cursor=pointer]:
+                - /url: /property-facilities-cleaning-london/
+            - listitem [ref=e173]:
+              - link "Commercial Cleaning" [ref=e174] [cursor=pointer]:
+                - /url: /commercial-cleaning-london/
+            - listitem [ref=e175]:
+              - link "Home Cleaning" [ref=e176] [cursor=pointer]:
+                - /url: /home-cleaning-london/
+            - listitem [ref=e177]:
+              - link "Complex Services" [ref=e178] [cursor=pointer]:
+                - /url: /complex-property-cleaning-london/
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: HQC
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - link "About HQC" [ref=e183] [cursor=pointer]:
+                - /url: /about-high-quality-clean/
+            - listitem [ref=e184]:
+              - link "How We Work" [ref=e185] [cursor=pointer]:
+                - /url: /how-we-work/
+            - listitem [ref=e186]:
+              - link "Reviews & Case Studies" [ref=e187] [cursor=pointer]:
+                - /url: /reviews-case-studies/
+            - listitem [ref=e188]:
+              - link "Areas We Cover" [ref=e189] [cursor=pointer]:
+                - /url: /areas-we-cover/
+            - listitem [ref=e190]:
+              - link "Contact" [ref=e191] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e192]:
+          - paragraph [ref=e193]: Information
+          - list [ref=e194]:
+            - listitem [ref=e195]:
+              - link "FAQs" [ref=e196] [cursor=pointer]:
+                - /url: /cleaning-faqs/
+            - listitem [ref=e197]:
+              - link "How Pricing Works" [ref=e198] [cursor=pointer]:
+                - /url: /cleaning-prices-london/
+            - listitem [ref=e199]:
+              - link "Privacy Policy" [ref=e200] [cursor=pointer]:
+                - /url: /privacy-policy/
+            - listitem [ref=e201]:
+              - link "Terms & Conditions" [ref=e202] [cursor=pointer]:
+                - /url: /terms-and-conditions/
+      - generic [ref=e203]:
+        - paragraph [ref=e204]: © 2026 High Quality Clean Ltd. All rights reserved.
+        - paragraph [ref=e205]: London cleaning for homes, workplaces and managed property.

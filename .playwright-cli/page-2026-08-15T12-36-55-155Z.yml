@@ -1,0 +1,180 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "H High Quality Clean" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: H
+        - generic [ref=e6]: High Quality Clean
+      - navigation "Primary navigation" [ref=e7]:
+        - button "Property & Facilities" [ref=e9]:
+          - text: Property & Facilities
+          - generic [ref=e10]: ⌄
+        - button "Workplaces" [ref=e12]:
+          - text: Workplaces
+          - generic [ref=e13]: ⌄
+        - button "Homes" [ref=e15]:
+          - text: Homes
+          - generic [ref=e16]: ⌄
+        - link "How It Works" [ref=e17] [cursor=pointer]:
+          - /url: /how-we-work/
+        - link "Proof" [ref=e18] [cursor=pointer]:
+          - /url: /reviews-case-studies/
+        - link "Contact" [ref=e19] [cursor=pointer]:
+          - /url: /contact/
+        - link "Request a Quote" [ref=e20] [cursor=pointer]:
+          - /url: /request-a-quote/
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: Request a quote
+        - heading "Choose the right enquiry route" [level=1] [ref=e25]
+        - paragraph [ref=e26]: Choose the route that best matches the work, then send the details needed for a considered review.
+      - tablist "Enquiry type" [ref=e27]:
+        - tab "Home or private client Deep, moving, tenancy or quoted home work" [selected] [ref=e28]:
+          - strong [ref=e29]: Home or private client
+          - generic [ref=e30]: Deep, moving, tenancy or quoted home work
+        - tab "Workplace or managed property Commercial, office, agency or portfolio" [ref=e31]:
+          - strong [ref=e32]: Workplace or managed property
+          - generic [ref=e33]: Commercial, office, agency or portfolio
+        - tab "Large or complex requirement Assessment before quotation" [ref=e34]:
+          - strong [ref=e35]: Large or complex requirement
+          - generic [ref=e36]: Assessment before quotation
+      - generic [ref=e37]:
+        - tabpanel "Home or private client Deep, moving, tenancy or quoted home work" [ref=e38]:
+          - paragraph [ref=e39]: Selected route
+          - heading "Residential quotation" [level=2] [ref=e40]
+          - paragraph [ref=e41]: Tell us the service, property condition, full address, access and parking details.
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e44]: Full name *
+            - textbox "Full name *" [ref=e45]
+          - generic [ref=e46]:
+            - generic [ref=e47]: Email *
+            - textbox "Email *" [ref=e48]
+          - generic [ref=e49]:
+            - generic [ref=e50]: Phone *
+            - textbox "Phone *" [ref=e51]
+          - generic [ref=e52]:
+            - generic [ref=e53]: Postcode *
+            - textbox "Postcode *" [ref=e54]
+          - generic [ref=e55]:
+            - generic [ref=e56]: Service or outcome needed *
+            - combobox "Service or outcome needed *" [ref=e57]:
+              - option "Choose one" [selected]
+              - option "Essential Clean™ suitability"
+              - option "Deep Clean™"
+              - option "Move-In Reset™"
+              - option "End of Tenancy™"
+              - option "Post-Construction™"
+              - option "Other residential requirement"
+          - generic [ref=e58]:
+            - generic [ref=e59]: Property or site address
+            - textbox "Property or site address" [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]: Required date or desired start date
+            - textbox "Required date or desired start date" [ref=e63]
+          - generic [ref=e64]:
+            - generic [ref=e65]: Approximate size or area
+            - textbox "Approximate size or area" [ref=e66]:
+              - /placeholder: For example 1,800 sq ft
+          - generic [ref=e67]:
+            - generic [ref=e68]: Condition, access, parking and important requirements *
+            - textbox "Condition, access, parking and important requirements *" [ref=e69]
+        - generic [ref=e70]:
+          - checkbox "I agree that HQC may use these details to respond to this enquiry. See the privacy policy." [ref=e71]
+          - generic [ref=e72]:
+            - text: I agree that HQC may use these details to respond to this enquiry. See the
+            - link "privacy policy" [ref=e73] [cursor=pointer]:
+              - /url: /privacy-policy/
+            - text: .
+        - status [ref=e149]: Thank you. Your requirement has been sent.
+        - button "Submit Your Requirement" [ref=e74]
+  - contentinfo [ref=e75]:
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - link "H High Quality Clean" [ref=e79] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e80]: H
+            - generic [ref=e81]: High Quality Clean
+          - paragraph [ref=e82]: Cleaning defined by the outcome.
+        - link "Request a quote" [ref=e83] [cursor=pointer]:
+          - /url: /request-a-quote/
+          - text: Request a quote
+          - generic [ref=e84]: ↗
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - paragraph [ref=e87]: Contact
+          - generic [ref=e88]:
+            - link "0208 870 3925" [ref=e89] [cursor=pointer]:
+              - /url: tel:+442088703925
+            - link "sales@highqualityclean.co.uk" [ref=e90] [cursor=pointer]:
+              - /url: mailto:sales@highqualityclean.co.uk
+            - paragraph [ref=e91]: 9 Swanage Road, London SW18 2DZ
+          - generic [ref=e92]:
+            - link "Instagram" [ref=e93] [cursor=pointer]:
+              - /url: https://www.instagram.com/highqualitycleanltd/
+              - generic [ref=e94]: 
+            - link "LinkedIn" [ref=e95] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/high-quality-cleaning/
+              - generic [ref=e96]: 
+            - link "TikTok" [ref=e97] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@highqualityclean
+              - generic [ref=e98]: 
+        - generic [ref=e99]:
+          - paragraph [ref=e100]: Services
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - link "Property & Facilities" [ref=e103] [cursor=pointer]:
+                - /url: /property-facilities-cleaning-london/
+            - listitem [ref=e104]:
+              - link "Commercial Cleaning" [ref=e105] [cursor=pointer]:
+                - /url: /commercial-cleaning-london/
+            - listitem [ref=e106]:
+              - link "Home Cleaning" [ref=e107] [cursor=pointer]:
+                - /url: /home-cleaning-london/
+            - listitem [ref=e108]:
+              - link "Complex Services" [ref=e109] [cursor=pointer]:
+                - /url: /complex-property-cleaning-london/
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: HQC
+          - list [ref=e112]:
+            - listitem [ref=e113]:
+              - link "About HQC" [ref=e114] [cursor=pointer]:
+                - /url: /about-high-quality-clean/
+            - listitem [ref=e115]:
+              - link "How We Work" [ref=e116] [cursor=pointer]:
+                - /url: /how-we-work/
+            - listitem [ref=e117]:
+              - link "Reviews & Case Studies" [ref=e118] [cursor=pointer]:
+                - /url: /reviews-case-studies/
+            - listitem [ref=e119]:
+              - link "Areas We Cover" [ref=e120] [cursor=pointer]:
+                - /url: /areas-we-cover/
+            - listitem [ref=e121]:
+              - link "Contact" [ref=e122] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e123]:
+          - paragraph [ref=e124]: Information
+          - list [ref=e125]:
+            - listitem [ref=e126]:
+              - link "FAQs" [ref=e127] [cursor=pointer]:
+                - /url: /cleaning-faqs/
+            - listitem [ref=e128]:
+              - link "How Pricing Works" [ref=e129] [cursor=pointer]:
+                - /url: /cleaning-prices-london/
+            - listitem [ref=e130]:
+              - link "Privacy Policy" [ref=e131] [cursor=pointer]:
+                - /url: /privacy-policy/
+            - listitem [ref=e132]:
+              - link "Terms & Conditions" [ref=e133] [cursor=pointer]:
+                - /url: /terms-and-conditions/
+      - generic [ref=e134]:
+        - paragraph [ref=e135]: © 2026 High Quality Clean Ltd. All rights reserved.
+        - paragraph [ref=e136]: London cleaning for homes, workplaces and managed property.
+  - generic [ref=e137]:
+    - generic [ref=e139] [cursor=pointer]:
+      - img "Avatar" [ref=e140]
+      - generic [ref=e141]: If you have any questions at all, write a message here and we will get straight back to you.
+      - button "Close prompt" [ref=e142]
+    - button "Select to open the chat widget" [ref=e145] [cursor=pointer]

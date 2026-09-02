@@ -1,0 +1,126 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "H High Quality Clean" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: H
+        - generic [ref=e6]: High Quality Clean
+      - navigation "Primary navigation" [ref=e7]:
+        - button "Property & Facilities" [ref=e9]:
+          - text: Property & Facilities
+          - generic [ref=e10]: ⌄
+        - button "Workplaces" [ref=e12]:
+          - text: Workplaces
+          - generic [ref=e13]: ⌄
+        - button "Homes" [ref=e15]:
+          - text: Homes
+          - generic [ref=e16]: ⌄
+        - link "How It Works" [ref=e17] [cursor=pointer]:
+          - /url: /how-we-work/
+        - link "Proof" [ref=e18] [cursor=pointer]:
+          - /url: /reviews-case-studies/
+        - link "Contact" [ref=e19] [cursor=pointer]:
+          - /url: /contact/
+        - link "Request a Quote" [ref=e20] [cursor=pointer]:
+          - /url: /request-a-quote/
+  - main [ref=e21]:
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - heading "How did we do today?" [level=1] [ref=e26]
+        - paragraph [ref=e27]: We aim for 5-star service every time. Tap a star below to continue.
+        - generic [ref=e28]:
+          - button "Rate 1 star" [ref=e29]:
+            - generic [ref=e30]: 
+          - button "Rate 2 stars" [ref=e31]:
+            - generic [ref=e32]: 
+          - button "Rate 3 stars" [ref=e33]:
+            - generic [ref=e34]: 
+          - button "Rate 4 stars" [ref=e35]:
+            - generic [ref=e36]: 
+          - button "Rate 5 stars" [ref=e37]:
+            - generic [ref=e38]: 
+        - paragraph [ref=e39]: Select a star to begin
+      - text:   
+  - contentinfo [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - link "H High Quality Clean" [ref=e44] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e45]: H
+            - generic [ref=e46]: High Quality Clean
+          - paragraph [ref=e47]: Cleaning defined by the outcome.
+        - link "Request a quote" [ref=e48] [cursor=pointer]:
+          - /url: /request-a-quote/
+          - text: Request a quote
+          - generic [ref=e49]: ↗
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - paragraph [ref=e52]: Contact
+          - generic [ref=e53]:
+            - link "0208 870 3925" [ref=e54] [cursor=pointer]:
+              - /url: tel:+442088703925
+            - link "sales@highqualityclean.co.uk" [ref=e55] [cursor=pointer]:
+              - /url: mailto:sales@highqualityclean.co.uk
+            - paragraph [ref=e56]: 9 Swanage Road, London SW18 2DZ
+          - generic [ref=e57]:
+            - link "Instagram" [ref=e58] [cursor=pointer]:
+              - /url: https://www.instagram.com/highqualitycleanltd/
+              - generic [ref=e59]: 
+            - link "LinkedIn" [ref=e60] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/high-quality-cleaning/
+              - generic [ref=e61]: 
+            - link "TikTok" [ref=e62] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@highqualityclean
+              - generic [ref=e63]: 
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: Services
+          - list [ref=e66]:
+            - listitem [ref=e67]:
+              - link "Property & Facilities" [ref=e68] [cursor=pointer]:
+                - /url: /property-facilities-cleaning-london/
+            - listitem [ref=e69]:
+              - link "Commercial Cleaning" [ref=e70] [cursor=pointer]:
+                - /url: /commercial-cleaning-london/
+            - listitem [ref=e71]:
+              - link "Home Cleaning" [ref=e72] [cursor=pointer]:
+                - /url: /home-cleaning-london/
+            - listitem [ref=e73]:
+              - link "Complex Services" [ref=e74] [cursor=pointer]:
+                - /url: /complex-property-cleaning-london/
+        - generic [ref=e75]:
+          - paragraph [ref=e76]: HQC
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - link "About HQC" [ref=e79] [cursor=pointer]:
+                - /url: /about-high-quality-clean/
+            - listitem [ref=e80]:
+              - link "How We Work" [ref=e81] [cursor=pointer]:
+                - /url: /how-we-work/
+            - listitem [ref=e82]:
+              - link "Reviews & Case Studies" [ref=e83] [cursor=pointer]:
+                - /url: /reviews-case-studies/
+            - listitem [ref=e84]:
+              - link "Areas We Cover" [ref=e85] [cursor=pointer]:
+                - /url: /areas-we-cover/
+            - listitem [ref=e86]:
+              - link "Contact" [ref=e87] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e88]:
+          - paragraph [ref=e89]: Information
+          - list [ref=e90]:
+            - listitem [ref=e91]:
+              - link "FAQs" [ref=e92] [cursor=pointer]:
+                - /url: /cleaning-faqs/
+            - listitem [ref=e93]:
+              - link "How Pricing Works" [ref=e94] [cursor=pointer]:
+                - /url: /cleaning-prices-london/
+            - listitem [ref=e95]:
+              - link "Privacy Policy" [ref=e96] [cursor=pointer]:
+                - /url: /privacy-policy/
+            - listitem [ref=e97]:
+              - link "Terms & Conditions" [ref=e98] [cursor=pointer]:
+                - /url: /terms-and-conditions/
+      - generic [ref=e99]:
+        - paragraph [ref=e100]: © 2026 High Quality Clean Ltd. All rights reserved.
+        - paragraph [ref=e101]: London cleaning for homes, workplaces and managed property.

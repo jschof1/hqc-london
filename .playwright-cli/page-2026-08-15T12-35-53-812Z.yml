@@ -1,0 +1,222 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "H High Quality Clean" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: H
+        - generic [ref=e6]: High Quality Clean
+      - navigation "Primary navigation" [ref=e7]:
+        - button "Property & Facilities" [ref=e9]:
+          - text: Property & Facilities
+          - generic [ref=e10]: ⌄
+        - button "Workplaces" [ref=e12]:
+          - text: Workplaces
+          - generic [ref=e13]: ⌄
+        - button "Homes" [ref=e15]:
+          - text: Homes
+          - generic [ref=e16]: ⌄
+        - link "How It Works" [ref=e17] [cursor=pointer]:
+          - /url: /how-we-work/
+        - link "Proof" [ref=e18] [cursor=pointer]:
+          - /url: /reviews-case-studies/
+        - link "Contact" [ref=e19] [cursor=pointer]:
+          - /url: /contact/
+        - link "Request a Quote" [ref=e20] [cursor=pointer]:
+          - /url: /request-a-quote/
+  - main [ref=e21]:
+    - generic [ref=e23]:
+      - img "Professional cleaning service team ready to help with luxury home cleaning" [ref=e24]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - heading "Get in Touch" [level=1] [ref=e29]
+          - paragraph [ref=e30]: For bookings and quotations, use the correct service route. For everything else, contact HQC here.
+        - generic [ref=e31]:
+          - link "Request a Quote" [ref=e32] [cursor=pointer]:
+            - /url: /request-a-quote/
+          - link "Message on WhatsApp" [ref=e33] [cursor=pointer]:
+            - /url: https://wa.me/442088703925
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: 
+            - text: Clear scope
+          - generic [ref=e41]:
+            - generic [ref=e42]: 
+            - text: Labour-based quotations
+          - generic [ref=e45]:
+            - generic [ref=e46]: 
+            - text: Careful delivery
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: Essential Clean™ introductory offer
+        - heading "30% off the first eligible clean" [level=2] [ref=e52]
+        - paragraph [ref=e53]: For new weekly or fortnightly Essential Clean™ clients making a three-month commitment. Suitability and availability apply.
+      - link "Check the offer" [ref=e54] [cursor=pointer]:
+        - /url: /offer/
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - heading "How to Reach Us" [level=2] [ref=e58]
+        - paragraph [ref=e59]: Choose the method that works best for you. Our team is ready to assist with your cleaning needs.
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: 
+          - heading "Phone" [level=3] [ref=e64]
+          - paragraph [ref=e65]: Call us directly
+          - link "0208 8703925" [ref=e66] [cursor=pointer]:
+            - /url: tel:+442088703925
+        - generic [ref=e67]:
+          - generic [ref=e68]: 
+          - heading "Email" [level=3] [ref=e70]
+          - paragraph [ref=e71]: Send us a message
+          - link "sales@highqualityclean.co.uk" [ref=e72] [cursor=pointer]:
+            - /url: mailto:sales@highqualityclean.co.uk
+        - generic [ref=e73]:
+          - heading "WhatsApp" [level=3] [ref=e77]
+          - paragraph [ref=e78]: Chat with us
+          - link "Start a conversation" [ref=e79] [cursor=pointer]:
+            - /url: https://wa.me/442088703925
+        - generic [ref=e80]:
+          - generic [ref=e81]: 
+          - heading "Location" [level=3] [ref=e83]
+          - paragraph [ref=e84]: Service area
+          - paragraph [ref=e85]: London, SW1 Greater London
+      - generic [ref=e86]:
+        - paragraph [ref=e87]: Follow us on social media
+        - generic [ref=e88]:
+          - link "Instagram" [ref=e89] [cursor=pointer]:
+            - /url: https://www.instagram.com/highqualitycleanltd
+            - generic [ref=e90]: 
+          - link "LinkedIn" [ref=e91] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/high-quality-cleaning/
+            - generic [ref=e92]: 
+          - link "TikTok" [ref=e93] [cursor=pointer]:
+            - /url: https://tiktok.com/@highqualityclean
+            - generic [ref=e94]: 
+          - link "Facebook" [ref=e95] [cursor=pointer]:
+            - /url: https://www.facebook.com/highqualityclean
+            - generic [ref=e96]: 
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - heading "Send Us a Message" [level=2] [ref=e100]
+        - paragraph [ref=e101]: Fill out the form below and we'll get back to you as soon as possible.
+      - text: 
+      - generic [ref=e230]:
+        - generic [ref=e231]: 
+        - heading "Message Sent" [level=3] [ref=e233]
+        - paragraph [ref=e234]: Thank you for reaching out. We've received your message and our team will get back to you as soon as possible.
+        - button "Send another message" [ref=e235]
+    - generic [ref=e130]:
+      - generic [ref=e131]:
+        - heading "Business Hours" [level=2] [ref=e132]
+        - paragraph [ref=e133]: Our team is available to assist you during these hours
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - heading " Office Hours" [level=3] [ref=e137]:
+            - generic [ref=e138]: 
+            - text: Office Hours
+          - list [ref=e139]:
+            - listitem [ref=e140]:
+              - generic [ref=e141]: Monday - Friday
+              - generic [ref=e142]: 9:00 AM - 6:00 PM
+            - listitem [ref=e143]:
+              - generic [ref=e144]: Saturday
+              - generic [ref=e145]: 10:00 AM - 4:00 PM
+            - listitem [ref=e146]:
+              - generic [ref=e147]: Sunday
+              - generic [ref=e148]: Closed
+        - generic [ref=e149]:
+          - heading " Emergency Support" [level=3] [ref=e150]:
+            - generic [ref=e151]: 
+            - text: Emergency Support
+          - paragraph [ref=e152]: For urgent matters outside business hours, please leave a message and we'll respond as soon as possible.
+          - generic [ref=e153]:
+            - generic [ref=e154]: 
+            - generic [ref=e155]: "Average response time: 24-48 hours"
+  - contentinfo [ref=e156]:
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - link "H High Quality Clean" [ref=e160] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e161]: H
+            - generic [ref=e162]: High Quality Clean
+          - paragraph [ref=e163]: Cleaning defined by the outcome.
+        - link "Request a quote" [ref=e164] [cursor=pointer]:
+          - /url: /request-a-quote/
+          - text: Request a quote
+          - generic [ref=e165]: ↗
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - paragraph [ref=e168]: Contact
+          - generic [ref=e169]:
+            - link "0208 870 3925" [ref=e170] [cursor=pointer]:
+              - /url: tel:+442088703925
+            - link "sales@highqualityclean.co.uk" [ref=e171] [cursor=pointer]:
+              - /url: mailto:sales@highqualityclean.co.uk
+            - paragraph [ref=e172]: 9 Swanage Road, London SW18 2DZ
+          - generic [ref=e173]:
+            - link "Instagram" [ref=e174] [cursor=pointer]:
+              - /url: https://www.instagram.com/highqualitycleanltd/
+              - generic [ref=e175]: 
+            - link "LinkedIn" [ref=e176] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/high-quality-cleaning/
+              - generic [ref=e177]: 
+            - link "TikTok" [ref=e178] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@highqualityclean
+              - generic [ref=e179]: 
+        - generic [ref=e180]:
+          - paragraph [ref=e181]: Services
+          - list [ref=e182]:
+            - listitem [ref=e183]:
+              - link "Property & Facilities" [ref=e184] [cursor=pointer]:
+                - /url: /property-facilities-cleaning-london/
+            - listitem [ref=e185]:
+              - link "Commercial Cleaning" [ref=e186] [cursor=pointer]:
+                - /url: /commercial-cleaning-london/
+            - listitem [ref=e187]:
+              - link "Home Cleaning" [ref=e188] [cursor=pointer]:
+                - /url: /home-cleaning-london/
+            - listitem [ref=e189]:
+              - link "Complex Services" [ref=e190] [cursor=pointer]:
+                - /url: /complex-property-cleaning-london/
+        - generic [ref=e191]:
+          - paragraph [ref=e192]: HQC
+          - list [ref=e193]:
+            - listitem [ref=e194]:
+              - link "About HQC" [ref=e195] [cursor=pointer]:
+                - /url: /about-high-quality-clean/
+            - listitem [ref=e196]:
+              - link "How We Work" [ref=e197] [cursor=pointer]:
+                - /url: /how-we-work/
+            - listitem [ref=e198]:
+              - link "Reviews & Case Studies" [ref=e199] [cursor=pointer]:
+                - /url: /reviews-case-studies/
+            - listitem [ref=e200]:
+              - link "Areas We Cover" [ref=e201] [cursor=pointer]:
+                - /url: /areas-we-cover/
+            - listitem [ref=e202]:
+              - link "Contact" [ref=e203] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e204]:
+          - paragraph [ref=e205]: Information
+          - list [ref=e206]:
+            - listitem [ref=e207]:
+              - link "FAQs" [ref=e208] [cursor=pointer]:
+                - /url: /cleaning-faqs/
+            - listitem [ref=e209]:
+              - link "How Pricing Works" [ref=e210] [cursor=pointer]:
+                - /url: /cleaning-prices-london/
+            - listitem [ref=e211]:
+              - link "Privacy Policy" [ref=e212] [cursor=pointer]:
+                - /url: /privacy-policy/
+            - listitem [ref=e213]:
+              - link "Terms & Conditions" [ref=e214] [cursor=pointer]:
+                - /url: /terms-and-conditions/
+      - generic [ref=e215]:
+        - paragraph [ref=e216]: © 2026 High Quality Clean Ltd. All rights reserved.
+        - paragraph [ref=e217]: London cleaning for homes, workplaces and managed property.
+  - generic [ref=e218]:
+    - generic [ref=e220] [cursor=pointer]:
+      - img "Avatar" [ref=e221]
+      - generic [ref=e222]: If you have any questions at all, write a message here and we will get straight back to you.
+      - button "Close prompt" [ref=e223]
+    - button "Select to open the chat widget" [ref=e226] [cursor=pointer]

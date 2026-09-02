@@ -1,0 +1,291 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "H High Quality Clean" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f4e5]: H
+        - generic [ref=f4e6]: High Quality Clean
+      - button "Open menu" [ref=f4e7]:
+        - generic [ref=f4e8]: ☰
+  - main [ref=f4e9]:
+    - generic [ref=f4e10]:
+      - img "Calm, carefully maintained London living room" [ref=f4e11]
+      - generic [ref=f4e14]:
+        - navigation "Breadcrumb" [ref=f4e15]:
+          - link "Home" [ref=f4e16] [cursor=pointer]:
+            - /url: /
+          - generic [ref=f4e17]: /
+          - generic [ref=f4e18]: Homes & Private Clients
+        - generic [ref=f4e19]:
+          - paragraph [ref=f4e20]: Find the service that matches the outcome
+          - heading "Home Cleaning Starts with the Result You Need" [level=1] [ref=f4e21]
+          - paragraph [ref=f4e22]: Some homes need regular maintenance. Others need restoring after build-up, preparing before a move or clearing residue after building work. HQC helps you identify the right service before you book.
+          - generic [ref=f4e23]:
+            - link "Find the Right Home Cleaning Service" [ref=f4e24] [cursor=pointer]:
+              - /url: /#find-my-service
+              - text: Find the Right Home Cleaning Service
+              - generic [ref=f4e25]: ↗
+            - link "Request a Quote" [ref=f4e26] [cursor=pointer]:
+              - /url: /request-a-quote/?route=residential
+    - generic [ref=f4e28]:
+      - generic [ref=f4e29]:
+        - paragraph [ref=f4e30]: Service route
+        - paragraph [ref=f4e31]: Homes & Private Clients
+      - generic [ref=f4e32]:
+        - paragraph [ref=f4e33]: Designed for
+        - paragraph [ref=f4e34]: Homeowners, tenants, busy professionals, household managers and private clients.
+      - generic [ref=f4e35]:
+        - paragraph [ref=f4e36]: Next step
+        - paragraph [ref=f4e37]: Tailored quotation
+    - generic [ref=f4e39]:
+      - generic [ref=f4e40]:
+        - paragraph [ref=f4e41]: The outcome comes first
+        - heading "A service shaped around what has to be ready." [level=2] [ref=f4e42]
+        - paragraph [ref=f4e43]: Tell us the result you need and HQC will route you to the right home cleaning service.
+        - paragraph [ref=f4e44]: Every enquiry is reviewed against the result, property and delivery conditions before work is confirmed.
+      - generic [ref=f4e45]:
+        - img "Bright, carefully prepared London living room" [ref=f4e47]
+        - generic [ref=f4e48]:
+          - generic [ref=f4e49]:
+            - text: "01"
+            - paragraph [ref=f4e50]: The right level of cleaning
+          - generic [ref=f4e51]:
+            - text: "02"
+            - paragraph [ref=f4e52]: A clear recurring or one-off route
+          - generic [ref=f4e53]:
+            - text: "03"
+            - paragraph [ref=f4e54]: Care around your home and routines
+    - generic [ref=f4e57]:
+      - article [ref=f4e58]:
+        - generic [ref=f4e59]:
+          - paragraph [ref=f4e60]: 01 / Homes & Private Clients
+          - heading "Which Home Cleaning Service Is Right for You?" [level=2] [ref=f4e61]
+        - generic [ref=f4e63]:
+          - generic [ref=f4e64]:
+            - heading "Keep my home consistently clean — Essential Clean™" [level=3] [ref=f4e65]
+            - paragraph [ref=f4e66]: For maintenance-ready homes requiring a one-off, weekly or fortnightly maintenance service.
+            - link "Check Essential Clean™ suitability" [ref=f4e67] [cursor=pointer]:
+              - /url: /essential-clean-london/
+              - text: Check Essential Clean™ suitability
+              - generic [ref=f4e68]: →
+          - generic [ref=f4e69]:
+            - heading "My home needs more attention — Deep Clean™" [level=3] [ref=f4e70]
+            - paragraph [ref=f4e71]: For build-up, neglected detail and homes that require restoration before maintenance cleaning is appropriate.
+            - link "Request a deep-clean quote" [ref=f4e72] [cursor=pointer]:
+              - /url: /deep-cleaning-london/
+              - text: Request a deep-clean quote
+              - generic [ref=f4e73]: →
+          - generic [ref=f4e74]:
+            - heading "I am moving into a property — Move-In Reset™" [level=3] [ref=f4e75]
+            - paragraph [ref=f4e76]: For preparing a home before occupation.
+            - link "Request a Move-In Reset™ quote" [ref=f4e77] [cursor=pointer]:
+              - /url: /move-in-cleaning-london/
+              - text: Request a Move-In Reset™ quote
+              - generic [ref=f4e78]: →
+          - generic [ref=f4e79]:
+            - heading "I am moving out — End of Tenancy™" [level=3] [ref=f4e80]
+            - paragraph [ref=f4e81]: For preparing a property for tenancy handover.
+            - link "Request an end of tenancy quote" [ref=f4e82] [cursor=pointer]:
+              - /url: /end-of-tenancy-cleaning-london/
+              - text: Request an end of tenancy quote
+              - generic [ref=f4e83]: →
+          - generic [ref=f4e84]:
+            - heading "Building work has finished — Post-Construction™" [level=3] [ref=f4e85]
+            - paragraph [ref=f4e86]: For appropriate construction and refurbishment residue.
+            - link "Request a post-construction assessment" [ref=f4e87] [cursor=pointer]:
+              - /url: /post-construction-cleaning-london/
+              - text: Request a post-construction assessment
+              - generic [ref=f4e88]: →
+          - generic [ref=f4e89]:
+            - heading "The property is large, unusual or complex" [level=3] [ref=f4e90]
+            - paragraph [ref=f4e91]: For requirements that need assessment before scope and price can be confirmed.
+            - link "Request a complex-service assessment" [ref=f4e92] [cursor=pointer]:
+              - /url: /complex-property-cleaning-london/
+              - text: Request a complex-service assessment
+              - generic [ref=f4e93]: →
+      - article [ref=f4e94]:
+        - generic [ref=f4e95]:
+          - paragraph [ref=f4e96]: 02 / Homes & Private Clients
+          - 'heading "Essential Clean™: Maintain and Improve" [level=2] [ref=f4e97]'
+        - generic [ref=f4e98]:
+          - paragraph [ref=f4e99]: Essential Clean™ is designed for homes that are already suitable for maintenance cleaning. Direct online booking may be available for maintenance-ready one-off, weekly and fortnightly cleans.
+          - paragraph [ref=f4e100]: Eligible new weekly and fortnightly clients can receive 30% off their first Essential Clean™ with a minimum three-month recurring commitment. A one-off Essential Clean™ does not qualify for that recurring-client offer.
+      - article [ref=f4e101]:
+        - generic [ref=f4e102]:
+          - paragraph [ref=f4e103]: 03 / Homes & Private Clients
+          - heading "When Essential Clean™ Is Not the Right Service" [level=2] [ref=f4e104]
+        - generic [ref=f4e105]:
+          - paragraph [ref=f4e106]: HQC may recommend a different service where there is heavy build-up, neglected areas, restoration-level cleaning, an end-of-tenancy requirement, a move-in requirement, construction residue, specialist cleaning or unusual property complexity.
+          - paragraph [ref=f4e107]: That protects both the client and the cleaning team from beginning with a service that does not match the actual requirement.
+      - article [ref=f4e108]:
+        - generic [ref=f4e109]:
+          - paragraph [ref=f4e110]: 04 / Homes & Private Clients
+          - heading "We Do Not Price Bedrooms Alone" [level=2] [ref=f4e111]
+        - paragraph [ref=f4e113]: Property size matters, but it does not tell the whole story. Bathrooms, additional rooms, contents, current condition, floors, access and specialist requirements can all change the work required to achieve the agreed outcome.
+    - generic [ref=f4e116]:
+      - generic [ref=f4e117]:
+        - paragraph [ref=f4e118]: What we establish
+        - heading "Clear inputs. A realistic scope. No guesswork." [level=2] [ref=f4e119]
+      - generic [ref=f4e120]:
+        - article [ref=f4e121]:
+          - text: Scope 1
+          - heading "Maintenance or restoration need" [level=3] [ref=f4e122]
+        - article [ref=f4e123]:
+          - text: Scope 2
+          - heading "Property condition and priorities" [level=3] [ref=f4e124]
+        - article [ref=f4e125]:
+          - text: Scope 3
+          - heading "Access, products and household requirements" [level=3] [ref=f4e126]
+        - article [ref=f4e127]:
+          - text: Confirmed before work
+          - heading "Inclusions, timing and the handover standard" [level=3] [ref=f4e128]
+    - generic [ref=f4e129]:
+      - generic [ref=f4e130]:
+        - generic [ref=f4e131]:
+          - paragraph [ref=f4e132]: HQC work
+          - heading "Real spaces. Visible care." [level=2] [ref=f4e133]
+        - paragraph [ref=f4e134]: Selected imagery from the HQC project library. The exact scope and finish varies by property, condition and agreed service.
+      - generic [ref=f4e135]:
+        - figure [ref=f4e136]:
+          - img "Bright, carefully prepared London living room" [ref=f4e137]
+        - figure [ref=f4e139]:
+          - img "Finished marble kitchen in a London home" [ref=f4e140]
+        - figure [ref=f4e142]:
+          - img "Clean and ready London bathroom" [ref=f4e143]
+    - generic [ref=f4e147]:
+      - generic [ref=f4e148]:
+        - paragraph [ref=f4e149]: What happens next
+        - heading "A calm route from enquiry to result." [level=2] [ref=f4e150]
+      - list [ref=f4e151]:
+        - listitem [ref=f4e152]:
+          - generic [ref=f4e153]: "01"
+          - generic [ref=f4e154]:
+            - heading "Tell us what has to be achieved" [level=3] [ref=f4e155]
+            - paragraph [ref=f4e156]: Share the property, condition, timing and any access or operational constraints.
+        - listitem [ref=f4e157]:
+          - generic [ref=f4e158]: "02"
+          - generic [ref=f4e159]:
+            - heading "HQC confirms the right route" [level=3] [ref=f4e160]
+            - paragraph [ref=f4e161]: We review the details and prepare the appropriate tailored quotation.
+        - listitem [ref=f4e162]:
+          - generic [ref=f4e163]: "03"
+          - generic [ref=f4e164]:
+            - heading "The scope is agreed" [level=3] [ref=f4e165]
+            - paragraph [ref=f4e166]: You receive a clear route forward with the relevant inclusions, assumptions and next steps.
+    - generic [ref=f4e168]:
+      - paragraph [ref=f4e169]: Related routes
+      - generic [ref=f4e170]:
+        - link "01 Essential Clean" [ref=f4e171] [cursor=pointer]:
+          - /url: /essential-clean-london/
+          - generic [ref=f4e172]: "01"
+          - generic [ref=f4e173]:
+            - text: Essential Clean
+            - generic [ref=f4e174]: →
+        - link "02 Deep cleaning" [ref=f4e175] [cursor=pointer]:
+          - /url: /deep-cleaning-london/
+          - generic [ref=f4e176]: "02"
+          - generic [ref=f4e177]:
+            - text: Deep cleaning
+            - generic [ref=f4e178]: →
+        - link "03 Move-In Reset" [ref=f4e179] [cursor=pointer]:
+          - /url: /move-in-cleaning-london/
+          - generic [ref=f4e180]: "03"
+          - generic [ref=f4e181]:
+            - text: Move-In Reset
+            - generic [ref=f4e182]: →
+    - generic [ref=f4e185]:
+      - generic [ref=f4e186]:
+        - paragraph [ref=f4e187]: The next step is simple
+        - heading "Find the Right Home Cleaning Service" [level=2] [ref=f4e188]
+      - link "Find the Right Home Cleaning Service" [ref=f4e189] [cursor=pointer]:
+        - /url: /#find-my-service
+        - text: Find the Right Home Cleaning Service
+        - generic [ref=f4e190]: ↗
+  - contentinfo [ref=f4e191]:
+    - generic [ref=f4e192]:
+      - generic [ref=f4e193]:
+        - generic [ref=f4e194]:
+          - link "H High Quality Clean" [ref=f4e195] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f4e196]: H
+            - generic [ref=f4e197]: High Quality Clean
+          - paragraph [ref=f4e198]: Cleaning defined by the outcome.
+        - link "Request a quote" [ref=f4e199] [cursor=pointer]:
+          - /url: /request-a-quote/
+          - text: Request a quote
+          - generic [ref=f4e200]: ↗
+      - generic [ref=f4e201]:
+        - generic [ref=f4e202]:
+          - paragraph [ref=f4e203]: Contact
+          - generic [ref=f4e204]:
+            - link "0208 870 3925" [ref=f4e205] [cursor=pointer]:
+              - /url: tel:+442088703925
+            - link "sales@highqualityclean.co.uk" [ref=f4e206] [cursor=pointer]:
+              - /url: mailto:sales@highqualityclean.co.uk
+            - paragraph [ref=f4e207]: 9 Swanage Road, London SW18 2DZ
+          - generic [ref=f4e208]:
+            - link "Instagram" [ref=f4e209] [cursor=pointer]:
+              - /url: https://www.instagram.com/highqualitycleanltd/
+              - generic [ref=f4e210]: 
+            - link "LinkedIn" [ref=f4e211] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/high-quality-cleaning/
+              - generic [ref=f4e212]: 
+            - link "TikTok" [ref=f4e213] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@highqualityclean
+              - generic [ref=f4e214]: 
+        - generic [ref=f4e215]:
+          - paragraph [ref=f4e216]: Services
+          - list [ref=f4e217]:
+            - listitem [ref=f4e218]:
+              - link "Property & Facilities" [ref=f4e219] [cursor=pointer]:
+                - /url: /property-facilities-cleaning-london/
+            - listitem [ref=f4e220]:
+              - link "Commercial Cleaning" [ref=f4e221] [cursor=pointer]:
+                - /url: /commercial-cleaning-london/
+            - listitem [ref=f4e222]:
+              - link "Home Cleaning" [ref=f4e223] [cursor=pointer]:
+                - /url: /home-cleaning-london/
+            - listitem [ref=f4e224]:
+              - link "Complex Services" [ref=f4e225] [cursor=pointer]:
+                - /url: /complex-property-cleaning-london/
+        - generic [ref=f4e226]:
+          - paragraph [ref=f4e227]: HQC
+          - list [ref=f4e228]:
+            - listitem [ref=f4e229]:
+              - link "About HQC" [ref=f4e230] [cursor=pointer]:
+                - /url: /about-high-quality-clean/
+            - listitem [ref=f4e231]:
+              - link "How We Work" [ref=f4e232] [cursor=pointer]:
+                - /url: /how-we-work/
+            - listitem [ref=f4e233]:
+              - link "Reviews & Case Studies" [ref=f4e234] [cursor=pointer]:
+                - /url: /reviews-case-studies/
+            - listitem [ref=f4e235]:
+              - link "Areas We Cover" [ref=f4e236] [cursor=pointer]:
+                - /url: /areas-we-cover/
+            - listitem [ref=f4e237]:
+              - link "Contact" [ref=f4e238] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=f4e239]:
+          - paragraph [ref=f4e240]: Information
+          - list [ref=f4e241]:
+            - listitem [ref=f4e242]:
+              - link "FAQs" [ref=f4e243] [cursor=pointer]:
+                - /url: /cleaning-faqs/
+            - listitem [ref=f4e244]:
+              - link "How Pricing Works" [ref=f4e245] [cursor=pointer]:
+                - /url: /cleaning-prices-london/
+            - listitem [ref=f4e246]:
+              - link "Privacy Policy" [ref=f4e247] [cursor=pointer]:
+                - /url: /privacy-policy/
+            - listitem [ref=f4e248]:
+              - link "Terms & Conditions" [ref=f4e249] [cursor=pointer]:
+                - /url: /terms-and-conditions/
+      - generic [ref=f4e250]:
+        - paragraph [ref=f4e251]: © 2026 High Quality Clean Ltd. All rights reserved.
+        - paragraph [ref=f4e252]: London cleaning for homes, workplaces and managed property.
+  - generic [ref=f4e255]:
+    - button [ref=f4e256]
+    - button [ref=f4e262]
+    - button [ref=f4e266]
+    - button [ref=f4e271]
