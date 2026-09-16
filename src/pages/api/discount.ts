@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
+import { isNonProductionRequest, previewResponse } from '../../lib/preview';
 
 export const POST: APIRoute = async ({ request, locals }) => {
+  if (isNonProductionRequest(request)) return previewResponse();
   const env = (locals as { runtime?: { env?: Record<string, string> } }).runtime?.env;
   const webhookUrl = env?.DISCOUNT_FORM_WEBHOOK;
   if (!webhookUrl) {

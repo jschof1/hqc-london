@@ -76,7 +76,12 @@ for (const [path, binding] of apiBindings) {
   const sourceText = await read(path);
   expect(sourceText.includes(binding), `${path} must use ${binding}`);
   expect(sourceText.includes('body: JSON.stringify(body)'), `${path} must preserve the submitted JSON payload`);
+  expect(sourceText.includes("isNonProductionRequest(request)"), `${path} must block webhook delivery from local and Pages preview hosts`);
 }
+
+const previewGuard = await read('src/lib/preview.ts');
+expect(previewGuard.includes("hostname.endsWith('.pages.dev')"), 'Preview guard must recognise Cloudflare Pages preview hosts');
+expect(previewGuard.includes('status: 202'), 'Preview guard must return an accepted test response');
 
 if (failures.length) {
   console.error(`Form routing verification failed (${failures.length}):`);

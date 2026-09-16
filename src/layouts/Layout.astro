@@ -30,6 +30,8 @@ const canonicalPath = Astro.url?.pathname
   ? Astro.url.pathname.toLowerCase().replace(/\/?$/, '/')
   : '/';
 const canonicalUrl = new URL(canonicalPath, baseUrl).href;
+const isPreviewHost = Astro.url.hostname.endsWith('.pages.dev') || ['localhost', '127.0.0.1', '::1'].includes(Astro.url.hostname);
+const effectiveRobots = isPreviewHost ? 'noindex, nofollow, noarchive' : robots;
 const defaultImage = `${baseUrl}/images/luxury-home/hyde-park-apartment.webp`;
 const serviceAreaNames = ['London', 'Central London', 'West London', 'South West London', 'North London', 'East London'];
 
@@ -162,10 +164,10 @@ const schemaItem = {
     />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0e2a31" />
-    <meta name="robots" content={robots} />
-    <meta name="googlebot" content={robots} />
-    <meta name="bingbot" content={robots} />
-    <meta name="yandexbot" content={robots} />
+    <meta name="robots" content={effectiveRobots} />
+    <meta name="googlebot" content={effectiveRobots} />
+    <meta name="bingbot" content={effectiveRobots} />
+    <meta name="yandexbot" content={effectiveRobots} />
     <meta name="google" content="notranslate" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonicalUrl} />
