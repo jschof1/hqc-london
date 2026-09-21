@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import ConversionPrompt from '../components/ConversionPrompt.astro';
+import CookiePreferences from '../components/CookiePreferences.astro';
 
 import { Schema } from 'astro-seo-schema';
 
@@ -214,7 +215,6 @@ const schemaItem = {
         }
       })();
     </script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="95c24898-5333-41ef-8fbf-a17bcac067af"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -228,19 +228,15 @@ const schemaItem = {
     <slot />
     <ConversionPrompt />
     <Footer />
+    <CookiePreferences allowAnalytics={!isPreviewHost} />
     <script src="/src/scripts/main.js"></script>
-    <script 
-      is:inline
-      src="https://widgets.leadconnectorhq.com/loader.js"  
-      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
-      data-widget-id="696e24618d6c38f8cfb1c78f" > 
-    </script>
+    <!-- The LeadConnector chat widget stays off until its attribution cookies and withdrawal controls are verified. -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       window.addEventListener('hqc:conversion', function(event) {
         const detail = event.detail || {};
         window.dataLayer.push(detail);
-        if (window.umami && typeof window.umami.track === 'function' && detail.event) {
+        if (window.hqcCookiePreferences?.analytics && window.umami && typeof window.umami.track === 'function' && detail.event) {
           window.umami.track(detail.event, detail);
         }
       });
@@ -253,82 +249,6 @@ const schemaItem = {
           detail: { event: eventName, href, service: link.dataset.service || undefined }
         }));
       });
-    </script>
-    <script is:inline>
-      // Load Keak script after user interaction to prevent flashing
-      (function() {
-        let keakLoaded = false;
-        let interactionOccurred = false;
-        
-        function loadKeakScript() {
-          if (keakLoaded || document.getElementById('keak-script')) {
-            keakLoaded = true;
-            return;
-          }
-          
-          const script = document.createElement('script');
-          script.id = 'keak-script';
-          script.src = 'https://zzontar2hsjaawcn.public.blob.vercel-storage.com/scripts/domain-402-httpshighqualityclean.co.uk.js';
-          script.setAttribute('data-domain', '402');
-          script.defer = true;
-          document.head.appendChild(script);
-          keakLoaded = true;
-        }
-        
-        // Load after user interaction (scroll, click, touch, keypress)
-        function handleInteraction() {
-          if (!interactionOccurred) {
-            interactionOccurred = true;
-            // Small delay after interaction to ensure page is stable
-            setTimeout(loadKeakScript, 100);
-          }
-        }
-        
-        // Listen for various user interactions
-        ['scroll', 'click', 'touchstart', 'keydown'].forEach(eventType => {
-          document.addEventListener(eventType, handleInteraction, { once: true, passive: true });
-        });
-        
-        // Fallback: Load after a delay if no interaction occurs
-        // This ensures the script still loads for analytics purposes
-        document.addEventListener('astro:page-load', () => {
-          setTimeout(() => {
-            if (!interactionOccurred) {
-              // Use requestIdleCallback to load when browser is idle
-              if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadKeakScript, { timeout: 2000 });
-              } else {
-                setTimeout(loadKeakScript, 2000);
-              }
-            }
-          }, 1000);
-        }, { once: false });
-        
-        // Initial page load fallback
-        if (document.readyState === 'complete') {
-          setTimeout(() => {
-            if ('requestIdleCallback' in window) {
-              requestIdleCallback(() => {
-                setTimeout(loadKeakScript, 2000);
-              }, { timeout: 2000 });
-            } else {
-              setTimeout(loadKeakScript, 2000);
-            }
-          }, 1000);
-        } else {
-          window.addEventListener('load', () => {
-            setTimeout(() => {
-              if ('requestIdleCallback' in window) {
-                requestIdleCallback(() => {
-                  setTimeout(loadKeakScript, 2000);
-                }, { timeout: 2000 });
-              } else {
-                setTimeout(loadKeakScript, 2000);
-              }
-            }, 1000);
-          }, { once: true });
-        }
-      })();
     </script>
   </body>
 </html>

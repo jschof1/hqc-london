@@ -4,28 +4,28 @@ import Header from '../components/Header.astro';
 ---
 
 <Layout
-  title="Request a Cleaning Quote | High Quality Clean"
-  description="Choose the correct residential, commercial, property or complex-service enquiry route and send the details HQC needs to review the work."
-  pageType="ContactPage"
+  title="Request a Cleaning Quote | High Quality Clean London"
+  description="Tell HQC what you need cleaned and the result required. We will route your enquiry to the appropriate home, property, commercial or complex cleaning service."
+  pageType="WebPage"
 >
   <Header />
   <main class="min-h-screen bg-mist px-4 pb-20 pt-28 sm:px-6">
     <div class="mx-auto max-w-4xl">
       <div class="text-center">
         <p class="text-sm font-semibold uppercase tracking-[0.22em] text-gold">Request a quote</p>
-        <h1 class="mt-4 font-serif text-4xl text-navy md:text-6xl">Choose the right enquiry route</h1>
-        <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">Choose the route that best matches the work, then send the details needed for a considered review.</p>
+        <h1 class="mt-4 font-serif text-4xl text-navy md:text-6xl">Tell Us What You Need the Cleaning to Achieve</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">You do not need to select the perfect service before contacting HQC. Start with the property or site, its current condition and what needs to happen next.</p>
       </div>
 
       <div class="mt-10 grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Enquiry type">
         <button id="residential-route-tab" class="route-tab rounded-xl border border-gold bg-white p-4 text-left" type="button" role="tab" data-route="residential" aria-selected="true" aria-controls="quote-route-panel" tabindex="0">
-          <strong class="block text-navy">Home or private client</strong><span class="mt-1 block text-sm text-ink/65">Deep, moving, tenancy or quoted home work</span>
+          <strong class="block text-navy">Home</strong><span class="mt-1 block text-sm text-ink/65">Essential Clean™, Deep Clean™, Move-In Reset™, End of Tenancy™ or Post-Construction™</span>
         </button>
         <button id="commercial-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="commercial" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
-          <strong class="block text-navy">Workplace or managed property</strong><span class="mt-1 block text-sm text-ink/65">Commercial, office, agency or portfolio</span>
+          <strong class="block text-navy">Workplace, property or portfolio</strong><span class="mt-1 block text-sm text-ink/65">Commercial, office, agency, managed property or recurring work</span>
         </button>
         <button id="complex-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="complex" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
-          <strong class="block text-navy">Large or complex requirement</strong><span class="mt-1 block text-sm text-ink/65">Assessment before quotation</span>
+          <strong class="block text-navy">Complex property or project</strong><span class="mt-1 block text-sm text-ink/65">Unusually large, phased or specialist requirements</span>
         </button>
       </div>
 
@@ -84,6 +84,10 @@ import Header from '../components/Header.astro';
         <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" role="status" aria-live="polite"></div>
         <button id="quote-submit" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy transition hover:bg-navy hover:text-white" type="submit">Submit Your Requirement</button>
       </form>
+      <div class="mt-5 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3">
+        <p class="text-sm text-ink/65">Not sure which route fits?</p>
+        <a href="/#find-my-service" class="inline-flex min-h-11 items-center justify-center rounded-full border border-navy/20 px-5 py-2 text-sm font-semibold text-navy transition hover:border-gold hover:bg-white">Find My Service <span class="ml-2" aria-hidden="true">→</span></a>
+      </div>
     </div>
   </main>
 </Layout>
@@ -297,6 +301,12 @@ import Header from '../components/Header.astro';
     try {
       const response = await fetch('/api/quote/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       if (!response.ok) throw new Error('Submission failed');
+      const responseBody = await response.json().catch(() => null);
+      if (responseBody?.preview === true) {
+        message.textContent = 'This preview does not send enquiries. Your requirement was not sent.';
+        message.className = 'mt-6 rounded-lg bg-amber-50 p-4 text-sm text-amber-950';
+        return;
+      }
       message.textContent = 'Thank you. Your requirement has been sent.';
       message.className = 'mt-6 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-900';
       const selectedRoute = routeInput?.value as keyof typeof routes;

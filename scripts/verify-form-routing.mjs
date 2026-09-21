@@ -29,7 +29,7 @@ for (const [path, source, fields] of quickForms) {
 }
 
 const connectedForms = [
-  ['src/pages/contact.astro', '/api/quick-form/', ['name', 'email', 'phone', 'postcode', 'service', 'message']],
+  ['src/pages/contact.astro', '/api/quick-form/', ['name', 'email', 'phone', 'postcode', 'service', 'message', 'privacy_consent']],
   ['src/pages/request-a-quote.astro', '/api/quote/', [
     'route', 'buyer', 'service', 'service_context', 'name', 'email', 'phone', 'postcode',
     'address', 'area', 'size', 'frequency', 'desired_date', 'details', 'operating_hours',

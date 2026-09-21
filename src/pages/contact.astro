@@ -2,13 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
-import IntroRateBanner from '../components/IntroRateBanner.astro';
-import siteSettings from '../data/site-settings.json';
 ---
 
 <Layout 
-  title="Contact High Quality Clean | London Cleaning Services"
-  description="Contact High Quality Clean about home, workplace, managed-property or complex cleaning requirements in London."
+  title="Contact High Quality Clean | London"
+  description="Contact High Quality Clean for existing bookings, general enquiries, supplier matters or administrative support. New cleaning enquiries can use our quotation route."
   pageType="ContactPage"
 >
   <Header />
@@ -16,20 +14,17 @@ import siteSettings from '../data/site-settings.json';
   <main class="page-transition pt-16">
     <!-- Hero Section -->
     <HeroSection 
-      title="Get in Touch"
-      subtitle="For bookings and quotations, use the correct service route. For everything else, contact HQC here."
+      title="Contact High Quality Clean"
+      subtitle="For new cleaning requirements, tell us about the property, site and result required through the quotation form. For existing-client, supplier or general administrative matters, contact HQC here."
       imageSrc="/images/generated/hqc-restoration-interior.png"
       imageAlt="Illustrative London interior prepared with careful attention to detail"
       primaryCta={{
-        text: "Request a Quote",
-        href: "/request-a-quote/"
+        text: "Contact HQC",
+        href: "#contact-methods"
       }}
       secondaryCta={{
-        text: "Message on WhatsApp", 
-        href: "https://wa.me/442088703925",
-        icon: "fab fa-whatsapp",
-        target: "_blank",
-        rel: "noopener nofollow"
+        text: "Request a Cleaning Quote",
+        href: "/request-a-quote/"
       }}
       trustBadges={[
         { icon: "fas fa-list-check", text: "Clear scope" },
@@ -38,17 +33,26 @@ import siteSettings from '../data/site-settings.json';
       ]}
       backgroundClass="bg-navy relative overflow-hidden"
     />
-    <IntroRateBanner />
+    <section class="bg-white py-14 md:py-18" aria-labelledby="new-cleaning-enquiry-title">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">New cleaning enquiry</p>
+          <h2 id="new-cleaning-enquiry-title" class="mt-3 font-serif text-3xl font-semibold text-navy md:text-4xl">Tell us what the property or site needs</h2>
+          <p class="mt-4 leading-7 text-ink/70">For home, property, office, commercial, post-construction, portfolio or complex-property work, use the central quotation route so HQC can identify the correct service.</p>
+        </div>
+        <a href="/request-a-quote/" class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-navy px-7 py-4 font-semibold text-white transition hover:bg-gold hover:text-navy">Request a Cleaning Quote <span class="ml-2" aria-hidden="true">→</span></a>
+      </div>
+    </section>
 
     <!-- Contact Information Cards -->
-    <section class="py-20 md:py-28 bg-mist">
+    <section id="contact-methods" class="scroll-mt-24 py-20 md:py-28 bg-mist" aria-labelledby="contact-methods-title">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="font-serif text-3xl md:text-4xl text-navy font-semibold mb-4">
-            How to Reach Us
+          <h2 id="contact-methods-title" class="font-serif text-3xl md:text-4xl text-navy font-semibold mb-4">
+            Contact HQC
           </h2>
           <p class="text-ink/70 text-lg max-w-2xl mx-auto">
-            Choose the method that works best for you. Our team is ready to assist with your cleaning needs.
+            Use these contact details for existing bookings, general enquiries, supplier matters or administrative support.
           </p>
         </div>
 
@@ -161,15 +165,43 @@ import siteSettings from '../data/site-settings.json';
       </div>
     </section>
 
+    <section class="bg-white py-16 md:py-20" aria-label="Other contact routes">
+      <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
+        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
+          <h2 class="font-serif text-2xl font-semibold text-navy">Existing clients</h2>
+          <p class="mt-3 leading-7 text-ink/70">For a booking, access update, invoice query, service question, recurring arrangement, feedback or administrative support, include the relevant name, property address and booking date or reference where available.</p>
+        </article>
+        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
+          <h2 class="font-serif text-2xl font-semibold text-navy">Suppliers and subcontractors</h2>
+          <p class="mt-3 leading-7 text-ink/70">Please mark supplier or subcontractor enquiries clearly. Recruitment, supplier introductions, subcontractor administration, product sales and general business proposals are not cleaning quotation requests.</p>
+        </article>
+        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
+          <h2 class="font-serif text-2xl font-semibold text-navy">Media and partnerships</h2>
+          <p class="mt-3 leading-7 text-ink/70">Include who you are, your organisation, the purpose of your enquiry, relevant website or information and your preferred contact details.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bg-navy py-12 text-white" aria-labelledby="assessment-media-title">
+      <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-[1fr_auto] md:items-center lg:px-8">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Assessment media</p>
+          <h2 id="assessment-media-title" class="mt-2 font-serif text-2xl font-semibold">Use WhatsApp only when HQC has requested photos or video</h2>
+          <p class="mt-3 max-w-3xl leading-7 text-white/75">Do not send sensitive documents unless HQC has specifically requested them through an appropriate route.</p>
+        </div>
+        <a href="https://wa.me/447824390336" target="_blank" rel="noopener nofollow" class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/35 px-6 py-3 font-semibold text-white transition hover:border-gold hover:text-gold">WhatsApp 07824 390336 <span class="ml-2" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
     <!-- Contact Form Section -->
     <section class="py-20 md:py-28 bg-white">
       <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="font-serif text-3xl md:text-4xl text-navy font-semibold mb-4">
-            Send Us a Message
+            General and administrative enquiry
           </h2>
           <p class="text-ink/70 text-lg">
-            Fill out the form below and we'll get back to you as soon as possible.
+            Use this contact form for existing-client, supplier or general administrative matters. For new cleaning work, use the quotation route.
           </p>
         </div>
 
@@ -230,9 +262,10 @@ import siteSettings from '../data/site-settings.json';
             >
               <option value="">Select a topic...</option>
               <option value="general-inquiry">General Inquiry</option>
-              <option value="quote-request">Request a Quote</option>
               <option value="existing-client">Existing Client Support</option>
-              <option value="partnership">Partnership Opportunity</option>
+              <option value="supplier">Supplier or Subcontractor Enquiry</option>
+              <option value="partnership">Media or Partnership Enquiry</option>
+              <option value="administrative">Administrative Support</option>
               <option value="other">Other</option>
             </select>
           </label>
@@ -250,7 +283,7 @@ import siteSettings from '../data/site-settings.json';
           
           <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:justify-between">
             <label class="inline-flex items-start gap-3 text-sm text-navy/80 max-w-md">
-              <input type="checkbox" required class="mt-1 accent-gold scale-110" />
+              <input type="checkbox" name="privacy_consent" value="yes" required class="mt-1 accent-gold scale-110" />
               <span>I agree to be contacted by High Quality Clean regarding my inquiry.</span>
             </label>
             <button
@@ -262,6 +295,10 @@ import siteSettings from '../data/site-settings.json';
             </button>
           </div>
         </form>
+
+        <div id="contact-preview-status" class="mt-5 hidden rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950" role="status" aria-live="polite">
+          This preview does not send contact forms. Your message was not sent. Use the contact details above to reach HQC.
+        </div>
 
         <div id="contact-success" class="hidden bg-mist rounded-2xl p-12 text-center border border-gold/50 shadow-soft animate-fade-in">
           <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -308,13 +345,22 @@ import siteSettings from '../data/site-settings.json';
                 body: JSON.stringify(data),
               });
 
-              if (response.ok) {
-                form.style.display = 'none';
-                successMessage.classList.remove('hidden');
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              } else {
-                throw new Error('Submission failed');
+              const result = await response.json().catch(() => null);
+              if (!response.ok) throw new Error('Submission failed');
+
+              if (result?.preview === true) {
+                document.getElementById('contact-preview-status')?.classList.remove('hidden');
+                document.getElementById('contact-preview-status')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (submitBtn) {
+                  submitBtn.disabled = false;
+                  submitBtn.innerHTML = originalBtnText;
+                }
+                return;
               }
+
+              form.style.display = 'none';
+              successMessage.classList.remove('hidden');
+              successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } catch (error) {
               console.error('Error submitting form:', error);
               alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
@@ -329,54 +375,17 @@ import siteSettings from '../data/site-settings.json';
       </div>
     </section>
 
-    <!-- Business Hours Section -->
-    <section class="py-20 md:py-28 bg-navy">
-      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="font-serif text-3xl md:text-4xl text-white font-semibold mb-4">
-            Business Hours
-          </h2>
-          <p class="text-white/80 text-lg">
-            Our team is available to assist you during these hours
-          </p>
+    <section class="bg-mist py-16 md:py-20" aria-labelledby="contact-quote-title">
+      <div class="mx-auto grid max-w-7xl gap-8 rounded-3xl bg-navy px-6 py-10 text-white sm:px-10 md:grid-cols-[1fr_auto] md:items-center md:py-12">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Need a cleaning quote?</p>
+          <h2 id="contact-quote-title" class="mt-3 font-serif text-3xl font-semibold md:text-4xl">Choose the route that matches your enquiry</h2>
+          <p class="mt-4 max-w-2xl leading-7 text-white/75">For postcode questions, check the areas HQC covers. For new cleaning work, send the property, site and service details through the quotation form.</p>
         </div>
-
-        <div class="bg-white/10 backdrop-blur border border-gold/30 rounded-2xl p-8 md:p-10">
-          <div class="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 class="text-gold font-semibold text-lg mb-4 flex items-center gap-2">
-                <i class="fas fa-clock"></i>
-                Office Hours
-              </h3>
-              <ul class="space-y-3 text-white/90">
-                <li class="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span class="font-medium">9:00 AM - 6:00 PM</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>Saturday</span>
-                  <span class="font-medium">10:00 AM - 4:00 PM</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>Sunday</span>
-                  <span class="font-medium">Closed</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-gold font-semibold text-lg mb-4 flex items-center gap-2">
-                <i class="fas fa-headset"></i>
-                Emergency Support
-              </h3>
-              <p class="text-white/90 mb-4">
-                For urgent matters outside business hours, please leave a message and we'll respond as soon as possible.
-              </p>
-              <div class="flex items-center gap-2 text-gold">
-                <i class="fas fa-info-circle"></i>
-                <span class="text-sm">Average response time: 24-48 hours</span>
-              </div>
-            </div>
-          </div>
+        <div class="flex flex-col gap-3 sm:flex-row md:flex-col">
+          <a href="#contact-methods" class="inline-flex min-h-12 items-center justify-center rounded-full bg-gold px-6 py-3 font-semibold text-navy transition hover:bg-white">Contact HQC</a>
+          <a href="/request-a-quote/" class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/35 px-6 py-3 font-semibold text-white transition hover:border-gold hover:text-gold">Request a Cleaning Quote</a>
+          <a href="/areas-we-cover/" class="inline-flex min-h-11 items-center justify-center px-5 py-2 text-sm font-semibold text-white/75 underline decoration-gold underline-offset-4 hover:text-gold">Check Areas We Cover</a>
         </div>
       </div>
     </section>

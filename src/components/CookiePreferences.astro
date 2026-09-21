@@ -1,0 +1,230 @@
+---
+export interface Props {
+  allowAnalytics?: boolean;
+}
+
+const { allowAnalytics = false } = Astro.props;
+---
+
+<section
+  id="hqc-cookie-banner"
+  data-analytics-allowed={allowAnalytics ? 'true' : 'false'}
+  class="fixed inset-x-4 bottom-4 z-[90] mx-auto max-h-[calc(100dvh-2rem)] max-w-2xl overflow-y-auto rounded-2xl border border-copper/40 bg-night p-5 text-white shadow-2xl sm:p-7"
+  role="region"
+  aria-labelledby="hqc-cookie-banner-title"
+  hidden
+>
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <p class="section-kicker">Your choice</p>
+      <h2 id="hqc-cookie-banner-title" class="mt-2 font-serif text-3xl font-medium">Your privacy choices</h2>
+    </div>
+    <span class="mt-1 h-1 w-12 shrink-0 rounded-full bg-copper" aria-hidden="true"></span>
+  </div>
+  <p class="mt-4 max-w-prose text-sm leading-6 text-white/75">
+    We use necessary technologies to make this website work. With your permission, we would also like to use analytics and advertising technologies to understand website performance and measure relevant campaigns. You can accept, reject or manage non-essential technologies at any time.
+  </p>
+  <div class="mt-5 grid gap-2 sm:grid-cols-3">
+    <button id="hqc-cookie-accept-all" type="button" class="button min-h-12 w-full rounded-full bg-copper px-4 py-3 text-sm font-bold text-midnight hover:bg-white">Accept All</button>
+    <button id="hqc-cookie-reject-all" type="button" class="button min-h-12 w-full rounded-full border border-white/25 bg-white/5 px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Reject Non-Essential</button>
+    <button id="hqc-cookie-manage" type="button" class="button min-h-12 w-full rounded-full border border-white/25 bg-transparent px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Manage Preferences</button>
+  </div>
+  <p id="hqc-cookie-banner-status" class="mt-3 text-sm text-white/75" role="status" aria-live="polite"></p>
+</section>
+
+<dialog
+  id="hqc-cookie-preferences"
+  class="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-xl overflow-y-auto rounded-2xl border border-copper/30 bg-porcelain p-0 text-ink shadow-2xl backdrop:bg-midnight/75"
+  aria-labelledby="hqc-cookie-dialog-title"
+  aria-describedby="hqc-cookie-dialog-description"
+>
+  <div class="p-6 sm:p-8">
+    <div class="flex items-start justify-between gap-5">
+      <div>
+        <p class="section-kicker">Cookie Preferences</p>
+        <h2 id="hqc-cookie-dialog-title" class="mt-2 font-serif text-3xl font-medium text-midnight">Your privacy choices</h2>
+      </div>
+      <button id="hqc-cookie-close" type="button" class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-midnight/15 text-2xl leading-none text-midnight hover:border-copper hover:text-midnight" aria-label="Close cookie preferences">&times;</button>
+    </div>
+
+    <p id="hqc-cookie-dialog-description" class="mt-4 text-sm leading-6 text-slate">
+      We use necessary technologies to make this website work. With your permission, we would also like to use analytics and advertising technologies to understand website performance and measure relevant campaigns. You can accept, reject or manage non-essential technologies at any time.
+    </p>
+
+    <div class="mt-6 divide-y divide-midnight/10 rounded-xl border border-midnight/10 bg-white px-5">
+      <div class="flex items-center justify-between gap-5 py-5">
+        <div>
+          <h3 class="font-semibold text-midnight">Necessary</h3>
+          <p class="mt-1 text-sm text-slate">Always active</p>
+        </div>
+        <span class="rounded-full bg-midnight/5 px-3 py-1 text-xs font-bold uppercase tracking-wide text-midnight">On</span>
+      </div>
+      <label class="flex cursor-pointer items-center justify-between gap-5 py-5">
+        <span>
+          <span class="block font-semibold text-midnight">Analytics</span>
+          <span class="mt-1 block text-sm text-slate">Optional</span>
+        </span>
+        <input id="hqc-cookie-analytics" type="checkbox" class="h-5 w-5 shrink-0 accent-midnight" />
+      </label>
+      <label class="flex cursor-pointer items-center justify-between gap-5 py-5">
+        <span>
+          <span class="block font-semibold text-midnight">Advertising</span>
+          <span class="mt-1 block text-sm text-slate">Optional</span>
+        </span>
+        <input id="hqc-cookie-advertising" type="checkbox" class="h-5 w-5 shrink-0 accent-midnight" />
+      </label>
+    </div>
+
+    <p id="hqc-cookie-dialog-status" class="mt-4 min-h-5 text-sm text-red-800" role="status" aria-live="polite"></p>
+    <div class="mt-5 grid gap-2 sm:grid-cols-2">
+      <button id="hqc-cookie-save" type="button" class="button min-h-12 w-full rounded-full bg-midnight px-5 py-3 text-sm font-bold text-white hover:bg-copper hover:text-midnight">Save Preferences</button>
+      <button id="hqc-cookie-dialog-reject" type="button" class="button min-h-12 w-full rounded-full border border-midnight/20 bg-transparent px-5 py-3 text-sm font-bold text-midnight hover:border-midnight hover:bg-midnight/5">Reject Non-Essential</button>
+    </div>
+    <button id="hqc-cookie-dialog-accept" type="button" class="mt-2 inline-flex min-h-11 w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-slate underline decoration-copper decoration-2 underline-offset-4 hover:text-midnight">Accept All</button>
+  </div>
+</dialog>
+
+<script is:inline>
+  (() => {
+    const storageKey = 'hqc:cookie-preferences:v1';
+    const banner = document.getElementById('hqc-cookie-banner');
+    const dialog = document.getElementById('hqc-cookie-preferences');
+    const analyticsChoice = document.getElementById('hqc-cookie-analytics');
+    const advertisingChoice = document.getElementById('hqc-cookie-advertising');
+    const bannerStatus = document.getElementById('hqc-cookie-banner-status');
+    const dialogStatus = document.getElementById('hqc-cookie-dialog-status');
+
+    if (!banner || !(dialog instanceof HTMLDialogElement) || !(analyticsChoice instanceof HTMLInputElement) || !(advertisingChoice instanceof HTMLInputElement)) return;
+
+    const normalise = (value) => ({
+      necessary: true,
+      analytics: value?.analytics === true,
+      advertising: value?.advertising === true
+    });
+
+    const analyticsAllowed = banner.dataset.analyticsAllowed === 'true';
+
+    const readPreferences = () => {
+      try {
+        const saved = JSON.parse(window.localStorage.getItem(storageKey) || 'null');
+        if (!saved || saved.version !== 1) return null;
+        return normalise(saved);
+      } catch {
+        return null;
+      }
+    };
+
+    let preferences = readPreferences();
+    let returnFocusTo = null;
+
+    const exposePreferences = () => {
+      window.hqcCookiePreferences = preferences || normalise(null);
+      window.dispatchEvent(new CustomEvent('hqc:cookie-preferences-updated', { detail: window.hqcCookiePreferences }));
+    };
+
+    const trackPageView = () => {
+      if (preferences?.analytics && typeof window.umami?.track === 'function') window.umami.track();
+    };
+
+    const loadAnalytics = () => {
+      if (!analyticsAllowed || !preferences?.analytics) return;
+
+      const existingScript = document.querySelector('script[data-hqc-provider="umami"]');
+      if (typeof window.umami?.track === 'function') {
+        trackPageView();
+        return;
+      }
+      if (existingScript) {
+        existingScript.addEventListener('load', trackPageView, { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.defer = true;
+      script.src = 'https://cloud.umami.is/script.js';
+      script.dataset.websiteId = '95c24898-5333-41ef-8fbf-a17bcac067af';
+      script.dataset.autoTrack = 'false';
+      script.dataset.hqcProvider = 'umami';
+      script.addEventListener('load', trackPageView, { once: true });
+      document.head.appendChild(script);
+    };
+
+    const showBanner = () => {
+      banner.hidden = false;
+    };
+
+    const hideBanner = () => {
+      banner.hidden = true;
+      if (bannerStatus) bannerStatus.textContent = '';
+    };
+
+    const savePreferences = (next) => {
+      const updated = normalise(next);
+      try {
+        window.localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...updated }));
+      } catch {
+        const message = 'Your choices could not be saved. Non-essential technologies will remain off.';
+        if (bannerStatus) bannerStatus.textContent = message;
+        if (dialogStatus) dialogStatus.textContent = message;
+        return false;
+      }
+
+      preferences = updated;
+      exposePreferences();
+      hideBanner();
+      if (dialog.open) dialog.close();
+      if (updated.analytics) loadAnalytics();
+      return true;
+    };
+
+    const openDialog = (trigger) => {
+      returnFocusTo = trigger instanceof HTMLElement ? trigger : document.activeElement;
+      analyticsChoice.checked = preferences?.analytics === true;
+      advertisingChoice.checked = preferences?.advertising === true;
+      if (dialogStatus) dialogStatus.textContent = '';
+      if (!dialog.open) dialog.showModal();
+      document.getElementById('hqc-cookie-close')?.focus();
+    };
+
+    const closeDialog = () => {
+      if (dialog.open) dialog.close();
+    };
+
+    dialog.addEventListener('close', () => {
+      if (returnFocusTo instanceof HTMLElement) returnFocusTo.focus();
+      returnFocusTo = null;
+    });
+
+    document.getElementById('hqc-cookie-accept-all')?.addEventListener('click', () => savePreferences({ analytics: true, advertising: true }));
+    document.getElementById('hqc-cookie-reject-all')?.addEventListener('click', () => savePreferences({ analytics: false, advertising: false }));
+    document.getElementById('hqc-cookie-manage')?.addEventListener('click', (event) => openDialog(event.currentTarget));
+    document.getElementById('hqc-cookie-close')?.addEventListener('click', closeDialog);
+    document.getElementById('hqc-cookie-save')?.addEventListener('click', () => savePreferences({
+      analytics: analyticsChoice.checked,
+      advertising: advertisingChoice.checked
+    }));
+    document.getElementById('hqc-cookie-dialog-reject')?.addEventListener('click', () => savePreferences({ analytics: false, advertising: false }));
+    document.getElementById('hqc-cookie-dialog-accept')?.addEventListener('click', () => savePreferences({ analytics: true, advertising: true }));
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) closeDialog();
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const preferencesLink = target.closest('[data-open-cookie-preferences]');
+      if (!preferencesLink) return;
+      event.preventDefault();
+      openDialog(preferencesLink);
+    });
+
+    exposePreferences();
+    if (preferences) {
+      hideBanner();
+      loadAnalytics();
+    } else {
+      showBanner();
+    }
+  })();
+</script>
