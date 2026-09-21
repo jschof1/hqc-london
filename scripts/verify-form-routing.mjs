@@ -83,6 +83,15 @@ const previewGuard = await read('src/lib/preview.ts');
 expect(previewGuard.includes("hostname.endsWith('.pages.dev')"), 'Preview guard must recognise Cloudflare Pages preview hosts');
 expect(previewGuard.includes('status: 202'), 'Preview guard must return an accepted test response');
 
+const layout = await read('src/layouts/Layout.astro');
+expect(layout.includes("process.env.CF_PAGES_BRANCH !== 'main'"), 'Prerendered Pages preview routes must receive preview metadata from the deployment branch');
+expect(layout.includes("'noindex, nofollow, noarchive'"), 'Preview routes must not be indexed');
+
+const cookiePreferences = await read('src/components/CookiePreferences.astro');
+expect(cookiePreferences.includes("window.location.hostname.toLowerCase()"), 'Analytics consent must use the runtime hostname as a preview safety check');
+expect(cookiePreferences.includes("hostname.endsWith('.pages.dev')"), 'Analytics must remain disabled on Pages preview hosts even on prerendered routes');
+expect(cookiePreferences.includes('banner.dataset.analyticsAllowed === \'true\' && !runtimePreviewHost'), 'Analytics requires production build permission and a production runtime host');
+
 if (failures.length) {
   console.error(`Form routing verification failed (${failures.length}):`);
   for (const failure of failures) console.error(`- ${failure}`);

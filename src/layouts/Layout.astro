@@ -31,7 +31,8 @@ const canonicalPath = Astro.url?.pathname
   ? Astro.url.pathname.toLowerCase().replace(/\/?$/, '/')
   : '/';
 const canonicalUrl = new URL(canonicalPath, baseUrl).href;
-const isPreviewHost = Astro.url.hostname.endsWith('.pages.dev') || ['localhost', '127.0.0.1', '::1'].includes(Astro.url.hostname);
+const isPagesPreviewBuild = process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH !== 'main';
+const isPreviewHost = isPagesPreviewBuild || Astro.url.hostname.endsWith('.pages.dev') || ['localhost', '127.0.0.1', '::1'].includes(Astro.url.hostname);
 const effectiveRobots = isPreviewHost ? 'noindex, nofollow, noarchive' : robots;
 const defaultImage = `${baseUrl}/images/luxury-home/hyde-park-apartment.webp`;
 const serviceAreaNames = ['London', 'Central London', 'West London', 'South West London', 'North London', 'East London'];

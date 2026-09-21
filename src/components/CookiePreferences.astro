@@ -102,7 +102,9 @@ const { allowAnalytics = false } = Astro.props;
       advertising: value?.advertising === true
     });
 
-    const analyticsAllowed = banner.dataset.analyticsAllowed === 'true';
+    const hostname = window.location.hostname.toLowerCase();
+    const runtimePreviewHost = hostname.endsWith('.pages.dev') || ['localhost', '127.0.0.1', '::1'].includes(hostname);
+    const analyticsAllowed = banner.dataset.analyticsAllowed === 'true' && !runtimePreviewHost;
 
     const readPreferences = () => {
       try {
