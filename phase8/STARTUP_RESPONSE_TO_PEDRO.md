@@ -1,0 +1,19 @@
+Subject: HQC Phase 8 staging start-up review
+
+Hi Pedro,
+
+I’ve started Phase 8 on a separate staging branch using your 28 September Release Pack, the approved Batch 1–6 copy and the locked Areas 1–12. I have not changed the production branch or authorised a launch.
+
+1. **Platform:** The site is Astro 5 with Tailwind, deployed through Cloudflare Pages with a Cloudflare server adapter. The live domain is `highqualityclean.co.uk`. GHL is the sales/enquiry system; Launch27/Automaid owns the Essential Clean booking request and its Stripe step.
+
+2. **Baseline and backup:** I preserved the current `main` commit (`41903fbb90cf1c0c396d8ac68075a05a993cca79`) in the separate GitHub branch `archive/pre-phase8-main-2026-09-28`. I also captured the live sitemap's 46 URLs on 28 September: all returned HTTP 200, with URL and response hashes recorded. That protects the code baseline and gives us a live HTTP comparison. I cannot yet certify a complete restorable Cloudflare deployment snapshot: I still need to record the actual live deployment ID, settings/bindings and any external configuration before the release gate. I will not represent the Git commit alone as a full backup of those services.
+
+3. **Staging, cutover and rollback:** Development stays on the new `phase8-2026-09-28-staging` branch and its non-indexable preview. Once developer QA and your controlled acceptance pass, I will compare the final URL/redirect map, forms, booking, consent and legal settings; identify and retain the then-current production deployment; and only then promote the accepted revision to the production branch with your explicit authorisation. If the live smoke test finds a release-blocking defect, the first rollback route is to restore the recorded prior Cloudflare Pages production deployment, followed by checking forms, DNS, indexability and redirects. The archived Git branch is a code recovery route. No DNS or production webhook changes are part of the staging push.
+
+4. **Technical constraints requiring validation:** The Launch27 iframe can present the approved booking route, but the website cannot safely infer *booking submitted* or *booking confirmed* from merely opening a cross-origin iframe. A provider-side completion redirect/webhook is needed for reliable downstream booking conversion and GHL sync. The preview form endpoints intentionally do not send real enquiries, so end-to-end GHL ownership, acknowledgement, delivery-failure handling and the 11 workflow scenarios need controlled integration tests in the HQC sub-account. The general Contact route needs a separate non-sales destination. Media upload is not being shown as a working feature until a real storage/delivery route with failure handling exists. The current legal draft contains fields for final company/privacy approval and cannot be released as-is. The Cloudflare deployment ID and secret/binding snapshot are still to be verified.
+
+5. **Sequence and what I need from you:** I’ve put the approved page bodies, CTA destinations, four enquiry routes, booking embed, consent and targeted Essential Clean offer on staging. Next come GHL routing/owner and date controls, controlled form/provider tests, URL and Search Console evidence, then device/accessibility QA and your acceptance tests. In parallel, please confirm the Launch27 provider configuration for the 30% weekly/fortnightly offer, Heavy Build-Up intervention and >£400 deposit against the Terms; provide the final logo/portrait and permissioned review/case-study evidence; substantiate the 300+ client claim; and complete the ICO, company, processor and legal details in the release checklist. Final photography and the founder video can follow the pack’s non-blocker rules. I will surface any conflict instead of changing the agreed commercial or sales flow.
+
+I’ll send staging for your controlled acceptance with known limitations and the test record. Production remains gated on your authorisation.
+
+Jack

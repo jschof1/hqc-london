@@ -25,9 +25,9 @@ const { allowAnalytics = false } = Astro.props;
     We use necessary technologies to make this website work. With your permission, we would also like to use analytics and advertising technologies to understand website performance and measure relevant campaigns. You can accept, reject or manage non-essential technologies at any time.
   </p>
   <div class="mt-5 grid gap-2 sm:grid-cols-3">
-    <button id="hqc-cookie-accept-all" type="button" class="button min-h-12 w-full rounded-full bg-copper px-4 py-3 text-sm font-bold text-midnight hover:bg-white">Accept All</button>
-    <button id="hqc-cookie-reject-all" type="button" class="button min-h-12 w-full rounded-full border border-white/25 bg-white/5 px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Reject Non-Essential</button>
-    <button id="hqc-cookie-manage" type="button" class="button min-h-12 w-full rounded-full border border-white/25 bg-transparent px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Manage Preferences</button>
+    <button id="hqc-cookie-accept-all" type="button" class="min-h-12 w-full rounded-full bg-copper px-4 py-3 text-sm font-bold text-midnight hover:bg-white">Accept All</button>
+    <button id="hqc-cookie-reject-all" type="button" class="min-h-12 w-full rounded-full border border-white/25 bg-white/5 px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Reject Non-Essential</button>
+    <button id="hqc-cookie-manage" type="button" class="min-h-12 w-full rounded-full border border-white/25 bg-transparent px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Manage Preferences</button>
   </div>
   <p id="hqc-cookie-banner-status" class="mt-3 text-sm text-white/75" role="status" aria-live="polite"></p>
 </section>
@@ -77,8 +77,8 @@ const { allowAnalytics = false } = Astro.props;
 
     <p id="hqc-cookie-dialog-status" class="mt-4 min-h-5 text-sm text-red-800" role="status" aria-live="polite"></p>
     <div class="mt-5 grid gap-2 sm:grid-cols-2">
-      <button id="hqc-cookie-save" type="button" class="button min-h-12 w-full rounded-full bg-midnight px-5 py-3 text-sm font-bold text-white hover:bg-copper hover:text-midnight">Save Preferences</button>
-      <button id="hqc-cookie-dialog-reject" type="button" class="button min-h-12 w-full rounded-full border border-midnight/20 bg-transparent px-5 py-3 text-sm font-bold text-midnight hover:border-midnight hover:bg-midnight/5">Reject Non-Essential</button>
+      <button id="hqc-cookie-save" type="button" class="min-h-12 w-full rounded-full bg-midnight px-5 py-3 text-sm font-bold text-white hover:bg-copper hover:text-midnight">Save Preferences</button>
+      <button id="hqc-cookie-dialog-reject" type="button" class="min-h-12 w-full rounded-full border border-midnight/20 bg-transparent px-5 py-3 text-sm font-bold text-midnight hover:border-midnight hover:bg-midnight/5">Reject Non-Essential</button>
     </div>
     <button id="hqc-cookie-dialog-accept" type="button" class="mt-2 inline-flex min-h-11 w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-slate underline decoration-copper decoration-2 underline-offset-4 hover:text-midnight">Accept All</button>
   </div>

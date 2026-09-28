@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import ConversionPrompt from '../components/ConversionPrompt.astro';
 import CookiePreferences from '../components/CookiePreferences.astro';
+import EssentialOfferPrompt from '../components/EssentialOfferPrompt.astro';
 
 import { Schema } from 'astro-seo-schema';
 
@@ -230,6 +231,7 @@ const schemaItem = {
     <ConversionPrompt />
     <Footer />
     <CookiePreferences allowAnalytics={!isPreviewHost} />
+    <EssentialOfferPrompt />
     <script src="/src/scripts/main.js"></script>
     <!-- The LeadConnector chat widget stays off until its attribution cookies and withdrawal controls are verified. -->
     <script is:inline>

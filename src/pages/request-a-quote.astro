@@ -17,12 +17,15 @@ import Header from '../components/Header.astro';
         <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">You do not need to select the perfect service before contacting HQC. Start with the property or site, its current condition and what needs to happen next.</p>
       </div>
 
-      <div class="mt-10 grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Enquiry type">
+      <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="tablist" aria-label="Enquiry type">
         <button id="residential-route-tab" class="route-tab rounded-xl border border-gold bg-white p-4 text-left" type="button" role="tab" data-route="residential" aria-selected="true" aria-controls="quote-route-panel" tabindex="0">
           <strong class="block text-navy">Home</strong><span class="mt-1 block text-sm text-ink/65">Essential Clean™, Deep Clean™, Move-In Reset™, End of Tenancy™ or Post-Construction™</span>
         </button>
+        <button id="property-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="property" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
+          <strong class="block text-navy">Property or portfolio</strong><span class="mt-1 block text-sm text-ink/65">Agents, managed properties and repeat instructions</span>
+        </button>
         <button id="commercial-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="commercial" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
-          <strong class="block text-navy">Workplace, property or portfolio</strong><span class="mt-1 block text-sm text-ink/65">Commercial, office, agency, managed property or recurring work</span>
+          <strong class="block text-navy">Workplace or commercial site</strong><span class="mt-1 block text-sm text-ink/65">Office, commercial and recurring site work</span>
         </button>
         <button id="complex-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="complex" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
           <strong class="block text-navy">Complex property or project</strong><span class="mt-1 block text-sm text-ink/65">Unusually large, phased or specialist requirements</span>
@@ -76,9 +79,10 @@ import Header from '../components/Header.astro';
           </label>
         </div>
 
-        <label class="mt-6 flex items-start gap-3 text-sm text-ink/70">
-          <input class="mt-1" type="checkbox" name="privacy_consent" value="yes" required />
-          <span>I agree that HQC may use these details to respond to this enquiry. See the <a href="/privacy-policy/">privacy policy</a>.</span>
+        <p class="mt-6 text-sm text-ink/70">By submitting this form, you acknowledge that High Quality Clean Ltd will use the information you provide to respond to and manage your enquiry. See our <a class="underline" href="/privacy-policy/">Privacy Policy</a>.</p>
+        <label class="mt-4 flex items-start gap-3 text-sm text-ink/70">
+          <input class="mt-1" type="checkbox" name="email_marketing_consent" value="yes" />
+          <span>I would like to receive occasional HQC offers and service updates by email. I can unsubscribe at any time.</span>
         </label>
 
         <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" role="status" aria-live="polite"></div>
@@ -99,10 +103,15 @@ import Header from '../components/Header.astro';
       help: 'Tell us the service, property condition, full address, access and parking details.',
       options: ['Essential Clean™ suitability', 'Deep Clean™', 'Move-In Reset™', 'End of Tenancy™', 'Post-Construction™', 'Other residential requirement']
     },
+    property: {
+      heading: 'Property or portfolio enquiry',
+      help: 'Tell us about the property, portfolio, access, timing and desired result.',
+      options: ['Communal Area Cleaning', 'Agency or Portfolio Support', 'Move-In and Void Property Cleaning', 'End of Tenancy™', 'Post-Construction™', 'Other property requirement']
+    },
     commercial: {
       heading: 'Commercial or managed-property enquiry',
       help: 'Tell us the site type, approximate area, hours, frequency, current provider and desired start date.',
-      options: ['Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Communal Area Cleaning', 'Agency or Portfolio Support', 'Move-In and Void Property Cleaning', 'Other professional requirement']
+      options: ['Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Other professional requirement']
     },
     complex: {
       heading: 'Complex-service assessment',
@@ -124,6 +133,16 @@ import Header from '../components/Header.astro';
       'post-construction': 'Post-Construction™',
       'post-construction-cleaning': 'Post-Construction™'
     },
+    property: {
+      communal: 'Communal Area Cleaning',
+      'communal-area': 'Communal Area Cleaning',
+      'communal-area-cleaning': 'Communal Area Cleaning',
+      portfolio: 'Agency or Portfolio Support',
+      void: 'Move-In and Void Property Cleaning',
+      'move-in-void': 'Move-In and Void Property Cleaning',
+      'end-of-tenancy': 'End of Tenancy™',
+      'post-construction': 'Post-Construction™'
+    },
     commercial: {
       office: 'Office Cleaning',
       'office-cleaning': 'Office Cleaning',
@@ -131,12 +150,6 @@ import Header from '../components/Header.astro';
       'commercial-cleaning': 'Commercial Cleaning',
       'commercial-deep': 'Commercial Deep Cleaning',
       'commercial-deep-cleaning': 'Commercial Deep Cleaning',
-      communal: 'Communal Area Cleaning',
-      'communal-area': 'Communal Area Cleaning',
-      'communal-area-cleaning': 'Communal Area Cleaning',
-      portfolio: 'Agency or Portfolio Support',
-      void: 'Move-In and Void Property Cleaning',
-      'move-in-void': 'Move-In and Void Property Cleaning'
     },
     complex: {
       office: 'Office or Workplace Project',
@@ -230,7 +243,8 @@ import Header from '../components/Header.astro';
   function setRoute(route: keyof typeof routes, options: { updateUrl?: boolean; track?: boolean; requestedService?: string } = {}) {
     const config = routes[route];
     if (!config || !routeInput || !heading || !help || !service) return;
-    routeInput.value = route;
+    routeInput.value = route === 'property' ? 'commercial' : route;
+    setContextValue('buyer-context', route === 'property' ? pageUrl.searchParams.get('buyer') || 'property' : route === 'commercial' ? pageUrl.searchParams.get('buyer') || 'commercial' : pageUrl.searchParams.get('buyer'));
     heading.textContent = config.heading;
     help.textContent = config.help;
     service.innerHTML = '<option value="">Choose one</option>' + config.options.map((item) => `<option>${item}</option>`).join('');
@@ -272,7 +286,9 @@ import Header from '../components/Header.astro';
   });
   service?.addEventListener('change', updateConditionalFields);
   const initial = pageUrl.searchParams.get('route');
-  setRoute(initial && initial in routes ? initial as keyof typeof routes : 'residential', {
+  const propertyService = ['communal', 'communal-area', 'communal-area-cleaning', 'portfolio', 'void', 'move-in-void'].includes(initialService);
+  const propertyBuyer = ['property', 'agency'].includes(pageUrl.searchParams.get('buyer') ?? '');
+  setRoute(initial === 'commercial' && (propertyBuyer || propertyService) ? 'property' : initial && initial in routes ? initial as keyof typeof routes : 'residential', {
     updateUrl: false,
     track: false,
     requestedService: initialService
@@ -307,9 +323,9 @@ import Header from '../components/Header.astro';
         message.className = 'mt-6 rounded-lg bg-amber-50 p-4 text-sm text-amber-950';
         return;
       }
-      message.textContent = 'Thank you. Your requirement has been sent.';
+      message.textContent = 'Thank you. Your enquiry has been received for HQC review. This is not a quotation, availability check or confirmed booking.';
       message.className = 'mt-6 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-900';
-      const selectedRoute = routeInput?.value as keyof typeof routes;
+      const selectedRoute = (tabs.find((tab) => tab.getAttribute('aria-selected') === 'true')?.dataset.route ?? 'residential') as keyof typeof routes;
       form.reset();
       populateContext();
       setRoute(selectedRoute in routes ? selectedRoute : 'residential', { updateUrl: false, track: false, requestedService: initialService });

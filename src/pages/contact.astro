@@ -281,11 +281,12 @@ import HeroSection from '../components/HeroSection.astro';
             ></textarea>
           </label>
           
+          <p class="mb-4 text-sm text-navy/80">By submitting this form, you acknowledge that High Quality Clean Ltd will use the information you provide to respond to and manage your enquiry. See our <a href="/privacy-policy/" class="underline">Privacy Policy</a>.</p>
+          <label class="mb-6 flex items-start gap-3 text-sm text-navy/80">
+            <input type="checkbox" name="email_marketing_consent" value="yes" class="mt-1 accent-gold" />
+            <span>I would like to receive occasional HQC offers and service updates by email. I can unsubscribe at any time.</span>
+          </label>
           <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:justify-between">
-            <label class="inline-flex items-start gap-3 text-sm text-navy/80 max-w-md">
-              <input type="checkbox" name="privacy_consent" value="yes" required class="mt-1 accent-gold scale-110" />
-              <span>I agree to be contacted by High Quality Clean regarding my inquiry.</span>
-            </label>
             <button
               type="submit"
               class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-8 py-4 font-semibold border border-gold hover:bg-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 min-h-[48px]"
@@ -337,7 +338,7 @@ import HeroSection from '../components/HeroSection.astro';
             data.timestamp = new Date().toISOString();
 
             try {
-              const response = await fetch('/api/quick-form/', {
+              const response = await fetch('/api/contact/', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',

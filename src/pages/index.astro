@@ -3,6 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ServiceSelector from '../components/ServiceSelector.astro';
 import TrustRail from '../components/TrustRail.astro';
+import phase8Copy from '../data/phase8-copy.json';
+
+const homeCopy = phase8Copy.home;
+const approvedSections = homeCopy.sections.filter((section) => [
+  'Cleaning Defined by the Outcome',
+  'Cleaning Services for London Homes',
+  'One Cleaning Partner Across Properties, Projects and Portfolios',
+  'Cleaning Programmes Built Around the Workplace',
+  'Why Clients Choose HQC When the Result Matters'
+].includes(section.heading));
+const sectionDestinations: Record<string, string> = {
+  'Cleaning Defined by the Outcome': '/cleaning-prices-london/',
+  'Cleaning Services for London Homes': '/home-cleaning-london/',
+  'One Cleaning Partner Across Properties, Projects and Portfolios': '/property-facilities-cleaning-london/',
+  'Cleaning Programmes Built Around the Workplace': '/office-cleaning-london/',
+  'Why Clients Choose HQC When the Result Matters': '/why-choose-hqc/'
+};
 ---
 
 <Layout
@@ -18,12 +35,12 @@ import TrustRail from '../components/TrustRail.astro';
         <div class="relative z-10 py-8">
           <p class="section-kicker">Cleaning Defined by the Outcome</p>
           <h1 class="mt-6 max-w-3xl font-serif text-[clamp(3.8rem,7vw,7.2rem)] font-medium leading-[.88] tracking-[-.045em]">
-            The right cleaning service<br /><em class="font-medium text-copper">for the result you need.</em>
+            The Right Cleaning Service<br /><em class="font-medium text-copper">for the Result You Need</em>
           </h1>
           <p class="mt-8 max-w-xl text-lg leading-8 text-white/75 md:text-xl">From recurring home cleaning to workplace programmes, property handovers and complex projects, High Quality Clean matches the service, labour and delivery approach to the condition of the space and the outcome required.</p>
           <div class="mt-10 flex flex-col gap-3 sm:flex-row">
             <a href="#find-my-service" class="button button-primary" data-track="find_my_service">Find my service <span aria-hidden="true">↓</span></a>
-            <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote">Request a tailored quote</a>
+            <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote">Request a Cleaning Quote</a>
           </div>
           <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-7 text-xs font-semibold uppercase tracking-[.14em] text-white/55">
             <span>London-based</span><span>Outcome-led</span><span>Founder-led</span>
@@ -100,6 +117,27 @@ import TrustRail from '../components/TrustRail.astro';
     <ServiceSelector />
 
     <TrustRail />
+
+    <div data-controlled-copy="Batch 1, page 1">
+      {approvedSections.map((section, index) => (
+        <section class:list={['py-20 md:py-28', index % 2 ? 'bg-porcelain' : 'bg-white']}>
+          <div class="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-20 lg:px-14">
+            <div>
+              <p class="section-kicker">Cleaning Defined by the Outcome</p>
+              <h2 class="section-title">{section.heading}</h2>
+              <a href={sectionDestinations[section.heading]} class="mt-7 inline-flex font-bold text-midnight no-underline hover:text-copper">Explore this route <span class="ml-2" aria-hidden="true">→</span></a>
+            </div>
+            <div class="space-y-5 text-lg leading-8 text-slate">
+              {section.blocks.map((block) => (
+                block.kind === 'h3' ? <h3 class="pt-4 font-serif text-2xl font-medium text-midnight">{block.text}</h3> :
+                block.kind === 'ul' ? <ul class="list-disc space-y-2 pl-6">{block.items.map((item) => <li>{item}</li>)}</ul> :
+                <p>{block.text}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+    </div>
 
     <section class="bg-midnight py-20 text-white md:py-28">
       <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">

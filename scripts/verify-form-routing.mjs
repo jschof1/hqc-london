@@ -29,11 +29,11 @@ for (const [path, source, fields] of quickForms) {
 }
 
 const connectedForms = [
-  ['src/pages/contact.astro', '/api/quick-form/', ['name', 'email', 'phone', 'postcode', 'service', 'message', 'privacy_consent']],
+  ['src/pages/contact.astro', '/api/contact/', ['name', 'email', 'phone', 'postcode', 'service', 'message', 'email_marketing_consent']],
   ['src/pages/request-a-quote.astro', '/api/quote/', [
     'route', 'buyer', 'service', 'service_context', 'name', 'email', 'phone', 'postcode',
     'address', 'area', 'size', 'frequency', 'desired_date', 'details', 'operating_hours',
-    'mobilisation_requirements', 'tupe_context', 'privacy_consent', 'source_page',
+    'mobilisation_requirements', 'tupe_context', 'email_marketing_consent', 'source_page',
     'landing_page', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content',
     'utm_term', 'utm_id',
   ]],
@@ -68,6 +68,7 @@ for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home
 
 const apiBindings = [
   ['src/pages/api/quick-form.ts', 'QUICK_FORM_WEBHOOK'],
+  ['src/pages/api/contact.ts', 'CONTACT_FORM_WEBHOOK'],
   ['src/pages/api/quote.ts', 'QUOTE_FORM_WEBHOOK'],
   ['src/pages/api/discount.ts', 'DISCOUNT_FORM_WEBHOOK'],
   ['src/pages/api/feedback.ts', 'FEEDBACK_WEBHOOK'],

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Essential Clean™ Booking Request | High Quality Clean" description="Submit an Essential Clean™ booking request. HQC reviews suitability and availability before confirming the booking." robots="noindex, follow">
+  <Header />
+  <main class="min-h-screen bg-porcelain px-5 pb-20 pt-32 text-midnight sm:px-8">
+    <div class="mx-auto max-w-5xl">
+      <p class="section-kicker">Essential Clean™</p>
+      <h1 class="mt-4 font-serif text-4xl md:text-6xl">Request an Essential Clean™ booking</h1>
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-slate">Choose one-off, weekly or fortnightly where available. Your submission is a booking request. HQC checks the home, availability, cleaner allocation and applicable payment requirements before sending confirmation.</p>
+      <p class="mt-4 max-w-3xl leading-7 text-slate">If you select Heavy Build-Up / Restoration Required, HQC will contact you before any confirmation because a different service or assessment may be needed. The 30% first-clean offer is for eligible new weekly or fortnightly clients with a three-month commitment, subject to the <a class="underline" href="/terms-and-conditions/">Terms</a>. One-off bookings do not qualify.</p>
+      <div class="mt-10 rounded-2xl border border-midnight/10 bg-white p-3 shadow-xl sm:p-6">
+        <iframe
+          id="booking-widget-iframe"
+          title="Essential Clean booking request through Launch27"
+          src="https://highqualitycleanlimited.launch27.com/?w_cleaning"
+          class="block min-h-[850px] w-full border-0"
+          scrolling="no"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </div>
+      <p class="mt-6 text-sm text-slate">If the form does not load, <a class="font-semibold underline" href="https://highqualitycleanlimited.launch27.com/?w_cleaning" target="_blank" rel="noopener noreferrer">open the booking request in a new tab</a>. You can also <a class="font-semibold underline" href="/request-a-quote/?route=residential&service=essential-clean&buyer=home">ask HQC to check suitability</a>.</p>
+    </div>
+  </main>
+</Layout>
+
+<script is:inline>
+  window.addEventListener('message', (event) => {
+    if (event.origin !== 'https://highqualitycleanlimited.launch27.com') return;
+    if (event.data?.type !== 'iframeHeight') return;
+    const height = Number(event.data.height);
+    const iframe = document.getElementById('booking-widget-iframe');
+    if (iframe && Number.isFinite(height) && height >= 300 && height <= 10000) iframe.style.height = `${height}px`;
+  });
+</script>
