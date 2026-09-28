@@ -9,6 +9,7 @@
 - Development branch: `phase8-2026-09-28-staging`. Old draft PR #2 is separate and predates this release.
 - New draft PR #3 has a Cloudflare Pages branch preview at `https://phase8-2026-09-28-staging.hqc-london.pages.dev/`. The Pages check succeeded; a separate `Workers Builds: high-quality-clean` check failed without a deployment log available here. Resolve its cause and account scope before release. The Netlify deploy-preview check is a separate integration and is not the Cloudflare acceptance target.
 - Live HTTP baseline: `live-http-baseline-2026-09-28.json`, 46 sitemap URLs with 200 responses and SHA-256 hashes. This is an inventory, not a Cloudflare backup or a verified deployment-to-commit match.
+- After PR creation, the live homepage still showed the prior “Request a tailored quote” CTA while the branch preview showed the approved “Request a Cleaning Quote.” `main` remained at its September 21 commit. This is a visible isolation check, not a full response-hash recheck or account deployment audit.
 
 ## Implemented on the staging branch
 
