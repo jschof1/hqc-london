@@ -291,11 +291,13 @@ import HeroSection from '../components/HeroSection.astro';
               type="submit"
               class="inline-flex items-center justify-center rounded-md bg-gold text-navy px-8 py-4 font-semibold border border-gold hover:bg-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 min-h-[48px]"
             >
-              <i class="fas fa-paper-plane mr-2"></i>
+              <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i>
               Send Message
             </button>
           </div>
         </form>
+
+        <p id="contact-error" class="scroll-mt-32 mt-5 hidden rounded-lg bg-red-50 p-4 text-red-900" role="alert" tabindex="-1"></p>
 
         <div id="contact-preview-status" class="mt-5 hidden rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950" role="status" aria-live="polite">
           This preview does not send contact forms. Your message was not sent. Use the contact details above to reach HQC.
@@ -325,6 +327,9 @@ import HeroSection from '../components/HeroSection.astro';
 
           form?.addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (submitBtn?.disabled) return;
+            document.getElementById('contact-error')?.classList.add('hidden');
+            document.getElementById('contact-preview-status')?.classList.add('hidden');
             
             if (submitBtn) {
               submitBtn.disabled = true;
@@ -359,12 +364,18 @@ import HeroSection from '../components/HeroSection.astro';
                 return;
               }
 
+              if (result?.ok !== true) throw new Error('Receipt not confirmed');
               form.style.display = 'none';
               successMessage.classList.remove('hidden');
               successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } catch (error) {
               console.error('Error submitting form:', error);
-              alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
+              const errorMessage = document.getElementById('contact-error');
+              if (errorMessage) {
+                errorMessage.textContent = 'We could not confirm receipt. Your message is still here. Please call 0208 870 3925 before submitting again.';
+                errorMessage.classList.remove('hidden');
+                errorMessage.focus();
+              }
               
               if (submitBtn) {
                 submitBtn.disabled = false;

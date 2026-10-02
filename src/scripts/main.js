@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Observe elements that should have staggered animations
   const staggerTargets = document.querySelectorAll('.grid, .gallery-grid, .area-grid, .service-grid');
   staggerTargets.forEach(target => {
+    // Keep form controls and enquiry tabs visible during validation and route changes.
+    if (target.closest('form') || target.getAttribute('role') === 'tablist') return;
     staggerObserver.observe(target);
   });
 

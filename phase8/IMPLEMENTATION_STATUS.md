@@ -1,3 +1,7 @@
+# Current status — 2 October 2026
+
+See [the current release record](RELEASE_RECORD_2026-10-02.md) for the verified implementation, evidence and remaining release gates. The historical 28 September record below is retained; its open items are superseded by the dated current record.
+
 # Phase 8 staging implementation record — 28 September 2026
 
 ## Authority and isolation

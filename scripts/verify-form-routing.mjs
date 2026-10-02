@@ -74,14 +74,14 @@ const apiBindings = [
   ['src/pages/api/feedback.ts', 'FEEDBACK_WEBHOOK'],
 ];
 for (const [path, binding] of apiBindings) {
-  const sourceText = await read(path);
+  const sourceText = await read(path) + (['src/pages/api/contact.ts', 'src/pages/api/quote.ts', 'src/pages/api/feedback.ts'].includes(path) ? await read('src/lib/form-submission.ts') : '');
   expect(sourceText.includes(binding), `${path} must use ${binding}`);
   expect(sourceText.includes('body: JSON.stringify(body)'), `${path} must preserve the submitted JSON payload`);
   expect(sourceText.includes("isNonProductionRequest(request)"), `${path} must block webhook delivery from local and Pages preview hosts`);
 }
 
 const previewGuard = await read('src/lib/preview.ts');
-expect(previewGuard.includes("hostname.endsWith('.pages.dev')"), 'Preview guard must recognise Cloudflare Pages preview hosts');
+expect(previewGuard.includes("!['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(hostname)"), 'Only approved production hosts may deliver forms');
 expect(previewGuard.includes('status: 202'), 'Preview guard must return an accepted test response');
 
 const layout = await read('src/layouts/Layout.astro');
@@ -90,7 +90,7 @@ expect(layout.includes("'noindex, nofollow, noarchive'"), 'Preview routes must n
 
 const cookiePreferences = await read('src/components/CookiePreferences.astro');
 expect(cookiePreferences.includes("window.location.hostname.toLowerCase()"), 'Analytics consent must use the runtime hostname as a preview safety check');
-expect(cookiePreferences.includes("hostname.endsWith('.pages.dev')"), 'Analytics must remain disabled on Pages preview hosts even on prerendered routes');
+expect(cookiePreferences.includes("!['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(hostname)"), 'Analytics must remain disabled on Pages preview hosts even on prerendered routes');
 expect(cookiePreferences.includes('banner.dataset.analyticsAllowed === \'true\' && !runtimePreviewHost'), 'Analytics requires production build permission and a production runtime host');
 
 if (failures.length) {
@@ -99,4 +99,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log('Form routing verification passed for 4 repaired quick forms, discount offer, 5 existing form routes, shared handler, and 4 webhook bindings.');
+console.log('Form routing verification passed for 4 repaired quick forms, discount offer, 5 existing form routes, shared handler, and 5 webhook bindings.');

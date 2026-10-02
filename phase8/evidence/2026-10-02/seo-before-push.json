@@ -1,0 +1,1622 @@
+{
+  "capturedAt": "2026-10-02T13:38:23.880Z",
+  "production": "https://highqualityclean.co.uk",
+  "preview": "https://phase8-2026-09-28-staging.hqc-london.pages.dev",
+  "sitemapCount": 45,
+  "uniqueCount": 45,
+  "pages": [
+    {
+      "path": "/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/",
+        "robots": "index, follow",
+        "hash": "ce75b535d82d903275e004953e1ce31a6978553ffdc71b645440bdf824403cb1"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "e38f97ad72b087efe1dece8ce62b7e2c30af31c387596d61b33b4b8505c3a89a"
+      }
+    },
+    {
+      "path": "/property-facilities-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/property-facilities-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "9c3b862c855b40c8609119bbcb95cd0c5a2f76d9c517ef258586bdb130103c1e"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/property-facilities-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "9fee5ec5b491b3fc799e8bdb64c1db44b3b65bbf7b45d76e94dd0ad0f867eb5f"
+      }
+    },
+    {
+      "path": "/communal-area-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/communal-area-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "6b30ffef2586fc6001a07767d14fa0c715ec5d41887ae83e477064c05729f5f3"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/communal-area-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "7b7a80c28efd3dfe27271540c3cfb2df2c22b809b2dbac6d3f8f55cf5ffa4557"
+      }
+    },
+    {
+      "path": "/estate-letting-agent-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/estate-letting-agent-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "5b46226f9786c087e8c766343749ee2a9e46062f9010042ff8310710c66f4c89"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/estate-letting-agent-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "4f6e3a533b0cbc6c6b4194ec19c6db0979192e5a8e70263330efe689434cb67a"
+      }
+    },
+    {
+      "path": "/move-in-void-property-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/move-in-void-property-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "2cb396d5d85204d6bf3a8386050b9d894375c0fc0ab26862aa27d66a6909adbd"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/move-in-void-property-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "680916853be80f6f93d7c2de0a8c994f6c47e3790314cf2f88cb10ec298b8977"
+      }
+    },
+    {
+      "path": "/end-of-tenancy-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/end-of-tenancy-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "52bdfab5c36dc4fe3dec8e1468f0121013befdf23a65cf9225167134048e2d26"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/end-of-tenancy-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "9c116c11ebe8c76c2b1eb1c6ccad97c88ce10e4425a32a929e3636d230535a29"
+      }
+    },
+    {
+      "path": "/post-construction-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/post-construction-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "9954153efbc19f0e60792bfa85fec4308bb0221da840dd0281b39bd9a5f40200"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/post-construction-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "598a5902bef9075d472da17bd694625f840403cb0e953c474f5f31367277c7ff"
+      }
+    },
+    {
+      "path": "/portfolio-cleaning-support-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/portfolio-cleaning-support-london/",
+        "robots": "index, follow",
+        "hash": "c3903acba4a4d12edb05de13706eea3bdc7cd0eac109145ccba1598eb2802828"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/portfolio-cleaning-support-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "0b4cb88107fe4abb10e5b91cbfa758043090533ef193cab0bcc587a9a0c1ba2b"
+      }
+    },
+    {
+      "path": "/commercial-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/commercial-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "53cd0de95b50ce43c8c309cc8ed12dae81e6126fa57074209dec588aac71b58e"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/commercial-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "021e3d5a279df92b710430349290262a6ad58760dabd74388f3c8553e6e4b9b9"
+      }
+    },
+    {
+      "path": "/office-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/office-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "db4483d8b00ea28abb19c4444958a9d4ab00cf0fcc60e8fba795c4fba26b2be3"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/office-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "6771e6ca97ec4b38d4d298a4442158d2ea9f30ae89592d0b2984bfca2e09b345"
+      }
+    },
+    {
+      "path": "/commercial-deep-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/commercial-deep-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "8bf49fb3ca403a9468c4de1b5ea25b1c73253737f1c905c5574ac0b7c418f26d"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/commercial-deep-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "f7d1d36b51a35063e15dd7b57b32a69dfe9a8c9d3c2def77b3a7374225d7da84"
+      }
+    },
+    {
+      "path": "/home-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/home-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "759d16585c98c17f69f5b40a0a3b231a0c4d2733727f3fb857269f5612afee13"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/home-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "0ab7608aca274569771fcfb64b58237a898f07d7efc18bdcc196f38d4aecaf0a"
+      }
+    },
+    {
+      "path": "/essential-clean-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/essential-clean-london/",
+        "robots": "index, follow",
+        "hash": "5749d8ebce1d3fa530e81e1a975a90c253a46642c05a4276cf2328d4a3a9cb34"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/essential-clean-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "f76c030f5265d4d89b64657d821d4a391c813b0161a3603f32c90ce6935aa30d"
+      }
+    },
+    {
+      "path": "/deep-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/deep-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "a2ee25139109da6492117bcc3970a96c1aace21a991aa743118aa347110883ae"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/deep-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "acd3a1fab9b2b5ff4451d42a26e85ce990d2a06ab4f80fdbf6b8ba1f0005f793"
+      }
+    },
+    {
+      "path": "/move-in-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/move-in-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "8939e8c75c4c9ed876f43ff6adcb9afb3c86d2372608efcea2844607bf179e08"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/move-in-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "a587e8cb15eac4b9032e860c8540ce49cbf6c7c043107e03cbc9e59827f4493f"
+      }
+    },
+    {
+      "path": "/complex-property-cleaning-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/complex-property-cleaning-london/",
+        "robots": "index, follow",
+        "hash": "51f6c03a87aaf1288e1f9c3713dc3cdec6acfc95e1b457fed599255fb300cf3d"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/complex-property-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "fe065b1193edc391acf5410d2020294045c97d188cda2a8be58242b778c60617"
+      }
+    },
+    {
+      "path": "/about-high-quality-clean/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/about-high-quality-clean/",
+        "robots": "index, follow",
+        "hash": "251648bf05cb90aa693fc87479c5b692e1b199ddb6db16497cc7957dec42c81b"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/about-high-quality-clean/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "9d0bdd2f415e828777dd476086a7110f4904cf73a4ae413e1084c4d14de813b4"
+      }
+    },
+    {
+      "path": "/why-choose-hqc/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/why-choose-hqc/",
+        "robots": "index, follow",
+        "hash": "4622bcb8d1d907f28145714c7669b8ca6e02d6561e10050aef6280bb99de70ce"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/why-choose-hqc/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "e8af6b85f9906603afd9e47eac21febee492266713e1c883757a0ff43cd80072"
+      }
+    },
+    {
+      "path": "/how-we-work/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/how-we-work/",
+        "robots": "index, follow",
+        "hash": "3c7c16b90457b2b14f18acbdbc5f8579960b2961b63da7a5d5a7917519169cf6"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/how-we-work/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "f1bfdfc3a8891a6b02fc2f766f1db34cdb905ac90c138332a0b607cbf32fedb9"
+      }
+    },
+    {
+      "path": "/cleaning-prices-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/cleaning-prices-london/",
+        "robots": "index, follow",
+        "hash": "643bbc120771b48a5fadc84d305a659d4c6ff8bac2ec68f495a809fc46eb1634"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/cleaning-prices-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "0ea355b4782140351fd6fc73e5b3ac06b0a2e9f5f34aaf7ed6d6458ccd26017f"
+      }
+    },
+    {
+      "path": "/cleaning-faqs/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/cleaning-faqs/",
+        "robots": "index, follow",
+        "hash": "6e50bfe35a5eb440f7725d937b27a84fc63c75b8fdb432e848e61fe55dcf1a85"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/cleaning-faqs/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "70d50cc0c8ccb26ecf9dd4887d13d58286fba5c28f7bdbcbd3743702616fdd08"
+      }
+    },
+    {
+      "path": "/reviews-case-studies/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/reviews-case-studies/",
+        "robots": "index, follow",
+        "hash": "827a8e8aea19123af9f6d96745f7d61cf3553c25b5390a03f3429cc05e393aad"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/reviews-case-studies/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "82329a8002fcb9400d43061c4bd9b1c6220c7b4f8dc5517abe6b32bac0f8439c"
+      }
+    },
+    {
+      "path": "/request-a-quote/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/request-a-quote/",
+        "robots": "index, follow",
+        "hash": "23d782ef85325295cc773ab0d2d2ae002a1b537d02b4d8f51780548a91f6a139"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/request-a-quote/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "1d3d5f137bcc8bb60cc0f81ecf34a719ba5e4c0cbd31dfb2a0bcef2ee2a55e30"
+      }
+    },
+    {
+      "path": "/contact/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/contact/",
+        "robots": "index, follow",
+        "hash": "e6119b00c9f9963e8418423c70d3f2bade84405755fb6cae6318440ca9e8d8d4"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/contact/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "9193637bdbe72187979ca4badda26b0b851a1aee6e4a6790a219e4ef36e2722c"
+      }
+    },
+    {
+      "path": "/areas-we-cover/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/areas-we-cover/",
+        "robots": "index, follow",
+        "hash": "c0b0d9a3d1bf4188b2701b937ddf1dde14af278e58cd46de314efc499651fdbc"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/areas-we-cover/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "bcdb27c0aa0287ddbf7897615081c566eafb9554fd503e5909308c6584ac5445"
+      }
+    },
+    {
+      "path": "/cleaning-services-east-london/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/cleaning-services-east-london/",
+        "robots": "index, follow",
+        "hash": "f759769754157ad312c708d85e94e7da7c6d883e5eb7aa46b9f4e95b612265b2"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/cleaning-services-east-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "e050b2e0fa1729f7ce269c6e97cca745fca21ffdeeafa74bc857fa4fe76db039"
+      }
+    },
+    {
+      "path": "/privacy-policy/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/privacy-policy/",
+        "robots": "index, follow",
+        "hash": "2662712fb411dcec017ad51e7b3253ad9713b478f333f080cc498c138ea8ac11"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/privacy-policy/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "115d5a2e0b59f27e1bc068a992841aa21f602da6a68608e01cb15c55cebf56ce"
+      }
+    },
+    {
+      "path": "/terms-and-conditions/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/terms-and-conditions/",
+        "robots": "index, follow",
+        "hash": "36b1e473a24bdd32d69098de1c548f7411436e8181aa1c20b254134d0af5d995"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/terms-and-conditions/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "387cb597ed8155cb2c033f03aba5f7212afa49b811da72cbbad44d017110e8e8"
+      }
+    },
+    {
+      "path": "/locations/london/battersea/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/battersea/",
+        "robots": "index, follow",
+        "hash": "a894a7372e8a3bc38377cdb39596d665dc0213b88546a52ad2c148ed2d5f63f0"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/battersea/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "983f8665dc37e21cd6695932b55aa3e10130834436d8177a33dca4fcbfc0bd6c"
+      }
+    },
+    {
+      "path": "/locations/london/belgravia/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/belgravia/",
+        "robots": "index, follow",
+        "hash": "d672e35968882cb36a8677248129b9461a857808154603f29d3a72c1ff14c62d"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/belgravia/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "e04aa6f81f7350b73a3701433b2e670a81abd82acf82207192bf78b74d4e4877"
+      }
+    },
+    {
+      "path": "/locations/london/chelsea/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/chelsea/",
+        "robots": "index, follow",
+        "hash": "5c2adda12685fccba4d8e90ca3ea5b6eecf77bd2822ee35b01f5deadb8755c21"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/chelsea/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "7071c7efbc15eb2834baf4361aaf0e94a885121fdfc671988d41bb62bccde3db"
+      }
+    },
+    {
+      "path": "/locations/london/clapham/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/clapham/",
+        "robots": "index, follow",
+        "hash": "023a1d8b4250ea0879a10d43ed8d4263896b860b14f4bfa931b56711ffa653da"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/clapham/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "a3d1fa4fd869f482be1ca1d181e482ea249c7ad2277ba36398f26882be6d82a7"
+      }
+    },
+    {
+      "path": "/locations/london/hampstead/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/hampstead/",
+        "robots": "index, follow",
+        "hash": "5736feb33fea022435b8ac15315e173edd0ee58dd206c91a361295b9ef3ac7cc"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/hampstead/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "57eadfad5541cfe360201dd04b042e0821e909bfc67a347294883c828ec2239c"
+      }
+    },
+    {
+      "path": "/locations/london/highgate/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/highgate/",
+        "robots": "index, follow",
+        "hash": "afb0c64f21db20d11eb1c80e4f575ae7c7053c6f14f01263d1e06c69af78d9b0"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/highgate/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "077c1166bfcdfb0d96f7136eefb6541ae897785511df9b38b1f429a1e71ee264"
+      }
+    },
+    {
+      "path": "/locations/london/holland-park/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/holland-park/",
+        "robots": "index, follow",
+        "hash": "9f23310fe13aac59f1ca080fa30c6a1282dfecbc1fe666911b88dd73fcc8132f"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/holland-park/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "4481f454ecdea2ef4f592991b7e5d9a1ab6bc53562f8cb551e3cb0c61b902884"
+      }
+    },
+    {
+      "path": "/locations/london/kensington/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/kensington/",
+        "robots": "index, follow",
+        "hash": "395639f577bffa9a708d7899a249236a76b9880203e83d189d0402f39af808aa"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/kensington/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "accc9d42ce3ba548c72b303770d50d18b4d2fb70380e3baa9f1f9a4fda6b2214"
+      }
+    },
+    {
+      "path": "/locations/london/knightsbridge/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/knightsbridge/",
+        "robots": "index, follow",
+        "hash": "fed36f676fc8cdba02cf39d74eb602cf73a8192b65c3c4140313ac3a0baae7e0"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/knightsbridge/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "815f97ae7885c1d9b16cd35a8be315ebc0b667c9235cfbfd495f0f6189a673a2"
+      }
+    },
+    {
+      "path": "/locations/london/mayfair/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/mayfair/",
+        "robots": "index, follow",
+        "hash": "b72ccd8e9d925e6a8fa3d8ac7020edb7181e3a389335e319fc40f42772cb74f5"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/mayfair/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "37d087192b6409a9539b134f34cb4041907e2bc66449e49a5a077479ed237517"
+      }
+    },
+    {
+      "path": "/locations/london/notting-hill/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/notting-hill/",
+        "robots": "index, follow",
+        "hash": "2b3dc06142dbdfbdc2b296cff3f54d4b09f1fca83dcc5a8996f224a3cd1b7efe"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/notting-hill/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "3b5288e19de05566b9d4d8c13e1b556d5dbf437389d067359fc042fde81f52fd"
+      }
+    },
+    {
+      "path": "/locations/london/primrose-hill/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/primrose-hill/",
+        "robots": "index, follow",
+        "hash": "d18f9c1e75b3df6ec1a5198f1562b6c7117b694140b15ea11676d70efad6e9d1"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/primrose-hill/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "0937aa5e7c27c1e9ade58288d8a4159f9f55df5b28c0ef5aaed7e6f758e3739d"
+      }
+    },
+    {
+      "path": "/locations/london/st-johns-wood/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/st-johns-wood/",
+        "robots": "index, follow",
+        "hash": "3db67595ebc4bbb90600ca2f9c9ffce26e61f1b0d5721e7e04c0e785d8b1a63f"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/st-johns-wood/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "1dcc7045f18a36a51c188f46fb8dc2c800c7629f34728709a50f5fef435fc586"
+      }
+    },
+    {
+      "path": "/locations/london/wandsworth/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/london/wandsworth/",
+        "robots": "index, follow",
+        "hash": "e3d1be02fa52a30029310b03821a2420288a57d94f77de27b094680e61fcc5ea"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/london/wandsworth/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "07152d3c5004cb104a4af103a33fa8ec24e702dd8a3dd49062d8329b5e9d4af5"
+      }
+    },
+    {
+      "path": "/locations/surrey/hersham/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/hersham/",
+        "robots": "index, follow",
+        "hash": "53b387d68188df343a9a9aa197fc0aaded550c7f19f9c5e31b8e6d600af23eab"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/hersham/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "f6e80687571d642d3b97297b8443da2fa64d596fce5eab0da917164b791aadf2"
+      }
+    },
+    {
+      "path": "/locations/surrey/walton-on-thames/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/walton-on-thames/",
+        "robots": "index, follow",
+        "hash": "104cdebd36dbb0d3a53bdc4f6760ffc61edf846c21a4da6c5f48c43f7cb9b256"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/walton-on-thames/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "1be52f2efaa1ef7094ac087eeb9b30da0a65c7fd5a19b53b3d1d450d3015fdea"
+      }
+    },
+    {
+      "path": "/locations/surrey/weybridge/",
+      "live": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": null,
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/weybridge/",
+        "robots": "index, follow",
+        "hash": "65a4b5cb625e3fc7be4820ef9967d1f5a4da82ac1a256b7f21ca1c01525c1275"
+      },
+      "staged": {
+        "status": 200,
+        "location": null,
+        "robotsHeader": "noindex",
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/weybridge/",
+        "robots": "noindex, nofollow, noarchive",
+        "hash": "44f88bb32161170e5de62fb12e8b6a114f0b0fb6fb0d6192e2000f17b0c52da9"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/get-quote",
+      "target": "/request-a-quote/",
+      "status": 301,
+      "location": "/request-a-quote/",
+      "robotsHeader": null,
+      "hash": "17c69e094ffebc54704886ae8905d26a36f200ecd0f3343e701498a4828767ff"
+    },
+    {
+      "source": "/quote",
+      "target": "/request-a-quote/",
+      "status": 301,
+      "location": "/request-a-quote/",
+      "robotsHeader": null,
+      "hash": "17c69e094ffebc54704886ae8905d26a36f200ecd0f3343e701498a4828767ff"
+    },
+    {
+      "source": "/discount",
+      "target": "/offer/",
+      "status": 301,
+      "location": "/offer/",
+      "robotsHeader": null,
+      "hash": "5835248cb4625c1b04e276b576c974547c9bcccdf8a556cc3f2989ddba084012"
+    },
+    {
+      "source": "/services",
+      "target": "/#find-my-service",
+      "status": 301,
+      "location": "/#find-my-service",
+      "robotsHeader": null,
+      "hash": "6fcf005980d7abf5026b383d739059e3c00d704996ddc98de25144e49fc99a20"
+    },
+    {
+      "source": "/why-us",
+      "target": "/why-choose-hqc/",
+      "status": 301,
+      "location": "/why-choose-hqc/",
+      "robotsHeader": null,
+      "hash": "d1985845ec4c7583fd9968bbe684cf7f48513ebdc369afa7673893e99e0032b3"
+    },
+    {
+      "source": "/process",
+      "target": "/how-we-work/",
+      "status": 301,
+      "location": "/how-we-work/",
+      "robotsHeader": null,
+      "hash": "30a12c474fb626689341c859917e98e969b97e24b85e27181cef39f33c59fe7d"
+    },
+    {
+      "source": "/case-studies",
+      "target": "/reviews-case-studies/",
+      "status": 301,
+      "location": "/reviews-case-studies/",
+      "robotsHeader": null,
+      "hash": "68351cd86832b0315430e3e557aeabd1c23f5d695e18c3c2ea7930ed7594c1ee"
+    },
+    {
+      "source": "/client-success-stories",
+      "target": "/reviews-case-studies/",
+      "status": 301,
+      "location": "/reviews-case-studies/",
+      "robotsHeader": null,
+      "hash": "68351cd86832b0315430e3e557aeabd1c23f5d695e18c3c2ea7930ed7594c1ee"
+    },
+    {
+      "source": "/areas",
+      "target": "/areas-we-cover/",
+      "status": 301,
+      "location": "/areas-we-cover/",
+      "robotsHeader": null,
+      "hash": "bb9a2e9862a763b7f2166430f717f5b090b1556f76a93e6dc5bd81457072a0ec"
+    },
+    {
+      "source": "/areas/areas",
+      "target": "/areas-we-cover/",
+      "status": 301,
+      "location": "/areas-we-cover/",
+      "robotsHeader": null,
+      "hash": "bb9a2e9862a763b7f2166430f717f5b090b1556f76a93e6dc5bd81457072a0ec"
+    },
+    {
+      "source": "/services/office-cleaning",
+      "target": "/office-cleaning-london/",
+      "status": 301,
+      "location": "/office-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "83488f164ccb5cce484800ac2cb9dbcd9d3c8a087413342d919fd468dc875abb"
+    },
+    {
+      "source": "/services/deep-cleaning",
+      "target": "/deep-cleaning-london/",
+      "status": 301,
+      "location": "/deep-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "97b2890947caf235d22b8ce5a8b13c25c1ae06c9a5ed6a365e09a14fe9c86b77"
+    },
+    {
+      "source": "/services/end-of-tenancy-cleaning",
+      "target": "/end-of-tenancy-cleaning-london/",
+      "status": 301,
+      "location": "/end-of-tenancy-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "7558a77ed9da2a5a4df153f7e0d541967917d698df3f9b1b17f703be6e2cae76"
+    },
+    {
+      "source": "/services/airbnb-cleaning",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/services/carpet-cleaning",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/services/ironing-and-laundry",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/post-renovation-cleaning",
+      "target": "/post-construction-cleaning-london/",
+      "status": 301,
+      "location": "/post-construction-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "90d11acf3520bb39e32115c64d208b8b06ff8a133739773b29e205a527193398"
+    },
+    {
+      "source": "/after-builders-cleaning",
+      "target": "/post-construction-cleaning-london/",
+      "status": 301,
+      "location": "/post-construction-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "90d11acf3520bb39e32115c64d208b8b06ff8a133739773b29e205a527193398"
+    },
+    {
+      "source": "/developer-handover-cleaning",
+      "target": "/post-construction-cleaning-london/",
+      "status": 301,
+      "location": "/post-construction-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "90d11acf3520bb39e32115c64d208b8b06ff8a133739773b29e205a527193398"
+    },
+    {
+      "source": "/regular-residential-cleaning",
+      "target": "/essential-clean-london/",
+      "status": 301,
+      "location": "/essential-clean-london/",
+      "robotsHeader": null,
+      "hash": "40fc2875ec4ca545ea76068016b57e73084a61e42d57a7ebe66821a1095a2a73"
+    },
+    {
+      "source": "/luxury-cleaning-services",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/commercial-wellness-cleaning",
+      "target": "/commercial-cleaning-london/",
+      "status": 301,
+      "location": "/commercial-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "50e86f51f86b4c6aa59c42879577da03983b064afb8cfe3fe5744cbbaa232bc8"
+    },
+    {
+      "source": "/mayfair",
+      "target": "/locations/london/mayfair/",
+      "status": 301,
+      "location": "/locations/london/mayfair/",
+      "robotsHeader": null,
+      "hash": "07329b8d9b40366d69f757bfc658c060bf5ee5f9c6d77d9567ce77fcac327f1b"
+    },
+    {
+      "source": "/knightsbridge",
+      "target": "/locations/london/knightsbridge/",
+      "status": 301,
+      "location": "/locations/london/knightsbridge/",
+      "robotsHeader": null,
+      "hash": "4e1231bd4b36f2e8bebeacb555140bcbcab365a89838d9bd0f3ad12270d61147"
+    },
+    {
+      "source": "/chelsea",
+      "target": "/locations/london/chelsea/",
+      "status": 301,
+      "location": "/locations/london/chelsea/",
+      "robotsHeader": null,
+      "hash": "b08eced12407e0b0c81f6e516d2d9ad3947cf4218fc2fdcce749580b21d7b235"
+    },
+    {
+      "source": "/belgravia",
+      "target": "/locations/london/belgravia/",
+      "status": 301,
+      "location": "/locations/london/belgravia/",
+      "robotsHeader": null,
+      "hash": "c949392d25e221a1e45d5d87c92770727db877a6f528d6d717259825cac85c1d"
+    },
+    {
+      "source": "/kensington",
+      "target": "/locations/london/kensington/",
+      "status": 301,
+      "location": "/locations/london/kensington/",
+      "robotsHeader": null,
+      "hash": "2684f83a60195c05b93b86f76ef0e3a84e61d7e01f0265c15bbcac73c990c469"
+    },
+    {
+      "source": "/hampstead",
+      "target": "/locations/london/hampstead/",
+      "status": 301,
+      "location": "/locations/london/hampstead/",
+      "robotsHeader": null,
+      "hash": "4550197ce0fc3f0d7c9a544663250514fec55ee5b504719ac89bdcc4c93a1521"
+    },
+    {
+      "source": "/wandsworth",
+      "target": "/locations/london/wandsworth/",
+      "status": 301,
+      "location": "/locations/london/wandsworth/",
+      "robotsHeader": null,
+      "hash": "ab437a9bdcf1645078d92e3ae0409e10e6d52a59ea73661d1ff93db257312259"
+    },
+    {
+      "source": "/battersea",
+      "target": "/locations/london/battersea/",
+      "status": 301,
+      "location": "/locations/london/battersea/",
+      "robotsHeader": null,
+      "hash": "0d423d77a902220bae57966dca1a9331bc088a126d600c0837164f006c4edb5c"
+    },
+    {
+      "source": "/clapham",
+      "target": "/locations/london/clapham/",
+      "status": 301,
+      "location": "/locations/london/clapham/",
+      "robotsHeader": null,
+      "hash": "91c46f01a1f12928fcce19db4aa0d0ce0c991a9dd6c3714bf5ee2b153ede0547"
+    },
+    {
+      "source": "/notting-hill",
+      "target": "/locations/london/notting-hill/",
+      "status": 301,
+      "location": "/locations/london/notting-hill/",
+      "robotsHeader": null,
+      "hash": "5b386dd7bb6d5476ed68db0866e19c0fb2a9b26ed400f896849c575af2199d58"
+    },
+    {
+      "source": "/nottinghill",
+      "target": "/locations/london/notting-hill/",
+      "status": 301,
+      "location": "/nottinghill/",
+      "robotsHeader": null,
+      "canonical": "/nottinghill/",
+      "robots": "noindex",
+      "hash": "0ef6a2d820268a193fdc5bfae489a4c5711149f3e1115c2f41c6d828aa23423a"
+    },
+    {
+      "source": "/holland-park",
+      "target": "/locations/london/holland-park/",
+      "status": 301,
+      "location": "/locations/london/holland-park/",
+      "robotsHeader": null,
+      "hash": "f6481d069b681198b611763a7569c887e96333caf11a0c7b1d91fd3aba620131"
+    },
+    {
+      "source": "/hollandpark",
+      "target": "/locations/london/holland-park/",
+      "status": 301,
+      "location": "/hollandpark/",
+      "robotsHeader": null,
+      "canonical": "/hollandpark/",
+      "robots": "noindex",
+      "hash": "913d424f1e8c044fa7d1a3da63654dd945e956f4f20e6afd5b08c86bc004d06d"
+    },
+    {
+      "source": "/areas/hollandpark",
+      "target": "/locations/london/holland-park/",
+      "status": 301,
+      "location": "/areas/hollandpark/",
+      "robotsHeader": null,
+      "canonical": "/areas/hollandpark/",
+      "robots": "noindex",
+      "hash": "cb596d2a7700c0af9954c345afc3fc42f9393d7966af57fb1b8b332fbdb4bf55"
+    },
+    {
+      "source": "/primrose-hill",
+      "target": "/locations/london/primrose-hill/",
+      "status": 301,
+      "location": "/locations/london/primrose-hill/",
+      "robotsHeader": null,
+      "hash": "0581e8653cb24d006961e3a3476d9fb6579e86e596ecd89a6b8c406ad582b720"
+    },
+    {
+      "source": "/primrosehill",
+      "target": "/locations/london/primrose-hill/",
+      "status": 301,
+      "location": "/primrosehill/",
+      "robotsHeader": null,
+      "canonical": "/primrosehill/",
+      "robots": "noindex",
+      "hash": "05d85e2bc844767b4725e1e222131bc4d896e06b3b558089d62ec41587d6bf70"
+    },
+    {
+      "source": "/highgate",
+      "target": "/locations/london/highgate/",
+      "status": 301,
+      "location": "/locations/london/highgate/",
+      "robotsHeader": null,
+      "hash": "54dbe28462216a1887236feaf3814ddd0d2836ef1f353e29117ba558dc9ab0ca"
+    },
+    {
+      "source": "/st-johns-wood",
+      "target": "/locations/london/st-johns-wood/",
+      "status": 301,
+      "location": "/locations/london/st-johns-wood/",
+      "robotsHeader": null,
+      "hash": "19f401620791171c2068be47cc9f8f08cf1fbc84196bcd108c73f25b08854189"
+    },
+    {
+      "source": "/stjohnswood",
+      "target": "/locations/london/st-johns-wood/",
+      "status": 301,
+      "location": "/stjohnswood/",
+      "robotsHeader": null,
+      "canonical": "/stjohnswood/",
+      "robots": "noindex",
+      "hash": "3fb0075544fa1d4adbc2e2fd4538f91f43dde74f3f2f47169d0e48369ad323bf"
+    },
+    {
+      "source": "/weybridge",
+      "target": "/locations/surrey/weybridge/",
+      "status": 301,
+      "location": "/locations/surrey/weybridge/",
+      "robotsHeader": null,
+      "hash": "139931a83be92892547e88d386d6351dfed5e0b4838891ae99c472dd1d620674"
+    },
+    {
+      "source": "/hersham",
+      "target": "/locations/surrey/hersham/",
+      "status": 301,
+      "location": "/locations/surrey/hersham/",
+      "robotsHeader": null,
+      "hash": "f47043fe5380e1da317fd80fb949bc2e9b0b9a466fb64424c4423705a233c002"
+    },
+    {
+      "source": "/walton-on-thames",
+      "target": "/locations/surrey/walton-on-thames/",
+      "status": 301,
+      "location": "/locations/surrey/walton-on-thames/",
+      "robotsHeader": null,
+      "hash": "3fc9454bdfe913bf9fded0e2e26b8ddf0ea7a6bde8e1ec350673db104cfb997d"
+    },
+    {
+      "source": "/waltononthames",
+      "target": "/locations/surrey/walton-on-thames/",
+      "status": 301,
+      "location": "/waltononthames/",
+      "robotsHeader": null,
+      "canonical": "/waltononthames/",
+      "robots": "noindex",
+      "hash": "0ee3d61c56e7c9f28f6427068c387fcded32cf7a0f670baa5ba8986d3af72fa0"
+    },
+    {
+      "source": "/concierge-laundry",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/moving-out",
+      "target": "/end-of-tenancy-cleaning-london/",
+      "status": 301,
+      "location": "/end-of-tenancy-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "7558a77ed9da2a5a4df153f7e0d541967917d698df3f9b1b17f703be6e2cae76"
+    },
+    {
+      "source": "/carpet-cleaning",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/well-clean-advisory",
+      "target": "/",
+      "status": 301,
+      "location": "/",
+      "robotsHeader": null,
+      "hash": "f323a65c61122546e7f910891dfdff4f7f3c9215885982bb61b39fa1039763e0"
+    },
+    {
+      "source": "/office-cleaning-services",
+      "target": "/office-cleaning-london/",
+      "status": 301,
+      "location": "/office-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "83488f164ccb5cce484800ac2cb9dbcd9d3c8a087413342d919fd468dc875abb"
+    },
+    {
+      "source": "/airbnb-turnover",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/well-clean",
+      "target": "/",
+      "status": 301,
+      "location": "/",
+      "robotsHeader": null,
+      "hash": "f323a65c61122546e7f910891dfdff4f7f3c9215885982bb61b39fa1039763e0"
+    },
+    {
+      "source": "/services/concierge-laundry",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/services/moving-out",
+      "target": "/end-of-tenancy-cleaning-london/",
+      "status": 301,
+      "location": "/end-of-tenancy-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "7558a77ed9da2a5a4df153f7e0d541967917d698df3f9b1b17f703be6e2cae76"
+    },
+    {
+      "source": "/services/office-cleaning-services",
+      "target": "/office-cleaning-london/",
+      "status": 301,
+      "location": "/office-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "83488f164ccb5cce484800ac2cb9dbcd9d3c8a087413342d919fd468dc875abb"
+    },
+    {
+      "source": "/services/airbnb-turnover",
+      "target": "/home-cleaning-london/",
+      "status": 301,
+      "location": "/home-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "d3450add316f3d37922beec9ccb9541509f67630b1cc1e08eb22506cf7369554"
+    },
+    {
+      "source": "/services/well-clean",
+      "target": "/deep-cleaning-london/",
+      "status": 301,
+      "location": "/deep-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "97b2890947caf235d22b8ce5a8b13c25c1ae06c9a5ed6a365e09a14fe9c86b77"
+    },
+    {
+      "source": "/services/well-clean-advisory",
+      "target": "/contact/",
+      "status": 301,
+      "location": "/contact/",
+      "robotsHeader": null,
+      "hash": "dbba9e8d609df03dc5443da2df8c6fc799b2d0e020802a70782c41e1cae85e0e"
+    },
+    {
+      "source": "/book",
+      "target": "/request-a-quote/",
+      "status": 301,
+      "location": "/request-a-quote/",
+      "robotsHeader": null,
+      "hash": "17c69e094ffebc54704886ae8905d26a36f200ecd0f3343e701498a4828767ff"
+    },
+    {
+      "source": "/concierge",
+      "target": "/contact/",
+      "status": 301,
+      "location": "/contact/",
+      "robotsHeader": null,
+      "hash": "dbba9e8d609df03dc5443da2df8c6fc799b2d0e020802a70782c41e1cae85e0e"
+    },
+    {
+      "source": "/consulting",
+      "target": "/contact/",
+      "status": 301,
+      "location": "/contact/",
+      "robotsHeader": null,
+      "hash": "dbba9e8d609df03dc5443da2df8c6fc799b2d0e020802a70782c41e1cae85e0e"
+    },
+    {
+      "source": "/protocols",
+      "target": "/how-we-work/",
+      "status": 301,
+      "location": "/how-we-work/",
+      "robotsHeader": null,
+      "hash": "30a12c474fb626689341c859917e98e969b97e24b85e27181cef39f33c59fe7d"
+    },
+    {
+      "source": "/resources/material-care",
+      "target": "/deep-cleaning-london/",
+      "status": 301,
+      "location": "/deep-cleaning-london/",
+      "robotsHeader": null,
+      "hash": "97b2890947caf235d22b8ce5a8b13c25c1ae06c9a5ed6a365e09a14fe9c86b77"
+    }
+  ],
+  "links": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/property-facilities-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/communal-area-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/portfolio-cleaning-support-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/commercial-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/office-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/commercial-deep-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/home-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/essential-clean-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/deep-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/move-in-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/how-we-work/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/reviews-case-studies/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/request-a-quote/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/complex-property-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/about-high-quality-clean/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/areas-we-cover/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/cleaning-faqs/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/cleaning-prices-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/terms-and-conditions/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/book-essential-clean/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/why-choose-hqc/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/post-construction-cleaning-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/cleaning-services-east-london/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/clapham/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/wandsworth/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/chelsea/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/belgravia/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/mayfair/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/knightsbridge/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/kensington/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/battersea/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/hampstead/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/primrose-hill/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/st-johns-wood/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/notting-hill/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/highgate/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/london/holland-park/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/surrey/weybridge/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/surrey/hersham/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/locations/surrey/walton-on-thames/",
+      "status": 200,
+      "location": null
+    }
+  ],
+  "missing": {
+    "status": 404,
+    "location": null,
+    "robotsHeader": null,
+    "canonical": "https://highqualityclean.co.uk/phase8-intentional-missing-page/",
+    "robots": "noindex, nofollow, noarchive",
+    "hash": "e8974046b0d1d4d339f3f178ec304b661af7a1feec9854264752a8dd5d14d0fb"
+  }
+}

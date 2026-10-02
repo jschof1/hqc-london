@@ -27,11 +27,12 @@ import Header from '../components/Header.astro';
 </Layout>
 
 <script is:inline>
+  window.addEventListener('load', () => window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'booking_request_started' } })), { once: true });
   window.addEventListener('message', (event) => {
     if (event.origin !== 'https://highqualitycleanlimited.launch27.com') return;
     if (event.data?.type !== 'iframeHeight') return;
     const height = Number(event.data.height);
     const iframe = document.getElementById('booking-widget-iframe');
-    if (iframe && Number.isFinite(height) && height >= 300 && height <= 10000) iframe.style.height = `${height}px`;
+    if (iframe && event.source === iframe.contentWindow && Number.isFinite(height) && height >= 300 && height <= 10000) iframe.style.height = `${height}px`;
   });
 </script>

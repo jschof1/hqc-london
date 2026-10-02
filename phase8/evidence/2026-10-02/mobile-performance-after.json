@@ -1,0 +1,109 @@
+{
+  "testedAt": "2026-10-02T14:07:42.640Z",
+  "base": "http://127.0.0.1:4330",
+  "environment": "Single-run local lab: Chrome 390x844 mobile, 4x CPU, 150ms latency, 1.6Mbps download; not field Core Web Vitals or Lighthouse.",
+  "results": [
+    {
+      "path": "/",
+      "lcpMs": 1260,
+      "cls": 0.019137036454706765,
+      "domContentLoadedMs": 1259,
+      "loadMs": 3214.89999999851,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4330/images/pedro-founder.webp",
+          "bytes": 184190,
+          "duration": 2981.6999999955297
+        },
+        {
+          "url": "http://127.0.0.1:4330/images/generated/hqc-home-hero.webp",
+          "bytes": 126856,
+          "duration": 2465.89999999851
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2",
+          "bytes": 118372,
+          "duration": 2200.10000000149
+        },
+        {
+          "url": "http://127.0.0.1:4330/images/generated/hqc-property-hero.webp",
+          "bytes": 68996,
+          "duration": 1550.3999999985099
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+          "bytes": 19014,
+          "duration": 666.2000000029802
+        }
+      ]
+    },
+    {
+      "path": "/request-a-quote/",
+      "lcpMs": 1224,
+      "cls": 0,
+      "domContentLoadedMs": 1227.7000000029802,
+      "loadMs": 2081.89999999851,
+      "resources": [
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2",
+          "bytes": 118372,
+          "duration": 1098.8999999985099
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+          "bytes": 19014,
+          "duration": 509.19999999552965
+        },
+        {
+          "url": "http://127.0.0.1:4330/_astro/_slug_.CtTyUsAM.css",
+          "bytes": 17252,
+          "duration": 299.29999999701977
+        },
+        {
+          "url": "http://127.0.0.1:4330/_astro/Layout.astro_astro_type_script_index_0_lang.BUN98V27.js",
+          "bytes": 4774,
+          "duration": 238.5
+        },
+        {
+          "url": "http://127.0.0.1:4330/_astro/request-a-quote.astro_astro_type_script_index_0_lang.BhC0xxL9.js",
+          "bytes": 3557,
+          "duration": 224.30000000447035
+        }
+      ]
+    },
+    {
+      "path": "/essential-clean-london/",
+      "lcpMs": 996,
+      "cls": 0.019137036454706765,
+      "domContentLoadedMs": 995.5,
+      "loadMs": 2820.1999999955297,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4330/images/instock/london-property-living-room.webp",
+          "bytes": 195126,
+          "duration": 1850
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2",
+          "bytes": 118372,
+          "duration": 1726.2000000029802
+        },
+        {
+          "url": "http://127.0.0.1:4330/images/luxury-home/richmond-living-room.webp",
+          "bytes": 108482,
+          "duration": 904.2000000029802
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+          "bytes": 19014,
+          "duration": 483.3999999985099
+        },
+        {
+          "url": "http://127.0.0.1:4330/_astro/_slug_.CtTyUsAM.css",
+          "bytes": 17252,
+          "duration": 415.3999999985099
+        }
+      ]
+    }
+  ]
+}
