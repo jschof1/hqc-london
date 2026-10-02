@@ -1,5 +1,5 @@
 {
-  "sourceHead": "46be4fd9f55a2be6a063ff24b67a792325896a37",
+  "sourceHead": "e7bcf1390710c61d2882b40ff40ac56879e41da7",
   "production": {
     "id": "242f9c4f-ce9a-4e3e-944e-ad99eb2665bc",
     "environment": "production",
@@ -27,25 +27,25 @@
   },
   "staging": [
     {
-      "id": "e20443f7-1a67-44ed-8bc4-1a8b40fb63da",
+      "id": "9fc19d8d-7797-4c45-859a-f6434d696d35",
       "environment": "preview",
-      "url": "https://e20443f7.hqc-london.pages.dev",
+      "url": "https://9fc19d8d.hqc-london.pages.dev",
       "aliases": [
         "https://phase8-2026-09-28-staging.hqc-london.pages.dev"
       ],
-      "created_on": "2026-10-02T15:11:48.362304Z",
+      "created_on": "2026-10-02T14:09:08.648758Z",
       "latest_stage": {
         "name": "deploy",
-        "started_on": "2026-10-02T15:12:27.752017Z",
-        "ended_on": "2026-10-02T15:12:36.306931Z",
+        "started_on": "2026-10-02T14:09:48.509339Z",
+        "ended_on": "2026-10-02T14:09:56.717286Z",
         "status": "success"
       },
       "deployment_trigger": {
         "type": "github:push",
         "metadata": {
           "branch": "phase8-2026-09-28-staging",
-          "commit_hash": "46be4fd9f55a2be6a063ff24b67a792325896a37",
-          "commit_message": "Improve Phase 8 contrast and native form routing with release evidence",
+          "commit_hash": "e7bcf1390710c61d2882b40ff40ac56879e41da7",
+          "commit_message": "feat: harden Phase 8 staging forms and record release evidence",
           "commit_dirty": false
         }
       }
@@ -69,7 +69,5 @@
       "*"
     ],
     "path_excludes": []
-  },
-  "verifiedAt": "2026-10-02T15:37:12.192152+00:00",
-  "scope": "Provider snapshot for application commit 46be4fd; later documentation-only commits may deploy separately."
+  }
 }

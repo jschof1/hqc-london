@@ -1,3 +1,5 @@
+HISTORICAL UNSENT DRAFT. Superseded by the current release record and private provider-access draft. Do not send this as a current status update.
+
 Subject: HQC Phase 8 staging progress and release checks
 
 Hi Pedro,

@@ -1,0 +1,34 @@
+{
+  "verifiedAt": "2026-10-02T15:37:12.212487+00:00",
+  "operator": "Coordinating chat; website owner did not repeat calls",
+  "scope": "Actual shared website handler invoked with isolated environment and fixed synthetic receiver only; no canonical website network call or production bindings",
+  "contact": {
+    "invokedAt": "2026-10-02T15:19:12Z",
+    "branch": "Non-sales branch finished",
+    "opportunitiesCreated": 0,
+    "conversations": 0,
+    "correlationLimit": "Unique invocation timestamp and provider execution, not UUID visible in Contact execution details"
+  },
+  "quote": {
+    "invokedAt": "2026-10-02T15:22:11Z",
+    "calls": 1,
+    "receiptUUIDMatchesOpportunityName": true,
+    "nativeWorkflowProvenanceMatches": true,
+    "fourServiceDatesPersisted": true,
+    "assignedOwner": "Pedro",
+    "nextActionTextContainsReceiptUUID": true,
+    "nextActionDateExpected": "2026-10-02",
+    "nextActionDateActual": "2026-02-10",
+    "nextActionDatePassed": false
+  },
+  "fixtureSafety": {
+    "dnd": true,
+    "phone": null,
+    "customerMessages": 0,
+    "systemOpportunityActivity": true
+  },
+  "passed": false,
+  "receiverStateAsRecorded": "draft",
+  "remaining": "Sales owner to fix locale-ambiguous native DATE conversion and prove it with a separately coordinated test; no repeat calls authorised here. Production intake, duplicate/repeat acceptance, email delivery and full sales scenarios remain open.",
+  "privateEvidence": "Raw provider readbacks and UUID/fixture IDs retained outside public repository."
+}
