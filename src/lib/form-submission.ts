@@ -98,6 +98,7 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
     body.source = 'feedback_page';
     body.enquiry_type = 'private_feedback';
   }
+  body.form_type = kind; // Server-owned native intake discriminator; caller values are never accepted.
   body.email_marketing_consent = body.email_marketing_consent === 'yes' ? 'yes' : 'no';
   body.privacy_notice_version = 'phase8-batch6-2026-09-28';
   body.timestamp = new Date().toISOString();

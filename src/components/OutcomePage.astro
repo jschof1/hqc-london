@@ -91,7 +91,7 @@ const enquiryType = page.assessment
         <div class="mt-8 grid gap-px overflow-hidden rounded-2xl border border-midnight/10 bg-midnight/10 sm:grid-cols-3">
           {visual.outcomes.map((item, index) => (
             <div class="bg-white p-6">
-              <span class="font-serif text-3xl text-copper">0{index + 1}</span>
+              <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
               <p class="mt-5 font-semibold leading-snug text-midnight">{item}</p>
             </div>
           ))}
@@ -148,10 +148,10 @@ const enquiryType = page.assessment
                   <ol class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                     {section.items.map((item, index) => (
                       <li class="relative rounded-2xl border border-midnight/10 bg-porcelain p-6">
-                        <span class="text-xs font-bold uppercase tracking-[.2em] text-copper">Outcome {String(index + 1).padStart(2, '0')}</span>
+                        <span class="text-xs font-bold uppercase tracking-[.2em] text-copper-ink">Outcome {String(index + 1).padStart(2, '0')}</span>
                         <h3 class="mt-5 font-serif text-2xl font-medium leading-tight text-midnight">{item.title}</h3>
                         <p class="mt-4 leading-7 text-slate">{item.copy}</p>
-                        {item.href && <a class="mt-5 inline-flex font-bold text-midnight no-underline hover:text-copper" href={item.href}>{item.cta ?? 'Find out more'} <span aria-hidden="true">→</span></a>}
+                        {item.href && <a class="mt-5 inline-flex font-bold text-midnight no-underline hover:text-copper-ink" href={item.href}>{item.cta ?? 'Find out more'} <span aria-hidden="true">→</span></a>}
                       </li>
                     ))}
                   </ol>
@@ -160,7 +160,7 @@ const enquiryType = page.assessment
                   <ol class="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
                     {section.items.map((item, index) => (
                       <li class:list={['rounded-2xl border p-5', index === 1 ? 'border-copper bg-copper text-midnight' : 'border-midnight/10 bg-porcelain text-midnight']}>
-                        <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 1 ? 'text-midnight/55' : 'text-copper']}>Stage {String(index + 1).padStart(2, '0')}</span>
+                        <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 1 ? 'text-midnight' : 'text-copper-ink']}>Stage {String(index + 1).padStart(2, '0')}</span>
                         <h3 class="mt-8 font-serif text-2xl font-medium leading-tight">{item.title}</h3>
                         <p class:list={['mt-4 text-sm leading-6', index === 1 ? 'text-midnight/75' : 'text-slate']}>{item.copy}</p>
                       </li>
@@ -173,7 +173,7 @@ const enquiryType = page.assessment
                       <div class="rounded-2xl border border-midnight/10 bg-porcelain p-6">
                         <h3 class="font-serif text-2xl font-medium leading-tight text-midnight">{item.title}</h3>
                         <p class="mt-4 leading-7 text-slate">{item.copy}</p>
-                        {item.href && <a class="mt-5 inline-flex font-bold text-midnight no-underline hover:text-copper" href={item.href}>{item.cta ?? 'Find out more'} <span aria-hidden="true">→</span></a>}
+                        {item.href && <a class="mt-5 inline-flex font-bold text-midnight no-underline hover:text-copper-ink" href={item.href}>{item.cta ?? 'Find out more'} <span aria-hidden="true">→</span></a>}
                       </div>
                     ))}
                   </div>
@@ -190,7 +190,7 @@ const enquiryType = page.assessment
     <section class="border-t border-midnight/10 bg-midnight py-20 text-white md:py-28">
       <div class="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-14">
         <div>
-          <p class="section-kicker">Private client work</p>
+          <p class="section-kicker text-copper">Private client work</p>
           <h2 class="mt-4 font-serif text-4xl font-medium leading-tight md:text-6xl">Private clients across London</h2>
         </div>
         <div>
@@ -222,13 +222,13 @@ const enquiryType = page.assessment
     <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
       <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
         <div>
-          <p class="section-kicker">What we establish</p>
+          <p class="section-kicker text-copper">What we establish</p>
           <h2 class="font-serif text-4xl font-medium leading-tight tracking-tight md:text-6xl">Clear inputs. A realistic scope. No guesswork.</h2>
         </div>
         <div class="grid gap-5 sm:grid-cols-2">
           {visual.scope.map((item, index) => (
             <article class:list={['rounded-2xl border p-6 md:p-8', index === 0 ? 'border-copper bg-copper text-midnight' : 'border-white/15 bg-white/[.04]']}>
-              <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 0 ? 'text-midnight/60' : 'text-copper']}>Scope {index + 1}</span>
+              <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 0 ? 'text-midnight' : 'text-copper']}>Scope {index + 1}</span>
               <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">{item}</h3>
             </article>
           ))}
@@ -273,7 +273,7 @@ const enquiryType = page.assessment
             ['The scope is agreed', 'You receive a clear route forward with the relevant inclusions, assumptions and next steps.']
           ].map(([title, copy], index) => (
             <li class="grid gap-4 py-7 sm:grid-cols-[4rem_1fr]">
-              <span class="font-serif text-3xl text-copper">0{index + 1}</span>
+              <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
               <div><h3 class="font-serif text-2xl font-medium text-midnight">{title}</h3><p class="mt-2 leading-7 text-slate">{copy}</p></div>
             </li>
           ))}
@@ -289,7 +289,7 @@ const enquiryType = page.assessment
         {page.related.map((link, index) => (
           <a class="group flex min-h-40 flex-col justify-between rounded-2xl border border-midnight/10 bg-white p-6 text-midnight no-underline transition hover:-translate-y-1 hover:border-copper hover:shadow-xl" href={link.href}>
             <span class="meta-label">0{index + 1}</span>
-            <span class="flex items-end justify-between gap-5 font-serif text-2xl font-medium">{link.label}<span class="text-copper transition group-hover:translate-x-1" aria-hidden="true">→</span></span>
+            <span class="flex items-end justify-between gap-5 font-serif text-2xl font-medium">{link.label}<span class="text-copper-ink transition group-hover:translate-x-1" aria-hidden="true">→</span></span>
           </a>
         ))}
       </div>
@@ -300,7 +300,7 @@ const enquiryType = page.assessment
     <div class="absolute -right-16 -top-32 h-80 w-80 rounded-full border border-midnight/15"></div>
     <div class="relative mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 px-5 sm:px-8 md:flex-row md:items-center lg:px-14">
       <div>
-        <p class="text-xs font-bold uppercase tracking-[.22em] text-midnight/60">The next step is simple</p>
+        <p class="text-xs font-bold uppercase tracking-[.22em] text-midnight">The next step is simple</p>
         <h2 class="mt-3 max-w-3xl font-serif text-4xl font-medium leading-tight md:text-6xl">{page.primaryCta}</h2>
       </div>
       <a class="button button-dark shrink-0" href={page.primaryHref}>{page.primaryCta}<span aria-hidden="true">↗</span></a>

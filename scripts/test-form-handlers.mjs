@@ -78,6 +78,17 @@ try {
     assert.equal(calls[0].payload.enquiry_type, 'contact');
     assert.equal(calls[0].payload.route, undefined); assert.equal(calls[0].payload.stage, undefined); assert.equal(calls[0].payload.desired_date, undefined);
   });
+  await check('native form discriminator cannot be overridden to another workflow route', async () => {
+    for (const [kind, input, override] of [['quote', quote, 'contact'], ['contact', contact, 'quote']]) {
+      mock();
+      const response = await submitForm(request({ ...input, form_type: override, enquiry_type: override, source: 'forged' }), env, kind);
+      assert.equal(response.status, 200);
+      assert.equal(calls.length, 1);
+      assert.equal(calls[0].payload.form_type, kind);
+      assert.equal(calls[0].url, kind === 'quote' ? env.QUOTE_FORM_WEBHOOK : env.CONTACT_FORM_WEBHOOK);
+      assert.equal(calls[0].payload.source, kind === 'quote' ? 'request_a_quote' : 'contact_page');
+    }
+  });
   await check('missing or reused contact destination fails closed', async () => {
     mock();
     for (const config of [{}, { ...env, CONTACT_FORM_WEBHOOK: env.QUOTE_FORM_WEBHOOK }, { ...env, QUICK_FORM_WEBHOOK: env.CONTACT_FORM_WEBHOOK }]) {
