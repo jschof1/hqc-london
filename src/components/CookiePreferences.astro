@@ -4,10 +4,12 @@ export interface Props {
 }
 
 const { allowAnalytics = false } = Astro.props;
+const measurementId = /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA4_MEASUREMENT_ID || '') ? import.meta.env.PUBLIC_GA4_MEASUREMENT_ID : '';
 ---
 
 <section
   id="hqc-cookie-banner"
+  data-ga4-id={measurementId}
   data-analytics-allowed={allowAnalytics ? 'true' : 'false'}
   class="fixed inset-x-4 bottom-4 z-[90] mx-auto max-h-[calc(100dvh-2rem)] max-w-2xl overflow-y-auto rounded-2xl border border-copper/40 bg-night p-5 text-white shadow-2xl sm:p-7"
   role="region"
@@ -16,7 +18,7 @@ const { allowAnalytics = false } = Astro.props;
 >
   <div class="flex items-start justify-between gap-4">
     <div>
-      <p class="section-kicker">Your choice</p>
+      <p class="section-kicker text-copper">Your choice</p>
       <h2 id="hqc-cookie-banner-title" class="mt-2 font-serif text-3xl font-medium">Your privacy choices</h2>
     </div>
     <span class="mt-1 h-1 w-12 shrink-0 rounded-full bg-copper" aria-hidden="true"></span>
@@ -25,9 +27,9 @@ const { allowAnalytics = false } = Astro.props;
     We use necessary technologies to make this website work. With your permission, we would also like to use analytics and advertising technologies to understand website performance and measure relevant campaigns. You can accept, reject or manage non-essential technologies at any time.
   </p>
   <div class="mt-5 grid gap-2 sm:grid-cols-3">
-    <button id="hqc-cookie-accept-all" type="button" class="button min-h-12 w-full rounded-full bg-copper px-4 py-3 text-sm font-bold text-midnight hover:bg-white">Accept All</button>
-    <button id="hqc-cookie-reject-all" type="button" class="button min-h-12 w-full rounded-full border border-white/25 bg-white/5 px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Reject Non-Essential</button>
-    <button id="hqc-cookie-manage" type="button" class="button min-h-12 w-full rounded-full border border-white/25 bg-transparent px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Manage Preferences</button>
+    <button id="hqc-cookie-accept-all" type="button" class="min-h-12 w-full rounded-full bg-copper px-4 py-3 text-sm font-bold text-midnight hover:bg-white">Accept All</button>
+    <button id="hqc-cookie-reject-all" type="button" class="min-h-12 w-full rounded-full border border-white/25 bg-white/5 px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Reject Non-Essential</button>
+    <button id="hqc-cookie-manage" type="button" class="min-h-12 w-full rounded-full border border-white/25 bg-transparent px-4 py-3 text-sm font-bold text-white hover:border-copper hover:text-copper">Manage Preferences</button>
   </div>
   <p id="hqc-cookie-banner-status" class="mt-3 text-sm text-white/75" role="status" aria-live="polite"></p>
 </section>
@@ -77,8 +79,8 @@ const { allowAnalytics = false } = Astro.props;
 
     <p id="hqc-cookie-dialog-status" class="mt-4 min-h-5 text-sm text-red-800" role="status" aria-live="polite"></p>
     <div class="mt-5 grid gap-2 sm:grid-cols-2">
-      <button id="hqc-cookie-save" type="button" class="button min-h-12 w-full rounded-full bg-midnight px-5 py-3 text-sm font-bold text-white hover:bg-copper hover:text-midnight">Save Preferences</button>
-      <button id="hqc-cookie-dialog-reject" type="button" class="button min-h-12 w-full rounded-full border border-midnight/20 bg-transparent px-5 py-3 text-sm font-bold text-midnight hover:border-midnight hover:bg-midnight/5">Reject Non-Essential</button>
+      <button id="hqc-cookie-save" type="button" class="min-h-12 w-full rounded-full bg-midnight px-5 py-3 text-sm font-bold text-white hover:bg-copper hover:text-midnight">Save Preferences</button>
+      <button id="hqc-cookie-dialog-reject" type="button" class="min-h-12 w-full rounded-full border border-midnight/20 bg-transparent px-5 py-3 text-sm font-bold text-midnight hover:border-midnight hover:bg-midnight/5">Reject Non-Essential</button>
     </div>
     <button id="hqc-cookie-dialog-accept" type="button" class="mt-2 inline-flex min-h-11 w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-slate underline decoration-copper decoration-2 underline-offset-4 hover:text-midnight">Accept All</button>
   </div>
@@ -103,7 +105,7 @@ const { allowAnalytics = false } = Astro.props;
     });
 
     const hostname = window.location.hostname.toLowerCase();
-    const runtimePreviewHost = hostname.endsWith('.pages.dev') || ['localhost', '127.0.0.1', '::1'].includes(hostname);
+    const runtimePreviewHost = !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(hostname);
     const analyticsAllowed = banner.dataset.analyticsAllowed === 'true' && !runtimePreviewHost;
 
     const readPreferences = () => {
@@ -125,11 +127,31 @@ const { allowAnalytics = false } = Astro.props;
     };
 
     const trackPageView = () => {
-      if (preferences?.analytics && typeof window.umami?.track === 'function') window.umami.track();
+      try {
+        if (preferences?.analytics && typeof window.umami?.track === 'function') window.umami.track();
+      } catch { /* Optional analytics cannot block consent or forms. */ }
+    };
+
+    const measurementId = banner.dataset.ga4Id || '';
+    const loadGa4 = () => {
+      if (!measurementId || !analyticsAllowed || !preferences?.analytics) return;
+      window['ga-disable-' + measurementId] = false;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+      if (document.querySelector('script[data-hqc-provider="ga4"]')) return;
+      window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+      window.gtag('js', new Date());
+      window.gtag('config', measurementId, { send_page_view: true, allow_google_signals: false, allow_ad_personalization_signals: false });
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+      script.dataset.hqcProvider = 'ga4';
+      document.head.appendChild(script);
     };
 
     const loadAnalytics = () => {
       if (!analyticsAllowed || !preferences?.analytics) return;
+      loadGa4();
 
       const existingScript = document.querySelector('script[data-hqc-provider="umami"]');
       if (typeof window.umami?.track === 'function') {
@@ -165,6 +187,9 @@ const { allowAnalytics = false } = Astro.props;
       try {
         window.localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...updated }));
       } catch {
+        preferences = normalise(null);
+        if (measurementId) window['ga-disable-' + measurementId] = true;
+        exposePreferences();
         const message = 'Your choices could not be saved. Non-essential technologies will remain off.';
         if (bannerStatus) bannerStatus.textContent = message;
         if (dialogStatus) dialogStatus.textContent = message;
@@ -172,6 +197,10 @@ const { allowAnalytics = false } = Astro.props;
       }
 
       preferences = updated;
+      if (measurementId) window['ga-disable-' + measurementId] = !updated.analytics;
+      if (!updated.analytics) {
+        try { window.sessionStorage.removeItem('hqc:attribution'); } catch { /* Storage may be unavailable. */ }
+      }
       exposePreferences();
       hideBanner();
       if (dialog.open) dialog.close();

@@ -12,17 +12,20 @@ import Header from '../components/Header.astro';
   <main class="min-h-screen bg-mist px-4 pb-20 pt-28 sm:px-6">
     <div class="mx-auto max-w-4xl">
       <div class="text-center">
-        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-gold">Request a quote</p>
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-navy">Request a quote</p>
         <h1 class="mt-4 font-serif text-4xl text-navy md:text-6xl">Tell Us What You Need the Cleaning to Achieve</h1>
         <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">You do not need to select the perfect service before contacting HQC. Start with the property or site, its current condition and what needs to happen next.</p>
       </div>
 
-      <div class="mt-10 grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Enquiry type">
+      <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="tablist" aria-label="Enquiry type">
         <button id="residential-route-tab" class="route-tab rounded-xl border border-gold bg-white p-4 text-left" type="button" role="tab" data-route="residential" aria-selected="true" aria-controls="quote-route-panel" tabindex="0">
           <strong class="block text-navy">Home</strong><span class="mt-1 block text-sm text-ink/65">Essential Clean™, Deep Clean™, Move-In Reset™, End of Tenancy™ or Post-Construction™</span>
         </button>
+        <button id="property-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="property" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
+          <strong class="block text-navy">Property or portfolio</strong><span class="mt-1 block text-sm text-ink/65">Agents, managed properties and repeat instructions</span>
+        </button>
         <button id="commercial-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="commercial" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
-          <strong class="block text-navy">Workplace, property or portfolio</strong><span class="mt-1 block text-sm text-ink/65">Commercial, office, agency, managed property or recurring work</span>
+          <strong class="block text-navy">Workplace or commercial site</strong><span class="mt-1 block text-sm text-ink/65">Office, commercial and recurring site work</span>
         </button>
         <button id="complex-route-tab" class="route-tab rounded-xl border border-gold/30 bg-white p-4 text-left" type="button" role="tab" data-route="complex" aria-selected="false" aria-controls="quote-route-panel" tabindex="-1">
           <strong class="block text-navy">Complex property or project</strong><span class="mt-1 block text-sm text-ink/65">Unusually large, phased or specialist requirements</span>
@@ -63,7 +66,13 @@ import Header from '../components/Header.astro';
             </select>
           </label>
           <label class="block md:col-span-2"><span class="form-label">Property or site address</span><input class="form-input" name="address" autocomplete="street-address" /></label>
-          <label class="block"><span class="form-label">Required date or desired start date</span><input class="form-input" name="desired_date" type="date" /></label>
+          <label class="block"><span class="form-label">Required service date or desired start date (if known)</span><input class="form-input" name="desired_date" type="date" /></label>
+          <fieldset id="property-dates" class="hidden md:col-span-2 grid gap-5 md:grid-cols-3">
+            <legend class="form-label md:col-span-3">Property deadlines (if applicable)</legend>
+            <label><span class="form-label">Check-out date</span><input class="form-input" name="checkout_date" type="date" disabled /></label>
+            <label><span class="form-label">Inspection date</span><input class="form-input" name="inspection_date" type="date" disabled /></label>
+            <label><span class="form-label">Move-in date</span><input class="form-input" name="move_in_date" type="date" disabled /></label>
+          </fieldset>
           <label class="block"><span class="form-label">Approximate size or area</span><input class="form-input" name="size" placeholder="For example 1,800 sq ft" /></label>
           <label id="frequency-field" class="hidden block"><span class="form-label">Frequency *</span><select class="form-input" name="frequency" disabled><option value="">Choose one</option></select></label>
           <label id="tupe-field" class="hidden block"><span class="form-label">Current cleaner / TUPE context</span><input class="form-input" name="tupe_context" placeholder="Current provider, team or not known" disabled /></label>
@@ -76,13 +85,14 @@ import Header from '../components/Header.astro';
           </label>
         </div>
 
-        <label class="mt-6 flex items-start gap-3 text-sm text-ink/70">
-          <input class="mt-1" type="checkbox" name="privacy_consent" value="yes" required />
-          <span>I agree that HQC may use these details to respond to this enquiry. See the <a href="/privacy-policy/">privacy policy</a>.</span>
+        <p class="mt-6 text-sm text-ink/70">By submitting this form, you acknowledge that High Quality Clean Ltd will use the information you provide to respond to and manage your enquiry. See our <a class="underline" href="/privacy-policy/">Privacy Policy</a>.</p>
+        <label class="mt-4 flex items-start gap-3 text-sm text-ink/70">
+          <input class="mt-1" type="checkbox" name="email_marketing_consent" value="yes" />
+          <span>I would like to receive occasional HQC offers and service updates by email. I can unsubscribe at any time.</span>
         </label>
 
         <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" role="status" aria-live="polite"></div>
-        <button id="quote-submit" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy transition hover:bg-navy hover:text-white" type="submit">Submit Your Requirement</button>
+        <button id="quote-submit" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy hover:bg-navy hover:text-white" type="submit">Submit Your Requirement</button>
       </form>
       <div class="mt-5 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3">
         <p class="text-sm text-ink/65">Not sure which route fits?</p>
@@ -99,10 +109,15 @@ import Header from '../components/Header.astro';
       help: 'Tell us the service, property condition, full address, access and parking details.',
       options: ['Essential Clean™ suitability', 'Deep Clean™', 'Move-In Reset™', 'End of Tenancy™', 'Post-Construction™', 'Other residential requirement']
     },
+    property: {
+      heading: 'Property or portfolio enquiry',
+      help: 'Tell us about the property, portfolio, access, timing and desired result.',
+      options: ['Communal Area Cleaning', 'Agency or Portfolio Support', 'Move-In and Void Property Cleaning', 'End of Tenancy™', 'Post-Construction™', 'Other property requirement']
+    },
     commercial: {
       heading: 'Commercial or managed-property enquiry',
       help: 'Tell us the site type, approximate area, hours, frequency, current provider and desired start date.',
-      options: ['Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Communal Area Cleaning', 'Agency or Portfolio Support', 'Move-In and Void Property Cleaning', 'Other professional requirement']
+      options: ['Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Other professional requirement']
     },
     complex: {
       heading: 'Complex-service assessment',
@@ -124,6 +139,16 @@ import Header from '../components/Header.astro';
       'post-construction': 'Post-Construction™',
       'post-construction-cleaning': 'Post-Construction™'
     },
+    property: {
+      communal: 'Communal Area Cleaning',
+      'communal-area': 'Communal Area Cleaning',
+      'communal-area-cleaning': 'Communal Area Cleaning',
+      portfolio: 'Agency or Portfolio Support',
+      void: 'Move-In and Void Property Cleaning',
+      'move-in-void': 'Move-In and Void Property Cleaning',
+      'end-of-tenancy': 'End of Tenancy™',
+      'post-construction': 'Post-Construction™'
+    },
     commercial: {
       office: 'Office Cleaning',
       'office-cleaning': 'Office Cleaning',
@@ -131,12 +156,6 @@ import Header from '../components/Header.astro';
       'commercial-cleaning': 'Commercial Cleaning',
       'commercial-deep': 'Commercial Deep Cleaning',
       'commercial-deep-cleaning': 'Commercial Deep Cleaning',
-      communal: 'Communal Area Cleaning',
-      'communal-area': 'Communal Area Cleaning',
-      'communal-area-cleaning': 'Communal Area Cleaning',
-      portfolio: 'Agency or Portfolio Support',
-      void: 'Move-In and Void Property Cleaning',
-      'move-in-void': 'Move-In and Void Property Cleaning'
     },
     complex: {
       office: 'Office or Workplace Project',
@@ -169,6 +188,8 @@ import Header from '../components/Header.astro';
   const initialService = pageUrl.searchParams.get('service')?.trim().toLowerCase() ?? '';
   const storedAttribution = (() => {
     try {
+      const preferences = JSON.parse(window.localStorage.getItem('hqc:cookie-preferences:v1') || 'null');
+      if (preferences?.analytics !== true) return {};
       const value = window.sessionStorage.getItem('hqc:attribution');
       return value ? JSON.parse(value) as { landingPage?: string; referrer?: string; utm?: Record<string, string> } : {};
     } catch {
@@ -203,7 +224,12 @@ import Header from '../components/Header.astro';
 
   function updateConditionalFields() {
     if (!routeInput || !service || !frequencyInput || !tupeInput || !operatingHoursInput || !mobilisationInput) return;
-    const isCommercial = routeInput.value === 'commercial';
+    const isProperty = routeInput.value === 'commercial' && ['property', 'agency'].includes((document.getElementById('buyer-context') as HTMLInputElement).value);
+    const isCommercial = routeInput.value === 'commercial' && !isProperty;
+    const hasPropertyDates = isProperty || /End of Tenancy|Move-In/.test(service.value);
+    const dates = document.getElementById('property-dates');
+    dates?.classList.toggle('hidden', !hasPropertyDates);
+    dates?.querySelectorAll('input').forEach((input) => { input.disabled = !hasPropertyDates; if (!hasPropertyDates) input.value = ''; });
     const isEssentialClean = routeInput.value === 'residential' && service.value === 'Essential Clean™ suitability';
     const needsFrequency = isCommercial || isEssentialClean;
     const frequencyOptions = isCommercial
@@ -230,7 +256,8 @@ import Header from '../components/Header.astro';
   function setRoute(route: keyof typeof routes, options: { updateUrl?: boolean; track?: boolean; requestedService?: string } = {}) {
     const config = routes[route];
     if (!config || !routeInput || !heading || !help || !service) return;
-    routeInput.value = route;
+    routeInput.value = route === 'property' ? 'commercial' : route;
+    setContextValue('buyer-context', route === 'property' ? (pageUrl.searchParams.get('buyer') === 'agency' ? 'agency' : 'property') : route === 'commercial' ? 'commercial' : route === 'residential' ? 'home' : 'complex');
     heading.textContent = config.heading;
     help.textContent = config.help;
     service.innerHTML = '<option value="">Choose one</option>' + config.options.map((item) => `<option>${item}</option>`).join('');
@@ -272,7 +299,9 @@ import Header from '../components/Header.astro';
   });
   service?.addEventListener('change', updateConditionalFields);
   const initial = pageUrl.searchParams.get('route');
-  setRoute(initial && initial in routes ? initial as keyof typeof routes : 'residential', {
+  const propertyService = ['communal', 'communal-area', 'communal-area-cleaning', 'portfolio', 'void', 'move-in-void'].includes(initialService);
+  const propertyBuyer = ['property', 'agency'].includes(pageUrl.searchParams.get('buyer') ?? '');
+  setRoute(initial === 'commercial' && (propertyBuyer || propertyService) ? 'property' : initial && initial in routes ? initial as keyof typeof routes : 'residential', {
     updateUrl: false,
     track: false,
     requestedService: initialService
@@ -293,29 +322,34 @@ import Header from '../components/Header.astro';
   });
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!submit || !message) return;
+    if (!submit || !message || submit.disabled) return;
     submit.disabled = true;
     submit.textContent = 'Sending…';
     message.className = 'mt-6 hidden rounded-lg p-4 text-sm';
     const payload = Object.fromEntries(new FormData(form).entries());
     try {
       const response = await fetch('/api/quote/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-      if (!response.ok) throw new Error('Submission failed');
       const responseBody = await response.json().catch(() => null);
+      if (!response.ok) {
+        const invalidField = form.elements.namedItem(responseBody?.field);
+        if (invalidField instanceof HTMLElement) invalidField.focus();
+        throw new Error('Submission failed');
+      }
       if (responseBody?.preview === true) {
         message.textContent = 'This preview does not send enquiries. Your requirement was not sent.';
         message.className = 'mt-6 rounded-lg bg-amber-50 p-4 text-sm text-amber-950';
         return;
       }
-      message.textContent = 'Thank you. Your requirement has been sent.';
+      if (responseBody?.ok !== true) throw new Error('Receipt not confirmed');
+      message.textContent = 'Thank you. Your enquiry has been received for HQC review. This is not a quotation, availability check or confirmed booking.';
       message.className = 'mt-6 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-900';
-      const selectedRoute = routeInput?.value as keyof typeof routes;
+      const selectedRoute = (tabs.find((tab) => tab.getAttribute('aria-selected') === 'true')?.dataset.route ?? 'residential') as keyof typeof routes;
       form.reset();
       populateContext();
       setRoute(selectedRoute in routes ? selectedRoute : 'residential', { updateUrl: false, track: false, requestedService: initialService });
-      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'form_submit', route: payload.route } }));
+      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'quote_submitted', route: payload.route, submission_id: responseBody.submission_id } }));
     } catch {
-      message.innerHTML = 'We could not send this form just now. Please call <a href="tel:+442088703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
+      message.innerHTML = 'We could not confirm receipt. Your details are still here. Before submitting again, please call <a href="tel:+442088703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
       message.className = 'mt-6 rounded-lg bg-red-50 p-4 text-sm text-red-900';
     } finally {
       submit.disabled = false;

@@ -1,0 +1,26 @@
+---
+import legal from '../data/phase8-legal.json';
+
+interface Props { kind: 'privacy' | 'terms'; }
+const { kind } = Astro.props;
+const blocks = legal[kind];
+---
+
+<main class="min-h-screen bg-porcelain px-5 pb-20 pt-32 text-midnight sm:px-8">
+  <article class="mx-auto max-w-4xl rounded-2xl bg-white p-6 shadow-sm sm:p-12">
+    <p class="section-kicker">High Quality Clean Ltd</p>
+    <h1 class="mt-4 font-serif text-4xl md:text-6xl">{kind === 'privacy' ? 'Privacy Policy' : 'Terms and Conditions of Service'}</h1>
+    <p class="mt-5 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Staging draft: company details, legal review date and production behavior must be verified before release.</p>
+    <div class="mt-10 space-y-5 text-base leading-7 text-slate">
+      {blocks.map((block) => (
+        block.kind === 'h2' ? <h2 class="pt-7 font-serif text-3xl text-midnight">{block.text}</h2> :
+        block.kind === 'h3' ? <h3 class="pt-4 text-xl font-semibold text-midnight">{block.text}</h3> :
+        block.kind === 'ul' ? <ul class="list-disc space-y-2 pl-6">{block.items.map((item) => <li>{item}</li>)}</ul> :
+        block.kind === 'table' ? <div class="overflow-x-auto"><table class="min-w-[720px] border-collapse text-left text-sm"><thead><tr>{block.rows[0].map((cell) => <th class="border border-midnight/20 bg-porcelain p-3">{cell}</th>)}</tr></thead><tbody>{block.rows.slice(1).map((row) => <tr>{row.map((cell) => <td class="border border-midnight/20 p-3 align-top">{cell}</td>)}</tr>)}</tbody></table></div> :
+        block.text === 'Link: Privacy Policy' ? <p><a class="underline" href="/privacy-policy/">Privacy Policy</a></p> :
+        block.text === 'Link: Manage Cookie Preferences' ? <p><a class="underline" href="#hqc-cookie-preferences" data-open-cookie-preferences>Manage Cookie Preferences</a></p> :
+        <p>{block.text}</p>
+      ))}
+    </div>
+  </article>
+</main>

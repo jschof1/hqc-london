@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import ConversionPrompt from '../components/ConversionPrompt.astro';
 import CookiePreferences from '../components/CookiePreferences.astro';
+import EssentialOfferPrompt from '../components/EssentialOfferPrompt.astro';
 
 import { Schema } from 'astro-seo-schema';
 
@@ -32,7 +33,7 @@ const canonicalPath = Astro.url?.pathname
   : '/';
 const canonicalUrl = new URL(canonicalPath, baseUrl).href;
 const isPagesPreviewBuild = process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH !== 'main';
-const isPreviewHost = isPagesPreviewBuild || Astro.url.hostname.endsWith('.pages.dev') || ['localhost', '127.0.0.1', '::1'].includes(Astro.url.hostname);
+const isPreviewHost = isPagesPreviewBuild || !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(Astro.url.hostname);
 const effectiveRobots = isPreviewHost ? 'noindex, nofollow, noarchive' : robots;
 const defaultImage = `${baseUrl}/images/luxury-home/hyde-park-apartment.webp`;
 const serviceAreaNames = ['London', 'Central London', 'West London', 'South West London', 'North London', 'East London'];
@@ -192,6 +193,8 @@ const schemaItem = {
       (() => {
         try {
           const storageKey = 'hqc:attribution';
+          const preferences = JSON.parse(window.localStorage.getItem('hqc:cookie-preferences:v1') || 'null');
+          if (preferences?.analytics !== true) { window.sessionStorage.removeItem(storageKey); return; }
           const currentUrl = new URL(window.location.href);
           const existing = JSON.parse(window.sessionStorage.getItem(storageKey) || '{}');
           const initialUtm = Object.fromEntries(
@@ -230,18 +233,30 @@ const schemaItem = {
     <ConversionPrompt />
     <Footer />
     <CookiePreferences allowAnalytics={!isPreviewHost} />
+    <EssentialOfferPrompt />
     <script src="/src/scripts/main.js"></script>
     <!-- The LeadConnector chat widget stays off until its attribution cookies and withdrawal controls are verified. -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       window.addEventListener('hqc:conversion', function(event) {
         const detail = event.detail || {};
+        if (!window.hqcCookiePreferences?.analytics || !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(window.location.hostname)) return;
         window.dataLayer.push(detail);
+        if (typeof window.gtag === 'function') {
+          // No PII and no fabricated booking completion: quote receipt is the only website lead event.
+          try {
+            window.gtag('event', detail.event === 'quote_submitted' ? 'generate_lead' : detail.event, {
+              route: detail.route, service: detail.service, placement: detail.placement,
+              submission_id: detail.submission_id
+            });
+          } catch { /* Optional measurement cannot block forms. */ }
+        }
         if (window.hqcCookiePreferences?.analytics && window.umami && typeof window.umami.track === 'function' && detail.event) {
-          window.umami.track(detail.event, detail);
+          try { window.umami.track(detail.event, detail); } catch { /* Analytics must not interrupt a customer journey. */ }
         }
       });
       document.addEventListener('click', function(event) {
+        if (!(event.target instanceof Element)) return;
         const link = event.target.closest('a[data-track], a[href^="tel:"], a[href*="wa.me"]');
         if (!link) return;
         const href = link.getAttribute('href') || '';

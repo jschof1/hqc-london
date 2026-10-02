@@ -50,17 +50,17 @@ const proofPoints = [
     <div class="trust-rail mt-12" data-trust-rail tabindex="0" aria-label="How HQC builds confidence before a clean">
       {proofPoints.map((point, index) => (
         <article class:list={['trust-rail-card', index === 0 && 'trust-rail-card-featured']}>
-          <span class="font-serif text-5xl text-copper">{point.number}</span>
+          <span class:list={['font-serif text-5xl', index === 0 ? 'text-copper' : 'text-copper-ink']}>{point.number}</span>
           <h3 class="mt-16 font-serif text-3xl font-medium leading-[1.02] text-midnight">{point.title}</h3>
           <p class="mt-5 leading-7 text-slate">{point.copy}</p>
-          <p class="mt-auto border-t border-midnight/10 pt-5 text-xs font-bold uppercase tracking-[.16em] text-midnight/60">{point.detail}</p>
+          <p class="mt-auto border-t border-midnight/10 pt-5 text-xs font-bold uppercase tracking-[.16em] text-slate">{point.detail}</p>
         </article>
       ))}
     </div>
 
     <div class="mt-8 flex flex-col justify-between gap-4 border-t border-midnight/10 pt-6 sm:flex-row sm:items-center">
       <p class="max-w-2xl text-sm leading-6 text-slate">Evidence is more useful when it is specific. Client names, reviews and logos are added only when their publication is approved.</p>
-      <a href="/reviews-case-studies/" class="font-bold text-midnight no-underline hover:text-copper">View project evidence <span aria-hidden="true">→</span></a>
+      <a href="/reviews-case-studies/" class="font-bold text-midnight no-underline hover:text-copper-ink">View project evidence <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -103,6 +103,8 @@ const proofPoints = [
     border-color: var(--color-midnight);
     background: var(--color-midnight);
   }
+
+  .trust-rail-card-featured:hover { background: var(--color-midnight); }
 
   .trust-rail-card-featured h3 { color: white; }
   .trust-rail-card-featured p { color: rgb(255 255 255 / .72); }

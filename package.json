@@ -13,7 +13,10 @@
     "generate:single": "node scripts/generate-area-pages.js single",
     "list": "node scripts/generate-area-pages.js list",
     "validate": "node scripts/generate-area-pages.js validate",
-    "help": "node scripts/generate-area-pages.js"
+    "help": "node scripts/generate-area-pages.js",
+    "test:forms:runtime": "node scripts/test-form-handlers.mjs",
+    "test:phase8:browser": "node scripts/test-phase8-browser.mjs",
+    "audit:phase8:seo": "node scripts/audit-phase8-seo.mjs"
   },
   "keywords": [
     "astro",
@@ -46,5 +49,10 @@
     "templates": "templates",
     "scripts": "scripts",
     "output": "areas"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "axe-core": "^4.13.0",
+    "esbuild": "0.25.10"
   }
 }
