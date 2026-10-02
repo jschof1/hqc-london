@@ -4,7 +4,7 @@ This records read-only checks of the current public/provider systems and subsequ
 
 ## Search Console and links baseline
 
-The current Search Console landing-page and limited Google Links baseline was recovered read-only. Detailed performance data, queries, account context and screenshots are retained in private local release evidence, excluded from this public repository. No search effect is attributed to staging changes; no location consolidation or deletion is authorised by this check. Full backlink export and current URL-level coverage remain separate checks.
+The current Search Console landing-page and limited Google Links baseline was recovered read-only. Detailed performance data, queries, account context and screenshots are retained in private local release evidence, excluded from this public repository. No search effect is attributed to staging changes; no location consolidation or deletion is authorised by this check. The follow-up in `SEO_ACCEPTANCE_2026-10-02.md` now records both available Google link exports and current priority-URL inspections. Raw exports remain private; Google’s limited export is not an exhaustive backlink database.
 
 ## Booking consent and technical destinations
 

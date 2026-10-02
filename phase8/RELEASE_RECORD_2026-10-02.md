@@ -8,6 +8,8 @@
 - Public site: https://highqualityclean.co.uk
 - Platform: Astro 5, Tailwind, Cloudflare Pages server adapter, GitHub branch deployments.
 
+Priority URL coverage, canonical selection and private link-export follow-up: [SEO acceptance](SEO_ACCEPTANCE_2026-10-02.md).
+
 Follow-up search, consent, contrast and keyboard evidence: [2 October follow-up](SEARCH_CONSENT_ACCESSIBILITY_2026-10-02.md). Isolated actual-handler test preparation and fixture identifiers are retained in private local release evidence.
 
 ## Website changes
@@ -75,7 +77,7 @@ Also preserve `submission_id`, source/UTMs where consent permits, consent yes/no
 | Analytics and cookies | Jack | Recover/configure correct GA4 property, verify consent-on/off and event receipt; reconcile provider pre-consent scripts and actual processor stack |
 | Legal/company/ICO | Pedro | Resolve production placeholders and sign off actual stack/company identity |
 | Brand/evidence | Pedro / Jack | Approved transparent logo, valid professional portrait, review/case-study provenance, photo/logo permissions; evidence for 300+ claim before showing it |
-| SEO | Jack | Baseline and deployed crawl recorded; preserve locations and linked targets; fuller backlink export and URL-level coverage inspection remain available follow-ups |
+| SEO | Jack | Google link exports and priority URL coverage/canonical checks now recorded privately; eleven live targets and four direct legacy redirects verified. Preserve locations/linked targets; review temporary discovery notes before acceptance or 5 October at 09:00 BST |
 | Device/accessibility/security | Jack | Remaining Edge and physical iOS/Android acceptance, broader Safari coverage and screen-reader review, HQC admin ownership/MFA evidence |
 | Backup/release | Jack + Pedro | Retain production deployment and external configuration recovery; complete controlled acceptance; obtain explicit production authorisation |
 
