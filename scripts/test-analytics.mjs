@@ -77,6 +77,15 @@ for (const engine of (process.env.HQC_TEST_ENGINES || 'chrome,firefox,webkit').s
    await page.evaluate(()=>window.dispatchEvent(new CustomEvent('hqc:cookie-preferences-updated')));await waitEvents();
    assert.equal(count('pageview'),1);
   });
+  await check('saved-consent visit waits for the applied initial route',async()=>{
+   const before=events.length;
+   await page.route('**/*request-a-quote.astro_astro_type_script*',async route=>{
+     await new Promise(resolve=>setTimeout(resolve,500)); await route.fallback();
+   });
+   await page.goto(stage+'/request-a-quote/?route=property',{waitUntil:'networkidle'});
+   await expect.poll(()=>events.slice(before).filter(e=>e.n==='quote_route_selected').map(e=>e.p.route)).toEqual(['property']);
+   await page.unroute('**/*request-a-quote.astro_astro_type_script*');
+  });
   await check('validation groups, route abandonment and reopened route',async()=>{
    await page.locator('[name="name"]').focus();
    await page.locator('#quote-submit').click();await waitEvents();

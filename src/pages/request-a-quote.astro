@@ -280,6 +280,10 @@ import Header from '../components/Header.astro';
       url.searchParams.set('route', route);
       window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
     }
+    // Analytics can load before or after this module; publish the applied route
+    // and leave a DOM handshake for returning visitors with saved consent.
+    document.getElementById('routed-quote-form')?.setAttribute('data-analytics-route-ready', route);
+    window.dispatchEvent(new CustomEvent('hqc:quote-route-ready', { detail: { route } }));
     if (options.track !== false) {
       window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'enquiry_route_selected', route } }));
     }

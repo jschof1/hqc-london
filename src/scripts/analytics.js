@@ -11,7 +11,6 @@ if (dataset(location.hostname)) {
   let lastActivity = 0;
   let lastTick = performance.now();
   let totalEvents = 0;
-  let selectedRoute = null;
   const formIds = { 'routed-quote-form': 'quote', 'contact-form': 'contact', 'feedback-form': 'feedback', 'discount-form': 'discount', 'quote-multi-step-form': 'legacy_quote' };
   const allowedNow = () => {
     try {
@@ -104,16 +103,24 @@ if (dataset(location.hostname)) {
     const key = `${state.attempts}:${step}:${reason}`;
     if (!state.validations.has(key)) { state.validations.add(key); send('form_validation', { ...state, step, reason }); }
   }, true);
+  function quoteRouteReady() {
+    if (!allowedNow()) return;
+    const form = document.getElementById('routed-quote-form');
+    const selected = form?.dataset.analyticsRouteReady;
+    if (!['residential', 'property', 'commercial', 'complex'].includes(selected)) return;
+    for (const previous of forms.values()) {
+      if (previous.form === 'quote' && previous.route !== selected && previous.started && !previous.finished && !previous.abandoned && !previous.pending) {
+        previous.abandoned = true;
+        send('form_abandoned', { ...previous, reason: 'route_changed' });
+      }
+    }
+    send('quote_route_selected', { route: selected }, `route:${selected}`);
+    const state = formState(form);
+    if (state?.service) send('quote_service_selected', state, `service:${state.route}:${state.service}`);
+  }
+  window.addEventListener('hqc:quote-route-ready', quoteRouteReady);
   window.addEventListener('hqc:conversion', event => {
     const detail = event.detail || {};
-    if (detail.event === 'enquiry_route_selected' && allowedNow()) {
-      const previous = forms.get(`quote:${selectedRoute}`);
-      if (previous?.started && !previous.finished && !previous.abandoned && !previous.pending && selectedRoute !== detail.route) {
-        previous.abandoned = true; send('form_abandoned', { ...previous, reason: 'route_changed' });
-      }
-      selectedRoute = detail.route;
-      send('quote_route_selected', { route: detail.route }, `route:${detail.route}`);
-    }
     if (detail.event === 'service_selector_result') send('service_selector_selected', { result: detail.result }, `selector:${detail.result}`);
     const offer = { essential_offer_impression: 'offer_impression', essential_offer_dismissal: 'offer_dismissed', essential_offer_cta_suitability: 'offer_clicked', essential_offer_cta_book: 'offer_clicked' };
     if (offer[detail.event]) send(offer[detail.event], { placement: 'offer' }, detail.event);
@@ -196,12 +203,7 @@ if (dataset(location.hostname)) {
       inFlight.clear(); forms.clear(); pendingForms.clear(); activeSeconds = 0; lastActivity = 0;
     } else {
       send('pageview', {}, 'pageview');
-      const quoteForm = document.getElementById('routed-quote-form');
-      if (quoteForm) {
-        selectedRoute = route(quoteForm); send('quote_route_selected', { route: selectedRoute }, `route:${selectedRoute}`);
-        const state = formState(quoteForm);
-        if (state?.service) send('quote_service_selected', state, `service:${state.route}:${state.service}`);
-      }
+      quoteRouteReady();
       if (pageType(safePath(location.pathname)) === 'booking') send('booking_page_viewed', {}, 'booking-page');
     }
     observeSections();
