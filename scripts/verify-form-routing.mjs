@@ -29,11 +29,11 @@ for (const [path, source, fields] of quickForms) {
 }
 
 const connectedForms = [
-  ['src/pages/contact.astro', '/api/quick-form/', ['name', 'email', 'phone', 'postcode', 'service', 'message', 'privacy_consent']],
+  ['src/pages/contact.astro', '/api/contact/', ['name', 'email', 'phone', 'postcode', 'service', 'message', 'email_marketing_consent']],
   ['src/pages/request-a-quote.astro', '/api/quote/', [
     'route', 'buyer', 'service', 'service_context', 'name', 'email', 'phone', 'postcode',
     'address', 'area', 'size', 'frequency', 'desired_date', 'details', 'operating_hours',
-    'mobilisation_requirements', 'tupe_context', 'privacy_consent', 'source_page',
+    'mobilisation_requirements', 'tupe_context', 'email_marketing_consent', 'source_page',
     'landing_page', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content',
     'utm_term', 'utm_id',
   ]],
@@ -62,35 +62,35 @@ for (const field of ['type', 'name', 'email', 'phone', 'message']) {
 expect(!offer.includes('Wire up your actual submission logic here'), 'Offer still contains placeholder submission logic');
 
 const main = await read('src/scripts/main.js');
-for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home'", "payload.type === 'commercial'", "CustomEvent('hqc:conversion'", '0208 870 3925']) {
+for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home'", "payload.type === 'commercial'", "CustomEvent('hqc:form-stage'", '0208 870 3925']) {
   expect(main.includes(required), `Shared form handler is missing: ${required}`);
 }
 
 const apiBindings = [
   ['src/pages/api/quick-form.ts', 'QUICK_FORM_WEBHOOK'],
+  ['src/pages/api/contact.ts', 'CONTACT_FORM_WEBHOOK'],
   ['src/pages/api/quote.ts', 'QUOTE_FORM_WEBHOOK'],
   ['src/pages/api/discount.ts', 'DISCOUNT_FORM_WEBHOOK'],
   ['src/pages/api/feedback.ts', 'FEEDBACK_WEBHOOK'],
 ];
 for (const [path, binding] of apiBindings) {
-  const sourceText = await read(path);
+  const sourceText = await read(path) + (['src/pages/api/contact.ts', 'src/pages/api/quote.ts', 'src/pages/api/feedback.ts'].includes(path) ? await read('src/lib/form-submission.ts') : '');
   expect(sourceText.includes(binding), `${path} must use ${binding}`);
   expect(sourceText.includes('body: JSON.stringify(body)'), `${path} must preserve the submitted JSON payload`);
   expect(sourceText.includes("isNonProductionRequest(request)"), `${path} must block webhook delivery from local and Pages preview hosts`);
 }
 
 const previewGuard = await read('src/lib/preview.ts');
-expect(previewGuard.includes("hostname.endsWith('.pages.dev')"), 'Preview guard must recognise Cloudflare Pages preview hosts');
+expect(previewGuard.includes("!['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(hostname)"), 'Only approved production hosts may deliver forms');
 expect(previewGuard.includes('status: 202'), 'Preview guard must return an accepted test response');
 
 const layout = await read('src/layouts/Layout.astro');
 expect(layout.includes("process.env.CF_PAGES_BRANCH !== 'main'"), 'Prerendered Pages preview routes must receive preview metadata from the deployment branch');
 expect(layout.includes("'noindex, nofollow, noarchive'"), 'Preview routes must not be indexed');
 
-const cookiePreferences = await read('src/components/CookiePreferences.astro');
-expect(cookiePreferences.includes("window.location.hostname.toLowerCase()"), 'Analytics consent must use the runtime hostname as a preview safety check');
-expect(cookiePreferences.includes("hostname.endsWith('.pages.dev')"), 'Analytics must remain disabled on Pages preview hosts even on prerendered routes');
-expect(cookiePreferences.includes('banner.dataset.analyticsAllowed === \'true\' && !runtimePreviewHost'), 'Analytics requires production build permission and a production runtime host');
+const analytics = await read('src/scripts/analytics-contract.js');
+expect(analytics.includes("host === previewDomain ? previewDomain : null"), 'Only the named preview receives isolated staging analytics; all other previews stay disabled');
+expect(analytics.includes("return 'highqualityclean.co.uk'"), 'Production analytics retains its separate property');
 
 if (failures.length) {
   console.error(`Form routing verification failed (${failures.length}):`);
@@ -98,4 +98,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log('Form routing verification passed for 4 repaired quick forms, discount offer, 5 existing form routes, shared handler, and 4 webhook bindings.');
+console.log('Form routing verification passed for 4 repaired quick forms, discount offer, 5 existing form routes, shared handler, and 5 webhook bindings.');

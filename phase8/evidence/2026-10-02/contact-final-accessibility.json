@@ -1,0 +1,1010 @@
+{
+  "testedAt": "2026-10-02T15:05:51.207Z",
+  "note": "Chrome keyboard and whole-document axe checks. 320/640px reflow and 200% CSS magnification simulate layout stress; actual browser UI zoom, screen reader and physical-device acceptance remain separate. Cross-origin iframe audit limitations are recorded. No submissions.",
+  "results": [
+    {
+      "path": "/contact/",
+      "keyboard": [
+        {
+          "index": 37,
+          "tag": "A",
+          "id": "",
+          "name": "High Quality Clean home",
+          "href": "/",
+          "rect": {
+            "x": 56,
+            "y": 18,
+            "w": 174.140625,
+            "h": 44
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 43,
+          "tag": "BUTTON",
+          "id": "property-menu-toggle",
+          "name": "Property & Facilities ⌄",
+          "href": null,
+          "rect": {
+            "x": 471.84375,
+            "y": 10,
+            "w": 139.421875,
+            "h": 60
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 51,
+          "tag": "BUTTON",
+          "id": "workplaces-menu-toggle",
+          "name": "Workplaces ⌄",
+          "href": null,
+          "rect": {
+            "x": 635.265625,
+            "y": 10,
+            "w": 87.390625,
+            "h": 60
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 58,
+          "tag": "BUTTON",
+          "id": "homes-menu-toggle",
+          "name": "Homes ⌄",
+          "href": null,
+          "rect": {
+            "x": 746.65625,
+            "y": 10,
+            "w": 57.671875,
+            "h": 60
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 65,
+          "tag": "A",
+          "id": "",
+          "name": "How It Works",
+          "href": "/how-we-work/",
+          "rect": {
+            "x": 828.328125,
+            "y": 30,
+            "w": 82.5625,
+            "h": 20
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 66,
+          "tag": "A",
+          "id": "",
+          "name": "Proof",
+          "href": "/reviews-case-studies/",
+          "rect": {
+            "x": 934.890625,
+            "y": 30,
+            "w": 34.90625,
+            "h": 20
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 67,
+          "tag": "A",
+          "id": "",
+          "name": "Contact",
+          "href": "/contact/",
+          "rect": {
+            "x": 993.796875,
+            "y": 30,
+            "w": 53.375,
+            "h": 20
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 68,
+          "tag": "A",
+          "id": "",
+          "name": "Request a Quote",
+          "href": "/request-a-quote/",
+          "rect": {
+            "x": 1071.171875,
+            "y": 20,
+            "w": 152.828125,
+            "h": 40
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 100,
+          "tag": "A",
+          "id": "",
+          "name": "Contact HQC",
+          "href": "#contact-methods",
+          "rect": {
+            "x": 128,
+            "y": 508,
+            "w": 149.625,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 101,
+          "tag": "A",
+          "id": "",
+          "name": "Request a Cleaning Quote",
+          "href": "/request-a-quote/",
+          "rect": {
+            "x": 293.625,
+            "y": 508,
+            "w": 242.5625,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 120,
+          "tag": "A",
+          "id": "",
+          "name": "Request a Cleaning Quote →",
+          "href": "/request-a-quote/",
+          "rect": {
+            "x": 969.484375,
+            "y": 810,
+            "w": 278.515625,
+            "h": 56
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 133,
+          "tag": "A",
+          "id": "",
+          "name": "0208 8703925",
+          "href": "tel:+442088703925",
+          "rect": {
+            "x": 57,
+            "y": 880.1875,
+            "w": 107.109375,
+            "h": 22
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 139,
+          "tag": "A",
+          "id": "",
+          "name": "sales@highqualityclean.co.uk",
+          "href": "mailto:sales@highqualityclean.co.uk",
+          "rect": {
+            "x": 367,
+            "y": 880.1875,
+            "w": 222.90625,
+            "h": 22
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 146,
+          "tag": "A",
+          "id": "",
+          "name": "Start a conversation",
+          "href": "https://wa.me/442088703925",
+          "rect": {
+            "x": 677,
+            "y": 800.1875,
+            "w": 152.140625,
+            "h": 22
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 157,
+          "tag": "A",
+          "id": "",
+          "name": "Instagram",
+          "href": "https://www.instagram.com/highqualitycleanltd",
+          "rect": {
+            "x": 520,
+            "y": 899.96875,
+            "w": 48,
+            "h": 48
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(255, 255, 255, 0.176) 0px 0px 0px 1.05235px"
+        },
+        {
+          "index": 159,
+          "tag": "A",
+          "id": "",
+          "name": "LinkedIn",
+          "href": "https://www.linkedin.com/company/high-quality-cleaning/",
+          "rect": {
+            "x": 584,
+            "y": 899.96875,
+            "w": 48,
+            "h": 48
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 161,
+          "tag": "A",
+          "id": "",
+          "name": "TikTok",
+          "href": "https://tiktok.com/@highqualityclean",
+          "rect": {
+            "x": 648,
+            "y": 827.96875,
+            "w": 48,
+            "h": 48
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 163,
+          "tag": "A",
+          "id": "",
+          "name": "Facebook",
+          "href": "https://www.facebook.com/highqualityclean",
+          "rect": {
+            "x": 712,
+            "y": 827.96875,
+            "w": 48,
+            "h": 48
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 191,
+          "tag": "INPUT",
+          "id": "",
+          "name": "name",
+          "href": null,
+          "rect": {
+            "x": 265,
+            "y": 843.96875,
+            "w": 363,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(205, 167, 107) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 194,
+          "tag": "INPUT",
+          "id": "",
+          "name": "email",
+          "href": null,
+          "rect": {
+            "x": 652,
+            "y": 843.96875,
+            "w": 363,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(205, 167, 107) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 198,
+          "tag": "INPUT",
+          "id": "",
+          "name": "phone",
+          "href": null,
+          "rect": {
+            "x": 265,
+            "y": 894.96875,
+            "w": 363,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(205, 167, 107) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 201,
+          "tag": "INPUT",
+          "id": "",
+          "name": "postcode",
+          "href": null,
+          "rect": {
+            "x": 652,
+            "y": 894.96875,
+            "w": 363,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(205, 167, 107) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 204,
+          "tag": "SELECT",
+          "id": "",
+          "name": "Select a topic... General Inquiry Existing Client Support Supplier or Subcontractor Enquir",
+          "href": null,
+          "rect": {
+            "x": 265,
+            "y": 863.96875,
+            "w": 750,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(205, 167, 107) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 214,
+          "tag": "TEXTAREA",
+          "id": "",
+          "name": "message",
+          "href": null,
+          "rect": {
+            "x": 265,
+            "y": 869.96875,
+            "w": 750,
+            "h": 170
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(205, 167, 107) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 216,
+          "tag": "A",
+          "id": "",
+          "name": "Privacy Policy",
+          "href": "/privacy-policy/",
+          "rect": {
+            "x": 501.109375,
+            "y": 871.96875,
+            "w": 85.859375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 218,
+          "tag": "INPUT",
+          "id": "",
+          "name": "email_marketing_consent",
+          "href": null,
+          "rect": {
+            "x": 265,
+            "y": 811.96875,
+            "w": 13,
+            "h": 13
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 221,
+          "tag": "BUTTON",
+          "id": "",
+          "name": "Send Message",
+          "href": null,
+          "rect": {
+            "x": 265,
+            "y": 851.96875,
+            "w": 200.953125,
+            "h": 58
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px"
+        },
+        {
+          "index": 239,
+          "tag": "A",
+          "id": "",
+          "name": "Contact HQC",
+          "href": "#contact-methods",
+          "rect": {
+            "x": 991.484375,
+            "y": 867.96875,
+            "w": 248.515625,
+            "h": 48
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(255, 255, 255, 0.97) 0px 0px 0px 5.81234px"
+        },
+        {
+          "index": 240,
+          "tag": "A",
+          "id": "",
+          "name": "Request a Cleaning Quote",
+          "href": "/request-a-quote/",
+          "rect": {
+            "x": 991.484375,
+            "y": 832.96875,
+            "w": 248.515625,
+            "h": 50
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+        },
+        {
+          "index": 241,
+          "tag": "A",
+          "id": "",
+          "name": "Check Areas We Cover",
+          "href": "/areas-we-cover/",
+          "rect": {
+            "x": 991.484375,
+            "y": 894.96875,
+            "w": 248.515625,
+            "h": 44
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 254,
+          "tag": "A",
+          "id": "",
+          "name": "High Quality Clean home",
+          "href": "/",
+          "rect": {
+            "x": 56,
+            "y": 826.96875,
+            "w": 208,
+            "h": 208
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 257,
+          "tag": "A",
+          "id": "",
+          "name": "Request a quote ↗",
+          "href": "/request-a-quote/",
+          "rect": {
+            "x": 1031.03125,
+            "y": 886.96875,
+            "w": 192.96875,
+            "h": 52
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 263,
+          "tag": "A",
+          "id": "",
+          "name": "0208 870 3925",
+          "href": "tel:+442088703925",
+          "rect": {
+            "x": 56,
+            "y": 852.96875,
+            "w": 309.578125,
+            "h": 28
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 264,
+          "tag": "A",
+          "id": "",
+          "name": "sales@highqualityclean.co.uk",
+          "href": "mailto:sales@highqualityclean.co.uk",
+          "rect": {
+            "x": 56,
+            "y": 892.96875,
+            "w": 309.578125,
+            "h": 20
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 267,
+          "tag": "A",
+          "id": "",
+          "name": "Instagram",
+          "href": "https://www.instagram.com/highqualitycleanltd/",
+          "rect": {
+            "x": 56,
+            "y": 891.359375,
+            "w": 17.5,
+            "h": 24
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 269,
+          "tag": "A",
+          "id": "",
+          "name": "LinkedIn",
+          "href": "https://www.linkedin.com/company/high-quality-cleaning/",
+          "rect": {
+            "x": 89.5,
+            "y": 891.359375,
+            "w": 17.5,
+            "h": 24
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 271,
+          "tag": "A",
+          "id": "",
+          "name": "TikTok",
+          "href": "https://www.tiktok.com/@highqualityclean",
+          "rect": {
+            "x": 123,
+            "y": 852.359375,
+            "w": 17.5,
+            "h": 24
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 277,
+          "tag": "A",
+          "id": "",
+          "name": "Property & Facilities",
+          "href": "/property-facilities-cleaning-london/",
+          "rect": {
+            "x": 413.578125,
+            "y": 729.96875,
+            "w": 126.984375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 279,
+          "tag": "A",
+          "id": "",
+          "name": "Commercial Cleaning",
+          "href": "/commercial-cleaning-london/",
+          "rect": {
+            "x": 413.578125,
+            "y": 766.96875,
+            "w": 137.046875,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 281,
+          "tag": "A",
+          "id": "",
+          "name": "Home Cleaning",
+          "href": "/home-cleaning-london/",
+          "rect": {
+            "x": 413.578125,
+            "y": 798.96875,
+            "w": 97.984375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 283,
+          "tag": "A",
+          "id": "",
+          "name": "Complex Services",
+          "href": "/complex-property-cleaning-london/",
+          "rect": {
+            "x": 413.578125,
+            "y": 843.96875,
+            "w": 115.140625,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 288,
+          "tag": "A",
+          "id": "",
+          "name": "About HQC",
+          "href": "/about-high-quality-clean/",
+          "rect": {
+            "x": 699.71875,
+            "y": 747.96875,
+            "w": 71.90625,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 290,
+          "tag": "A",
+          "id": "",
+          "name": "How We Work",
+          "href": "/how-we-work/",
+          "rect": {
+            "x": 699.71875,
+            "y": 783.96875,
+            "w": 86.921875,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 292,
+          "tag": "A",
+          "id": "",
+          "name": "Reviews & Case Studies",
+          "href": "/reviews-case-studies/",
+          "rect": {
+            "x": 699.71875,
+            "y": 815.96875,
+            "w": 153.328125,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 294,
+          "tag": "A",
+          "id": "",
+          "name": "Areas We Cover",
+          "href": "/areas-we-cover/",
+          "rect": {
+            "x": 699.71875,
+            "y": 848.96875,
+            "w": 101.09375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 296,
+          "tag": "A",
+          "id": "",
+          "name": "Contact",
+          "href": "/contact/",
+          "rect": {
+            "x": 699.71875,
+            "y": 880.96875,
+            "w": 53.375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 301,
+          "tag": "A",
+          "id": "",
+          "name": "FAQs",
+          "href": "/cleaning-faqs/",
+          "rect": {
+            "x": 985.859375,
+            "y": 753.96875,
+            "w": 32.984375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 303,
+          "tag": "A",
+          "id": "",
+          "name": "How Pricing Works",
+          "href": "/cleaning-prices-london/",
+          "rect": {
+            "x": 985.859375,
+            "y": 785.96875,
+            "w": 117.875,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 305,
+          "tag": "A",
+          "id": "",
+          "name": "Privacy Policy",
+          "href": "/privacy-policy/",
+          "rect": {
+            "x": 985.859375,
+            "y": 817.96875,
+            "w": 86.984375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 307,
+          "tag": "A",
+          "id": "",
+          "name": "Terms & Conditions",
+          "href": "/terms-and-conditions/",
+          "rect": {
+            "x": 985.859375,
+            "y": 849.96875,
+            "w": 125.375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "index": 309,
+          "tag": "A",
+          "id": "",
+          "name": "Cookie Preferences",
+          "href": "#hqc-cookie-preferences",
+          "rect": {
+            "x": 985.859375,
+            "y": 881.96875,
+            "w": 126.4375,
+            "h": 19
+          },
+          "visible": true,
+          "inViewport": true,
+          "outline": "solid",
+          "outlineWidth": "3px",
+          "boxShadow": "rgb(255, 255, 255) 0px 0px 0px 6px"
+        },
+        {
+          "tag": "BODY"
+        }
+      ],
+      "reflow": [
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "overflow": false,
+          "wideElements": []
+        },
+        {
+          "width": 640,
+          "scrollWidth": 640,
+          "overflow": false,
+          "wideElements": []
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "targets": [
+            [
+              "#property-menu-toggle"
+            ],
+            [
+              "#workplaces-menu-toggle"
+            ],
+            [
+              "#homes-menu-toggle"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#property-menu-toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "#workplaces-menu-toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "#homes-menu-toggle > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "h1"
+            ],
+            [
+              ".md\\:mt-4"
+            ],
+            [
+              ".bg-navy\\/50"
+            ],
+            [
+              ".gap-1\\.5.sm\\:gap-2.inline-flex:nth-child(1)"
+            ],
+            [
+              ".gap-1\\.5.sm\\:gap-2.inline-flex:nth-child(3)"
+            ],
+            [
+              ".gap-1\\.5.sm\\:gap-2.inline-flex:nth-child(5)"
+            ],
+            [
+              ".ml-2"
+            ]
+          ]
+        }
+      ],
+      "tests": [
+        "Tab navigation recorded without submission",
+        "Desktop dropdown keyboard entry and Escape focus return",
+        "Mobile menu keyboard open and Escape close"
+      ],
+      "errors": [],
+      "keyboardCycleAt": 52,
+      "zoom200": {
+        "scrollWidth": 1280,
+        "viewport": 1280,
+        "bodyWidth": 1280
+      }
+    }
+  ]
+}

@@ -8,6 +8,7 @@
     --color-porcelain: #f7f5ef;
     --color-gold: #cda76b;
     --color-copper: #d1a467;
+    --color-copper-ink: #805d2e; /* Text accent for white and pale surfaces. */
     --color-navy: #18363c;
     --color-midnight: #0e2a31;
     --color-night: #091f25;
@@ -49,8 +50,9 @@
   }
 
   :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-    outline: 3px solid var(--color-copper);
+    outline: 3px solid var(--color-midnight);
     outline-offset: 3px;
+    box-shadow: 0 0 0 6px white;
   }
 
   /* The third-party chat welcome card obscures most of a phone viewport. */
@@ -72,7 +74,7 @@
 
   .section-kicker,
   .meta-label {
-    @apply text-xs font-bold uppercase tracking-[0.22em] text-copper;
+    @apply text-xs font-bold uppercase tracking-[0.22em] text-copper-ink;
   }
 
   .section-title {
@@ -80,7 +82,7 @@
   }
 
   .button {
-    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full px-7 py-3.5 text-sm font-bold no-underline transition duration-300;
+    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full px-7 py-3.5 text-sm font-bold no-underline transition-transform duration-300;
   }
 
   .button-primary {
