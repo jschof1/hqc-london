@@ -231,6 +231,7 @@ const description = "We value your feedback. Please let us know about your exper
       data.timestamp = new Date().toISOString();
 
       try {
+        window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'feedback-form', stage: 'attempted' } }));
         const response = await fetch('/api/feedback/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -239,16 +240,19 @@ const description = "We value your feedback. Please let us know about your exper
 
         const result = await response.json().catch(() => null);
         if (response.ok && result?.preview === true) {
+          window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'feedback-form', stage: 'preview' } }));
           document.getElementById('feedback-status').textContent = 'This preview does not send feedback. Nothing was sent or published on Google.';
           return;
         }
         if (response.ok && result?.ok === true) {
+          window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'feedback-form', stage: 'receipt' } }));
           feedbackStep.classList.add('hidden');
           successStep.classList.remove('hidden');
         } else {
           throw new Error('Submission failed');
         }
       } catch (error) {
+        window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'feedback-form', stage: 'error' } }));
         console.error('Error submitting feedback:', error);
         const status = document.getElementById('feedback-status');
         status.textContent = 'We could not confirm receipt. Your feedback is still here. Please contact HQC before submitting again.';

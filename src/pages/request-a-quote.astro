@@ -328,27 +328,32 @@ import Header from '../components/Header.astro';
     message.className = 'mt-6 hidden rounded-lg p-4 text-sm';
     const payload = Object.fromEntries(new FormData(form).entries());
     try {
+      window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'routed-quote-form', stage: 'attempted' } }));
       const response = await fetch('/api/quote/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       const responseBody = await response.json().catch(() => null);
       if (!response.ok) {
+        if (response.status === 400 || response.status === 422) window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'routed-quote-form', stage: 'error', reason: 'server_validation' } }));
         const invalidField = form.elements.namedItem(responseBody?.field);
         if (invalidField instanceof HTMLElement) invalidField.focus();
         throw new Error('Submission failed');
       }
       if (responseBody?.preview === true) {
+        window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'routed-quote-form', stage: 'preview' } }));
         message.textContent = 'This preview does not send enquiries. Your requirement was not sent.';
         message.className = 'mt-6 rounded-lg bg-amber-50 p-4 text-sm text-amber-950';
         return;
       }
       if (responseBody?.ok !== true) throw new Error('Receipt not confirmed');
+      window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'routed-quote-form', stage: 'receipt' } }));
       message.textContent = 'Thank you. Your enquiry has been received for HQC review. This is not a quotation, availability check or confirmed booking.';
       message.className = 'mt-6 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-900';
       const selectedRoute = (tabs.find((tab) => tab.getAttribute('aria-selected') === 'true')?.dataset.route ?? 'residential') as keyof typeof routes;
       form.reset();
       populateContext();
       setRoute(selectedRoute in routes ? selectedRoute : 'residential', { updateUrl: false, track: false, requestedService: initialService });
-      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'quote_submitted', route: payload.route, submission_id: responseBody.submission_id } }));
+      // Receipt measurement is emitted above, before the form resets.
     } catch {
+      window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'routed-quote-form', stage: 'error' } }));
       message.innerHTML = 'We could not confirm receipt. Your details are still here. Before submitting again, please call <a href="tel:+442088703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
       message.className = 'mt-6 rounded-lg bg-red-50 p-4 text-sm text-red-900';
     } finally {

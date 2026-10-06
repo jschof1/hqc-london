@@ -246,7 +246,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const submitButton = this.querySelector('button[type="submit"]');
+        if (submitButton?.disabled) return;
         const originalButtonText = submitButton?.textContent;
+        const trackStage = (stage) => window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { form: this, stage } }));
         const status = this.querySelector('[data-hqc-status]') || document.createElement('p');
         status.dataset.hqcStatus = 'true';
         status.setAttribute('role', 'status');
@@ -271,6 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
         payload.timestamp = new Date().toISOString();
 
         try {
+          trackStage('attempted');
           const response = await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -281,15 +284,21 @@ document.addEventListener('DOMContentLoaded', function() {
             throw new Error(`Submission failed with status ${response.status}`);
           }
 
+          const result = await response.json().catch(() => null);
+          if (result?.preview === true) {
+            trackStage('preview');
+            status.textContent = 'This preview does not send enquiries. Nothing was sent.';
+            if (submitButton) { submitButton.disabled = false; submitButton.textContent = originalButtonText; }
+            return;
+          }
+          trackStage('receipt');
           status.classList.remove('text-red-700');
           status.classList.add('text-green-700');
           status.textContent = 'Thank you. Your enquiry has been received and our team will be in touch shortly.';
           this.reset();
           if (submitButton) submitButton.textContent = 'Enquiry sent';
-          window.dispatchEvent(new CustomEvent('hqc:conversion', {
-            detail: { endpoint, source: payload.source },
-          }));
         } catch (error) {
+          trackStage('error');
           console.error('HQC form submission failed:', error);
           status.classList.remove('text-green-700');
           status.classList.add('text-red-700');

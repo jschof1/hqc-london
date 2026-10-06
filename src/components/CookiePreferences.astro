@@ -1,16 +1,5 @@
----
-export interface Props {
-  allowAnalytics?: boolean;
-}
-
-const { allowAnalytics = false } = Astro.props;
-const measurementId = /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA4_MEASUREMENT_ID || '') ? import.meta.env.PUBLIC_GA4_MEASUREMENT_ID : '';
----
-
 <section
   id="hqc-cookie-banner"
-  data-ga4-id={measurementId}
-  data-analytics-allowed={allowAnalytics ? 'true' : 'false'}
   class="fixed inset-x-4 bottom-4 z-[90] mx-auto max-h-[calc(100dvh-2rem)] max-w-2xl overflow-y-auto rounded-2xl border border-copper/40 bg-night p-5 text-white shadow-2xl sm:p-7"
   role="region"
   aria-labelledby="hqc-cookie-banner-title"
@@ -104,10 +93,6 @@ const measurementId = /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA4_MEASUREMEN
       advertising: value?.advertising === true
     });
 
-    const hostname = window.location.hostname.toLowerCase();
-    const runtimePreviewHost = !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(hostname);
-    const analyticsAllowed = banner.dataset.analyticsAllowed === 'true' && !runtimePreviewHost;
-
     const readPreferences = () => {
       try {
         const saved = JSON.parse(window.localStorage.getItem(storageKey) || 'null');
@@ -126,53 +111,6 @@ const measurementId = /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA4_MEASUREMEN
       window.dispatchEvent(new CustomEvent('hqc:cookie-preferences-updated', { detail: window.hqcCookiePreferences }));
     };
 
-    const trackPageView = () => {
-      try {
-        if (preferences?.analytics && typeof window.umami?.track === 'function') window.umami.track();
-      } catch { /* Optional analytics cannot block consent or forms. */ }
-    };
-
-    const measurementId = banner.dataset.ga4Id || '';
-    const loadGa4 = () => {
-      if (!measurementId || !analyticsAllowed || !preferences?.analytics) return;
-      window['ga-disable-' + measurementId] = false;
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
-      if (document.querySelector('script[data-hqc-provider="ga4"]')) return;
-      window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
-      window.gtag('js', new Date());
-      window.gtag('config', measurementId, { send_page_view: true, allow_google_signals: false, allow_ad_personalization_signals: false });
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
-      script.dataset.hqcProvider = 'ga4';
-      document.head.appendChild(script);
-    };
-
-    const loadAnalytics = () => {
-      if (!analyticsAllowed || !preferences?.analytics) return;
-      loadGa4();
-
-      const existingScript = document.querySelector('script[data-hqc-provider="umami"]');
-      if (typeof window.umami?.track === 'function') {
-        trackPageView();
-        return;
-      }
-      if (existingScript) {
-        existingScript.addEventListener('load', trackPageView, { once: true });
-        return;
-      }
-
-      const script = document.createElement('script');
-      script.defer = true;
-      script.src = 'https://cloud.umami.is/script.js';
-      script.dataset.websiteId = '95c24898-5333-41ef-8fbf-a17bcac067af';
-      script.dataset.autoTrack = 'false';
-      script.dataset.hqcProvider = 'umami';
-      script.addEventListener('load', trackPageView, { once: true });
-      document.head.appendChild(script);
-    };
-
     const showBanner = () => {
       banner.hidden = false;
     };
@@ -188,7 +126,6 @@ const measurementId = /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA4_MEASUREMEN
         window.localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...updated }));
       } catch {
         preferences = normalise(null);
-        if (measurementId) window['ga-disable-' + measurementId] = true;
         exposePreferences();
         const message = 'Your choices could not be saved. Non-essential technologies will remain off.';
         if (bannerStatus) bannerStatus.textContent = message;
@@ -197,14 +134,12 @@ const measurementId = /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA4_MEASUREMEN
       }
 
       preferences = updated;
-      if (measurementId) window['ga-disable-' + measurementId] = !updated.analytics;
       if (!updated.analytics) {
         try { window.sessionStorage.removeItem('hqc:attribution'); } catch { /* Storage may be unavailable. */ }
       }
       exposePreferences();
       hideBanner();
       if (dialog.open) dialog.close();
-      if (updated.analytics) loadAnalytics();
       return true;
     };
 
@@ -253,7 +188,6 @@ const measurementId = /^G-[A-Z0-9]+$/.test(import.meta.env.PUBLIC_GA4_MEASUREMEN
     exposePreferences();
     if (preferences) {
       hideBanner();
-      loadAnalytics();
     } else {
       showBanner();
     }

@@ -232,39 +232,10 @@ const schemaItem = {
     <slot />
     <ConversionPrompt />
     <Footer />
-    <CookiePreferences allowAnalytics={!isPreviewHost} />
+    <CookiePreferences />
     <EssentialOfferPrompt />
     <script src="/src/scripts/main.js"></script>
     <!-- The LeadConnector chat widget stays off until its attribution cookies and withdrawal controls are verified. -->
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      window.addEventListener('hqc:conversion', function(event) {
-        const detail = event.detail || {};
-        if (!window.hqcCookiePreferences?.analytics || !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(window.location.hostname)) return;
-        window.dataLayer.push(detail);
-        if (typeof window.gtag === 'function') {
-          // No PII and no fabricated booking completion: quote receipt is the only website lead event.
-          try {
-            window.gtag('event', detail.event === 'quote_submitted' ? 'generate_lead' : detail.event, {
-              route: detail.route, service: detail.service, placement: detail.placement,
-              submission_id: detail.submission_id
-            });
-          } catch { /* Optional measurement cannot block forms. */ }
-        }
-        if (window.hqcCookiePreferences?.analytics && window.umami && typeof window.umami.track === 'function' && detail.event) {
-          try { window.umami.track(detail.event, detail); } catch { /* Analytics must not interrupt a customer journey. */ }
-        }
-      });
-      document.addEventListener('click', function(event) {
-        if (!(event.target instanceof Element)) return;
-        const link = event.target.closest('a[data-track], a[href^="tel:"], a[href*="wa.me"]');
-        if (!link) return;
-        const href = link.getAttribute('href') || '';
-        const eventName = link.dataset.track || (href.startsWith('tel:') ? 'phone_click' : 'whatsapp_click');
-        window.dispatchEvent(new CustomEvent('hqc:conversion', {
-          detail: { event: eventName, href, service: link.dataset.service || undefined }
-        }));
-      });
-    </script>
+    <script src="../scripts/analytics.js"></script>
   </body>
 </html>

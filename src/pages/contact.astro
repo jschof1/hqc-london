@@ -342,6 +342,7 @@ import HeroSection from '../components/HeroSection.astro';
             data.timestamp = new Date().toISOString();
 
             try {
+              window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'contact-form', stage: 'attempted' } }));
               const response = await fetch('/api/contact/', {
                 method: 'POST',
                 headers: {
@@ -354,6 +355,7 @@ import HeroSection from '../components/HeroSection.astro';
               if (!response.ok) throw new Error('Submission failed');
 
               if (result?.preview === true) {
+                window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'contact-form', stage: 'preview' } }));
                 document.getElementById('contact-preview-status')?.classList.remove('hidden');
                 document.getElementById('contact-preview-status')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 if (submitBtn) {
@@ -364,10 +366,12 @@ import HeroSection from '../components/HeroSection.astro';
               }
 
               if (result?.ok !== true) throw new Error('Receipt not confirmed');
+              window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'contact-form', stage: 'receipt' } }));
               form.style.display = 'none';
               successMessage.classList.remove('hidden');
               successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } catch (error) {
+              window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'contact-form', stage: 'error' } }));
               console.error('Error submitting form:', error);
               const errorMessage = document.getElementById('contact-error');
               if (errorMessage) {

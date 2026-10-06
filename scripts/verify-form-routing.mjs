@@ -62,7 +62,7 @@ for (const field of ['type', 'name', 'email', 'phone', 'message']) {
 expect(!offer.includes('Wire up your actual submission logic here'), 'Offer still contains placeholder submission logic');
 
 const main = await read('src/scripts/main.js');
-for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home'", "payload.type === 'commercial'", "CustomEvent('hqc:conversion'", '0208 870 3925']) {
+for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home'", "payload.type === 'commercial'", "CustomEvent('hqc:form-stage'", '0208 870 3925']) {
   expect(main.includes(required), `Shared form handler is missing: ${required}`);
 }
 
@@ -88,10 +88,9 @@ const layout = await read('src/layouts/Layout.astro');
 expect(layout.includes("process.env.CF_PAGES_BRANCH !== 'main'"), 'Prerendered Pages preview routes must receive preview metadata from the deployment branch');
 expect(layout.includes("'noindex, nofollow, noarchive'"), 'Preview routes must not be indexed');
 
-const cookiePreferences = await read('src/components/CookiePreferences.astro');
-expect(cookiePreferences.includes("window.location.hostname.toLowerCase()"), 'Analytics consent must use the runtime hostname as a preview safety check');
-expect(cookiePreferences.includes("!['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(hostname)"), 'Analytics must remain disabled on Pages preview hosts even on prerendered routes');
-expect(cookiePreferences.includes('banner.dataset.analyticsAllowed === \'true\' && !runtimePreviewHost'), 'Analytics requires production build permission and a production runtime host');
+const analytics = await read('src/scripts/analytics-contract.js');
+expect(analytics.includes("host === previewDomain ? previewDomain : null"), 'Only the named preview receives isolated staging analytics; all other previews stay disabled');
+expect(analytics.includes("return 'highqualityclean.co.uk'"), 'Production analytics retains its separate property');
 
 if (failures.length) {
   console.error(`Form routing verification failed (${failures.length}):`);

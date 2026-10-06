@@ -12,6 +12,9 @@ const engines = process.env.HQC_TEST_ENGINES?.split(',') || ['chrome', 'firefox'
 for (const engine of engines) {
   const browser = await (engine === 'firefox' ? firefox : ['webkit', 'iphone'].includes(engine) ? webkit : chromium).launch(engine === 'chrome' || engine === 'android' ? { channel: 'chrome' } : {});
   const context = await browser.newContext(engine === 'iphone' ? devices['iPhone 13'] : engine === 'android' ? devices['Pixel 7'] : { viewport: { width: 1440, height: 900 } });
+  // Regression tests must never write analytics or contact Launch27.
+  await context.route('https://analytics.aspectstudio.net/**', route => route.fulfill({ status: 202, body: '' }));
+  await context.route('https://highqualitycleanlimited.launch27.com/**', route => route.abort());
   const page = await context.newPage();
   const errors = [];
   const analyticsRequests = [];
@@ -19,7 +22,7 @@ for (const engine of engines) {
   page.on('response', response => {
     if (response.status() >= 400 && ['stylesheet', 'script', 'image'].includes(response.request().resourceType())) errors.push(`Asset HTTP ${response.status()}: ${response.url()}`);
   });
-  page.on('request', req => { if (/umami|google-analytics|googletagmanager/.test(req.url())) analyticsRequests.push(req.url()); });
+  page.on('request', req => { if (/umami|google-analytics|googletagmanager|analytics.aspectstudio.net/.test(req.url())) analyticsRequests.push(req.url()); });
   const record = { engine, version: browser.version(), tests: [], accessibility: [], errors };
   const check = async (name, fn) => { await fn(); record.tests.push(name); console.log(`PASS ${engine}: ${name}`); };
   const fillQuote = async () => {
@@ -98,7 +101,7 @@ for (const engine of engines) {
       await page.locator('#hqc-cookie-analytics').check();
       await page.getByRole('button', { name: 'Save Preferences', exact: true }).click();
       await expect(page.locator('#hqc-cookie-preferences')).not.toBeVisible();
-      expect(analyticsRequests).toEqual([]); // Even accepted optional tracking stays disabled on previews.
+      expect(analyticsRequests.filter(url => !url.startsWith('https://analytics.aspectstudio.net/'))).toEqual([]); // Named staging analytics are mocked above; no legacy trackers.
     });
     await check('booking provider failure leaves a usable fallback and no confirmation', async () => {
       await page.route('https://highqualitycleanlimited.launch27.com/**', route => route.abort());

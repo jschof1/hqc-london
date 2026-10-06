@@ -16,7 +16,8 @@
     "help": "node scripts/generate-area-pages.js",
     "test:forms:runtime": "node scripts/test-form-handlers.mjs",
     "test:phase8:browser": "node scripts/test-phase8-browser.mjs",
-    "audit:phase8:seo": "node scripts/audit-phase8-seo.mjs"
+    "audit:phase8:seo": "node scripts/audit-phase8-seo.mjs",
+    "test:analytics": "node scripts/test-analytics.mjs"
   },
   "keywords": [
     "astro",
