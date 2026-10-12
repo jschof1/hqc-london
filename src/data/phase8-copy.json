@@ -1262,19 +1262,19 @@
           },
           {
             "kind": "h3",
-            "text": "4. Confirm the booking"
+            "text": "4. Submit your booking request"
           },
           {
             "kind": "p",
-            "text": "Complete the property details, date and payment steps."
+            "text": "Enter the property details, preferred date and payment information. This submits a request for HQC to review."
           },
           {
             "kind": "h3",
-            "text": "5. We prepare the team"
+            "text": "5. HQC reviews and confirms"
           },
           {
             "kind": "p",
-            "text": "The booking information is used to prepare the cleaner for the agreed service."
+            "text": "HQC checks suitability and availability, allocates a cleaner and collects any required deposit or payment before sending confirmation."
           }
         ]
       },

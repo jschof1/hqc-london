@@ -619,7 +619,7 @@
     },
     {
       "kind": "p",
-      "text": "A booking becomes confirmed only when HQC completes the applicable confirmation process, which may include acceptance of a quotation, required booking information, deposit or payment where applicable, written confirmation from HQC or successful online booking confirmation."
+      "text": "A booking becomes confirmed only when HQC has reviewed the request, allocated cleaner(s), completed any required deposit or payment collection and sent its confirmation email. Providing booking or payment details, or creating an Automaid record, does not itself confirm the booking or mean that payment has been collected."
     },
     {
       "kind": "p",
