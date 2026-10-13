@@ -1,0 +1,110 @@
+[
+  {
+    "engine": "chrome",
+    "check": "consent gates, initial property route, repeated consent deduplication"
+  },
+  {
+    "engine": "chrome",
+    "check": "saved-consent visit waits for the applied initial route"
+  },
+  {
+    "engine": "chrome",
+    "check": "validation groups, route abandonment and reopened route"
+  },
+  {
+    "engine": "chrome",
+    "check": "four quote routes keep customer values out of analytics"
+  },
+  {
+    "engine": "chrome",
+    "check": "malformed success and server validation are errors; explicit receipt only once"
+  },
+  {
+    "engine": "chrome",
+    "check": "contact and private feedback no-send stages"
+  },
+  {
+    "engine": "chrome",
+    "check": "discount redirects to offer; retained discount handler fixture separates previews"
+  },
+  {
+    "engine": "chrome",
+    "check": "FAQ, scroll, page exit and consent withdrawal"
+  },
+  {
+    "engine": "chrome",
+    "check": "booking page and fallback do not claim a booking"
+  },
+  {
+    "engine": "firefox",
+    "check": "consent gates, initial property route, repeated consent deduplication"
+  },
+  {
+    "engine": "firefox",
+    "check": "saved-consent visit waits for the applied initial route"
+  },
+  {
+    "engine": "firefox",
+    "check": "validation groups, route abandonment and reopened route"
+  },
+  {
+    "engine": "firefox",
+    "check": "four quote routes keep customer values out of analytics"
+  },
+  {
+    "engine": "firefox",
+    "check": "malformed success and server validation are errors; explicit receipt only once"
+  },
+  {
+    "engine": "firefox",
+    "check": "contact and private feedback no-send stages"
+  },
+  {
+    "engine": "firefox",
+    "check": "discount redirects to offer; retained discount handler fixture separates previews"
+  },
+  {
+    "engine": "firefox",
+    "check": "FAQ, scroll, page exit and consent withdrawal"
+  },
+  {
+    "engine": "firefox",
+    "check": "booking page and fallback do not claim a booking"
+  },
+  {
+    "engine": "webkit",
+    "check": "consent gates, initial property route, repeated consent deduplication"
+  },
+  {
+    "engine": "webkit",
+    "check": "saved-consent visit waits for the applied initial route"
+  },
+  {
+    "engine": "webkit",
+    "check": "validation groups, route abandonment and reopened route"
+  },
+  {
+    "engine": "webkit",
+    "check": "four quote routes keep customer values out of analytics"
+  },
+  {
+    "engine": "webkit",
+    "check": "malformed success and server validation are errors; explicit receipt only once"
+  },
+  {
+    "engine": "webkit",
+    "check": "contact and private feedback no-send stages"
+  },
+  {
+    "engine": "webkit",
+    "check": "discount redirects to offer; retained discount handler fixture separates previews"
+  },
+  {
+    "engine": "webkit",
+    "check": "FAQ, scroll, page exit and consent withdrawal"
+  },
+  {
+    "engine": "webkit",
+    "check": "booking page and fallback do not claim a booking"
+  }
+]

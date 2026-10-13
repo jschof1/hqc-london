@@ -39,11 +39,11 @@
     },
     {
       "kind": "p",
-      "text": "Company number: [CONFIRM BEFORE PUBLICATION]"
+      "text": "Company number: 13213121"
     },
     {
       "kind": "p",
-      "text": "Registered office: [CONFIRM BEFORE PUBLICATION]"
+      "text": "Registered office: 9 Swanage Road, London, England, SW18 2DZ"
     },
     {
       "kind": "p",
@@ -655,6 +655,10 @@
     },
     {
       "kind": "p",
+      "text": "Automaid records booking requests and payment details. HQC decides whether and when to collect any applicable deposit or payment. Recording payment details does not itself mean payment has been collected. The 50% deposit for bookings over £400 is service-dependent, is not a universal requirement and does not automatically apply to Essential Clean™. HQC will confirm the payment terms applicable to the service."
+    },
+    {
+      "kind": "p",
       "text": "HQC may withhold confirmation or suspend future work where amounts that are properly due remain unpaid, subject to applicable law and contract terms."
     },
     {
@@ -1248,7 +1252,7 @@
     },
     {
       "kind": "p",
-      "text": "Registered office: [CONFIRM BEFORE PUBLICATION]"
+      "text": "Registered office: 9 Swanage Road, London, England, SW18 2DZ"
     }
   ]
 }

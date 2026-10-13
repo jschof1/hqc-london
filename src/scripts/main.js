@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const staggerTargets = document.querySelectorAll('.grid, .gallery-grid, .area-grid, .service-grid');
   staggerTargets.forEach(target => {
     // Keep form controls and enquiry tabs visible during validation and route changes.
-    if (target.closest('form') || target.getAttribute('role') === 'tablist') return;
+    if (target.closest('form, dialog, [role=dialog]') || target.getAttribute('role') === 'tablist') return;
     staggerObserver.observe(target);
   });
 
@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       const newStaggerTargets = document.querySelectorAll('.grid:not(.stagger-children), .gallery-grid:not(.stagger-children), .area-grid:not(.stagger-children), .service-grid:not(.stagger-children)');
       newStaggerTargets.forEach(target => {
+        if (target.closest('form, dialog, [role=dialog]') || target.getAttribute('role') === 'tablist') return;
         staggerObserver.observe(target);
       });
 
@@ -163,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Separate initialization functions for reuse
   function initializeAnchorLinks() {
     // Remove existing listeners to prevent duplicates
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const anchorLinks = document.querySelectorAll('a[href^="#"]:not([data-open-cookie-preferences])');
     
     anchorLinks.forEach(link => {
       // Clone node to remove all event listeners
