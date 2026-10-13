@@ -1,0 +1,2183 @@
+{
+  "sourceCommit": "4301fe213d1f9ef90fb1fe106c15821625fd715d",
+  "sourceDate": "2026-05-07",
+  "deploymentId": "700cf0af-c68e-4059-b144-2b78e5628b41",
+  "deploymentStatus": "success",
+  "method": "Server-rendered historical production source. Only canonical origin adapted for local reconstruction; external scripts and forms not run.",
+  "pages": [
+    {
+      "path": "/",
+      "resolvedPath": "/",
+      "status": 200,
+      "title": "Luxury Cleaning Services London | High Quality Clean",
+      "h1": "Where Profound Care Meets Perfected Detail",
+      "images": [
+        {
+          "src": "/images/areas/mayfair.webp",
+          "alt": "Luxury living room interior",
+          "section": "Where Profound Care Meets Perfected Detail",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/bark.png",
+          "alt": "Bark",
+          "section": "Where Profound Care Meets Perfected Detail",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/yell.png",
+          "alt": "Yell",
+          "section": "Where Profound Care Meets Perfected Detail",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=48&h=48&fit=crop&crop=face&q=80",
+          "alt": "Neylan - satisfied client",
+          "section": "Page image",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=48&h=48&fit=crop&crop=face&q=80",
+          "alt": "Myreete - satisfied client",
+          "section": "Page image",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=face&q=80",
+          "alt": "Lucy - satisfied client",
+          "section": "Page image",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face&q=80",
+          "alt": "Ozlem - satisfied client",
+          "section": "Page image",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face&q=80",
+          "alt": "Tawfeeq - satisfied client",
+          "section": "Page image",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/london.jpg",
+          "alt": "London map showing luxury neighborhoods",
+          "section": "Areas We Serve",
+          "anchor": "areas",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "/images/areas/belgravia.webp",
+          "alt": "Belgravia luxury Georgian architecture",
+          "section": "Areas We Serve",
+          "anchor": "areas",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "/images/areas/chelsea.webp",
+          "alt": "Chelsea luxury townhouses and tree-lined streets",
+          "section": "Areas We Serve",
+          "anchor": "areas",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "/images/areas/kensington.webp",
+          "alt": "Kensington elegant Victorian mansions",
+          "section": "Areas We Serve",
+          "anchor": "areas",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "/images/areas/belgravia.webp",
+          "alt": "Belgravia",
+          "section": "Areas We Serve",
+          "anchor": "areas",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/areas/chelsea.webp",
+          "alt": "Chelsea",
+          "section": "Areas We Serve",
+          "anchor": "areas",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/areas/kensington.webp",
+          "alt": "Kensington",
+          "section": "Areas We Serve",
+          "anchor": "areas",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/pedro.jpg",
+          "alt": "Pedro - Founder and luxury service expert",
+          "section": "Meet Pedro",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "https://placehold.co/100x100/",
+          "alt": "Subtle linen texture",
+          "section": "Our Assurances",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Kitchen deep clean transformation",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Marble restoration before and after",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 19
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Living room detail cleaning",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 20
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Bathroom refresh transformation",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 21
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Bedroom sanctuary cleaning",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 22
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Office space refresh",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 23
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1622015663319-e97e697503ee?q=80&w=1600&auto=format&fit=crop",
+          "alt": "",
+          "section": "Page image",
+          "anchor": "",
+          "kind": "section",
+          "position": 24
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 25
+        }
+      ]
+    },
+    {
+      "path": "/areas/",
+      "resolvedPath": "/areas/",
+      "status": 200,
+      "title": "Luxury Cleaners Across London & Surrey | High Quality Clean",
+      "h1": "London's Premier Areas. Our Specialty.",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
+          "alt": "London skyline with luxury neighborhoods and prestigious areas",
+          "section": "London's Premier Areas. Our Specialty.",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/areas/mayfair.webp",
+          "alt": "Mayfair elegant Georgian architecture and luxury properties",
+          "section": "Mayfair",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/areas/belgravia.webp",
+          "alt": "Belgravia white stucco terraced houses and garden squares",
+          "section": "Belgravia",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/areas/knightsbridge.webp",
+          "alt": "Knightsbridge luxury shopping district and Hyde Park views",
+          "section": "Knightsbridge",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/areas/kensington.webp",
+          "alt": "Kensington Royal Borough museums and elegant Victorian architecture",
+          "section": "Kensington",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/areas/chelsea.webp",
+          "alt": "Chelsea riverside luxury properties and historic charm",
+          "section": "Chelsea",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/areas/notting-hill.webp",
+          "alt": "Notting Hill colorful Victorian houses and charming streets",
+          "section": "Notting Hill",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/areas/holland-park.webp",
+          "alt": "Holland Park elegant Victorian houses and park views",
+          "section": "Holland Park",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/areas/hampstead.webp",
+          "alt": "Hampstead Heath village atmosphere and luxury homes",
+          "section": "Hampstead",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "/images/areas/highgate.webp",
+          "alt": "Highgate historic village and panoramic London views",
+          "section": "Highgate",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "/images/areas/primrose-hill.webp",
+          "alt": "Primrose Hill trendy neighborhood with Regent's Park views",
+          "section": "Primrose Hill",
+          "anchor": "",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "/images/areas/st-johns-wood.webp",
+          "alt": "St John's Wood elegant residential area with Lord's Cricket Ground",
+          "section": "St John's Wood",
+          "anchor": "",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "/images/areas/battersea.webp",
+          "alt": "Clapham and Battersea riverside modern developments",
+          "section": "Clapham & Battersea",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/areas/wandsworth-town.webp",
+          "alt": "Wandsworth Common green spaces and family properties",
+          "section": "Wandsworth",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/areas/weybridge.webp",
+          "alt": "Weybridge St Georges Hill luxury properties",
+          "section": "Weybridge",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/areas/hersham.webp",
+          "alt": "Hersham Burwood Park family properties",
+          "section": "Hersham",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "/images/areas/walton-on-thames.webp",
+          "alt": "Walton-on-Thames Ashley Park riverside properties",
+          "section": "Walton-on-Thames",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        }
+      ]
+    },
+    {
+      "path": "/case-studies/",
+      "resolvedPath": "/case-studies/",
+      "status": 200,
+      "title": "Cleaning Case Studies & Gallery | High Quality Clean London",
+      "h1": "Case Studies & Gallery",
+      "images": [
+        {
+          "src": "/images/luxury-home/luxury-home-1.jpg",
+          "alt": "Luxury home interior showcase",
+          "section": "Case Studies & Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/before-after/transformation-mayfair-improved.png",
+          "alt": "Kitchen before deep cleaning - showing daily wear and accumulated grime",
+          "section": "Featured Transformation",
+          "anchor": "featured-case",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/before-after/transformation-mayfair.png",
+          "alt": "Kitchen after comprehensive cleaning - gleaming surfaces and pristine finish",
+          "section": "Featured Transformation",
+          "anchor": "featured-case",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=60&h=60&fit=crop&crop=faces&q=80",
+          "alt": "Lady Catherine Pemberton",
+          "section": "Featured Transformation",
+          "anchor": "featured-case",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop&crop=center&q=80",
+          "alt": "Pristine kitchen with gleaming marble countertops",
+          "section": "Featured Transformation",
+          "anchor": "featured-case",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop&crop=center&q=80",
+          "alt": "Elegant living room with restored period features",
+          "section": "Featured Transformation",
+          "anchor": "featured-case",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=400&h=300&fit=crop&crop=center&q=80",
+          "alt": "Luxurious bathroom with gleaming fixtures",
+          "section": "Featured Transformation",
+          "anchor": "featured-case",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxury kitchen with pristine marble surfaces and professional-grade appliances",
+          "section": "Mayfair Penthouse Kitchen",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "Modern kitchen island with gleaming quartz countertops",
+          "section": "Chelsea Townhouse",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Spa-like bathroom with immaculate fixtures and surfaces",
+          "section": "Belgravia Master Bath",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "/images/luxury-home/luxurious-kensington-ensuite.png",
+          "alt": "Luxury bathroom vanity with spotless mirror and fixtures",
+          "section": "Kensington Ensuite",
+          "anchor": "",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "/images/luxury-home/richmond-living-room.png",
+          "alt": "Elegant living room with pristine upholstery and polished surfaces",
+          "section": "Knightsbridge Drawing Room",
+          "anchor": "",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "/images/luxury-home/mayfair-home-hallway.png",
+          "alt": "Modern living space with immaculate glass surfaces and furniture",
+          "section": "Mayfair Apartment",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/luxury-home/belgravia-stonework.png",
+          "alt": "Pristine Georgian townhouse exterior with cleaned stonework",
+          "section": "Belgravia Townhouse",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "Chelsea mews house with spotless exterior details",
+          "section": "Chelsea Mews",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Contemporary kitchen with pristine stainless steel appliances",
+          "section": "Hyde Park Apartment",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=380&fit=crop&crop=center&q=80",
+          "alt": "Luxury bedroom with immaculate linens and surfaces",
+          "section": "Mayfair Master Suite",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face&q=80",
+          "alt": "Lord James Ashworth",
+          "section": "Lord James Ashworth",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=60&h=60&fit=crop&crop=face&q=80",
+          "alt": "Victoria Sterling",
+          "section": "Victoria Sterling",
+          "anchor": "",
+          "kind": "img",
+          "position": 19
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face&q=80",
+          "alt": "Marcus Chen",
+          "section": "Marcus Chen",
+          "anchor": "",
+          "kind": "img",
+          "position": 20
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 21
+        }
+      ]
+    },
+    {
+      "path": "/client-success-stories/",
+      "resolvedPath": "/client-success-stories/",
+      "status": 200,
+      "title": "Client Success Stories \u2014 High Quality Clean London",
+      "h1": "Client Success Stories",
+      "images": [
+        {
+          "src": "/images/luxury-home/luxury-home-1.jpg",
+          "alt": "Luxury home interior showcasing pristine cleaning results",
+          "section": "Client Success Stories",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "path": "/contact/",
+      "resolvedPath": "/contact/",
+      "status": 200,
+      "title": "Contact High Quality Clean | Luxury London Cleaners",
+      "h1": "Get in Touch",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1600&h=900&fit=crop&auto=format&q=80",
+          "alt": "Professional cleaning service team ready to help with luxury home cleaning",
+          "section": "Get in Touch",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "path": "/disclaimer/",
+      "resolvedPath": "/disclaimer/",
+      "status": 200,
+      "title": "Third Party Disclaimer | High Quality Clean",
+      "h1": "Third Party Disclaimer",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=600&fit=crop&auto=format&q=80",
+          "alt": "Elegant home interior inviting viewers to experience total calm through professional cleaning services",
+          "section": "Ready for Total Calm?",
+          "anchor": "final-cta",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "path": "/discount/",
+      "resolvedPath": "/discount/",
+      "status": 200,
+      "title": "30% Introductory Rate | High Quality Clean",
+      "h1": "Claim Your 30% Rate",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=900&fit=crop&auto=format&q=80",
+          "alt": "",
+          "section": "Page image",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "path": "/faq/",
+      "resolvedPath": "/faq/",
+      "status": 200,
+      "title": "FAQ | High Quality Clean",
+      "h1": "/faq/",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "path": "/feedback/",
+      "resolvedPath": "/feedback/",
+      "status": 200,
+      "title": "Feedback | High Quality Clean",
+      "h1": "How did we do today?",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "path": "/locations/london/battersea/",
+      "resolvedPath": "/locations/london/battersea/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/battersea/",
+      "h1": "/locations/london/battersea/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/belgravia/",
+      "resolvedPath": "/locations/london/belgravia/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/belgravia/",
+      "h1": "/locations/london/belgravia/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/chelsea/",
+      "resolvedPath": "/locations/london/chelsea/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/chelsea/",
+      "h1": "/locations/london/chelsea/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/clapham/",
+      "resolvedPath": "/locations/london/clapham/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/clapham/",
+      "h1": "/locations/london/clapham/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/hampstead/",
+      "resolvedPath": "/locations/london/hampstead/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/hampstead/",
+      "h1": "/locations/london/hampstead/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/highgate/",
+      "resolvedPath": "/locations/london/highgate/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/highgate/",
+      "h1": "/locations/london/highgate/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/holland-park/",
+      "resolvedPath": "/locations/london/holland-park/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/holland-park/",
+      "h1": "/locations/london/holland-park/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/kensington/",
+      "resolvedPath": "/locations/london/kensington/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/kensington/",
+      "h1": "/locations/london/kensington/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/knightsbridge/",
+      "resolvedPath": "/locations/london/knightsbridge/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/knightsbridge/",
+      "h1": "/locations/london/knightsbridge/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/mayfair/",
+      "resolvedPath": "/locations/london/mayfair/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/mayfair/",
+      "h1": "/locations/london/mayfair/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/notting-hill/",
+      "resolvedPath": "/locations/london/notting-hill/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/notting-hill/",
+      "h1": "/locations/london/notting-hill/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/primrose-hill/",
+      "resolvedPath": "/locations/london/primrose-hill/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/primrose-hill/",
+      "h1": "/locations/london/primrose-hill/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/st-johns-wood/",
+      "resolvedPath": "/locations/london/st-johns-wood/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/st-johns-wood/",
+      "h1": "/locations/london/st-johns-wood/",
+      "images": []
+    },
+    {
+      "path": "/locations/london/wandsworth/",
+      "resolvedPath": "/locations/london/wandsworth/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/wandsworth/",
+      "h1": "/locations/london/wandsworth/",
+      "images": []
+    },
+    {
+      "path": "/locations/surrey/hersham/",
+      "resolvedPath": "/locations/surrey/hersham/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/surrey/hersham/",
+      "h1": "/locations/surrey/hersham/",
+      "images": []
+    },
+    {
+      "path": "/locations/surrey/walton-on-thames/",
+      "resolvedPath": "/locations/surrey/walton-on-thames/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/surrey/walton-on-thames/",
+      "h1": "/locations/surrey/walton-on-thames/",
+      "images": []
+    },
+    {
+      "path": "/locations/surrey/weybridge/",
+      "resolvedPath": "/locations/surrey/weybridge/",
+      "status": 200,
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/surrey/weybridge/",
+      "h1": "/locations/surrey/weybridge/",
+      "images": []
+    },
+    {
+      "path": "/offer/",
+      "resolvedPath": "/offer/",
+      "status": 200,
+      "title": "Offer | High Quality Clean",
+      "h1": "30% Introductory Rate for Your First Month",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "",
+          "section": "30% Introductory Rate for Your First Month",
+          "anchor": "",
+          "kind": "div",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "",
+          "section": "Trusted by clients who value consistency and control",
+          "anchor": "",
+          "kind": "div",
+          "position": 2
+        },
+        {
+          "src": "/images/services/office-cleaning/office-cleaning-1.webp",
+          "alt": "",
+          "section": "Trusted by clients who value consistency and control",
+          "anchor": "",
+          "kind": "div",
+          "position": 3
+        },
+        {
+          "src": "/images/before-after/transformation-mayfair-improved.png",
+          "alt": "",
+          "section": "Project & Specialist Cleaning Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 4
+        },
+        {
+          "src": "/images/services/airbnb/airbnb-1.webp",
+          "alt": "",
+          "section": "Project & Specialist Cleaning Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/luxury-home-1.jpg",
+          "alt": "",
+          "section": "Project & Specialist Cleaning Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 6
+        },
+        {
+          "src": "/images/services/concierge-laundry/concierge-laundry-1.webp",
+          "alt": "",
+          "section": "Specialist Add-On Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "",
+          "section": "Specialist Add-On Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 8
+        },
+        {
+          "src": "/images/luxury-home/richmond-living-room.png",
+          "alt": "",
+          "section": "Specialist Add-On Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 9
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "",
+          "section": "Specialist Add-On Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 10
+        },
+        {
+          "src": "/images/luxury-home/Chelsea-Outside.png",
+          "alt": "",
+          "section": "Specialist Add-On Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 11
+        },
+        {
+          "src": "/images/before-after/after.jpg",
+          "alt": "",
+          "section": "Specialist Add-On Services",
+          "anchor": "",
+          "kind": "div",
+          "position": 12
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        }
+      ]
+    },
+    {
+      "path": "/privacy-policy/",
+      "resolvedPath": "/privacy-policy/",
+      "status": 200,
+      "title": "Privacy Policy | High Quality Clean",
+      "h1": "Privacy Policy",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "path": "/process/",
+      "resolvedPath": "/process/",
+      "status": 200,
+      "title": "Our Cleaning Process | High Quality Clean London",
+      "h1": "A Curated Process. Calm, By Design.",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
+          "alt": "Luxury home interior with professional cleaning service",
+          "section": "A Curated Process. Calm, By Design.",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+          "alt": "Professional consultation discussing luxury home cleaning needs",
+          "section": "1. Initial Consultation",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+          "alt": "Bespoke service planning and product selection for luxury homes",
+          "section": "2. Tailored Service Design",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+          "alt": "Professional cleaning team preparation and briefing",
+          "section": "3. Team Assignment & Preparation",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+          "alt": "Professional cleaning service delivery in luxury home",
+          "section": "4. Service Delivery",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+          "alt": "Quality assurance inspection and documentation",
+          "section": "5. Quality Assurance",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+          "alt": "Ongoing luxury home maintenance and relationship management",
+          "section": "6. Ongoing Relationship",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+          "alt": "Belgravia luxury townhouse marble restoration and styling",
+          "section": "Process In Action",
+          "anchor": "stories",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+          "alt": "Chelsea luxury apartment textile care and aromatherapy service",
+          "section": "Process In Action",
+          "anchor": "stories",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+          "alt": "Kensington residence allergen-free deep cleaning service",
+          "section": "Process In Action",
+          "anchor": "stories",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+          "alt": "Mayfair penthouse brass and glass restoration perfection",
+          "section": "Process In Action",
+          "anchor": "stories",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+          "alt": "",
+          "section": "Process In Action",
+          "anchor": "stories",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+          "alt": "",
+          "section": "Process In Action",
+          "anchor": "stories",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
+          "alt": "Luxury linen texture background",
+          "section": "Calm Guaranteed\u2122",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        }
+      ]
+    },
+    {
+      "path": "/quote/",
+      "resolvedPath": "/quote/",
+      "status": 200,
+      "title": "Request a Luxury Cleaning Quote | High Quality Clean London",
+      "h1": "Request Your Personalised Quote",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "path": "/services/",
+      "resolvedPath": "/services/",
+      "status": 200,
+      "title": "Luxury Cleaning Services in London | High Quality Clean",
+      "h1": "All Your Cleaning Needs Covered",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&h=900&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Luxury home interior showcase",
+          "section": "All Your Cleaning Needs Covered",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Kitchen deep clean transformation",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Marble restoration before and after",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Living room detail cleaning",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Bathroom refresh transformation",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Bedroom sanctuary cleaning",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Office space refresh",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/pedro.jpg",
+          "alt": "Pedro, founder of High Quality Clean",
+          "section": "Pedro's Vision",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=600&fit=crop&auto=format&q=80",
+          "alt": "Elegant home interior inviting viewers to experience total calm through professional cleaning services",
+          "section": "Ready for Total Calm?",
+          "anchor": "final-cta",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        }
+      ]
+    },
+    {
+      "path": "/services/airbnb-cleaning/",
+      "resolvedPath": "/services/airbnb-cleaning/",
+      "status": 200,
+      "title": "Airbnb Cleaning & Turnover Service London | High Quality Clean",
+      "h1": "Airbnb Cleaning Service London: 5-Star Turnovers",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxury cleaning transformation",
+          "section": "Guest Expectations are Higher Than Ever",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Step 1: Timely Arrival",
+          "section": "The Airbnb Turnover Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Step 2: Damage & Theft Check",
+          "section": "The Airbnb Turnover Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 3: Hotel-Style Bed Making",
+          "section": "The Airbnb Turnover Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 4: Spa Bathroom Reset",
+          "section": "The Airbnb Turnover Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 5: Staging & Photos",
+          "section": "The Airbnb Turnover Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 6: Restocking Essentials",
+          "section": "The Airbnb Turnover Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Professional cleaning results",
+          "section": "Why Hosts Love Us",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/services/airbnb-turnover/airbnb-turnover-1.webp",
+          "alt": "Staged bedroom",
+          "section": "Gallery: Guest-Ready Properties",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "/images/services/airbnb-turnover/airbnb-turnover-2.webp",
+          "alt": "Clean kitchen",
+          "section": "Gallery: Guest-Ready Properties",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "/images/services/airbnb-turnover/airbnb-turnover-3.webp",
+          "alt": "Sanitized bathroom",
+          "section": "Gallery: Guest-Ready Properties",
+          "anchor": "",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "/images/services/airbnb-turnover/airbnb-turnover-4.webp",
+          "alt": "Living room setup",
+          "section": "Gallery: Guest-Ready Properties",
+          "anchor": "",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "/images/services/airbnb-turnover/airbnb-turnover-5.webp",
+          "alt": "Turnover team",
+          "section": "Gallery: Guest-Ready Properties",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/services/airbnb-turnover/airbnb-turnover-6.webp",
+          "alt": "Welcome pack",
+          "section": "Gallery: Guest-Ready Properties",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Customer testimonial showcase",
+          "section": "Host Success Stories",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Special offer highlight",
+          "section": "New Host Offer",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "FAQ support visual",
+          "section": "FAQ: Airbnb Cleaning",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        }
+      ]
+    },
+    {
+      "path": "/services/carpet-cleaning/",
+      "resolvedPath": "/services/carpet-cleaning/",
+      "status": 200,
+      "title": "Professional Carpet Cleaning London | High Quality Clean",
+      "h1": "Professional Carpet Cleaning in London",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxury cleaning transformation",
+          "section": "Your Carpets Deserve More Than Just a Clean",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Step 1: Expert Assessment",
+          "section": "Our Premium Carpet Cleaning Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Step 2: Deep Extraction",
+          "section": "Our Premium Carpet Cleaning Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 3: Protective Finish",
+          "section": "Our Premium Carpet Cleaning Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Professional cleaning results",
+          "section": "Why Choose Our Carpet Cleaning Service?",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Customer testimonial showcase",
+          "section": "What Our Clients Say",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Special offer highlight",
+          "section": "Special Introductory Offer",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "FAQ support visual",
+          "section": "Common Questions",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        }
+      ]
+    },
+    {
+      "path": "/services/deep-cleaning/",
+      "resolvedPath": "/services/deep-cleaning/",
+      "status": 200,
+      "title": "Deep Cleaning Service London | High Quality Clean",
+      "h1": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxury cleaning transformation",
+          "section": "Is Your Current 'Deep Clean' Actually Deep?",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Step 1: Comprehensive Home Assessment",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Step 2: Top-to-Bottom Hygiene Reset",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 3: Air Quality & Wellness Focus",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 4: Sanitization of High-Touch Areas",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 5: Fabric & Upholstery Refresh",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 6: Final White-Glove Inspection",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Professional cleaning results",
+          "section": "Why Choose Our Deep House Cleaning Service?",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/services/well-clean/well-clean-1.webp",
+          "alt": "Kitchen deep clean transformation",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "/images/services/well-clean/well-clean-2.webp",
+          "alt": "Bathroom sanitization and limescale removal",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "/images/services/well-clean/well-clean-3.webp",
+          "alt": "Living area dust-free perfection",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "anchor": "",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "/images/services/well-clean/well-clean-4.webp",
+          "alt": "Bedroom deep clean for better sleep",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "anchor": "",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "/images/services/well-clean-advisory/gallery-1.jpg",
+          "alt": "Detailed corner and skirting board cleaning",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/services/well-clean-advisory/gallery-2.jpg",
+          "alt": "Eco-friendly product application",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Customer testimonial showcase",
+          "section": "What Londoners Say About Our Deep Cleaning",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Special offer highlight",
+          "section": "Spring Clean Special Offer",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "FAQ support visual",
+          "section": "Common Questions About Deep Cleaning",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        }
+      ]
+    },
+    {
+      "path": "/services/end-of-tenancy-cleaning/",
+      "resolvedPath": "/services/end-of-tenancy-cleaning/",
+      "status": 200,
+      "title": "End of Tenancy Cleaning London | High Quality Clean",
+      "h1": "End of Tenancy Cleaning London for a Smoother Move-Out",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxury cleaning transformation",
+          "section": "A Detailed Clean for the Moments That Matter",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Step 1: Kitchen Deep Clean",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Step 2: Bathroom Deep Clean and Sanitisation",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 3: Bedrooms, Living Areas and Hallways",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 4: Floors and Final Presentation",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Professional cleaning results",
+          "section": "Why Clients Choose High Quality Clean",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Customer testimonial showcase",
+          "section": "Who This Service Is For",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Special offer highlight",
+          "section": "Optional Add-Ons",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "FAQ support visual",
+          "section": "Frequently Asked Questions",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        }
+      ]
+    },
+    {
+      "path": "/services/ironing-and-laundry/",
+      "resolvedPath": "/services/ironing-and-laundry/",
+      "status": 200,
+      "title": "Ironing & Laundry Service London | High Quality Clean",
+      "h1": "Ironing & Laundry Service: Specialist Fabric Care in London",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxury cleaning transformation",
+          "section": "Is Your Wardrobe Getting the Care It Deserves?",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Step 1: Expert Fabric Assessment",
+          "section": "Our Premium Laundry & Ironing Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Step 2: Wellness-Grade Cleaning",
+          "section": "Our Premium Laundry & Ironing Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 3: Artisan Hand Ironing",
+          "section": "Our Premium Laundry & Ironing Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 4: Boutique Packaging",
+          "section": "Our Premium Laundry & Ironing Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 5: Convenient Logistics",
+          "section": "Our Premium Laundry & Ironing Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 6: Quality Guarantee",
+          "section": "Our Premium Laundry & Ironing Process",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Professional cleaning results",
+          "section": "Why Londoners Choose Our Laundry Service",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/services/concierge-laundry/concierge-laundry-1.webp",
+          "alt": "Perfectly pressed shirts",
+          "section": "Immaculate Results for Your Wardrobe",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "/images/services/concierge-laundry/concierge-laundry-2.webp",
+          "alt": "Delicate cashmere care",
+          "section": "Immaculate Results for Your Wardrobe",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "/images/services/concierge-laundry/concierge-laundry-3.webp",
+          "alt": "Luxury packaging presentation",
+          "section": "Immaculate Results for Your Wardrobe",
+          "anchor": "",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "/images/services/concierge-laundry/concierge-laundry-4.webp",
+          "alt": "Silk dress finishing",
+          "section": "Immaculate Results for Your Wardrobe",
+          "anchor": "",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "/images/services/concierge-laundry/concierge-laundry-5.webp",
+          "alt": "Suit steam pressing",
+          "section": "Immaculate Results for Your Wardrobe",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/services/concierge-laundry/concierge-laundry-6.webp",
+          "alt": "Laundry collection service",
+          "section": "Immaculate Results for Your Wardrobe",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Customer testimonial showcase",
+          "section": "Client Reviews",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Special offer highlight",
+          "section": "First Order Offer",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "FAQ support visual",
+          "section": "FAQ: Ironing & Laundry",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        }
+      ]
+    },
+    {
+      "path": "/services/office-cleaning/",
+      "resolvedPath": "/services/office-cleaning/",
+      "status": 200,
+      "title": "Office Cleaning Services London | High Quality Clean",
+      "h1": "Office Cleaning Services London: Premium Commercial Cleaning",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxury cleaning transformation",
+          "section": "A Clean Office is Good for Business",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Step 1: Workstation Hygiene",
+          "section": "Our Office Cleaning Standards",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Step 2: Common Area Maintenance",
+          "section": "Our Office Cleaning Standards",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 3: Washroom Sanitization",
+          "section": "Our Office Cleaning Standards",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 4: Waste Management",
+          "section": "Our Office Cleaning Standards",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 5: Reception & Boardroom",
+          "section": "Our Office Cleaning Standards",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Step 6: Secure Protocols",
+          "section": "Our Office Cleaning Standards",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Professional cleaning results",
+          "section": "Commercial Cleaning You Can Rely On",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/services/office-cleaning-services/office-cleaning-services-1.webp",
+          "alt": "Boardroom ready for business",
+          "section": "Pristine Professional Spaces",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "/images/services/office-cleaning-services/office-cleaning-services-2.webp",
+          "alt": "Spotless reception desk",
+          "section": "Pristine Professional Spaces",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "/images/services/office-cleaning-services/office-cleaning-services-3.webp",
+          "alt": "Clean open plan office",
+          "section": "Pristine Professional Spaces",
+          "anchor": "",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "/images/services/office-cleaning-services/office-cleaning-services-4.webp",
+          "alt": "Executive office clean",
+          "section": "Pristine Professional Spaces",
+          "anchor": "",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "/images/services/office-cleaning-services/office-cleaning-services-5.webp",
+          "alt": "Office kitchen cleaning",
+          "section": "Pristine Professional Spaces",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/services/office-cleaning-services/office-cleaning-services-6.webp",
+          "alt": "Commercial cleaning team",
+          "section": "Pristine Professional Spaces",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Customer testimonial showcase",
+          "section": "Trusted by London Businesses",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Special offer highlight",
+          "section": "New Contract Offer",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+          "alt": "FAQ support visual",
+          "section": "FAQ: Office Cleaning",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        }
+      ]
+    },
+    {
+      "path": "/terms-and-conditions/",
+      "resolvedPath": "/terms-and-conditions/",
+      "status": 200,
+      "title": "Terms and Conditions | High Quality Clean",
+      "h1": "Terms and Conditions",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=600&fit=crop&auto=format&q=80",
+          "alt": "Elegant home interior inviting viewers to experience total calm through professional cleaning services",
+          "section": "Ready for Total Calm?",
+          "anchor": "final-cta",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "path": "/why-us/",
+      "resolvedPath": "/why-us/",
+      "status": 200,
+      "title": "Why Choose High Quality Clean | Wellness-Grade London Cleaning",
+      "h1": "Beyond Clean. Total Calm.",
+      "images": [
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Luxurious modern living room with pristine cleaning showcasing elegant furniture and spotless surfaces",
+          "section": "Beyond Clean. Total Calm.",
+          "anchor": "",
+          "kind": "img",
+          "position": 1
+        },
+        {
+          "src": "/images/brand-logos/chestertons.webp",
+          "alt": "Chestertons",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 2
+        },
+        {
+          "src": "/images/brand-logos/lowlu.webp",
+          "alt": "Lowlu",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 3
+        },
+        {
+          "src": "/images/brand-logos/young-guns.webp",
+          "alt": "Young Guns",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 4
+        },
+        {
+          "src": "/images/brand-logos/Knight-Frank.webp",
+          "alt": "Knight Frank",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 5
+        },
+        {
+          "src": "/images/brand-logos/Marsh-and-Parsons.webp",
+          "alt": "Marsh & Parsons",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 6
+        },
+        {
+          "src": "/images/brand-logos/Sostrene-Grene.png",
+          "alt": "S\u00f8strene Grene",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 7
+        },
+        {
+          "src": "/images/brand-logos/Generate-UK.png",
+          "alt": "Generate UK",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 8
+        },
+        {
+          "src": "/images/brand-logos/Lux.webp",
+          "alt": "London Lux Property",
+          "section": "Trusted by Leading Brands",
+          "anchor": "",
+          "kind": "img",
+          "position": 9
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&h=600&fit=crop&auto=format&q=80",
+          "alt": "Professional cleaning supplies and eco-friendly products arranged neatly showcasing wellness-grade cleaning protocols",
+          "section": "1. Wellness Cleaning Protocols",
+          "anchor": "",
+          "kind": "img",
+          "position": 10
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop&auto=format&q=80",
+          "alt": "Professional cleaning staff member in uniform providing discreet, concierge-level service in an elegant home",
+          "section": "2. Concierge-Level Care",
+          "anchor": "",
+          "kind": "img",
+          "position": 11
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=800&h=600&fit=crop&auto=format&q=80",
+          "alt": "Close-up of marble surface being carefully cleaned with specialised tools showcasing technical expertise",
+          "section": "3. Technical Consulting",
+          "anchor": "",
+          "kind": "img",
+          "position": 12
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop&auto=format&q=80",
+          "alt": "Serene, perfectly cleaned living space with natural light creating a calm, peaceful atmosphere",
+          "section": "4. Emotional Outcomes",
+          "anchor": "",
+          "kind": "img",
+          "position": 13
+        },
+        {
+          "src": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+          "alt": "Kitchen deep clean transformation",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 14
+        },
+        {
+          "src": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+          "alt": "Marble restoration before and after",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 15
+        },
+        {
+          "src": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+          "alt": "Living room detail cleaning",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 16
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Bathroom refresh transformation",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 17
+        },
+        {
+          "src": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+          "alt": "Bedroom sanctuary cleaning",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 18
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Office space refresh",
+          "section": "Transformation Gallery",
+          "anchor": "",
+          "kind": "img",
+          "position": 19
+        },
+        {
+          "src": "/images/pedro.jpg",
+          "alt": "Pedro, founder of High Quality Clean, professional portrait in business attire",
+          "section": "Pedro's Vision",
+          "anchor": "",
+          "kind": "img",
+          "position": 20
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=600&fit=crop&auto=format&q=80",
+          "alt": "Elegant home interior inviting viewers to experience total calm through professional cleaning services",
+          "section": "Ready for Total Calm?",
+          "anchor": "final-cta",
+          "kind": "img",
+          "position": 21
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+          "alt": "Granite texture",
+          "section": "Footer",
+          "anchor": "",
+          "kind": "img",
+          "position": 22
+        }
+      ]
+    }
+  ]
+}

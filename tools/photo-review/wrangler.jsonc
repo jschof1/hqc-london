@@ -1,0 +1,12 @@
+{
+  "name": "hqc-photo-review",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-06",
+  "account_id": "1d7541992ccacf0931ee0e385daa5e08",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{"pattern":"review.highqualityclean.co.uk","custom_domain":true}],
+  "assets": {"directory":"./public","binding":"ASSETS","run_worker_first":true},
+  "durable_objects":{"bindings":[{"name":"REVIEW","class_name":"PhotoReview"}]},
+  "migrations":[{"tag":"v1","new_sqlite_classes":["PhotoReview"]}]
+}

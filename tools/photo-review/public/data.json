@@ -1,0 +1,4801 @@
+{
+  "snapshot": "7 May 2026",
+  "sourceCommit": "4301fe213d1f9ef90fb1fe106c15821625fd715d",
+  "deploymentId": "700cf0af-c68e-4059-b144-2b78e5628b41",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Luxury Cleaning Services London | High Quality Clean",
+      "h1": "Where Profound Care Meets Perfected Detail"
+    },
+    {
+      "path": "/areas/",
+      "title": "Luxury Cleaners Across London & Surrey | High Quality Clean",
+      "h1": "London's Premier Areas. Our Specialty."
+    },
+    {
+      "path": "/case-studies/",
+      "title": "Cleaning Case Studies & Gallery | High Quality Clean London",
+      "h1": "Case Studies & Gallery"
+    },
+    {
+      "path": "/client-success-stories/",
+      "title": "Client Success Stories \u2014 High Quality Clean London",
+      "h1": "Client Success Stories"
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact High Quality Clean | Luxury London Cleaners",
+      "h1": "Get in Touch"
+    },
+    {
+      "path": "/disclaimer/",
+      "title": "Third Party Disclaimer | High Quality Clean",
+      "h1": "Third Party Disclaimer"
+    },
+    {
+      "path": "/discount/",
+      "title": "30% Introductory Rate | High Quality Clean",
+      "h1": "Claim Your 30% Rate"
+    },
+    {
+      "path": "/faq/",
+      "title": "FAQ | High Quality Clean",
+      "h1": "/faq/"
+    },
+    {
+      "path": "/feedback/",
+      "title": "Feedback | High Quality Clean",
+      "h1": "How did we do today?"
+    },
+    {
+      "path": "/locations/london/battersea/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/battersea/",
+      "h1": "/locations/london/battersea/"
+    },
+    {
+      "path": "/locations/london/belgravia/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/belgravia/",
+      "h1": "/locations/london/belgravia/"
+    },
+    {
+      "path": "/locations/london/chelsea/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/chelsea/",
+      "h1": "/locations/london/chelsea/"
+    },
+    {
+      "path": "/locations/london/clapham/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/clapham/",
+      "h1": "/locations/london/clapham/"
+    },
+    {
+      "path": "/locations/london/hampstead/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/hampstead/",
+      "h1": "/locations/london/hampstead/"
+    },
+    {
+      "path": "/locations/london/highgate/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/highgate/",
+      "h1": "/locations/london/highgate/"
+    },
+    {
+      "path": "/locations/london/holland-park/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/holland-park/",
+      "h1": "/locations/london/holland-park/"
+    },
+    {
+      "path": "/locations/london/kensington/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/kensington/",
+      "h1": "/locations/london/kensington/"
+    },
+    {
+      "path": "/locations/london/knightsbridge/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/knightsbridge/",
+      "h1": "/locations/london/knightsbridge/"
+    },
+    {
+      "path": "/locations/london/mayfair/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/mayfair/",
+      "h1": "/locations/london/mayfair/"
+    },
+    {
+      "path": "/locations/london/notting-hill/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/notting-hill/",
+      "h1": "/locations/london/notting-hill/"
+    },
+    {
+      "path": "/locations/london/primrose-hill/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/primrose-hill/",
+      "h1": "/locations/london/primrose-hill/"
+    },
+    {
+      "path": "/locations/london/st-johns-wood/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/st-johns-wood/",
+      "h1": "/locations/london/st-johns-wood/"
+    },
+    {
+      "path": "/locations/london/wandsworth/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/london/wandsworth/",
+      "h1": "/locations/london/wandsworth/"
+    },
+    {
+      "path": "/locations/surrey/hersham/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/surrey/hersham/",
+      "h1": "/locations/surrey/hersham/"
+    },
+    {
+      "path": "/locations/surrey/walton-on-thames/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/surrey/walton-on-thames/",
+      "h1": "/locations/surrey/walton-on-thames/"
+    },
+    {
+      "path": "/locations/surrey/weybridge/",
+      "title": "Redirecting to: http://127.0.0.1:43918/locations/surrey/weybridge/",
+      "h1": "/locations/surrey/weybridge/"
+    },
+    {
+      "path": "/offer/",
+      "title": "Offer | High Quality Clean",
+      "h1": "30% Introductory Rate for Your First Month"
+    },
+    {
+      "path": "/privacy-policy/",
+      "title": "Privacy Policy | High Quality Clean",
+      "h1": "Privacy Policy"
+    },
+    {
+      "path": "/process/",
+      "title": "Our Cleaning Process | High Quality Clean London",
+      "h1": "A Curated Process. Calm, By Design."
+    },
+    {
+      "path": "/quote/",
+      "title": "Request a Luxury Cleaning Quote | High Quality Clean London",
+      "h1": "Request Your Personalised Quote"
+    },
+    {
+      "path": "/services/",
+      "title": "Luxury Cleaning Services in London | High Quality Clean",
+      "h1": "All Your Cleaning Needs Covered"
+    },
+    {
+      "path": "/services/airbnb-cleaning/",
+      "title": "Airbnb Cleaning & Turnover Service London | High Quality Clean",
+      "h1": "Airbnb Cleaning Service London: 5-Star Turnovers"
+    },
+    {
+      "path": "/services/carpet-cleaning/",
+      "title": "Professional Carpet Cleaning London | High Quality Clean",
+      "h1": "Professional Carpet Cleaning in London"
+    },
+    {
+      "path": "/services/deep-cleaning/",
+      "title": "Deep Cleaning Service London | High Quality Clean",
+      "h1": "Deep House Cleaning Service: London's Most Thorough Spring Clean"
+    },
+    {
+      "path": "/services/end-of-tenancy-cleaning/",
+      "title": "End of Tenancy Cleaning London | High Quality Clean",
+      "h1": "End of Tenancy Cleaning London for a Smoother Move-Out"
+    },
+    {
+      "path": "/services/ironing-and-laundry/",
+      "title": "Ironing & Laundry Service London | High Quality Clean",
+      "h1": "Ironing & Laundry Service: Specialist Fabric Care in London"
+    },
+    {
+      "path": "/services/office-cleaning/",
+      "title": "Office Cleaning Services London | High Quality Clean",
+      "h1": "Office Cleaning Services London: Premium Commercial Cleaning"
+    },
+    {
+      "path": "/terms-and-conditions/",
+      "title": "Terms and Conditions | High Quality Clean",
+      "h1": "Terms and Conditions"
+    },
+    {
+      "path": "/why-us/",
+      "title": "Why Choose High Quality Clean | Wellness-Grade London Cleaning",
+      "h1": "Beyond Clean. Total Calm."
+    }
+  ],
+  "images": [
+    {
+      "id": "p-5662337c59",
+      "original": "/images/areas/mayfair.webp",
+      "variants": [
+        "/images/areas/mayfair.webp"
+      ],
+      "title": "Mayfair streetscape and former hero fallback",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Where Profound Care Meets Perfected Detail",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Mayfair",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-5662337c59.webp",
+      "bytes": 198934,
+      "sha256": "263d88a5947a18805f76636a28ef226125c25bccc7b0b2d523ecf235eca42066",
+      "ref": "P01",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-87b769f09b",
+      "original": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=48&h=48&fit=crop&crop=face&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=48&h=48&fit=crop&crop=face&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=60&h=60&fit=crop&crop=faces&q=80"
+      ],
+      "title": "Historic stock portrait",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Page image",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Featured Transformation",
+          "position": 4,
+          "anchor": "featured-case",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock portrait, not verified client evidence",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-87b769f09b.jpg",
+      "bytes": 500620,
+      "sha256": "87bc5c3a09a1b4a9d18807958fe95ee7b5ba5ba134944610c82837964f263849",
+      "ref": "P02",
+      "width": 1400,
+      "height": 2100,
+      "dimensions": "1400 \u00d7 2100 px"
+    },
+    {
+      "id": "p-3418624504",
+      "original": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=48&h=48&fit=crop&crop=face&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=48&h=48&fit=crop&crop=face&q=80"
+      ],
+      "title": "Historic stock portrait",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Page image",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock portrait, not verified client evidence",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-3418624504.jpg",
+      "bytes": 186971,
+      "sha256": "c63fa807f9aa2d0055ddb9dd6ce36040699264a598a49c59705f6b8bc71735cf",
+      "ref": "P03",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-20d0bdaed4",
+      "original": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=face&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=face&q=80"
+      ],
+      "title": "Historic stock portrait",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Page image",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock portrait, not verified client evidence",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-20d0bdaed4.jpg",
+      "bytes": 109760,
+      "sha256": "32cd117bd832942ee31f575700a060a0e6c978fa50e3b20d3b06d477eea3c937",
+      "ref": "P04",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-24bbf0b0bf",
+      "original": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face&q=80",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face&q=80"
+      ],
+      "title": "Historic stock portrait",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Page image",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Marcus Chen",
+          "position": 20,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock portrait, not verified client evidence",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-24bbf0b0bf.jpg",
+      "bytes": 291169,
+      "sha256": "a83c2734a758810e22aef437b73315ab0133a795e0f3eb32dd9968c9c6463a45",
+      "ref": "P05",
+      "width": 1400,
+      "height": 2100,
+      "dimensions": "1400 \u00d7 2100 px"
+    },
+    {
+      "id": "p-730a3ddef2",
+      "original": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face&q=80",
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face&q=80"
+      ],
+      "title": "Historic stock portrait",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Page image",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Lord James Ashworth",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock portrait, not verified client evidence",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-730a3ddef2.jpg",
+      "bytes": 99835,
+      "sha256": "3488a7da379ecdffb82b6bae7da36be2b03b1592e0e332d1c5e3fecaeec3c746",
+      "ref": "P06",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-00dbfe3a1c",
+      "original": "/images/london.jpg",
+      "variants": [
+        "/images/london.jpg"
+      ],
+      "title": "London map showing luxury neighborhoods",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Areas We Serve",
+          "position": 9,
+          "anchor": "areas",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-00dbfe3a1c.jpg",
+      "bytes": 59935,
+      "sha256": "265ebe1dac06faa6a167e465534a2dec89b902a9b0007dbe3baeca1b715e3688",
+      "ref": "P07",
+      "width": 800,
+      "height": 450,
+      "dimensions": "800 \u00d7 450 px"
+    },
+    {
+      "id": "p-9455330347",
+      "original": "/images/areas/belgravia.webp",
+      "variants": [
+        "/images/areas/belgravia.webp"
+      ],
+      "title": "Belgravia luxury Georgian architecture",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Areas We Serve",
+          "position": 10,
+          "anchor": "areas",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Areas We Serve",
+          "position": 13,
+          "anchor": "areas",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Belgravia",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-9455330347.webp",
+      "bytes": 171036,
+      "sha256": "ca578e88c1d4d470507f2186ae127a695b6faa3db2feabc7f9229c1d3057c9f8",
+      "ref": "P08",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-ae2e6e1ad1",
+      "original": "/images/areas/chelsea.webp",
+      "variants": [
+        "/images/areas/chelsea.webp"
+      ],
+      "title": "Chelsea luxury townhouses and tree-lined streets",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Areas We Serve",
+          "position": 11,
+          "anchor": "areas",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Areas We Serve",
+          "position": 14,
+          "anchor": "areas",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Chelsea",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-ae2e6e1ad1.webp",
+      "bytes": 136114,
+      "sha256": "7a4b2f94272eec7756c6dd85e2a3d4148cca78887f3149f263ba1a81fe39a417",
+      "ref": "P09",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-4d3c5d1325",
+      "original": "/images/areas/kensington.webp",
+      "variants": [
+        "/images/areas/kensington.webp"
+      ],
+      "title": "Kensington elegant Victorian mansions",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Areas We Serve",
+          "position": 12,
+          "anchor": "areas",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Areas We Serve",
+          "position": 15,
+          "anchor": "areas",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Kensington",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-4d3c5d1325.webp",
+      "bytes": 630796,
+      "sha256": "088b722ac0657f291af6211012c68c3c5b3d11a58b058fbded63b2ed9aaaf518",
+      "ref": "P10",
+      "width": 1920,
+      "height": 1920,
+      "dimensions": "1920 \u00d7 1920 px"
+    },
+    {
+      "id": "p-78d86ffb62",
+      "original": "/images/pedro.jpg",
+      "variants": [
+        "/images/pedro.jpg"
+      ],
+      "title": "Pedro - Founder and luxury service expert",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Meet Pedro",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Pedro's Vision",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Pedro's Vision",
+          "position": 20,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-78d86ffb62.jpg",
+      "bytes": 276370,
+      "sha256": "b66ce18d2ecfcecb6715f31896ce7851ae27fc5c1c2416fce0c1556922125483",
+      "ref": "P11",
+      "width": 1152,
+      "height": 2048,
+      "dimensions": "1152 \u00d7 2048 px"
+    },
+    {
+      "id": "p-771f3a7fa3",
+      "original": "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png",
+      "variants": [
+        "/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png"
+      ],
+      "title": "Kitchen deep clean transformation",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Transformation Gallery",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Mayfair Penthouse Kitchen",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Hyde Park Apartment",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "30% Introductory Rate for Your First Month",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Specialist Add-On Services",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Transformation Gallery",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Guest Expectations are Higher Than Ever",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "The Airbnb Turnover Process",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Your Carpets Deserve More Than Just a Clean",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Our Premium Carpet Cleaning Process",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Is Your Current 'Deep Clean' Actually Deep?",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "A Detailed Clean for the Moments That Matter",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Is Your Wardrobe Getting the Care It Deserves?",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Our Premium Laundry & Ironing Process",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "A Clean Office is Good for Business",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Our Office Cleaning Standards",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Beyond Clean. Total Calm.",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Transformation Gallery",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-771f3a7fa3.png",
+      "bytes": 464709,
+      "sha256": "1e1de60156c2d01365e0550e20f1e0d75ece3c37818490f536618667cfccacfb",
+      "ref": "P12",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-d2badadefc",
+      "original": "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png",
+      "variants": [
+        "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png"
+      ],
+      "title": "Marble restoration before and after",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Transformation Gallery",
+          "position": 19,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Belgravia Master Bath",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Transformation Gallery",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "The Airbnb Turnover Process",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Why Hosts Love Us",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Our Premium Carpet Cleaning Process",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Why Choose Our Carpet Cleaning Service?",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Why Choose Our Deep House Cleaning Service?",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "Why Clients Choose High Quality Clean",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Our Premium Laundry & Ironing Process",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Why Londoners Choose Our Laundry Service",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Our Office Cleaning Standards",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Commercial Cleaning You Can Rely On",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Transformation Gallery",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-d2badadefc.png",
+      "bytes": 483561,
+      "sha256": "4fcc65e10f75ca68b00d272161e73c38590c8d5551933f91d2a0d46640dba9f1",
+      "ref": "P13",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-129638cef5",
+      "original": "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png",
+      "variants": [
+        "/images/luxury-home/Hyde_Park_apartment_in_the_living_room.png"
+      ],
+      "title": "Living room detail cleaning",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Transformation Gallery",
+          "position": 20,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Transformation Gallery",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "The Airbnb Turnover Process",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "The Airbnb Turnover Process",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "The Airbnb Turnover Process",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "The Airbnb Turnover Process",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Host Success Stories",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Our Premium Carpet Cleaning Process",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "What Our Clients Say",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "The WellClean\u2122 Deep Cleaning Method",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "What Londoners Say About Our Deep Cleaning",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "What\u2019s Included in Our End of Tenancy Cleaning Service",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "Who This Service Is For",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Our Premium Laundry & Ironing Process",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Our Premium Laundry & Ironing Process",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Our Premium Laundry & Ironing Process",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Our Premium Laundry & Ironing Process",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Client Reviews",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Our Office Cleaning Standards",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Our Office Cleaning Standards",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Our Office Cleaning Standards",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Our Office Cleaning Standards",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Trusted by London Businesses",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Transformation Gallery",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-129638cef5.png",
+      "bytes": 594055,
+      "sha256": "eaf477d9bddac0b9c15ddc2861c545e574c6b3e3df208ba3110dff52b7e2158a",
+      "ref": "P14",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-2d14c5aab2",
+      "original": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
+      ],
+      "title": "Bathroom refresh transformation",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Transformation Gallery",
+          "position": 21,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Transformation Gallery",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Transformation Gallery",
+          "position": 17,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-2d14c5aab2.jpg",
+      "bytes": 375271,
+      "sha256": "11460c1e177c0d5c5ea40a7bde20cbc5a12c2d7684d7ceefb90ed5be4f0ebb66",
+      "ref": "P15",
+      "width": 1400,
+      "height": 2099,
+      "dimensions": "1400 \u00d7 2099 px"
+    },
+    {
+      "id": "p-c1ae5212a3",
+      "original": "/images/luxury-home/luxurious-chelsea-bedroom.png",
+      "variants": [
+        "/images/luxury-home/luxurious-chelsea-bedroom.png"
+      ],
+      "title": "Bedroom sanctuary cleaning",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Transformation Gallery",
+          "position": 22,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Trusted by clients who value consistency and control",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Transformation Gallery",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "New Host Offer",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Special Introductory Offer",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Spring Clean Special Offer",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "Optional Add-Ons",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "First Order Offer",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "New Contract Offer",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Transformation Gallery",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-c1ae5212a3.png",
+      "bytes": 518470,
+      "sha256": "8df229f8804da3fa47fcd3c66663b9aa5ea0af7f3399ef54f536678aacf84e21",
+      "ref": "P16",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-adb89e2c45",
+      "original": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center&auto=format&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
+      ],
+      "title": "Neutral modern workplace",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Transformation Gallery",
+          "position": 23,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Transformation Gallery",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Transformation Gallery",
+          "position": 19,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-adb89e2c45.jpg",
+      "bytes": 165820,
+      "sha256": "4392a1d706bd82f6f508801fb02ccbd3d4fb84a6a7f8f18a17f5a166419c5b96",
+      "ref": "P17",
+      "width": 1400,
+      "height": 935,
+      "dimensions": "1400 \u00d7 935 px"
+    },
+    {
+      "id": "p-a21a8bfa56",
+      "original": "https://images.unsplash.com/photo-1622015663319-e97e697503ee?q=80&w=1600&auto=format&fit=crop",
+      "variants": [
+        "https://images.unsplash.com/photo-1622015663319-e97e697503ee?q=80&w=1600&auto=format&fit=crop"
+      ],
+      "title": "photo 1622015663319 e97e697503ee",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Page image",
+          "position": 24,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-a21a8bfa56.jpg",
+      "bytes": 309779,
+      "sha256": "f8ec8da9a3989dba6a3447ab7f0ea7dc6f542be3ef17295fc1c3a5765e6743a7",
+      "ref": "P18",
+      "width": 1400,
+      "height": 754,
+      "dimensions": "1400 \u00d7 754 px"
+    },
+    {
+      "id": "p-c8812d4c5e",
+      "original": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=100&h=100&fit=crop&crop=center&auto=format&q=80"
+      ],
+      "title": "Granite texture",
+      "placements": [
+        {
+          "path": "/",
+          "page": "Where Profound Care Meets Perfected Detail",
+          "section": "Footer",
+          "position": 25,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/"
+        },
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Footer",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Footer",
+          "position": 21,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/client-success-stories/",
+          "page": "Client Success Stories",
+          "section": "Footer",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/client-success-stories/"
+        },
+        {
+          "path": "/contact/",
+          "page": "Get in Touch",
+          "section": "Footer",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/contact/"
+        },
+        {
+          "path": "/disclaimer/",
+          "page": "Third Party Disclaimer",
+          "section": "Footer",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/disclaimer/"
+        },
+        {
+          "path": "/discount/",
+          "page": "Claim Your 30% Rate",
+          "section": "Footer",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/discount/"
+        },
+        {
+          "path": "/faq/",
+          "page": "/faq/",
+          "section": "Footer",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/faq/"
+        },
+        {
+          "path": "/faq/",
+          "page": "/faq/",
+          "section": "Footer",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/faq/"
+        },
+        {
+          "path": "/feedback/",
+          "page": "How did we do today?",
+          "section": "Footer",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/feedback/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Footer",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        },
+        {
+          "path": "/privacy-policy/",
+          "page": "Privacy Policy",
+          "section": "Footer",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/privacy-policy/"
+        },
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Footer",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        },
+        {
+          "path": "/quote/",
+          "page": "Request Your Personalised Quote",
+          "section": "Footer",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/quote/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Footer",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Footer",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Footer",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Footer",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "Footer",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Footer",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Footer",
+          "position": 18,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        },
+        {
+          "path": "/terms-and-conditions/",
+          "page": "Terms and Conditions",
+          "section": "Footer",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/terms-and-conditions/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Footer",
+          "position": 22,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-c8812d4c5e.jpg",
+      "bytes": 498728,
+      "sha256": "e978f94133aa2b4fe187175c71ab2af1c54cfd110ba623b3a9b0bc81dbb266a3",
+      "ref": "P19",
+      "width": 1400,
+      "height": 1400,
+      "dimensions": "1400 \u00d7 1400 px"
+    },
+    {
+      "id": "p-2321656216",
+      "original": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+      ],
+      "title": "London skyline with luxury neighborhoods and prestigious areas",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "London's Premier Areas. Our Specialty.",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-2321656216.jpg",
+      "bytes": 392720,
+      "sha256": "acd9072145ba4096670bb785696051b16bd00d85516fe8f495fef6934a87f412",
+      "ref": "P20",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-c055dd7da1",
+      "original": "/images/areas/knightsbridge.webp",
+      "variants": [
+        "/images/areas/knightsbridge.webp"
+      ],
+      "title": "Knightsbridge luxury shopping district and Hyde Park views",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Knightsbridge",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-c055dd7da1.webp",
+      "bytes": 198382,
+      "sha256": "f15df9b4d0bbb60b102b7c65373eeb6b1415b46dc30628cb752d4d7ec8a8f8b5",
+      "ref": "P21",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-1289806d9f",
+      "original": "/images/areas/notting-hill.webp",
+      "variants": [
+        "/images/areas/notting-hill.webp"
+      ],
+      "title": "Notting Hill colorful Victorian houses and charming streets",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Notting Hill",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-1289806d9f.webp",
+      "bytes": 196880,
+      "sha256": "7d64f114a6331d7fb314afdb805df0ab37e4cbf0b99e8d253d121ecb68b6f7d9",
+      "ref": "P22",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-ba741fc81a",
+      "original": "/images/areas/holland-park.webp",
+      "variants": [
+        "/images/areas/holland-park.webp"
+      ],
+      "title": "Holland Park elegant Victorian houses and park views",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Holland Park",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-ba741fc81a.webp",
+      "bytes": 280466,
+      "sha256": "e108817c4e7a02ac739172491379ddee31a5bfd6d1d2961e80c7457fc18e41de",
+      "ref": "P23",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-f828a627af",
+      "original": "/images/areas/hampstead.webp",
+      "variants": [
+        "/images/areas/hampstead.webp"
+      ],
+      "title": "Hampstead Heath village atmosphere and luxury homes",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Hampstead",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-f828a627af.webp",
+      "bytes": 158452,
+      "sha256": "07d36965a2ec9dcee71a1b14dfb1043eeb952f3363e244c6b929ea1af75762df",
+      "ref": "P24",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-9fdc5df613",
+      "original": "/images/areas/highgate.webp",
+      "variants": [
+        "/images/areas/highgate.webp"
+      ],
+      "title": "Highgate historic village and panoramic London views",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Highgate",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-9fdc5df613.webp",
+      "bytes": 680962,
+      "sha256": "927f9dc730dccd2344697ebd218ac1f88f432c74f5753986ad095e17b821f1ed",
+      "ref": "P25",
+      "width": 1920,
+      "height": 1920,
+      "dimensions": "1920 \u00d7 1920 px"
+    },
+    {
+      "id": "p-3bf92d772d",
+      "original": "/images/areas/primrose-hill.webp",
+      "variants": [
+        "/images/areas/primrose-hill.webp"
+      ],
+      "title": "Primrose Hill trendy neighborhood with Regent's Park views",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Primrose Hill",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-3bf92d772d.webp",
+      "bytes": 237388,
+      "sha256": "2f15e29a0b679f74e758641f7870364ce59f3734c1452cc946266d90c544d8f7",
+      "ref": "P26",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-5007668a54",
+      "original": "/images/areas/st-johns-wood.webp",
+      "variants": [
+        "/images/areas/st-johns-wood.webp"
+      ],
+      "title": "St John's Wood elegant residential area with Lord's Cricket Ground",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "St John's Wood",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-5007668a54.webp",
+      "bytes": 916538,
+      "sha256": "de696da75db2c5f8d293258594a8182aa1e05f235ca3fd62d80aa1dc73a1fe80",
+      "ref": "P27",
+      "width": 1920,
+      "height": 1920,
+      "dimensions": "1920 \u00d7 1920 px"
+    },
+    {
+      "id": "p-bb65977be9",
+      "original": "/images/areas/battersea.webp",
+      "variants": [
+        "/images/areas/battersea.webp"
+      ],
+      "title": "Clapham and Battersea riverside modern developments",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Clapham & Battersea",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-bb65977be9.webp",
+      "bytes": 151390,
+      "sha256": "306bfa2ef64cdfa4d1dc360147185d6c02272aadd43f5cd805e2477fbc9131de",
+      "ref": "P28",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-c91d1687b6",
+      "original": "/images/areas/wandsworth-town.webp",
+      "variants": [
+        "/images/areas/wandsworth-town.webp"
+      ],
+      "title": "Wandsworth Common green spaces and family properties",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Wandsworth",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-c91d1687b6.webp",
+      "bytes": 232360,
+      "sha256": "c9e723b61e6f22f0c17fb4006b9899c8c897175a4c81467f43fab93125338a07",
+      "ref": "P29",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-c8da933c88",
+      "original": "/images/areas/weybridge.webp",
+      "variants": [
+        "/images/areas/weybridge.webp"
+      ],
+      "title": "Weybridge St Georges Hill luxury properties",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Weybridge",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-c8da933c88.webp",
+      "bytes": 180224,
+      "sha256": "a6124308324d5b3f93ca8525a12ff2fd34140b66b598f50bdc8e02a1e6b07443",
+      "ref": "P30",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-45cc78e4f7",
+      "original": "/images/areas/hersham.webp",
+      "variants": [
+        "/images/areas/hersham.webp"
+      ],
+      "title": "Hersham Burwood Park family properties",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Hersham",
+          "position": 16,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-45cc78e4f7.webp",
+      "bytes": 206326,
+      "sha256": "99c2daf742a98ff548fa4f8f60362f8baecef1ee1559db095c305d6b74a97fe5",
+      "ref": "P31",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-cf445e7e4a",
+      "original": "/images/areas/walton-on-thames.webp",
+      "variants": [
+        "/images/areas/walton-on-thames.webp"
+      ],
+      "title": "Walton-on-Thames Ashley Park riverside properties",
+      "placements": [
+        {
+          "path": "/areas/",
+          "page": "London's Premier Areas. Our Specialty.",
+          "section": "Walton-on-Thames",
+          "position": 17,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/areas/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-cf445e7e4a.webp",
+      "bytes": 212598,
+      "sha256": "f84e45b674a4e2d7400f36f913881875f0bbb99392346280b180b81632587561",
+      "ref": "P32",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-791a805c44",
+      "original": "/images/luxury-home/luxury-home-1.jpg",
+      "variants": [
+        "/images/luxury-home/luxury-home-1.jpg"
+      ],
+      "title": "Luxury home interior showcase",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Case Studies & Gallery",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/client-success-stories/",
+          "page": "Client Success Stories",
+          "section": "Client Success Stories",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/client-success-stories/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Project & Specialist Cleaning Services",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-791a805c44.jpg",
+      "bytes": 433363,
+      "sha256": "85a0afbdef98b8463709fb112a5699409f92373ca6fe792acc76683e8e7f385c",
+      "ref": "P33",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-b4aa446bee",
+      "original": "/images/before-after/transformation-mayfair-improved.png",
+      "variants": [
+        "/images/before-after/transformation-mayfair-improved.png"
+      ],
+      "title": "Kitchen before deep cleaning - showing daily wear and accumulated grime",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Featured Transformation",
+          "position": 2,
+          "anchor": "featured-case",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Project & Specialist Cleaning Services",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Historic comparison illustration, outcome unverified",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-b4aa446bee.png",
+      "bytes": 2496698,
+      "sha256": "edf0a3c70f7ae0a3bdc00c6f8b2f4b3e33e08229cb0e2de3f95d5bfd64c22d09",
+      "ref": "P34",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": "1536 \u00d7 1024 px"
+    },
+    {
+      "id": "p-66feb70a4e",
+      "original": "/images/before-after/transformation-mayfair.png",
+      "variants": [
+        "/images/before-after/transformation-mayfair.png"
+      ],
+      "title": "Kitchen after comprehensive cleaning - gleaming surfaces and pristine finish",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Featured Transformation",
+          "position": 3,
+          "anchor": "featured-case",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Historic comparison illustration, outcome unverified",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-66feb70a4e.png",
+      "bytes": 2685695,
+      "sha256": "b1e84321084dd8415eda5a6c79575694857f9d2ee20c86d00adf3bc5ec196d59",
+      "ref": "P35",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": "1536 \u00d7 1024 px"
+    },
+    {
+      "id": "p-252e7b3564",
+      "original": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop&crop=center&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop&crop=center&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      ],
+      "title": "Pristine kitchen with gleaming marble countertops",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Featured Transformation",
+          "position": 5,
+          "anchor": "featured-case",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Process In Action",
+          "position": 8,
+          "anchor": "stories",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        },
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Process In Action",
+          "position": 12,
+          "anchor": "stories",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-252e7b3564.jpg",
+      "bytes": 256980,
+      "sha256": "5d08cf8b6947ba09fba0becc798d7303428598e9429395eb1407fd776c5d1f1c",
+      "ref": "P36",
+      "width": 1400,
+      "height": 952,
+      "dimensions": "1400 \u00d7 952 px"
+    },
+    {
+      "id": "p-de8736bfb6",
+      "original": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop&crop=center&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop&crop=center&q=80",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&h=900&fit=crop&crop=center&auto=format&q=80"
+      ],
+      "title": "Elegant living room with restored period features",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Featured Transformation",
+          "position": 6,
+          "anchor": "featured-case",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "A Curated Process. Calm, By Design.",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "All Your Cleaning Needs Covered",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-de8736bfb6.jpg",
+      "bytes": 226450,
+      "sha256": "403fb1509c8215d74bfabaa71e80b7188f6785399c19ae53161d9115f3f188b3",
+      "ref": "P37",
+      "width": 1400,
+      "height": 1235,
+      "dimensions": "1400 \u00d7 1235 px"
+    },
+    {
+      "id": "p-ea4f54d324",
+      "original": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=400&h=300&fit=crop&crop=center&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=400&h=300&fit=crop&crop=center&q=80"
+      ],
+      "title": "Luxurious bathroom with gleaming fixtures",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Featured Transformation",
+          "position": 7,
+          "anchor": "featured-case",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-ea4f54d324.jpg",
+      "bytes": 125072,
+      "sha256": "9048052e0de34e8bb631a8036f90bcfc25c1bb4a0eb8c9aed30bea60ae8bde88",
+      "ref": "P38",
+      "width": 1400,
+      "height": 935,
+      "dimensions": "1400 \u00d7 935 px"
+    },
+    {
+      "id": "p-1a211e6792",
+      "original": "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png",
+      "variants": [
+        "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png"
+      ],
+      "title": "Modern kitchen island with gleaming quartz countertops",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Chelsea Townhouse",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Chelsea Mews",
+          "position": 15,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Specialist Add-On Services",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        },
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "FAQ: Airbnb Cleaning",
+          "position": 17,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        },
+        {
+          "path": "/services/carpet-cleaning/",
+          "page": "Professional Carpet Cleaning in London",
+          "section": "Common Questions",
+          "position": 8,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/carpet-cleaning/"
+        },
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Common Questions About Deep Cleaning",
+          "position": 17,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        },
+        {
+          "path": "/services/end-of-tenancy-cleaning/",
+          "page": "End of Tenancy Cleaning London for a Smoother Move-Out",
+          "section": "Frequently Asked Questions",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/end-of-tenancy-cleaning/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "FAQ: Ironing & Laundry",
+          "position": 17,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        },
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "FAQ: Office Cleaning",
+          "position": 17,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-1a211e6792.png",
+      "bytes": 613465,
+      "sha256": "5233770e30f1663495d5eb833445e48767950538208c7480dd536248500b8c94",
+      "ref": "P39",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-51ee039643",
+      "original": "/images/luxury-home/luxurious-kensington-ensuite.png",
+      "variants": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png"
+      ],
+      "title": "Luxury bathroom vanity with spotless mirror and fixtures",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Kensington Ensuite",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-51ee039643.png",
+      "bytes": 436244,
+      "sha256": "6d657b0088832187dd443b57720a42ff6cd4d62bfffadbeb8bb2896ab68ce96d",
+      "ref": "P40",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-5ace2161c5",
+      "original": "/images/luxury-home/richmond-living-room.png",
+      "variants": [
+        "/images/luxury-home/richmond-living-room.png"
+      ],
+      "title": "Elegant living room with pristine upholstery and polished surfaces",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Knightsbridge Drawing Room",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        },
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Specialist Add-On Services",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-5ace2161c5.png",
+      "bytes": 1484048,
+      "sha256": "92fb7885ecb09b65bf17f7d7a642b38f13b36ac74d46dd8c493d0ed3cedfc9ec",
+      "ref": "P41",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-71604da63b",
+      "original": "/images/luxury-home/mayfair-home-hallway.png",
+      "variants": [
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "title": "Modern living space with immaculate glass surfaces and furniture",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Mayfair Apartment",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-71604da63b.png",
+      "bytes": 524446,
+      "sha256": "4d364cc3a61b584074baf75f62feab4d6fb73e70a7b59ee8bfd7c1db4dd32510",
+      "ref": "P42",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-302026958a",
+      "original": "/images/luxury-home/belgravia-stonework.png",
+      "variants": [
+        "/images/luxury-home/belgravia-stonework.png"
+      ],
+      "title": "Pristine Georgian townhouse exterior with cleaned stonework",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Belgravia Townhouse",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-302026958a.png",
+      "bytes": 614684,
+      "sha256": "6eaeec58df234cb39b45460b470889c5299ff5409af27117f5ddcaceff774646",
+      "ref": "P43",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-eb41e19353",
+      "original": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=380&fit=crop&crop=center&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=380&fit=crop&crop=center&q=80"
+      ],
+      "title": "Luxury bedroom with immaculate linens and surfaces",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Mayfair Master Suite",
+          "position": 17,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-eb41e19353.jpg",
+      "bytes": 138875,
+      "sha256": "39157588aac30b26098602484bb065c1590066b0ef9bec502072b71d56550f8b",
+      "ref": "P44",
+      "width": 1400,
+      "height": 2103,
+      "dimensions": "1400 \u00d7 2103 px"
+    },
+    {
+      "id": "p-b85ca91b92",
+      "original": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=60&h=60&fit=crop&crop=face&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=60&h=60&fit=crop&crop=face&q=80"
+      ],
+      "title": "Historic stock portrait",
+      "placements": [
+        {
+          "path": "/case-studies/",
+          "page": "Case Studies & Gallery",
+          "section": "Victoria Sterling",
+          "position": 19,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/case-studies/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock portrait, not verified client evidence",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-b85ca91b92.jpg",
+      "bytes": 448354,
+      "sha256": "86cb45266eb66cd24c0de49308d3c082f4474e59fd4b6f9a58a884e324451d60",
+      "ref": "P45",
+      "width": 1400,
+      "height": 2100,
+      "dimensions": "1400 \u00d7 2100 px"
+    },
+    {
+      "id": "p-b6c2d61b95",
+      "original": "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1600&h=900&fit=crop&auto=format&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1600&h=900&fit=crop&auto=format&q=80",
+        "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&h=600&fit=crop&auto=format&q=80"
+      ],
+      "title": "Professional cleaning service team ready to help with luxury home cleaning",
+      "placements": [
+        {
+          "path": "/contact/",
+          "page": "Get in Touch",
+          "section": "Get in Touch",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/contact/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "1. Wellness Cleaning Protocols",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-b6c2d61b95.jpg",
+      "bytes": 131178,
+      "sha256": "75f5413e2de7f423182ef7e39db358443e953e483abbc7dfc83026ef661fd3c7",
+      "ref": "P46",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-316e85c737",
+      "original": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=600&fit=crop&auto=format&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=600&fit=crop&auto=format&q=80",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&h=900&fit=crop&auto=format&q=80"
+      ],
+      "title": "Elegant home interior inviting viewers to experience total calm through professional cleaning services",
+      "placements": [
+        {
+          "path": "/disclaimer/",
+          "page": "Third Party Disclaimer",
+          "section": "Ready for Total Calm?",
+          "position": 1,
+          "anchor": "final-cta",
+          "liveUrl": "https://highqualityclean.co.uk/disclaimer/"
+        },
+        {
+          "path": "/discount/",
+          "page": "Claim Your 30% Rate",
+          "section": "Page image",
+          "position": 1,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/discount/"
+        },
+        {
+          "path": "/services/",
+          "page": "All Your Cleaning Needs Covered",
+          "section": "Ready for Total Calm?",
+          "position": 9,
+          "anchor": "final-cta",
+          "liveUrl": "https://highqualityclean.co.uk/services/"
+        },
+        {
+          "path": "/terms-and-conditions/",
+          "page": "Terms and Conditions",
+          "section": "Ready for Total Calm?",
+          "position": 1,
+          "anchor": "final-cta",
+          "liveUrl": "https://highqualityclean.co.uk/terms-and-conditions/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "Ready for Total Calm?",
+          "position": 21,
+          "anchor": "final-cta",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-316e85c737.jpg",
+      "bytes": 228640,
+      "sha256": "54b0b2d09c760944ed358d569991e78cfdebcbb558959e95907c5788bdd9865b",
+      "ref": "P47",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-cc17837fe6",
+      "original": "/images/services/office-cleaning/office-cleaning-1.webp",
+      "variants": [
+        "/images/services/office-cleaning/office-cleaning-1.webp"
+      ],
+      "title": "office cleaning 1",
+      "placements": [
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Trusted by clients who value consistency and control",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-cc17837fe6.webp",
+      "bytes": 71226,
+      "sha256": "933fbc377a49a74a07d4dc7f3c911b149287202cc0be4837ba7c8f5104b7e672",
+      "ref": "P48",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-9fb44a90fd",
+      "original": "/images/services/airbnb/airbnb-1.webp",
+      "variants": [
+        "/images/services/airbnb/airbnb-1.webp"
+      ],
+      "title": "airbnb 1",
+      "placements": [
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Project & Specialist Cleaning Services",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-9fb44a90fd.webp",
+      "bytes": 38726,
+      "sha256": "581fc070d612da73d6204196f6cab36d1314a55d04af7f2e22192dc47ce811bd",
+      "ref": "P49",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-58a85caab2",
+      "original": "/images/services/concierge-laundry/concierge-laundry-1.webp",
+      "variants": [
+        "/images/services/concierge-laundry/concierge-laundry-1.webp"
+      ],
+      "title": "concierge laundry 1",
+      "placements": [
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Specialist Add-On Services",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        },
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Immaculate Results for Your Wardrobe",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-58a85caab2.webp",
+      "bytes": 62396,
+      "sha256": "a273e9b0143b2f2342acb3f39a86bd583327b76d98f60beb9c7ecb78143abe2e",
+      "ref": "P50",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-63142b02e8",
+      "original": "/images/luxury-home/Chelsea-Outside.png",
+      "variants": [
+        "/images/luxury-home/Chelsea-Outside.png"
+      ],
+      "title": "Chelsea Outside",
+      "placements": [
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Specialist Add-On Services",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-63142b02e8.png",
+      "bytes": 499821,
+      "sha256": "5a15274d70620caedc0394e463998598065c800653b5a9da4e7da50fb6c51817",
+      "ref": "P51",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-fa18ce2de6",
+      "original": "/images/before-after/after.jpg",
+      "variants": [
+        "/images/before-after/after.jpg"
+      ],
+      "title": "after",
+      "placements": [
+        {
+          "path": "/offer/",
+          "page": "30% Introductory Rate for Your First Month",
+          "section": "Specialist Add-On Services",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/offer/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-fa18ce2de6.jpg",
+      "bytes": 194875,
+      "sha256": "f81fd9cc8994cd704423944ee6b100546185f9a3b00765f720a8f3dbf6643cf4",
+      "ref": "P52",
+      "width": 1200,
+      "height": 1600,
+      "dimensions": "1200 \u00d7 1600 px"
+    },
+    {
+      "id": "p-6c0c6acf2a",
+      "original": "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+      ],
+      "title": "Professional consultation discussing luxury home cleaning needs",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "1. Initial Consultation",
+          "position": 2,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-6c0c6acf2a.jpg",
+      "bytes": 395216,
+      "sha256": "a3121dd6ac148a6e21e6b63064ff077ed4635e077452e39f14068cd2494df815",
+      "ref": "P53",
+      "width": 1400,
+      "height": 1050,
+      "dimensions": "1400 \u00d7 1050 px"
+    },
+    {
+      "id": "p-78cd605297",
+      "original": "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+      ],
+      "title": "Bespoke service planning and product selection for luxury homes",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "2. Tailored Service Design",
+          "position": 3,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-78cd605297.jpg",
+      "bytes": 106435,
+      "sha256": "8bab236b770c74a812ac1c784a15a5fce1a6b63da4f1eee2caac4067d3d2dbc1",
+      "ref": "P54",
+      "width": 1400,
+      "height": 1750,
+      "dimensions": "1400 \u00d7 1750 px"
+    },
+    {
+      "id": "p-544e5d7442",
+      "original": "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      "title": "Professional cleaning team preparation and briefing",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "3. Team Assignment & Preparation",
+          "position": 4,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-544e5d7442.jpg",
+      "bytes": 262229,
+      "sha256": "0af9767c6a74c69fedcd5c2f6a766bce6f24c19b99129cfaf65ef7edfe0499bb",
+      "ref": "P55",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-83779ba24c",
+      "original": "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+      ],
+      "title": "Professional cleaning service delivery in luxury home",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "4. Service Delivery",
+          "position": 5,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-83779ba24c.jpg",
+      "bytes": 148201,
+      "sha256": "076ca59640ac42b05faf41f4923339de0740ad52a323aa2dd88add8cfb27e07c",
+      "ref": "P56",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-0229d65f84",
+      "original": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+      ],
+      "title": "Quality assurance inspection and documentation",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "5. Quality Assurance",
+          "position": 6,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-0229d65f84.jpg",
+      "bytes": 165786,
+      "sha256": "799c1f38e789b27eab522d3b4e22692b4e11cc58952ccd302c611898d1c14258",
+      "ref": "P57",
+      "width": 1400,
+      "height": 854,
+      "dimensions": "1400 \u00d7 854 px"
+    },
+    {
+      "id": "p-ff818ed5de",
+      "original": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop&auto=format&q=80"
+      ],
+      "title": "Ongoing luxury home maintenance and relationship management",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "6. Ongoing Relationship",
+          "position": 7,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        },
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "4. Emotional Outcomes",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-ff818ed5de.jpg",
+      "bytes": 293799,
+      "sha256": "a8af5e18d11dc8ec649598db36e2c922fec5edad66a621191da03dc474bc4f17",
+      "ref": "P58",
+      "width": 1400,
+      "height": 1050,
+      "dimensions": "1400 \u00d7 1050 px"
+    },
+    {
+      "id": "p-2fd3b71a17",
+      "original": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      ],
+      "title": "Chelsea luxury apartment textile care and aromatherapy service",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Process In Action",
+          "position": 9,
+          "anchor": "stories",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        },
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Process In Action",
+          "position": 13,
+          "anchor": "stories",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-2fd3b71a17.jpg",
+      "bytes": 247995,
+      "sha256": "e8e40c40aa8ed4baf2de51ddabba5f5239a25aca95d941e53c7a7d295a2dc400",
+      "ref": "P59",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-6fa73ebd8f",
+      "original": "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      ],
+      "title": "Kensington residence allergen-free deep cleaning service",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Process In Action",
+          "position": 10,
+          "anchor": "stories",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-6fa73ebd8f.jpg",
+      "bytes": 164240,
+      "sha256": "aa7988e3c4e6a1bcaa9e8c66bb3d92e68b1c930b6668310fdf7b998096a5aade",
+      "ref": "P60",
+      "width": 1400,
+      "height": 930,
+      "dimensions": "1400 \u00d7 930 px"
+    },
+    {
+      "id": "p-878b7037d3",
+      "original": "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      ],
+      "title": "Mayfair penthouse brass and glass restoration perfection",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Process In Action",
+          "position": 11,
+          "anchor": "stories",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-878b7037d3.jpg",
+      "bytes": 259193,
+      "sha256": "541c32e3116573b0a331b37d3c47ad14c4a34d3cfd884c094ffe0a6d262c4324",
+      "ref": "P61",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-a41552c093",
+      "original": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+      ],
+      "title": "Luxury linen texture background",
+      "placements": [
+        {
+          "path": "/process/",
+          "page": "A Curated Process. Calm, By Design.",
+          "section": "Calm Guaranteed\u2122",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/process/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-a41552c093.jpg",
+      "bytes": 203477,
+      "sha256": "5648d4cb3e842bf8b7ec83c96704a6135c3815f92a0a9388290367d684364f29",
+      "ref": "P62",
+      "width": 1400,
+      "height": 933,
+      "dimensions": "1400 \u00d7 933 px"
+    },
+    {
+      "id": "p-1c0e6bb4d4",
+      "original": "/images/services/airbnb-turnover/airbnb-turnover-1.webp",
+      "variants": [
+        "/images/services/airbnb-turnover/airbnb-turnover-1.webp"
+      ],
+      "title": "Staged bedroom",
+      "placements": [
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Gallery: Guest-Ready Properties",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P63",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-d073fb63d5",
+      "original": "/images/services/airbnb-turnover/airbnb-turnover-2.webp",
+      "variants": [
+        "/images/services/airbnb-turnover/airbnb-turnover-2.webp"
+      ],
+      "title": "Clean kitchen",
+      "placements": [
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Gallery: Guest-Ready Properties",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P64",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-494baedfdc",
+      "original": "/images/services/airbnb-turnover/airbnb-turnover-3.webp",
+      "variants": [
+        "/images/services/airbnb-turnover/airbnb-turnover-3.webp"
+      ],
+      "title": "Sanitized bathroom",
+      "placements": [
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Gallery: Guest-Ready Properties",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P65",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-5bfaf60f05",
+      "original": "/images/services/airbnb-turnover/airbnb-turnover-4.webp",
+      "variants": [
+        "/images/services/airbnb-turnover/airbnb-turnover-4.webp"
+      ],
+      "title": "Living room setup",
+      "placements": [
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Gallery: Guest-Ready Properties",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P66",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-e0baa9abad",
+      "original": "/images/services/airbnb-turnover/airbnb-turnover-5.webp",
+      "variants": [
+        "/images/services/airbnb-turnover/airbnb-turnover-5.webp"
+      ],
+      "title": "Turnover team",
+      "placements": [
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Gallery: Guest-Ready Properties",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P67",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-44a87d8f8d",
+      "original": "/images/services/airbnb-turnover/airbnb-turnover-6.webp",
+      "variants": [
+        "/images/services/airbnb-turnover/airbnb-turnover-6.webp"
+      ],
+      "title": "Welcome pack",
+      "placements": [
+        {
+          "path": "/services/airbnb-cleaning/",
+          "page": "Airbnb Cleaning Service London: 5-Star Turnovers",
+          "section": "Gallery: Guest-Ready Properties",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/airbnb-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P68",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-ed73e32186",
+      "original": "/images/services/well-clean/well-clean-1.webp",
+      "variants": [
+        "/images/services/well-clean/well-clean-1.webp"
+      ],
+      "title": "Kitchen deep clean transformation",
+      "placements": [
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-ed73e32186.webp",
+      "bytes": 73606,
+      "sha256": "2851caa8bdb66d21ee1e581e8608148c03c98a8571296082a303f882d311b900",
+      "ref": "P69",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-acefa05503",
+      "original": "/images/services/well-clean/well-clean-2.webp",
+      "variants": [
+        "/images/services/well-clean/well-clean-2.webp"
+      ],
+      "title": "Bathroom sanitization and limescale removal",
+      "placements": [
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-acefa05503.webp",
+      "bytes": 83866,
+      "sha256": "3c326e9d41c1e207fa5801804cf3bf83802ec46621a58d364bc1eeab18d708a7",
+      "ref": "P70",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-e36b2cdea6",
+      "original": "/images/services/well-clean/well-clean-3.webp",
+      "variants": [
+        "/images/services/well-clean/well-clean-3.webp"
+      ],
+      "title": "Living area dust-free perfection",
+      "placements": [
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-e36b2cdea6.webp",
+      "bytes": 42708,
+      "sha256": "fb72d66d3d7e540b215471197e9f413ac669d0245d3eee617c6e3da8f68df4da",
+      "ref": "P71",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-43a452bebc",
+      "original": "/images/services/well-clean/well-clean-4.webp",
+      "variants": [
+        "/images/services/well-clean/well-clean-4.webp"
+      ],
+      "title": "Bedroom deep clean for better sleep",
+      "placements": [
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-43a452bebc.webp",
+      "bytes": 78414,
+      "sha256": "38eafcf44054c6b0406a4f90cf14b00b63c48f9a1c0c4b65d98ec0693c595d48",
+      "ref": "P72",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-0d04342923",
+      "original": "/images/services/well-clean-advisory/gallery-1.jpg",
+      "variants": [
+        "/images/services/well-clean-advisory/gallery-1.jpg"
+      ],
+      "title": "Detailed corner and skirting board cleaning",
+      "placements": [
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P73",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-90534ceed4",
+      "original": "/images/services/well-clean-advisory/gallery-2.jpg",
+      "variants": [
+        "/images/services/well-clean-advisory/gallery-2.jpg"
+      ],
+      "title": "Eco-friendly product application",
+      "placements": [
+        {
+          "path": "/services/deep-cleaning/",
+          "page": "Deep House Cleaning Service: London's Most Thorough Spring Clean",
+          "section": "Deep Cleaning Results You Can See & Feel",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/deep-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P74",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-d85d815b31",
+      "original": "/images/services/concierge-laundry/concierge-laundry-2.webp",
+      "variants": [
+        "/images/services/concierge-laundry/concierge-laundry-2.webp"
+      ],
+      "title": "Delicate cashmere care",
+      "placements": [
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Immaculate Results for Your Wardrobe",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-d85d815b31.webp",
+      "bytes": 64210,
+      "sha256": "b7a81cb178d0187a7e5c0e6c7aa07eaa2e0bfcdc805141ab4f1584fde10a3ebc",
+      "ref": "P75",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-4fcbe7cc10",
+      "original": "/images/services/concierge-laundry/concierge-laundry-3.webp",
+      "variants": [
+        "/images/services/concierge-laundry/concierge-laundry-3.webp"
+      ],
+      "title": "Luxury packaging presentation",
+      "placements": [
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Immaculate Results for Your Wardrobe",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-4fcbe7cc10.webp",
+      "bytes": 59692,
+      "sha256": "7be8a281accdf29cde53440cff0d0acd05d3139dcf0d33bd4f94a136337f999b",
+      "ref": "P76",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-ad597185ea",
+      "original": "/images/services/concierge-laundry/concierge-laundry-4.webp",
+      "variants": [
+        "/images/services/concierge-laundry/concierge-laundry-4.webp"
+      ],
+      "title": "Silk dress finishing",
+      "placements": [
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Immaculate Results for Your Wardrobe",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-ad597185ea.webp",
+      "bytes": 62170,
+      "sha256": "2c4135d297d8312911d9154a39802cddfee4b61c0b2b6f361b5052f0b031f8b6",
+      "ref": "P77",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-326ecd4d9e",
+      "original": "/images/services/concierge-laundry/concierge-laundry-5.webp",
+      "variants": [
+        "/images/services/concierge-laundry/concierge-laundry-5.webp"
+      ],
+      "title": "Suit steam pressing",
+      "placements": [
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Immaculate Results for Your Wardrobe",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-326ecd4d9e.webp",
+      "bytes": 76552,
+      "sha256": "b4d3715ae2c8ce9841c11c351acf78c3c499c15a193476f9f51f49f83159dc01",
+      "ref": "P78",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-f4ff0569ff",
+      "original": "/images/services/concierge-laundry/concierge-laundry-6.webp",
+      "variants": [
+        "/images/services/concierge-laundry/concierge-laundry-6.webp"
+      ],
+      "title": "Laundry collection service",
+      "placements": [
+        {
+          "path": "/services/ironing-and-laundry/",
+          "page": "Ironing & Laundry Service: Specialist Fabric Care in London",
+          "section": "Immaculate Results for Your Wardrobe",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/ironing-and-laundry/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Archived site image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-f4ff0569ff.webp",
+      "bytes": 86292,
+      "sha256": "bc056ffa0a006b901852a102c3cad30ba51b17ec3fe85c4cea476d2847320d9e",
+      "ref": "P79",
+      "width": 1024,
+      "height": 1024,
+      "dimensions": "1024 \u00d7 1024 px"
+    },
+    {
+      "id": "p-da737e7045",
+      "original": "/images/services/office-cleaning-services/office-cleaning-services-1.webp",
+      "variants": [
+        "/images/services/office-cleaning-services/office-cleaning-services-1.webp"
+      ],
+      "title": "Boardroom ready for business",
+      "placements": [
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Pristine Professional Spaces",
+          "position": 9,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P80",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-85179599e6",
+      "original": "/images/services/office-cleaning-services/office-cleaning-services-2.webp",
+      "variants": [
+        "/images/services/office-cleaning-services/office-cleaning-services-2.webp"
+      ],
+      "title": "Spotless reception desk",
+      "placements": [
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Pristine Professional Spaces",
+          "position": 10,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P81",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-87723521d9",
+      "original": "/images/services/office-cleaning-services/office-cleaning-services-3.webp",
+      "variants": [
+        "/images/services/office-cleaning-services/office-cleaning-services-3.webp"
+      ],
+      "title": "Clean open plan office",
+      "placements": [
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Pristine Professional Spaces",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P82",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-768fd517f5",
+      "original": "/images/services/office-cleaning-services/office-cleaning-services-4.webp",
+      "variants": [
+        "/images/services/office-cleaning-services/office-cleaning-services-4.webp"
+      ],
+      "title": "Executive office clean",
+      "placements": [
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Pristine Professional Spaces",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P83",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-8d4e26982c",
+      "original": "/images/services/office-cleaning-services/office-cleaning-services-5.webp",
+      "variants": [
+        "/images/services/office-cleaning-services/office-cleaning-services-5.webp"
+      ],
+      "title": "Office kitchen cleaning",
+      "placements": [
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Pristine Professional Spaces",
+          "position": 13,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P84",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-0fbc059dc9",
+      "original": "/images/services/office-cleaning-services/office-cleaning-services-6.webp",
+      "variants": [
+        "/images/services/office-cleaning-services/office-cleaning-services-6.webp"
+      ],
+      "title": "Commercial cleaning team",
+      "placements": [
+        {
+          "path": "/services/office-cleaning/",
+          "page": "Office Cleaning Services London: Premium Commercial Cleaning",
+          "section": "Pristine Professional Spaces",
+          "position": 14,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/services/office-cleaning/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Original file unavailable",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": null,
+      "ref": "P85",
+      "unavailableReason": "The May page references this file, but it was missing from that version of the site."
+    },
+    {
+      "id": "p-6643c790e6",
+      "original": "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop&auto=format&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop&auto=format&q=80"
+      ],
+      "title": "Professional cleaning staff member in uniform providing discreet, concierge-level service in an elegant home",
+      "placements": [
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "2. Concierge-Level Care",
+          "position": 11,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-6643c790e6.jpg",
+      "bytes": 382674,
+      "sha256": "f7f3b820e18521e7975dfd47d4f22ad03e8ad13240ae161b86c19fae80cf4b1d",
+      "ref": "P86",
+      "width": 1400,
+      "height": 1050,
+      "dimensions": "1400 \u00d7 1050 px"
+    },
+    {
+      "id": "p-fb4fd078eb",
+      "original": "https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=800&h=600&fit=crop&auto=format&q=80",
+      "variants": [
+        "https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=800&h=600&fit=crop&auto=format&q=80"
+      ],
+      "title": "Close-up of marble surface being carefully cleaned with specialised tools showcasing technical expertise",
+      "placements": [
+        {
+          "path": "/why-us/",
+          "page": "Beyond Clean. Total Calm.",
+          "section": "3. Technical Consulting",
+          "position": 12,
+          "anchor": "",
+          "liveUrl": "https://highqualityclean.co.uk/why-us/"
+        }
+      ],
+      "group": "archive",
+      "kind": "Stock image",
+      "rights": "Previous use does not establish reuse permission.",
+      "src": "/assets/p-fb4fd078eb.jpg",
+      "bytes": 546677,
+      "sha256": "8226da2c85d8369366942133a92f92fa28da7fc6208fe45728156ae2c2b7edcb",
+      "ref": "P87",
+      "width": 1400,
+      "height": 1867,
+      "dimensions": "1400 \u00d7 1867 px"
+    },
+    {
+      "id": "p-a872f187a9",
+      "original": "/images/instock/IMG-20250812-WA0014.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0014.jpg"
+      ],
+      "title": "Library photo 01",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-a872f187a9.jpg",
+      "bytes": 362878,
+      "sha256": "c75f77757dd3f4b0f952db2e6d221976ecb28c950461a127e06060cae3109267",
+      "ref": "L01",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-2267193ade",
+      "original": "/images/instock/IMG-20250812-WA0015.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0015.jpg"
+      ],
+      "title": "Library photo 02",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-2267193ade.jpg",
+      "bytes": 456754,
+      "sha256": "ddcc4760b0a880976b3b31352645709938e2bc7511cbe25af37d101ac5657cc5",
+      "ref": "L02",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-ae4372f37d",
+      "original": "/images/instock/IMG-20250812-WA0016.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0016.jpg"
+      ],
+      "title": "Library photo 03",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-ae4372f37d.jpg",
+      "bytes": 408930,
+      "sha256": "2fd6dab60fc5194306a3ca4f09537e7e2094e3f596c0f9a6925147da4adacbd9",
+      "ref": "L03",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-23dc9fb727",
+      "original": "/images/instock/IMG-20250812-WA0017.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0017.jpg"
+      ],
+      "title": "Library photo 04",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-23dc9fb727.jpg",
+      "bytes": 388959,
+      "sha256": "c001eb611172ea9bdbc5434746399c7f18ec96c15ce6c18baf6cdd1b71821428",
+      "ref": "L04",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-40c06f826c",
+      "original": "/images/instock/IMG-20250812-WA0018.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0018.jpg"
+      ],
+      "title": "Library photo 05",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-40c06f826c.jpg",
+      "bytes": 146277,
+      "sha256": "c31147e478b417aae30233760ddb211bdb8671b6131053975a51820509d3aecf",
+      "ref": "L05",
+      "width": 2048,
+      "height": 480,
+      "dimensions": "2048 \u00d7 480 px"
+    },
+    {
+      "id": "p-29c1837081",
+      "original": "/images/instock/IMG-20250812-WA0019.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0019.jpg"
+      ],
+      "title": "Library photo 06",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-29c1837081.jpg",
+      "bytes": 375399,
+      "sha256": "c58a032e9f71807971a4b8bccfbef75450eec1c6bb9d8f10f2c9c6854f722f39",
+      "ref": "L06",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-773a86108b",
+      "original": "/images/instock/IMG-20250812-WA0020.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0020.jpg"
+      ],
+      "title": "Library photo 07",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-773a86108b.jpg",
+      "bytes": 353075,
+      "sha256": "d7191cfd924d2565ebb151e7d0790036fc708acdb82e737ce87dbe036df76021",
+      "ref": "L07",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-aa034f75d7",
+      "original": "/images/instock/IMG-20250812-WA0021.jpg",
+      "variants": [
+        "/images/instock/IMG-20250812-WA0021.jpg"
+      ],
+      "title": "Library photo 08",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-aa034f75d7.jpg",
+      "bytes": 428715,
+      "sha256": "cfe7489de6b91ab2222ff165bb43b3409747392f509a040551dfafc177f6176f",
+      "ref": "L08",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-ed8304fe25",
+      "original": "/images/instock/IMG-20250813-WA0000.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0000.jpg"
+      ],
+      "title": "Library photo 09",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-ed8304fe25.jpg",
+      "bytes": 245825,
+      "sha256": "8fe196c746012d938559b5104d914a254159408d5907f50c28bcd9b28cf4f9d9",
+      "ref": "L09",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-6179986d6a",
+      "original": "/images/instock/IMG-20250813-WA0001.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0001.jpg"
+      ],
+      "title": "Library photo 10",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-6179986d6a.jpg",
+      "bytes": 322101,
+      "sha256": "9670f3cab884e0db8b52e6a0766cc80b2bc066ddc06bff56668a554ecd7f206f",
+      "ref": "L10",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-ddef38bd74",
+      "original": "/images/instock/IMG-20250813-WA0002.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0002.jpg"
+      ],
+      "title": "Library photo 11",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-ddef38bd74.jpg",
+      "bytes": 296968,
+      "sha256": "4d21c255b4f850b41551f594a9df680755bd028d94bbc04ab5e551fd93f94435",
+      "ref": "L11",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-4c04199dae",
+      "original": "/images/instock/IMG-20250813-WA0003.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0003.jpg"
+      ],
+      "title": "Library photo 12",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-4c04199dae.jpg",
+      "bytes": 217013,
+      "sha256": "5f7cf4eaf3d4df71e5dee8d34590acb57aa6dec1215d6261950d3c7ff4bb51aa",
+      "ref": "L12",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-1ea488cccb",
+      "original": "/images/instock/IMG-20250813-WA0004.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0004.jpg"
+      ],
+      "title": "Library photo 13",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-1ea488cccb.jpg",
+      "bytes": 170986,
+      "sha256": "92b59c36a1ab9cd43daf7ea62768859dc38952651a2b5880ff337996c763025d",
+      "ref": "L13",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-9ec19633b6",
+      "original": "/images/instock/IMG-20250813-WA0005.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0005.jpg"
+      ],
+      "title": "Library photo 14",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-9ec19633b6.jpg",
+      "bytes": 225899,
+      "sha256": "d499d5ffc89f27fbbe0c0dd4c500af8c062ae31a23def37ec59b53831e13f277",
+      "ref": "L14",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-8cbad24dc5",
+      "original": "/images/instock/IMG-20250813-WA0006.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0006.jpg"
+      ],
+      "title": "Library photo 15",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-8cbad24dc5.jpg",
+      "bytes": 190339,
+      "sha256": "ddebaf8b00f37c771bf23c5a3eaaa0f4c8c6ccaf31f4e7bf977fcc0ab7f2959d",
+      "ref": "L15",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-c6f31662eb",
+      "original": "/images/instock/IMG-20250813-WA0007.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0007.jpg"
+      ],
+      "title": "Library photo 16",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-c6f31662eb.jpg",
+      "bytes": 302211,
+      "sha256": "0c58ae4d949959c9ee60ba63e046851cf8857a88a4a97b9a3df19bad63105c60",
+      "ref": "L16",
+      "width": 1284,
+      "height": 839,
+      "dimensions": "1284 \u00d7 839 px"
+    },
+    {
+      "id": "p-8640eaf7c2",
+      "original": "/images/instock/IMG-20250813-WA0008.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0008.jpg"
+      ],
+      "title": "Library photo 17",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-8640eaf7c2.jpg",
+      "bytes": 267775,
+      "sha256": "e740bb83e9369ea160b7d85f89189239e80d6d510ead85291ac7fe67d3f3bc78",
+      "ref": "L17",
+      "width": 1284,
+      "height": 864,
+      "dimensions": "1284 \u00d7 864 px"
+    },
+    {
+      "id": "p-9a1545a450",
+      "original": "/images/instock/IMG-20250813-WA0009.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0009.jpg"
+      ],
+      "title": "Library photo 18",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-9a1545a450.jpg",
+      "bytes": 99928,
+      "sha256": "74babb7d8adbada7fa69d94080d712f420c3b3c5447dc4e841d3ae1aa6528b7a",
+      "ref": "L18",
+      "width": 1284,
+      "height": 838,
+      "dimensions": "1284 \u00d7 838 px"
+    },
+    {
+      "id": "p-0aed5b3088",
+      "original": "/images/instock/IMG-20250813-WA0010.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0010.jpg"
+      ],
+      "title": "Library photo 19",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-0aed5b3088.jpg",
+      "bytes": 74207,
+      "sha256": "a991cf77dbe1d3aed2ebefac699f9045d0a72d48064ffcc62abd3e880c8b242a",
+      "ref": "L19",
+      "width": 1284,
+      "height": 848,
+      "dimensions": "1284 \u00d7 848 px"
+    },
+    {
+      "id": "p-25937e0ff9",
+      "original": "/images/instock/IMG-20250813-WA0011.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0011.jpg"
+      ],
+      "title": "Library photo 20",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-25937e0ff9.jpg",
+      "bytes": 218012,
+      "sha256": "8af3e4d24b6b80d460a447cc352c0cae9597c68e496d7ebcea4545483e3f1ce5",
+      "ref": "L20",
+      "width": 1284,
+      "height": 859,
+      "dimensions": "1284 \u00d7 859 px"
+    },
+    {
+      "id": "p-6a6962c695",
+      "original": "/images/instock/IMG-20250813-WA0012.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0012.jpg"
+      ],
+      "title": "Library photo 21",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-6a6962c695.jpg",
+      "bytes": 90975,
+      "sha256": "5fb1365ad26fd7d3f646f3acd3ef24ad026c87a6daebbbb07092b9ed05d3264e",
+      "ref": "L21",
+      "width": 1284,
+      "height": 828,
+      "dimensions": "1284 \u00d7 828 px"
+    },
+    {
+      "id": "p-aca711685a",
+      "original": "/images/instock/IMG-20250813-WA0013.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0013.jpg"
+      ],
+      "title": "Library photo 22",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-aca711685a.jpg",
+      "bytes": 83921,
+      "sha256": "2e1606cd69b679db53f0cfb4c3cfe09facffcf6a5943fbc5842f600de6e91e36",
+      "ref": "L22",
+      "width": 1284,
+      "height": 835,
+      "dimensions": "1284 \u00d7 835 px"
+    },
+    {
+      "id": "p-1ed86d8561",
+      "original": "/images/instock/IMG-20250813-WA0014.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0014.jpg"
+      ],
+      "title": "Library photo 23",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-1ed86d8561.jpg",
+      "bytes": 94525,
+      "sha256": "c9b8d4fb4b0c7b1d08711174f875cc8ca9d28ded7a0cf9ac767f46e931bce1a6",
+      "ref": "L23",
+      "width": 1284,
+      "height": 861,
+      "dimensions": "1284 \u00d7 861 px"
+    },
+    {
+      "id": "p-a758fcfb12",
+      "original": "/images/instock/IMG-20250813-WA0015.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0015.jpg"
+      ],
+      "title": "Library photo 24",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-a758fcfb12.jpg",
+      "bytes": 76080,
+      "sha256": "38ef7d38cfaef8928f50bafd060130d0502ded0465d163bb7ad096f75b51360c",
+      "ref": "L24",
+      "width": 1284,
+      "height": 845,
+      "dimensions": "1284 \u00d7 845 px"
+    },
+    {
+      "id": "p-ca97b5661a",
+      "original": "/images/instock/IMG-20250813-WA0016.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0016.jpg"
+      ],
+      "title": "Library photo 25",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-ca97b5661a.jpg",
+      "bytes": 234701,
+      "sha256": "e4d67907980cdb7634668b999ffae016e8e64d96a59e280e4ca1a0c73d92fc5c",
+      "ref": "L25",
+      "width": 1284,
+      "height": 839,
+      "dimensions": "1284 \u00d7 839 px"
+    },
+    {
+      "id": "p-f31ef8efdd",
+      "original": "/images/instock/IMG-20250813-WA0017.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0017.jpg"
+      ],
+      "title": "Library photo 26",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-f31ef8efdd.jpg",
+      "bytes": 92999,
+      "sha256": "f401e95c65618587ca50789cedd08c0ceb711eff2bc11d17942f23fc7538690c",
+      "ref": "L26",
+      "width": 1284,
+      "height": 848,
+      "dimensions": "1284 \u00d7 848 px"
+    },
+    {
+      "id": "p-3143aad459",
+      "original": "/images/instock/IMG-20250813-WA0018.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0018.jpg"
+      ],
+      "title": "Library photo 27",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-3143aad459.jpg",
+      "bytes": 112677,
+      "sha256": "0fa09ceb85bca7e85770e049e12401416f56fd3fd5c955143aaddd7478c58ce8",
+      "ref": "L27",
+      "width": 1284,
+      "height": 854,
+      "dimensions": "1284 \u00d7 854 px"
+    },
+    {
+      "id": "p-d105cf67af",
+      "original": "/images/instock/IMG-20250813-WA0019.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0019.jpg"
+      ],
+      "title": "Library photo 28",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-d105cf67af.jpg",
+      "bytes": 109277,
+      "sha256": "51e6660eac38b383f119e8659292441ea50b57f861ee37b357dd8e33a0b165ff",
+      "ref": "L28",
+      "width": 1284,
+      "height": 859,
+      "dimensions": "1284 \u00d7 859 px"
+    },
+    {
+      "id": "p-7089c9ea12",
+      "original": "/images/instock/IMG-20250813-WA0020.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0020.jpg"
+      ],
+      "title": "Library photo 29",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-7089c9ea12.jpg",
+      "bytes": 91490,
+      "sha256": "852805d8f9f132b03ea859c7e92af66acf5999b2e3002a8c0e09dc03006a7827",
+      "ref": "L29",
+      "width": 1284,
+      "height": 836,
+      "dimensions": "1284 \u00d7 836 px"
+    },
+    {
+      "id": "p-32e82bbc0f",
+      "original": "/images/instock/IMG-20250813-WA0021.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0021.jpg"
+      ],
+      "title": "Library photo 30",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-32e82bbc0f.jpg",
+      "bytes": 108818,
+      "sha256": "a47af8dd1a4b382ad4510f08c77c0739637aec25d7fe5d71ba472296607f63aa",
+      "ref": "L30",
+      "width": 1284,
+      "height": 838,
+      "dimensions": "1284 \u00d7 838 px"
+    },
+    {
+      "id": "p-b464b905ec",
+      "original": "/images/instock/IMG-20250813-WA0022.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0022.jpg"
+      ],
+      "title": "Library photo 31",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-b464b905ec.jpg",
+      "bytes": 100118,
+      "sha256": "6743939022d6796a73f2d95e5621ccb108fdd5b6fc75b402dbcb216054e68f51",
+      "ref": "L31",
+      "width": 1284,
+      "height": 878,
+      "dimensions": "1284 \u00d7 878 px"
+    },
+    {
+      "id": "p-4be393f8d5",
+      "original": "/images/instock/IMG-20250813-WA0023.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0023.jpg"
+      ],
+      "title": "Library photo 32",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-4be393f8d5.jpg",
+      "bytes": 141737,
+      "sha256": "f54a0abc4a82d1602de5196b5ecf4d1fee9b81e9e7a9f1f0543fc65ccc3afee7",
+      "ref": "L32",
+      "width": 1284,
+      "height": 850,
+      "dimensions": "1284 \u00d7 850 px"
+    },
+    {
+      "id": "p-cf8f6d1f35",
+      "original": "/images/instock/IMG-20250813-WA0024.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0024.jpg"
+      ],
+      "title": "Library photo 33",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-cf8f6d1f35.jpg",
+      "bytes": 184655,
+      "sha256": "9ed69dafee97b1e928a1ed718999b703c4fb16ad0c8551f3bf6235d48e7c435f",
+      "ref": "L33",
+      "width": 1284,
+      "height": 835,
+      "dimensions": "1284 \u00d7 835 px"
+    },
+    {
+      "id": "p-291fc62037",
+      "original": "/images/instock/IMG-20250813-WA0025.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0025.jpg"
+      ],
+      "title": "Library photo 34",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-291fc62037.jpg",
+      "bytes": 226257,
+      "sha256": "0a5752dc0e661f3f5e12e307e805bde390af278fa1470c92374349243ac29380",
+      "ref": "L34",
+      "width": 1284,
+      "height": 839,
+      "dimensions": "1284 \u00d7 839 px"
+    },
+    {
+      "id": "p-a36cdd0968",
+      "original": "/images/instock/IMG-20250813-WA0026.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0026.jpg"
+      ],
+      "title": "Empty room ready for a new occupier",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-a36cdd0968.jpg",
+      "bytes": 108451,
+      "sha256": "d6f5ab81faacce417d4cb16a26d9b5925f50bef07680c7a9e2833789562ff22b",
+      "ref": "L35",
+      "width": 1284,
+      "height": 854,
+      "dimensions": "1284 \u00d7 854 px"
+    },
+    {
+      "id": "p-8effbd393f",
+      "original": "/images/instock/IMG-20250813-WA0027.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0027.jpg"
+      ],
+      "title": "Library photo 36",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-8effbd393f.jpg",
+      "bytes": 207477,
+      "sha256": "21b25eae545af9ec642edf901667ff2fb0d0313107d5158b05225dbf33038431",
+      "ref": "L36",
+      "width": 1284,
+      "height": 838,
+      "dimensions": "1284 \u00d7 838 px"
+    },
+    {
+      "id": "p-50ece1fda9",
+      "original": "/images/instock/IMG-20250813-WA0028.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0028.jpg"
+      ],
+      "title": "Library photo 37",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-50ece1fda9.jpg",
+      "bytes": 160627,
+      "sha256": "b3c9e6a00abb5b7f20c8375ac334244d8b445380410807c136e59323749e2bf8",
+      "ref": "L37",
+      "width": 1284,
+      "height": 851,
+      "dimensions": "1284 \u00d7 851 px"
+    },
+    {
+      "id": "p-4567370ba5",
+      "original": "/images/instock/IMG-20250813-WA0030.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0030.jpg"
+      ],
+      "title": "Library photo 38",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-4567370ba5.jpg",
+      "bytes": 79288,
+      "sha256": "d326e5be58acc47e93bd36fbb7af3d134ad6934d1822dc45b5a4690f07a315d0",
+      "ref": "L38",
+      "width": 1284,
+      "height": 850,
+      "dimensions": "1284 \u00d7 850 px"
+    },
+    {
+      "id": "p-d1e55f5bcf",
+      "original": "/images/instock/IMG-20250813-WA0031.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0031.jpg"
+      ],
+      "title": "Library photo 39",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-d1e55f5bcf.jpg",
+      "bytes": 84814,
+      "sha256": "d40286ee70c654da907cba6df6bbd2bcccd7d312012875adc70be763400c3851",
+      "ref": "L39",
+      "width": 1284,
+      "height": 836,
+      "dimensions": "1284 \u00d7 836 px"
+    },
+    {
+      "id": "p-1c2e67957d",
+      "original": "/images/instock/IMG-20250813-WA0032.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0032.jpg"
+      ],
+      "title": "Library photo 40",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-1c2e67957d.jpg",
+      "bytes": 149244,
+      "sha256": "2eddd4ff58a102e7472b67094501de2c5b086de15e3a8fdf883800263a8449a3",
+      "ref": "L40",
+      "width": 1600,
+      "height": 1067,
+      "dimensions": "1600 \u00d7 1067 px"
+    },
+    {
+      "id": "p-0f28ac1d4f",
+      "original": "/images/instock/IMG-20250813-WA0033.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0033.jpg"
+      ],
+      "title": "Bright kitchen ready for occupation",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-0f28ac1d4f.jpg",
+      "bytes": 67206,
+      "sha256": "114b57293cd1cbf839f5b66451b64c154064ededaca65ca080f66ed9c8cee50f",
+      "ref": "L41",
+      "width": 1284,
+      "height": 833,
+      "dimensions": "1284 \u00d7 833 px"
+    },
+    {
+      "id": "p-4506e93b72",
+      "original": "/images/instock/IMG-20250813-WA0034.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0034.jpg"
+      ],
+      "title": "Library photo 42",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-4506e93b72.jpg",
+      "bytes": 109864,
+      "sha256": "959333b1cfb64c3eb1e4d58bdbc0457423896e368e1794ddf4a23ea8ae9610df",
+      "ref": "L42",
+      "width": 1284,
+      "height": 851,
+      "dimensions": "1284 \u00d7 851 px"
+    },
+    {
+      "id": "p-ec767ac2d6",
+      "original": "/images/instock/IMG-20250813-WA0042.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0042.jpg"
+      ],
+      "title": "Exterior window detail cleaning",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-ec767ac2d6.jpg",
+      "bytes": 177554,
+      "sha256": "a97823bec45f01573c73a1aa863eb0d542780143f0ae934394477fef7f8afb28",
+      "ref": "L43",
+      "width": 1200,
+      "height": 1600,
+      "dimensions": "1200 \u00d7 1600 px"
+    },
+    {
+      "id": "p-93c6b97c30",
+      "original": "/images/instock/IMG-20250813-WA0043.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0043.jpg"
+      ],
+      "title": "Library photo 44",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-93c6b97c30.jpg",
+      "bytes": 284038,
+      "sha256": "7bb411073d1c02e9abf732fa4a37e4f5ab57ffde8f3f446f273399add1627dd7",
+      "ref": "L44",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-1cc2c14f33",
+      "original": "/images/instock/IMG-20250813-WA0044.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0044.jpg"
+      ],
+      "title": "Window cleaning outside a period property",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-1cc2c14f33.jpg",
+      "bytes": 197602,
+      "sha256": "5fed61c156a64584b32465b7374b964bd3f81c4a6fd05a1c852bb5d20fedba4d",
+      "ref": "L45",
+      "width": 1200,
+      "height": 1600,
+      "dimensions": "1200 \u00d7 1600 px"
+    },
+    {
+      "id": "p-53f146f7e0",
+      "original": "/images/instock/IMG-20250813-WA0045.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0045.jpg"
+      ],
+      "title": "Library photo 46",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-53f146f7e0.jpg",
+      "bytes": 254490,
+      "sha256": "59652f3e610a60dc01d18a7981d54ee54b6d2041336324eeb0aae18c9fbe726c",
+      "ref": "L46",
+      "width": 1500,
+      "height": 2000,
+      "dimensions": "1500 \u00d7 2000 px"
+    },
+    {
+      "id": "p-89ee214d68",
+      "original": "/images/instock/IMG-20250813-WA0049.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0049.jpg"
+      ],
+      "title": "Library photo 47",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-89ee214d68.jpg",
+      "bytes": 443241,
+      "sha256": "26dcfb82863b573bda228a96d820bff25e6163619f82a1de4c806b90fd2b0d55",
+      "ref": "L47",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-88b191d4de",
+      "original": "/images/instock/IMG-20250813-WA0050.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0050.jpg"
+      ],
+      "title": "Library photo 48",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-88b191d4de.jpg",
+      "bytes": 213033,
+      "sha256": "d05db3145af3b2d7e78749179f737554b5b8a7ad0736fb4b5b12558f2d4f488f",
+      "ref": "L48",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-3f805a2adc",
+      "original": "/images/instock/IMG-20250813-WA0051.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0051.jpg"
+      ],
+      "title": "Library photo 49",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-3f805a2adc.jpg",
+      "bytes": 408834,
+      "sha256": "7ad137f60a6cff264efdf3be61508e4bd49f6473f14f2b52e42dd2fae2b8bafa",
+      "ref": "L49",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-919fa1428f",
+      "original": "/images/instock/IMG-20250813-WA0052.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0052.jpg"
+      ],
+      "title": "Library photo 50",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-919fa1428f.jpg",
+      "bytes": 296997,
+      "sha256": "05134da2deac55ae1c225efde5e5a88f2e99bcc75a6afd5fb6bacda38fabc10b",
+      "ref": "L50",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-f89c7cbb23",
+      "original": "/images/instock/IMG-20250813-WA0053.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0053.jpg"
+      ],
+      "title": "Library photo 51",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-f89c7cbb23.jpg",
+      "bytes": 179470,
+      "sha256": "e5031e8de691c2bfe3dd3ec968c084eb244cbf366c5b9164e330d47611027a0e",
+      "ref": "L51",
+      "width": 2040,
+      "height": 1530,
+      "dimensions": "2040 \u00d7 1530 px"
+    },
+    {
+      "id": "p-422eac6748",
+      "original": "/images/instock/IMG-20250813-WA0054.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0054.jpg"
+      ],
+      "title": "Library photo 52",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-422eac6748.jpg",
+      "bytes": 291609,
+      "sha256": "d23c8591dceedf9cea907d6174617e457d08749cbbfb988e31324a09fad2e341",
+      "ref": "L52",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-6d72e20e61",
+      "original": "/images/instock/IMG-20250813-WA0055.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0055.jpg"
+      ],
+      "title": "Library photo 53",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-6d72e20e61.jpg",
+      "bytes": 322740,
+      "sha256": "a1b7115b82ea1a7f3625c63df4b023f5396f36af6b44fa895dba7a2ce0eeedb4",
+      "ref": "L53",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-4d067ac871",
+      "original": "/images/instock/IMG-20250813-WA0056.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0056.jpg"
+      ],
+      "title": "Library photo 54",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-4d067ac871.jpg",
+      "bytes": 353418,
+      "sha256": "bb7fab1b39f46f4c430c076e40bf5ebdc342da56cce72f8b5a9a1a46be64cbb7",
+      "ref": "L54",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-e3c4236f84",
+      "original": "/images/instock/IMG-20250813-WA0057.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0057.jpg"
+      ],
+      "title": "Library photo 55",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-e3c4236f84.jpg",
+      "bytes": 354707,
+      "sha256": "803f10142c63c1ae1dc8b09239d8a6013fdbc3466c7c89e2235314627145f8e2",
+      "ref": "L55",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-47c870417b",
+      "original": "/images/instock/IMG-20250813-WA0058.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0058.jpg"
+      ],
+      "title": "Library photo 56",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-47c870417b.jpg",
+      "bytes": 342114,
+      "sha256": "3d1ee32bc38cd0d70bdffc47b1124433696c8aa77ec3fc8d7b41dd084b05dcbc",
+      "ref": "L56",
+      "width": 1530,
+      "height": 2040,
+      "dimensions": "1530 \u00d7 2040 px"
+    },
+    {
+      "id": "p-1ef63f3b16",
+      "original": "/images/instock/IMG-20250813-WA0062.jpg",
+      "variants": [
+        "/images/instock/IMG-20250813-WA0062.jpg"
+      ],
+      "title": "Window cleaning inside a property",
+      "placements": [],
+      "group": "library",
+      "kind": "Earlier image library",
+      "rights": "HQC library file; project and permission to be confirmed.",
+      "src": "/assets/p-1ef63f3b16.jpg",
+      "bytes": 144611,
+      "sha256": "92d1e85a25183957ade19d08568207527fc3b9d942792c58225c183f05fad8e8",
+      "ref": "L57",
+      "width": 1079,
+      "height": 1344,
+      "dimensions": "1079 \u00d7 1344 px"
+    }
+  ],
+  "heroes": [
+    {
+      "id": "hero-1",
+      "ref": "H01",
+      "title": "Homes, workplaces and property care",
+      "photos": [
+        "p-0f28ac1d4f",
+        "p-adb89e2c45",
+        "p-1cc2c14f33"
+      ],
+      "reason": "Recommended direction: show the breadth of HQC in one view. Two earlier library photos sit alongside an archived workplace stock image.",
+      "placements": []
+    },
+    {
+      "id": "hero-2",
+      "ref": "H02",
+      "title": "People doing the work",
+      "photos": [
+        "p-1cc2c14f33"
+      ],
+      "reason": "Makes the service visible instead of showing only an attractive room. Earlier library photograph; confirm the job and publication permission. A wider original would help the desktop crop.",
+      "placements": []
+    },
+    {
+      "id": "hero-3",
+      "ref": "H03",
+      "title": "Care in the detail",
+      "photos": [
+        "p-1ef63f3b16"
+      ],
+      "reason": "A closer view of a person cleaning a window. Useful if the first impression should be hands-on care; balance with workplace and property imagery below.",
+      "placements": []
+    },
+    {
+      "id": "hero-4",
+      "ref": "H04",
+      "title": "A space ready to use",
+      "photos": [
+        "p-0f28ac1d4f"
+      ],
+      "reason": "Shows a clear, finished result using an earlier library image. Strong for occupation and handover, but residential on its own.",
+      "placements": []
+    },
+    {
+      "id": "hero-5",
+      "ref": "H05",
+      "title": "Ready for the next occupier",
+      "photos": [
+        "p-a36cdd0968"
+      ],
+      "reason": "An uncluttered room makes the result easy to see. Could support the managed-property story with nearby workplace and service evidence.",
+      "placements": []
+    },
+    {
+      "id": "hero-6",
+      "ref": "H06",
+      "title": "A professional workplace result",
+      "photos": [
+        "p-adb89e2c45"
+      ],
+      "reason": "An unbranded workplace image from the older site. A useful commercial counterweight; this is stock photography, not a claimed HQC client site.",
+      "placements": []
+    }
+  ],
+  "feedback": {
+    "date": "21 August 2026",
+    "document": "HQC Website Copywriting Batch 1 \u2013 Pedro Approved Draft, implementation review",
+    "summary": "The homepage should represent Property & Facilities, Workplaces and Homes. A strongly residential image risks making HQC look primarily like a luxury domestic-cleaning company. Balance it with workplace and managed-property imagery; use genuine HQC work where possible."
+  }
+}

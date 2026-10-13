@@ -1,0 +1,57 @@
+[
+  {
+    "src": "/images/bark.png",
+    "reason": "Logo or placeholder",
+    "page": "/"
+  },
+  {
+    "src": "/images/yell.png",
+    "reason": "Logo or placeholder",
+    "page": "/"
+  },
+  {
+    "src": "https://placehold.co/100x100/",
+    "reason": "Logo or placeholder",
+    "page": "/"
+  },
+  {
+    "src": "/images/brand-logos/chestertons.webp",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  },
+  {
+    "src": "/images/brand-logos/lowlu.webp",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  },
+  {
+    "src": "/images/brand-logos/young-guns.webp",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  },
+  {
+    "src": "/images/brand-logos/Knight-Frank.webp",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  },
+  {
+    "src": "/images/brand-logos/Marsh-and-Parsons.webp",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  },
+  {
+    "src": "/images/brand-logos/Sostrene-Grene.png",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  },
+  {
+    "src": "/images/brand-logos/Generate-UK.png",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  },
+  {
+    "src": "/images/brand-logos/Lux.webp",
+    "reason": "Logo or placeholder",
+    "page": "/why-us/"
+  }
+]
