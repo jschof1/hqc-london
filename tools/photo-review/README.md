@@ -23,7 +23,7 @@ node node_modules/wrangler/bin/wrangler.js deploy --config tools/photo-review/wr
 node node_modules/wrangler/bin/wrangler.js secret put REVIEW_KEY --config tools/photo-review/wrangler.jsonc
 ```
 
-Use a Cloudflare credential with Workers Scripts edit and the necessary custom-domain route permissions on the configured account/zone. The existing saved credentials were rejected with HTTP 403 on Worker publication on 13 October 2026. No live review deployment is confirmed yet.
+Use a Cloudflare credential with Workers Scripts edit and the necessary custom-domain route permissions on the configured account/zone. Published and verified on 13 October 2026. The saved general Cloudflare token has API Tokens Write access; it was used to issue a two-hour deployment token scoped to this account and the HQC zone. That temporary token was revoked after publication. Existing credentials were unchanged. See `evidence/live-publication.json`, `live-verification.json` and `live-assets.json` for proof.
 
 The share link is `https://review.highqualityclean.co.uk/#<REVIEW_KEY>`. A fragment is exchanged for a Secure HttpOnly cookie and removed from the address bar. The key is never sent to third-party resources. Anyone with the link can edit the shared review. Rotating the key invalidates previous links/cookies but preserves choices.
 

@@ -1,0 +1,9 @@
+{
+  "reviewDomain": "https://review.highqualityclean.co.uk",
+  "workerVersion": "b605bb32-b787-485c-846e-d0f74f5f9aa7",
+  "mainSiteProductionDeployment": "242f9c4f-ce9a-4e3e-944e-ad99eb2665bc",
+  "mainSiteCommit": "41903fbb90cf1c0c396d8ac68075a05a993cca79",
+  "workerDeployment": "26686f4f-b6d6-4277-b0a5-591c62634924",
+  "publishedAt": "2026-10-13T10:24:30.382499Z",
+  "temporaryPublishingAccessRevoked": true
+}
