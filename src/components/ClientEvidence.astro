@@ -1,0 +1,48 @@
+---
+interface Props {
+  scope?: 'all' | 'residential' | 'commercial';
+  id?: string;
+}
+const { scope = 'all', id = 'client-evidence' } = Astro.props;
+const groups = [
+  {
+    key: 'residential',
+    title: 'Residential client evidence',
+    copy: 'Home and private-client reviews and case studies.',
+    slots: ['Private client result']
+  },
+  {
+    key: 'commercial',
+    title: 'Commercial and property client evidence',
+    copy: 'Property, portfolio and workplace reviews and case studies.',
+    slots: ['Property or portfolio result', 'Workplace programme result']
+  }
+].filter((group) => scope === 'all' || group.key === scope);
+---
+
+<section class="border-y border-midnight/10 bg-porcelain py-20 md:py-24" aria-labelledby={id} data-client-evidence={scope}>
+  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+    <div class="max-w-3xl">
+      <p class="section-kicker">Client evidence</p>
+      <h2 id={id} class="section-title">Proof is published only when it is approved.</h2>
+      <p class="mt-6 text-lg leading-8 text-slate">These positions are reserved for genuine, traceable client evidence. Reviews, case studies and client logos will appear only when the relevant publication permissions are confirmed.</p>
+    </div>
+    <div class:list={['mt-12 grid gap-8', scope === 'all' && 'lg:grid-cols-2']}>
+      {groups.map((group) => (
+        <div data-evidence-category={group.key}>
+          <h3 class="font-serif text-3xl font-medium text-midnight">{group.title}</h3>
+          <p class="mt-3 leading-7 text-slate">{group.copy}</p>
+          <div class="mt-5 grid gap-4">
+            {group.slots.map((label) => (
+              <article class="rounded-2xl border border-midnight/10 bg-white p-7">
+                <p class="text-xs font-bold uppercase tracking-[.15em] text-copper-ink">Evidence pending approval</p>
+                <h4 class="mt-4 font-serif text-2xl font-medium text-midnight">{label}</h4>
+                <p class="mt-4 leading-7 text-slate">Client permission and approved source material are required before publication.</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

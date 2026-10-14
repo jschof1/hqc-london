@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ServiceSelector from '../components/ServiceSelector.astro';
 import TrustRail from '../components/TrustRail.astro';
+import FounderPortrait from '../components/FounderPortrait.astro';
+import ClientEvidence from '../components/ClientEvidence.astro';
 import phase8Copy from '../data/phase8-copy.json';
 
 const homeCopy = phase8Copy.home;
@@ -185,24 +187,7 @@ const sectionDestinations: Record<string, string> = {
       </div>
     </section>
 
-    <section class="border-y border-midnight/10 bg-porcelain py-20 md:py-24" aria-labelledby="proof-release-title">
-      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
-        <div class="max-w-3xl">
-          <p class="section-kicker">Client evidence</p>
-          <h2 id="proof-release-title" class="section-title">Proof is published only when it is approved.</h2>
-          <p class="mt-6 text-lg leading-8 text-slate">The three approved proof positions are retained below. Named reviews and case studies will appear only after the relevant client permissions are confirmed.</p>
-        </div>
-        <div class="mt-10 grid gap-4 md:grid-cols-3">
-          {['Private client result', 'Property or portfolio result', 'Workplace programme result'].map((label, index) => (
-            <article class="min-h-56 rounded-2xl border border-midnight/10 bg-white p-7">
-              <span class="font-serif text-4xl text-copper-ink">0{index + 1}</span>
-              <h3 class="mt-12 font-serif text-3xl font-medium text-midnight">{label}</h3>
-              <p class="mt-4 leading-7 text-slate">Evidence release pending client permission.</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ClientEvidence id="proof-release-title" />
 
     <section class="section-shell">
       <div class="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
@@ -226,9 +211,9 @@ const sectionDestinations: Record<string, string> = {
 
     <section class="overflow-hidden bg-white">
       <div class="mx-auto grid max-w-[1440px] lg:grid-cols-2">
-        <figure class="min-h-[320px] bg-mist sm:min-h-[520px]" style="background-image: url('/images/pedro-founder.webp'); background-position: center top; background-size: cover;">
-          <img src="/images/pedro-founder.webp" alt="Pedro Ndombasi, founder of High Quality Clean" class="h-full w-full object-cover object-top" loading="eager" decoding="async" width="1152" height="2048" />
-        </figure>
+        <div class="flex items-center bg-mist px-5 py-12 sm:px-8">
+          <FounderPortrait />
+        </div>
         <div class="flex items-center px-5 py-20 sm:px-8 lg:px-20">
           <div>
             <p class="section-kicker">Founder-led</p>

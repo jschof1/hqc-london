@@ -148,12 +148,9 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Plans, materials and floor area', 'Specialist surfaces and contractors', 'Security, programme and representative sign-off']
   },
   'about-high-quality-clean': {
-    hero: '/images/pedro-founder.webp',
-    heroAlt: 'Pedro Ndombasi, founder of High Quality Clean',
-    gallery: [
-      { src: '/images/pedro.png', alt: 'Pedro from High Quality Clean' },
-      ...homeGallery.slice(0, 2)
-    ],
+    hero: '/images/instock/london-property-living-room.webp',
+    heroAlt: 'Bright, carefully prepared London living room',
+    gallery: propertyGallery,
     outcomes: ['A founder-led standard', 'Clear communication', 'Service designed around the required outcome'],
     scope: ['What the client needs to achieve', 'What the site requires', 'How the result will be checked']
   },
