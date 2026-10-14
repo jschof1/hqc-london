@@ -1,0 +1,116 @@
+---
+export interface Props {
+  allowAnalytics?: boolean;
+}
+
+const { allowAnalytics = false } = Astro.props;
+
+// Public, project-scoped credentials. Never use a PostHog personal API key.
+const projectToken = import.meta.env.PUBLIC_POSTHOG_PROJECT_TOKEN || '';
+const configuredHost = import.meta.env.PUBLIC_POSTHOG_HOST || '';
+let apiHost = '';
+try {
+  const url = new URL(configuredHost);
+  if (url.protocol === 'https:' && !url.username && !url.password) apiHost = url.origin;
+} catch {
+  // No SDK is loaded when the analytics host is not configured.
+}
+const configured = Boolean(projectToken && apiHost);
+---
+
+{allowAnalytics && configured && (
+  <script is:inline define:vars={{ projectToken, apiHost }}>
+    // No PostHog requests or SDK download until a visitor opts into analytics.
+    (() => {
+      const isPreview = location.hostname.endsWith('.pages.dev')
+        || ['localhost', '127.0.0.1', '::1'].includes(location.hostname);
+      if (isPreview) return;
+
+      let initialized = false;
+      let lastPage = '';
+
+      const hasConsent = () => window.hqcCookiePreferences?.analytics === true;
+
+      const capturePageview = () => {
+        if (!initialized || !hasConsent()) return;
+        const path = location.pathname;
+        if (lastPage === path) return;
+        lastPage = path;
+        window.posthog?.capture('$pageview', {
+          $current_url: location.origin + path,
+          $pathname: path
+        });
+      };
+
+      const initialize = () => {
+        if (initialized || !hasConsent()) return;
+
+        // Official PostHog snippet loader: queues events until the SDK loads.
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+
+        window.posthog.init(projectToken, {
+          api_host: apiHost,
+          defaults: '2026-05-30',
+          autocapture: false,
+          capture_pageview: false,
+          capture_pageleave: false,
+          disable_session_recording: true,
+          person_profiles: 'identified_only'
+        });
+        initialized = true;
+        window.posthog.opt_in_capturing();
+        capturePageview();
+      };
+
+      const applyPreferences = () => {
+        if (hasConsent()) {
+          if (!initialized) initialize();
+          else {
+            window.posthog?.opt_in_capturing();
+            capturePageview();
+          }
+        } else if (initialized) {
+          window.posthog?.opt_out_capturing();
+          window.posthog?.reset();
+          lastPage = '';
+        }
+      };
+
+      const safeValue = (value) =>
+        typeof value === 'string' && /^[a-z0-9_-]{1,64}$/i.test(value) ? value : undefined;
+
+      // Existing site events: never forward names, numbers, emails or link URLs.
+      const allowedEvents = new Set([
+        'phone_click',
+        'whatsapp_click',
+        'conversion_prompt_view',
+        'service_selector_result',
+        'enquiry_route_selected',
+        'form_submit'
+      ]);
+
+      window.addEventListener('hqc:conversion', (event) => {
+        if (!initialized || !hasConsent()) return;
+        const detail = event.detail || {};
+        let name = safeValue(detail.event);
+        if (!name && typeof detail.endpoint === 'string') {
+          // HQC shared-form handler emits only after successful submission.
+          name = 'lead_form_submitted';
+        }
+        if (!name || (name !== 'lead_form_submitted' && !allowedEvents.has(name))) return;
+
+        const properties = {};
+        for (const field of ['route', 'service', 'source', 'result', 'trigger']) {
+          const value = safeValue(detail[field]);
+          if (value) properties[field] = value;
+        }
+        window.posthog?.capture(name, properties);
+      });
+
+      window.addEventListener('hqc:cookie-preferences-updated', applyPreferences);
+      document.addEventListener('astro:page-load', capturePageview);
+      window.addEventListener('popstate', capturePageview);
+      applyPreferences();
+    })();
+  </script>
+)}
