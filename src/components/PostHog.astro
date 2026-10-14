@@ -1,30 +1,53 @@
 ---
 export interface Props {
-  allowAnalytics?: boolean;
+  isPreview?: boolean;
 }
 
-const { allowAnalytics = false } = Astro.props;
+// The same component works on the live site and on Cloudflare/Netlify previews.
+// Astro may render some pages statically, so the runtime host is checked too.
+const { isPreview: previewBuild = false } = Astro.props;
 
-// Public, project-scoped credentials. Never use a PostHog personal API key.
-const projectToken = import.meta.env.PUBLIC_POSTHOG_PROJECT_TOKEN || '';
-const configuredHost = import.meta.env.PUBLIC_POSTHOG_HOST || '';
-let apiHost = '';
-try {
-  const url = new URL(configuredHost);
-  if (url.protocol === 'https:' && !url.username && !url.password) apiHost = url.origin;
-} catch {
-  // No SDK is loaded when the analytics host is not configured.
-}
-const configured = Boolean(projectToken && apiHost);
+// Public project tokens only. Never include a personal API key.
+const productionToken = import.meta.env.PUBLIC_POSTHOG_PROJECT_TOKEN || '';
+const productionHost = import.meta.env.PUBLIC_POSTHOG_HOST || '';
+// Optional: use a separate PostHog project for preview builds.
+// Without an override, preview events use the HQC project and are labelled.
+const previewToken = import.meta.env.PUBLIC_POSTHOG_PREVIEW_PROJECT_TOKEN || '';
+const previewHost = import.meta.env.PUBLIC_POSTHOG_PREVIEW_HOST || '';
+
+const validHost = (host: string) => {
+  try {
+    const url = new URL(host);
+    return url.protocol === 'https:' && !url.username && !url.password
+      ? url.origin
+      : '';
+  } catch {
+    return '';
+  }
+};
+
+const productionApiHost = validHost(productionHost);
+const previewApiHost = validHost(previewHost);
+const configured = Boolean(
+  (productionToken && productionApiHost) ||
+  (previewToken && previewApiHost)
+);
 ---
 
-{allowAnalytics && configured && (
-  <script is:inline define:vars={{ projectToken, apiHost }}>
-    // No PostHog requests or SDK download until a visitor opts into analytics.
+{configured && (
+  <script is:inline define:vars={{ productionToken, productionApiHost, previewToken, previewApiHost, previewBuild }}>
+    // No PostHog SDK download or events until the visitor accepts analytics.
     (() => {
-      const isPreview = location.hostname.endsWith('.pages.dev')
-        || ['localhost', '127.0.0.1', '::1'].includes(location.hostname);
-      if (isPreview) return;
+      // Local development is excluded to avoid polluting either data set.
+      if (['localhost', '127.0.0.1', '::1'].includes(location.hostname)) return;
+      const isPreview = previewBuild
+        || location.hostname.endsWith('.pages.dev')
+        || location.hostname.endsWith('.netlify.app');
+      const hasPreviewProject = Boolean(previewToken && previewApiHost);
+      const projectToken = isPreview && hasPreviewProject ? previewToken : productionToken;
+      const apiHost = isPreview && hasPreviewProject ? previewApiHost : productionApiHost;
+      if (!projectToken || !apiHost) return;
+      const siteEnvironment = isPreview ? 'preview' : 'production';
 
       let initialized = false;
       let lastPage = '';
@@ -38,7 +61,8 @@ const configured = Boolean(projectToken && apiHost);
         lastPage = path;
         window.posthog?.capture('$pageview', {
           $current_url: location.origin + path,
-          $pathname: path
+          $pathname: path,
+          site_environment: siteEnvironment
         });
       };
 
@@ -59,6 +83,7 @@ const configured = Boolean(projectToken && apiHost);
         });
         initialized = true;
         window.posthog.opt_in_capturing();
+        window.posthog.register({ site_environment: siteEnvironment });
         capturePageview();
       };
 
@@ -67,6 +92,7 @@ const configured = Boolean(projectToken && apiHost);
           if (!initialized) initialize();
           else {
             window.posthog?.opt_in_capturing();
+            window.posthog?.register({ site_environment: siteEnvironment });
             capturePageview();
           }
         } else if (initialized) {
@@ -99,7 +125,7 @@ const configured = Boolean(projectToken && apiHost);
         }
         if (!name || (name !== 'lead_form_submitted' && !allowedEvents.has(name))) return;
 
-        const properties = {};
+        const properties = { site_environment: siteEnvironment };
         for (const field of ['route', 'service', 'source', 'result', 'trigger']) {
           const value = safeValue(detail[field]);
           if (value) properties[field] = value;
