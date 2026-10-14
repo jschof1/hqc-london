@@ -15,7 +15,8 @@ The original wizard report describes its generated draft, before these changes.
 
 ## Build configuration
 
-Cloudflare Pages production and preview builds need both public variables:
+Cloudflare Pages reads both public variables from `wrangler.toml` (`vars` for
+production and `env.preview.vars` for previews):
 
 ```
 PUBLIC_POSTHOG_PROJECT_TOKEN=<HQC public project token>
@@ -23,6 +24,8 @@ PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
 ```
 
 These are build-time settings; a new deployment is required after changing them.
+The Wrangler file is the source of truth; dashboard variables are overridden by
+this configuration. Local Astro development uses the same keys in `.env`.
 Personal API keys must never appear in public settings. Only the canonical HQC
 hosts and this project's Pages previews can collect events. Localhost is disabled.
 Previews retain noindex, disable production Umami, and label all PostHog events
@@ -48,6 +51,6 @@ Browser checks cover initial/rejected consent, accept/withdraw/reaccept, navigat
 duplicate capture, URL/property filtering, previews, SDK failure and form success.
 Use mocked form endpoints for tests; do not create real customer enquiries.
 
-To disable collection, remove the public token from both Pages build environments
-and deploy again, or revert the integration commit. Existing form webhooks and
+To disable collection, remove the public token from both Wrangler variable tables
+and deploy again, or revert the integration commits. Existing form webhooks and
 Umami do not depend on PostHog.
