@@ -254,6 +254,7 @@ import Header from '../components/Header.astro';
       window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
     }
     if (options.track !== false) {
+      window.posthog?.capture('enquiry_route_selected', { route });
       window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'enquiry_route_selected', route } }));
     }
   }
@@ -313,6 +314,11 @@ import Header from '../components/Header.astro';
       form.reset();
       populateContext();
       setRoute(selectedRoute in routes ? selectedRoute : 'residential', { updateUrl: false, track: false, requestedService: initialService });
+      window.posthog?.capture('quote_submitted', {
+        quote_flow: 'routed',
+        route: payload.route,
+        service: payload.service,
+      });
       window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'form_submit', route: payload.route } }));
     } catch {
       message.innerHTML = 'We could not send this form just now. Please call <a href="tel:+442088703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';

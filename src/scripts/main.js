@@ -284,6 +284,12 @@ document.addEventListener('DOMContentLoaded', function() {
           status.textContent = 'Thank you. Your enquiry has been received and our team will be in touch shortly.';
           this.reset();
           if (submitButton) submitButton.textContent = 'Enquiry sent';
+          const eventName = endpoint === '/api/discount' || endpoint === '/api/discount/'
+            ? 'discount_claim_submitted'
+            : 'quick_form_submitted';
+          window.posthog?.capture(eventName, {
+            form_source: payload.source,
+          });
           window.dispatchEvent(new CustomEvent('hqc:conversion', {
             detail: { endpoint, source: payload.source },
           }));

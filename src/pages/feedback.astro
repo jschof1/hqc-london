@@ -179,6 +179,9 @@ const description = "We value your feedback. Please let us know about your exper
 
     if (googleLink) {
       googleLink.setAttribute('href', googleReviewUrl);
+      googleLink.addEventListener('click', () => {
+        window.posthog?.capture('google_review_started');
+      });
     }
 
     starBtns.forEach((btn, index) => {
@@ -188,6 +191,7 @@ const description = "We value your feedback. Please let us know about your exper
       btn.addEventListener('click', () => {
         const rating = parseInt(btn.dataset.star);
         ratingInput.value = rating;
+        window.posthog?.capture('feedback_rating_selected', { rating });
 
         if (rating === 5) {
           // 5 stars: show button-only CTA. User must click intentionally to leave a Google review.
@@ -234,6 +238,9 @@ const description = "We value your feedback. Please let us know about your exper
         });
 
         if (response.ok) {
+          window.posthog?.capture('feedback_submitted', {
+            rating: data.rating,
+          });
           feedbackStep.classList.add('hidden');
           successStep.classList.remove('hidden');
         } else {

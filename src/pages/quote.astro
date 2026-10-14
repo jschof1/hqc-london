@@ -404,6 +404,12 @@ const propertyTypes = [
         });
 
         if (response.ok) {
+          window.posthog?.capture('quote_submitted', {
+            quote_flow: 'detailed',
+            service: data.service,
+            frequency: data.frequency,
+            property_type: data.property_type,
+          });
           steps.forEach(s => s.classList.add('hidden'));
           navContainer.classList.add('hidden');
           progressContainer.classList.add('hidden');

@@ -227,6 +227,9 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
         });
 
         if (response.ok) {
+          window.posthog?.capture('discount_claim_submitted', {
+            service_type: data.type,
+          });
           formContent.classList.add('hidden');
           successContent.classList.remove('hidden');
         } else {

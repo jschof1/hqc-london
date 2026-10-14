@@ -358,6 +358,9 @@ import HeroSection from '../components/HeroSection.astro';
                 return;
               }
 
+              window.posthog?.capture('contact_form_submitted', {
+                enquiry_topic: data.service,
+              });
               form.style.display = 'none';
               successMessage.classList.remove('hidden');
               successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
