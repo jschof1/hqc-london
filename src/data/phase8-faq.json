@@ -1,0 +1,187 @@
+[
+  {
+    "title": "Choosing the Right Service",
+    "items": [
+      {
+        "question": "How do I know which cleaning service I need?",
+        "answer": "You do not need to diagnose the service yourself. Tell us what type of property or site it is, its current condition, what you want to achieve, whether you are moving, whether building work has taken place, how frequently you need cleaning and any unusual requirements. We will help identify the appropriate route."
+      },
+      {
+        "question": "What is the difference between Essential Clean™ and Deep Clean™?",
+        "answer": "Essential Clean™ is for a maintenance-ready home that needs routine cleaning. Deep Clean™ is for homes requiring restoration because of build-up, neglected detail or more intensive cleaning."
+      },
+      {
+        "question": "What is the difference between Move-In Reset™ and End of Tenancy™?",
+        "answer": "Move-In Reset™ prepares a home for the incoming occupier. End of Tenancy™ prepares the agreed areas for handover at the end of an occupancy. The physical tasks can sometimes overlap, but the required outcome is different."
+      },
+      {
+        "question": "What if I choose the wrong service?",
+        "answer": "If the condition or requirement does not match the service selected, HQC may recommend a different service or additional scope before work continues."
+      }
+    ]
+  },
+  {
+    "title": "Essential Clean™ and Recurring Cleaning",
+    "items": [
+      {
+        "question": "Can I book Essential Clean™ as a one-off?",
+        "answer": "Yes, where the property is maintenance-ready and passes the applicable suitability requirements."
+      },
+      {
+        "question": "Do you offer weekly cleaning?",
+        "answer": "Yes. Essential Clean™ can be suitable for weekly maintenance-ready cleaning."
+      },
+      {
+        "question": "Do you offer fortnightly cleaning?",
+        "answer": "Yes."
+      },
+      {
+        "question": "Is monthly Essential Clean™ available?",
+        "answer": "HQC's current controlled public recurring offer is based on weekly and fortnightly arrangements. Any other frequency should only be offered where specifically confirmed."
+      },
+      {
+        "question": "How does the 30% first-clean offer work?",
+        "answer": "Eligible new weekly or fortnightly Essential Clean™ clients can receive 30% off their first clean when starting a recurring plan with a minimum three-month commitment. The offer does not apply to one-off Essential Clean™ bookings or other HQC services."
+      },
+      {
+        "question": "What happens if my home is not suitable for Essential Clean™?",
+        "answer": "We may recommend Deep Clean™ or another appropriate service before routine maintenance begins."
+      }
+    ]
+  },
+  {
+    "title": "Pricing and Quotations",
+    "items": [
+      {
+        "question": "Do you price only by number of bedrooms?",
+        "answer": "No. Bedrooms are only one factor. HQC may also consider bathrooms, additional rooms, condition, contents, floors, access, specialist requirements and the required outcome."
+      },
+      {
+        "question": "Why do some services need a quotation?",
+        "answer": "Some requirements vary too much for responsible automatic pricing. Deep cleaning, tenancy handovers, post-construction work, commercial cleaning and complex properties may require additional information before price can be confirmed."
+      },
+      {
+        "question": "Can I send photographs or video?",
+        "answer": "Yes. Photos or video can help HQC assess property condition, kitchens, bathrooms, specialist areas, access and post-construction residue. Where requested, assessment media may be sent through the approved HQC channel."
+      },
+      {
+        "question": "Do you publish hourly rates?",
+        "answer": "HQC does not sell commercial services primarily as blocks of cleaner hours. The quotation is based on the agreed requirement and outcome."
+      }
+    ]
+  },
+  {
+    "title": "What Is Included?",
+    "items": [
+      {
+        "question": "Is every cleaning service the same?",
+        "answer": "No. Each HQC service has a defined purpose. The agreed scope should make clear included areas, selected extras, exclusions, specialist work and relevant assumptions."
+      },
+      {
+        "question": "Are ovens automatically included?",
+        "answer": "Not necessarily. Oven cleaning is a separately selected service where required."
+      },
+      {
+        "question": "Are carpets included?",
+        "answer": "Specialist carpet cleaning is separate from standard cleaning unless expressly included in the quotation."
+      },
+      {
+        "question": "Are windows included?",
+        "answer": "Window requirements depend on the service and quotation. Internal or external window cleaning should be specifically confirmed."
+      },
+      {
+        "question": "Do you clean walls?",
+        "answer": "Wall cleaning is an additional service where suitable and agreed."
+      }
+    ]
+  },
+  {
+    "title": "Access and Property Information",
+    "items": [
+      {
+        "question": "Do I need to be at home?",
+        "answer": "Not necessarily. Where appropriate, access may be arranged through keys, concierge, building management or authorised representatives. The exact arrangement must be confirmed beforehand."
+      },
+      {
+        "question": "Can HQC collect keys?",
+        "answer": "Key or access arrangements are agreed case by case."
+      },
+      {
+        "question": "What if the cleaner cannot access the property?",
+        "answer": "Access problems can affect the booking and scheduled labour. Clients should provide accurate access information and notify HQC of changes as early as possible."
+      },
+      {
+        "question": "Do you work in occupied properties?",
+        "answer": "Yes, where the service and circumstances are suitable. Occupied-property requirements may affect access, sequencing and the available cleaning scope."
+      }
+    ]
+  },
+  {
+    "title": "End of Tenancy and Moving",
+    "items": [
+      {
+        "question": "Do you guarantee my deposit will be returned?",
+        "answer": "No. HQC can deliver the agreed cleaning scope, but cannot control landlord decisions, agent decisions, inventory reports, property damage, wear and tear or third-party re-entry."
+      },
+      {
+        "question": "Do you clean properties before people move in?",
+        "answer": "Yes. Private clients may use Move-In Reset™. Property professionals managing void or empty properties should use the Move-In & Void Property Cleaning route."
+      },
+      {
+        "question": "Can you clean between tenants?",
+        "answer": "Yes. The appropriate route may be End of Tenancy™, Move-In & Void Property Cleaning, Deep Clean™ or another property-service route, depending on the condition and required outcome."
+      }
+    ]
+  },
+  {
+    "title": "Post-Construction Cleaning",
+    "items": [
+      {
+        "question": "Do you offer after-builders cleaning?",
+        "answer": "Yes, through HQC Post-Construction™. The approved public service term is Post-Construction™, while 'after builders' and 'post-build' can describe the same search intent."
+      },
+      {
+        "question": "When should post-construction cleaning take place?",
+        "answer": "The relevant work area should normally be ready for cleaning. Major dust-producing activity, cutting or sanding should have stopped where possible."
+      },
+      {
+        "question": "Can HQC clean while contractors are still working?",
+        "answer": "Possibly, but this may require assessment and staged delivery. Cleaning too early can create unnecessary recontamination."
+      }
+    ]
+  },
+  {
+    "title": "Commercial and Property Cleaning",
+    "items": [
+      {
+        "question": "Do you clean offices?",
+        "answer": "Yes. HQC offers office cleaning programmes built around the workplace, access and agreed service profile."
+      },
+      {
+        "question": "Do you clean communal areas?",
+        "answer": "Yes. Recurring communal cleaning can be arranged for managed residential buildings and agreed shared spaces."
+      },
+      {
+        "question": "Can you support several properties?",
+        "answer": "Yes. Portfolio Cleaning Support is designed for clients with repeated requirements across several properties."
+      },
+      {
+        "question": "Do you work with estate and letting agents?",
+        "answer": "Yes. HQC has a dedicated route for estate and lettings teams requiring repeated cleaning support."
+      }
+    ]
+  },
+  {
+    "title": "Quality and Problems",
+    "items": [
+      {
+        "question": "What happens if something is missed?",
+        "answer": "Tell us as soon as reasonably possible and provide relevant details or evidence. HQC will review the agreed scope, what occurred, available evidence and what corrective action is appropriate."
+      },
+      {
+        "question": "Does HQC guarantee that every stain or mark will be removed?",
+        "answer": "No. Some marks may be permanent, damaged, worn, chemically altered or unsuitable for further treatment. Cleaning should not create damage in pursuit of an unrealistic result."
+      }
+    ]
+  }
+]

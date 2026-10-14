@@ -1,0 +1,421 @@
+{
+  "captured_at_utc": "2026-09-28T07:43:06.829072+00:00",
+  "repo_main_sha": "41903fbb90cf1c0c396d8ac68075a05a993cca79",
+  "note": "HTTP inventory only; does not prove Cloudflare deployed revision or include DNS, secrets, third-party settings.",
+  "records": [
+    {
+      "url": "https://highqualityclean.co.uk/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/",
+      "sha256": "16f6eaa5211366e0444100512f420457284d0643f7b2cbff66de2e7a8fc2129c",
+      "bytes": 63295,
+      "content_type": "text/html",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/sitemap-0.xml",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/sitemap-0.xml",
+      "sha256": "b565a6f22e6301282d41f6e491eb817008ca24fb5edf887f521272f180cba844",
+      "bytes": 3855,
+      "content_type": "application/xml",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/property-facilities-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/property-facilities-cleaning-london/",
+      "sha256": "6a4641ea34b6fa1362f9e342448f1df7b069fb65f3afd83e5210858743c5b93a",
+      "bytes": 53664,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/communal-area-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/communal-area-cleaning-london/",
+      "sha256": "94dedafa4fa01d74bc0a9a220d591e65840ba8e23a5284ec8ad0636794ff611f",
+      "bytes": 44427,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/estate-letting-agent-cleaning-london/",
+      "sha256": "4aeb281cbb6c8758fcaaf6c37ecb7f3ff77f12b499453c654a30f33fe482925d",
+      "bytes": 44490,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/move-in-void-property-cleaning-london/",
+      "sha256": "820b6f0ecb28b7c88128ddf565bcb2b1c1ce444d0008d291d557564b9ed7c78d",
+      "bytes": 44396,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/end-of-tenancy-cleaning-london/",
+      "sha256": "ee3d859c9eb0ab962f3e1bad03473b9a1c3b78242def334d2ca2bd00b636f0f4",
+      "bytes": 44119,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/post-construction-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/post-construction-cleaning-london/",
+      "sha256": "3afa2fbf9f1e672224eba3f5f40472befdbefdac738a3bcafb6777186bafbed0",
+      "bytes": 44248,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/portfolio-cleaning-support-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/portfolio-cleaning-support-london/",
+      "sha256": "33562b53a4b029ae801ae187e9ca5d17292f04df2f16653de224c559b8c50a1d",
+      "bytes": 44466,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/commercial-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/commercial-cleaning-london/",
+      "sha256": "9281f2aee551b2a3e9fe1b6790cd83cb078b6a35e4dfef3c2ba04b8803d170b2",
+      "bytes": 44375,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/office-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/office-cleaning-london/",
+      "sha256": "126086616bde7686e65ef96116f3078ac80b52a2fb110efc48bb56438836d82f",
+      "bytes": 50749,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/commercial-deep-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/commercial-deep-cleaning-london/",
+      "sha256": "36cbe0b33bf529a0a2f9f57ca25d1ff98437870ae1d7a35d0d0789f2130c16f4",
+      "bytes": 44475,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/home-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/home-cleaning-london/",
+      "sha256": "5b33aed137c654ead3c31b555fa506e19d2867495b4c4c46a1a7f32f49e0ddf6",
+      "bytes": 51216,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/essential-clean-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/essential-clean-london/",
+      "sha256": "9b7316e42e83c1e052475615f1950594bd4c791d8482e4a20c8aba8b36d25c2a",
+      "bytes": 44708,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/deep-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/deep-cleaning-london/",
+      "sha256": "e017b65febef194159029158c056364398890f31bce2a0bbc877e2a334ccfa38",
+      "bytes": 44550,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/move-in-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/move-in-cleaning-london/",
+      "sha256": "fbdf4abab4d89f466ddd173b8dab83b71eac0f36fb65dc329d2aa13518a2de26",
+      "bytes": 44019,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/complex-property-cleaning-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/complex-property-cleaning-london/",
+      "sha256": "5abb652b7ac8088197b2dba8c68e2bc4566e36cd63b0f4f41022a28102c6a97f",
+      "bytes": 45134,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/about-high-quality-clean/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/about-high-quality-clean/",
+      "sha256": "d20efcac711a5121d2e08ac2908f3853354309680b4f3cbbe5a1149fa80f927b",
+      "bytes": 43573,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/why-choose-hqc/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/why-choose-hqc/",
+      "sha256": "9be3fdd7536238ac65026eda00cb1ad4540cb6f753b34254ea55e2ca9e33e369",
+      "bytes": 43730,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/how-we-work/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/how-we-work/",
+      "sha256": "b75a86c596380eccf2fe64f9af586aa8223a622e31cab39b228f16008d96ab68",
+      "bytes": 43524,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/cleaning-prices-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/cleaning-prices-london/",
+      "sha256": "2a456af03cd88a7e2289d36ebe3e04c3620930798fc4879a3fe00acae9c990e9",
+      "bytes": 43991,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/cleaning-faqs/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/cleaning-faqs/",
+      "sha256": "9f72e9ca98f283ce2191e605bec5cb21b380418f986fa287078a791d7aef68f8",
+      "bytes": 44410,
+      "content_type": "text/html",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/reviews-case-studies/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/reviews-case-studies/",
+      "sha256": "ed31660550d3ccd812b6781ae843e277950dd5f70c2326eb120669263ff1791f",
+      "bytes": 44211,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/request-a-quote/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/request-a-quote/",
+      "sha256": "df2be4f417f16648009ad468f31c9c4ff6f1a0ae27ab95ec0753594a152c6bdc",
+      "bytes": 43484,
+      "content_type": "text/html",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/contact/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/contact/",
+      "sha256": "b6435581bbee5f7dfeb8f167a213a05fb3e8721b47d9a335e95dd584383d0d0f",
+      "bytes": 52000,
+      "content_type": "text/html",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/areas-we-cover/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/areas-we-cover/",
+      "sha256": "8eb6f40d4b0d57506d1c6a0e36e80874e4de935353bdff4dcdce14a37e9d8290",
+      "bytes": 44450,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/cleaning-services-east-london/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/cleaning-services-east-london/",
+      "sha256": "de7b27cfc07437790bb57a431dbc186afd6283e1d2c37bc3384e25800e95762d",
+      "bytes": 45220,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/privacy-policy/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/privacy-policy/",
+      "sha256": "39d3b485e3509a8450513dab16099eeafe6ee0d121ba0c7fc245230a77fc4a78",
+      "bytes": 40566,
+      "content_type": "text/html",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/terms-and-conditions/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/terms-and-conditions/",
+      "sha256": "df75935f7baa56241dce239cd6b82af386c8711296a6869a2bf7ffbd49150832",
+      "bytes": 51148,
+      "content_type": "text/html",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/battersea/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/battersea/",
+      "sha256": "b57a15696c34d888653d2ae4bec27104f62250c263d89ea16eb90a1d9df0db49",
+      "bytes": 40826,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/belgravia/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/belgravia/",
+      "sha256": "98c7df8ec2b3e1f7575dd088243c05332a408aebe4d7656dabf2b0febcf27328",
+      "bytes": 40821,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/chelsea/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/chelsea/",
+      "sha256": "786db3cf3546283c25f1205a301ec5eb9fa16a7a05c8bf2ac99e43cbe75d5054",
+      "bytes": 40758,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/clapham/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/clapham/",
+      "sha256": "bd8217f813c680b88ce6be58e5b60bc065f91d71477897389365c640874d85a0",
+      "bytes": 40762,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/hampstead/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/hampstead/",
+      "sha256": "c6e204e18a8def1f80560e70b4f2fac26a0c902ffb3b109684c8a0a70bf3eae0",
+      "bytes": 40841,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/highgate/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/highgate/",
+      "sha256": "2ffa91ddbfaddd62cd2b12dfa1bf63412a6f79f34df699da0f432c6b96e0fdec",
+      "bytes": 40803,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/holland-park/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/holland-park/",
+      "sha256": "f1c5d8e5dc02b230ef231ad9fdce6d2cba280df936cd9ac585287e7ee64475cc",
+      "bytes": 40918,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/kensington/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/kensington/",
+      "sha256": "fd373705bbd6e63e14cdeffafaba50ff651fbb32d530bd8eabc637385aee6d0d",
+      "bytes": 40876,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/knightsbridge/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/knightsbridge/",
+      "sha256": "5a4d07fe6b70ea2ad5d07721f8e90a0ece3ee9f5eab2d5aad5f9eb1f69c18a04",
+      "bytes": 40946,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/mayfair/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/mayfair/",
+      "sha256": "2c1aadd24e31ae04f9cbea61cc92647783046eb411f6c8c0071c85b0ed9a128d",
+      "bytes": 40751,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/notting-hill/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/notting-hill/",
+      "sha256": "6bf9413a738040b3c33aab911dd91678f38b0dc6933afad4f2de48b08e66f402",
+      "bytes": 40935,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/primrose-hill/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/primrose-hill/",
+      "sha256": "57f4f49c6000c7693dd0d00b5043c98d4223e82e9ee995eccca2a7d41dc15b67",
+      "bytes": 40972,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/st-johns-wood/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/st-johns-wood/",
+      "sha256": "fb86ad263c92ee426dfbc567dc811d4a0a0cdd2b8de343fb3e0c1eacdb51c96d",
+      "bytes": 41046,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/london/wandsworth/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/london/wandsworth/",
+      "sha256": "99ba5c3eb3d28fe6f3b51b1687410d4ed7e018ba4f8161a75bac772df41acc21",
+      "bytes": 40857,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/surrey/hersham/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/surrey/hersham/",
+      "sha256": "744325a0febeb2fd14d35845f9fc4c99b6a400fcbb165e29198204f9a7572446",
+      "bytes": 40222,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/surrey/walton-on-thames/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/surrey/walton-on-thames/",
+      "sha256": "876117e2194d5a500a52994a6033d9ca6ea3875afed64e65c9d038115268fc19",
+      "bytes": 40510,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    },
+    {
+      "url": "https://highqualityclean.co.uk/locations/surrey/weybridge/",
+      "status": 200,
+      "final_url": "https://highqualityclean.co.uk/locations/surrey/weybridge/",
+      "sha256": "85809350d13cd1dfff8a1f3936d5626a4ba938d44bf02a5c3db619f097f0cadc",
+      "bytes": 40286,
+      "content_type": "text/html; charset=utf-8",
+      "robots_header": null
+    }
+  ]
+}

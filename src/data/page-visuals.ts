@@ -28,7 +28,7 @@ const commercialGallery = [
 const restorationGallery = [
   { src: '/images/generated/hqc-restoration-interior.png', alt: 'Illustrative London living space prepared with careful attention to detail' },
   { src: '/images/generated/hqc-kitchen-detail.png', alt: 'Illustrative London kitchen prepared to a detailed clean standard' },
-  { src: '/images/generated/hqc-home-hero.png', alt: 'Illustrative London home prepared for a cleaning enquiry' }
+  { src: '/images/generated/hqc-home-hero.webp', alt: 'Illustrative London home prepared for a cleaning enquiry' }
 ];
 
 const defaultVisual: PageVisual = {
@@ -42,7 +42,7 @@ const defaultVisual: PageVisual = {
 
 const visualBySlug: Record<string, Partial<PageVisual>> = {
   'property-facilities-cleaning-london': {
-    hero: '/images/generated/hqc-property-hero.png',
+    hero: '/images/generated/hqc-property-hero.webp',
     heroAlt: 'Illustrative London property prepared for a professional handover',
     gallery: propertyGallery,
     outcomes: ['One accountable cleaning route', 'Repeatable scopes across properties', 'Clear reporting and handover'],
@@ -112,7 +112,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Current condition and build-up', 'Equipment, access and specialist needs', 'Shutdown windows and reinstatement']
   },
   'home-cleaning-london': {
-    hero: '/images/generated/hqc-home-hero.png',
+    hero: '/images/generated/hqc-home-hero.webp',
     heroAlt: 'Illustrative London living room prepared for a home-cleaning enquiry',
     gallery: homeGallery,
     outcomes: ['The right level of cleaning', 'A clear recurring or one-off route', 'Care around your home and routines'],
@@ -148,12 +148,9 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Plans, materials and floor area', 'Specialist surfaces and contractors', 'Security, programme and representative sign-off']
   },
   'about-high-quality-clean': {
-    hero: '/images/pedro-founder.webp',
-    heroAlt: 'Pedro Ndombasi, founder of High Quality Clean',
-    gallery: [
-      { src: '/images/pedro.png', alt: 'Pedro from High Quality Clean' },
-      ...homeGallery.slice(0, 2)
-    ],
+    hero: '/images/instock/london-property-living-room.webp',
+    heroAlt: 'Bright, carefully prepared London living room',
+    gallery: propertyGallery,
     outcomes: ['A founder-led standard', 'Clear communication', 'Service designed around the required outcome'],
     scope: ['What the client needs to achieve', 'What the site requires', 'How the result will be checked']
   },

@@ -395,6 +395,7 @@ const propertyTypes = [
       data.timestamp = new Date().toISOString();
 
       try {
+        window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'quote-multi-step-form', stage: 'attempted' } }));
         const response = await fetch('/api/quote/', {
           method: 'POST',
           headers: {
@@ -403,7 +404,16 @@ const propertyTypes = [
           body: JSON.stringify(data),
         });
 
-        if (response.ok) {
+        const result = await response.json().catch(() => null);
+        if (response.ok && result?.preview === true) {
+          window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'quote-multi-step-form', stage: 'preview' } }));
+          alert('This preview does not send enquiries. Nothing was sent.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Get My Bespoke Quote';
+          return;
+        }
+        if (response.ok && result?.ok === true) {
+          window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'quote-multi-step-form', stage: 'receipt' } }));
           steps.forEach(s => s.classList.add('hidden'));
           navContainer.classList.add('hidden');
           progressContainer.classList.add('hidden');
@@ -413,6 +423,7 @@ const propertyTypes = [
           throw new Error('Submission failed');
         }
       } catch (error) {
+        window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'quote-multi-step-form', stage: 'error' } }));
         console.error('Error submitting quote:', error);
         alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
         submitBtn.disabled = false;

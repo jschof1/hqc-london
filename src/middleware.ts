@@ -84,8 +84,7 @@ export const onRequest = defineMiddleware(async ({ request }, next) => {
   const lowerPath = incomingUrl.pathname.toLowerCase();
   const legacyTarget = legacyRedirects.get(stripTrailingSlash(lowerPath));
   const localOrPreviewRequest =
-    ['localhost', '127.0.0.1', '::1'].includes(incomingUrl.hostname) ||
-    incomingUrl.hostname.endsWith('.pages.dev');
+    !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(incomingUrl.hostname);
   const canonicalUrl = new URL(
     legacyTarget ?? incomingUrl.pathname,
     localOrPreviewRequest ? incomingUrl.origin : CANONICAL_ORIGIN
@@ -101,5 +100,7 @@ export const onRequest = defineMiddleware(async ({ request }, next) => {
     return Response.redirect(canonicalUrl, 301);
   }
 
-  return next();
+  const response = await next();
+  if (localOrPreviewRequest) response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+  return response;
 });

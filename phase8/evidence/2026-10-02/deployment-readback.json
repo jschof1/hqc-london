@@ -1,0 +1,75 @@
+{
+  "sourceHead": "46be4fd9f55a2be6a063ff24b67a792325896a37",
+  "production": {
+    "id": "242f9c4f-ce9a-4e3e-944e-ad99eb2665bc",
+    "environment": "production",
+    "url": "https://242f9c4f.hqc-london.pages.dev",
+    "aliases": [
+      "https://highqualityclean.co.uk",
+      "https://www.highqualityclean.co.uk"
+    ],
+    "created_on": "2026-09-21T20:23:34.186009Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-09-21T20:24:16.978455Z",
+      "ended_on": "2026-09-21T20:24:27.837606Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "41903fbb90cf1c0c396d8ac68075a05a993cca79",
+        "commit_message": "fix: block analytics and indexing on Pages previews",
+        "commit_dirty": false
+      }
+    }
+  },
+  "staging": [
+    {
+      "id": "e20443f7-1a67-44ed-8bc4-1a8b40fb63da",
+      "environment": "preview",
+      "url": "https://e20443f7.hqc-london.pages.dev",
+      "aliases": [
+        "https://phase8-2026-09-28-staging.hqc-london.pages.dev"
+      ],
+      "created_on": "2026-10-02T15:11:48.362304Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": "2026-10-02T15:12:27.752017Z",
+        "ended_on": "2026-10-02T15:12:36.306931Z",
+        "status": "success"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "phase8-2026-09-28-staging",
+          "commit_hash": "46be4fd9f55a2be6a063ff24b67a792325896a37",
+          "commit_message": "Improve Phase 8 contrast and native form routing with release evidence",
+          "commit_dirty": false
+        }
+      }
+    }
+  ],
+  "pagesSourceConfig": {
+    "owner": "jschof1",
+    "owner_id": "59843981",
+    "repo_name": "hqc-london",
+    "repo_id": "1064317520",
+    "production_branch": "main",
+    "pr_comments_enabled": true,
+    "deployments_enabled": true,
+    "production_deployments_enabled": true,
+    "preview_deployment_setting": "all",
+    "preview_branch_includes": [
+      "*"
+    ],
+    "preview_branch_excludes": [],
+    "path_includes": [
+      "*"
+    ],
+    "path_excludes": []
+  },
+  "verifiedAt": "2026-10-02T15:37:12.192152+00:00",
+  "scope": "Provider snapshot for application commit 46be4fd; later documentation-only commits may deploy separately."
+}

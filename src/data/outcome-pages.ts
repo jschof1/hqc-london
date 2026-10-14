@@ -265,10 +265,10 @@ export const outcomePages: OutcomePage[] = [
     description: 'A weekly or fortnightly cleaning service for suitable, maintenance-ready London homes.',
     message: 'Maintain and improve a suitable home through a clear recurring service.',
     audience: 'Clients seeking weekly or fortnightly maintenance cleaning for a suitable home.',
-    primaryCta: 'Request an Essential Clean Suitability Review',
-    primaryHref: `${quote}?route=residential&service=essential-clean&buyer=home`,
-    secondaryCta: 'View the 30% First-Clean Offer',
-    secondaryHref: '/offer/',
+    primaryCta: 'Book an Essential Clean™',
+    primaryHref: '/book-essential-clean/',
+    secondaryCta: 'Check Whether Your Home Is Suitable',
+    secondaryHref: `${quote}?route=residential&service=essential-clean&buyer=home`,
     proof: ['Weekly or fortnightly commitment', 'Heavy build-up is routed to manual review', '30% first-clean offer requires a three-month commitment'],
     related: [{ label: 'Home cleaning', href: '/home-cleaning-london/' }, { label: 'How HQC pricing works', href: '/cleaning-prices-london/' }, { label: 'Cleaning FAQs', href: '/cleaning-faqs/' }]
   },
@@ -332,7 +332,7 @@ export const outcomePages: OutcomePage[] = [
     audience: 'Clients, partners and prospective team members.',
     primaryCta: 'Discuss Your Cleaning Requirement',
     primaryHref: quote,
-    secondaryCta: 'See How HQC Works',
+    secondaryCta: 'Meet Pedro and See How HQC Works',
     secondaryHref: '/how-we-work/',
     proof: ['Clear scope and labour-based quotations', 'An outcome-led route for homes, workplaces and managed property', 'Founder information is kept separate from service scope'],
     related: [{ label: 'Why choose HQC', href: '/why-choose-hqc/' }, { label: 'Reviews and case studies', href: '/reviews-case-studies/' }]

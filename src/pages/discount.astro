@@ -205,6 +205,7 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
 
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (submitBtn?.disabled) return;
 
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -220,19 +221,30 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
       data.timestamp = new Date().toISOString();
 
       try {
+        window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'discount-form', stage: 'attempted' } }));
         const response = await fetch('/api/discount/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
         });
 
+        const result = await response.json().catch(() => null);
+        if (response.ok && result?.preview === true) {
+          window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'discount-form', stage: 'preview' } }));
+          alert('This preview does not send enquiries. Nothing was sent.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Claim My 30% Rate';
+          return;
+        }
         if (response.ok) {
+          window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'discount-form', stage: 'receipt' } }));
           formContent.classList.add('hidden');
           successContent.classList.remove('hidden');
         } else {
           throw new Error('Submission failed');
         }
       } catch (error) {
+        window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'discount-form', stage: 'error' } }));
         console.error('Error submitting discount request:', error);
         alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
 

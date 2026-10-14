@@ -1,0 +1,195 @@
+{
+  "name": "hqc-london",
+  "domains": [
+    "hqc-london.pages.dev",
+    "highqualityclean.co.uk",
+    "www.highqualityclean.co.uk"
+  ],
+  "source": {
+    "type": "github",
+    "config": {
+      "owner": "jschof1",
+      "owner_id": "59843981",
+      "repo_name": "hqc-london",
+      "repo_id": "1064317520",
+      "production_branch": "main",
+      "pr_comments_enabled": true,
+      "deployments_enabled": true,
+      "production_deployments_enabled": true,
+      "preview_deployment_setting": "all",
+      "preview_branch_includes": [
+        "*"
+      ],
+      "preview_branch_excludes": [],
+      "path_includes": [
+        "*"
+      ],
+      "path_excludes": []
+    }
+  },
+  "build_config": {
+    "build_command": "npm run build",
+    "destination_dir": "dist",
+    "root_dir": "",
+    "web_analytics_tag": null,
+    "web_analytics_token": null
+  },
+  "deployment_configs": {
+    "preview": {
+      "env_vars": null,
+      "fail_open": true,
+      "always_use_latest_compatibility_date": false,
+      "compatibility_date": "2025-03-06",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "build_image_major_version": 3,
+      "usage_model": "standard",
+      "wrangler_config_hash": "013103b8dc6efa8bf5d626475f25251f664d63df21fdb910bcc72ac2cbc81c37"
+    },
+    "production": {
+      "env_vars": {
+        "DISCOUNT_FORM_WEBHOOK": {
+          "type": "secret_text",
+          "value": "[REDACTED]"
+        },
+        "FEEDBACK_WEBHOOK": {
+          "type": "secret_text",
+          "value": "[REDACTED]"
+        },
+        "QUICK_FORM_WEBHOOK": {
+          "type": "secret_text",
+          "value": "[REDACTED]"
+        },
+        "QUOTE_FORM_WEBHOOK": {
+          "type": "secret_text",
+          "value": "[REDACTED]"
+        }
+      },
+      "fail_open": true,
+      "always_use_latest_compatibility_date": false,
+      "compatibility_date": "2025-03-06",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "build_image_major_version": 3,
+      "usage_model": "standard",
+      "wrangler_config_hash": "013103b8dc6efa8bf5d626475f25251f664d63df21fdb910bcc72ac2cbc81c37"
+    }
+  },
+  "canonical_deployment": {
+    "id": "242f9c4f-ce9a-4e3e-944e-ad99eb2665bc",
+    "short_id": "242f9c4f",
+    "project_id": "d0185cef-9c19-4d10-939c-3ecb89782c10",
+    "project_name": "hqc-london",
+    "environment": "production",
+    "url": "https://242f9c4f.hqc-london.pages.dev",
+    "created_on": "2026-09-21T20:23:34.186009Z",
+    "modified_on": "2026-09-21T20:24:27.837606Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-09-21T20:24:16.978455Z",
+      "ended_on": "2026-09-21T20:24:27.837606Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "41903fbb90cf1c0c396d8ac68075a05a993cca79",
+        "commit_message": "fix: block analytics and indexing on Pages previews",
+        "commit_dirty": false
+      }
+    },
+    "stages": [
+      {
+        "name": "queued",
+        "started_on": "2026-09-21T20:23:34.349373Z",
+        "ended_on": "2026-09-21T20:23:34.355553Z",
+        "status": "success"
+      },
+      {
+        "name": "initialize",
+        "started_on": "2026-09-21T20:23:34.355553Z",
+        "ended_on": "2026-09-21T20:23:37.980595Z",
+        "status": "success"
+      },
+      {
+        "name": "clone_repo",
+        "started_on": "2026-09-21T20:23:37.980595Z",
+        "ended_on": "2026-09-21T20:23:43.853526Z",
+        "status": "success"
+      },
+      {
+        "name": "build",
+        "started_on": "2026-09-21T20:23:43.853526Z",
+        "ended_on": "2026-09-21T20:24:16.978455Z",
+        "status": "success"
+      },
+      {
+        "name": "deploy",
+        "started_on": "2026-09-21T20:24:16.978455Z",
+        "ended_on": "2026-09-21T20:24:27.837606Z",
+        "status": "success"
+      }
+    ],
+    "build_config": {
+      "build_command": "npm run build",
+      "destination_dir": "dist",
+      "build_caching": null,
+      "root_dir": "",
+      "web_analytics_tag": null,
+      "web_analytics_token": null
+    },
+    "source": {
+      "type": "github",
+      "config": {
+        "owner": "jschof1",
+        "repo_name": "hqc-london",
+        "production_branch": "main",
+        "pr_comments_enabled": false
+      }
+    },
+    "env_vars": {
+      "DISCOUNT_FORM_WEBHOOK": {
+        "type": "secret_text",
+        "value": "[REDACTED]"
+      },
+      "FEEDBACK_WEBHOOK": {
+        "type": "secret_text",
+        "value": "[REDACTED]"
+      },
+      "QUICK_FORM_WEBHOOK": {
+        "type": "secret_text",
+        "value": "[REDACTED]"
+      },
+      "QUOTE_FORM_WEBHOOK": {
+        "type": "secret_text",
+        "value": "[REDACTED]"
+      }
+    },
+    "compatibility_date": "2025-03-06",
+    "compatibility_flags": [
+      "nodejs_compat"
+    ],
+    "build_image_major_version": 3,
+    "usage_model": "standard",
+    "aliases": [
+      "https://highqualityclean.co.uk",
+      "https://www.highqualityclean.co.uk"
+    ],
+    "is_skipped": false,
+    "production_branch": "main",
+    "uses_functions": true,
+    "framework": "astro"
+  },
+  "observedAt": "2026-10-02T13:18:00Z",
+  "duplicateWorker": {
+    "name": "high-quality-clean",
+    "previewBuildsEnabled": false,
+    "verifiedAfterReload": "2026-10-02T13:58Z",
+    "authority": "Jack explicitly approved Disable duplicate preview builds",
+    "failureCause": "Pages build succeeded; wrangler versions upload then failed: Missing entry-point to Worker script or to assets directory",
+    "limits": "Only duplicate Worker preview builds changed. Canonical Pages remains enabled."
+  }
+}

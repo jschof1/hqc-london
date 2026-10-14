@@ -1,0 +1,19 @@
+{
+  "base": "https://review.highqualityclean.co.uk",
+  "checkedAt": "2026-10-13T10:26:38.903Z",
+  "checks": [
+    "Unauthenticated archive and image requests are denied and noindex applies",
+    "Private link opens review without retaining code in URL",
+    "Historical source and all six hero references are consistent",
+    "Selection and note persist after reload",
+    "Shared state is visible in an independent signed-in browser context",
+    "Failed saves do not claim success; retry recovers",
+    "Concurrent stale edits are rejected instead of overwriting",
+    "Page search and original placement details work",
+    "Hero previews and notes show desktop and mobile directions",
+    "Shortlist exports and finish state saves",
+    "QA selection is removed and finish state cleared",
+    "Mobile viewport has no horizontal overflow"
+  ],
+  "errors": []
+}

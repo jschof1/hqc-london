@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-02T16:15:38.907Z",
+  "rows": [
+    {
+      "url": "https://highqualityclean.co.uk/sitemap-index.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "location": null,
+      "bytes": 193,
+      "root": "{http://www.sitemaps.org/schemas/sitemap/0.9}sitemapindex",
+      "wellFormedXML": true,
+      "locCount": 1,
+      "uniqueLocCount": 1,
+      "childSitemaps": [
+        "https://highqualityclean.co.uk/sitemap-0.xml"
+      ]
+    },
+    {
+      "url": "https://highqualityclean.co.uk/sitemap-0.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "location": null,
+      "bytes": 3855,
+      "root": "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset",
+      "wellFormedXML": true,
+      "locCount": 45,
+      "uniqueLocCount": 45,
+      "canonicalURLShapePassed": true
+    }
+  ]
+}

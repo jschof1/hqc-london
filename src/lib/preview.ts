@@ -1,6 +1,6 @@
 export function isNonProductionRequest(request: Request): boolean {
   const hostname = new URL(request.url).hostname.toLowerCase();
-  return ['localhost', '127.0.0.1', '::1'].includes(hostname) || hostname.endsWith('.pages.dev');
+  return !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(hostname);
 }
 
 export function previewResponse(): Response {

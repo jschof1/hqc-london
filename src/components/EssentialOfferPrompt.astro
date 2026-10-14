@@ -1,0 +1,66 @@
+<dialog id="hqc-essential-offer" class="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-xl overflow-y-auto rounded-2xl border border-copper/40 bg-midnight p-0 text-white shadow-2xl backdrop:bg-midnight/60" aria-labelledby="hqc-essential-offer-title" aria-describedby="hqc-essential-offer-copy">
+  <div class="relative p-6 sm:p-9">
+    <button id="hqc-essential-offer-close" type="button" class="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-white/35 text-2xl" aria-label="Close offer">&times;</button>
+    <p class="pr-12 text-xs font-bold uppercase tracking-[.2em] text-copper">Essential Clean™ introductory offer</p>
+    <h2 id="hqc-essential-offer-title" class="mt-5 font-serif text-4xl leading-tight">30% off your first Essential Clean™</h2>
+    <p id="hqc-essential-offer-copy" class="mt-4 leading-7 text-white/80">For eligible new weekly or fortnightly clients with a three-month commitment. Suitability and availability apply. One-off cleaning does not qualify.</p>
+    <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+      <a class="button button-primary" data-hqc-offer-cta="book" href="/book-essential-clean/">Book an Essential Clean™</a>
+      <a class="button button-ghost" data-hqc-offer-cta="suitability" href="/request-a-quote/?route=residential&service=essential-clean&buyer=home">Check Whether My Home Is Suitable</a>
+    </div>
+  </div>
+</dialog>
+
+<script is:inline>
+  (() => {
+    const eligible = ['/essential-clean-london/', '/home-cleaning-london/'];
+    if (!eligible.includes(window.location.pathname.toLowerCase().replace(/\/?$/, '/'))) return;
+    const dialog = document.getElementById('hqc-essential-offer');
+    if (!(dialog instanceof HTMLDialogElement)) return;
+    const storageKey = 'hqc:essential-offer-dismissed-until:v1';
+    const suppressionMs = 7 * 24 * 60 * 60 * 1000;
+    let suppressedUntil = 0;
+    try { suppressedUntil = Number(window.localStorage.getItem(storageKey)) || 0; } catch {}
+    if (suppressedUntil > Date.now()) return;
+
+    let engaged = false;
+    let delayed = false;
+    let shown = false;
+    let returnFocus = null;
+    const track = (action) => window.dispatchEvent(new CustomEvent('hqc:conversion', {
+      detail: { event: `essential_offer_${action}`, placement: window.location.pathname }
+    }));
+    const canShow = () => {
+      const banner = document.getElementById('hqc-cookie-banner');
+      const preferences = document.getElementById('hqc-cookie-preferences');
+      return delayed && engaged && !shown && !(banner && !banner.hidden) && !(preferences && preferences.open);
+    };
+    const maybeShow = () => {
+      if (!canShow()) return;
+      shown = true;
+      returnFocus = document.activeElement;
+      dialog.showModal();
+      document.getElementById('hqc-essential-offer-close')?.focus();
+      track('impression');
+    };
+    const dismiss = () => {
+      if (!dialog.open) return;
+      try { window.localStorage.setItem(storageKey, String(Date.now() + suppressionMs)); } catch {}
+      dialog.close();
+      track('dismissal');
+    };
+    document.getElementById('hqc-essential-offer-close')?.addEventListener('click', dismiss);
+    dialog.addEventListener('cancel', (event) => { event.preventDefault(); dismiss(); });
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) dismiss(); });
+    dialog.addEventListener('close', () => { if (returnFocus instanceof HTMLElement) returnFocus.focus(); });
+    dialog.querySelectorAll('[data-hqc-offer-cta]').forEach((link) => link.addEventListener('click', () => {
+      track(`cta_${link.dataset.hqcOfferCta}`);
+      try { window.localStorage.setItem(storageKey, String(Date.now() + suppressionMs)); } catch {}
+    }));
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 250) { engaged = true; maybeShow(); }
+    }, { passive: true });
+    window.addEventListener('hqc:cookie-preferences-updated', () => window.setTimeout(maybeShow, 0));
+    window.setTimeout(() => { delayed = true; maybeShow(); }, 12000);
+  })();
+</script>

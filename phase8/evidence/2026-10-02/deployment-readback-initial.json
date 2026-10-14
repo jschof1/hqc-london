@@ -1,0 +1,73 @@
+{
+  "sourceHead": "e7bcf1390710c61d2882b40ff40ac56879e41da7",
+  "production": {
+    "id": "242f9c4f-ce9a-4e3e-944e-ad99eb2665bc",
+    "environment": "production",
+    "url": "https://242f9c4f.hqc-london.pages.dev",
+    "aliases": [
+      "https://highqualityclean.co.uk",
+      "https://www.highqualityclean.co.uk"
+    ],
+    "created_on": "2026-09-21T20:23:34.186009Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": "2026-09-21T20:24:16.978455Z",
+      "ended_on": "2026-09-21T20:24:27.837606Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "github:push",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "41903fbb90cf1c0c396d8ac68075a05a993cca79",
+        "commit_message": "fix: block analytics and indexing on Pages previews",
+        "commit_dirty": false
+      }
+    }
+  },
+  "staging": [
+    {
+      "id": "9fc19d8d-7797-4c45-859a-f6434d696d35",
+      "environment": "preview",
+      "url": "https://9fc19d8d.hqc-london.pages.dev",
+      "aliases": [
+        "https://phase8-2026-09-28-staging.hqc-london.pages.dev"
+      ],
+      "created_on": "2026-10-02T14:09:08.648758Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": "2026-10-02T14:09:48.509339Z",
+        "ended_on": "2026-10-02T14:09:56.717286Z",
+        "status": "success"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "phase8-2026-09-28-staging",
+          "commit_hash": "e7bcf1390710c61d2882b40ff40ac56879e41da7",
+          "commit_message": "feat: harden Phase 8 staging forms and record release evidence",
+          "commit_dirty": false
+        }
+      }
+    }
+  ],
+  "pagesSourceConfig": {
+    "owner": "jschof1",
+    "owner_id": "59843981",
+    "repo_name": "hqc-london",
+    "repo_id": "1064317520",
+    "production_branch": "main",
+    "pr_comments_enabled": true,
+    "deployments_enabled": true,
+    "production_deployments_enabled": true,
+    "preview_deployment_setting": "all",
+    "preview_branch_includes": [
+      "*"
+    ],
+    "preview_branch_excludes": [],
+    "path_includes": [
+      "*"
+    ],
+    "path_excludes": []
+  }
+}

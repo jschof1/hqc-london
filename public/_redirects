@@ -144,3 +144,17 @@
 # rules as dynamic after a splat/placeholder. Canonical host/protocol handling
 # remains in src/middleware.ts because Pages _redirects accepts relative paths.
 /areas/areas/* /areas-we-cover/ 301
+
+# Lowercase legacy aliases: direct redirects before trailing-slash normalisation.
+/nottinghill /locations/london/notting-hill/ 301
+/nottinghill/ /locations/london/notting-hill/ 301
+/hollandpark /locations/london/holland-park/ 301
+/hollandpark/ /locations/london/holland-park/ 301
+/areas/hollandpark /locations/london/holland-park/ 301
+/areas/hollandpark/ /locations/london/holland-park/ 301
+/primrosehill /locations/london/primrose-hill/ 301
+/primrosehill/ /locations/london/primrose-hill/ 301
+/stjohnswood /locations/london/st-johns-wood/ 301
+/stjohnswood/ /locations/london/st-johns-wood/ 301
+/waltononthames /locations/surrey/walton-on-thames/ 301
+/waltononthames/ /locations/surrey/walton-on-thames/ 301

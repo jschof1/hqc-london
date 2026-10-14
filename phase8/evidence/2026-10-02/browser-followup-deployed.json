@@ -1,0 +1,31 @@
+{
+  "base": "https://phase8-2026-09-28-staging.hqc-london.pages.dev",
+  "testedAt": "2026-10-02T15:15:21.149Z",
+  "note": "Browser-engine and viewport tests; not physical iOS/Android, Safari or Edge certification. Delivery success paths are mocked, preview posts do not send.",
+  "results": [
+    {
+      "engine": "chrome",
+      "version": "154.0.8037.94",
+      "tests": [
+        "keyboard route switching and property deadlines",
+        "native endpoint validates then reports no-send preview",
+        "failed submission and malformed success preserve data with no success claim",
+        "mocked receipt resets dates/consent for a separate new enquiry",
+        "quote reflow and automated accessibility",
+        "contact failure is accessible and never a lead confirmation",
+        "optional tracking stays off after rejection; preferences remain usable",
+        "booking provider failure leaves a usable fallback and no confirmation",
+        "offer delay, cookie precedence, keyboard dismissal and suppression",
+        "all ratings retain the same Google review route and optional private feedback",
+        "preview noindex and genuine missing-page status"
+      ],
+      "accessibility": [
+        {
+          "page": "quote",
+          "violations": []
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

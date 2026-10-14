@@ -1,0 +1,278 @@
+{
+  "checkedAt": "2026-10-02T16:01:12.458Z",
+  "scope": "Important indexed/linked targets and historical redirect preservation; no full repeated browser QA or indexing request",
+  "paths": [
+    {
+      "path": "/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex, nofollow, noarchive"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/locations/surrey/hersham/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/hersham/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/locations/surrey/hersham/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/request-a-quote/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/request-a-quote/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/request-a-quote/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex, nofollow, noarchive"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/deep-cleaning-london/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/deep-cleaning-london/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/deep-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/office-cleaning-london/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/office-cleaning-london/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/office-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/essential-clean-london/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/essential-clean-london/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/essential-clean-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/commercial-cleaning-london/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/commercial-cleaning-london/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/commercial-cleaning-london/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/contact/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/contact/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/contact/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex, nofollow, noarchive"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/reviews-case-studies/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/reviews-case-studies/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/reviews-case-studies/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/areas-we-cover/",
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/areas-we-cover/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/areas-we-cover/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex"
+      },
+      "inProductionSitemap": true
+    },
+    {
+      "path": "/terms-and-conditions/",
+      "inProductionSitemap": true,
+      "production": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/terms-and-conditions/",
+        "robots": "index, follow",
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 200,
+        "location": null,
+        "canonical": "https://highqualityclean.co.uk/terms-and-conditions/",
+        "robots": "noindex, nofollow, noarchive",
+        "robotsHeader": "noindex, nofollow, noarchive"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/services/deep-cleaning/",
+      "target": "/deep-cleaning-london/",
+      "production": {
+        "status": 301,
+        "location": "/deep-cleaning-london/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 301,
+        "location": "/deep-cleaning-london/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      }
+    },
+    {
+      "source": "/services/office-cleaning/",
+      "target": "/office-cleaning-london/",
+      "production": {
+        "status": 301,
+        "location": "/office-cleaning-london/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 301,
+        "location": "/office-cleaning-london/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      }
+    },
+    {
+      "source": "/hersham/",
+      "target": "/locations/surrey/hersham/",
+      "production": {
+        "status": 301,
+        "location": "/locations/surrey/hersham/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 301,
+        "location": "/locations/surrey/hersham/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      }
+    },
+    {
+      "source": "/get-quote/",
+      "target": "/request-a-quote/",
+      "production": {
+        "status": 301,
+        "location": "/request-a-quote/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      },
+      "preview": {
+        "status": 301,
+        "location": "/request-a-quote/",
+        "canonical": null,
+        "robots": null,
+        "robotsHeader": null
+      }
+    }
+  ]
+}

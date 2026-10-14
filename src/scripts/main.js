@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Observe elements that should have staggered animations
   const staggerTargets = document.querySelectorAll('.grid, .gallery-grid, .area-grid, .service-grid');
   staggerTargets.forEach(target => {
+    // Keep form controls and enquiry tabs visible during validation and route changes.
+    if (target.closest('form, dialog, [role=dialog]') || target.getAttribute('role') === 'tablist') return;
     staggerObserver.observe(target);
   });
 
@@ -130,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       const newStaggerTargets = document.querySelectorAll('.grid:not(.stagger-children), .gallery-grid:not(.stagger-children), .area-grid:not(.stagger-children), .service-grid:not(.stagger-children)');
       newStaggerTargets.forEach(target => {
+        if (target.closest('form, dialog, [role=dialog]') || target.getAttribute('role') === 'tablist') return;
         staggerObserver.observe(target);
       });
 
@@ -161,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Separate initialization functions for reuse
   function initializeAnchorLinks() {
     // Remove existing listeners to prevent duplicates
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const anchorLinks = document.querySelectorAll('a[href^="#"]:not([data-open-cookie-preferences])');
     
     anchorLinks.forEach(link => {
       // Clone node to remove all event listeners
@@ -244,7 +247,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const submitButton = this.querySelector('button[type="submit"]');
+        if (submitButton?.disabled) return;
         const originalButtonText = submitButton?.textContent;
+        const trackStage = (stage) => window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { form: this, stage } }));
         const status = this.querySelector('[data-hqc-status]') || document.createElement('p');
         status.dataset.hqcStatus = 'true';
         status.setAttribute('role', 'status');
@@ -269,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         payload.timestamp = new Date().toISOString();
 
         try {
+          trackStage('attempted');
           const response = await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -279,15 +285,21 @@ document.addEventListener('DOMContentLoaded', function() {
             throw new Error(`Submission failed with status ${response.status}`);
           }
 
+          const result = await response.json().catch(() => null);
+          if (result?.preview === true) {
+            trackStage('preview');
+            status.textContent = 'This preview does not send enquiries. Nothing was sent.';
+            if (submitButton) { submitButton.disabled = false; submitButton.textContent = originalButtonText; }
+            return;
+          }
+          trackStage('receipt');
           status.classList.remove('text-red-700');
           status.classList.add('text-green-700');
           status.textContent = 'Thank you. Your enquiry has been received and our team will be in touch shortly.';
           this.reset();
           if (submitButton) submitButton.textContent = 'Enquiry sent';
-          window.dispatchEvent(new CustomEvent('hqc:conversion', {
-            detail: { endpoint, source: payload.source },
-          }));
         } catch (error) {
+          trackStage('error');
           console.error('HQC form submission failed:', error);
           status.classList.remove('text-green-700');
           status.classList.add('text-red-700');

@@ -1,0 +1,1268 @@
+{
+  "recordedAt": "2026-10-02T14:38:42.830149+00:00",
+  "note": "Three completed scenarios retained from interrupted first run; separate completed production accept run added. Fresh Chrome contexts; no form input/submission/payment. Cookie values and URL query strings omitted. Network destinations are technical observations, not legal processor classification.",
+  "results": [
+    {
+      "label": "staging-booking",
+      "url": "https://phase8-2026-09-28-staging.hqc-london.pages.dev/book-essential-clean/",
+      "choice": "reject",
+      "status": 200,
+      "preferences": {
+        "necessary": true,
+        "analytics": false,
+        "advertising": false
+      },
+      "before": {
+        "cookies": [
+          {
+            "name": "m",
+            "domain": "m.stripe.com",
+            "path": "/",
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None",
+            "expires": 1825511401.003354
+          }
+        ],
+        "frames": [
+          "https://phase8-2026-09-28-staging.hqc-london.pages.dev/book-essential-clean/",
+          "https://highqualitycleanlimited.launch27.com/",
+          "https://js.stripe.com/v2/channel.html",
+          "https://www.google.com/recaptcha/api2/anchor",
+          "nullblank",
+          "https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+          "https://m.stripe.network/inner.html",
+          "nullblank",
+          "https://www.google.com/recaptcha/api2/bframe"
+        ],
+        "storageKeys": {
+          "local": [],
+          "session": []
+        }
+      },
+      "after": {
+        "cookies": [
+          {
+            "name": "m",
+            "domain": "m.stripe.com",
+            "path": "/",
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None",
+            "expires": 1825511401.003354
+          }
+        ],
+        "frames": [
+          "https://phase8-2026-09-28-staging.hqc-london.pages.dev/book-essential-clean/",
+          "https://highqualitycleanlimited.launch27.com/",
+          "https://js.stripe.com/v2/channel.html",
+          "https://www.google.com/recaptcha/api2/anchor",
+          "nullblank",
+          "https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+          "https://m.stripe.network/inner.html",
+          "nullblank",
+          "https://www.google.com/recaptcha/api2/bframe"
+        ],
+        "storageKeys": {
+          "local": [
+            "hqc:cookie-preferences:v1"
+          ],
+          "session": []
+        }
+      },
+      "requests": [
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/book-essential-clean/",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.googleapis.com",
+          "path": "/css2",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/_astro/_slug_.CtTyUsAM.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/_astro/Layout.astro_astro_type_script_index_0_lang.BUN98V27.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.gstatic.com",
+          "path": "/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/images/brand/hqc-full-gold.webp",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "maxcdn.bootstrapcdn.com",
+          "path": "/font-awesome/4.5.0/css/font-awesome.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "code.jquery.com",
+          "path": "/ui/1.11.4/themes/smoothness/jquery-ui.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/config/config.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "code.jquery.com",
+          "path": "/jquery-2.2.4.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "code.jquery.com",
+          "path": "/ui/1.11.4/jquery-ui.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v2/",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v3/",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.googleapis.com",
+          "path": "/css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "maxcdn.bootstrapcdn.com",
+          "path": "/font-awesome/4.2.0/css/font-awesome.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/css/app-71d011c25c.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/js/app-48f041665fdad598d9be7efb4c07ca62bbad6475-4858044dd4.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/rollbar.js/2.3.9/rollbar.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "hostedpayments.fullsteampay.net",
+          "path": "/js/hostedcontrols/2.0.0/fullsteam.hostedcontrols.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/settings",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/form",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v2/channel.html",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/images/tenant/form/icons.svg",
+          "type": "other",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-light.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-bold.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-regular.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "maxcdn.bootstrapcdn.com",
+          "path": "/font-awesome/4.2.0/fonts/fontawesome-webfont.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-semibold.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/images/cards.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__en.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api2/anchor",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/styles__ltr.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api2/webworker.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/api2/logo_48.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.gstatic.com",
+          "path": "/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__en.js",
+          "type": "other",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v3/fingerprinted/js/m-outer-15a2b40a058ddff1cffdb63779fe3de1.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.network",
+          "path": "/inner.html",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.network",
+          "path": "/out-4.5.45.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/spots",
+          "type": "xhr",
+          "method": "POST"
+        },
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.com",
+          "path": "/6",
+          "type": "xhr",
+          "method": "POST"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api2/bframe",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/policy/location",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/custom_fields",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/frequencies",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/services",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/settings/general",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google-analytics.com",
+          "path": "/analytics.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.googletagmanager.com",
+          "path": "/gtag/js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.googletagmanager.com",
+          "path": "/gtm.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdn.mouseflow.com",
+          "path": "/projects/03cb58b5-e1f6-48de-81ba-3f2906752e55.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdn.optimizely.com",
+          "path": "/js/1966070764.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "connect.facebook.net",
+          "path": "/en_US/fbevents.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "connect.facebook.net",
+          "path": "/signals/config/116117179137741",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/estimate_price",
+          "type": "xhr",
+          "method": "POST"
+        }
+      ],
+      "setCookies": [
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.com",
+          "name": "m"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "label": "staging-booking",
+      "url": "https://phase8-2026-09-28-staging.hqc-london.pages.dev/book-essential-clean/",
+      "choice": "accept",
+      "status": 200,
+      "preferences": {
+        "necessary": true,
+        "analytics": true,
+        "advertising": true
+      },
+      "before": {
+        "cookies": [
+          {
+            "name": "m",
+            "domain": "m.stripe.com",
+            "path": "/",
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None",
+            "expires": 1825511411.642515
+          }
+        ],
+        "frames": [
+          "https://phase8-2026-09-28-staging.hqc-london.pages.dev/book-essential-clean/",
+          "https://highqualitycleanlimited.launch27.com/",
+          "https://js.stripe.com/v2/channel.html",
+          "https://www.google.com/recaptcha/api2/anchor",
+          "nullblank",
+          "https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+          "https://m.stripe.network/inner.html",
+          "nullblank",
+          "https://www.google.com/recaptcha/api2/bframe"
+        ],
+        "storageKeys": {
+          "local": [],
+          "session": []
+        }
+      },
+      "after": {
+        "cookies": [
+          {
+            "name": "m",
+            "domain": "m.stripe.com",
+            "path": "/",
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None",
+            "expires": 1825511411.642515
+          }
+        ],
+        "frames": [
+          "https://phase8-2026-09-28-staging.hqc-london.pages.dev/book-essential-clean/",
+          "https://highqualitycleanlimited.launch27.com/",
+          "https://js.stripe.com/v2/channel.html",
+          "https://www.google.com/recaptcha/api2/anchor",
+          "nullblank",
+          "https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+          "https://m.stripe.network/inner.html",
+          "nullblank",
+          "https://www.google.com/recaptcha/api2/bframe"
+        ],
+        "storageKeys": {
+          "local": [
+            "hqc:cookie-preferences:v1"
+          ],
+          "session": []
+        }
+      },
+      "requests": [
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/book-essential-clean/",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.googleapis.com",
+          "path": "/css2",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/_astro/_slug_.CtTyUsAM.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/_astro/Layout.astro_astro_type_script_index_0_lang.BUN98V27.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.gstatic.com",
+          "path": "/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "phase8-2026-09-28-staging.hqc-london.pages.dev",
+          "path": "/images/brand/hqc-full-gold.webp",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "maxcdn.bootstrapcdn.com",
+          "path": "/font-awesome/4.5.0/css/font-awesome.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "code.jquery.com",
+          "path": "/ui/1.11.4/themes/smoothness/jquery-ui.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/config/config.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "code.jquery.com",
+          "path": "/jquery-2.2.4.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "code.jquery.com",
+          "path": "/ui/1.11.4/jquery-ui.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v2/",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v3/",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.googleapis.com",
+          "path": "/css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "maxcdn.bootstrapcdn.com",
+          "path": "/font-awesome/4.2.0/css/font-awesome.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/css/app-71d011c25c.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/js/app-48f041665fdad598d9be7efb4c07ca62bbad6475-4858044dd4.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/rollbar.js/2.3.9/rollbar.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "hostedpayments.fullsteampay.net",
+          "path": "/js/hostedcontrols/2.0.0/fullsteam.hostedcontrols.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/settings",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/form",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v2/channel.html",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/images/tenant/form/icons.svg",
+          "type": "other",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-light.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-bold.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-regular.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "maxcdn.bootstrapcdn.com",
+          "path": "/font-awesome/4.2.0/fonts/fontawesome-webfont.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/fonts/proximanova-semibold.woff",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/images/cards.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__en.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api2/anchor",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/styles__ltr.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api2/webworker.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/api2/logo_48.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.gstatic.com",
+          "path": "/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.gstatic.com",
+          "path": "/recaptcha/releases/kemdRjWFxNjgsGdhRslyEPwU/recaptcha__en.js",
+          "type": "other",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "js.stripe.com",
+          "path": "/v3/fingerprinted/js/m-outer-15a2b40a058ddff1cffdb63779fe3de1.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.network",
+          "path": "/inner.html",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.network",
+          "path": "/out-4.5.45.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/spots",
+          "type": "xhr",
+          "method": "POST"
+        },
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.com",
+          "path": "/6",
+          "type": "xhr",
+          "method": "POST"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google.com",
+          "path": "/recaptcha/api2/bframe",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/policy/location",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/custom_fields",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/frequencies",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/services",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/settings/general",
+          "type": "xhr",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.google-analytics.com",
+          "path": "/analytics.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.googletagmanager.com",
+          "path": "/gtag/js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "www.googletagmanager.com",
+          "path": "/gtm.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdn.mouseflow.com",
+          "path": "/projects/03cb58b5-e1f6-48de-81ba-3f2906752e55.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdn.optimizely.com",
+          "path": "/js/1966070764.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "connect.facebook.net",
+          "path": "/en_US/fbevents.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualitycleanlimited.launch27.com",
+          "path": "/v1/booking/estimate_price",
+          "type": "xhr",
+          "method": "POST"
+        },
+        {
+          "stage": "before-choice",
+          "host": "connect.facebook.net",
+          "path": "/signals/config/116117179137741",
+          "type": "script",
+          "method": "GET"
+        }
+      ],
+      "setCookies": [
+        {
+          "stage": "before-choice",
+          "host": "m.stripe.com",
+          "name": "m"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "label": "production-home",
+      "url": "https://highqualityclean.co.uk/",
+      "choice": "reject",
+      "status": 200,
+      "preferences": {
+        "necessary": true,
+        "analytics": false,
+        "advertising": false
+      },
+      "before": {
+        "cookies": [],
+        "frames": [
+          "https://highqualityclean.co.uk/"
+        ],
+        "storageKeys": {
+          "local": [],
+          "session": [
+            "hqc:attribution"
+          ]
+        }
+      },
+      "after": {
+        "cookies": [],
+        "frames": [
+          "https://highqualityclean.co.uk/"
+        ],
+        "storageKeys": {
+          "local": [
+            "hqc:cookie-preferences:v1"
+          ],
+          "session": [
+            "hqc:attribution"
+          ]
+        }
+      },
+      "requests": [
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.googleapis.com",
+          "path": "/css2",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/_astro/_slug_.BenWi2vz.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/generated/hqc-home-hero.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/generated/hqc-property-hero.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/pedro-founder.webp",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/_astro/Layout.astro_astro_type_script_index_0_lang.Cntgmspp.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.gstatic.com",
+          "path": "/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/generated/hqc-office-hero.png",
+          "type": "image",
+          "method": "GET"
+        }
+      ],
+      "setCookies": [],
+      "errors": []
+    },
+    {
+      "label": "production-home",
+      "url": "https://highqualityclean.co.uk/",
+      "choice": "accept",
+      "status": 200,
+      "preferences": {
+        "necessary": true,
+        "analytics": true,
+        "advertising": true
+      },
+      "before": {
+        "cookies": [],
+        "frames": [
+          "https://highqualityclean.co.uk/"
+        ],
+        "storageKeys": {
+          "local": [],
+          "session": [
+            "hqc:attribution"
+          ]
+        }
+      },
+      "after": {
+        "cookies": [],
+        "frames": [
+          "https://highqualityclean.co.uk/"
+        ],
+        "storageKeys": {
+          "local": [
+            "hqc:cookie-preferences:v1"
+          ],
+          "session": [
+            "hqc:attribution"
+          ]
+        }
+      },
+      "requests": [
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/",
+          "type": "document",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.googleapis.com",
+          "path": "/css2",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/_astro/_slug_.BenWi2vz.css",
+          "type": "stylesheet",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/generated/hqc-home-hero.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/generated/hqc-property-hero.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/pedro-founder.webp",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/_astro/Layout.astro_astro_type_script_index_0_lang.Cntgmspp.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "fonts.gstatic.com",
+          "path": "/s/manrope/v20/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "cdnjs.cloudflare.com",
+          "path": "/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2",
+          "type": "font",
+          "method": "GET"
+        },
+        {
+          "stage": "before-choice",
+          "host": "highqualityclean.co.uk",
+          "path": "/images/generated/hqc-office-hero.png",
+          "type": "image",
+          "method": "GET"
+        },
+        {
+          "stage": "accept",
+          "host": "cloud.umami.is",
+          "path": "/script.js",
+          "type": "script",
+          "method": "GET"
+        },
+        {
+          "stage": "accept",
+          "host": "gateway.umami.is",
+          "path": "/api/send",
+          "type": "fetch",
+          "method": "POST"
+        }
+      ],
+      "setCookies": [],
+      "errors": []
+    }
+  ]
+}
