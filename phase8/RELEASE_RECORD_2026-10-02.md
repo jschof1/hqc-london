@@ -1,5 +1,7 @@
 # Phase 8 staging release record — 2 October 2026
 
+> **15 October update:** this record preserves the 2 October checkpoint and its evidence. It is not current production/source status. The [dated cumulative addendum](RELEASE_ADDENDUM_2026-10-15.md) records current main `61bb2eb`, staging application `79c3d91`, the predecessor preview, recovered registers and remaining acceptance gates.
+
 **Staging implementation and local validation progressed; production acceptance remains blocked.** Authority is Pedro's 28 September Release Pack v1.0, all 22 sections, approved Batches 1–6 and locked Areas 1–12. No production merge, DNS change, live webhook replacement, customer submission, booking or payment was made by this website work.
 
 - Draft PR: https://github.com/jschof1/hqc-london/pull/3

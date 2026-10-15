@@ -1,0 +1,19 @@
+Test ID,Requirement,Status,Evidence or next action,HQC sign-off,Reviewed date,15 October addition / limit
+P01,Eligible engagement trigger,Compliant,Local audit P01; requires engagement plus delay,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P02,No immediate overlay,Compliant,Local audit P02; time alone does not open,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P03,Commercial exclusion,Compliant,F01-exclusions; no markup,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P04,End of Tenancy exclusion,Compliant,F01-exclusions; no markup,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P05,Quotation exclusion,Compliant,F01-exclusions; no markup,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P06,Active Automaid exclusion,Compliant,F01-exclusions; parent booking page has no markup,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P07,Cookie priority,Compliant,Local audit P07,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P08,Mouse and touch dismissal,Compliant,Local audit P08 and P13,Pending,2026-10-15,Close-offer button unobstructed and activated by CDP touch in Ego at 390x700 on exact preview; offer closed.
+P09,Keyboard dismissal,Compliant,Local audit P09,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P10,Dismissal suppression,Compliant,Local audit suppression and seven-day expiry,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P11,Primary CTA destination,Partial,Correct href asserted; follow destination in deployed acceptance,Pending,2026-10-15,"After dismissing offer, Essential primary booking CTA navigated to parent booking request. Offer CTA href inspected; offer CTA itself not activated."
+P12,Suitability CTA destination,Partial,Correct href asserted; follow destination in deployed acceptance,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P13,Mobile usability,Partial,Viewport and touch checks passed in emulation; physical device review pending,Pending,2026-10-15,Short 390x700 emulation: menu and Essential link worked by touch; offer dismiss worked; parent booking had no horizontal overflow. Physical device still pending.
+P14,Impression click dismissal analytics,Partial,6 October analytics evidence; current regression recorded separately,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P15,Booking Request downstream conversion,Unverified,Provider completion event and actual record not proved,Pending,2026-10-15,Still unverified. No provider form filled or submitted.
+P16,No duplicate GHL lead from offer,Partial,Open/dismiss generated no mutation; click/provider readback still needed,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.
+P17,No material performance impairment,Unverified,Final deployed comparative performance not rerun,Pending,2026-10-15,Still unverified. No fresh comparative field-performance run.
+P18,No artificial scarcity,Compliant,Local audit P18,Pending,2026-10-15,13 October historical disposition retained; not freshly retested as a complete case.

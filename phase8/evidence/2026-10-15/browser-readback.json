@@ -1,0 +1,54 @@
+{
+  "testedAt": "2026-10-15T12:22:50.299732+00:00",
+  "applicationRevision": "79c3d91d705a28fb637a53276363925ab17612b9",
+  "immutablePreview": "https://3ad5eef9.hqc-london.pages.dev/",
+  "runtime": "Existing Ego Lite, one task space; desktop 1440x900 and mobile 390x700 CDP emulation",
+  "checks": [
+    {
+      "id": "E01",
+      "result": "pass",
+      "scope": "Home privacy banner opens Manage Preferences; analytics/advertising options initially unchecked. Reject Non-Essential closes preferences/banner."
+    },
+    {
+      "id": "E02",
+      "result": "pass",
+      "scope": "Mobile menu opened using touchStart/touchEnd at unobstructed button centre; settled screenshot has visible links. Touch on Essential link navigated to Essential page."
+    },
+    {
+      "id": "E03",
+      "result": "pass",
+      "scope": "Essential offer appeared following delay and engagement/scroll; correct 30 percent, weekly/fortnightly three-month commitment and one-off exclusion visible."
+    },
+    {
+      "id": "E04",
+      "result": "pass",
+      "scope": "Offer close button clear at touch centre; touch dismissed offer. Subsequent primary Essential CTA navigated to booking parent. No provider fields entered."
+    },
+    {
+      "id": "E05",
+      "result": "pass",
+      "scope": "Booking parent visibly distinguishes request, collection and HQC confirmation, service-specific deposit, no automatic Essential 50 percent rule; robots noindex and 390px scrollWidth at 390px viewport."
+    },
+    {
+      "id": "E06",
+      "result": "pass",
+      "scope": "About portrait visibly uses object-fit contain, display width 384px and natural proportions, with no page overflow. See baseline-about.json and screenshot."
+    },
+    {
+      "id": "E07",
+      "result": "pass",
+      "scope": "Reviews contains residential and commercial evidence categories with three permission-pending slots; no rendered Review format section; no overflow, robots noindex."
+    }
+  ],
+  "intermediateObservations": [
+    "Immediate menu screenshot preceded paint; only the settled screenshot is retained as visual proof.",
+    "Attempt to click underlying CTA while offer open was intercepted by offer copy, as expected for a modal. Dismissal then navigation succeeded.",
+    "Raw CDP invalidates refs; refreshed snapshot/selector was used after stale-ref error. No force-click or hidden-state bypass used."
+  ],
+  "limits": [
+    "No provider form filled/submitted, real enquiry, charge, call or message.",
+    "No full eighteen-offer-case, eleven-GHL-case, physical-device or performance certification.",
+    "No optional analytics accepted and no PostHog events checked; hashed preview is analytics-disabled under existing contract.",
+    "Current pushed candidate must receive separate immutable deployment readback after push."
+  ]
+}

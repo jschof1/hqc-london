@@ -27,3 +27,7 @@ Earlier concurrent/dev-server attempts were not accepted as release proof. A reb
 All 11 GHL scenarios and actual route/communications receipt; provider/manual allocation/offer/payment tests under CC01; remaining legal particulars and processor audit; final approved flat/vector logo, portrait, provenance and permissions; analytics platform/attribution reconciliation; final deployed performance/device/SEO review; HQC ownership/MFA and external recovery evidence; explicit Pedro acceptance and production release authorisation. No customer contact or production release performed.
 
 A private four-page response, twelve-area gap register, eighteen-test pop-up register and follow-through checklist are prepared separately. Existing 2 October evidence is historical and dated; 6 October Plausible staging receipt is not production activation.
+
+## 15 October cumulative record addendum
+
+The twelve-area and eighteen-case registers actually sent on 14 October have now been recovered verbatim, preserved under `evidence/2026-10-14/`, and extended as [HQC-gap-register.csv](HQC-gap-register.csv) and [HQC-popup-acceptance.csv](HQC-popup-acceptance.csv). See [the dated release addendum](RELEASE_ADDENDUM_2026-10-15.md) for source versus deployed observations, logo/legal input gates, and unchanged provider/HQC acceptance. The statements and test results above remain historical.

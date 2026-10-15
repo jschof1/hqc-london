@@ -1,0 +1,25 @@
+{
+  "testedAt": "2026-10-15T12:21:46.739Z",
+  "source": "79c3d91",
+  "portrait": {
+    "url": "https://3ad5eef9.hqc-london.pages.dev/about-high-quality-clean/",
+    "image": "/images/pedro-founder-640.webp",
+    "natural": {
+      "w": 384,
+      "h": 682
+    },
+    "display": {
+      "x": 847.0390625,
+      "y": 108.359375,
+      "width": 384,
+      "height": 682.796875,
+      "top": 108.359375,
+      "right": 1231.0390625,
+      "bottom": 791.15625,
+      "left": 847.0390625
+    },
+    "objectFit": "contain",
+    "robots": "noindex, nofollow, noarchive",
+    "overflow": false
+  }
+}

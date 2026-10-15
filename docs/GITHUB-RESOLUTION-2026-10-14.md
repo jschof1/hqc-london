@@ -1,5 +1,7 @@
 # HQC staging reconciliation — 14 October 2026
 
+> **15 October dated correction:** the statements below are the historical 14 October snapshot. Current remote `main` is `61bb2eb11f5f413113c661b1ec344eb1873946e1`, independently updated for PostHog; staging application source is `79c3d91d705a28fb637a53276363925ab17612b9`. The [15 October release addendum](../phase8/RELEASE_ADDENDUM_2026-10-15.md) preserves the exact prior previews, extends the recovered sent registers and records remaining acceptance gates. No analytics integration or production merge is implied.
+
 This change follows the current Phase 8 staging source at `93ef509d44171174f01d604982b3e5989accde2c`. Production `main` remains at `41903fbb90cf1c0c396d8ac68075a05a993cca79`; launch still requires Pedro's acceptance and explicit release authorisation.
 
 ## Focused website changes

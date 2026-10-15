@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve the recovered sent CSV attachments byte-for-byte for provenance.
+phase8/evidence/2026-10-14/HQC-gap-register.csv -text whitespace=cr-at-eol
+phase8/evidence/2026-10-14/HQC-popup-acceptance.csv -text whitespace=cr-at-eol

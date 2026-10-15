@@ -1,0 +1,6 @@
+2026-10-15. Established Mac mini, isolated /private/tmp/hqc-cumulative-20261015.
+Source: git archive 79c3d91d705a28fb637a53276363925ab17612b9 src scripts.
+Command: node scripts/verify-form-routing.mjs
+Exit status: 0
+Form routing verification passed for 4 repaired quick forms, discount offer, 5 existing form routes, shared handler, and 5 webhook bindings.
+No dependencies installed, local build/worker restarted, or real form/provider request sent by this check.

@@ -1,0 +1,35 @@
+{
+  "reviewedDate": "2026-10-15",
+  "direction": {
+    "gmailMessage": "1a11d9862159f8ec",
+    "date": "2026-10-08",
+    "subject": "HQC Logo - Approved Direction and Final Website Assets",
+    "attachment": "HQC Logo Usage Guidelines Board.png",
+    "sha256": "bdc865db5d2e214c731a2398785041875b1326a298097d790a3d959ef9b87412",
+    "decision": "Horizontal recomposition second row is preferred direction; flat production assets must still be reviewed at display sizes and approved."
+  },
+  "recoveredKit": {
+    "archive": "logo-kit-hqc.zip",
+    "createdDate": "2026-10-06",
+    "sha256": "da7e95a80d7954377dcfa85e884b0e0945ed19bfbd0e6ae4916f8d3c122a98c7",
+    "entries": 307,
+    "svgFiles": 0,
+    "master": "source/hqc-approved-master.png",
+    "masterSha256": "e5e3da56d3bbf1341fa0679eda3820279afe78a5b80fc20ce6ec77f40c2bcb3c",
+    "readmeFinding": "Gold artwork retains original bevels and shading. Raster PNG/WebP crops/compositions; no vector/SVG or newly drawn lettering claimed."
+  },
+  "originalRegisters": {
+    "sourceMessage": "1a13a76f68a90141",
+    "sent": "2026-10-14T12:50:36Z",
+    "HQC-gap-register.csv": "713609a9aeb93b7b6ce4a64e3ceb9b0d4000d890b6e16605cfe42cd5cdca8683",
+    "HQC-popup-acceptance.csv": "73b1c4dd574427e6f4d12a568dcbdb02675bbcf880d72a5c331a002158753e9f"
+  },
+  "implementation": "No logo artwork integrated. Typographic header retained pending faithful flat master and display-size approval. Reference board is not a production asset.",
+  "legalInputGate": [
+    "Privacy contact exact email",
+    "Terms contact exact email",
+    "Actual policy review/approval dates",
+    "HQC confirmation of ICO particulars and actual processor stack"
+  ],
+  "legalDecision": "No exact approved replacement values recovered; placeholders retained. Sales contact and document date are not inferred as legal approvals."
+}
