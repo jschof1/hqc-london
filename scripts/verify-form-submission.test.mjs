@@ -84,8 +84,8 @@ test('current routed quote maps dates, legacy notes and server-owned metadata', 
   assert.equal(payload.checkout_date, '2026-11-02');
   assert.equal(payload.inspection_date, '');
   assert.equal(payload.move_in_date, '');
-  assert.equal('desired_date' in payload, false);
-  assert.equal(payload.property_type, 'residential');
+  assert.equal(payload.desired_date, payload.required_service_date);
+  assert.equal('property_type' in payload, false, 'do not invent a building type from the sales route');
   for (const value of ['Test condition and access', 'Deep Clean™', '1 Test Street', '2026-11-03', 'deep-clean', 'homeowner', '800 sq ft', 'London', 'moving']) {
     assert.ok(payload.details.includes(value), `legacy details must retain ${value}`);
   }
@@ -98,6 +98,8 @@ test('current routed quote maps dates, legacy notes and server-owned metadata', 
   assert.equal('privacy_notice_version' in payload, false);
   assert.match(payload.timestamp, /^\d{4}-\d\d-\d\dT/);
   assert.match(payload.submission_id, /^[0-9a-f-]{36}$/);
+  assert.ok(payload.details.includes(payload.submission_id));
+  assert.ok(payload.details.includes(payload.timestamp));
   assert.equal(result.submission_id, payload.submission_id);
   assert.equal(result.ok, true);
   assert.equal(response.headers.get('Cache-Control'), 'no-store');
@@ -144,7 +146,7 @@ test('date conflicts and non-ISO or impossible dates fail before fetch', async (
 test('matching aliases and leap days normalize to one canonical date envelope', async () => capture(async calls => {
   assert.equal((await invoke('quote', { ...quote, desired_date: '2028-02-29', required_service_date: '2028-02-29' })).status, 200);
   assert.equal(calls[0].payload.required_service_date, '2028-02-29');
-  assert.equal('desired_date' in calls[0].payload, false);
+  assert.equal(calls[0].payload.desired_date, '2028-02-29');
 }));
 
 test('invalid JSON, non-object input, field types and current required fields fail without fetch', async () => noFetch(async () => {

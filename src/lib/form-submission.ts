@@ -119,13 +119,12 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
       return json({ error: 'Service dates must match', field: 'desired_date' }, 400);
     }
     body.required_service_date = body.required_service_date || body.desired_date || '';
-    delete body.desired_date;
+    body.desired_date = body.required_service_date;
     for (const field of ['required_service_date', 'checkout_date', 'inspection_date', 'move_in_date']) {
       if (body[field] && !validDate(body[field])) return json({ error: 'Please enter a valid date', field: field === 'required_service_date' ? 'desired_date' : field }, 400);
       body[field] ||= '';
     }
     body.enquiry_type = body.route === 'commercial' && ['property', 'agency'].includes(body.buyer) ? 'property' : body.route;
-    body.property_type ||= body.route;
     // The existing receiver maps Enquiry Notes from details. Append new context there too.
     body.details = [body.details, ...[
       ['Service', body.service], ['Address', body.address], ['Area', body.area], ['Size', body.size],
@@ -164,6 +163,7 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
   body.timestamp = new Date().toISOString();
   // Correlation only: a UUID does not provide durable delivery or replay protection.
   body.submission_id = crypto.randomUUID();
+  if (kind === 'quote') body.details += `\nSubmission reference: ${body.submission_id}\nReceived: ${body.timestamp}`;
 
   if (isNonProductionRequest(request)) return previewResponse();
   // Contact intentionally retains QUICK_FORM_WEBHOOK until a separate receiver is configured.
