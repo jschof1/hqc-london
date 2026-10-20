@@ -181,7 +181,11 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
     const text = await response.text();
     let result;
     try { result = JSON.parse(text); } catch { /* Some receivers acknowledge with plain text or an empty 2xx. */ }
-    if (signal.aborted || result?.ok === false || result?.success === false || result?.accepted === false || result?.error) throw new Error();
+    const status = result?.statusCode ?? result?.status;
+    const errors = result?.errors;
+    const hasErrors = errors && (typeof errors !== 'object' || Object.keys(errors).length > 0);
+    if (signal.aborted || result?.ok === false || result?.success === false || result?.accepted === false || result?.error
+      || hasErrors || Number(status) >= 400 || /^(error|failed|failure|rejected)$/i.test(String(status))) throw new Error();
     return json({ ok: true, submission_id: body.submission_id }, 200);
   } catch {
     // Provider errors, URLs and customer data must not enter responses or logs. Never retry automatically.

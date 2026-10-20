@@ -189,6 +189,10 @@ test('provider HTTP failures, negative JSON and network/redirect errors return s
   const providers = [
     () => Response.json({ success: false }), () => Response.json({ accepted: false }),
     () => Response.json({ error: 'private customer at secret receiver' }),
+    () => Response.json({ statusCode: 422, message: ['Invalid field value'] }),
+    () => Response.json({ status: 'error', message: 'Submission rejected' }),
+    () => Response.json({ status: 'failed' }),
+    () => Response.json({ errors: ['Submission rejected'] }),
     () => new Response('private receiver error', { status: 500 }),
     () => new Response(null, { status: 302, headers: { Location: 'https://other.example.test' } }),
     () => { throw new TypeError('redirect or network failure https://receiver.example.test/private-token'); },
