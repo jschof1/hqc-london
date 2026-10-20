@@ -1,0 +1,39 @@
+Base: main 61bb2eb
+Command: node --test scripts/verify-form-submission.test.mjs
+Expected: application-negative HTTP 200 becomes HTTP 502
+Exit code: 1
+
+TAP version 13
+# Subtest: HTTP 200 with application rejection must return 502, never form success
+not ok 1 - HTTP 200 with application rejection must return 502, never form success
+  ---
+  duration_ms: 26.910083
+  location: '/Users/jack/.t3/worktrees/hqc-london/t3-288ec16b/scripts/verify-form-submission.test.mjs:35:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    200 !== 502
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 502
+  actual: 200
+  operator: 'strictEqual'
+  stack: |-
+    file:///Users/jack/.t3/worktrees/hqc-london/t3-288ec16b/scripts/verify-form-submission.test.mjs:42:12
+    process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    async withProvider (file:///Users/jack/.t3/worktrees/hqc-london/t3-288ec16b/scripts/verify-form-submission.test.mjs:32:9)
+    async TestContext.<anonymous> (file:///Users/jack/.t3/worktrees/hqc-london/t3-288ec16b/scripts/verify-form-submission.test.mjs:37:3)
+    async Test.run (node:internal/test_runner/test:797:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 842.238291

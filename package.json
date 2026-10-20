@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/inject-location-sitemap.mjs",
-    "test:forms": "node scripts/verify-form-routing.mjs",
+    "test:forms": "node scripts/verify-form-routing.mjs && node --test scripts/verify-form-submission.test.mjs",
     "test:analytics": "node --test scripts/verify-posthog.test.mjs",
     "preview": "astro preview",
     "astro": "astro",
