@@ -332,9 +332,6 @@ import HeroSection from '../components/HeroSection.astro';
 
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-            
-            data.source = 'contact_page';
-            data.timestamp = new Date().toISOString();
 
             try {
               const response = await fetch('/api/quick-form/', {
@@ -346,7 +343,7 @@ import HeroSection from '../components/HeroSection.astro';
               });
 
               const result = await response.json().catch(() => null);
-              if (!response.ok) throw new Error('Submission failed');
+              if (!response.ok || result?.ok !== true) throw new Error('Submission failed');
 
               if (result?.preview === true) {
                 document.getElementById('contact-preview-status')?.classList.remove('hidden');
@@ -365,8 +362,7 @@ import HeroSection from '../components/HeroSection.astro';
               successMessage.classList.remove('hidden');
               successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } catch (error) {
-              console.error('Error submitting form:', error);
-              alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
+              alert('We could not confirm receipt. Please call 0208 870 3925 before submitting again.');
               
               if (submitBtn) {
                 submitBtn.disabled = false;

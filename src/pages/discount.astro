@@ -215,9 +215,6 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
       const data = Object.fromEntries(formData.entries());
 
       data.type = normalizeDiscountType(data.type);
-      data.source = 'discount_page';
-      data.tag = 'discount offer';
-      data.timestamp = new Date().toISOString();
 
       try {
         const response = await fetch('/api/discount/', {
@@ -226,18 +223,24 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
           body: JSON.stringify(data),
         });
 
-        if (response.ok) {
+        const result = await response.json().catch(() => null);
+        if (!response.ok || result?.ok !== true) throw new Error('Submission failed');
+        if (result.preview === true) {
+          alert('This preview does not send enquiries. Your form was not sent.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Claim My 30% Rate <i class="fas fa-arrow-right text-sm"></i>';
+          return;
+        }
+
+        if (result.ok === true) {
           window.posthog?.capture('discount_claim_submitted', {
             service_type: data.type,
           });
           formContent.classList.add('hidden');
           successContent.classList.remove('hidden');
-        } else {
-          throw new Error('Submission failed');
         }
       } catch (error) {
-        console.error('Error submitting discount request:', error);
-        alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
+        alert('We could not confirm receipt. Please call 0208 870 3925 before submitting again.');
 
         if (submitBtn) {
           submitBtn.disabled = false;

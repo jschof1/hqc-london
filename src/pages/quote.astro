@@ -390,9 +390,6 @@ const propertyTypes = [
 
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
-      
-      data.source = 'website_detailed_quote_page';
-      data.timestamp = new Date().toISOString();
 
       try {
         const response = await fetch('/api/quote/', {
@@ -403,7 +400,16 @@ const propertyTypes = [
           body: JSON.stringify(data),
         });
 
-        if (response.ok) {
+        const result = await response.json().catch(() => null);
+        if (!response.ok || result?.ok !== true) throw new Error('Submission failed');
+        if (result.preview === true) {
+          alert('This preview does not send enquiries. Your form was not sent.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Get My Bespoke Quote';
+          return;
+        }
+
+        if (result.ok === true) {
           window.posthog?.capture('quote_submitted', {
             quote_flow: 'detailed',
             service: data.service,
@@ -415,12 +421,9 @@ const propertyTypes = [
           progressContainer.classList.add('hidden');
           successStep.classList.remove('hidden');
           window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-          throw new Error('Submission failed');
         }
       } catch (error) {
-        console.error('Error submitting quote:', error);
-        alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
+        alert('We could not confirm receipt. Please call 0208 870 3925 before submitting again.');
         submitBtn.disabled = false;
         submitBtn.innerHTML = 'Get My Bespoke Quote';
       }

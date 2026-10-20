@@ -48,6 +48,8 @@ const connectedForms = [
 for (const [path, endpoint, fields] of connectedForms) {
   const sourceText = await read(path);
   expect(sourceText.includes(`fetch('${endpoint}'`), `${path} must fetch ${endpoint}`);
+  expect(/(?:result|responseBody)\?\.ok !== true/.test(sourceText), `${path} must require explicit form acceptance`);
+  expect(/(?:result|responseBody)(?:\?)?\.preview === true/.test(sourceText), `${path} must distinguish preview submissions before success tracking`);
   for (const field of fields) {
     expect(sourceText.includes(`name="${field}"`), `${path} is missing expected CRM field ${field}`);
   }
@@ -65,19 +67,31 @@ const main = await read('src/scripts/main.js');
 for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home'", "payload.type === 'commercial'", "CustomEvent('hqc:conversion'", '0208 870 3925']) {
   expect(main.includes(required), `Shared form handler is missing: ${required}`);
 }
+expect(main.includes('result?.ok !== true'), 'Shared frontend must require explicit form acceptance');
+expect(main.includes('result.preview === true'), 'Shared frontend must handle preview without resetting or tracking');
 
+const handler = await read('src/lib/form-submission.ts');
 const apiBindings = [
-  ['src/pages/api/quick-form.ts', 'QUICK_FORM_WEBHOOK'],
-  ['src/pages/api/quote.ts', 'QUOTE_FORM_WEBHOOK'],
-  ['src/pages/api/discount.ts', 'DISCOUNT_FORM_WEBHOOK'],
-  ['src/pages/api/feedback.ts', 'FEEDBACK_WEBHOOK'],
+  ['quick-form', 'QUICK_FORM_WEBHOOK'],
+  ['quote', 'QUOTE_FORM_WEBHOOK'],
+  ['discount', 'DISCOUNT_FORM_WEBHOOK'],
+  ['feedback', 'FEEDBACK_WEBHOOK'],
 ];
-for (const [path, binding] of apiBindings) {
+for (const [kind, binding] of apiBindings) {
+  const path = `src/pages/api/${kind}.ts`;
   const sourceText = await read(path);
-  expect(sourceText.includes(binding), `${path} must use ${binding}`);
-  expect(sourceText.includes('body: JSON.stringify(body)'), `${path} must preserve the submitted JSON payload`);
-  expect(sourceText.includes("isNonProductionRequest(request)"), `${path} must block webhook delivery from local and Pages preview hosts`);
+  expect(sourceText.includes("import { submitForm } from '../../lib/form-submission'"), `${path} must use the shared intake boundary`);
+  expect(sourceText.includes(`, '${kind}')`), `${path} must pass its own form kind`);
+  expect(!sourceText.includes('fetch(') && !sourceText.includes('request.json('), `${path} must remain a thin route`);
+  expect(handler.includes(binding), `Shared handler must select ${binding}`);
 }
+for (const contract of ['request.body?.getReader()', 'MAX_BYTES', 'required_service_date',
+  'delete body.desired_date', 'body.form_type =', 'body.submission_id = crypto.randomUUID()',
+  "isNonProductionRequest(request)", 'AbortSignal.timeout(10_000)', "redirect: 'error'",
+  'result?.ok === false', 'result?.success === false']) {
+  expect(handler.includes(contract), `Shared intake boundary is missing ${contract}`);
+}
+expect(!handler.includes('CONTACT_FORM_WEBHOOK'), 'Contact must retain the existing receiver until a separate receiver is configured');
 
 const previewGuard = await read('src/lib/preview.ts');
 expect(previewGuard.includes("hostname.endsWith('.pages.dev')"), 'Preview guard must recognise Cloudflare Pages preview hosts');

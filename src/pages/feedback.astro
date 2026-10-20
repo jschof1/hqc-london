@@ -226,9 +226,6 @@ const description = "We value your feedback. Please let us know about your exper
 
       const formData = new FormData(feedbackForm);
       const data = Object.fromEntries(formData.entries());
-      
-      data.source = 'feedback_page';
-      data.timestamp = new Date().toISOString();
 
       try {
         const response = await fetch('/api/feedback/', {
@@ -237,18 +234,24 @@ const description = "We value your feedback. Please let us know about your exper
           body: JSON.stringify(data),
         });
 
-        if (response.ok) {
+        const result = await response.json().catch(() => null);
+        if (!response.ok || result?.ok !== true) throw new Error('Submission failed');
+        if (result.preview === true) {
+          alert('This preview does not send enquiries. Your form was not sent.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send Private Feedback';
+          return;
+        }
+
+        if (result.ok === true) {
           window.posthog?.capture('feedback_submitted', {
             rating: data.rating,
           });
           feedbackStep.classList.add('hidden');
           successStep.classList.remove('hidden');
-        } else {
-          throw new Error('Submission failed');
         }
       } catch (error) {
-        console.error('Error submitting feedback:', error);
-        alert('Something went wrong. Please try again or contact us directly.');
+        alert('We could not confirm receipt. Please contact us directly before submitting again.');
         
         if (submitBtn) {
           submitBtn.disabled = false;

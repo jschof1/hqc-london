@@ -266,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         payload.source = this.dataset.hqcSource || 'website_form';
         payload.page_url = window.location.href;
-        payload.timestamp = new Date().toISOString();
 
         try {
           const response = await fetch(endpoint, {
@@ -275,8 +274,19 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify(payload),
           });
 
-          if (!response.ok) {
+          const result = await response.json().catch(() => null);
+          if (!response.ok || result?.ok !== true) {
             throw new Error(`Submission failed with status ${response.status}`);
+          }
+
+          if (result.preview === true) {
+            status.classList.remove('text-red-700', 'text-green-700');
+            status.textContent = 'This preview does not send enquiries. Your form was not sent.';
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = originalButtonText || 'Submit';
+            }
+            return;
           }
 
           status.classList.remove('text-red-700');
@@ -294,10 +304,9 @@ document.addEventListener('DOMContentLoaded', function() {
             detail: { endpoint, source: payload.source },
           }));
         } catch (error) {
-          console.error('HQC form submission failed:', error);
           status.classList.remove('text-green-700');
           status.classList.add('text-red-700');
-          status.textContent = 'We could not send your enquiry. Please call 0208 870 3925 or email sales@highqualityclean.co.uk.';
+          status.textContent = 'We could not confirm receipt. Before submitting again, please call 0208 870 3925 or email sales@highqualityclean.co.uk.';
           if (submitButton) {
             submitButton.disabled = false;
             submitButton.textContent = originalButtonText || 'Submit';
