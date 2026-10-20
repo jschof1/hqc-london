@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-20T10:06:42.473785+00:00",
+  "reviewHead": "3c7b305b7d7f7759f418a95e6c54428b40b8faac",
+  "checks": {
+    "applicationBlobManifest": 280,
+    "applicationFilesChangedSince89cd449": 15,
+    "copyDataPageKeysRetained": 23,
+    "copyTextLeavesChanged": 4,
+    "faqDataUnchangedSinceInitialImport": true,
+    "readableFullSourceArchives": 9,
+    "originalAttachmentsRecoveredAndHashed": 8,
+    "priorGapRegisterRowsAndFieldsPreserved": 12,
+    "sentCsvHashesMatchRecordedProvenance": 2,
+    "localPacketLinksResolve": true,
+    "githubPagesCheckHeadMatches": true,
+    "gitDiffCheck": "pass"
+  },
+  "limits": [
+    "Documentation/source validation only. No product/runtime suite or browser rerun.",
+    "No new staging deployment requested. Push may invoke existing repository preview integrations.",
+    "Production, provider settings, legal values, artwork and client messages untouched."
+  ]
+}

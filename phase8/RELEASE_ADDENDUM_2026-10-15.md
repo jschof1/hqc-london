@@ -1,5 +1,7 @@
 # Phase 8 release addendum: HQC-P8-2026-10-15-R1
 
+> **20 October comparison:** [Current frozen-version comparison and recovery packet](REVIEW_PACKET_2026-10-20.md). Earlier dates, test results and follow-up triggers below remain historical. No new acceptance or release is recorded.
+
 15 October 2026. This is the cumulative review packet requested after Pedro's email today. It extends the existing release/audit records and the registers actually sent on 14 October. It does not establish HQC acceptance or production authority.
 
 ## Controlled version references

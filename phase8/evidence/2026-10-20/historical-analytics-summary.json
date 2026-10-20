@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-06T11:01:48.407704+00:00",
+  "status": "staging_analytics_verified_production_held",
+  "commit": "89cd449d647771dc30ba11c3d7b6d32afffa6a7b",
+  "deployment": "b14c9948-7b64-42c2-97fc-004a49174681",
+  "preview": "https://phase8-2026-09-28-staging.hqc-london.pages.dev/",
+  "productionCommit": "41903fbb90cf1c0c396d8ac68075a05a993cca79",
+  "productionDeployment": "242f9c4f-ce9a-4e3e-944e-ad99eb2665bc",
+  "tests": {
+    "analyticsBrowser": 27,
+    "phase8Browser": 55,
+    "runtimeGroups": 12,
+    "build": "pass",
+    "formStructure": "pass"
+  },
+  "provider": {
+    "productionGoals": 23,
+    "stagingGoals": 24,
+    "stagingPageviews": 5,
+    "stagingFormStarts": 4,
+    "stagingAbandonment": 4,
+    "abandonmentReasons": {
+      "page_exit": 3,
+      "route_changed": 1
+    },
+    "finalJourneyDelta": {
+      "property_route_changed": 1,
+      "commercial_page_exit": 1
+    },
+    "productionPageviews": 0,
+    "productionEvents": 0
+  },
+  "limits": [
+    "No real form submission, booking, payment or customer communication",
+    "CE 2.0 has goal/property comparisons; ordered funnels unavailable",
+    "Query parameters omitted; campaign attribution not claimed",
+    "Page-exit events remain best effort",
+    "Production release requires separate acceptance and approval"
+  ],
+  "recordMeaning": "Historical 6 October checkpoint only. Production counters and production revision are historical, not a current-production readback.",
+  "sourceRecordSha256": "237354afec371d8c1714170d7bb29ac414ac63993d7298820caf6f12df17f47b"
+}
