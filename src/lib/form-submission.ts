@@ -171,24 +171,33 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
   try {
     if (!webhookUrl || new URL(webhookUrl).protocol !== 'https:') throw new Error();
   } catch { return json({ error: 'This form is temporarily unavailable. Please contact HQC directly.' }, 503); }
+  let category = 'timeout_setup';
+  let providerStatus: number | null = null;
   try {
     const signal = AbortSignal.timeout(10_000);
+    category = 'fetch';
     const response = await fetch(webhookUrl, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body), redirect: 'error', signal,
     });
+    providerStatus = response.status;
+    category = 'http';
     if (!response.ok) throw new Error();
+    category = 'body';
     const text = await response.text();
     let result;
     try { result = JSON.parse(text); } catch { /* Some receivers acknowledge with plain text or an empty 2xx. */ }
     const status = result?.statusCode ?? result?.status;
     const errors = result?.errors;
     const hasErrors = errors && (typeof errors !== 'object' || Object.keys(errors).length > 0);
+    category = 'rejected';
     if (signal.aborted || result?.ok === false || result?.success === false || result?.accepted === false || result?.error
       || hasErrors || Number(status) >= 400 || /^(error|failed|failure|rejected)$/i.test(String(status))) throw new Error();
     return json({ ok: true, submission_id: body.submission_id }, 200);
   } catch {
-    // Provider errors, URLs and customer data must not enter responses or logs. Never retry automatically.
+    // Only bounded categories/statuses enter logs; never URLs, payloads or provider error text.
+    console.error('HQC form delivery failed', { form: kind, category, provider_status: providerStatus });
+    // Never retry automatically: a failed acknowledgement may still have delivered the request.
     return json({ error: 'We could not confirm receipt. Please contact HQC before submitting again.' }, 502);
   }
 }

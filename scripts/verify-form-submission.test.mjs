@@ -185,7 +185,7 @@ test('missing or invalid receiver fails closed and does not leak configuration',
   assert.equal(response.status, 503);
 }));
 
-test('provider HTTP failures, negative JSON and network/redirect errors return sanitized 502 once', async () => {
+test('provider failures return sanitized 502 once and log only a bounded diagnostic', async () => {
   const providers = [
     () => Response.json({ success: false }), () => Response.json({ accepted: false }),
     () => Response.json({ error: 'private customer at secret receiver' }),
@@ -211,7 +211,16 @@ test('provider HTTP failures, negative JSON and network/redirect errors return s
         assert.equal(calls, 1);
       });
     }
-    assert.equal(logs.length, 0);
+    assert.equal(logs.length, providers.length);
+    for (const entry of logs) {
+      assert.equal(entry[0], 'HQC form delivery failed');
+      assert.deepEqual(Object.keys(entry[1]).sort(), ['category', 'form', 'provider_status']);
+      assert.equal(entry[1].form, 'quote');
+      assert.ok(['fetch', 'http', 'body', 'rejected'].includes(entry[1].category));
+      assert.doesNotMatch(JSON.stringify(entry), /private|secret|receiver\.example|intake@example/);
+    }
+    assert.equal(logs[7][1].provider_status, 500);
+    assert.equal(logs[9][1].category, 'fetch');
   } finally { console.error = originalError; }
 });
 
