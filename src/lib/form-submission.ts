@@ -178,7 +178,8 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
     category = 'fetch';
     const response = await fetch(webhookUrl, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body), redirect: 'error', signal,
+      // workerd supports manual/follow; a 3xx fails the response.ok check below.
+      body: JSON.stringify(body), redirect: 'manual', signal,
     });
     providerStatus = response.status;
     category = 'http';

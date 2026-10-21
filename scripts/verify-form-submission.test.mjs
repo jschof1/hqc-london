@@ -78,7 +78,7 @@ test('current routed quote maps dates, legacy notes and server-owned metadata', 
   const { payload, signal, redirect, method, url } = calls[0];
   assert.equal(url, env.QUOTE_FORM_WEBHOOK);
   assert.equal(method, 'POST');
-  assert.equal(redirect, 'error');
+  assert.equal(redirect, 'manual');
   assert.ok(signal instanceof AbortSignal);
   assert.equal(payload.required_service_date, '2026-11-03');
   assert.equal(payload.checkout_date, '2026-11-02');

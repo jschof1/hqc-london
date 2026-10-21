@@ -87,7 +87,7 @@ for (const [kind, binding] of apiBindings) {
 }
 for (const contract of ['request.body?.getReader()', 'MAX_BYTES', 'required_service_date',
   'body.form_type =', 'body.submission_id = crypto.randomUUID()',
-  "isNonProductionRequest(request)", 'AbortSignal.timeout(10_000)', "redirect: 'error'",
+  "isNonProductionRequest(request)", 'AbortSignal.timeout(10_000)', "redirect: 'manual'",
   'result?.ok === false', 'result?.success === false']) {
   expect(handler.includes(contract), `Shared intake boundary is missing ${contract}`);
 }
