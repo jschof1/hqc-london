@@ -91,5 +91,109 @@
     "No automatic customer acknowledgement, nurture or review send is part of these two new workflows",
     "No booking payment or client adoption outcome is inferred from isolated tests"
   ],
-  "privateEvidence": "Raw provider snapshots, payloads and receiver URLs retained outside repository; no customer data included here"
+  "privateEvidence": "Raw provider snapshots, payloads and receiver URLs retained outside repository; no customer data included here",
+  "taggingExtension": {
+    "verifiedAt": "2026-10-21T11:36:02.751Z",
+    "implementationRevision": "254b63d4015bdc9c6566124745339f8fa5570f0a",
+    "productionDeployment": "6534896c-13a5-43b1-9a6a-24dc25a66eab",
+    "intakePublishedVersion": 21,
+    "tagDefinitions": 22,
+    "semantics": "Additive contact enquiry history; current stage and dated tasks are separate",
+    "classification": "Server-owned fixed aliases and route membership; unknown or conflicting services unconfirmed; client tag fields discarded",
+    "nativeCsvTagsStoredSeparately": true,
+    "publishedWorkflowTriggersInspected": 24,
+    "legacyTagTriggersMatchNewNamespace": false,
+    "livePublicCases": [
+      {
+        "formCase": "quote",
+        "httpStatus": 200,
+        "submissionId": "499d54cb-ff12-412e-9200-ecfed27d698b"
+      },
+      {
+        "formCase": "contact",
+        "httpStatus": 200,
+        "submissionId": "a97e494b-53b1-4560-893b-9737f6892b5b"
+      },
+      {
+        "formCase": "feedback",
+        "httpStatus": 200,
+        "submissionId": "630d405b-043f-4283-a5a4-ce09e5f72537"
+      },
+      {
+        "formCase": "quick",
+        "httpStatus": 200,
+        "submissionId": "04ec926a-15da-4b64-a155-07533068b6ba"
+      },
+      {
+        "formCase": "discount",
+        "httpStatus": 200,
+        "submissionId": "725dcd67-06d1-4e14-a9a0-67c4fa0eb2b0"
+      },
+      {
+        "formCase": "conflict",
+        "httpStatus": 200,
+        "submissionId": "b7aec96e-b60b-4061-8ad8-62d811ddec19"
+      }
+    ],
+    "contactFeedbackTagsAndDealCountUnchanged": true,
+    "sequentialRepeatsPreserveExistingDealAndOwner": true,
+    "cleanup": {
+      "at": "2026-10-21T11:36:02.751Z",
+      "baselineOpportunitiesPreserved": 47,
+      "syntheticOpportunityRemoved": 1,
+      "syntheticTasksCompleted": 7,
+      "notesRetainedForAudit": 7,
+      "fixturePhoneTagsRestored": true,
+      "dnd": true,
+      "externalMessagesBefore": 0,
+      "externalMessagesAfter": 0,
+      "otherWorkflowsUnchanged": true,
+      "pipelinesUnchanged": true,
+      "intakeVersion": 21
+    },
+    "tests": {
+      "submission": 34,
+      "worker": 1,
+      "analyticsOnClassificationChange": 7,
+      "routing": "PASS",
+      "build": "PASS",
+      "routeConfidenceRegressions": "Failed before; passed after"
+    },
+    "savedLists": [
+      {
+        "name": "HQC - Website enquiries",
+        "id": "LTVmRgPF1fsueUkginAR",
+        "andTags": [
+          "hqc - source - website"
+        ],
+        "excludeTag": "hqc-isolated-sales-test",
+        "sharedWith": "all location users",
+        "freshReadback": true
+      },
+      {
+        "name": "HQC - Residential interest",
+        "id": "wsB9uMncJ2qAUBp15Qjh",
+        "andTags": [
+          "hqc - source - website",
+          "hqc - type - residential"
+        ],
+        "excludeTag": "hqc-isolated-sales-test",
+        "sharedWith": "all location users",
+        "freshReadback": true
+      },
+      {
+        "name": "HQC - Commercial interest",
+        "id": "eqWaJLFukACniVCBkXhT",
+        "andTags": [
+          "hqc - source - website",
+          "hqc - type - commercial"
+        ],
+        "excludeTag": "hqc-isolated-sales-test",
+        "sharedWith": "all location users",
+        "freshReadback": true
+      }
+    ],
+    "guideSnapshot": "21 October 2026, 13:00 BST",
+    "guideVisuallyInspectedPages": 2
+  }
 }

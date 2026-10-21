@@ -2,8 +2,8 @@
   "pdf": "output/pdf/hqc-lead-management-preview/hqc-lead-management-guide-2026-10-21.pdf",
   "pages": 2,
   "format": "A4 portrait",
-  "sha256": "3d69325d4d6e2fa48fd8fc7d1041d9a1105a2d11c7ac8a6e6e328ba1645f8fee",
-  "snapshot": "21 October 2026, 01:45 BST",
+  "sha256": "f49e2bb288963521347198f6c2677251273a6098f64e3984871037c82ca0fd95",
+  "snapshot": "21 October 2026, 13:00 BST",
   "snapshot_source": "fresh GHL UI/API and isolated runtime verification by parent",
   "fonts": [
     "AAAAAA+Arial-BoldMT",
@@ -12,7 +12,7 @@
     "Helvetica"
   ],
   "body_font_size_pt": "10.3-11.1",
-  "layout_boxes_checked": 70,
+  "layout_boxes_checked": 66,
   "text_bounds": "PASS",
   "text_overlap": "PASS",
   "required_wording": "PASS",
@@ -32,6 +32,5 @@
       ]
     }
   ],
-  "visual_inspection": "PASS - both final pages inspected at 150 dpi by parent",
-  "reproducibility": "PASS - regeneration produces identical PDF SHA-256"
+  "visual_inspection": "Required separately using view_image on both rendered pages"
 }

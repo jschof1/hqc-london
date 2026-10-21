@@ -50,10 +50,11 @@ Workflow `57dd228b-68a0-46eb-8203-dccdbdce19d0`,
 2. Save the enquiry in a contact note, including source, dates and form details.
 3. Create a same-day review/response task assigned to Pedro.
 4. Allow only `quote`, `quick-form` and `discount` into the sales branch.
-5. Format today's date as ISO; create a Lead Management / New Lead opportunity
+5. Apply the server-owned source, type and service classification tags.
+6. Format today's date as ISO; create a Lead Management / New Lead opportunity
    with next-action text and date. Native duplicate protection remains enabled.
-6. Wait one minute for the new opportunity to become searchable.
-7. Find the most recent open Lead Management opportunity and assign Pedro only
+7. Wait one minute for the new opportunity to become searchable.
+8. Find the most recent open Lead Management opportunity and assign Pedro only
    when it has no owner. Preserve existing owners and progress.
 
 Contact messages and private feedback stop after the note and task; they do not
@@ -155,3 +156,68 @@ Customer message history is unchanged.
 Private raw payloads, receiver URLs and provider snapshots are stored outside
 the repository. They must not be committed. The Pedro PDF contains no customer
 data, credentials or provider identifiers.
+
+
+## Automatic classification extension - 21 October, midday
+
+Website code `254b63d4015bdc9c6566124745339f8fa5570f0a` was pushed to main
+and read back on successful Cloudflare deployment
+`6534896c-13a5-43b1-9a6a-24dc25a66eab`. The intake is published v21.
+Its dynamic Add Contact Tag action runs inside the sales-only branch, before
+opportunity creation, using the inbound `classification_tags` CSV. Native GHL
+storage was read back as separate tag names, rather than one comma-containing tag.
+
+Classification is computed after input normalization from fixed service aliases
+and route membership. Submitted tag fields are discarded. Unknown or conflicting
+route/service pairs are unconfirmed; no free-text inference is used. Existing
+HTTP acceptance/rejection behavior and webhook bindings are unchanged.
+
+The 22 new tag definitions use the `hqc - ` namespace:
+
+- Source: website; discount offer (discount enquiries also retain website).
+- Type: residential, commercial, property, complex or unconfirmed.
+- Service: regular cleaning, signature cleaning, wellness, deep clean, move in,
+  end of tenancy, post construction, office, commercial, communal, property
+  portfolio, airbnb, move in out, assessment or unconfirmed.
+
+These are additive contact enquiry history. Multiple type or service tags can
+coexist after repeat enquiries. Use the latest Note and current opportunity for
+current intent/progress, and a dated Task for follow-up. No stage tags were added.
+Historical contacts have not been retagged or migrated.
+
+Three saved Contacts > Smart Lists use AND filters, exclude
+`hqc-isolated-sales-test`, and are available to Pedro:
+
+| List | Required history tags |
+| --- | --- |
+| HQC - Website enquiries | hqc - source - website |
+| HQC - Residential interest | Website plus hqc - type - residential |
+| HQC - Commercial interest | Website plus hqc - type - commercial |
+
+All 24 published workflow trigger graphs were inspected. The existing tag-triggered
+workflows require specific legacy stage/customer tags; the new namespace does not
+match those triggers. Legacy definitions were preserved. Customer contact and
+review sending remain manual.
+
+Six public submissions on the reserved DND fixture verified residential quote,
+commercial quick form, discount, contact, feedback and conflicting route/service.
+The first three stored expected classifications; contact and feedback added
+Notes/Tasks without sales tags or deals. The conflict added unconfirmed tags.
+Sequential sales repeats retained the existing open opportunity and Pedro owner.
+The fixture's complete message history showed zero external messages before and
+after the run; only opportunity activity records were added.
+
+Cleanup completed seven synthetic tasks, removed the one newly created synthetic
+deal, restored the fixture phone and tags, retained seven audit notes, and verified
+all 47 baseline opportunities plus every pipeline and other workflow unchanged.
+No real customer records were used for the submissions.
+
+Local validation: 34 submission tests, one real Cloudflare worker test, form
+routing verification, seven analytics tests on the classification change, build
+and whitespace checks passed. The independent review's route-confidence P2 was
+reproduced before fixing and covered by regression tests.
+
+The refreshed two-page guide includes the tag examples, saved-list names, daily
+routine and unchanged human stage checks. Pedro's first genuine enquiry response
+and recorded follow-up remain the business outcome gate; Jack owns the handover.
+The guide is prepared for review and has not been sent to Pedro.

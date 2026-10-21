@@ -60,8 +60,8 @@ RULE = HexColor("#dddcd4")
 WIDTH, HEIGHT = A4
 MARGIN = 44
 CONTENT = WIDTH - 2 * MARGIN
-STATUS = "Live capture · human stage checks"
-SNAPSHOT = "21 October 2026, 01:45 BST"
+STATUS = "Five stages live · automatic enquiry tags"
+SNAPSHOT = "21 October 2026, 13:00 BST"
 
 STAGES = [
     ("New Lead", "New Lead", "A new enquiry needs attention. Check the details and record who will follow up."),
@@ -72,20 +72,15 @@ STAGES = [
 ]
 
 ROUTINE = [
-    ("Review new enquiries", "Open new enquiry tasks and read the latest contact note."),
-    ("Contact the lead", "Call or send a personal message; log the attempt."),
-    ("Record the outcome", "Note the response, booking decision or reason it did not proceed."),
-    ("Set the next follow-up", "Give each open enquiry a next action and a date."),
-    ("Check upcoming bookings", "Confirm dates, access details and anything still needed."),
-    ("Check completed, paid jobs", "Request a review only after service is completed and full payment is confirmed. Record the send."),
+    ("Review new enquiries", "Read the latest contact note and open your assigned task."),
+    ("Contact and record", "Call or personally message the lead. Log the attempt and move to Contacted."),
+    ("Set the next action", "Add a dated follow-up task. Move to Scheduled when the customer confirms the booking."),
+    ("After the job", "Confirm full payment. Request a review only after completed service, then record the actual send."),
 ]
 
-# Fresh provider UI/API readback and reserved-fixture public website checks.
 SETUP = [
-    ("Website", "Sales forms create leads; contact messages and feedback stay in Notes and Tasks."),
-    ("Board", "All five stages are live. Move cards when the stage definition is true."),
     ("Automation", "Every receipt creates Pedro's task. Paid creates a completion-check task."),
-    ("Verification", "Five website form types checked in GHL. Customer contact and review sending are manual. No customer message has been sent during setup."),
+    ("Verification", "Five website form types checked in GHL. No customer message has been sent during setup."),
 ]
 
 LAYOUT_CHECKS: list[dict] = []
@@ -225,29 +220,42 @@ def page_two(c):
               MARGIN+12, 155, CONTENT-24, size=10.5, leading=14,
               colour=NAVY, max_height=29)
 
-    top = 213
+    top = 201
     for i, (title, action) in enumerate(ROUTINE):
         number(c, str(i+1), MARGIN, top+1, 20, filled=False)
         paragraph(c, title, 76, top, CONTENT-32, size=11.1, leading=14,
                   font="BodyBold", colour=NAVY, max_height=15)
         paragraph(c, action, 76, top+16, CONTENT-32, size=10.5, leading=14,
                   colour=SLATE, max_height=29)
-        top += 35 if i < 5 else 49
+        top += 45
 
-    rect(c, MARGIN, 457, CONTENT, 65, white, radius=5, stroke=RULE)
+    rect(c, MARGIN, 388, CONTENT, 96, white, radius=5, stroke=RULE)
+    paragraph(c, "Find the right enquiry with tags", MARGIN+12, 399, CONTENT-24,
+              size=15, leading=19, font="Display", colour=MIDNIGHT, max_height=20)
+    chip_gap = 8
+    chip_width = (CONTENT-24-2*chip_gap)/3
+    for i, label in enumerate(["Source: Website", "Type: Residential", "Service: Deep clean"]):
+        x = MARGIN+12+i*(chip_width+chip_gap)
+        rect(c, x, 427, chip_width, 20, MIST, radius=4)
+        paragraph(c, label, x+5, 432, chip_width-10, size=9.2, leading=11,
+                  font="BodyBold", colour=NAVY, max_height=12, align=TA_CENTER)
+    paragraph(c, "Source, type and service tags are automatic enquiry history. Tags accumulate on repeat enquiries; the board and latest Note show current progress.",
+              MARGIN+12, 454, CONTENT-24, size=10.1, leading=13, colour=SLATE, max_height=27)
+    paragraph(c, "<b>Contacts &gt; Smart Lists:</b> HQC - Website enquiries, HQC - Residential interest and HQC - Commercial interest. New sales enquiries appear as they arrive; historical contacts have not been retagged.",
+              MARGIN, 498, CONTENT, size=10.3, leading=14, colour=SLATE, max_height=43)
+
+    rect(c, MARGIN, 552, CONTENT, 56, white, radius=5, stroke=RULE)
     paragraph(c, "<b>Lost or abandoned?</b> Use the deal status and record a short reason; keep the five stages.",
-              MARGIN+12, 468, CONTENT-24, size=10.3, leading=14, max_height=29)
-    paragraph(c, "<b>Repeated enquiry?</b> Review the existing deal or closed history before reopening.",
-              MARGIN+12, 497, CONTENT-24, size=10.3, leading=14, max_height=15)
+              MARGIN+12, 560, CONTENT-24, size=10.3, leading=14, max_height=29)
+    paragraph(c, "<b>Repeated enquiry?</b> Read the latest Note and review the existing deal before reopening.",
+              MARGIN+12, 590, CONTENT-24, size=10.1, leading=13, max_height=14)
 
-    rect(c, MARGIN, 543, CONTENT, 232, NAVY, radius=7)
-    paragraph(c, "Where setup stands", MARGIN+16, 559, CONTENT-32,
+    rect(c, MARGIN, 624, CONTENT, 151, NAVY, radius=7)
+    paragraph(c, "Where setup stands", MARGIN+16, 638, CONTENT-32,
               size=18, leading=23, font="Display", colour=white, max_height=24)
-    paragraph(c, f"{STATUS}  |  {SNAPSHOT}", MARGIN+16, 589, CONTENT-32,
-              size=8.8, leading=12, colour=HexColor("#e2d3ba"), max_height=13)
-    row_tops = [616, 650, 684, 721]
-    row_heights = [29, 29, 29, 42]
-    for (label, description), top, height in zip(SETUP, row_tops, row_heights):
+    paragraph(c, f"{STATUS}  |  {SNAPSHOT}", MARGIN+16, 667, CONTENT-32,
+              size=8.5, leading=11, colour=HexColor("#e2d3ba"), max_height=12)
+    for (label, description), top, height in zip(SETUP, [692, 731], [29, 29]):
         paragraph(c, label, MARGIN+16, top, 85, size=10.2, leading=13.5,
                   font="BodyBold", colour=GOLD, max_height=15)
         paragraph(c, description, MARGIN+107, top, CONTENT-123,
@@ -292,9 +300,9 @@ def validate(pngs: list[Path]) -> dict:
                          "Full payment has been received and confirmed", "A deposit does not count",
                          "an automatic form reply does not count", "a requested service date does not count",
                          "a review request has actually been sent", "Repeated enquiry?",
-                         "Lost or abandoned?", "All five stages are live", "Every receipt creates Pedro",
+                         "Lost or abandoned?", "automatic enquiry tags", "Every receipt creates Pedro",
                          "Paid creates a completion-check task", "Five website form types checked in GHL",
-                         "No customer message has been sent", SNAPSHOT]:
+                         "No customer message has been sent", "Tags accumulate on repeat enquiries", "HQC - Commercial interest", SNAPSHOT]:
             assert required in flattened, f"Missing required wording: {required}"
         for forbidden in ["59972c9", "webhook", "token", "pipeline ID", "exactly-once", "all live", "@", "07427"]:
             assert forbidden.lower() not in full_text.lower(), f"Unwanted detail: {forbidden}"
