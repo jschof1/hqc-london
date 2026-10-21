@@ -1,4 +1,5 @@
 import { isNonProductionRequest, previewResponse } from './preview';
+import { websiteEnquiryTags } from './enquiry-classification';
 
 type Environment = Record<string, string | undefined>;
 type FormKind = 'quote' | 'quick-form' | 'discount' | 'feedback';
@@ -160,6 +161,7 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
     body.enquiry_type = 'private_feedback';
   }
   body.form_type = contact ? 'contact' : kind;
+  body.classification_tags = websiteEnquiryTags(body).join(',');
   body.timestamp = new Date().toISOString();
   // Correlation only: a UUID does not provide durable delivery or replay protection.
   body.submission_id = crypto.randomUUID();

@@ -331,6 +331,227 @@ test('current quick forms allow missing phone and notes and retain their page so
   assert.equal(calls.at(-1).payload.enquiry_type, 'private_feedback');
 }));
 
+const classification = (type, service, discount = false) => [
+  'hqc - source - website', ...(discount ? ['hqc - source - discount offer'] : []),
+  `hqc - type - ${type}`, `hqc - service - ${service}`,
+].join(',');
+
+test('classification preserves every existing quote field and normalizes metadata before tagging', async () => capture(async calls => {
+  const input = { ...quote, service: '  Deep Clean™  ', buyer: 'home', service_context: 'deep-clean',
+    address: '1 Test Street', area: 'London', size: '800 sq ft', frequency: 'One-off',
+    desired_date: '2026-11-03', required_service_date: '2026-11-03', checkout_date: '2026-11-01',
+    inspection_date: '2026-11-02', move_in_date: '2026-11-04', operating_hours: 'Evenings',
+    mobilisation_requirements: 'Access arranged', tupe_context: 'Unknown', property_type: 'flat',
+    bedrooms: '2', bathrooms: '1', source_page: '/request-a-quote/', landing_page: '/deep-cleaning-london/',
+    referrer: 'https://example.test/', utm_source: 'test', utm_medium: 'paid', utm_campaign: 'test',
+    utm_content: 'test', utm_term: 'clean', utm_id: '123', intent: 'moving',
+    source: 'forged', form_type: 'contact', enquiry_type: 'complex',
+  };
+  assert.equal((await invoke('quote', input)).status, 200);
+  const { payload } = calls[0];
+  for (const [key, value] of Object.entries(input)) {
+    if (['details', 'source', 'form_type', 'enquiry_type'].includes(key)) continue;
+    assert.equal(payload[key], value.trim(), key);
+  }
+  assert.ok(payload.details.startsWith(quote.details));
+  assert.equal(payload.source, 'request_a_quote');
+  assert.equal(payload.form_type, 'quote');
+  assert.equal(payload.enquiry_type, 'residential');
+  assert.equal(payload.classification_tags, classification('residential', 'deep clean'));
+  assert.deepEqual(Object.keys(payload).sort(), [...new Set([...Object.keys(input),
+    'classification_tags', 'timestamp', 'submission_id',
+  ])].sort());
+}));
+
+test('current route aliases map to fixed service families without rewriting the submitted service', async () => capture(async calls => {
+  const aliases = {
+    residential: {
+      'regular cleaning': ['essential-clean', 'essential'], 'deep clean': ['deep-clean', 'deep-cleaning'],
+      'move in': ['move-in', 'move-in-cleaning'], 'end of tenancy': ['end-of-tenancy', 'end-of-tenancy-cleaning'],
+      'post construction': ['post-construction', 'post-construction-cleaning'],
+    },
+    commercial: {
+      office: ['office', 'office-cleaning'], commercial: ['commercial', 'commercial-cleaning'],
+      'deep clean': ['commercial-deep', 'commercial-deep-cleaning'],
+      communal: ['communal', 'communal-area', 'communal-area-cleaning'],
+      'property portfolio': ['portfolio'], 'move in out': ['void', 'move-in-void'],
+    },
+    complex: {
+      office: ['office'], 'deep clean': ['commercial-deep'], communal: ['communal'],
+      assessment: ['large-property', 'complex-property'], 'post construction': ['post-construction'],
+      'property portfolio': ['portfolio', 'multi-site'],
+    },
+  };
+  for (const [route, families] of Object.entries(aliases)) {
+    for (const [family, values] of Object.entries(families)) {
+      for (const alias of values) {
+        assert.equal((await invoke('quote', { ...quote, route, service: ` ${alias.toUpperCase()} `,
+          frequency: 'Weekly', operating_hours: 'Evenings', mobilisation_requirements: 'Next month',
+        })).status, 200);
+        const { payload } = calls.at(-1);
+        assert.equal(payload.classification_tags, classification(route, family));
+        assert.equal(payload.service, alias.toUpperCase());
+      }
+    }
+  }
+}));
+
+test('the pure helper excludes non-sales input and returns independent arrays without mutation', async () => {
+  const result = await build({ entryPoints: [new URL('../src/lib/enquiry-classification.ts', import.meta.url).pathname],
+    bundle: true, write: false, platform: 'node', format: 'esm',
+  });
+  const { websiteEnquiryTags } = await import(`data:text/javascript;base64,${Buffer.from(result.outputFiles[0].text).toString('base64')}`);
+  const body = Object.freeze({ form_type: 'quote', source: 'request_a_quote', enquiry_type: 'property', service: 'Office Cleaning', property_type: 'flat' });
+  const first = websiteEnquiryTags(body);
+  assert.equal(first.join(','), classification('property', 'office'));
+  first.push('modified return value');
+  assert.equal(websiteEnquiryTags(body).join(','), classification('property', 'office'));
+  for (const form_type of ['contact', 'feedback', 'unknown', '', '__proto__']) {
+    assert.deepEqual(websiteEnquiryTags(Object.freeze({ ...body, form_type })), []);
+  }
+});
+
+test('every current routed service forwards the declared enquiry type and a fixed service family', async () => capture(async calls => {
+  const services = {
+    residential: [
+      ['Essential Clean™ suitability', 'regular cleaning'], ['Deep Clean™', 'deep clean'],
+      ['Move-In Reset™', 'move in'], ['End of Tenancy™', 'end of tenancy'],
+      ['Post-Construction™', 'post construction'], ['Other residential requirement', 'assessment'],
+    ],
+    commercial: [
+      ['Office Cleaning', 'office'], ['Commercial Cleaning', 'commercial'],
+      ['Commercial Deep Cleaning', 'deep clean'], ['Communal Area Cleaning', 'communal'],
+      ['Agency or Portfolio Support', 'property portfolio'], ['Move-In and Void Property Cleaning', 'move in out'],
+      ['Other professional requirement', 'assessment'],
+    ],
+    complex: [
+      ['Large or Executive Property', 'assessment'], ['Office or Workplace Project', 'office'],
+      ['Commercial Deep-Clean Project', 'deep clean'], ['Communal Site Assessment', 'communal'],
+      ['Post-Construction Project', 'post construction'], ['Multi-Site or Portfolio Project', 'property portfolio'],
+      ['Other Complex Requirement', 'assessment'],
+    ],
+  };
+  const source = await readFile(new URL('../src/pages/request-a-quote.astro', import.meta.url), 'utf8');
+  const current = [...source.matchAll(/options: \[([^\]]+)\]/g)]
+    .flatMap(match => [...match[1].matchAll(/'([^']+)'/g)].map(value => value[1]));
+  assert.deepEqual(Object.values(services).flat().map(([service]) => service), current);
+  for (const [route, entries] of Object.entries(services)) {
+    for (const [service, family] of entries) {
+      assert.equal((await invoke('quote', { ...quote, route, service, property_type: 'flat',
+        frequency: 'Weekly', operating_hours: 'Evenings', mobilisation_requirements: 'Next month',
+      })).status, 200);
+      assert.equal(calls.at(-1).payload.classification_tags, classification(route, family), service);
+      assert.equal(calls.at(-1).payload.service, service);
+    }
+  }
+  for (const buyer of ['agency', 'property']) {
+    assert.equal((await invoke('quote', { ...quote, route: 'commercial', buyer, service: 'Office Cleaning',
+      property_type: 'flat', frequency: 'Weekly', operating_hours: 'Evenings', mobilisation_requirements: 'Next month',
+    })).status, 200);
+    assert.equal(calls.at(-1).payload.classification_tags, classification('property', 'office'));
+  }
+}));
+
+test('legacy service IDs retain distinct tiers and never turn office plus flat into residential', async () => capture(async calls => {
+  const services = [
+    ['signature', 'residential', 'signature cleaning'], ['essentials', 'residential', 'regular cleaning'],
+    ['wellclean', 'residential', 'wellness'], ['move-in-out', 'unconfirmed', 'move in out'],
+    ['airbnb', 'property', 'airbnb'], ['office', 'commercial', 'office'],
+    ['never-seen-before', 'unconfirmed', 'unconfirmed'],
+  ];
+  const source = await readFile(new URL('../src/pages/quote.astro', import.meta.url), 'utf8');
+  const current = [...source.match(/const services = \[([\s\S]*?)\];/)[1].matchAll(/id: "([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(services.slice(0, -1).map(([id]) => id), current);
+  for (const [service, type, family] of services) {
+    assert.equal((await invoke('quote', { name: quote.name, email: quote.email, phone: quote.phone, postcode: quote.postcode,
+      property_type: 'flat', frequency: 'weekly', service,
+    })).status, 200);
+    assert.equal(calls.at(-1).payload.classification_tags, classification(type, family), service);
+  }
+}));
+
+test('quick forms require agreeing building and service signals and never guess from an area or free text', async () => capture(async calls => {
+  const tiers = [['Essentials Clean™', 'regular cleaning'], ['Signature Clean™', 'signature cleaning'], ['WellClean™', 'wellness']];
+  for (const page of ['services', 'process', 'why-us']) {
+    const source = await readFile(new URL(`../src/pages/${page}.astro`, import.meta.url), 'utf8');
+    const selector = source.match(/<select[^>]*name="service"[^>]*>([\s\S]*?)<\/select>/)[1];
+    const current = [...selector.matchAll(/<option>([^<]+)<\/option>/g)].map(match => match[1]);
+    assert.deepEqual(tiers.map(([service]) => service), current);
+    for (const [service, family] of tiers) {
+      const body = { name: quote.name, email: quote.email, postcode: quote.postcode,
+        property_type: 'Apartment', service, privacy_consent: 'yes',
+      };
+      const req = request('quick-form', body);
+      req.headers.set('Referer', `https://highqualityclean.co.uk/${page}/`);
+      assert.equal((await invoke('quick-form', null, { request: req })).status, 200);
+      assert.equal(calls.at(-1).payload.classification_tags, classification('residential', family));
+    }
+  }
+  for (const [property_type, service, type, family] of [
+    ['flat', 'Office Cleaning', 'unconfirmed', 'office'],
+    ['Office', 'Office Cleaning', 'commercial', 'office'],
+    ['Commercial Property', 'commercial', 'commercial', 'commercial'],
+    ['Office', 'Essentials Clean™', 'unconfirmed', 'regular cleaning'],
+    ['Other', 'Signature Clean™', 'unconfirmed', 'signature cleaning'],
+    ['Modern Development', 'WellClean™', 'unconfirmed', 'wellness'],
+    ['Apartment', 'Office-looking unknown service', 'unconfirmed', 'unconfirmed'],
+    ['Mansion', '', 'unconfirmed', 'unconfirmed'],
+  ]) {
+    assert.equal((await invoke('quick-form', { name: quote.name, email: quote.email, postcode: quote.postcode,
+      property_type, service, area: 'Chelsea', details: 'Commercial office deep clean', privacy_consent: 'yes',
+      enquiry_type: 'residential', source: 'services_page',
+    })).status, 200);
+    assert.equal(calls.at(-1).payload.classification_tags, classification(type, family), `${property_type}: ${service}`);
+  }
+}));
+
+test('discount classifications use only the normalized type and retain the legacy discount tag', async () => capture(async calls => {
+  for (const [type, normalized] of [['home', 'residential'], ['Residential', 'residential'], ['commercial', 'commercial'], ['Commercial', 'commercial']]) {
+    for (const variant of [{ message: 'Office deep clean' }, { phone: quote.phone, summary: 'Move in clean' }]) {
+      assert.equal((await invoke('discount', { name: quote.name, email: quote.email, type, ...variant,
+        service: 'Office Cleaning', enquiry_type: 'complex',
+      })).status, 200);
+      const { payload } = calls.at(-1);
+      assert.equal(payload.classification_tags, classification(normalized, 'unconfirmed', true));
+      assert.equal(payload.tag, 'discount offer');
+      assert.equal('service' in payload, false);
+    }
+  }
+}));
+
+test('client tag fields cannot reach the receiver and contact or feedback never carry sales classifications', async () => capture(async calls => {
+  const forged = { classification_tags: ['forged'], tags: { admin: true }, tag: 'won',
+    classification_type: 'commercial', classification_service: 'deep clean', classification_anything: 'lifecycle',
+  };
+  for (const [kind, body, expected] of [
+    ['quote', quote, classification('residential', 'deep clean')],
+    ['quick-form', { name: quote.name, email: quote.email, postcode: quote.postcode, property_type: 'Apartment', service: 'WellClean™', privacy_consent: 'yes' }, classification('residential', 'wellness')],
+    ['discount', { name: quote.name, email: quote.email, type: 'home', message: '' }, classification('residential', 'unconfirmed', true)],
+    ['quick-form', { name: quote.name, email: quote.email, service: 'supplier', message: 'Test', privacy_consent: 'yes' }, ''],
+    ['feedback', { name: quote.name, email: quote.email, feedback: 'Test', form_type: 'quote' }, ''],
+  ]) {
+    assert.equal((await invoke(kind, { ...body, ...forged })).status, 200);
+    const { payload } = calls.at(-1);
+    assert.equal(payload.classification_tags, expected);
+    for (const key of Object.keys(forged).filter(key => !['classification_tags', 'tag'].includes(key))) {
+      assert.equal(key in payload, false, key);
+    }
+    assert.equal(payload.tag, kind === 'discount' ? 'discount offer' : undefined);
+    assert.doesNotMatch(JSON.stringify(payload), /forged|lifecycle/);
+  }
+}));
+
+test('arbitrary accepted service and property strings produce only bounded fallback tags', async () => capture(async calls => {
+  for (const service of ['__proto__', 'constructor', 'toString', 'office,won', 'deep', 'hqc - service - custom', 'x'.repeat(2000), ...Array.from({ length: 40 }, (_, i) => `unknown-${i}`)]) {
+    for (const kind of ['quote', 'quick-form']) {
+      const body = kind === 'quote' ? { ...quote, route: 'complex', service }
+        : { name: quote.name, email: quote.email, postcode: quote.postcode, service, property_type: service, privacy_consent: 'yes' };
+      assert.equal((await invoke(kind, body)).status, 200);
+      assert.equal(calls.at(-1).payload.classification_tags, classification(kind === 'quote' ? 'complex' : 'unconfirmed', 'unconfirmed'));
+    }
+  }
+}));
+
 // Execute each real submit callback without a browser or third-party DOM library.
 const frontends = [
   ['src/pages/request-a-quote.astro', '/api/quote/', quote],
