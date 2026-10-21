@@ -363,6 +363,16 @@ test('classification preserves every existing quote field and normalizes metadat
   ])].sort());
 }));
 
+for (const service of ['never-seen-before', 'Office Cleaning']) {
+  test(`residential route with ${service} forwards unconfirmed tags without rejecting intake`, async () => capture(async calls => {
+    assert.equal((await invoke('quote', { ...quote, service, property_type: 'flat' })).status, 200);
+    assert.equal(calls.length, 1);
+    assert.equal(calls[0].payload.enquiry_type, 'residential');
+    assert.equal(calls[0].payload.service, service);
+    assert.equal(calls[0].payload.classification_tags, classification('unconfirmed', 'unconfirmed'));
+  }));
+}
+
 test('current route aliases map to fixed service families without rewriting the submitted service', async () => capture(async calls => {
   const aliases = {
     residential: {
@@ -401,7 +411,7 @@ test('the pure helper excludes non-sales input and returns independent arrays wi
     bundle: true, write: false, platform: 'node', format: 'esm',
   });
   const { websiteEnquiryTags } = await import(`data:text/javascript;base64,${Buffer.from(result.outputFiles[0].text).toString('base64')}`);
-  const body = Object.freeze({ form_type: 'quote', source: 'request_a_quote', enquiry_type: 'property', service: 'Office Cleaning', property_type: 'flat' });
+  const body = Object.freeze({ form_type: 'quote', source: 'request_a_quote', route: 'commercial', enquiry_type: 'property', service: 'Office Cleaning', property_type: 'flat' });
   const first = websiteEnquiryTags(body);
   assert.equal(first.join(','), classification('property', 'office'));
   first.push('modified return value');
@@ -437,11 +447,17 @@ test('every current routed service forwards the declared enquiry type and a fixe
   assert.deepEqual(Object.values(services).flat().map(([service]) => service), current);
   for (const [route, entries] of Object.entries(services)) {
     for (const [service, family] of entries) {
-      assert.equal((await invoke('quote', { ...quote, route, service, property_type: 'flat',
-        frequency: 'Weekly', operating_hours: 'Evenings', mobilisation_requirements: 'Next month',
-      })).status, 200);
-      assert.equal(calls.at(-1).payload.classification_tags, classification(route, family), service);
-      assert.equal(calls.at(-1).payload.service, service);
+      for (const selected of [service, ` ${service.toUpperCase()} `]) {
+        for (const candidate of Object.keys(services)) {
+          assert.equal((await invoke('quote', { ...quote, route: candidate, service: selected, property_type: 'flat',
+            frequency: 'Weekly', operating_hours: 'Evenings', mobilisation_requirements: 'Next month',
+          })).status, 200);
+          const expectedType = candidate === route || candidate === 'complex' ? candidate : 'unconfirmed';
+          assert.equal(calls.at(-1).payload.classification_tags,
+            classification(expectedType, candidate === route ? family : 'unconfirmed'), `${candidate}: ${selected}`);
+          assert.equal(calls.at(-1).payload.service, selected.trim());
+        }
+      }
     }
   }
   for (const buyer of ['agency', 'property']) {
@@ -449,6 +465,25 @@ test('every current routed service forwards the declared enquiry type and a fixe
       property_type: 'flat', frequency: 'Weekly', operating_hours: 'Evenings', mobilisation_requirements: 'Next month',
     })).status, 200);
     assert.equal(calls.at(-1).payload.classification_tags, classification('property', 'office'));
+  }
+}));
+
+test('routed membership excludes unrelated global aliases and unknown commercial services even for property buyers', async () => capture(async calls => {
+  for (const [route, services] of Object.entries({
+    residential: ['office', 'office-cleaning', 'communal', 'signature', 'essentials', 'airbnb'],
+    commercial: ['never-seen-before', 'deep-clean', 'post-construction', 'signature', 'wellclean', 'multi-site'],
+    complex: ['signature', 'wellclean', 'airbnb', 'post-construction-cleaning', 'office-cleaning', 'void'],
+  })) {
+    for (const service of services) {
+      for (const buyer of ['', 'agency', 'property']) {
+        assert.equal((await invoke('quote', { ...quote, route, service, buyer,
+          property_type: 'flat', desired_date: '2026-11-03', details: 'Residential home deep clean',
+          frequency: 'Weekly', operating_hours: 'Evenings', mobilisation_requirements: 'Next month',
+        })).status, 200);
+        assert.equal(calls.at(-1).payload.classification_tags,
+          classification(route === 'complex' ? 'complex' : 'unconfirmed', 'unconfirmed'), `${route}: ${service}: ${buyer}`);
+      }
+    }
   }
 }));
 

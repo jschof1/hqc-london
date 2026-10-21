@@ -40,6 +40,25 @@ const services: readonly ServiceDefinition[] = [
     'Large or Executive Property', 'large-property', 'complex-property',
   ] },
 ];
+const routedServices = new Map([
+  ['residential', new Set([
+    'Essential Clean™ suitability', 'Deep Clean™', 'Move-In Reset™', 'End of Tenancy™',
+    'Post-Construction™', 'Other residential requirement',
+    'essential-clean', 'essential', 'deep-clean', 'deep-cleaning', 'move-in', 'move-in-cleaning',
+    'end-of-tenancy', 'end-of-tenancy-cleaning', 'post-construction', 'post-construction-cleaning',
+  ].map(value => value.toLowerCase()))],
+  ['commercial', new Set([
+    'Office Cleaning', 'Commercial Cleaning', 'Commercial Deep Cleaning', 'Communal Area Cleaning',
+    'Agency or Portfolio Support', 'Move-In and Void Property Cleaning', 'Other professional requirement',
+    'office', 'office-cleaning', 'commercial', 'commercial-cleaning', 'commercial-deep',
+    'commercial-deep-cleaning', 'communal', 'communal-area', 'communal-area-cleaning', 'portfolio', 'void', 'move-in-void',
+  ].map(value => value.toLowerCase()))],
+  ['complex', new Set([
+    'Large or Executive Property', 'Office or Workplace Project', 'Commercial Deep-Clean Project',
+    'Communal Site Assessment', 'Post-Construction Project', 'Multi-Site or Portfolio Project', 'Other Complex Requirement',
+    'office', 'commercial-deep', 'communal', 'large-property', 'complex-property', 'post-construction', 'portfolio', 'multi-site',
+  ].map(value => value.toLowerCase()))],
+]);
 const residentialBuildings = new Set([
   'townhouse', 'penthouse', 'apartment', 'mews', 'mansion', 'flat', 'house', 'estate',
   'flat / apartment', 'estate / mansion',
@@ -57,7 +76,12 @@ export function websiteEnquiryTags(body: Readonly<Record<string, string>>): stri
 
   if (body.form_type === 'quote') {
     if (body.source === 'request_a_quote' && enquiryTypes.includes(body.enquiry_type)) {
-      type = body.enquiry_type as EnquiryType;
+      if (routedServices.get(body.route)?.has(selected)) {
+        type = body.enquiry_type as EnquiryType;
+      } else {
+        if (body.route === 'complex') type = 'complex';
+        family = 'unconfirmed';
+      }
     } else if (body.source === 'website_detailed_quote_page') {
       type = service?.type || 'unconfirmed';
     }
