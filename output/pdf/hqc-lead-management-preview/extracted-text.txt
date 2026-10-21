@@ -1,0 +1,83 @@
+A PRACTICAL GUIDE FOR PEDRO
+Lead Management
+A clear next step for every enquiry.
+Live capture · human stage checks
+Use the board to show what has actually happened, then record the next action. Move a lead only when
+the stage below is true.
+THE AGREED FIVE-STAGE FLOW
+01
+New Lead
+02
+Contacted
+03
+Scheduled
+04
+Paid
+05
+Review
+Request Sent
+When to move each lead
+01
+New Lead
+A new enquiry needs attention. Check the details and record who will
+follow up.
+02
+Contacted
+You have called or personally messaged the lead and recorded it. Log
+the outcome; an automatic form reply does not count.
+03
+Scheduled
+The booking is confirmed with the customer. Record the agreed date
+and job details; a requested service date does not count.
+04
+Paid
+Full payment has been received and confirmed. A deposit does not
+count. A prepaid job still needs to be completed before a review
+request.
+05
+Review Request
+Sent
+The service is completed and a review request has actually been
+sent. Record the send; payment or a review posted by the customer
+does not count.
+HIGH QUALITY CLEAN / LEAD MANAGEMENT
+01 / 02
+
+FROM ENQUIRY TO FOLLOW-UP
+The daily routine
+Keep leads and bookings moving with a few simple habits.
+GHL > Opportunities > Lead Management. Read the contact's Notes and your assigned Tasks.
+1
+Review new enquiries
+Open new enquiry tasks and read the latest contact note.
+2
+Contact the lead
+Call or send a personal message; log the attempt.
+3
+Record the outcome
+Note the response, booking decision or reason it did not proceed.
+4
+Set the next follow-up
+Give each open enquiry a next action and a date.
+5
+Check upcoming bookings
+Confirm dates, access details and anything still needed.
+6
+Check completed, paid jobs
+Request a review only after service is completed and full payment is confirmed. Record the send.
+Lost or abandoned? Use the deal status and record a short reason; keep the five stages.
+Repeated enquiry? Review the existing deal or closed history before reopening.
+Where setup stands
+Live capture · human stage checks | 21 October 2026, 01:45 BST
+Website
+Sales forms create leads; contact messages and feedback stay in Notes and
+Tasks.
+Board
+All five stages are live. Move cards when the stage definition is true.
+Automation
+Every receipt creates Pedro's task. Paid creates a completion-check task.
+Verification
+Five website form types checked in GHL. Customer contact and review sending are
+manual. No customer message has been sent during setup.
+HIGH QUALITY CLEAN / LEAD MANAGEMENT
+02 / 02

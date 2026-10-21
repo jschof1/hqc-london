@@ -111,13 +111,46 @@ inferred from synthetic checks. The four older Open/Lost reconciliation cases
 remain Pedro's existing tasks; no outcome has been guessed and no duplicate
 reconciliation tasks have been created.
 
-Release checkpoint, 21 October 01:33 BST: Cloudflare accepted the four production
-receiver updates and deployment `84e62159-6805-44a8-8fd3-3e92aa0b9693` rebuilt
-successfully. Public invalid-input checks return JSON 400 and the immutable
-preview returns no-send 202. Valid public submissions currently return 502 and
-have not produced GHL receipts. A filtered function tail confirms a handled 502,
-without an uncaught exception. Production acceptance remains open. Codex owns
-diagnosis; a successful build alone is not integration acceptance.
+Release accepted, 21 October 01:46 BST: public quote, quick form, discount,
+contact and feedback submissions each returned JSON success with a unique
+correlation reference and produced exactly one matching native GHL receipt and
+one same-day task assigned to Pedro. Quote room counts, dates, consent and all
+supplied attribution fields were read back; feedback rating/reference were saved.
+The existing phone survived later submissions without a phone. Contact and
+feedback produced no new sales deal. A further fresh public quote created a
+New Lead with a next-action date and Pedro ownership after the one-minute wait.
+
+The production forwarding failure was reproduced in workerd: `redirect: error`
+is unsupported and throws before sending. The handler now uses `manual`; its
+non-2xx guard refuses redirects without forwarding customer data to another
+host. A new workerd regression fails before the change and passes afterwards,
+including the redirect refusal. Bounded diagnostic logs contain only form kind,
+phase category and HTTP status; no URLs, payloads or raw provider errors.
+Cloudflare's [Request documentation](https://developers.cloudflare.com/workers/runtime-apis/request/?ref=blog.madbotz.com)
+confirms the runtime restriction.
+
+Accepted implementation: `82e301099cebdd6f9825ea6de709d12b71de7399`, production
+deployment `e86069ec-c9b1-4ff6-a770-0f26967c8aaa`. Form routing, 22 handler/frontend
+checks, the real workerd regression, seven analytics checks and the build pass.
+The final documentation/guide commit will trigger a further deployment of the
+same implementation; its deployment receipt is recorded in Blume after readback.
+
+The two-page PDF explains stage criteria, the daily routine, repeat enquiries,
+manual customer contact and review sends, and the live automation boundary.
+Both rendered pages passed visual inspection, text bounds, overlap and required
+wording checks. Source and sanitized acceptance evidence are included with it.
+
+First genuine use remains an explicit handover gate: Pedro opens the next real
+enquiry task, reads Notes, contacts the customer, and records the outcome and
+next follow-up. Pedro owns that action; Jack owns the handover. Check it after
+the next genuine enquiry or within two working days of handover. No customer
+booking, payment, review or Pedro adoption is inferred from synthetic tests.
+
+Final provider readback at 01:48 BST confirms both workflows published (intake v20,
+Paid check v3), all five stages, and all 47 original opportunity records fully
+unchanged after fixture cleanup. Test deals were removed, all 17 synthetic tasks
+completed, and the fixture-only phone restored to its original empty value.
+Customer message history is unchanged.
 
 Private raw payloads, receiver URLs and provider snapshots are stored outside
 the repository. They must not be committed. The Pedro PDF contains no customer

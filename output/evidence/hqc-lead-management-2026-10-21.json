@@ -1,0 +1,95 @@
+{
+  "verifiedAt": "2026-10-21T00:48:31.727Z",
+  "implementationRevision": "82e301099cebdd6f9825ea6de709d12b71de7399",
+  "acceptedProductionDeployment": "e86069ec-c9b1-4ff6-a770-0f26967c8aaa",
+  "stages": [
+    "New Lead",
+    "Contacted",
+    "Scheduled",
+    "Paid",
+    "Review Request Sent"
+  ],
+  "publishedWorkflows": [
+    {
+      "name": "HQC Lead Management - Paid Job Review Check",
+      "status": "published",
+      "version": 3
+    },
+    {
+      "name": "HQC Lead Management - Website Intake",
+      "status": "published",
+      "version": 20
+    }
+  ],
+  "checks": {
+    "publicForms": [
+      {
+        "form": "quote",
+        "http": 200,
+        "oneCorrelatedNativeReceipt": true
+      },
+      {
+        "form": "quick-form",
+        "http": 200,
+        "oneCorrelatedNativeReceipt": true
+      },
+      {
+        "form": "discount",
+        "http": 200,
+        "oneCorrelatedNativeReceipt": true
+      },
+      {
+        "form": "contact",
+        "http": 200,
+        "oneCorrelatedNativeReceipt": true
+      },
+      {
+        "form": "feedback",
+        "http": 200,
+        "oneCorrelatedNativeReceipt": true
+      }
+    ],
+    "fullQuoteFields": true,
+    "feedbackRatingReference": true,
+    "phonePreservedWhenOmitted": true,
+    "sameDayPedroTaskPerReceipt": true,
+    "nonSalesDoNotCreateDeals": true,
+    "freshPublicNewLeadAndPedroOwner": true,
+    "paidCreatesTaskWithoutReviewSend": true,
+    "sequentialRepeatPreservesProgress": true,
+    "closedHistoryNeedsHumanReconciliation": true,
+    "originalThreeStagesAndOtherPipelinesUnchanged": true,
+    "all47BaselineOpportunityRecordsUnchangedAfterCleanup": true,
+    "customerMessagesUnchanged": true,
+    "syntheticOpportunitiesRemoved": true,
+    "all17SyntheticTasksCompleted": true,
+    "fixturePhoneRestored": true
+  },
+  "localValidation": {
+    "handlerFrontendTests": 22,
+    "workerdRegression": 1,
+    "analyticsTests": 7,
+    "formRouting": "PASS",
+    "build": "PASS",
+    "workerdFailingBefore": "Valid enquiry returned 502 because workerd rejects redirect:error",
+    "workerdPassingAfter": "200 for accepted receipt, 502 for redirect with no forwarded second request"
+  },
+  "humanChecks": [
+    "Personally contact lead and log outcome",
+    "Confirm booking before Scheduled",
+    "Confirm full payment before Paid",
+    "Confirm completed service and real review send before Review Request Sent",
+    "Set next action and follow-up date"
+  ],
+  "remainingOutcomeGate": {
+    "owner": "Pedro; Jack for handover",
+    "action": "Use the next genuine enquiry, contact customer and record outcome plus next follow-up",
+    "checkBy": "Next genuine enquiry or within two working days of handover"
+  },
+  "limitations": [
+    "Native duplicate protection is not a durable idempotency ledger or concurrent exactly-once guarantee",
+    "No automatic customer acknowledgement, nurture or review send is part of these two new workflows",
+    "No booking payment or client adoption outcome is inferred from isolated tests"
+  ],
+  "privateEvidence": "Raw provider snapshots, payloads and receiver URLs retained outside repository; no customer data included here"
+}
