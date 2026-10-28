@@ -1,0 +1,52 @@
+{
+  "id": "8b5bf682-7c44-451d-8d54-632d91b18917",
+  "url": "https://8b5bf682.hqc-london.pages.dev",
+  "environment": "preview",
+  "latest_stage": {
+    "name": "deploy",
+    "started_on": "2026-10-28T14:25:31.025357Z",
+    "ended_on": "2026-10-28T14:25:44.117107Z",
+    "status": "success"
+  },
+  "stages": [
+    {
+      "name": "queued",
+      "started_on": "2026-10-28T14:20:45.548615Z",
+      "ended_on": "2026-10-28T14:24:53.992603Z",
+      "status": "success"
+    },
+    {
+      "name": "initialize",
+      "started_on": "2026-10-28T14:24:53.992603Z",
+      "ended_on": "2026-10-28T14:24:55.424612Z",
+      "status": "success"
+    },
+    {
+      "name": "clone_repo",
+      "started_on": "2026-10-28T14:24:55.424612Z",
+      "ended_on": "2026-10-28T14:25:02.430982Z",
+      "status": "success"
+    },
+    {
+      "name": "build",
+      "started_on": "2026-10-28T14:25:02.430982Z",
+      "ended_on": "2026-10-28T14:25:31.025357Z",
+      "status": "success"
+    },
+    {
+      "name": "deploy",
+      "started_on": "2026-10-28T14:25:31.025357Z",
+      "ended_on": "2026-10-28T14:25:44.117107Z",
+      "status": "success"
+    }
+  ],
+  "deployment_trigger": {
+    "type": "github:push",
+    "metadata": {
+      "branch": "codex/hqc-review-packet-2026-10-20",
+      "commit_hash": "1cf7d4f96c8b7ebb413ca8839785b04fafc5257c",
+      "commit_message": "Reconcile Phase 8 intake with live safeguards and retain release gates",
+      "commit_dirty": false
+    }
+  }
+}

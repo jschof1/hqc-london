@@ -1,0 +1,183 @@
+{
+  "status": "local-source-reconciliation-recorded-production-held",
+  "parityVerified": false,
+  "productionRelease": false,
+  "production": "48f4776d3d78a777b84aa27c9879f7c6b7327e1f",
+  "candidate": "1cf7d4f96c8b7ebb413ca8839785b04fafc5257c",
+  "branch": "codex/hqc-review-packet-2026-10-20",
+  "sourceNote": "Fresh origin refs; deliberate reconciliation. Missing 6717 draft was not recovered or used.",
+  "paths": {
+    "src/lib/form-submission.ts": {
+      "production": "4fd20dd1bb63013c49b080a7c2fcab428a8bb013db465bc82bd656ca66d454a8",
+      "candidate": "3216702346491dbf0768aaf5c792f5e9af04dd866d1a5ce1c276d32691d1d191",
+      "reason": "Use main reliable delivery and legacy form validation; restore Phase8 explicit isolated contact, server privacy notice/optional marketing, visual acknowledgement and property exceptions."
+    },
+    "src/lib/enquiry-classification.ts": {
+      "production": "6d7102064d9f158db059dde754bd4f3af070c50e86238b9ebeaf4dceb9390efb",
+      "candidate": "cde4b52c4367330f39866bee6b3bb79d00f9f3b4add0e3005fa531f7da7b8b31",
+      "reason": "Retain main fixed source/type/service tags and unknown fallback; recognise exact extra Phase8 property service choices."
+    },
+    "src/lib/preview.ts": {
+      "production": "57b3317c41f7ce9209d4678cb1d93f31bda69d3c631e398c1d994fa6b1351c13",
+      "candidate": "a53af01026fee3a9a1374b7cab53b95caf55d8ba6d382320f5dac70aee91eb73",
+      "reason": "Keep staging allowlist: every unknown host is preview/no-send; main was less strict."
+    },
+    "src/pages/api/contact.ts": {
+      "production": null,
+      "candidate": "44614f8c78faa5eaf84faeb19c09b4778d7d236baf138fd3b1a41b28a91dc5f4",
+      "reason": "Keep explicit Phase8 contact wrapper and CONTACT_FORM_WEBHOOK, replacing main quick receiver reuse."
+    },
+    "src/pages/api/discount.ts": {
+      "production": "0f285443fc4ecfc14345a3e955dd3c63b190ade0cdaea44987095cce886e056a",
+      "candidate": "0f285443fc4ecfc14345a3e955dd3c63b190ade0cdaea44987095cce886e056a",
+      "reason": "Exact main content retained."
+    },
+    "src/pages/api/feedback.ts": {
+      "production": "a0cd7c07aa6e2754ca8b8959dc871067ea60c2393246e2cba88d79a29612da9f",
+      "candidate": "728f5feba4c3880b8a263b69c1f4828663c3106a5a1dd206865ee08f068f03a6",
+      "reason": "Keep existing equivalent staged submitForm wrapper; formatting differs from main."
+    },
+    "src/pages/api/quick-form.ts": {
+      "production": "bb1f0ae11a6368867db987fd01390b7a9c3dd6c0955c3b46770fe98cc37303d6",
+      "candidate": "bb1f0ae11a6368867db987fd01390b7a9c3dd6c0955c3b46770fe98cc37303d6",
+      "reason": "Exact main content retained."
+    },
+    "src/pages/api/quote.ts": {
+      "production": "9c30a35082e2205d8b2bd7f32a906cea80be47446cb34d902bc76c292f0a2b8d",
+      "candidate": "6261d1ef2b8cc882f792ef347b60931a8a313582ed5ffd8a703d035ae93ff1e7",
+      "reason": "Keep existing equivalent staged submitForm wrapper; formatting differs from main."
+    },
+    "src/pages/contact.astro": {
+      "production": "048ced89400cf27fb2046f9f0ca3db63ff3aedbd97e6eaf2f3b751a695da0b90",
+      "candidate": "ae4eaa7ef5af46eb4735321c1365da48442a5e572555aedbd6df8e27ba025c6a",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "src/pages/discount.astro": {
+      "production": "4f365bc802b5ae06f8f68d66ab0d9bb633a3b374ee99631d9ca300111231bce4",
+      "candidate": "400fa67ec393036be37e90d9e95cc911a41dfa3b568164ff8ec15bccdbd42146",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "src/pages/feedback.astro": {
+      "production": "2af73227155e37e3724ad3914d2be6a17915ea32873b1ef65866477d52ef2d86",
+      "candidate": "99dc369c24554aa4a7c31cbc2706aeaf524e4d18ab1cb3cbc4cec0229e47825a",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "src/pages/quote.astro": {
+      "production": "b37fd7fc4881190cf89d30616e0485278e4a769a89505d72b259c73581e7ba0d",
+      "candidate": "c607bb83833c80252d0e2b58882600cac7d2b992b92bc4fc23315e22d988db3f",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "src/pages/request-a-quote.astro": {
+      "production": "4915e2a0a356e07c6905e8629ca9a4e0d5ff335c781b5b00ae48920f2f0a9798",
+      "candidate": "89fbab3f668782bc00457d7dcb8040ab5a3d8292cb73ead5968dc9830fc2b93c",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "scripts/verify-form-routing.mjs": {
+      "production": "265b5f82555d726be81e5c9cc88d06eaddbca6e309d9213609b311f1131dfe45",
+      "candidate": "abafd2cd7bf6b83fdd45a1f7b2080c660f64c3d7a2a471cbf52af70c22297a36",
+      "reason": "Keep staged frontend fields/contact route/strict guard checks; extend shared boundary inspection to every thin API."
+    },
+    "scripts/verify-form-submission.test.mjs": {
+      "production": "c867cae10581d1bf87c4a9acd2a2a6819f0f27dd4de2e50c6dbff002533daff6",
+      "candidate": "62b8a0a7eb0a818649912b08ef313514955123b2f5f69c38a8b74b242ed0c6e4",
+      "reason": "Adapt main tests to actual Phase8 choices and analytics semantics; extend contact isolation, privacy/marketing, property, host and frontend receipt cases."
+    },
+    "scripts/verify-form-worker.test.mjs": {
+      "production": "c89c276bf15aeacc75b27b25df11ed3f29ce77fb0bdb7665dd963c7d49eb8415",
+      "candidate": "95142846d767a3207278fdaa4aac2f00ffe3d5fd24c51030c2ccca2c0a690906",
+      "reason": "Retain actual workerd acceptance/redirect regression; add Phase8 contact, property/agency and unknown-host cases with in-process receivers."
+    },
+    "scripts/test-form-handlers.mjs": {
+      "production": null,
+      "candidate": "dc442f27dcae4690b3ca2ad72478bacdca5c7005401bd4623d97e9cbd14012b9",
+      "reason": "Keep staged runtime regression groups, updating redirect assertion to Cloudflare manual semantics."
+    },
+    "scripts/verify-phase8-analytics.test.mjs": {
+      "production": null,
+      "candidate": "dd6018e073fe39a19e57ed7af51c82b7a7755b7515341c9d7733890cfff500b7",
+      "reason": "Add bounded real Phase8 contract/adapter tests without server or browser; preserve original browser suite under test:analytics:browser."
+    },
+    "src/scripts/main.js": {
+      "production": "e383ec006ad8017216fdbfaa0d181da4f31ca3b2aa46ad10a1c6d6fe459498ad",
+      "candidate": "ef1c16d91690bfbfc0fe609d825fef4acbac80211b2bacb3761ff6b37539b72a",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "src/scripts/analytics.js": {
+      "production": null,
+      "candidate": "5aa23d2d6fc9403e2de0dcb130791eb770b155caad1692c672ddd42f3e26f897",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "src/scripts/analytics-contract.js": {
+      "production": null,
+      "candidate": "2c8c0cd581ecdb041e34c4da6382acc85024b56f2927e2dc92864f87311d82f4",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "src/data/analytics-paths.json": {
+      "production": null,
+      "candidate": "588da53793170bc18aa60cb5e533f7aafda7b762f7e6424f1fd1bc7b7983a1e0",
+      "reason": "Locked Phase8 frontend/page/copy or analytics contract retained byte-for-byte from staging baseline 4119701; live backend fixes reconciled separately."
+    },
+    "package.json": {
+      "production": "926861a020ddb964133cb05ac45b9a631534b29217d38a5d6cc13f2c078bbd95",
+      "candidate": "99075cb4aeb144487f743fc3c3cbd6ff46d133aa45bfff026384900b5708daea",
+      "reason": "Run staged plus adapted main form/workerd tests; expose lightweight staged analytics while retaining original browser analytics command."
+    },
+    "scripts/sitemap-routes.mjs": {
+      "production": "3a5df6b41afe2d8e9fa5d08074477b2060db12939e9a69fdb0bb9055e5528d89",
+      "candidate": "3a5df6b41afe2d8e9fa5d08074477b2060db12939e9a69fdb0bb9055e5528d89",
+      "reason": "Exact main content retained."
+    },
+    "scripts/verify-phase8-intake-parity.mjs": {
+      "production": null,
+      "candidate": "e79d4ab1868679fe4a7b42fd6ed0e9f377229fd0b07bd10b3a9ed3cd9bf9e501",
+      "reason": "Adapt 23 October guard to source-bound reconciliation receipts; all production releases still blocked on separately reviewed operational evidence."
+    },
+    "scripts/verify-phase8-intake-parity.test.mjs": {
+      "production": null,
+      "candidate": "788319cd5100c3e9d0e8974ef55ff244be464038507e02f32cb4615443c20a87",
+      "reason": "Pure fixture tests reject missing/stale proof and altered receipts; equality and recorded code evidence cannot clear release."
+    },
+    "package-lock.json": {
+      "production": "508203a306b4e217c95c6ee83c0df8779d71f701b6084284d4f9193ee9d3fd10",
+      "candidate": "601533b23ab552c341b9255ed9bf98e7f81d957b164f4161d512e8d7553e81d6",
+      "reason": "Keep dependency lock aligned with explicit existing Miniflare worker-test dependency."
+    },
+    "scripts/check-phase8-release.mjs": {
+      "production": null,
+      "candidate": "e54b89231c42c475a22a035497234d8e6dc9574ade6d66b00c5503a0163984db",
+      "reason": "Fail connected main-branch and explicit production builds before Astro until external release acceptance."
+    },
+    "scripts/check-phase8-release.test.mjs": {
+      "production": null,
+      "candidate": "3cc26427b404df6403ac6b1b58fd7a18d519332d0d09703620afe69c446f2f10",
+      "reason": "Exercise limited build guard while retaining preview build route."
+    }
+  },
+  "checks": [
+    {
+      "command": "npm run test:forms",
+      "exitCode": 0,
+      "log": "phase8/evidence/2026-10-28/intake-forms.log",
+      "sha256": "5ea3a85bb5d04e5532aeea9b006e75f85d769281b868e10da3cc4ce23c771912"
+    },
+    {
+      "command": "npm run test:analytics",
+      "exitCode": 0,
+      "log": "phase8/evidence/2026-10-28/intake-analytics.log",
+      "sha256": "edb5d2ed3693f6be4f2ddc76e9ce317682d5ce9b2f30e3ab8cfd9a0dfeb1e618"
+    },
+    {
+      "command": "node --test scripts/verify-phase8-intake-parity.test.mjs scripts/check-phase8-release.test.mjs",
+      "exitCode": 0,
+      "log": "phase8/evidence/2026-10-28/intake-guard-tests.log",
+      "sha256": "e760b9e8ecb9ff6dd2d81a9c07659ed19809de7959c4e0c6c507f2a4a68eaba9"
+    }
+  ],
+  "lockedFrontend": {
+    "baseline": "41197011a853c4e55530fa4f220c38b36e470051",
+    "count": 81,
+    "aggregateSha256": "635da6d1f7ae3321768e9918791c440a3049c93b849794db9264bf59048c1c7b",
+    "mismatches": []
+  },
+  "checkedAt": "2026-10-28T14:20:43.113Z"
+}

@@ -1,0 +1,185 @@
+{
+  "checkedAt": "2026-10-28T14:26:51.511Z",
+  "commit": "1cf7d4f96c8b7ebb413ca8839785b04fafc5257c",
+  "base": "https://8b5bf682.hqc-london.pages.dev",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/\">",
+      "formAction": [],
+      "bytes": 67035
+    },
+    {
+      "path": "/request-a-quote/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/request-a-quote/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/request-a-quote/\">",
+      "formAction": [],
+      "bytes": 41046
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/contact/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/contact/\">",
+      "formAction": [],
+      "bytes": 46865
+    },
+    {
+      "path": "/quote/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/request-a-quote/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/request-a-quote/\">",
+      "formAction": [],
+      "bytes": 41046
+    },
+    {
+      "path": "/discount/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/offer/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/offer/\">",
+      "formAction": [],
+      "bytes": 31335
+    },
+    {
+      "path": "/feedback/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/feedback/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/feedback/\">",
+      "formAction": [],
+      "bytes": 40891
+    },
+    {
+      "path": "/book-essential-clean/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/book-essential-clean/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/book-essential-clean/\">",
+      "formAction": [],
+      "bytes": 31830
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/privacy-policy/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/privacy-policy/\">",
+      "formAction": [],
+      "bytes": 42520
+    },
+    {
+      "path": "/terms-and-conditions/",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/terms-and-conditions/",
+      "robots": "<meta name=\"robots\" content=\"noindex, nofollow, noarchive\">",
+      "canonical": "<link rel=\"canonical\" href=\"https://highqualityclean.co.uk/terms-and-conditions/\">",
+      "formAction": [],
+      "bytes": 54441
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "finalUrl": "https://8b5bf682.hqc-london.pages.dev/robots.txt",
+      "formAction": [],
+      "bytes": 77,
+      "robotsText": "User-agent: *\nAllow: /\nSitemap: https://highqualityclean.co.uk/sitemap-0.xml\n"
+    }
+  ],
+  "forms": [
+    {
+      "path": "quote",
+      "status": 400,
+      "body": {
+        "error": "Please complete this field",
+        "field": "phone"
+      }
+    },
+    {
+      "path": "quick-form",
+      "status": 400,
+      "body": {
+        "error": "Please complete this field",
+        "field": "postcode"
+      }
+    },
+    {
+      "path": "discount",
+      "status": 400,
+      "body": {
+        "error": "Please complete this field",
+        "field": "type"
+      }
+    },
+    {
+      "path": "contact",
+      "status": 400,
+      "body": {
+        "error": "Please complete this field",
+        "field": "service"
+      }
+    },
+    {
+      "path": "feedback",
+      "status": 400,
+      "body": {
+        "error": "Please complete this field",
+        "field": "feedback"
+      }
+    }
+  ],
+  "validForms": [
+    {
+      "path": "quote",
+      "status": 202,
+      "body": {
+        "ok": true,
+        "preview": true,
+        "message": "Preview submission accepted for interface testing only; no notification was sent."
+      }
+    },
+    {
+      "path": "quick-form",
+      "status": 202,
+      "body": {
+        "ok": true,
+        "preview": true,
+        "message": "Preview submission accepted for interface testing only; no notification was sent."
+      }
+    },
+    {
+      "path": "discount",
+      "status": 202,
+      "body": {
+        "ok": true,
+        "preview": true,
+        "message": "Preview submission accepted for interface testing only; no notification was sent."
+      }
+    },
+    {
+      "path": "contact",
+      "status": 202,
+      "body": {
+        "ok": true,
+        "preview": true,
+        "message": "Preview submission accepted for interface testing only; no notification was sent."
+      }
+    },
+    {
+      "path": "feedback",
+      "status": 202,
+      "body": {
+        "ok": true,
+        "preview": true,
+        "message": "Preview submission accepted for interface testing only; no notification was sent."
+      }
+    }
+  ]
+}
