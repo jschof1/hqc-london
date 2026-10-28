@@ -106,7 +106,7 @@ try {
     mock(); await submitForm(request({ ...quote, source: 'confirmed', timestamp: 'forged', submission_id: 'forged', stage: 'won' }), env, 'quote');
     const sent = calls[0];
     assert.equal(sent.payload.stage, undefined); assert.notEqual(sent.payload.timestamp, 'forged'); assert.notEqual(sent.payload.submission_id, 'forged');
-    assert.equal(sent.redirect, 'error'); assert.ok(sent.signal instanceof AbortSignal);
+    assert.equal(sent.redirect, 'manual'); assert.ok(sent.signal instanceof AbortSignal);
   });
   await check('private feedback validates rating and never represents a Google publication', async () => {
     const feedback = { name: 'Controlled Test', email: 'qa@example.invalid', rating: '1', feedback: 'Private feedback test' };

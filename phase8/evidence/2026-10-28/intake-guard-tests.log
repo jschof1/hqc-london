@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: preview and local review builds remain possible
+ok 1 - preview and local review builds remain possible
+  ---
+  duration_ms: 90.154375
+  ...
+# Subtest: production branch and explicit production builds fail before Astro
+ok 2 - production branch and explicit production builds fail before Astro
+  ---
+  duration_ms: 66.190875
+  ...
+# Subtest: missing proof and stale hashes block deliberate divergence
+ok 3 - missing proof and stale hashes block deliberate divergence
+  ---
+  duration_ms: 1.240542
+  ...
+# Subtest: missing or altered test receipts block code evidence
+ok 4 - missing or altered test receipts block code evidence
+  ---
+  duration_ms: 0.181667
+  ...
+# Subtest: recorded reconciliation and even identical sources never clear operational release gates
+ok 5 - recorded reconciliation and even identical sources never clear operational release gates
+  ---
+  duration_ms: 0.246709
+  ...
+# Subtest: unknown refs fail closed without fetching or mutating Git
+ok 6 - unknown refs fail closed without fetching or mutating Git
+  ---
+  duration_ms: 85.233542
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 202.211708

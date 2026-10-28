@@ -74,7 +74,7 @@ const apiBindings = [
   ['src/pages/api/feedback.ts', 'FEEDBACK_WEBHOOK'],
 ];
 for (const [path, binding] of apiBindings) {
-  const sourceText = await read(path) + (['src/pages/api/contact.ts', 'src/pages/api/quote.ts', 'src/pages/api/feedback.ts'].includes(path) ? await read('src/lib/form-submission.ts') : '');
+  const sourceText = await read(path) + await read('src/lib/form-submission.ts');
   expect(sourceText.includes(binding), `${path} must use ${binding}`);
   expect(sourceText.includes('body: JSON.stringify(body)'), `${path} must preserve the submitted JSON payload`);
   expect(sourceText.includes("isNonProductionRequest(request)"), `${path} must block webhook delivery from local and Pages preview hosts`);

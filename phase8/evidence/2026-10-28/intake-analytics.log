@@ -1,0 +1,24 @@
+
+> hqc-london@1.0.0 test:analytics
+> node --test scripts/verify-phase8-analytics.test.mjs
+
+TAP version 13
+# Subtest: Phase8 analytics preserves known paths and removes customer values, queries and unknown properties
+ok 1 - Phase8 analytics preserves known paths and removes customer values, queries and unknown properties
+  ---
+  duration_ms: 1.349917
+  ...
+# Subtest: real adapter gates consent, isolates previews, deduplicates receipts and honours withdrawal
+ok 2 - real adapter gates consent, isolates previews, deduplicates receipts and honours withdrawal
+  ---
+  duration_ms: 2.484125
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 84.427208

@@ -1,0 +1,250 @@
+
+> hqc-london@1.0.0 test:forms
+> node scripts/verify-form-routing.mjs && node scripts/test-form-handlers.mjs && node --test scripts/verify-form-submission.test.mjs && node --test scripts/verify-form-worker.test.mjs
+
+Form routing verification passed for 4 repaired quick forms, discount offer, 5 existing form routes, shared handler, and 5 webhook bindings.
+PASS four quote routes retain dates, source, consent and distinct enquiry IDs
+PASS property route does not demand commercial-only fields
+PASS repeat enquiry has its own empty dates and unchecked consent
+PASS malformed JSON, missing/invalid fields, impossible and conflicting dates fail before delivery
+PASS cross-origin, wrong content type and oversized bodies fail closed
+PASS all non-production hosts validate but cannot send
+PASS contact payload cannot create a sales route and uses a separate endpoint
+PASS native form discriminator cannot be overridden to another workflow route
+PASS missing or reused contact destination fails closed
+HQC form delivery failed { form: 'quote', category: 'http', provider_status: 503 }
+HQC form delivery failed { form: 'contact', category: 'http', provider_status: 503 }
+HQC form delivery failed { form: 'quote', category: 'rejected', provider_status: 200 }
+HQC form delivery failed { form: 'contact', category: 'rejected', provider_status: 200 }
+HQC form delivery failed { form: 'quote', category: 'rejected', provider_status: 200 }
+HQC form delivery failed { form: 'contact', category: 'rejected', provider_status: 200 }
+HQC form delivery failed { form: 'quote', category: 'rejected', provider_status: 200 }
+HQC form delivery failed { form: 'contact', category: 'rejected', provider_status: 200 }
+HQC form delivery failed { form: 'quote', category: 'fetch', provider_status: null }
+HQC form delivery failed { form: 'contact', category: 'fetch', provider_status: null }
+HQC form delivery failed { form: 'quote', category: 'fetch', provider_status: null }
+HQC form delivery failed { form: 'contact', category: 'fetch', provider_status: null }
+PASS upstream rejection, logical failure, timeout and network failure never return success
+PASS server strips forged metadata and uses bounded delivery without redirects
+HQC form delivery failed { form: 'feedback', category: 'rejected', provider_status: 200 }
+PASS private feedback validates rating and never represents a Google publication
+12 runtime groups passed. Webhooks mocked; no GHL, booking, email or payment outcome is claimed.
+TAP version 13
+# HQC form delivery failed { form: 'quote', category: 'rejected', provider_status: 200 }
+# Subtest: HTTP 200 with application rejection must return 502, never form success
+ok 1 - HTTP 200 with application rejection must return 502, never form success
+  ---
+  duration_ms: 30.205417
+  ...
+# Subtest: current routed quote maps dates, legacy notes and server-owned metadata
+ok 2 - current routed quote maps dates, legacy notes and server-owned metadata
+  ---
+  duration_ms: 2.827708
+  ...
+# Subtest: legacy detailed quote allows optional notes and keeps property and room fields
+ok 3 - legacy detailed quote allows optional notes and keeps property and room fields
+  ---
+  duration_ms: 0.957375
+  ...
+# Subtest: current commercial, property and complex routes follow current conditional requirements
+ok 4 - current commercial, property and complex routes follow current conditional requirements
+  ---
+  duration_ms: 4.601458
+  ...
+# Subtest: date conflicts and non-ISO or impossible dates fail before fetch
+ok 5 - date conflicts and non-ISO or impossible dates fail before fetch
+  ---
+  duration_ms: 2.107958
+  ...
+# Subtest: matching aliases and leap days normalize to one canonical date envelope
+ok 6 - matching aliases and leap days normalize to one canonical date envelope
+  ---
+  duration_ms: 0.633208
+  ...
+# Subtest: invalid JSON, non-object input, field types and current required fields fail without fetch
+ok 7 - invalid JSON, non-object input, field types and current required fields fail without fetch
+  ---
+  duration_ms: 3.036667
+  ...
+# Subtest: JSON media type, same-origin and streamed byte limits are enforced without fetch
+ok 8 - JSON media type, same-origin and streamed byte limits are enforced without fetch
+  ---
+  duration_ms: 1.095042
+  ...
+# Subtest: missing or invalid receiver fails closed and does not leak configuration
+ok 9 - missing or invalid receiver fails closed and does not leak configuration
+  ---
+  duration_ms: 2.541334
+  ...
+# HQC form delivery failed { form: 'quote', category: 'fetch', provider_status: null }
+# Subtest: provider failures return sanitized 502 once and log only a bounded diagnostic
+ok 10 - provider failures return sanitized 502 once and log only a bounded diagnostic
+  ---
+  duration_ms: 4.056708
+  ...
+# HQC form delivery failed { form: 'quote', category: 'body', provider_status: undefined }
+# Subtest: ten-second timeout covers fetch and response body, without retries
+ok 11 - ten-second timeout covers fetch and response body, without retries
+  ---
+  duration_ms: 12.238583
+  ...
+# Subtest: valid previews return no-send 202, preserve validation and never need a receiver
+ok 12 - valid previews return no-send 202, preserve validation and never need a receiver
+  ---
+  duration_ms: 3.604958
+  ...
+# Subtest: discount page and embedded offer retain their distinct required fields and type compatibility
+ok 13 - discount page and embedded offer retain their distinct required fields and type compatibility
+  ---
+  duration_ms: 1.001333
+  ...
+# Subtest: invalid discount and feedback values do not reach a receiver
+ok 14 - invalid discount and feedback values do not reach a receiver
+  ---
+  duration_ms: 3.145917
+  ...
+# Subtest: legacy contact uses isolated receiver with a normalized discriminator and no sales fields
+ok 15 - legacy contact uses isolated receiver with a normalized discriminator and no sales fields
+  ---
+  duration_ms: 1.287666
+  ...
+# Subtest: current quick forms allow missing phone and notes and retain their page sources
+ok 16 - current quick forms allow missing phone and notes and retain their page sources
+  ---
+  duration_ms: 12.131417
+  ...
+# Subtest: classification preserves every existing quote field and normalizes metadata before tagging
+ok 17 - classification preserves every existing quote field and normalizes metadata before tagging
+  ---
+  duration_ms: 1.090583
+  ...
+# Subtest: residential route with never-seen-before forwards unconfirmed tags without rejecting intake
+ok 18 - residential route with never-seen-before forwards unconfirmed tags without rejecting intake
+  ---
+  duration_ms: 0.444625
+  ...
+# Subtest: residential route with Office Cleaning forwards unconfirmed tags without rejecting intake
+ok 19 - residential route with Office Cleaning forwards unconfirmed tags without rejecting intake
+  ---
+  duration_ms: 0.244125
+  ...
+# Subtest: current route aliases map to fixed service families without rewriting the submitted service
+ok 20 - current route aliases map to fixed service families without rewriting the submitted service
+  ---
+  duration_ms: 3.99775
+  ...
+# Subtest: the pure helper excludes non-sales input and returns independent arrays without mutation
+ok 21 - the pure helper excludes non-sales input and returns independent arrays without mutation
+  ---
+  duration_ms: 12.206542
+  ...
+# Subtest: every current routed service forwards the declared enquiry type and a fixed service family
+ok 22 - every current routed service forwards the declared enquiry type and a fixed service family
+  ---
+  duration_ms: 17.713709
+  ...
+# Subtest: routed membership excludes unrelated global aliases and unknown commercial services even for property buyers
+ok 23 - routed membership excludes unrelated global aliases and unknown commercial services even for property buyers
+  ---
+  duration_ms: 18.519791
+  ...
+# Subtest: legacy service IDs retain distinct tiers and never turn office plus flat into residential
+ok 24 - legacy service IDs retain distinct tiers and never turn office plus flat into residential
+  ---
+  duration_ms: 2.77525
+  ...
+# Subtest: quick forms require agreeing building and service signals and never guess from an area or free text
+ok 25 - quick forms require agreeing building and service signals and never guess from an area or free text
+  ---
+  duration_ms: 20.816916
+  ...
+# Subtest: discount classifications use only the normalized type and retain the legacy discount tag
+ok 26 - discount classifications use only the normalized type and retain the legacy discount tag
+  ---
+  duration_ms: 1.652917
+  ...
+# Subtest: client tag fields cannot reach the receiver and contact or feedback never carry sales classifications
+ok 27 - client tag fields cannot reach the receiver and contact or feedback never carry sales classifications
+  ---
+  duration_ms: 0.92725
+  ...
+# Subtest: arbitrary accepted service and property strings produce only bounded fallback tags
+ok 28 - arbitrary accepted service and property strings produce only bounded fallback tags
+  ---
+  duration_ms: 24.87325
+  ...
+# Subtest: src/pages/request-a-quote.astro: failures preserve input; preview neither resets nor converts; explicit acceptance converts
+ok 29 - src/pages/request-a-quote.astro: failures preserve input; preview neither resets nor converts; explicit acceptance converts
+  ---
+  duration_ms: 83.3565
+  ...
+# Subtest: src/pages/contact.astro: failures preserve input; preview neither resets nor converts; explicit acceptance converts
+ok 30 - src/pages/contact.astro: failures preserve input; preview neither resets nor converts; explicit acceptance converts
+  ---
+  duration_ms: 104.427125
+  ...
+# Subtest: Phase8 quote and contact acknowledge privacy visually; optional marketing is normalized and server version wins
+ok 31 - Phase8 quote and contact acknowledge privacy visually; optional marketing is normalized and server version wins
+  ---
+  duration_ms: 2.977667
+  ...
+# Subtest: Phase8 property and agency do not require commercial-only fields; commercial still does
+ok 32 - Phase8 property and agency do not require commercial-only fields; commercial still does
+  ---
+  duration_ms: 2.062666
+  ...
+# Subtest: legacy quick forms require actual privacy yes, independent of optional marketing
+ok 33 - legacy quick forms require actual privacy yes, independent of optional marketing
+  ---
+  duration_ms: 0.553208
+  ...
+# Subtest: all contact topics and private feedback strip the entire sales field union
+ok 34 - all contact topics and private feedback strip the entire sales field union
+  ---
+  duration_ms: 1.498041
+  ...
+# Subtest: explicit and legacy contact fail closed for missing or reused sales destinations, including normalized URLs
+ok 35 - explicit and legacy contact fail closed for missing or reused sales destinations, including normalized URLs
+  ---
+  duration_ms: 4.84125
+  ...
+# Subtest: unknown hosts are no-send even when configured with all production receivers
+ok 36 - unknown hosts are no-send even when configured with all production receivers
+  ---
+  duration_ms: 1.3965
+  ...
+# Subtest: quick sales enquiry remains sales when an optional message is present
+ok 37 - quick sales enquiry remains sales when an optional message is present
+  ---
+  duration_ms: 0.333083
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 545.853625
+TAP version 13
+# HQC form delivery failed { form: 'quote', category: 'http', provider_status: 307 }
+# Subtest: Cloudflare runtime accepts valid enquiries and refuses receiver redirects
+ok 1 - Cloudflare runtime accepts valid enquiries and refuses receiver redirects
+  ---
+  duration_ms: 451.027042
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1327.26325
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

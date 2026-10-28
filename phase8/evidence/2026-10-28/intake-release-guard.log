@@ -1,0 +1,10 @@
+Production: 48f4776d3d78a777b84aa27c9879f7c6b7327e1f; candidate: WORKTREE:41197011a853c4e55530fa4f220c38b36e470051
+26 deliberately divergent protected paths
+RECORDED: source-bound reconciliation and local test receipts; parent review still required. Parity is not verified.
+BLOCKED: production release requires separately reviewed operational evidence.
+  - Parent review, commit/push and fresh production/candidate ref readback
+  - Candidate build and browser/accessibility/customer-journey receipts
+  - Isolated CONTACT_FORM_WEBHOOK configuration and controlled receiver acceptance
+  - CRM contact/opportunity/tags, assignment, notifications and duplicate/failure evidence (parent-owned)
+  - Booking and service-dependent payment acceptance with provider authority
+  - Immutable candidate preview, A02/A05/A06/A07 evidence and Pedro acceptance
