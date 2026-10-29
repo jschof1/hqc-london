@@ -1,0 +1,17 @@
+name: Client revision controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  revision-controls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tools/client-revisions/check.test.mjs
+      - run: node tools/client-revisions/check.mjs

@@ -7,8 +7,8 @@
       "immutableDeploymentUrl": "https://828d0b90.hqc-london.pages.dev",
       "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
       "captureManifest": {
-        "commit": "69728bba7fcb82bf1dc2d5a62429b1832fc53a8d",
-        "path": "tools/photo-review/public/versions/manifest.json"
+        "commit": "af2ef9acd0a2ec2cdfa7b768fe7e684cb894be19",
+        "path": "revisions/versions.json"
       },
       "pages": {
         "home": {
@@ -74,8 +74,8 @@
       "immutableDeploymentUrl": "https://3ad5eef9.hqc-london.pages.dev",
       "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
       "captureManifest": {
-        "commit": "69728bba7fcb82bf1dc2d5a62429b1832fc53a8d",
-        "path": "tools/photo-review/public/versions/manifest.json"
+        "commit": "af2ef9acd0a2ec2cdfa7b768fe7e684cb894be19",
+        "path": "revisions/versions.json"
       },
       "pages": {
         "home": {
@@ -141,8 +141,8 @@
       "immutableDeploymentUrl": "https://09da7075.hqc-london.pages.dev",
       "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
       "captureManifest": {
-        "commit": "69728bba7fcb82bf1dc2d5a62429b1832fc53a8d",
-        "path": "tools/photo-review/public/versions/manifest.json"
+        "commit": "af2ef9acd0a2ec2cdfa7b768fe7e684cb894be19",
+        "path": "revisions/versions.json"
       },
       "pages": {
         "home": {
@@ -208,8 +208,8 @@
       "immutableDeploymentUrl": "https://8b5bf682.hqc-london.pages.dev",
       "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
       "captureManifest": {
-        "commit": "69728bba7fcb82bf1dc2d5a62429b1832fc53a8d",
-        "path": "tools/photo-review/public/versions/manifest.json"
+        "commit": "af2ef9acd0a2ec2cdfa7b768fe7e684cb894be19",
+        "path": "revisions/versions.json"
       },
       "pages": {
         "home": {

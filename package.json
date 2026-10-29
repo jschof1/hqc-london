@@ -5,7 +5,7 @@
   "description": "High Quality Cleaning London website with Astro and Tailwind CSS",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/inject-location-sitemap.mjs",
+    "build": "npm run check:revision && astro build && node scripts/inject-location-sitemap.mjs",
     "test:forms": "node scripts/verify-form-routing.mjs && node --test scripts/verify-form-submission.test.mjs && node --test scripts/verify-form-worker.test.mjs",
     "test:analytics": "node --test scripts/verify-posthog.test.mjs",
     "preview": "astro preview",
@@ -14,7 +14,11 @@
     "generate:single": "node scripts/generate-area-pages.js single",
     "list": "node scripts/generate-area-pages.js list",
     "validate": "node scripts/generate-area-pages.js validate",
-    "help": "node scripts/generate-area-pages.js"
+    "help": "node scripts/generate-area-pages.js",
+    "check:revision": "node tools/client-revisions/check.mjs",
+    "check:revision:scope": "node tools/client-revisions/check.mjs --scope",
+    "test:revisions": "node --test tools/client-revisions/check.test.mjs",
+    "build:review": "npm run check:revision:scope && astro build && node scripts/inject-location-sitemap.mjs"
   },
   "keywords": [
     "astro",
