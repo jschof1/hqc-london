@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "baseline": "48f4776d3d78a777b84aa27c9879f7c6b7327e1f",
+  "request": "Jack, 29 October 2026: keep visual version history current, prepare Pedro an email, and strictly preserve everything outside specifically requested client revisions using the client revision gauntlet.",
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "Make narrowly scoped revisions mandatory in AGENTS with cumulative preservation and independent review."
+    },
+    {
+      "id": "R2",
+      "text": "Mechanically reject unlisted files, unapproved deletions and stale website version evidence."
+    },
+    {
+      "id": "R3",
+      "text": "Keep the public site unchanged and the Phase 8 production release held."
+    }
+  ],
+  "allowedFiles": [
+    {
+      "path": "AGENTS.md",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "package.json",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": ".github/workflows/client-revisions.yml",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/client-revisions/check.mjs",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/client-revisions/check.test.mjs",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/client-revisions/README.md",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "revisions/current.json",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "revisions/versions.json",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false
+    }
+  ],
+  "preserve": [
+    "All customer website source, photos, copy, forms, CRM routing and tracking.",
+    "The Phase 8 production hold and existing photo review selections."
+  ],
+  "verification": [
+    "Guard unit tests and deliberate forbidden change/deletion/stale-version failures.",
+    "Exact customer application source comparison against baseline.",
+    "Independent review of implementation and policy."
+  ]
+}
