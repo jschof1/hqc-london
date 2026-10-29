@@ -5,7 +5,7 @@
   "description": "High Quality Cleaning London website with Astro and Tailwind CSS",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/check-phase8-release.mjs && astro build && node scripts/inject-location-sitemap.mjs",
+    "build": "npm run check:revision && node scripts/check-phase8-release.mjs && astro build && node scripts/inject-location-sitemap.mjs",
     "test:forms": "node scripts/verify-form-routing.mjs && node scripts/test-form-handlers.mjs && node --test scripts/verify-form-submission.test.mjs && node --test scripts/verify-form-worker.test.mjs",
     "preview": "astro preview",
     "astro": "astro",
@@ -18,7 +18,11 @@
     "test:phase8:browser": "node scripts/test-phase8-browser.mjs",
     "audit:phase8:seo": "node scripts/audit-phase8-seo.mjs",
     "test:analytics": "node --test scripts/verify-phase8-analytics.test.mjs",
-    "test:analytics:browser": "node scripts/test-analytics.mjs"
+    "test:analytics:browser": "node scripts/test-analytics.mjs",
+    "check:revision": "node tools/client-revisions/check.mjs",
+    "check:revision:scope": "node tools/client-revisions/check.mjs --scope",
+    "test:revisions": "node --test tools/client-revisions/check.test.mjs",
+    "build:review": "npm run check:revision:scope && node scripts/check-phase8-release.mjs && astro build && node scripts/inject-location-sitemap.mjs"
   },
   "keywords": [
     "astro",
