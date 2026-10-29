@@ -1,4 +1,6 @@
 import imageIds from './image-ids.json';
+import manifest from './public/versions/manifest.json';
+import { versionReview } from './version-review.js';
 const ids=new Set([...imageIds,...Array.from({length:6},(_,i)=>`hero-${i+1}`)]);
 const json=(value,status=200)=>new Response(JSON.stringify(value),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}});
 const secure=response=>{const r=new Response(response.body,response);for(const [k,v] of Object.entries({'X-Robots-Tag':'noindex, nofollow, noarchive, noimageindex','Referrer-Policy':'no-referrer','X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Cache-Control':'private, no-store','Content-Security-Policy':"default-src 'self'; img-src 'self' blob:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"}))r.headers.set(k,v);return r;};
@@ -17,9 +19,10 @@ export default {
    }
    const cookies=Object.fromEntries((request.headers.get('Cookie')||'').split(';').map(s=>s.trim().split('=')));
    const authenticated=env.REVIEW_KEY&&cookies.hqc_review===await digest(env.REVIEW_KEY);
-   const shell=['/','/index.html','/app.js','/style.css','/favicon.svg'].includes(u.pathname);
+   const shell=['/','/index.html','/app.js','/style.css','/favicon.svg','/versions/','/versions/index.html','/versions/app.js','/versions/style.css'].includes(u.pathname);
    if(!authenticated&&!shell)return secure(json({error:'Open your private review link to continue.'},401));
    if(u.pathname==='/api/review')return secure(await env.REVIEW.get(env.REVIEW.idFromName('pedro-may-2026')).fetch(request));
+   if(u.pathname==='/api/versions')return secure(await env.REVIEW.get(env.REVIEW.idFromName('pedro-website-versions-v1')).fetch(request));
    if(u.pathname.startsWith('/api/'))return secure(json({error:'Not found'},404));
    if(request.method!=='GET'&&request.method!=='HEAD')return secure(json({error:'Method not allowed'},405));
    return secure(await env.ASSETS.fetch(request));
@@ -29,6 +32,7 @@ export default {
 export class PhotoReview {
  constructor(ctx){this.ctx=ctx;}
  async fetch(request){
+  if(new URL(request.url).pathname==='/api/versions')return versionReview(request,this.ctx.storage,manifest);
   if(request.method==='GET')return json(await this.ctx.storage.get('review')||{entries:{},finishedAt:null});
   if(request.method!=='POST')return json({error:'Method not allowed'},405);
   const op=await body(request);

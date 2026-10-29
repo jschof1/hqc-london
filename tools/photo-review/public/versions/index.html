@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>HQC · Website versions</title>
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/versions/style.css">
+<script type="module" src="/versions/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#compare">Skip to comparison</a>
+<header class="topbar">
+  <a href="/versions/" class="brand" aria-label="HQC website version review">HQC<span>VERSION REVIEW</span></a>
+  <nav class="topnav" aria-label="Review areas">
+    <a href="/">Photo review</a>
+    <a href="/versions/" aria-current="page">Website versions</a>
+  </nav>
+  <span id="status" role="status" aria-live="polite">Private link required</span>
+</header>
+
+<main id="login">
+  <div class="intro">
+    <p class="eyebrow">HIGH QUALITY CLEAN</p>
+    <h1>Private review</h1>
+    <p>Open the private link Jack shared, or enter your review code below.</p>
+    <form id="login-form">
+      <label for="review-key">Review code</label>
+      <div class="login-row">
+        <input id="review-key" type="password" autocomplete="off" required>
+        <button class="primary" id="login-button">Open review</button>
+      </div>
+    </form>
+    <p id="login-error" role="alert"></p>
+  </div>
+</main>
+
+<main id="app" hidden>
+  <section class="intro">
+    <p class="eyebrow">WEBSITE VERSION HISTORY</p>
+    <h1>Your website, before and after.</h1>
+    <p>Compare saved versions and leave feedback on a specific page. Your comments stay with the version you reviewed.</p>
+  </section>
+
+  <details class="notice"><summary>About these saved captures</summary><p>These images show the page layout. Forms, CRM routing and payments need separate tests. All captures were made on 29 October from the recorded builds. Release notes explain changes that are not visible in screenshots.</p></details>
+
+  <div id="load-error" class="error" role="alert" hidden></div>
+  <p id="loading" class="loading" role="status">Loading version history…</p>
+
+  <div id="content" hidden>
+    <section id="compare" class="compare" aria-labelledby="compare-title" tabindex="-1">
+      <h2 id="compare-title" class="visually-hidden">Comparison</h2>
+      <div class="toolbar" role="group" aria-label="Comparison settings">
+        <div class="field">
+          <label for="before-select">Before</label>
+          <select id="before-select"></select>
+        </div>
+        <button type="button" id="swap" class="icon-button" aria-label="Swap before and after releases" title="Swap before and after">⇄</button>
+        <div class="field">
+          <label for="after-select">After</label>
+          <select id="after-select"></select>
+        </div>
+        <div class="field">
+          <label for="page-select">Page</label>
+          <select id="page-select"></select>
+        </div>
+        <fieldset class="segmented">
+          <legend>Screen</legend>
+          <label><input type="radio" name="view" value="desktop"><span>Desktop</span></label>
+          <label><input type="radio" name="view" value="mobile"><span>Mobile</span></label>
+        </fieldset>
+        <fieldset class="segmented">
+          <legend>Compare mode</legend>
+          <label><input type="radio" name="mode" value="side"><span>Side by side</span></label>
+          <label><input type="radio" name="mode" value="slider"><span>Slider</span></label>
+          <label><input type="radio" name="mode" value="toggle"><span>Toggle</span></label>
+        </fieldset>
+        <fieldset class="segmented zoom-controls">
+          <legend>Zoom</legend>
+          <label><input type="radio" name="zoom" value="fit" checked><span>Fit width</span></label>
+          <label><input type="radio" name="zoom" value="actual"><span>Actual size</span></label>
+        </fieldset>
+      </div>
+
+      <p id="same-warning" class="inline-note" role="status" hidden>The same release is selected on both sides, so there is nothing to compare.</p>
+
+
+
+      <div class="mode-controls" id="slider-controls" hidden>
+        <span aria-hidden="true">◀ Before</span>
+        <input type="range" id="slider" min="0" max="100" value="50" step="1" aria-label="Divider position between before and after">
+        <span aria-hidden="true">After ▶</span>
+      </div>
+      <div class="mode-controls" id="toggle-controls" hidden>
+        <fieldset class="segmented big">
+          <legend class="visually-hidden">Screenshot shown</legend>
+          <label><input type="radio" name="flip" value="before"><span>Show before</span></label>
+          <label><input type="radio" name="flip" value="after" checked><span>Show after</span></label>
+        </fieldset>
+        <span class="muted">Switch back and forth to spot differences. The scroll position stays put.</span>
+      </div>
+
+      <div id="stage" class="stage" tabindex="0" role="region" aria-label="Screenshot comparison. Scroll to read the full page."></div>
+      <p class="muted stage-hint">Scroll inside the frame to read the whole page. Both screenshots are top-aligned and move together. With a mouse, drag to pan when zoomed to actual size.</p>
+      <div class="releases" id="releases">
+        <article class="release" id="release-before" aria-labelledby="release-before-title"></article>
+        <article class="release" id="release-after" aria-labelledby="release-after-title"></article>
+      </div>
+    </section>
+
+    <section class="timeline-section" aria-labelledby="timeline-title">
+      <div class="section-head">
+        <h2 id="timeline-title">Release timeline</h2>
+        <p class="muted">Dates are release dates. Choose a release as the before or after side.</p>
+      </div>
+      <ol id="timeline" class="timeline"></ol>
+    </section>
+
+    <section class="comments" aria-labelledby="comments-title">
+      <div class="section-head">
+        <h2 id="comments-title">Comments</h2>
+        <button type="button" id="refresh" class="secondary">Refresh comments</button>
+      </div>
+      <div class="comments-layout">
+        <form id="comment-form" class="comment-form" novalidate>
+          <p class="bound" id="bound-label"></p>
+          <fieldset class="authors">
+            <legend>Posting as</legend>
+            <label><input type="radio" name="author" value="Pedro"><span>Pedro</span></label>
+            <label><input type="radio" name="author" value="Jack"><span>Jack</span></label>
+          </fieldset>
+          <p class="fine">Names are chosen here and are not verified. Anyone with the private link can post.</p>
+          <label for="comment-text">Your comment</label>
+          <textarea id="comment-text" maxlength="2000" rows="5" placeholder="What do you notice? What should change?"></textarea>
+          <div class="form-row">
+            <button class="primary" id="comment-save">Save comment</button>
+            <span id="comment-status" role="status" aria-live="polite"></span>
+          </div>
+          <p class="fine">Comments are added to the shared history and cannot be edited here. Nothing is approved or published from this page.</p>
+        </form>
+        <div class="comment-feed">
+          <div class="filter-row">
+            <label for="comment-filter">Show</label>
+            <select id="comment-filter">
+              <option value="here">This release and page</option>
+              <option value="release">This release, all pages</option>
+              <option value="all">All comments</option>
+            </select>
+            <span id="comment-count" class="muted" role="status"></span>
+          </div>
+          <div id="comment-error" class="error" role="alert" hidden></div>
+          <ol id="comment-list" class="comment-list"></ol>
+          <p id="comment-empty" class="muted empty" hidden>No comments here yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <ul id="manifest-notes"></ul>
+      <p>This page is unlisted and not indexed. Release links open a separate tab on a live deployment, which may have changed since the screenshots were taken.</p>
+    </footer>
+  </div>
+</main>
+</body>
+</html>

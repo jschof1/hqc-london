@@ -1,0 +1,321 @@
+{
+  "versions": [
+    {
+      "id": "live-oct29",
+      "label": "Current public site",
+      "date": "2026-10-21",
+      "captureDate": "2026-10-29",
+      "commit": "48f4776d3d78a777b84aa27c9879f7c6b7327e1f",
+      "deploymentUrl": "https://highqualityclean.co.uk",
+      "immutableDeploymentUrl": "https://828d0b90.hqc-london.pages.dev",
+      "kind": "live-capture",
+      "summary": "Public site captured on 29 October. Its source was published on 21 October.",
+      "changes": [
+        "Existing customer-facing website.",
+        "Compare its layout with the Phase 8 review candidate.",
+        "This saved capture will not change when the public site changes."
+      ],
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/live-oct29-home-desktop.jpg",
+            "width": 1440,
+            "height": 9496,
+            "sha256": "933e10661a4d5a832c04d13786c8b3a8540555da14cb19cbebbe26eff9d99ee5",
+            "capturedAt": "2026-10-29T11:36:31.263Z",
+            "sourceUrl": "https://highqualityclean.co.uk/"
+          },
+          "mobile": {
+            "src": "/versions/captures/live-oct29-home-mobile.jpg",
+            "width": 390,
+            "height": 16089,
+            "sha256": "71cd6e0df38cf48d160f147c4c2447634e537a19d95a55436a24b66919818763",
+            "capturedAt": "2026-10-29T11:36:34.822Z",
+            "sourceUrl": "https://highqualityclean.co.uk/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/live-oct29-quote-desktop.jpg",
+            "width": 1440,
+            "height": 2506,
+            "sha256": "18fb28ae40fe6f70534445c257ad6e3526c4d2e6062d0dcc54e96225548c5ded",
+            "capturedAt": "2026-10-29T11:36:35.604Z",
+            "sourceUrl": "https://highqualityclean.co.uk/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/live-oct29-quote-mobile.jpg",
+            "width": 390,
+            "height": 3923,
+            "sha256": "11567cf1ecd5141eac3bbc3a94b28bbf1a718f25e9b8c5038e8d0e2a7e5fac1a",
+            "capturedAt": "2026-10-29T11:36:36.250Z",
+            "sourceUrl": "https://highqualityclean.co.uk/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/live-oct29-how-desktop.jpg",
+            "width": 1440,
+            "height": 5412,
+            "sha256": "4f9eee0f2a1f0eb13621cff3dcc4a5a073087d314b3293f7f309711825918642",
+            "capturedAt": "2026-10-29T11:36:44.052Z",
+            "sourceUrl": "https://highqualityclean.co.uk/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/live-oct29-how-mobile.jpg",
+            "width": 390,
+            "height": 7815,
+            "sha256": "9f0831049a93f5c1d3ebc30bc4dbf052f4cdf6756d07021da9aeb210cfd1417f",
+            "capturedAt": "2026-10-29T11:36:45.511Z",
+            "sourceUrl": "https://highqualityclean.co.uk/how-we-work/"
+          }
+        }
+      },
+      "provenance": "Captured from the public site on 29 October; source deployment verified in Cloudflare."
+    },
+    {
+      "id": "oct14",
+      "label": "14 October review",
+      "date": "2026-10-14",
+      "captureDate": "2026-10-29",
+      "commit": "79c3d91d705a28fb637a53276363925ab17612b9",
+      "deploymentUrl": "https://3ad5eef9.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://3ad5eef9.hqc-london.pages.dev",
+      "kind": "review",
+      "summary": "Phase 8 checkpoint with the natural founder portrait and separate client evidence.",
+      "changes": [
+        "Founder portrait and client evidence separated.",
+        "This is a review checkpoint, not a launch approval."
+      ],
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/oct14-home-desktop.jpg",
+            "width": 1440,
+            "height": 13037,
+            "sha256": "14452af57f1cdb19225cc8290e77bccc8a28bc83425c75884a83c846b96abe42",
+            "capturedAt": "2026-10-29T11:34:39.232Z",
+            "sourceUrl": "https://3ad5eef9.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct14-home-mobile.jpg",
+            "width": 390,
+            "height": 21897,
+            "sha256": "202242ab0d2c95caae72250590342c626cbcda7ad37b975dbfc8fed03702ebf5",
+            "capturedAt": "2026-10-29T11:34:43.835Z",
+            "sourceUrl": "https://3ad5eef9.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/oct14-quote-desktop.jpg",
+            "width": 1440,
+            "height": 2582,
+            "sha256": "dae279a26baeffc00671bf519c95df30a6aeb35c1711c88240665799955693f7",
+            "capturedAt": "2026-10-29T11:34:44.819Z",
+            "sourceUrl": "https://3ad5eef9.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct14-quote-mobile.jpg",
+            "width": 390,
+            "height": 4134,
+            "sha256": "5347a3ab2ff709ba734847b04132528ad90ca1a1a82b89ced425bb97b80f1eef",
+            "capturedAt": "2026-10-29T11:34:45.422Z",
+            "sourceUrl": "https://3ad5eef9.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/oct14-how-desktop.jpg",
+            "width": 1440,
+            "height": 10405,
+            "sha256": "baa95dcf4c6b447012ccf70e67ce7a405eac875fc227558d3bde7c93583fddcd",
+            "capturedAt": "2026-10-29T11:34:53.248Z",
+            "sourceUrl": "https://3ad5eef9.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct14-how-mobile.jpg",
+            "width": 390,
+            "height": 14074,
+            "sha256": "04390ddf8e7e11779c7d3cdad94ca20b63dd26e591a1150f03f49097d4f15937",
+            "capturedAt": "2026-10-29T11:34:55.175Z",
+            "sourceUrl": "https://3ad5eef9.hqc-london.pages.dev/how-we-work/"
+          }
+        }
+      },
+      "provenance": "Captured on 29 October from this fixed Cloudflare deployment. Original assets were loaded at capture time."
+    },
+    {
+      "id": "oct20",
+      "label": "20 October review",
+      "date": "2026-10-20",
+      "captureDate": "2026-10-29",
+      "commit": "41197011a853c4e55530fa4f220c38b36e470051",
+      "deploymentUrl": "https://09da7075.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://09da7075.hqc-london.pages.dev",
+      "kind": "review",
+      "summary": "Cumulative review checkpoint. The selected pages retain the 14 October visual layout.",
+      "changes": [
+        "Earlier visual changes retained.",
+        "Release evidence and remaining requirements recorded separately.",
+        "Matching screenshots can look identical across these checkpoints."
+      ],
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/oct20-home-desktop.jpg",
+            "width": 1440,
+            "height": 13037,
+            "sha256": "48961f5f0e45a8d260f66ae401533db8b68dff8b6f8691745f9568da7326bb7f",
+            "capturedAt": "2026-10-29T11:35:17.770Z",
+            "sourceUrl": "https://09da7075.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct20-home-mobile.jpg",
+            "width": 390,
+            "height": 21897,
+            "sha256": "202242ab0d2c95caae72250590342c626cbcda7ad37b975dbfc8fed03702ebf5",
+            "capturedAt": "2026-10-29T11:35:21.222Z",
+            "sourceUrl": "https://09da7075.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/oct20-quote-desktop.jpg",
+            "width": 1440,
+            "height": 2582,
+            "sha256": "fad4776e29b85c9dfb57027ae98998fef1d600f96d0c5ae724e8ed284dc4eb4b",
+            "capturedAt": "2026-10-29T11:35:22.095Z",
+            "sourceUrl": "https://09da7075.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct20-quote-mobile.jpg",
+            "width": 390,
+            "height": 4134,
+            "sha256": "cd9c2b5fc0bfb9b569e7b205c906f18835fd265f1032d15ba2003b391b341f1f",
+            "capturedAt": "2026-10-29T11:35:22.654Z",
+            "sourceUrl": "https://09da7075.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/oct20-how-desktop.jpg",
+            "width": 1440,
+            "height": 10405,
+            "sha256": "baa95dcf4c6b447012ccf70e67ce7a405eac875fc227558d3bde7c93583fddcd",
+            "capturedAt": "2026-10-29T11:35:35.409Z",
+            "sourceUrl": "https://09da7075.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct20-how-mobile.jpg",
+            "width": 390,
+            "height": 14074,
+            "sha256": "04390ddf8e7e11779c7d3cdad94ca20b63dd26e591a1150f03f49097d4f15937",
+            "capturedAt": "2026-10-29T11:35:37.158Z",
+            "sourceUrl": "https://09da7075.hqc-london.pages.dev/how-we-work/"
+          }
+        }
+      },
+      "provenance": "Captured on 29 October from this fixed Cloudflare deployment. Original assets were loaded at capture time."
+    },
+    {
+      "id": "oct28",
+      "label": "28 October candidate",
+      "date": "2026-10-28",
+      "captureDate": "2026-10-29",
+      "commit": "1cf7d4f96c8b7ebb413ca8839785b04fafc5257c",
+      "deploymentUrl": "https://8b5bf682.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://8b5bf682.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "Latest reconciled Phase 8 application candidate, awaiting acceptance and production approval.",
+      "changes": [
+        "Website intake reconciled with the newer production safeguards.",
+        "Source checks cover enquiry classifications and preview submission handling.",
+        "These page captures cannot prove CRM routing or a complete booking journey."
+      ],
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/oct28-home-desktop.jpg",
+            "width": 1440,
+            "height": 13037,
+            "sha256": "ce19f60260d4dacace792b3ea832effe7eb453835cc0aed72bc031f49983c8cb",
+            "capturedAt": "2026-10-29T11:35:55.892Z",
+            "sourceUrl": "https://8b5bf682.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct28-home-mobile.jpg",
+            "width": 390,
+            "height": 21897,
+            "sha256": "4b58ee97288a02a222ce681812271bfa0d471d47ebe9db0c3f083e66942d210b",
+            "capturedAt": "2026-10-29T11:35:59.179Z",
+            "sourceUrl": "https://8b5bf682.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/oct28-quote-desktop.jpg",
+            "width": 1440,
+            "height": 2582,
+            "sha256": "dae279a26baeffc00671bf519c95df30a6aeb35c1711c88240665799955693f7",
+            "capturedAt": "2026-10-29T11:36:00.030Z",
+            "sourceUrl": "https://8b5bf682.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct28-quote-mobile.jpg",
+            "width": 390,
+            "height": 4134,
+            "sha256": "ead2da9de57682fc21a78a7264389d429cb3f37afd98a451db8be8ddcdc4c9e1",
+            "capturedAt": "2026-10-29T11:36:00.626Z",
+            "sourceUrl": "https://8b5bf682.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/oct28-how-desktop.jpg",
+            "width": 1440,
+            "height": 10405,
+            "sha256": "baa95dcf4c6b447012ccf70e67ce7a405eac875fc227558d3bde7c93583fddcd",
+            "capturedAt": "2026-10-29T11:36:07.910Z",
+            "sourceUrl": "https://8b5bf682.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/oct28-how-mobile.jpg",
+            "width": 390,
+            "height": 14074,
+            "sha256": "04390ddf8e7e11779c7d3cdad94ca20b63dd26e591a1150f03f49097d4f15937",
+            "capturedAt": "2026-10-29T11:36:10.210Z",
+            "sourceUrl": "https://8b5bf682.hqc-london.pages.dev/how-we-work/"
+          }
+        }
+      },
+      "provenance": "Captured on 29 October from this fixed Cloudflare deployment. Original assets were loaded at capture time."
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "label": "Homepage",
+      "path": "/"
+    },
+    {
+      "id": "quote",
+      "label": "Request a quote",
+      "path": "/request-a-quote/"
+    },
+    {
+      "id": "how",
+      "label": "How it works",
+      "path": "/how-we-work/"
+    }
+  ],
+  "defaultBefore": "live-oct29",
+  "defaultAfter": "oct28",
+  "notes": [
+    "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
+    "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
+    "Earlier October layouts may look identical because subsequent work concerned controls and evidence.",
+    "Review comments are shared by Pedro and Jack. Author names are chosen labels, not verified identities.",
+    "The earlier May source is retained elsewhere, but no May page capture is included in this comparison."
+  ]
+}
