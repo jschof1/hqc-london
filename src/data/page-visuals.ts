@@ -11,7 +11,7 @@ export type PageVisual = {
 // Real HQC library photographs Pedro marked "keep" in the photo review
 // (WA0016 p-ae4372f37d, WA0015 p-2267193ade, WA0062 p-1ef63f3b16); brightness-only enhancement.
 const hqcLibraryGallery = [
-  { src: '/images/phase8-nov6/old-living-room-wide-1536.webp', alt: 'Open-plan living area with a light sofa and an adjoining kitchen.', hqc: true },
+  { src: '/images/phase8-nov6/old-living-room-wide-1536.webp', alt: 'Bedroom with a double bed, bedside lamps and full-height curtains.', hqc: true },
   { src: '/images/phase8-nov6/old-living-room-1536.webp', alt: 'Living area with a dining table, sofa and wide windows.', hqc: true },
   { src: '/images/phase8-nov6/old-approved-window-cleaning-1079.webp', alt: 'Cleaner wiping window shutters inside a property.', hqc: true }
 ];
