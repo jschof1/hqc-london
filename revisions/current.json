@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "baseline": "bba20b9feb1ba841eb16ba4fe64338a638eed603",
-  "request": "Jack's round 4 instruction of 6 November 2026: fix the page hero images too (W6/W8), replacing every hero that uses a photo Pedro marked skip, in the order keep photo with a fitting note, then a 6 Nov generated image; add a check that no hero or gallery uses a skip photo. Cumulative source: Pedro Ndombasi and Jack Schofield meeting of 6 November 2026; packets ef2dee1, 7c88934, 6da5ffb.",
+  "baseline": "f8d65610454ab1029422685d7c827a5a52cdf803",
+  "request": "Jack's round 5 instruction of 6 November 2026 after the third independent Codex review (private: reports/website-independent-review-round3.md, review3-evidence/): fix B1 provenance presentation, S1 alt text and S3 console capture; S2 left as recorded history. Cumulative source: Pedro Ndombasi and Jack Schofield meeting of 6 November 2026; packets ef2dee1, 7c88934, 6da5ffb, 6021b0f.",
   "requirements": [
     {
       "id": "M0",
-      "text": "Scope amendment for round 4. Earlier requirements N1-N12 (ef2dee1), M1-M9 (7c88934) and B1 (6da5ffb) stay in force in the cumulative acceptance matrix; this packet governs changes since bba20b9."
+      "text": "Scope amendment for round 5 after the third independent Codex review. Earlier requirements N1-N12 (ef2dee1), M1-M9 (7c88934), B1 (6da5ffb) and H1-H3 (6021b0f) stay in force in the cumulative acceptance matrix; this packet governs changes since f8d6561. Review finding S2 (guard prerequisite committed before the first packet) is recorded history and git is not rewritten."
     },
     {
-      "id": "H1",
-      "text": "W6/W8 (Jack, round 4): every served page hero that uses a photo Pedro marked skip is replaced. Audit of all served routes found seven: /communal-area-cleaning-london/ (WA0032 p-1c2e67957d), /estate-letting-agent-cleaning-london/ (WA0026 p-a36cdd0968), /move-in-void-property-cleaning-london/ (WA0030 p-4567370ba5), /end-of-tenancy-cleaning-london/ (WA0027 p-8effbd393f), /post-construction-cleaning-london/ (WA0033 p-0f28ac1d4f), /portfolio-cleaning-support-london/ (WA0024 p-cf8f6d1f35), /move-in-cleaning-london/ (IMG-20250813-WA0015 p-a758fcfb12). Legacy pages that reference skip images (/process, /why-us, /case-studies, /services/*) are redirected and never served. Replacements follow Jack's order: (a) a Pedro keep photo whose saved note fits the page, else (b) a 6 Nov generated hero/section image fitting the offering. Planned: estate & letting p-302026958a townhouse; void p-71604da63b hallway; end of tenancy p-de8736bfb6 letting room; post-construction p-ea4f54d324 bathroom (post construction/renovation); portfolio p-5ace2161c5 living room (managed properties, portfolios and projects); move-in p-1a211e6792 mews (move in/out); communal generated complex-a (no keep note fits communal areas; the images report designates complex-a as the communal hero). Hero alt text describes what is shown; generated hero alt starts 'Illustrative'. Hero wording never claims the image shows HQC work. hero-2 and hero-3 stay off the homepage (homepage unchanged)."
+      "id": "P1",
+      "text": "Review B1 (blocker): no image is presented as HQC work unless Pedro has confirmed it is his own job and that it may be published. A single list, confirmedHqcPhotoIds in src/data/page-visuals.ts, starts empty; the library photos p-ae4372f37d (bedroom), p-2267193ade (living area) and p-1ef63f3b16 (shutter dusting), whose inventory says 'project and permission to be confirmed', are therefore shown as illustrative: every gallery (including /reviews-case-studies/) uses the neutral captioned 'Illustrative images' presentation, the section images captioned, and the homepage 'Evidence, not adjectives / The work should be visible' images captioned neutrally while its copy stays. Adding an ID to the list later switches that photo back to 'HQC work' everywhere. The illustrative gallery note is reworded so it does not claim library photos are not HQC's ('not presented as records of specific HQC jobs')."
     },
     {
-      "id": "H2",
-      "text": "Avoid showing the same photo twice on a page: each of the six (a)-hero pages gets a gallery of Pedro's keep photos that excludes its hero image (galleries stay illustrative, captioned); communal's section image after 'Clean Shared Spaces Support a Better-Managed Building' changes from complex-a to complex-b because complex-a becomes its hero."
+      "id": "P2",
+      "text": "Review S1: every generated or unverified image's alt text is a literal scene description with no cleaning-result or purpose claim, found by auditing all rendered alts on every served route (homepage route cards, page heroes and galleries, contact hero, East London and areas galleries, section images, and the CTABanner stock image on /disclaimer/)."
     },
     {
-      "id": "H3",
-      "text": "Verification: a content check over every served route (sitemap plus server-rendered pages) fails if any page hero or gallery, or any rendered image, uses a skip-marked photo."
+      "id": "P3",
+      "text": "Review S3: Playwright console capture (console messages, page errors, failed requests, 4xx/5xx) on the 15 QA pages at 1440 and 390 on the new preview; logs saved privately. Pre-change capture on 48f328e4 found zero errors, so no console fix is in scope."
     }
   ],
   "allowedFiles": [
@@ -32,19 +32,53 @@
     {
       "path": "src/data/page-visuals.ts",
       "requirements": [
-        "H1",
-        "H2"
+        "P1",
+        "P2"
       ],
       "allowDelete": false,
-      "reason": "Hero image and alt for the seven pages; per-page galleries excluding each hero."
+      "reason": "confirmedHqcPhotoIds flag; library photos unflagged; literal hero and gallery alts."
     },
     {
       "path": "src/data/section-imagery.ts",
       "requirements": [
-        "H2"
+        "P1",
+        "P2"
       ],
       "allowDelete": false,
-      "reason": "Communal section image complex-a -> complex-b to avoid repeating the new hero."
+      "reason": "Library section images captioned unless confirmed; literal alts."
+    },
+    {
+      "path": "src/pages/index.astro",
+      "requirements": [
+        "P1",
+        "P2"
+      ],
+      "allowDelete": false,
+      "reason": "Evidence-section images captioned via the flag; literal route-card alts."
+    },
+    {
+      "path": "src/components/OutcomePage.astro",
+      "requirements": [
+        "P1"
+      ],
+      "allowDelete": false,
+      "reason": "Accurate illustrative-gallery note."
+    },
+    {
+      "path": "src/pages/contact.astro",
+      "requirements": [
+        "P2"
+      ],
+      "allowDelete": false,
+      "reason": "Literal hero image alt."
+    },
+    {
+      "path": "src/components/CTABanner.astro",
+      "requirements": [
+        "P2"
+      ],
+      "allowDelete": false,
+      "reason": "Literal alt for the stock image rendered on /disclaimer/ (new to the packet)."
     }
   ],
   "preserve": [
@@ -54,12 +88,13 @@
     "Public phone link tel:+442088703925 and display 0208 870 3925; the 07427 forwarding mobile is never displayed; AGENTS.md unchanged.",
     "Desktop homepage hero layout (lg and up) unchanged.",
     "CI workflow, Pages build command and build scripts unchanged; Phase 8 production hold; no merge to main; review room and revisions/versions.json not updated in this round.",
-    "Homepage, contact and every page hero not using a skip photo are unchanged in this round."
+    "Homepage, contact and every page hero not using a skip photo are unchanged in this round.",
+    "All copy, CTAs, layouts and image choices outside the listed provenance captions and alt text are unchanged in this round."
   ],
   "verification": [
-    "npm run check:revision:scope; npm run test:revisions; npm run test:forms; release, analytics and intake node tests; npm run build:review; scripts/test-phase8-audit.mjs on the preview.",
-    "All earlier content checks plus the new all-route skip-photo check pass on the preview; HTML diff against the previous preview changes only the seven named pages.",
-    "Desktop 1440 and mobile 390 screenshots of the seven changed pages on the new immutable preview.",
-    "Fresh independent re-review before any review-room update or handover."
+    "check:revision:scope; test:revisions; test:forms; release, analytics and intake tests; build:review; test-phase8-audit.mjs; skip-photo scan; content checks updated for P1.",
+    "Rendered alt audit on every served route shows no cleaning-result or purpose claim on generated or unverified images; no 'HQC work' heading anywhere while confirmedHqcPhotoIds is empty.",
+    "Playwright console capture on 15 QA pages at 1440 and 390 on the new preview.",
+    "Screenshots of changed pages on the new preview; fresh quick check by Jack before review-room publication."
   ]
 }
