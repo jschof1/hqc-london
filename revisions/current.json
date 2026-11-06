@@ -1,86 +1,124 @@
 {
   "schemaVersion": 1,
-  "baseline": "69728bba7fcb82bf1dc2d5a62429b1832fc53a8d",
-  "request": "Jack, 29 October 2026: keep visual version history current, prepare Pedro an email, and strictly preserve everything outside specifically requested client revisions using the client revision gauntlet.",
+  "baseline": "dbab23a4c2f9a4f50eb1e140ce603cd6a007ca2f",
+  "request": "Jack, 6 November 2026: after his check of preview de1fdf73, register the 6 Nov meeting revisions for handover by appending a version to the review room (AGENTS.md 'Keep visual versions ready'; tools/photo-review/VERSION_REVIEW.md). Source commit 39518d62cbad5018ee63d9d7ebecfd90a9bf4a45 on client-win/hqc-phase8-nov6-revisions; immutable deployment https://de1fdf73.hqc-london.pages.dev. Review candidate, not launched.",
   "requirements": [
     {
-      "id": "R1",
-      "text": "Make narrowly scoped revisions mandatory in AGENTS with cumulative preservation and independent review."
+      "id": "V1",
+      "text": "Append version 'nov6-revisions' (label '6 Nov meeting revisions — review candidate, not launched') with exact source commit, immutable deployment, dated 1440 and 390 captures of Home, Request a Quote, How We Work, Contact and End of Tenancy, plain-English change notes and outstanding items; capture time recorded separately from the release date. Add page entries for Contact and End of Tenancy; earlier versions keep them absent (missing-image state)."
     },
     {
-      "id": "R2",
-      "text": "Mechanically reject unlisted files, unapproved deletions and stale website version evidence."
+      "id": "V2",
+      "text": "Never overwrite or delete earlier versions, capture files, notes, comments or photo selections: earlier manifest entries stay byte-for-byte equal; a note is appended; defaultAfter points to the newest version."
     },
     {
-      "id": "R3",
-      "text": "Keep the public site unchanged and the Phase 8 production release held."
+      "id": "V3",
+      "text": "Record capture method and per-file evidence in tools/photo-review/evidence/version-captures-20261106.json; deploy only the review Worker with its existing config and --keep-vars; read back the hosted room."
     }
   ],
   "allowedFiles": [
     {
-      "path": "AGENTS.md",
-      "requirements": [
-        "R1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "package.json",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": ".github/workflows/client-revisions.yml",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/check.mjs",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/check.test.mjs",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/README.md",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
       "path": "revisions/current.json",
       "requirements": [
-        "R2"
+        "V3"
       ],
       "allowDelete": false
     },
     {
-      "path": "revisions/versions.json",
+      "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "R2"
+        "V1",
+        "V2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/evidence/version-captures-20261106.json",
+      "requirements": [
+        "V3"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-home-desktop.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-home-mobile.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-quote-desktop.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-quote-mobile.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-how-desktop.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-how-mobile.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-contact-desktop.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-contact-mobile.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-tenancy-desktop.jpg",
+      "requirements": [
+        "V1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-revisions-tenancy-mobile.jpg",
+      "requirements": [
+        "V1"
       ],
       "allowDelete": false
     }
   ],
   "preserve": [
-    "All customer website source, photos, copy, forms, CRM routing and tracking.",
-    "The Phase 8 production hold and existing photo review selections."
+    "Earlier review versions (live-oct29, oct14, oct20, oct28), their capture files and notes text.",
+    "Photo-review data, photo selections (pedro-may-2026 / review) and website comments (pedro-website-versions-v1 / discussion) in Durable Object storage.",
+    "Worker code, wrangler config, secrets, Durable Object binding, namespace and migration.",
+    "Customer website source and revisions/versions.json on this branch; the branch is not merged anywhere."
   ],
   "verification": [
-    "Guard unit tests and deliberate forbidden change/deletion/stale-version failures.",
-    "Exact customer application source comparison against baseline.",
-    "Independent review of implementation and policy."
+    "node tools/photo-review/check-version-captures.mjs; node --test tools/photo-review/version-review.test.mjs; node tools/client-revisions/check.mjs.",
+    "Local Worker run: /versions/ shows the new version, images load, slider/toggle work, older versions show the missing-image state for the new pages.",
+    "Hosted read-back after deploy: manifest lists five versions, earlier entries unchanged, all capture images load with matching hashes, /api/review and /api/versions unchanged from the pre-deploy backup."
   ]
 }
