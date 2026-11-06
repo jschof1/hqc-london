@@ -18,11 +18,24 @@ const hqcLibraryGallery = [
 
 const homeGallery = hqcLibraryGallery;
 
-const propertyGallery = [
-  { src: '/images/instock/IMG-20250813-WA0024.jpg', alt: 'Vacant London property prepared for handover', hqc: true },
-  { src: '/images/instock/IMG-20250813-WA0027.jpg', alt: 'Clean empty room ready for occupation', hqc: true },
-  { src: '/images/instock/IMG-20250813-WA0033.jpg', alt: 'Finished kitchen following property cleaning', hqc: true }
-];
+// Round 3 (B1): Pedro marked the earlier library photos WA0024, WA0027 and WA0033 "skip",
+// so they are not shown. These replacements are his "keep" choices matched to his notes.
+// The inventory classifies them as archived site images or stock, not HQC project photos,
+// so they are deliberately not flagged hqc and the gallery renders as illustrative.
+const keepPhotos = {
+  ensuite: { src: '/images/luxury-home/luxurious-kensington-ensuite.png', alt: 'Bathroom with a double vanity and large mirrors.' }, // p-51ee039643 managed properties, portfolios and projects
+  livingRoom: { src: '/images/luxury-home/richmond-living-room.png', alt: 'Living room with a fireplace, sofas and a bay window.' }, // p-5ace2161c5 managed properties, portfolios and projects
+  hallway: { src: '/images/luxury-home/mayfair-home-hallway.png', alt: 'Hallway with a herringbone floor and blue panelled walls.' }, // p-71604da63b estate and letting agents
+  townhouse: { src: '/images/luxury-home/belgravia-stonework.png', alt: 'Georgian townhouse entrance with railings and front steps.' }, // p-302026958a estate and letting agents
+  bathroom: { src: '/images/phase8-nov6/keep-p-ea4f54d324.jpg', alt: 'Bright bathroom with a freestanding bath and basin.' }, // p-ea4f54d324 post construction/renovation (Unsplash stock)
+  mews: { src: '/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png', alt: 'Brick mews house with window boxes and a black front door.' }, // p-1a211e6792 move in/out (retitled)
+  armchair: { src: '/images/phase8-nov6/keep-p-de8736bfb6.jpg', alt: 'Living room with a yellow armchair and a floor lamp.' } // p-de8736bfb6 letting agents (Unsplash stock)
+};
+
+const propertyGallery = [keepPhotos.livingRoom, keepPhotos.ensuite, keepPhotos.hallway];
+const lettingGallery = [keepPhotos.armchair, keepPhotos.hallway, keepPhotos.townhouse];
+const moveInGallery = [keepPhotos.mews, keepPhotos.armchair, keepPhotos.hallway];
+const postConstructionGallery = [keepPhotos.bathroom, keepPhotos.ensuite, keepPhotos.livingRoom];
 
 const commercialGallery = [
   { src: '/images/generated/hqc-office-hero.png', alt: 'Illustrative London meeting room prepared for the working day' },
@@ -59,28 +72,28 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   'estate-letting-agent-cleaning-london': {
     hero: '/images/instock/IMG-20250813-WA0026.jpg',
     heroAlt: 'Vacant London property cleaned for marketing and handover',
-    gallery: propertyGallery,
+    gallery: lettingGallery,
     outcomes: ['Properties ready for viewings', 'Faster instruction-to-handover route', 'One contact for repeat requirements'],
     scope: ['Void and move-in cleans', 'End of tenancy requirements', 'Access, inventories and deadline coordination']
   },
   'move-in-void-property-cleaning-london': {
     hero: '/images/instock/IMG-20250813-WA0030.jpg',
     heroAlt: 'Empty property cleaned before a new occupant moves in',
-    gallery: propertyGallery,
+    gallery: lettingGallery,
     outcomes: ['A clean baseline before occupation', 'A handover-ready property', 'Condition concerns identified early'],
     scope: ['Empty-room and fitted-surface cleaning', 'Kitchen and bathroom reset', 'Inside cupboards and agreed appliances']
   },
   'end-of-tenancy-cleaning-london': {
     hero: '/images/instock/IMG-20250813-WA0027.jpg',
     heroAlt: 'Empty London room prepared for end-of-tenancy handover',
-    gallery: propertyGallery,
+    gallery: lettingGallery,
     outcomes: ['A documented handover standard', 'Attention to inventory-sensitive areas', 'A realistic scope for the condition'],
     scope: ['Kitchen, bathrooms and living areas', 'Inside agreed cupboards and appliances', 'Access, parking and key deadlines']
   },
   'post-construction-cleaning-london': {
     hero: '/images/instock/IMG-20250813-WA0033.jpg',
     heroAlt: 'Newly completed kitchen after a post-construction clean',
-    gallery: propertyGallery,
+    gallery: postConstructionGallery,
     outcomes: ['Dust removed in planned stages', 'Finishes prepared for inspection', 'A defined snagging and handover point'],
     scope: ['Build dust and surface residue', 'High-level and detailed finishing', 'Programme, other trades and safe access']
   },
@@ -137,7 +150,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   'move-in-cleaning-london': {
     hero: '/images/instock/IMG-20250813-WA0015.jpg',
     heroAlt: 'Clean empty room ready for a household to move in',
-    gallery: propertyGallery,
+    gallery: moveInGallery,
     outcomes: ['A clean start before belongings arrive', 'Kitchen and bathroom confidence', 'A clear completion point before move day'],
     scope: ['Move date and access window', 'Empty or partly furnished condition', 'Cupboards, appliances and priority areas']
   },
