@@ -1,47 +1,15 @@
 {
   "schemaVersion": 1,
-  "baseline": "c298746c43ee55da7e7adafd6d4a02d8013cf188",
-  "request": "Jack's repair instructions of 6 November 2026 after the independent Codex review (private evidence: hqc-20261106-actions reports/website-independent-review.md and review-evidence/), answering the implementation questions (a) previews via manual build:review, (b) fix the guard for bracketed paths, (c) update the popup audit test, and directing fixes for review findings 1-6. Cumulative source request: Pedro Ndombasi and Jack Schofield meeting of 6 November 2026 (W2-W11), packet ef2dee1.",
+  "baseline": "055eeafc996610857cc31d6bdeb7590fdefb6fd7",
+  "request": "Jack's round 3 instruction of 6 November 2026 after the second independent Codex re-review (private evidence: hqc-20261106-actions reports/website-independent-review-round2.md and review2-evidence/): fix blocker B1 within the existing M5/W6 authority. Cumulative source: Pedro Ndombasi and Jack Schofield meeting of 6 November 2026 (W2-W11), packets ef2dee1 and 7c88934.",
   "requirements": [
     {
       "id": "M0",
-      "text": "Scope amendment after the independent Codex review of c298746 (FAIL for handover). Earlier accepted requirements N1-N12 (packet ef2dee1) stay in force and remain in the cumulative acceptance matrix (private reports/website-acceptance-matrix.csv); this packet only governs changes since c298746."
+      "text": "Scope amendment for round 3 after the second independent Codex review (only blocker B1). Earlier requirements N1-N12 (packet ef2dee1) and M1-M9 (packet 7c88934) stay in force and remain in the cumulative acceptance matrix; this packet only governs changes since 055eeaf."
     },
     {
-      "id": "M1",
-      "text": "Jack decision (b): let the revision guard accept exact paths containing literal square brackets (for example src/pages/[slug].astro). Matching stays an exact string lookup, never a pattern; other glob characters and backslashes stay rejected. Needed because Astro dynamic routes cannot otherwise be scoped."
-    },
-    {
-      "id": "M2",
-      "text": "Jack decision (c): update scripts/test-phase8-audit.mjs so its popup checks expect no Essential Clean offer modal (W3), instead of asserting the removed modal appears. Its 'contact-route' check currently asserts no wa.me link at all on /contact/, which contradicts the approved W10 assessment-media button (N11); it is updated to expect only https://wa.me/447824390336 and no landline wa.me link."
-    },
-    {
-      "id": "M3",
-      "text": "Review finding 1 (blocker, W2): restore the agreed outcome-page meta descriptions from the copy documents through a separate metaDescription field passed to Layout by src/pages/[slug].astro. The shared description field, Service schema and visible body copy stay unchanged; Layout's derived WebPage description follows the meta description, as on every other page."
-    },
-    {
-      "id": "M4",
-      "text": "Review finding 2 (W2): restore the agreed closing Primary/Secondary CTA pairs on outcome pages (for example move-in 'Send Property Details', essential-clean 'Find My Service'). The importer records the closing pair; OutcomePage renders the secondary beside the existing primary. 28 Sep Release Pack section 15 hero overrides are kept and applied where a closing label repeats an overridden hero label (Essential Clean, Deep Clean, Why Choose HQC, About)."
-    },
-    {
-      "id": "M5",
-      "text": "Review finding 4 (blocker, W6/W7): no generated or unverified image may sit under the 'HQC work / Real spaces. Visible care. / HQC project library' gallery or the homepage 'The work should be visible' section. Swap to Pedro's photo-review 'keep' real library photos (enhanced, brightness only: WA0015 p-2267193ade, WA0016 p-ae4372f37d, WA0062 p-1ef63f3b16 which is hero-3 and therefore not used on the homepage). Where no suitable real photo exists (workplace, area and East London galleries) the gallery heading no longer claims HQC work and images are captioned 'Illustrative image'. No before/after claims."
-    },
-    {
-      "id": "M6",
-      "text": "Review finding 3 (W5): on mobile only, show the three offerings as a compact strip directly after the H1 so they are visible on the first 390x844 screen; desktop (lg and up) layout unchanged; text contrast stays at least WCAG AA."
-    },
-    {
-      "id": "M7",
-      "text": "Review finding 6 (record only, no file change): cleaning-prices secondary CTA 'Book an Essential Clean™' -> /book-essential-clean/ follows Batch 4 metadata line 309; the Batch 4 hero line instruction 'Check Essential Clean™ Pricing' conflicts and is recorded for Pedro to confirm."
-    },
-    {
-      "id": "M8",
-      "text": "Review finding 5 (record only, no file change): keep tel:+442088703925, the correct international form of 0208 870 3925. The '+44208703925' in AGENTS.md is a typo (one digit short); AGENTS.md is left unchanged for Jack to correct."
-    },
-    {
-      "id": "M9",
-      "text": "Jack decision (a): held-candidate previews keep using manual build:review uploads to a Pages Preview environment; CI and the build pipeline are not changed. Phase 8 production hold, branch protection and the review room stay untouched until a fresh independent re-review."
+      "id": "B1",
+      "text": "W6/M5: remove Pedro's skip-marked library photos IMG-20250813-WA0024, WA0027 and WA0033 (p-cf8f6d1f35, p-8effbd393f, p-0f28ac1d4f) from the 'HQC work' gallery used by the property, communal, estate and letting, void, end of tenancy, post-construction, portfolio, move-in and about pages. Replace them with Pedro's keep photos matched to his saved notes (p-51ee039643 and p-5ace2161c5 managed properties/portfolios/projects; p-71604da63b and p-302026958a estate and letting agents; p-ea4f54d324 post construction/renovation; p-1a211e6792 move in/out, retitled; p-de8736bfb6 letting agents). The inventory classifies all seven as archived site images or stock images, not HQC project photos, so they are not marked as HQC work: those galleries render the neutral 'Illustrative images' heading with an 'Illustrative image' caption on each image. Alt text describes what is shown and replaces old titles, per Pedro's 'change the title' notes. No skip photo is shown in any gallery."
     }
   ],
   "allowedFiles": [
@@ -54,118 +22,28 @@
       "reason": "Planning-only scope amendment."
     },
     {
-      "path": "tools/client-revisions/check.mjs",
-      "requirements": [
-        "M1"
-      ],
-      "allowDelete": false,
-      "reason": "Path validation regex."
-    },
-    {
-      "path": "tools/client-revisions/check.test.mjs",
-      "requirements": [
-        "M1"
-      ],
-      "allowDelete": false,
-      "reason": "Regression tests: bracketed exact path allowed, still exact-match only."
-    },
-    {
-      "path": "tools/client-revisions/README.md",
-      "requirements": [
-        "M1"
-      ],
-      "allowDelete": false,
-      "reason": "Document that brackets are literal."
-    },
-    {
-      "path": "scripts/test-phase8-audit.mjs",
-      "requirements": [
-        "M2"
-      ],
-      "allowDelete": false,
-      "reason": "Popup tests assert absence; contact-route test expects only the approved assessment WhatsApp link."
-    },
-    {
-      "path": "src/pages/[slug].astro",
-      "requirements": [
-        "M3"
-      ],
-      "allowDelete": false,
-      "reason": "Pass metaDescription to Layout; schema and body keep page.description."
-    },
-    {
-      "path": "src/data/outcome-pages.ts",
-      "requirements": [
-        "M3"
-      ],
-      "allowDelete": false,
-      "reason": "Add agreed metaDescription values."
-    },
-    {
-      "path": "scripts/import-phase8-copy.py",
-      "requirements": [
-        "M4"
-      ],
-      "allowDelete": false,
-      "reason": "Record the closing Primary/Secondary pair."
-    },
-    {
-      "path": "src/data/phase8-copy.json",
-      "requirements": [
-        "M4"
-      ],
-      "allowDelete": false,
-      "reason": "Add per-page closing pair only; all other content byte-identical."
-    },
-    {
-      "path": "src/data/controlled-cta-links.ts",
-      "requirements": [
-        "M4"
-      ],
-      "allowDelete": false,
-      "reason": "Section 15 closing overrides; page-route fallback for page-specific closing labels."
-    },
-    {
-      "path": "src/components/OutcomePage.astro",
-      "requirements": [
-        "M4",
-        "M5"
-      ],
-      "allowDelete": false,
-      "reason": "Closing secondary CTA; gallery heading/captions depend on verified HQC photos."
-    },
-    {
       "path": "src/data/page-visuals.ts",
       "requirements": [
-        "M5"
+        "B1"
       ],
       "allowDelete": false,
-      "reason": "Swap generated/unverified gallery images for kept real photos; flag verified HQC library photos."
+      "reason": "Replace skip photos in property galleries with note-matched keep photos, flagged as illustrative."
     },
     {
-      "path": "src/pages/index.astro",
+      "path": "public/images/phase8-nov6/keep-p-ea4f54d324.jpg",
       "requirements": [
-        "M5",
-        "M6"
+        "B1"
       ],
       "allowDelete": false,
-      "reason": "Homepage evidence images swapped to kept real photos; mobile-only offering strip after the H1."
+      "reason": "Pedro keep photo (stock, Unsplash photo-1620626011761) for post-construction; copied byte-for-byte from the photo-review inventory asset."
     },
     {
-      "path": "public/images/phase8-nov6/old-living-room-wide-800.webp",
+      "path": "public/images/phase8-nov6/keep-p-de8736bfb6.jpg",
       "requirements": [
-        "M5"
+        "B1"
       ],
       "allowDelete": false,
-      "reason": "Enhanced kept photo WA0016 (p-ae4372f37d)."
-    },
-    {
-      "path": "public/images/phase8-nov6/old-living-room-wide-1536.webp",
-      "requirements": [
-        "M5"
-      ],
-      "allowDelete": false,
-      "reason": "Enhanced kept photo WA0016 (p-ae4372f37d)."
+      "reason": "Pedro keep photo (stock, Unsplash photo-1586023492125) for letting-agent pages; copied byte-for-byte from the photo-review inventory asset."
     }
   ],
   "preserve": [
@@ -174,13 +52,13 @@
     "Release Pack 28 Sep 2026 section 15 hero CTA amendments; 300+ client number withheld; no invented reviews, counts, named stories, logos or before/after claims.",
     "Public phone link tel:+442088703925 and display 0208 870 3925; the 07427 forwarding mobile is never displayed; AGENTS.md unchanged.",
     "Desktop homepage hero layout (lg and up) unchanged.",
-    "CI workflow, Pages build command and build scripts unchanged; Phase 8 production hold; no merge to main; review room and revisions/versions.json not updated in this round."
+    "CI workflow, Pages build command and build scripts unchanged; Phase 8 production hold; no merge to main; review room and revisions/versions.json not updated in this round.",
+    "Service heroes are unchanged in this round (some still use skip-marked library photos; recorded as open for Pedro)."
   ],
   "verification": [
-    "npm run test:revisions including new bracketed-path tests; npm run check:revision:scope; npm run test:forms; release, analytics and intake node tests; npm run build:review.",
-    "Script proof that phase8-copy.json minus the added closing fields equals c298746 byte for byte.",
-    "Preview HTML checks: agreed meta description on every outcome page with Service schema description unchanged; closing CTA pairs with section 15 overrides; no generated or unverified image under an HQC-work heading; mobile offering strip present; all earlier checks still pass.",
-    "Desktop 1440 and mobile 390 screenshots of affected pages on the new immutable preview, including the first 390x844 screen of the homepage.",
+    "npm run check:revision:scope; npm run test:revisions; npm run test:forms; release, analytics and intake node tests; npm run build:review; scripts/test-phase8-audit.mjs on the preview.",
+    "Preview HTML checks: no WA0024, WA0027 or WA0033 inside any gallery; every gallery under an 'HQC work' heading contains only verified HQC photos; the nine affected pages show 'Illustrative images' with per-image captions; all earlier 478 checks still pass.",
+    "Desktop 1440 and mobile 390 screenshots of the four named pages on the new immutable preview.",
     "Fresh independent re-review before any review-room update or handover."
   ]
 }
