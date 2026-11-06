@@ -268,6 +268,109 @@
         }
       },
       "captureDate": "2026-10-29"
+    },
+    {
+      "id": "nov6-revisions",
+      "commit": "39518d62cbad5018ee63d9d7ebecfd90a9bf4a45",
+      "immutableDeploymentUrl": "https://de1fdf73.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
+      "captureManifest": {
+        "commit": "2717e98f10e089dea304618269dcd521bdc9779c",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-home-desktop.jpg",
+            "width": 1440,
+            "height": 13462,
+            "sha256": "63efa33bb45d22858e3c873e7a6876721e068a991c84f3c9ca1867e2b054739c",
+            "capturedAt": "2026-11-06T20:59:56.147Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-home-mobile.jpg",
+            "width": 390,
+            "height": 21706,
+            "sha256": "d74380e79b3712b19274369f3ebfc1b65bb7360749c53ce29495163b1648caaa",
+            "capturedAt": "2026-11-06T21:01:11.194Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-quote-desktop.jpg",
+            "width": 1440,
+            "height": 4766,
+            "sha256": "11599b72f507c49a44621243f2878910554eb214cd32a0059d7d74e3cbb660dd",
+            "capturedAt": "2026-11-06T21:00:06.254Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-quote-mobile.jpg",
+            "width": 390,
+            "height": 7764,
+            "sha256": "dce0ae6b68d635215f7cf948eb86ca5c9c589dd4afe49363a7b100d720698008",
+            "capturedAt": "2026-11-06T21:01:23.212Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-how-desktop.jpg",
+            "width": 1440,
+            "height": 11647,
+            "sha256": "098804ac3fc5ba04b47661fd8a6882f109fadaf6f89581ba445d3875eafe5a36",
+            "capturedAt": "2026-11-06T21:00:21.346Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-how-mobile.jpg",
+            "width": 390,
+            "height": 14711,
+            "sha256": "1cca2f31b15cadca369a5156db47135f397dbeff56c9652f0950c33cccf08ebd",
+            "capturedAt": "2026-11-06T21:01:41.274Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-contact-desktop.jpg",
+            "width": 1440,
+            "height": 5566,
+            "sha256": "51652bc57d64d73530a898a997852ca0cbbbac494245942c03ea3502ec719694",
+            "capturedAt": "2026-11-06T21:00:32.335Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-contact-mobile.jpg",
+            "width": 390,
+            "height": 8537,
+            "sha256": "66cfb101f59bb1cebef0ef981c66dbd17abdc97575e5d0348bcdd2f010fe2024",
+            "capturedAt": "2026-11-06T21:01:52.888Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 11240,
+            "sha256": "486fd0b5bd8d4e48000951e976de21e8ac1706e6320e485d9f1aee0f132daceb",
+            "capturedAt": "2026-11-06T21:00:47.810Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 14166,
+            "sha256": "c92ced5c08b6d0b4e616cbb5e198d398b6b454e9c491f4671e2700cc1c264a5a",
+            "capturedAt": "2026-11-06T21:02:09.709Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        }
+      },
+      "captureDate": "2026-11-06"
     }
   ]
 }
