@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "baseline": "b0c65551800b1eae23eecb123b072a5b551db0e2",
+  "request": "Pedro Ndombasi and Jack Schofield meeting, 6 November 2026 (Gemini notes and transcript 00:03-00:33), plus Jack's request of the same day; Phase 8 candidate 1cf7d4f revision items W2, W3, W4, W5, W6, W7, W8 and W10. Private evidence reference: hqc-20261106-actions BRIEF.md, source/ and reports/ (copy checklist, implementation list, images report). Branch client-win/hqc-phase8-nov6-revisions from 1cf7d4f plus the held-candidate revision guard (cherry-pick of dbab23a).",
+  "requirements": [
+    {
+      "id": "N1",
+      "text": "W2: Restore the approved in-body contextual CTAs (and the homepage 'Supporting line') that the Phase 8 copy import drops, on the controlled outcome pages and homepage sections, using the agreed labels and existing routes. Keep the 28 Sep 2026 Release Pack section 15 hero CTA amendments."
+    },
+    {
+      "id": "N2",
+      "text": "W2: Restore agreed Batch 1 homepage copy changed without a recorded approval: 'Tell Us the Result You Need' route copy and CTAs, the 'What Do You Need Help With?' selector with its nine situations, 'When Routine Cleaning Is Not Enough', 'Pedro’s Vision for High Quality Clean' and the closing 'Not Sure Which Cleaning Service You Need?' CTA. Keep the 300+ client number withheld."
+    },
+    {
+      "id": "N3",
+      "text": "W2: Restore agreed Batch 5 contact copy (hero wording, New Cleaning Enquiry, Existing Clients, Suppliers and Subcontractors, Media and Partnerships, Assessment Media, Service Area Questions and the closing quotation route) with the section 15 secondary CTA 'Request a Quote'. Keep phone, email, form, socials and tracking."
+    },
+    {
+      "id": "N4",
+      "text": "W2: Restore the agreed Batch 5 Request a Quote explanatory sections around the existing form without changing form fields, routing script or submission."
+    },
+    {
+      "id": "N5",
+      "text": "W2: Restore agreed SEO titles on controlled outcome pages, agreed titles and meta descriptions on the FAQ, privacy and terms pages, the FAQ 'Still Not Sure?' close, and the hero CTA labels that differ without approval (home-cleaning primary, cleaning-prices secondary). Outcome-page meta descriptions are deferred: they render through src/pages/[slug].astro, which the guard cannot list, and the shared description field also feeds schema and body copy."
+    },
+    {
+      "id": "N6",
+      "text": "W3: Remove the idle/exit Essential Clean promotional popup everywhere by removing its Layout mounting. In-page offer wording in the agreed copy stays."
+    },
+    {
+      "id": "N7",
+      "text": "W4: Hide the homepage founder-video reserved block until Pedro records his video; keep the surrounding founder portrait and copy."
+    },
+    {
+      "id": "N8",
+      "text": "W5: Homepage hero shows the three core offerings (Property & Facilities including communal and complex, Workplaces & Commercial, Homes) as three equal cards using the A hero images, with headline text outside the images and tested contrast."
+    },
+    {
+      "id": "N9",
+      "text": "W6/W8: Add the images-report assets to mapped text-only controlled sections with the report alt text; generated images are labelled illustrative and never used as client proof; hero-2/hero-3 are not used on the homepage and no marble-restoration wording is rendered."
+    },
+    {
+      "id": "N10",
+      "text": "W7: Keep proof honest: replace empty evidence placeholder cards with the agreed non-numeric trust wording and the agreed 'Read Client Success Stories' CTA; no reviews, counts or named stories are invented. Pedro still chooses the proof stories."
+    },
+    {
+      "id": "N11",
+      "text": "W10: Restore the Contact page WhatsApp assessment-media button using the agreed channel 07824 390336 / https://wa.me/447824390336 (Batch 5 copy and the live contact page), visible on mobile; the public landline stays 0208 870 3925."
+    },
+    {
+      "id": "N12",
+      "text": "W11 and planning: freeze this scope; Phase 8 production hold, branch protection and preview-only deployment stay in place."
+    }
+  ],
+  "allowedFiles": [
+    {
+      "path": "revisions/current.json",
+      "requirements": [
+        "N12"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "scripts/import-phase8-copy.py",
+      "requirements": [
+        "N1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/data/phase8-copy.json",
+      "requirements": [
+        "N1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/data/controlled-cta-links.ts",
+      "requirements": [
+        "N1",
+        "N2",
+        "N10"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/data/section-imagery.ts",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/components/OutcomePage.astro",
+      "requirements": [
+        "N1",
+        "N9",
+        "N10"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/components/ClientEvidence.astro",
+      "requirements": [
+        "N10"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/components/ServiceSelector.astro",
+      "requirements": [
+        "N2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/pages/index.astro",
+      "requirements": [
+        "N1",
+        "N2",
+        "N7",
+        "N8",
+        "N9",
+        "N10"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/pages/contact.astro",
+      "requirements": [
+        "N3",
+        "N11"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/pages/request-a-quote.astro",
+      "requirements": [
+        "N4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/pages/cleaning-faqs.astro",
+      "requirements": [
+        "N5"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/pages/privacy-policy.astro",
+      "requirements": [
+        "N5"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/pages/terms-and-conditions.astro",
+      "requirements": [
+        "N5"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/data/outcome-pages.ts",
+      "requirements": [
+        "N5"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/layouts/Layout.astro",
+      "requirements": [
+        "N6"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/home-a-800.webp",
+      "requirements": [
+        "N8",
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/home-a-1600.webp",
+      "requirements": [
+        "N8",
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-a-800.webp",
+      "requirements": [
+        "N8",
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-a-1600.webp",
+      "requirements": [
+        "N8",
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-a-800.webp",
+      "requirements": [
+        "N8",
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-a-1600.webp",
+      "requirements": [
+        "N8",
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-b-800.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-b-1600.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-800.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-1600.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/communal-lift-lobby-800.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/communal-lift-lobby-1600.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/property-handover-800.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/property-handover-1600.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-touchpoints-800.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-touchpoints-1600.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/old-living-room-800.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/old-living-room-1536.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/old-approved-window-cleaning-800.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "public/images/phase8-nov6/old-approved-window-cleaning-1079.webp",
+      "requirements": [
+        "N9"
+      ],
+      "allowDelete": false
+    }
+  ],
+  "preserve": [
+    "Cumulative accepted Phase 8 baseline 1cf7d4f (preview https://8b5bf682.hqc-london.pages.dev) outside the listed requirements.",
+    "Forms, form fields, API routes, CRM routing, webhook payloads, tracking and analytics events, consent controls, schema, redirects, middleware, sitemap and robots behaviour.",
+    "Release Pack 28 Sep 2026 section 15 hero CTA amendments; 300+ client number withheld; no invented reviews, counts, named stories or logos.",
+    "Public phone 0208 870 3925 / +44208703925 only; the 07427 forwarding mobile is never displayed.",
+    "Manual booking-review wording added after the copy import (commit 20ad2a0) and every other phase8-copy.json text block: only cta/support blocks are added.",
+    "Existing photography, galleries, founder portrait, TrustRail, process sections and unrelated pages; the EssentialOfferPrompt component file is left in place, unmounted.",
+    "Phase 8 production hold (scripts/check-phase8-release.mjs), branch protection and the review room; no merge to main and no production deployment."
+  ],
+  "verification": [
+    "npm run check:revision:scope while editing; npm run test:revisions; npm run test:forms; npm run build:review.",
+    "Script proof that phase8-copy.json minus the added cta/support blocks equals the baseline file byte for byte.",
+    "Built-HTML checks: every restored CTA label and href, agreed titles/meta, no #hqc-essential-offer, no founder-video block, WhatsApp link present, no '300' client claim, no 'marble restoration'.",
+    "Pushed branch preview deployment content readback (not only HTTP 200) and desktop 1440 / mobile 390 screenshots of every affected page, including hero contrast measurement.",
+    "Separate independent reviewer (Codex) checks every hunk against the request and preserved behaviour before any review-room update or handover."
+  ]
+}
