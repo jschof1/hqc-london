@@ -1,15 +1,23 @@
 {
   "schemaVersion": 1,
-  "baseline": "055eeafc996610857cc31d6bdeb7590fdefb6fd7",
-  "request": "Jack's round 3 instruction of 6 November 2026 after the second independent Codex re-review (private evidence: hqc-20261106-actions reports/website-independent-review-round2.md and review2-evidence/): fix blocker B1 within the existing M5/W6 authority. Cumulative source: Pedro Ndombasi and Jack Schofield meeting of 6 November 2026 (W2-W11), packets ef2dee1 and 7c88934.",
+  "baseline": "bba20b9feb1ba841eb16ba4fe64338a638eed603",
+  "request": "Jack's round 4 instruction of 6 November 2026: fix the page hero images too (W6/W8), replacing every hero that uses a photo Pedro marked skip, in the order keep photo with a fitting note, then a 6 Nov generated image; add a check that no hero or gallery uses a skip photo. Cumulative source: Pedro Ndombasi and Jack Schofield meeting of 6 November 2026; packets ef2dee1, 7c88934, 6da5ffb.",
   "requirements": [
     {
       "id": "M0",
-      "text": "Scope amendment for round 3 after the second independent Codex review (only blocker B1). Earlier requirements N1-N12 (packet ef2dee1) and M1-M9 (packet 7c88934) stay in force and remain in the cumulative acceptance matrix; this packet only governs changes since 055eeaf."
+      "text": "Scope amendment for round 4. Earlier requirements N1-N12 (ef2dee1), M1-M9 (7c88934) and B1 (6da5ffb) stay in force in the cumulative acceptance matrix; this packet governs changes since bba20b9."
     },
     {
-      "id": "B1",
-      "text": "W6/M5: remove Pedro's skip-marked library photos IMG-20250813-WA0024, WA0027 and WA0033 (p-cf8f6d1f35, p-8effbd393f, p-0f28ac1d4f) from the 'HQC work' gallery used by the property, communal, estate and letting, void, end of tenancy, post-construction, portfolio, move-in and about pages. Replace them with Pedro's keep photos matched to his saved notes (p-51ee039643 and p-5ace2161c5 managed properties/portfolios/projects; p-71604da63b and p-302026958a estate and letting agents; p-ea4f54d324 post construction/renovation; p-1a211e6792 move in/out, retitled; p-de8736bfb6 letting agents). The inventory classifies all seven as archived site images or stock images, not HQC project photos, so they are not marked as HQC work: those galleries render the neutral 'Illustrative images' heading with an 'Illustrative image' caption on each image. Alt text describes what is shown and replaces old titles, per Pedro's 'change the title' notes. No skip photo is shown in any gallery."
+      "id": "H1",
+      "text": "W6/W8 (Jack, round 4): every served page hero that uses a photo Pedro marked skip is replaced. Audit of all served routes found seven: /communal-area-cleaning-london/ (WA0032 p-1c2e67957d), /estate-letting-agent-cleaning-london/ (WA0026 p-a36cdd0968), /move-in-void-property-cleaning-london/ (WA0030 p-4567370ba5), /end-of-tenancy-cleaning-london/ (WA0027 p-8effbd393f), /post-construction-cleaning-london/ (WA0033 p-0f28ac1d4f), /portfolio-cleaning-support-london/ (WA0024 p-cf8f6d1f35), /move-in-cleaning-london/ (IMG-20250813-WA0015 p-a758fcfb12). Legacy pages that reference skip images (/process, /why-us, /case-studies, /services/*) are redirected and never served. Replacements follow Jack's order: (a) a Pedro keep photo whose saved note fits the page, else (b) a 6 Nov generated hero/section image fitting the offering. Planned: estate & letting p-302026958a townhouse; void p-71604da63b hallway; end of tenancy p-de8736bfb6 letting room; post-construction p-ea4f54d324 bathroom (post construction/renovation); portfolio p-5ace2161c5 living room (managed properties, portfolios and projects); move-in p-1a211e6792 mews (move in/out); communal generated complex-a (no keep note fits communal areas; the images report designates complex-a as the communal hero). Hero alt text describes what is shown; generated hero alt starts 'Illustrative'. Hero wording never claims the image shows HQC work. hero-2 and hero-3 stay off the homepage (homepage unchanged)."
+    },
+    {
+      "id": "H2",
+      "text": "Avoid showing the same photo twice on a page: each of the six (a)-hero pages gets a gallery of Pedro's keep photos that excludes its hero image (galleries stay illustrative, captioned); communal's section image after 'Clean Shared Spaces Support a Better-Managed Building' changes from complex-a to complex-b because complex-a becomes its hero."
+    },
+    {
+      "id": "H3",
+      "text": "Verification: a content check over every served route (sitemap plus server-rendered pages) fails if any page hero or gallery, or any rendered image, uses a skip-marked photo."
     }
   ],
   "allowedFiles": [
@@ -24,26 +32,19 @@
     {
       "path": "src/data/page-visuals.ts",
       "requirements": [
-        "B1"
+        "H1",
+        "H2"
       ],
       "allowDelete": false,
-      "reason": "Replace skip photos in property galleries with note-matched keep photos, flagged as illustrative."
+      "reason": "Hero image and alt for the seven pages; per-page galleries excluding each hero."
     },
     {
-      "path": "public/images/phase8-nov6/keep-p-ea4f54d324.jpg",
+      "path": "src/data/section-imagery.ts",
       "requirements": [
-        "B1"
+        "H2"
       ],
       "allowDelete": false,
-      "reason": "Pedro keep photo (stock, Unsplash photo-1620626011761) for post-construction; copied byte-for-byte from the photo-review inventory asset."
-    },
-    {
-      "path": "public/images/phase8-nov6/keep-p-de8736bfb6.jpg",
-      "requirements": [
-        "B1"
-      ],
-      "allowDelete": false,
-      "reason": "Pedro keep photo (stock, Unsplash photo-1586023492125) for letting-agent pages; copied byte-for-byte from the photo-review inventory asset."
+      "reason": "Communal section image complex-a -> complex-b to avoid repeating the new hero."
     }
   ],
   "preserve": [
@@ -53,12 +54,12 @@
     "Public phone link tel:+442088703925 and display 0208 870 3925; the 07427 forwarding mobile is never displayed; AGENTS.md unchanged.",
     "Desktop homepage hero layout (lg and up) unchanged.",
     "CI workflow, Pages build command and build scripts unchanged; Phase 8 production hold; no merge to main; review room and revisions/versions.json not updated in this round.",
-    "Service heroes are unchanged in this round (some still use skip-marked library photos; recorded as open for Pedro)."
+    "Homepage, contact and every page hero not using a skip photo are unchanged in this round."
   ],
   "verification": [
     "npm run check:revision:scope; npm run test:revisions; npm run test:forms; release, analytics and intake node tests; npm run build:review; scripts/test-phase8-audit.mjs on the preview.",
-    "Preview HTML checks: no WA0024, WA0027 or WA0033 inside any gallery; every gallery under an 'HQC work' heading contains only verified HQC photos; the nine affected pages show 'Illustrative images' with per-image captions; all earlier 478 checks still pass.",
-    "Desktop 1440 and mobile 390 screenshots of the four named pages on the new immutable preview.",
+    "All earlier content checks plus the new all-route skip-photo check pass on the preview; HTML diff against the previous preview changes only the seven named pages.",
+    "Desktop 1440 and mobile 390 screenshots of the seven changed pages on the new immutable preview.",
     "Fresh independent re-review before any review-room update or handover."
   ]
 }
