@@ -6,6 +6,8 @@ import TrustRail from '../components/TrustRail.astro';
 import FounderPortrait from '../components/FounderPortrait.astro';
 import ClientEvidence from '../components/ClientEvidence.astro';
 import phase8Copy from '../data/phase8-copy.json';
+import { controlledCtaHref } from '../data/controlled-cta-links';
+import { offeringImages, sectionImagery } from '../data/section-imagery';
 
 const homeCopy = phase8Copy.home;
 const approvedSections = homeCopy.sections.filter((section) => [
@@ -15,13 +17,16 @@ const approvedSections = homeCopy.sections.filter((section) => [
   'Cleaning Programmes Built Around the Workplace',
   'Why Clients Choose HQC When the Result Matters'
 ].includes(section.heading));
-const sectionDestinations: Record<string, string> = {
-  'Cleaning Defined by the Outcome': '/cleaning-prices-london/',
-  'Cleaning Services for London Homes': '/home-cleaning-london/',
-  'One Cleaning Partner Across Properties, Projects and Portfolios': '/property-facilities-cleaning-london/',
-  'Cleaning Programmes Built Around the Workplace': '/office-cleaning-london/',
-  'Why Clients Choose HQC When the Result Matters': '/why-choose-hqc/'
-};
+const homeSection = (heading: string) => homeCopy.sections.find((section) => section.heading === heading);
+const ctaLabels = (heading: string) => (homeSection(heading)?.blocks ?? []).filter((block) => block.kind === 'cta').map((block) => block.text ?? '');
+const paragraphs = (heading: string) => (homeSection(heading)?.blocks ?? []).filter((block) => block.kind === 'p').map((block) => block.text ?? '');
+// Three core offerings at hero level (6 Nov 2026), in the approved Batch 1 buyer-route order.
+const offerings = [
+  { eyebrow: 'Property & Facilities', title: 'Managed properties, portfolios and projects', href: '/property-facilities-cleaning-london/', image: offeringImages.complex },
+  { eyebrow: 'Workplaces & Commercial', title: 'Recurring programmes and operational resets', href: '/commercial-cleaning-london/', image: offeringImages.workplace },
+  { eyebrow: 'Homes & Private Clients', title: 'Maintenance, restoration and moving services', href: '/home-cleaning-london/', image: offeringImages.home }
+];
+const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
 ---
 
 <Layout
@@ -49,18 +54,22 @@ const sectionDestinations: Record<string, string> = {
           </div>
         </div>
 
-        <div class="relative min-h-[570px] lg:min-h-[670px]">
-          <figure class="absolute left-[4%] top-[3%] h-[62%] w-[67%] overflow-hidden rounded-[2.2rem]">
-            <img src="/images/generated/hqc-home-hero.webp" alt="Illustrative London living room prepared for a home-cleaning enquiry" class="h-full w-full object-cover" width="1024" height="1024" fetchpriority="high" />
-          </figure>
-          <figure class="absolute bottom-[2%] right-0 h-[53%] w-[55%] overflow-hidden rounded-[2.2rem] border-[10px] border-midnight">
-            <img src="/images/generated/hqc-property-hero.webp" alt="Illustrative London property prepared for a professional handover" class="h-full w-full object-cover" width="1284" height="850" fetchpriority="high" />
-          </figure>
-          <div class="absolute bottom-[11%] left-0 max-w-[17rem] rounded-2xl bg-copper p-6 text-midnight shadow-2xl">
-            <span class="text-xs font-bold uppercase tracking-[.18em] text-midnight">Start with the result</span>
-            <p class="mt-4 font-serif text-2xl font-semibold leading-tight">Maintenance, restoration, handover or a recurring programme.</p>
-          </div>
-          <div class="absolute right-[2%] top-[9%] flex h-24 w-24 items-center justify-center rounded-full border border-copper/50 bg-midnight/80 text-center text-[10px] font-bold uppercase tracking-[.15em] text-copper backdrop-blur">Careful<br />delivery</div>
+        <div class="relative z-10">
+          <ul class="grid gap-4" aria-label="Our three core services">
+            {offerings.map((offering) => (
+              <li>
+                <a href={offering.href} class="group grid grid-cols-[42%_1fr] overflow-hidden rounded-2xl border border-white/15 bg-white/[.05] text-white no-underline transition duration-300 hover:-translate-y-0.5 hover:border-copper sm:grid-cols-[1.15fr_1fr]">
+                  <img src={offering.image.src} srcset={offering.image.srcset} sizes="(min-width: 1024px) 380px, 42vw" alt={offering.image.alt} class="aspect-[4/3] h-full w-full object-cover object-[70%_50%] transition duration-700 group-hover:scale-[1.03] sm:aspect-[2/1]" width="800" height="400" fetchpriority="high" />
+                  <span class="flex flex-col justify-center p-4 sm:p-6">
+                    <span class="text-[11px] font-bold uppercase tracking-[.16em] text-copper sm:text-xs">{offering.eyebrow}</span>
+                    <span class="mt-2 font-serif text-xl font-medium leading-tight sm:text-2xl">{offering.title}</span>
+                    <span class="mt-3 text-sm font-bold text-white/85">Explore <span class="inline-block text-copper transition group-hover:translate-x-1" aria-hidden="true">→</span></span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-3 text-xs text-white/60">Images are illustrative.</p>
         </div>
       </div>
     </section>
@@ -68,9 +77,9 @@ const sectionDestinations: Record<string, string> = {
     <section class="section-shell">
       <div class="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-24">
         <div>
-          <p class="section-kicker">Choose your route</p>
-          <h2 class="section-title">One cleaning partner. Three different kinds of need.</h2>
-          <p class="mt-7 text-lg leading-8 text-slate">The site is organised around the buyer and the result, so a home client is not forced through the same journey as a property manager or workplace team.</p>
+          <p class="section-kicker">Start with what you need to achieve</p>
+          <h2 class="section-title">Tell Us the Result You Need</h2>
+          {paragraphs('Start with what you need to achieve').slice(0, 2).map((paragraph) => <p class="mt-7 text-lg leading-8 text-slate">{paragraph}</p>)}
         </div>
         <div class="space-y-4">
           {[
@@ -78,7 +87,8 @@ const sectionDestinations: Record<string, string> = {
               number: '01',
               eyebrow: 'Property & Facilities',
               title: 'Managed properties, portfolios and projects',
-              copy: 'Repeat instructions, communal areas, voids, handovers and portfolio support.',
+              copy: paragraphs('Start with what you need to achieve')[2],
+              cta: ctaLabels('Start with what you need to achieve')[0],
               href: '/property-facilities-cleaning-london/',
               image: '/images/generated/hqc-property-hero.webp'
             },
@@ -86,7 +96,8 @@ const sectionDestinations: Record<string, string> = {
               number: '02',
               eyebrow: 'Workplaces & Commercial',
               title: 'Recurring programmes and operational resets',
-              copy: 'Office cleaning and commercial deep cleaning planned around the working site.',
+              copy: paragraphs('Start with what you need to achieve')[3],
+              cta: ctaLabels('Start with what you need to achieve')[1],
               href: '/commercial-cleaning-london/',
               image: '/images/generated/hqc-office-hero.png'
             },
@@ -94,7 +105,8 @@ const sectionDestinations: Record<string, string> = {
               number: '03',
               eyebrow: 'Homes & Private Clients',
               title: 'Maintenance, restoration and moving services',
-              copy: 'A clear route to Essential Clean, deep cleaning, moving or complex-property assessment.',
+              copy: paragraphs('Start with what you need to achieve')[4],
+              cta: ctaLabels('Start with what you need to achieve')[2],
               href: '/home-cleaning-london/',
               image: '/images/generated/hqc-home-hero.webp'
             }
@@ -104,7 +116,7 @@ const sectionDestinations: Record<string, string> = {
                 <div class="flex items-center justify-between"><span class="meta-label">{route.eyebrow}</span><span class="font-serif text-2xl text-copper-ink">{route.number}</span></div>
                 <h3 class="mt-8 max-w-xl font-serif text-3xl font-medium leading-tight text-midnight md:text-4xl">{route.title}</h3>
                 <p class="mt-4 max-w-xl text-sm leading-6 text-slate">{route.copy}</p>
-                <span class="mt-7 font-bold text-midnight">Explore this route <span class="inline-block text-copper-ink transition group-hover:translate-x-1">→</span></span>
+                <span class="mt-7 font-bold text-midnight">{route.cta} <span class="inline-block text-copper-ink transition group-hover:translate-x-1">→</span></span>
               </div>
               <div class="relative min-h-56 overflow-hidden">
                 <img src={route.image} alt={`${route.eyebrow} cleaning result`} class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="800" height="650" />
@@ -127,12 +139,19 @@ const sectionDestinations: Record<string, string> = {
             <div>
               <p class="section-kicker">Cleaning Defined by the Outcome</p>
               <h2 class="section-title">{section.heading}</h2>
-              <a href={sectionDestinations[section.heading]} class="mt-7 inline-flex font-bold text-midnight no-underline hover:text-copper-ink">Explore this route <span class="ml-2" aria-hidden="true">→</span></a>
+              {section.heading === 'Cleaning Defined by the Outcome' && (
+                <figure class="mt-8 overflow-hidden rounded-2xl bg-midnight">
+                  <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 480px, 100vw" alt={outcomeImage.alt} class="aspect-[16/10] w-full object-cover" loading="lazy" width="1600" height="1000" />
+                  <figcaption class="bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[.14em] text-slate">Illustrative image</figcaption>
+                </figure>
+              )}
             </div>
             <div class="space-y-5 text-lg leading-8 text-slate">
               {section.blocks.map((block) => (
                 block.kind === 'h3' ? <h3 class="pt-4 font-serif text-2xl font-medium text-midnight">{block.text}</h3> :
                 block.kind === 'ul' ? <ul class="list-disc space-y-2 pl-6">{block.items.map((item) => <li>{item}</li>)}</ul> :
+                block.kind === 'cta' ? <p class="text-base"><a href={controlledCtaHref(block.text ?? '')} class="inline-flex font-bold text-midnight no-underline hover:text-copper-ink">{block.text} <span class="ml-2 text-copper-ink" aria-hidden="true">→</span></a></p> :
+                block.kind === 'support' ? <p class="font-semibold text-midnight">{block.text}</p> :
                 <p>{block.text}</p>
               ))}
             </div>
@@ -173,8 +192,9 @@ const sectionDestinations: Record<string, string> = {
       <div class="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-24 lg:px-14">
         <div>
           <p class="section-kicker">Complex service route</p>
-          <h2 class="section-title">When a standard cleaning route is not responsible.</h2>
-          <p class="mt-7 text-lg leading-8 text-slate">Large properties, specialist materials, live projects and unusual access requirements are qualified before anyone confirms scope, labour or price.</p>
+          <h2 class="section-title">When Routine Cleaning Is Not Enough</h2>
+          {paragraphs('When Routine Cleaning Is Not Enough').map((paragraph) => <p class="mt-7 text-lg leading-8 text-slate">{paragraph}</p>)}
+          {ctaLabels('When Routine Cleaning Is Not Enough').map((label) => <a href={controlledCtaHref(label)} class="mt-7 inline-flex font-bold text-midnight no-underline hover:text-copper-ink">{label} <span class="ml-2 text-copper-ink" aria-hidden="true">→</span></a>)}
         </div>
         <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Complex service process">
           {['Qualification', 'Assessment', 'Defined scope', 'Delivery plan', 'Controlled delivery', 'Handover'].map((step, index) => (
@@ -217,14 +237,10 @@ const sectionDestinations: Record<string, string> = {
         <div class="flex items-center px-5 py-20 sm:px-8 lg:px-20">
           <div>
             <p class="section-kicker">Founder-led</p>
-            <h2 class="section-title">“The client should know what is being delivered before the team arrives.”</h2>
-            <p class="mt-7 text-lg leading-8 text-slate">Pedro built High Quality Clean around a straightforward principle: understand the required outcome, define the labour and deliver with care. That approach now guides every route through the site.</p>
+            <h2 class="section-title">Pedro’s Vision for High Quality Clean</h2>
+            {paragraphs('Pedro’s Vision for High Quality Clean').map((paragraph) => <p class="mt-7 text-lg leading-8 text-slate">{paragraph}</p>)}
             <p class="mt-7 font-bold text-midnight">Pedro Ndombasi <span class="ml-2 font-normal text-slate">Founder & Managing Director</span></p>
-            <div class="mt-7 rounded-xl border border-midnight/10 bg-porcelain p-5">
-              <p class="text-xs font-bold uppercase tracking-[.18em] text-copper-ink">Founder video</p>
-              <p class="mt-2 text-sm leading-6 text-slate">Reserved for the approved 45–60 second founder film, including captions, transcript and hosting hand-off.</p>
-            </div>
-            <a href="/about-high-quality-clean/" class="button button-dark mt-8">Meet Pedro and HQC <span aria-hidden="true">→</span></a>
+            {ctaLabels('Pedro’s Vision for High Quality Clean').map((label) => <a href={controlledCtaHref(label)} class="button button-dark mt-8">{label} <span aria-hidden="true">→</span></a>)}
           </div>
         </div>
       </div>
@@ -234,10 +250,13 @@ const sectionDestinations: Record<string, string> = {
       <div class="absolute -right-20 -top-40 h-96 w-96 rounded-full border border-midnight/15"></div>
       <div class="relative mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 px-5 sm:px-8 md:flex-row md:items-center lg:px-14">
         <div>
-          <p class="text-xs font-bold uppercase tracking-[.2em] text-midnight">Not sure where to start?</p>
-          <h2 class="mt-3 max-w-4xl font-serif text-4xl font-medium leading-tight md:text-6xl">Tell us what has to be ready.</h2>
+          <h2 class="max-w-4xl font-serif text-4xl font-medium leading-tight md:text-6xl">Not Sure Which Cleaning Service You Need?</h2>
+          {paragraphs('Not Sure Which Cleaning Service You Need?').map((paragraph) => <p class="mt-4 max-w-2xl text-lg leading-8 text-midnight">{paragraph}</p>)}
         </div>
-        <a href="#find-my-service" class="button button-dark shrink-0">Find my service <span aria-hidden="true">↓</span></a>
+        <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
+          <a href="#find-my-service" class="button button-dark">Find My Service <span aria-hidden="true">↓</span></a>
+          <a href="/request-a-quote/" class="button border border-midnight/30 text-midnight hover:border-midnight">Request a Quote</a>
+        </div>
       </div>
     </section>
   </main>

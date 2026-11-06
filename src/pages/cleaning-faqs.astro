@@ -10,7 +10,7 @@ const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
 })));
 ---
 
-<Layout title="Cleaning FAQs | High Quality Clean" description="Clear answers about HQC services, booking requests, quotations, scope and delivery." pageType="FAQPage" mainEntity={faqEntities}>
+<Layout title="Cleaning FAQs London | High Quality Clean" description="Answers to common questions about HQC cleaning services, pricing, bookings, quotations, access, service scope, recurring cleaning and specialist requirements." pageType="FAQPage" mainEntity={faqEntities}>
   <Header />
   <main class="bg-white pt-20">
     <section class="bg-midnight px-5 py-20 text-white sm:px-8">
@@ -38,6 +38,14 @@ const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
           </div>
         </section>
       ))}
+      <section class="rounded-2xl bg-midnight p-8 text-white md:p-10" aria-labelledby="faq-still-not-sure">
+        <h2 id="faq-still-not-sure" class="font-serif text-3xl md:text-4xl">Still Not Sure?</h2>
+        <p class="mt-4 text-lg leading-8 text-white/75">Tell us what you need the cleaning to achieve.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a class="button button-primary" href="/#find-my-service">Find My Service</a>
+          <a class="button button-ghost" href="/request-a-quote/">Request a Quote</a>
+        </div>
+      </section>
       <p class="text-sm text-slate">These answers explain the service. The <a class="underline" href="/terms-and-conditions/">Terms and Conditions</a> set out the applicable rules.</p>
     </div>
   </main>

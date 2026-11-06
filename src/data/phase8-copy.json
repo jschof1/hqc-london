@@ -30,6 +30,10 @@
             "text": "For property managers, estate and letting agents, block managers, developers and portfolio owners who need dependable cleaning support across individual properties or multiple sites."
           },
           {
+            "kind": "cta",
+            "text": "Explore Property & Facilities Cleaning"
+          },
+          {
             "kind": "h3",
             "text": "Workplaces"
           },
@@ -38,12 +42,20 @@
             "text": "For offices and commercial sites requiring recurring cleaning programmes, one-off deep cleaning or professionally managed site support."
           },
           {
+            "kind": "cta",
+            "text": "Explore Workplace Cleaning"
+          },
+          {
             "kind": "h3",
             "text": "Homes"
           },
           {
             "kind": "p",
             "text": "For private clients who need regular maintenance, a deeper restoration clean, move-in preparation, tenancy handover or post-construction cleaning."
+          },
+          {
+            "kind": "cta",
+            "text": "Find the Right Home Service"
           }
         ]
       },
@@ -103,6 +115,14 @@
           {
             "kind": "p",
             "text": "We then recommend the most appropriate service and delivery route."
+          },
+          {
+            "kind": "support",
+            "text": "Clear scope. Labour-based quotations. Careful delivery."
+          },
+          {
+            "kind": "cta",
+            "text": "How HQC Pricing Works"
           }
         ]
       },
@@ -122,12 +142,20 @@
             "text": "Eligible new weekly and fortnightly clients can receive 30% off their first clean with a minimum three-month recurring commitment."
           },
           {
+            "kind": "cta",
+            "text": "Check Essential Clean™ Suitability"
+          },
+          {
             "kind": "h3",
             "text": "Deep Clean™ - Restore"
           },
           {
             "kind": "p",
             "text": "For homes where build-up, neglected areas or accumulated detail require more than routine maintenance."
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Deep-Clean Quote"
           },
           {
             "kind": "h3",
@@ -138,6 +166,10 @@
             "text": "For clients who want a property professionally prepared before moving in."
           },
           {
+            "kind": "cta",
+            "text": "Request a Move-In Reset™ Quote"
+          },
+          {
             "kind": "h3",
             "text": "End of Tenancy™ - Prepare for handover"
           },
@@ -146,12 +178,20 @@
             "text": "For tenants, landlords and property professionals preparing a property at the end of an occupancy."
           },
           {
+            "kind": "cta",
+            "text": "Request an End of Tenancy Quote"
+          },
+          {
             "kind": "h3",
             "text": "Post-Construction™ - Remove works residue"
           },
           {
             "kind": "p",
             "text": "For properties affected by construction, refurbishment or fit-out dust and residue."
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Post-Construction Assessment"
           }
         ]
       },
@@ -180,6 +220,10 @@
           {
             "kind": "p",
             "text": "Rather than treating every instruction as an isolated booking, we can build a clearer route for repeat requirements, communication and service consistency."
+          },
+          {
+            "kind": "cta",
+            "text": "Discuss Your Property Requirements"
           }
         ]
       },
@@ -205,6 +249,14 @@
               "quality checks;",
               "communication and review."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Request an Office Cleaning Proposal"
+          },
+          {
+            "kind": "cta",
+            "text": "Arrange a Site Visit"
           }
         ]
       },
@@ -218,6 +270,10 @@
           {
             "kind": "p",
             "text": "Large properties, executive residences, specialist amenities, unusual finishes, complex access arrangements or multi-stage projects may require a structured assessment before we confirm the scope, team and price."
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Complex Service Assessment"
           }
         ]
       },
@@ -271,6 +327,10 @@
           {
             "kind": "p",
             "text": "HQC does not pretend that ordinary cleaners should carry out work requiring specialist competence."
+          },
+          {
+            "kind": "cta",
+            "text": "Why Choose HQC"
           }
         ]
       },
@@ -280,6 +340,10 @@
           {
             "kind": "p",
             "text": "From private homes to workplaces and managed properties, clients have trusted HQC with a wide range of cleaning requirements across London."
+          },
+          {
+            "kind": "cta",
+            "text": "Read Client Success Stories"
           }
         ]
       },
@@ -297,6 +361,10 @@
           {
             "kind": "p",
             "text": "Pedro’s aim is to build a cleaning company clients can rely on across homes, workplaces and property portfolios, with clear standards behind the service and practical controls behind the delivery."
+          },
+          {
+            "kind": "cta",
+            "text": "About HQC"
           }
         ]
       },
@@ -419,12 +487,20 @@
             "text": "A coordinated route for turnovers, move-ins, tenancy cleaning and selected property presentation requirements."
           },
           {
+            "kind": "cta",
+            "text": "Estate & Lettings Agent Cleaning"
+          },
+          {
             "kind": "h3",
             "text": "Move-In & Void Property Cleaning"
           },
           {
             "kind": "p",
             "text": "Preparation of empty or newly available properties for occupation, letting or presentation."
+          },
+          {
+            "kind": "cta",
+            "text": "Move-In & Void Property Cleaning"
           },
           {
             "kind": "h3",
@@ -435,12 +511,20 @@
             "text": "A defined handover cleaning service without promises of deposit return or third-party approval."
           },
           {
+            "kind": "cta",
+            "text": "End of Tenancy Cleaning"
+          },
+          {
             "kind": "h3",
             "text": "Post-Construction™"
           },
           {
             "kind": "p",
             "text": "Removal of appropriate building dust and residue following refurbishment, fit-out or construction work."
+          },
+          {
+            "kind": "cta",
+            "text": "Post-Construction Cleaning"
           },
           {
             "kind": "h3",
@@ -451,12 +535,20 @@
             "text": "Recurring cleaning programmes for agreed shared areas."
           },
           {
+            "kind": "cta",
+            "text": "Communal Area Cleaning"
+          },
+          {
             "kind": "h3",
             "text": "Portfolio Cleaning Support"
           },
           {
             "kind": "p",
             "text": "For clients who want consistent communication and repeat allocation across multiple properties."
+          },
+          {
+            "kind": "cta",
+            "text": "Portfolio Cleaning Support"
           }
         ]
       },
@@ -479,6 +571,10 @@
               "communication;",
               "quality checks."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Site Assessment"
           }
         ]
       },
@@ -503,6 +599,10 @@
               "practical controls;",
               "handover."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Complex Service Assessment"
           }
         ]
       },
@@ -700,6 +800,10 @@
           {
             "kind": "p",
             "text": "These requirements are assessed separately from routine contract cleaning."
+          },
+          {
+            "kind": "cta",
+            "text": "Commercial Deep Cleaning"
           }
         ]
       },
@@ -728,6 +832,10 @@
           {
             "kind": "p",
             "text": "We do not publish a universal hourly or square-metre price and pretend every workplace requires the same level of work."
+          },
+          {
+            "kind": "cta",
+            "text": "How HQC Pricing Works"
           }
         ]
       },
@@ -772,6 +880,10 @@
           {
             "kind": "p",
             "text": "You do not need to know every answer before contacting us."
+          },
+          {
+            "kind": "cta",
+            "text": "Request an Office Cleaning Proposal"
           }
         ]
       },
@@ -811,12 +923,20 @@
             "text": "For maintenance-ready homes requiring a one-off, weekly or fortnightly maintenance service."
           },
           {
+            "kind": "cta",
+            "text": "Check Essential Clean™ Suitability"
+          },
+          {
             "kind": "h3",
             "text": "My home needs more attention than a regular clean - Deep Clean™"
           },
           {
             "kind": "p",
             "text": "For build-up, neglected detail and homes that require restoration before maintenance cleaning is appropriate."
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Deep-Clean Quote"
           },
           {
             "kind": "h3",
@@ -827,12 +947,20 @@
             "text": "For preparing a home before occupation."
           },
           {
+            "kind": "cta",
+            "text": "Request a Move-In Reset™ Quote"
+          },
+          {
             "kind": "h3",
             "text": "I am moving out - End of Tenancy™"
           },
           {
             "kind": "p",
             "text": "For preparing a property for tenancy handover."
+          },
+          {
+            "kind": "cta",
+            "text": "Request an End of Tenancy Quote"
           },
           {
             "kind": "h3",
@@ -843,12 +971,20 @@
             "text": "For appropriate construction and refurbishment residue."
           },
           {
+            "kind": "cta",
+            "text": "Request a Post-Construction Assessment"
+          },
+          {
             "kind": "h3",
             "text": "The property is large, unusual or complex - Complex Property Cleaning"
           },
           {
             "kind": "p",
             "text": "For requirements that need assessment before scope and price can be confirmed."
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Complex Service Assessment"
           }
         ]
       },
@@ -874,6 +1010,10 @@
           {
             "kind": "p",
             "text": "A one-off Essential Clean™ can be booked where the property is suitable, but does not qualify for the recurring-client introductory offer."
+          },
+          {
+            "kind": "cta",
+            "text": "Check My Home"
           }
         ]
       },
@@ -929,6 +1069,10 @@
           {
             "kind": "p",
             "text": "Our pricing approach considers the work required to achieve the agreed outcome."
+          },
+          {
+            "kind": "cta",
+            "text": "How HQC Pricing Works"
           }
         ]
       },
@@ -958,6 +1102,10 @@
           {
             "kind": "p",
             "text": "We will recommend the appropriate route."
+          },
+          {
+            "kind": "cta",
+            "text": "Find My Service"
           }
         ]
       },
@@ -1059,6 +1207,10 @@
           {
             "kind": "p",
             "text": "If the condition requires more intensive restoration work, we may recommend Deep Clean™ instead."
+          },
+          {
+            "kind": "cta",
+            "text": "Check My Home"
           }
         ]
       },
@@ -1111,6 +1263,10 @@
               "does not apply to Deep Clean™, Move-In Reset™, End of Tenancy™, Post-Construction™ or complex-service work;",
               "remains subject to suitability and local team availability."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Check My Eligibility"
           }
         ]
       },
@@ -1201,6 +1357,10 @@
           {
             "kind": "p",
             "text": "In those circumstances, we will normally recommend the appropriate restoration service before recurring maintenance begins."
+          },
+          {
+            "kind": "cta",
+            "text": "Learn About Deep Clean™"
           }
         ]
       },
@@ -1230,6 +1390,10 @@
           {
             "kind": "p",
             "text": "For eligible Essential Clean™ properties, the website booking route will provide the applicable booking price once the required details are entered."
+          },
+          {
+            "kind": "cta",
+            "text": "How HQC Pricing Works"
           }
         ]
       },
@@ -1427,6 +1591,10 @@
           {
             "kind": "p",
             "text": "That is why Deep Clean™ requires a tailored quotation."
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Deep-Clean Quote"
           }
         ]
       },
@@ -1511,6 +1679,10 @@
               "fortnightly Essential Clean™;",
               "a future one-off maintenance visit."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Explore Essential Clean™"
           }
         ]
       },
@@ -1713,6 +1885,10 @@
               "post-works cleaning;",
               "recurring portfolio instructions."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Property & Facilities Cleaning"
           }
         ]
       },
@@ -1828,6 +2004,10 @@
           {
             "kind": "p",
             "text": "Property professionals managing vacant units should use the separate Move-In & Void Property Cleaning route."
+          },
+          {
+            "kind": "cta",
+            "text": "Property Move-In & Void Cleaning"
           }
         ]
       },
@@ -1935,6 +2115,10 @@
           {
             "kind": "p",
             "text": "then Post-Construction™ may be more appropriate than Move-In Reset™."
+          },
+          {
+            "kind": "cta",
+            "text": "Explore Post-Construction™"
           }
         ]
       },
@@ -2261,6 +2445,10 @@
           {
             "kind": "p",
             "text": "Commercial or repeat project requirements may also be routed through Property & Facilities Cleaning."
+          },
+          {
+            "kind": "cta",
+            "text": "Property & Facilities Cleaning"
           }
         ]
       },
@@ -2615,6 +2803,10 @@
           {
             "kind": "p",
             "text": "Where a client manages several buildings or properties, a broader Portfolio Cleaning Support route may be more appropriate."
+          },
+          {
+            "kind": "cta",
+            "text": "Explore Portfolio Cleaning Support"
           }
         ]
       },
@@ -2902,6 +3094,10 @@
               "communication;",
               "invoicing expectations."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Explore Portfolio Cleaning Support"
           }
         ]
       },
@@ -2924,6 +3120,10 @@
               "property condition;",
               "limitations around deposit and third-party decisions."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "End of Tenancy Cleaning"
           },
           {
             "kind": "p",
@@ -3076,6 +3276,10 @@
           {
             "kind": "p",
             "text": "The buyer, workflow and required outcome are different."
+          },
+          {
+            "kind": "cta",
+            "text": "Private Client Move-In Reset™"
           }
         ]
       },
@@ -3126,6 +3330,10 @@
           {
             "kind": "p",
             "text": "then the correct route may be Post-Construction™ rather than a normal void-property reset."
+          },
+          {
+            "kind": "cta",
+            "text": "Post-Construction Cleaning"
           }
         ]
       },
@@ -3188,6 +3396,10 @@
           {
             "kind": "p",
             "text": "If you manage multiple voids or repeat turnover requirements, Portfolio Cleaning Support may provide a better long-term route."
+          },
+          {
+            "kind": "cta",
+            "text": "Discuss Portfolio Cleaning Support"
           }
         ]
       },
@@ -3425,6 +3637,10 @@
           {
             "kind": "p",
             "text": "Those properties can be routed separately through the Complex Service Assessment process without changing the broader portfolio relationship."
+          },
+          {
+            "kind": "cta",
+            "text": "Complex Property Cleaning"
           }
         ]
       },
@@ -3532,12 +3748,20 @@
             "text": "For recurring office and workplace programmes with agreed tasks, frequencies, access and review arrangements."
           },
           {
+            "kind": "cta",
+            "text": "Office Cleaning"
+          },
+          {
             "kind": "h3",
             "text": "Commercial Deep Cleaning"
           },
           {
             "kind": "p",
             "text": "For one-off restoration, reset or more intensive cleaning in workplaces and commercial premises."
+          },
+          {
+            "kind": "cta",
+            "text": "Commercial Deep Cleaning"
           },
           {
             "kind": "h3",
@@ -3548,12 +3772,20 @@
             "text": "For managed properties, buildings, portfolios and property-sector requirements."
           },
           {
+            "kind": "cta",
+            "text": "Property & Facilities Cleaning"
+          },
+          {
             "kind": "h3",
             "text": "Complex Service Assessment"
           },
           {
             "kind": "p",
             "text": "For requirements involving unusual scale, risk, coordination or specialist work."
+          },
+          {
+            "kind": "cta",
+            "text": "Request a Complex Service Assessment"
           }
         ]
       },
@@ -3609,6 +3841,10 @@
           {
             "kind": "p",
             "text": "This creates a clearer operating basis than an undefined promise to 'clean the office'."
+          },
+          {
+            "kind": "cta",
+            "text": "Explore Office Cleaning"
           }
         ]
       },
@@ -3635,6 +3871,10 @@
           {
             "kind": "p",
             "text": "Those situations may require Commercial Deep Cleaning rather than a recurring office programme."
+          },
+          {
+            "kind": "cta",
+            "text": "Commercial Deep Cleaning"
           }
         ]
       },
@@ -3664,6 +3904,10 @@
           {
             "kind": "p",
             "text": "Commercial clients are sold the agreed cleaning outcome and service standard, not an arbitrary block of cleaner hours."
+          },
+          {
+            "kind": "cta",
+            "text": "How HQC Pricing Works"
           }
         ]
       },
@@ -4036,6 +4280,10 @@
           {
             "kind": "p",
             "text": "Where the objective is ongoing maintenance, Office Cleaning should remain the primary route."
+          },
+          {
+            "kind": "cta",
+            "text": "Explore Office Cleaning"
           }
         ]
       },
@@ -4532,6 +4780,10 @@
           {
             "kind": "p",
             "text": "For commercial and complex work, additional site or project information may be required before the proposal is finalised."
+          },
+          {
+            "kind": "cta",
+            "text": "How HQC Pricing Works"
           }
         ]
       },
@@ -5076,6 +5328,10 @@
               "cleaner workload;",
               "commercial sustainability."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "How HQC Pricing Works"
           }
         ]
       },
@@ -5123,6 +5379,10 @@
               "several service disciplines;",
               "confidential environments."
             ]
+          },
+          {
+            "kind": "cta",
+            "text": "Complex Property Cleaning"
           }
         ]
       },
@@ -5905,6 +6165,10 @@
             ]
           },
           {
+            "kind": "cta",
+            "text": "Cleaning Services in East London"
+          },
+          {
             "kind": "p",
             "text": "The regional hub avoids creating multiple thin pages before HQC has sufficient local evidence and demand."
           }
@@ -6077,6 +6341,10 @@
           {
             "kind": "p",
             "text": "Remove appropriate residue after refurbishment or building works."
+          },
+          {
+            "kind": "cta",
+            "text": "Find My Home Cleaning Service"
           }
         ]
       },
@@ -6102,6 +6370,10 @@
           {
             "kind": "p",
             "text": "The relevant service is determined by the property condition and the next required outcome."
+          },
+          {
+            "kind": "cta",
+            "text": "Discuss Your Property Requirements"
           }
         ]
       },
@@ -6125,6 +6397,10 @@
           {
             "kind": "p",
             "text": "Commercial programmes are built around the site rather than sold as a generic checklist."
+          },
+          {
+            "kind": "cta",
+            "text": "Discuss Commercial Cleaning"
           }
         ]
       },

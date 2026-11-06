@@ -15,7 +15,7 @@ import HeroSection from '../components/HeroSection.astro';
     <!-- Hero Section -->
     <HeroSection 
       title="Contact High Quality Clean"
-      subtitle="For new cleaning requirements, tell us about the property, site and result required through the quotation form. For existing-client, supplier or general administrative matters, contact HQC here."
+      subtitle="For new cleaning requirements, the fastest route is usually to tell us about the property, site and result required through the quotation form. For existing-client, supplier or general administrative matters, contact HQC here."
       imageSrc="/images/generated/hqc-restoration-interior.png"
       imageAlt="Illustrative London interior prepared with careful attention to detail"
       primaryCta={{
@@ -23,7 +23,7 @@ import HeroSection from '../components/HeroSection.astro';
         href: "#contact-methods"
       }}
       secondaryCta={{
-        text: "Request a Cleaning Quote",
+        text: "Request a Quote",
         href: "/request-a-quote/"
       }}
       trustBadges={[
@@ -36,9 +36,17 @@ import HeroSection from '../components/HeroSection.astro';
     <section class="bg-white py-14 md:py-18" aria-labelledby="new-cleaning-enquiry-title">
       <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[.2em] text-copper-ink">New cleaning enquiry</p>
-          <h2 id="new-cleaning-enquiry-title" class="mt-3 font-serif text-3xl font-semibold text-navy md:text-4xl">Tell us what the property or site needs</h2>
-          <p class="mt-4 leading-7 text-ink/70">For home, property, office, commercial, post-construction, portfolio or complex-property work, use the central quotation route so HQC can identify the correct service.</p>
+          <h2 id="new-cleaning-enquiry-title" class="font-serif text-3xl font-semibold text-navy md:text-4xl">New Cleaning Enquiry</h2>
+          <p class="mt-4 leading-7 text-ink/70">If you need:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-6 leading-7 text-ink/70">
+            <li>home cleaning;</li>
+            <li>property cleaning;</li>
+            <li>office or commercial cleaning;</li>
+            <li>post-construction work;</li>
+            <li>portfolio support;</li>
+            <li>complex-property assessment;</li>
+          </ul>
+          <p class="mt-2 leading-7 text-ink/70">use the central Request a Quote route so we receive the information needed to identify the correct service.</p>
         </div>
         <a href="/request-a-quote/" class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-navy px-7 py-4 font-semibold text-white transition-transform hover:bg-gold hover:text-navy">Request a Cleaning Quote <span class="ml-2" aria-hidden="true">→</span></a>
       </div>
@@ -149,27 +157,65 @@ import HeroSection from '../components/HeroSection.astro';
     <section class="bg-white py-16 md:py-20" aria-label="Other contact routes">
       <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
         <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Existing clients</h2>
-          <p class="mt-3 leading-7 text-ink/70">For a booking, access update, invoice query, service question, recurring arrangement, feedback or administrative support, include the relevant name, property address and booking date or reference where available.</p>
+          <h2 class="font-serif text-2xl font-semibold text-navy">Existing Clients</h2>
+          <p class="mt-3 leading-7 text-ink/70">Use the contact route for matters such as:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-6 leading-7 text-ink/70">
+            <li>an existing booking;</li>
+            <li>access update;</li>
+            <li>invoice query;</li>
+            <li>service question;</li>
+            <li>existing recurring arrangement;</li>
+            <li>feedback;</li>
+            <li>administrative support.</li>
+          </ul>
+          <p class="mt-3 leading-7 text-ink/70">Where a matter relates to a booking, include the relevant name, property address and booking date or reference where available.</p>
         </article>
         <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Suppliers and subcontractors</h2>
-          <p class="mt-3 leading-7 text-ink/70">Please mark supplier or subcontractor enquiries clearly. Recruitment, supplier introductions, subcontractor administration, product sales and general business proposals are not cleaning quotation requests.</p>
+          <h2 class="font-serif text-2xl font-semibold text-navy">Suppliers and Subcontractors</h2>
+          <p class="mt-3 leading-7 text-ink/70">Supplier or subcontractor enquiries should be clearly marked as such.</p>
+          <p class="mt-3 leading-7 text-ink/70">Please do not use the customer quotation route for:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-6 leading-7 text-ink/70">
+            <li>recruitment;</li>
+            <li>supplier introductions;</li>
+            <li>subcontractor administration;</li>
+            <li>product sales;</li>
+            <li>general business proposals.</li>
+          </ul>
         </article>
         <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Media and partnerships</h2>
-          <p class="mt-3 leading-7 text-ink/70">Include who you are, your organisation, the purpose of your enquiry, relevant website or information and your preferred contact details.</p>
+          <h2 class="font-serif text-2xl font-semibold text-navy">Media, Partnerships and Other Enquiries</h2>
+          <p class="mt-3 leading-7 text-ink/70">For legitimate business, media or partnership enquiries, provide enough information for HQC to understand who you are, your organisation, purpose of contact, relevant website or information and preferred contact details.</p>
         </article>
       </div>
     </section>
 
     <section class="bg-navy py-12 text-white" aria-labelledby="assessment-media-title">
-      <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-[1fr_auto] md:items-center lg:px-8">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Assessment media</p>
-          <h2 id="assessment-media-title" class="mt-2 font-serif text-2xl font-semibold">Use WhatsApp only when HQC has requested photos or video</h2>
+          <h2 id="assessment-media-title" class="font-serif text-2xl font-semibold">Assessment Media</h2>
+          <p class="mt-3 max-w-3xl leading-7 text-white/75">Where HQC has specifically requested photos or video to assess a cleaning requirement, these may be sent using the approved assessment channel:</p>
+          <p class="mt-2 font-semibold">WhatsApp: 07824 390336</p>
           <p class="mt-3 max-w-3xl leading-7 text-white/75">Do not send sensitive documents unless HQC has specifically requested them through an appropriate route.</p>
         </div>
+        <a href="https://wa.me/447824390336" target="_blank" rel="noopener nofollow" class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/35 px-6 py-3 font-semibold text-white transition hover:border-gold hover:text-gold">WhatsApp 07824 390336 <span class="ml-2" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="bg-white py-14 md:py-16" aria-label="Service area and quotation routes">
+      <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
+          <h2 class="font-serif text-2xl font-semibold text-navy">Service Area Questions</h2>
+          <p class="mt-3 leading-7 text-ink/70">If you want to know whether HQC covers your postcode:</p>
+          <a href="/areas-we-cover/" class="mt-4 inline-flex font-semibold text-copper-ink hover:text-navy">Check Areas We Cover <span class="ml-2" aria-hidden="true">→</span></a>
+        </article>
+        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
+          <h2 class="font-serif text-2xl font-semibold text-navy">Need a Cleaning Quote Rather Than General Support?</h2>
+          <p class="mt-3 leading-7 text-ink/70">Use the quotation route so we can direct the enquiry correctly.</p>
+          <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+            <a href="/request-a-quote/" class="inline-flex font-semibold text-copper-ink hover:text-navy">Request a Cleaning Quote <span class="ml-2" aria-hidden="true">→</span></a>
+            <a href="#contact-methods" class="inline-flex font-semibold text-copper-ink hover:text-navy">Contact HQC <span class="ml-2" aria-hidden="true">→</span></a>
+          </div>
+        </article>
       </div>
     </section>
 

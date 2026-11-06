@@ -4,6 +4,8 @@ import { getPageVisual } from '../data/page-visuals';
 import phase8Copy from '../data/phase8-copy.json';
 import FounderPortrait from './FounderPortrait.astro';
 import ClientEvidence from './ClientEvidence.astro';
+import { controlledCtaHref } from '../data/controlled-cta-links';
+import { sectionImagery } from '../data/section-imagery';
 
 interface Props {
   page: OutcomePageData;
@@ -28,6 +30,18 @@ const controlledSections = master?.sections
     };
   }) ?? [];
 const visual = getPageVisual(page.slug);
+// Approved in-body CTAs are kept as `cta` blocks; consecutive ones share a row.
+type CopyBlock = { kind: string; text?: string; items?: string[] };
+const groupCtas = (blocks: CopyBlock[]) => blocks.reduce<(CopyBlock | { kind: 'ctas'; labels: string[] })[]>((groups, block) => {
+  const last = groups[groups.length - 1];
+  if (block.kind !== 'cta') return [...groups, block];
+  if (last?.kind === 'ctas') {
+    (last as { labels: string[] }).labels.push(block.text ?? '');
+    return groups;
+  }
+  return [...groups, { kind: 'ctas', labels: [block.text ?? ''] }];
+}, []);
+const imageryAfter = (heading: string) => (sectionImagery[page.slug] ?? []).find((entry) => entry.after === heading)?.images ?? [];
 const enquiryType = page.assessment
   ? 'Assessment before quotation'
   : page.slug === 'essential-clean-london'
@@ -124,12 +138,28 @@ const enquiryType = page.assessment
           <section class="border-b border-midnight/10 pb-12 last:border-b-0 last:pb-0">
             <h2 class="font-serif text-3xl font-medium text-midnight md:text-4xl">{section.heading}</h2>
             <div class="mt-5 space-y-4 text-lg leading-8 text-slate">
-              {section.blocks.map((block) => (
+              {groupCtas(section.blocks).map((block) => (
                 block.kind === 'h3' ? <h3 class="pt-4 font-serif text-2xl font-medium text-midnight">{block.text}</h3> :
                 block.kind === 'ul' ? <ul class="list-disc space-y-2 pl-6">{block.items.map((item) => <li>{item}</li>)}</ul> :
+                block.kind === 'ctas' ? (
+                  <p class="flex flex-wrap gap-x-7 gap-y-2 text-base" data-controlled-cta>
+                    {block.labels.map((label) => <a class="inline-flex font-bold text-midnight no-underline hover:text-copper-ink" href={controlledCtaHref(label, page)}>{label} <span class="ml-2 text-copper-ink" aria-hidden="true">→</span></a>)}
+                  </p>
+                ) :
+                block.kind === 'support' ? <p class="font-semibold text-midnight">{block.text}</p> :
                 <p>{block.text}</p>
               ))}
             </div>
+            {imageryAfter(section.heading).length > 0 && (
+              <div class:list={['mt-10 grid gap-4', imageryAfter(section.heading).length > 1 && 'sm:grid-cols-3']} data-section-imagery>
+                {imageryAfter(section.heading).map((image) => (
+                  <figure class="overflow-hidden rounded-2xl bg-midnight">
+                    <img src={image.src} srcset={image.srcset} sizes={imageryAfter(section.heading).length > 1 ? '(min-width: 640px) 30vw, 100vw' : '(min-width: 1024px) 896px, 100vw'} alt={image.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" width="1600" height="900" />
+                    {image.illustrative && <figcaption class="bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[.14em] text-slate">Illustrative image</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            )}
           </section>
         ))}
       </div>
@@ -212,10 +242,6 @@ const enquiryType = page.assessment
         </div>
         <div>
           <p class="max-w-3xl text-lg leading-8 text-white/75">HQC has worked with private clients across London, including clients who live abroad and rely on us to look after their London properties.</p>
-          <div class="mt-8 rounded-2xl border border-copper/35 bg-white/[.04] p-6 md:p-8">
-            <p class="text-xs font-bold uppercase tracking-[.2em] text-copper">Client proof reserved</p>
-            <p class="mt-4 leading-7 text-white/65">Named Chelsea and Fulham stories will be added only after publication permission is confirmed.</p>
-          </div>
         </div>
       </div>
     </section>

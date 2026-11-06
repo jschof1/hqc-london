@@ -98,6 +98,62 @@ import Header from '../components/Header.astro';
         <p class="text-sm text-ink/65">Not sure which route fits?</p>
         <a href="/#find-my-service" class="inline-flex min-h-11 items-center justify-center rounded-full border border-navy/20 px-5 py-2 text-sm font-semibold text-navy transition hover:border-gold hover:bg-white">Find My Service <span class="ml-2" aria-hidden="true">→</span></a>
       </div>
+
+      <div class="mt-16 space-y-12 text-ink/75" data-controlled-copy="Batch 5, page 3">
+        <section aria-labelledby="quote-routes-title">
+          <h2 id="quote-routes-title" class="font-serif text-3xl text-navy md:text-4xl">Choose the Route That Best Fits You</h2>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <article class="rounded-xl border border-gold/30 bg-white p-5">
+            <h3 class="font-serif text-xl text-navy">Property or Portfolio</h3>
+            <p class="mt-2 text-sm text-ink/70">For:</p>
+            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>property managers;</li><li>estate and letting agents;</li><li>landlords;</li><li>block managers;</li><li>developers;</li><li>portfolio teams.</li></ul>
+            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=property#routed-quote-form">Property or Portfolio Requirement <span class="ml-1" aria-hidden="true">→</span></a>
+          </article>
+          <article class="rounded-xl border border-gold/30 bg-white p-5">
+            <h3 class="font-serif text-xl text-navy">Workplace or Commercial Site</h3>
+            <p class="mt-2 text-sm text-ink/70">For:</p>
+            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>offices;</li><li>workplaces;</li><li>commercial premises;</li><li>recurring programmes;</li><li>commercial deep cleaning.</li></ul>
+            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=commercial#routed-quote-form">Workplace or Commercial Requirement <span class="ml-1" aria-hidden="true">→</span></a>
+          </article>
+          <article class="rounded-xl border border-gold/30 bg-white p-5">
+            <h3 class="font-serif text-xl text-navy">Home</h3>
+            <p class="mt-2 text-sm text-ink/70">For:</p>
+            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>Essential Clean™;</li><li>Deep Clean™;</li><li>Move-In Reset™;</li><li>End of Tenancy™;</li><li>Post-Construction™.</li></ul>
+            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=residential#routed-quote-form">Home Cleaning Requirement <span class="ml-1" aria-hidden="true">→</span></a>
+          </article>
+          <article class="rounded-xl border border-gold/30 bg-white p-5">
+            <h3 class="font-serif text-xl text-navy">Complex Property or Project</h3>
+            <p class="mt-2 text-sm text-ink/70">For:</p>
+            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>unusually large requirements;</li><li>specialist finishes;</li><li>multiple cleaning disciplines;</li><li>complex access;</li><li>high-value contents;</li><li>phased work;</li><li>project coordination.</li></ul>
+            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=complex#routed-quote-form">Complex Property or Project <span class="ml-1" aria-hidden="true">→</span></a>
+          </article>
+          </div>
+        </section>
+        <section aria-labelledby="quote-information-title">
+          <h2 id="quote-information-title" class="font-serif text-3xl text-navy md:text-4xl">Information That Helps Us Route the Enquiry</h2>
+          <ul class="mt-5 grid list-disc gap-x-8 gap-y-1 pl-6 leading-7 sm:grid-cols-2"><li>name;</li><li>email;</li><li>telephone;</li><li>property or site address;</li><li>postcode;</li><li>buyer type;</li><li>service requirement;</li><li>property or site type;</li><li>condition;</li><li>desired outcome;</li><li>preferred timing;</li><li>access information;</li><li>photos or supporting files;</li><li>message or additional details.</li></ul>
+          <p class="mt-4 leading-7">Not every enquiry needs every field.</p>
+        </section>
+        <section aria-labelledby="quote-after-title">
+          <h2 id="quote-after-title" class="font-serif text-3xl text-navy md:text-4xl">What Happens After You Submit</h2>
+          <dl class="mt-5 grid gap-4 sm:grid-cols-2"><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Standard home requirement</dt><dd class="mt-2 leading-7">We determine whether the enquiry can move into the relevant home-service or booking route.</dd></div><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Quoted residential service</dt><dd class="mt-2 leading-7">HQC reviews the requirement and confirms what further information is needed.</dd></div><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Property or commercial service</dt><dd class="mt-2 leading-7">The enquiry is qualified for quotation or site assessment.</dd></div><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Complex requirement</dt><dd class="mt-2 leading-7">The enquiry enters the Complex Service Assessment route.</dd></div></dl>
+        </section>
+        <section aria-labelledby="quote-not-booking-title">
+          <h2 id="quote-not-booking-title" class="font-serif text-3xl text-navy md:text-4xl">Submitting an Enquiry Does Not Confirm a Booking</h2>
+          <p class="mt-4 leading-7">A quotation request or assessment request is not automatically a confirmed booking.</p>
+          <p class="mt-2 leading-7">A booking is confirmed only through the applicable confirmation process.</p>
+        </section>
+        <section aria-labelledby="quote-accuracy-title">
+          <h2 id="quote-accuracy-title" class="font-serif text-3xl text-navy md:text-4xl">Send Accurate Information</h2>
+          <p class="mt-4 leading-7">The quotation and service recommendation rely on the information supplied.</p>
+          <p class="mt-2 leading-7">If the property condition, access or requirement differs materially, HQC may need to:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-6 leading-7"><li>clarify;</li><li>reassess;</li><li>revise the scope;</li><li>revise the quotation;</li><li>recommend another service.</li></ul>
+        </section>
+        <section class="rounded-2xl bg-navy p-8 text-center text-white" aria-labelledby="quote-ready-title">
+          <h2 id="quote-ready-title" class="font-serif text-3xl md:text-4xl">Ready to Tell Us About the Requirement?</h2>
+          <a href="#routed-quote-form" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy hover:bg-white">Submit Your Requirement</a>
+        </section>
+      </div>
     </div>
   </main>
 </Layout>

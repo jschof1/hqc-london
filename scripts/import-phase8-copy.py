@@ -1,7 +1,9 @@
 """Extract customer-facing sections from Pedro's approved Batch 1–5 DOCX files.
 
 Usage: python3 scripts/import-phase8-copy.py /path/to/batch1.docx ... /path/to/batch5.docx
-The release pack's Section 15 CTA amendments are applied separately in the site.
+The release pack's Section 15 hero CTA amendments are applied separately in the site.
+In-body "CTA:" lines (and a "Secondary CTA:" directly after one) are kept as
+`cta` blocks; "Supporting line:" text is kept as a `support` block.
 """
 
 import json
@@ -77,7 +79,19 @@ def extract(path: Path, batch: int):
             elif style.startswith('List'):
                 current['heroItems'].append(value)
             continue
-        if not section or re.match(r'^(Primary CTA|Secondary CTA|CTA|Trust line|Supporting line):', value, re.I):
+        if not section:
+            continue
+        # Keep the approved in-body contextual CTAs and supporting lines. Hero and
+        # closing Primary/Secondary CTA pairs remain handled by the page template.
+        cta = re.match(r'^(CTA|Secondary CTA|Supporting line):\s*(.+)$', value, re.I)
+        if cta:
+            label, text = cta.group(1).lower(), cta.group(2).strip()
+            if label == 'supporting line':
+                section['blocks'].append({'kind': 'support', 'text': text})
+            elif label == 'cta' or (section['blocks'] and section['blocks'][-1]['kind'] == 'cta'):
+                section['blocks'].append({'kind': 'cta', 'text': text})
+            continue
+        if re.match(r'^(Primary CTA|Secondary CTA|Trust line):', value, re.I):
             continue
         if value.startswith('[') and value.endswith(']'):
             continue
