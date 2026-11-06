@@ -793,7 +793,7 @@
       "variants": [
         "/images/luxury-home/Belgravia_bathroom_with_beautiful_stone.png"
       ],
-      "title": "Marble restoration before and after",
+      "title": "Complex project: bathroom with stone-clad walls and a freestanding bath",
       "placements": [
         {
           "path": "/",
@@ -2196,7 +2196,7 @@
       "variants": [
         "/images/luxury-home/Chelsea_Mews_house_in_London_with_spotless_wind.png"
       ],
-      "title": "Modern kitchen island with gleaming quartz countertops",
+      "title": "Move in/out: brick mews house with window boxes and a black front door",
       "placements": [
         {
           "path": "/case-studies/",
@@ -2562,7 +2562,7 @@
       "variants": [
         "/images/services/office-cleaning/office-cleaning-1.webp"
       ],
-      "title": "office cleaning 1",
+      "title": "Office: boardroom with a long table and a city view (logo question open)",
       "placements": [
         {
           "path": "/offer/",
@@ -2923,7 +2923,7 @@
       "variants": [
         "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
       ],
-      "title": "Kensington residence allergen-free deep cleaning service",
+      "title": "Kitchen with white cabinets, an island and two bar stools",
       "placements": [
         {
           "path": "/process/",
@@ -3235,7 +3235,7 @@
       "variants": [
         "/images/services/well-clean/well-clean-4.webp"
       ],
-      "title": "Bedroom deep clean for better sleep",
+      "title": "Commercial section: studio room with shelving and exercise mats (two-panel image labelled before and after; outcome unverified)",
       "placements": [
         {
           "path": "/services/deep-cleaning/",
@@ -4727,6 +4727,57 @@
       "width": 1079,
       "height": 1344,
       "dimensions": "1079 \u00d7 1344 px"
+    },
+    {
+      "id": "p-ea4844c550",
+      "original": "WhatsApp from Pedro, 4 Nov 2026: 20260630_092540.jpg",
+      "variants": [],
+      "title": "Recent photo, 4 Nov 2026: tiled bath surround with a mixer tap and shower valve",
+      "placements": [],
+      "group": "library",
+      "kind": "Recent HQC photo (WhatsApp, 4 Nov 2026)",
+      "rights": "Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.",
+      "src": "/assets/p-ea4844c550.jpg",
+      "bytes": 265371,
+      "sha256": "169eebdf0593e3ada1d77f9c83098359b0d780c70554485a71fba378ef864286",
+      "ref": "L58",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-33738a5c46",
+      "original": "WhatsApp from Pedro, 4 Nov 2026: 20260630_092544.jpg",
+      "variants": [],
+      "title": "Recent photo, 4 Nov 2026: close view of a tiled bath-surround corner with a hanging bath sponge",
+      "placements": [],
+      "group": "library",
+      "kind": "Recent HQC photo (WhatsApp, 4 Nov 2026)",
+      "rights": "Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.",
+      "src": "/assets/p-33738a5c46.jpg",
+      "bytes": 224830,
+      "sha256": "609ed8e2169640a56d6411897a155e7e469ad360622194df8684fff5cf838d39",
+      "ref": "L59",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
+    },
+    {
+      "id": "p-aae2e0904a",
+      "original": "WhatsApp from Pedro, 4 Nov 2026: 20260630_130107.jpg",
+      "variants": [],
+      "title": "Recent photo, 4 Nov 2026: tiled bath-surround corner and bath edge with a hanging bath sponge",
+      "placements": [],
+      "group": "library",
+      "kind": "Recent HQC photo (WhatsApp, 4 Nov 2026)",
+      "rights": "Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.",
+      "src": "/assets/p-aae2e0904a.jpg",
+      "bytes": 288166,
+      "sha256": "1718977d0d2df3d554635d075f1b9b1e8b3ff1aa37f74ec2a478d303ff3a0054",
+      "ref": "L60",
+      "width": 1536,
+      "height": 2048,
+      "dimensions": "1536 \u00d7 2048 px"
     }
   ],
   "heroes": [

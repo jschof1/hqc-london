@@ -316,9 +316,10 @@
         "Pedro to confirm project and permission for photos p-ae4372f37d (bedroom), p-2267193ade (living area) and p-1ef63f3b16 (shutter dusting) before they can be shown as HQC work.",
         "Pedro to confirm the pricing-page button wording: \"Book an Essential Clean™\" (Batch 4 metadata) or \"Check Essential Clean™ Pricing\" (Batch 4 hero).",
         "Pedro to send portraits and his image-ideas document.",
-        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end."
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end.",
+        "Photo review (added 6 Nov 2026): the three photos Pedro sent on 4 Nov are now in the photo review, awaiting his choice; three archive photos (p-ae4372f37d, p-2267193ade, p-1ef63f3b16) still need his confirmation of project and publication permission."
       ],
-      "provenance": "Captured on 2026-11-06 from the immutable preview https://de1fdf73.hqc-london.pages.dev (commit 39518d6) at 1440px and 390px, non-essential cookies rejected, no forms submitted. The release date is the source deployment date, not a launch date. Outstanding before launch: proof stories; Pedro confirming three library photos; pricing button wording; portraits and image ideas; GHL webhooks for the Phase 8 forms.",
+      "provenance": "Captured on 2026-11-06 from the immutable preview https://de1fdf73.hqc-london.pages.dev (commit 39518d6) at 1440px and 390px, non-essential cookies rejected, no forms submitted. The release date is the source deployment date, not a launch date. Outstanding before launch: proof stories; Pedro confirming three library photos; pricing button wording; portraits and image ideas; GHL webhooks for the Phase 8 forms. Update 6 Nov 2026: the three 4 Nov photos are now in the photo review awaiting Pedro’s choice, and three archive photos need his provenance confirmation.",
       "pages": {
         "home": {
           "desktop": {

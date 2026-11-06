@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-06",
+  "request": "W8 final-review follow-up",
+  "addedPhotos": [
+    {
+      "file": "20260630_092540.jpg",
+      "id": "p-ea4844c550",
+      "bytes": 265371,
+      "width": 1536,
+      "height": 2048,
+      "sha256": "169eebdf0593e3ada1d77f9c83098359b0d780c70554485a71fba378ef864286",
+      "exif": false,
+      "icc": false,
+      "originalSha256": "06de7cac448a94cbcab892fe2edc8e5035feedcce603119b874e88aeae8fdb3e",
+      "originalBytes": 1857522,
+      "title": "Recent photo, 4 Nov 2026: tiled bath surround with a mixer tap and shower valve",
+      "rights": "Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.",
+      "processing": "EXIF orientation applied, resized to fit 2048px, JPEG quality 85, camera metadata removed; original retained privately (images/originals/)."
+    },
+    {
+      "file": "20260630_092544.jpg",
+      "id": "p-33738a5c46",
+      "bytes": 224830,
+      "width": 1536,
+      "height": 2048,
+      "sha256": "609ed8e2169640a56d6411897a155e7e469ad360622194df8684fff5cf838d39",
+      "exif": false,
+      "icc": false,
+      "originalSha256": "90ebc4ad4347c931ba8427c22f7bfd287711eee306acb429595b2e97809af4ef",
+      "originalBytes": 1786498,
+      "title": "Recent photo, 4 Nov 2026: close view of a tiled bath-surround corner with a hanging bath sponge",
+      "rights": "Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.",
+      "processing": "EXIF orientation applied, resized to fit 2048px, JPEG quality 85, camera metadata removed; original retained privately (images/originals/)."
+    },
+    {
+      "file": "20260630_130107.jpg",
+      "id": "p-aae2e0904a",
+      "bytes": 288166,
+      "width": 1536,
+      "height": 2048,
+      "sha256": "1718977d0d2df3d554635d075f1b9b1e8b3ff1aa37f74ec2a478d303ff3a0054",
+      "exif": false,
+      "icc": false,
+      "originalSha256": "f7e43a0c817ad5178a5e94900777fac21958cf18e739f805040d3cacbd2f9afe",
+      "originalBytes": 2160654,
+      "title": "Recent photo, 4 Nov 2026: tiled bath-surround corner and bath edge with a hanging bath sponge",
+      "rights": "Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.",
+      "processing": "EXIF orientation applied, resized to fit 2048px, JPEG quality 85, camera metadata removed; original retained privately (images/originals/)."
+    }
+  ],
+  "notes": [
+    "The three photos are separate inventory entries. They are not paired as before/after and not presented as three separate jobs; filenames do not establish job, sequence or client.",
+    "Choices are left unset; Durable Object storage (choices, notes, comments) is not modified by this update."
+  ],
+  "relabels": [
+    {
+      "id": "p-d2badadefc",
+      "field": "title",
+      "before": "Marble restoration before and after",
+      "after": "Complex project: bathroom with stone-clad walls and a freestanding bath"
+    },
+    {
+      "id": "p-1a211e6792",
+      "field": "title",
+      "before": "Modern kitchen island with gleaming quartz countertops",
+      "after": "Move in/out: brick mews house with window boxes and a black front door"
+    },
+    {
+      "id": "p-cc17837fe6",
+      "field": "title",
+      "before": "office cleaning 1",
+      "after": "Office: boardroom with a long table and a city view (logo question open)"
+    },
+    {
+      "id": "p-6fa73ebd8f",
+      "field": "title",
+      "before": "Kensington residence allergen-free deep cleaning service",
+      "after": "Kitchen with white cabinets, an island and two bar stools"
+    },
+    {
+      "id": "p-43a452bebc",
+      "field": "title",
+      "before": "Bedroom deep clean for better sleep",
+      "after": "Commercial section: studio room with shelving and exercise mats (two-panel image labelled before and after; outcome unverified)"
+    }
+  ],
+  "versionNote": {
+    "version": "nov6-revisions",
+    "appendedOutstanding": "Photo review (added 6 Nov 2026): the three photos Pedro sent on 4 Nov are now in the photo review, awaiting his choice; three archive photos (p-ae4372f37d, p-2267193ade, p-1ef63f3b16) still need his confirmation of project and publication permission."
+  }
+}
