@@ -378,7 +378,11 @@
         ]
       }
     ],
-    "source": "Batch 1, page 1"
+    "source": "Batch 1, page 1",
+    "closing": {
+      "primary": "Find My Service",
+      "secondary": "Request a Quote"
+    }
   },
   "property-facilities-cleaning-london": {
     "title": "Cleaning Support for London Property Managers, Agents and Facilities Teams",
@@ -633,7 +637,11 @@
         ]
       }
     ],
-    "source": "Batch 1, page 2"
+    "source": "Batch 1, page 2",
+    "closing": {
+      "primary": "Discuss Your Property Requirements",
+      "secondary": "Request a Site or Portfolio Assessment"
+    }
   },
   "office-cleaning-london": {
     "title": "Office Cleaning Programmes Built Around Your Workplace",
@@ -901,7 +909,11 @@
         ]
       }
     ],
-    "source": "Batch 1, page 3"
+    "source": "Batch 1, page 3",
+    "closing": {
+      "primary": "Request an Office Cleaning Proposal",
+      "secondary": "Arrange a Site Visit"
+    }
   },
   "home-cleaning-london": {
     "title": "Home Cleaning Starts with the Result You Need",
@@ -1167,7 +1179,11 @@
         ]
       }
     ],
-    "source": "Batch 1, page 4"
+    "source": "Batch 1, page 4",
+    "closing": {
+      "primary": "Find My Home Cleaning Service",
+      "secondary": "Request a Quote"
+    }
   },
   "essential-clean-london": {
     "title": "Essential Clean™ for London Homes",
@@ -1456,7 +1472,11 @@
         ]
       }
     ],
-    "source": "Batch 2, page 1"
+    "source": "Batch 2, page 1",
+    "closing": {
+      "primary": "Check Essential Clean™ Suitability",
+      "secondary": "Find My Service"
+    }
   },
   "deep-cleaning-london": {
     "title": "Deep Clean™ for London Homes",
@@ -1696,7 +1716,11 @@
         ]
       }
     ],
-    "source": "Batch 2, page 2"
+    "source": "Batch 2, page 2",
+    "closing": {
+      "primary": "Request a Deep-Clean Quote",
+      "secondary": "Send Property Details"
+    }
   },
   "end-of-tenancy-cleaning-london": {
     "title": "End of Tenancy™ Cleaning in London",
@@ -1947,7 +1971,11 @@
         ]
       }
     ],
-    "source": "Batch 2, page 3"
+    "source": "Batch 2, page 3",
+    "closing": {
+      "primary": "Request an End of Tenancy Quote",
+      "secondary": "Check Your Property Requirements"
+    }
   },
   "move-in-cleaning-london": {
     "title": "Move-In Reset™ Cleaning in London",
@@ -2177,7 +2205,11 @@
         ]
       }
     ],
-    "source": "Batch 2, page 4"
+    "source": "Batch 2, page 4",
+    "closing": {
+      "primary": "Request a Move-In Reset™ Quote",
+      "secondary": "Send Property Details"
+    }
   },
   "post-construction-cleaning-london": {
     "title": "Post-Construction™ Cleaning in London",
@@ -2544,7 +2576,11 @@
         ]
       }
     ],
-    "source": "Batch 2, page 5"
+    "source": "Batch 2, page 5",
+    "closing": {
+      "primary": "Request a Post-Construction Assessment",
+      "secondary": "Send Project Details"
+    }
   },
   "communal-area-cleaning-london": {
     "title": "Communal Area Cleaning for London Managed Buildings",
@@ -2866,7 +2902,11 @@
         ]
       }
     ],
-    "source": "Batch 3, page 1"
+    "source": "Batch 3, page 1",
+    "closing": {
+      "primary": "Request a Communal Cleaning Proposal",
+      "secondary": "Arrange a Site Visit"
+    }
   },
   "estate-letting-agent-cleaning-london": {
     "title": "Cleaning Support for London Estate and Lettings Agents",
@@ -3152,7 +3192,11 @@
         ]
       }
     ],
-    "source": "Batch 3, page 2"
+    "source": "Batch 3, page 2",
+    "closing": {
+      "primary": "Discuss Agency Cleaning Support",
+      "secondary": "Send Us a Property Requirement"
+    }
   },
   "move-in-void-property-cleaning-london": {
     "title": "Move-In and Void Property Cleaning for London Property Teams",
@@ -3408,7 +3452,11 @@
         "blocks": []
       }
     ],
-    "source": "Batch 3, page 3"
+    "source": "Batch 3, page 3",
+    "closing": {
+      "primary": "Request a Property Reset Quote",
+      "secondary": "Send Property Details"
+    }
   },
   "portfolio-cleaning-support-london": {
     "title": "Cleaning Support Across London Property Portfolios",
@@ -3699,7 +3747,11 @@
         ]
       }
     ],
-    "source": "Batch 3, page 4"
+    "source": "Batch 3, page 4",
+    "closing": {
+      "primary": "Discuss Your Portfolio Requirements",
+      "secondary": "Request a Partnership Conversation"
+    }
   },
   "commercial-cleaning-london": {
     "title": "Workplaces and Commercial Cleaning in London",
@@ -4022,7 +4074,11 @@
         ]
       }
     ],
-    "source": "Batch 3, page 5"
+    "source": "Batch 3, page 5",
+    "closing": {
+      "primary": "Discuss Commercial Cleaning",
+      "secondary": "Request a Site Assessment"
+    }
   },
   "commercial-deep-cleaning-london": {
     "title": "Commercial Deep Cleaning for London Workplaces and Premises",
@@ -4350,7 +4406,11 @@
         ]
       }
     ],
-    "source": "Batch 3, page 6"
+    "source": "Batch 3, page 6",
+    "closing": {
+      "primary": "Request a Commercial Deep-Clean Assessment",
+      "secondary": "Send Site Details"
+    }
   },
   "complex-property-cleaning-london": {
     "title": "Cleaning Assessment and Delivery for Large or Complex London Properties",
@@ -4676,7 +4736,11 @@
         ]
       }
     ],
-    "source": "Batch 4, page 1"
+    "source": "Batch 4, page 1",
+    "closing": {
+      "primary": "Request a Complex Service Assessment",
+      "secondary": "Discuss the Property or Project"
+    }
   },
   "how-we-work": {
     "title": "A Clearer Route from Requirement to Delivery",
@@ -4932,7 +4996,11 @@
         ]
       }
     ],
-    "source": "Batch 4, page 2"
+    "source": "Batch 4, page 2",
+    "closing": {
+      "primary": "Start Your Enquiry",
+      "secondary": "Find My Service"
+    }
   },
   "cleaning-prices-london": {
     "title": "Cleaning Prices Based on the Work Required",
@@ -5255,7 +5323,11 @@
         ]
       }
     ],
-    "source": "Batch 4, page 3"
+    "source": "Batch 4, page 3",
+    "closing": {
+      "primary": "Get a Cleaning Quote",
+      "secondary": "Check Essential Clean™ Suitability"
+    }
   },
   "why-choose-hqc": {
     "title": "Why Clients Choose HQC When the Result Matters",
@@ -5512,7 +5584,11 @@
         ]
       }
     ],
-    "source": "Batch 4, page 4"
+    "source": "Batch 4, page 4",
+    "closing": {
+      "primary": "Find the Right Service",
+      "secondary": "Request a Quote"
+    }
   },
   "about-high-quality-clean": {
     "title": "About High Quality Clean",
@@ -5813,7 +5889,11 @@
         ]
       }
     ],
-    "source": "Batch 4, page 5"
+    "source": "Batch 4, page 5",
+    "closing": {
+      "primary": "Discuss Your Cleaning Requirement",
+      "secondary": "Find Your Service"
+    }
   },
   "reviews-case-studies": {
     "title": "What Clients Say About High Quality Clean",
@@ -6048,7 +6128,11 @@
         ]
       }
     ],
-    "source": "Batch 5, page 2"
+    "source": "Batch 5, page 2",
+    "closing": {
+      "primary": "Request a Similar Service",
+      "secondary": "Find My Service"
+    }
   },
   "areas-we-cover": {
     "title": "Cleaning Services Across London",
@@ -6265,7 +6349,11 @@
         ]
       }
     ],
-    "source": "Batch 5, page 5"
+    "source": "Batch 5, page 5",
+    "closing": {
+      "primary": "Check Availability for Your Postcode",
+      "secondary": "Find My Service"
+    }
   },
   "cleaning-services-east-london": {
     "title": "Professional Cleaning Services in East London",
@@ -6491,6 +6579,10 @@
         ]
       }
     ],
-    "source": "Batch 5, page 6"
+    "source": "Batch 5, page 6",
+    "closing": {
+      "primary": "Check Availability in East London",
+      "secondary": "Request a Quote"
+    }
   }
 }

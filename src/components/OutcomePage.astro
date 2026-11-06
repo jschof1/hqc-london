@@ -4,7 +4,7 @@ import { getPageVisual } from '../data/page-visuals';
 import phase8Copy from '../data/phase8-copy.json';
 import FounderPortrait from './FounderPortrait.astro';
 import ClientEvidence from './ClientEvidence.astro';
-import { controlledCtaHref } from '../data/controlled-cta-links';
+import { closingCtas, controlledCtaHref } from '../data/controlled-cta-links';
 import { sectionImagery } from '../data/section-imagery';
 
 interface Props {
@@ -41,6 +41,9 @@ const groupCtas = (blocks: CopyBlock[]) => blocks.reduce<(CopyBlock | { kind: 'c
   }
   return [...groups, { kind: 'ctas', labels: [block.text ?? ''] }];
 }, []);
+const closing = closingCtas(page, (master as { closing?: { primary?: string; secondary?: string } } | undefined)?.closing);
+// The 'HQC work' heading is used only when every gallery image is a verified HQC library photo.
+const galleryIsHqcWork = visual.gallery.every((image) => image.hqc);
 const imageryAfter = (heading: string) => (sectionImagery[page.slug] ?? []).find((entry) => entry.after === heading)?.images ?? [];
 const enquiryType = page.assessment
   ? 'Assessment before quotation'
@@ -115,9 +118,10 @@ const enquiryType = page.assessment
 
       <div>
         {page.slug === 'about-high-quality-clean' ? <FounderPortrait /> : (
-          <div class="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_70px_rgba(14,36,42,.12)]">
+          <figure class="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_70px_rgba(14,36,42,.12)]">
             <img src={visual.gallery[0].src} alt={visual.gallery[0].alt} class="aspect-[4/3] w-full object-cover" loading="lazy" width="1000" height="750" />
-          </div>
+            {!visual.gallery[0].hqc && <figcaption class="px-5 py-2 text-xs font-semibold uppercase tracking-[.14em] text-slate">Illustrative image</figcaption>}
+          </figure>
         )}
         <div class="mt-8 grid gap-px overflow-hidden rounded-2xl border border-midnight/10 bg-midnight/10 sm:grid-cols-3">
           {visual.outcomes.map((item, index) => (
@@ -276,17 +280,25 @@ const enquiryType = page.assessment
 
   <section class="section-shell">
     <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-      <div class="max-w-3xl">
-        <p class="section-kicker">HQC work</p>
-        <h2 class="section-title">Real spaces. Visible care.</h2>
-      </div>
-      <p class="max-w-md text-sm leading-6 text-slate">Selected imagery from the HQC project library. The exact scope and finish varies by property, condition and agreed service.</p>
+      {galleryIsHqcWork ? (
+        <div class="max-w-3xl">
+          <p class="section-kicker">HQC work</p>
+          <h2 class="section-title">Real spaces. Visible care.</h2>
+        </div>
+      ) : (
+        <div class="max-w-3xl">
+          <p class="section-kicker">Illustrative imagery</p>
+          <h2 class="section-title">Illustrative images</h2>
+        </div>
+      )}
+      <p class="max-w-md text-sm leading-6 text-slate">{galleryIsHqcWork ? 'Selected imagery from the HQC project library.' : 'These images are illustrative, not photographs of HQC work.'} The exact scope and finish varies by property, condition and agreed service.</p>
     </div>
     <div class="mt-12 grid auto-rows-[220px] gap-4 md:grid-cols-12 md:auto-rows-[250px]">
       {visual.gallery.map((image, index) => (
         <figure class:list={['group relative overflow-hidden rounded-2xl bg-midnight', index === 0 ? 'md:col-span-7 md:row-span-2' : 'md:col-span-5']}>
           <img src={image.src} alt={image.alt} class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" loading="lazy" width="1000" height="750" />
           <div class="absolute inset-0 bg-gradient-to-t from-midnight/50 via-transparent to-transparent opacity-70"></div>
+          {!image.hqc && <figcaption class="absolute bottom-3 left-3 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[.12em] text-midnight">Illustrative image</figcaption>}
         </figure>
       ))}
     </div>
@@ -334,9 +346,12 @@ const enquiryType = page.assessment
     <div class="relative mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 px-5 sm:px-8 md:flex-row md:items-center lg:px-14">
       <div>
         <p class="text-xs font-bold uppercase tracking-[.22em] text-midnight">The next step is simple</p>
-        <h2 class="mt-3 max-w-3xl font-serif text-4xl font-medium leading-tight md:text-6xl">{page.primaryCta}</h2>
+        <h2 class="mt-3 max-w-3xl font-serif text-4xl font-medium leading-tight md:text-6xl">{closing.primary.label}</h2>
       </div>
-      <a class="button button-dark shrink-0" href={page.primaryHref}>{page.primaryCta}<span aria-hidden="true">↗</span></a>
+      <div class="flex shrink-0 flex-col gap-3 sm:flex-row" data-closing-cta>
+        <a class="button button-dark" href={closing.primary.href}>{closing.primary.label}<span aria-hidden="true">↗</span></a>
+        {closing.secondary && <a class="button border border-midnight/30 text-midnight hover:border-midnight" href={closing.secondary.href}>{closing.secondary.label}</a>}
+      </div>
     </div>
   </section>
 </main>

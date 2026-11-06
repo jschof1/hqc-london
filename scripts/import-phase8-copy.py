@@ -3,7 +3,8 @@
 Usage: python3 scripts/import-phase8-copy.py /path/to/batch1.docx ... /path/to/batch5.docx
 The release pack's Section 15 hero CTA amendments are applied separately in the site.
 In-body "CTA:" lines (and a "Secondary CTA:" directly after one) are kept as
-`cta` blocks; "Supporting line:" text is kept as a `support` block.
+`cta` blocks; "Supporting line:" text is kept as a `support` block. A
+Primary/Secondary CTA pair inside the page body is recorded as `closing`.
 """
 
 import json
@@ -90,8 +91,17 @@ def extract(path: Path, batch: int):
                 section['blocks'].append({'kind': 'support', 'text': text})
             elif label == 'cta' or (section['blocks'] and section['blocks'][-1]['kind'] == 'cta'):
                 section['blocks'].append({'kind': 'cta', 'text': text})
+            else:
+                # A Secondary CTA that does not follow an in-body CTA closes the page.
+                current.setdefault('closing', {})['secondary'] = text
             continue
-        if re.match(r'^(Primary CTA|Secondary CTA|Trust line):', value, re.I):
+        closing = re.match(r'^(Primary CTA|Secondary CTA):\s*(.+)$', value, re.I)
+        if closing:
+            # A Primary/Secondary pair inside the body is the page's closing CTA pair.
+            key = 'primary' if closing.group(1).lower() == 'primary cta' else 'secondary'
+            current.setdefault('closing', {})[key] = closing.group(2).strip()
+            continue
+        if re.match(r'^Trust line:', value, re.I):
             continue
         if value.startswith('[') and value.endswith(']'):
             continue

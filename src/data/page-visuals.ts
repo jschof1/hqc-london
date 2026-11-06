@@ -1,22 +1,27 @@
 export type PageVisual = {
   hero: string;
   heroAlt: string;
-  gallery: { src: string; alt: string }[];
+  /** hqc: a verified HQC library photograph; anything else is shown as illustrative. */
+  gallery: { src: string; alt: string; hqc?: boolean }[];
   outcomes: string[];
   scope: string[];
   note: string;
 };
 
-const homeGallery = [
-  { src: '/images/instock/london-property-living-room.webp', alt: 'Bright, carefully prepared London living room' },
-  { src: '/images/luxury-home/Mayfair_penthouse_kitchen_with_beautiful_marble.png', alt: 'Finished marble kitchen in a London home' },
-  { src: '/images/instock/IMG-20250813-WA0012.jpg', alt: 'Clean and ready London bathroom' }
+// Real HQC library photographs Pedro marked "keep" in the photo review
+// (WA0016 p-ae4372f37d, WA0015 p-2267193ade, WA0062 p-1ef63f3b16); brightness-only enhancement.
+const hqcLibraryGallery = [
+  { src: '/images/phase8-nov6/old-living-room-wide-1536.webp', alt: 'Open-plan living area with a light sofa and an adjoining kitchen.', hqc: true },
+  { src: '/images/phase8-nov6/old-living-room-1536.webp', alt: 'Living area with a dining table, sofa and wide windows.', hqc: true },
+  { src: '/images/phase8-nov6/old-approved-window-cleaning-1079.webp', alt: 'Cleaner wiping window shutters inside a property.', hqc: true }
 ];
 
+const homeGallery = hqcLibraryGallery;
+
 const propertyGallery = [
-  { src: '/images/instock/IMG-20250813-WA0024.jpg', alt: 'Vacant London property prepared for handover' },
-  { src: '/images/instock/IMG-20250813-WA0027.jpg', alt: 'Clean empty room ready for occupation' },
-  { src: '/images/instock/IMG-20250813-WA0033.jpg', alt: 'Finished kitchen following property cleaning' }
+  { src: '/images/instock/IMG-20250813-WA0024.jpg', alt: 'Vacant London property prepared for handover', hqc: true },
+  { src: '/images/instock/IMG-20250813-WA0027.jpg', alt: 'Clean empty room ready for occupation', hqc: true },
+  { src: '/images/instock/IMG-20250813-WA0033.jpg', alt: 'Finished kitchen following property cleaning', hqc: true }
 ];
 
 const commercialGallery = [
@@ -25,11 +30,7 @@ const commercialGallery = [
   { src: '/images/generated/hqc-kitchen-detail.png', alt: 'Illustrative kitchen detail prepared to a careful cleaning standard' }
 ];
 
-const restorationGallery = [
-  { src: '/images/generated/hqc-restoration-interior.png', alt: 'Illustrative London living space prepared with careful attention to detail' },
-  { src: '/images/generated/hqc-kitchen-detail.png', alt: 'Illustrative London kitchen prepared to a detailed clean standard' },
-  { src: '/images/generated/hqc-home-hero.webp', alt: 'Illustrative London home prepared for a cleaning enquiry' }
-];
+const restorationGallery = hqcLibraryGallery;
 
 const defaultVisual: PageVisual = {
   hero: '/images/luxury-home/hyde-park-apartment.webp',

@@ -8,7 +8,9 @@ import { fileURLToPath } from 'node:url';
 
 const HEX40 = /^[0-9a-f]{40}$/;
 const HEX64 = /^[0-9a-f]{64}$/;
-const GLOB_OR_BACKSLASH = /[*?[\]{}!\\]/;
+// Square brackets are allowed as literal characters (Astro dynamic routes such as
+// src/pages/[slug].astro). allowedFiles are matched by exact string lookup, never as patterns.
+const GLOB_OR_BACKSLASH = /[*?{}!\\]/;
 const PROTECTED_DIRS = ['src', 'public', 'functions', 'scripts'];
 const PROTECTED_ROOT_FILES = [
   /^astro\.config\.[^/]+$/,

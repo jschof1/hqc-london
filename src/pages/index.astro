@@ -44,6 +44,17 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
           <h1 class="mt-6 max-w-3xl font-serif text-[clamp(3.8rem,7vw,7.2rem)] font-medium leading-[.88] tracking-[-.045em]">
             The Right Cleaning Service<br /><em class="font-medium text-copper">for the Result You Need</em>
           </h1>
+          <ul class="mt-6 grid grid-cols-3 gap-2 lg:hidden" aria-label="Our three core services">
+            {offerings.map((offering) => (
+              <li>
+                <a href={offering.href} class="block text-white no-underline">
+                  <img src={offering.image.src} srcset={offering.image.srcset} sizes="33vw" alt={offering.image.alt} class="aspect-[4/3] w-full rounded-lg object-cover object-[70%_50%]" width="800" height="600" fetchpriority="high" />
+                  <span class="mt-1.5 block text-[11px] font-bold leading-tight">{offering.eyebrow} <span class="text-copper" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-2 text-[11px] text-white/60 lg:hidden">Images are illustrative.</p>
           <p class="mt-8 max-w-xl text-lg leading-8 text-white/75 md:text-xl">From recurring home cleaning to workplace programmes, property handovers and complex projects, High Quality Clean matches the service, labour and delivery approach to the condition of the space and the outcome required.</p>
           <div class="mt-10 flex flex-col gap-3 sm:flex-row">
             <a href="#find-my-service" class="button button-primary" data-track="find_my_service">Find my service <span aria-hidden="true">↓</span></a>
@@ -54,7 +65,7 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
           </div>
         </div>
 
-        <div class="relative z-10">
+        <div class="relative z-10 hidden lg:block">
           <ul class="grid gap-4" aria-label="Our three core services">
             {offerings.map((offering) => (
               <li>
@@ -212,9 +223,8 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
     <section class="section-shell">
       <div class="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
         <div class="grid auto-rows-[210px] grid-cols-2 gap-4 md:auto-rows-[260px]">
-          <figure class="row-span-2 overflow-hidden rounded-[2rem]"><img src="/images/generated/hqc-restoration-interior.png" alt="Illustrative London living space prepared with careful attention to detail" class="h-full w-full object-cover" loading="lazy" width="1536" height="1024" /></figure>
-          <figure class="overflow-hidden rounded-[2rem]"><img src="/images/generated/hqc-kitchen-detail.png" alt="Illustrative London kitchen prepared to a detailed clean standard" class="h-full w-full object-cover" loading="lazy" width="1284" height="833" /></figure>
-          <figure class="overflow-hidden rounded-[2rem]"><img src="/images/instock/london-property-living-room.webp" alt="Bright prepared living space" class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" /></figure>
+          <figure class="row-span-2 overflow-hidden rounded-[2rem]"><img src="/images/phase8-nov6/old-living-room-wide-1536.webp" alt="Open-plan living area with a light sofa and an adjoining kitchen." class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" /></figure>
+          <figure class="row-span-2 overflow-hidden rounded-[2rem]"><img src="/images/phase8-nov6/old-living-room-1536.webp" alt="Living area with a dining table, sofa and wide windows." class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" /></figure>
         </div>
         <div class="flex flex-col justify-center">
           <p class="section-kicker">Evidence, not adjectives</p>

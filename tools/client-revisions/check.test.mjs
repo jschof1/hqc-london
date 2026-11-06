@@ -121,6 +121,17 @@ test('packet schema errors fail', () => {
   assert.match(r.out, /duplicate requirement id "R1"/);
   for (const bad of ['../x', '/etc/passwd', 'a//b', './a', 'a\\b', 'a/']) assert.ok(relativePathError(bad), bad);
   assert.equal(relativePathError('notes/a b.md'), null);
+  assert.equal(relativePathError('src/pages/[slug].astro'), null);
+  for (const bad of ['src/*.astro', 'src/?.md', 'src/{a,b}.md', 'src/!x.md']) assert.ok(relativePathError(bad), bad);
+});
+
+test('bracketed paths are literal exact matches, not character classes', () => {
+  const root = makeRepo({ packet: (p) => ({ ...p, allowedFiles: [...p.allowedFiles, { path: 'src/pages/[slug].astro', requirements: ['R1'], allowDelete: false }] }) });
+  mkdirSync(path.join(root, 'src/pages'), { recursive: true });
+  writeFileSync(path.join(root, 'src/pages/[slug].astro'), 'listed\n');
+  expectPass(run(root, '--scope'));
+  writeFileSync(path.join(root, 'src/pages/s.astro'), 'not listed\n');
+  expectFail(run(root, '--scope'), /not listed in packet: "src\/pages\/s.astro"/);
 });
 
 test('baseline must be an ancestor of HEAD', () => {

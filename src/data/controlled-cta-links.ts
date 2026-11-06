@@ -61,3 +61,29 @@ export function controlledCtaHref(label: string, page?: Pick<OutcomePage, 'prima
 }
 
 export const knownControlledCtaLabels = Object.keys(destinations);
+
+// 28 Sep 2026 Release Pack section 15 changed these pages' hero CTA labels. Where the
+// approved closing pair repeats an overridden hero label, the section 15 label is used.
+const section15ClosingOverrides: Record<string, Record<string, string>> = {
+  'essential-clean-london': { 'Check Essential Clean™ Suitability': 'Book an Essential Clean™' },
+  'deep-cleaning-london': { 'Send Property Details': 'Tell Us About the Property Condition' },
+  'why-choose-hqc': { 'Find the Right Service': 'Find My Service', 'Request a Quote': 'Read Client Success Stories' },
+  'about-high-quality-clean': { 'Find Your Service': 'Meet Pedro and See How HQC Works' }
+};
+
+/** Approved closing Primary/Secondary pair for an outcome page, with section 15 applied. */
+export function closingCtas(page: OutcomePage, closing?: { primary?: string; secondary?: string }) {
+  const override = (label?: string) => (label ? section15ClosingOverrides[page.slug]?.[label] ?? label : undefined);
+  const resolve = (label: string) => {
+    if (label === page.primaryCta) return page.primaryHref;
+    if (label === page.secondaryCta) return page.secondaryHref;
+    // Page-specific closing labels (for example "Send Property Details") use the page's own enquiry route.
+    return destinations[label] ?? page.primaryHref;
+  };
+  const primary = override(closing?.primary) ?? page.primaryCta;
+  const secondary = override(closing?.secondary);
+  return {
+    primary: { label: primary, href: resolve(primary) },
+    secondary: secondary && secondary !== primary ? { label: secondary, href: resolve(secondary) } : undefined
+  };
+}
