@@ -87,5 +87,14 @@
   "versionNote": {
     "version": "nov6-revisions",
     "appendedOutstanding": "Photo review (added 6 Nov 2026): the three photos Pedro sent on 4 Nov are now in the photo review, awaiting his choice; three archive photos (p-ae4372f37d, p-2267193ade, p-1ef63f3b16) still need his confirmation of project and publication permission."
+  },
+  "cardNote": {
+    "ids": [
+      "p-ea4844c550",
+      "p-33738a5c46",
+      "p-aae2e0904a"
+    ],
+    "placementNote": "Sent by Pedro on WhatsApp, 4 Nov 2026 · not yet placed on the website",
+    "reason": "app.js otherwise prints the hardcoded \"Earlier library file · no verified May placement\" for photos without placements; other cards keep that fallback text."
   }
 }
