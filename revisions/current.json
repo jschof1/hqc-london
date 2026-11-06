@@ -1,82 +1,39 @@
 {
   "schemaVersion": 1,
-  "baseline": "2717e98f10e089dea304618269dcd521bdc9779c",
-  "request": "Jack, 6 November 2026, final-review follow-up (W8 only; private: reports/website-final-review.md, W8 row and 'Blocks complete review-room handover' item 2): complete the hosted photo-review update append-only, keeping every saved choice and comment.",
+  "baseline": "53224c6dd6c93abbf8a1cca4c8088c976cfe141e",
+  "request": "Jack, 6 November 2026, final-review follow-up (W8 only; private: reports/website-final-review.md, W8 row and 'Blocks complete review-room handover' item 2): complete the hosted photo-review update append-only, keeping every saved choice and comment. Amendment: the library card shows a hardcoded 'Earlier library file · no verified May placement' line for any photo without placements, which misdescribes the three 4 Nov photos.",
   "requirements": [
     {
-      "id": "W8a",
-      "text": "Add Pedro's three 4 Nov WhatsApp photos (20260630_092540.jpg, 20260630_092544.jpg, 20260630_130107.jpg) to the photo-review inventory as separate photos, provenance 'Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.', literal titles, not paired as before/after and not presented as three separate jobs; their IDs are added to image-ids.json so Pedro can mark them; choices left unset. Web copies are re-encoded (orientation applied, max 2048px, camera metadata removed)."
-    },
-    {
-      "id": "W8b",
-      "text": "Apply Pedro's saved relabel notes to inventory titles only: p-d2badadefc (remove 'Marble restoration', title from 'Complex project'), p-1a211e6792 (literal description plus 'Move in/out'), p-6fa73ebd8f and p-43a452bebc ('Change the title': literal titles following his notes), p-cc17837fe6 ('logo question open', no invented HQC signage). Choices, notes and comments are never touched."
-    },
-    {
-      "id": "W8c",
-      "text": "Update the nov6-revisions version's outstanding items append-only: the three 4 Nov photos are now in the photo review awaiting Pedro's choice; three archive photos need his provenance confirmation. Captures and all other version fields unchanged."
-    },
-    {
-      "id": "W8d",
-      "text": "Back up hosted state, record the rollback Worker version, deploy only the review Worker with its existing config and --keep-vars, and read back: new photos load, relabels show, choices, comments, earlier versions and captures byte-identical apart from the intended fields."
+      "id": "W8e",
+      "text": "Show an honest card line for the three 4 Nov photos via a per-photo placementNote in data.json ('Sent by Pedro on WhatsApp, 4 Nov 2026 · not yet placed on the website'); app.js falls back to the existing 'Earlier library file · no verified May placement' text for every other photo, so no other card changes. Earlier requirements W8a-W8d (packet 8b78354) stay in force."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "W8d"
+        "W8e"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/app.js",
+      "requirements": [
+        "W8e"
       ],
       "allowDelete": false
     },
     {
       "path": "tools/photo-review/public/data.json",
       "requirements": [
-        "W8a",
-        "W8b"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/image-ids.json",
-      "requirements": [
-        "W8a"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/manifest.json",
-      "requirements": [
-        "W8c"
+        "W8e"
       ],
       "allowDelete": false
     },
     {
       "path": "tools/photo-review/evidence/photo-review-update-20261106.json",
       "requirements": [
-        "W8a",
-        "W8b",
-        "W8d"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/assets/p-ea4844c550.jpg",
-      "requirements": [
-        "W8a"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/assets/p-33738a5c46.jpg",
-      "requirements": [
-        "W8a"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/assets/p-aae2e0904a.jpg",
-      "requirements": [
-        "W8a"
+        "W8e"
       ],
       "allowDelete": false
     }
@@ -90,6 +47,7 @@
   "verification": [
     "node tools/photo-review/check-version-captures.mjs; node --test tools/photo-review/version-review.test.mjs; node tools/client-revisions/check.mjs.",
     "Local Worker: legacy photo-review suite against local storage only; read-only drive of the photo review and the version comparison.",
-    "Hosted read-back after deploy: data.json diff against backup limited to 5 titles and 3 appended images; /api/review and /api/versions byte-identical; manifest diff limited to nov6-revisions outstanding/provenance; 34 captures hash-match; comparison drive passes."
+    "Hosted read-back after deploy: data.json diff against backup limited to 5 titles and 3 appended images; /api/review and /api/versions byte-identical; manifest diff limited to nov6-revisions outstanding/provenance; 34 captures hash-match; comparison drive passes.",
+    "Card text for all other photos unchanged (fallback string identical)."
   ]
 }
