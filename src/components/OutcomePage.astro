@@ -15,8 +15,18 @@ const { page } = Astro.props;
 const master = phase8Copy[page.slug as keyof typeof phase8Copy];
 // The approved draft reserves a client-count proof position; publish it only
 // after Pedro supplies the substantiation required by the Release Pack.
+// On these two pages the approved count section also carries generic evidence wording
+// (final reconciliation, 6 Nov 2026). Keep that wording under a neutral heading and drop
+// only the client-count heading and sentence. Other count sections stay withheld.
+const countClaim = /300\+?|three hundred/i;
+const keepEvidenceLines = ['about-high-quality-clean', 'reviews-case-studies'];
 const controlledSections = master?.sections
-  .filter((section) => !/300\+?|three hundred/i.test(section.heading))
+  .map((section) => !countClaim.test(section.heading) || !keepEvidenceLines.includes(page.slug) ? section : {
+    ...section,
+    heading: 'Client Evidence',
+    blocks: section.blocks.filter((block) => block.kind !== 'p' || !countClaim.test(block.text ?? ''))
+  })
+  .filter((section) => !countClaim.test(section.heading))
   .map((section) => {
     const reviewFormat = section.blocks.findIndex((block) => block.kind === 'h3' && block.text === 'Review format');
     if (page.slug !== 'reviews-case-studies' || reviewFormat === -1) return section;

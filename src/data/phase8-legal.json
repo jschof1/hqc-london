@@ -377,6 +377,62 @@
       "text": "The following is the approved HQC retention schedule for the customer-facing systems, subject to any legal requirement, active dispute, fraud prevention need or other documented reason to retain information longer."
     },
     {
+      "kind": "table",
+      "stack": true,
+      "rows": [
+        [
+          "Record type",
+          "Normal retention",
+          "Control / reason"
+        ],
+        [
+          "Unconverted enquiries / quotations",
+          "24 months from the last meaningful interaction",
+          "Allows reasonable follow-up and enquiry history; delete sooner where no longer needed, unless required for a dispute or legal reason."
+        ],
+        [
+          "Client and service records",
+          "Normally 6 years after the client relationship or relevant service ends",
+          "Supports contractual, complaint and legal record keeping; minimise information that is not needed for those purposes."
+        ],
+        [
+          "Accounting, invoice and tax records",
+          "At least 6 years from the end of the company financial year to which they relate, or longer where required",
+          "Supports HMRC, VAT and accounting obligations."
+        ],
+        [
+          "Complaints, damage or claim records",
+          "Normally 6 years after closure, or longer while an active claim or legal hold applies",
+          "Evidence and legal-claims management."
+        ],
+        [
+          "Assessment photos/videos where the enquiry does not convert",
+          "Up to 12 months after the enquiry closes",
+          "Delete earlier where no longer required; extend only for a documented dispute or legal reason."
+        ],
+        [
+          "Assessment/service photos/videos for completed work",
+          "Up to 24 months after completion",
+          "May be retained shorter; extend only where needed for a complaint/claim or where separate permission supports an approved case study."
+        ],
+        [
+          "Marketing subscription records",
+          "While the marketing relationship remains active, with periodic review after prolonged inactivity",
+          "Stop promotional use immediately after valid opt-out."
+        ],
+        [
+          "Marketing suppression / opt-out record",
+          "For as long as reasonably necessary to ensure the opt-out is respected",
+          "Keep only the minimum identifying information needed to prevent accidental re-marketing."
+        ],
+        [
+          "Website analytics / advertising identifiers",
+          "According to the approved production configuration and consent settings",
+          "Final periods must be documented in the production cookie/analytics register."
+        ]
+      ]
+    },
+    {
       "kind": "p",
       "text": "Retention periods may be suspended where information is subject to a legal hold, active complaint, fraud investigation, regulatory requirement or live dispute."
     },
@@ -666,6 +722,10 @@
       "text": "8. Essential Clean™ Recurring Introductory Offer"
     },
     {
+      "kind": "callout",
+      "text": "Eligible new weekly and fortnightly Essential Clean™ clients may receive 30% off the first eligible Essential Clean™ when beginning a qualifying recurring arrangement with a minimum three-month commitment."
+    },
+    {
       "kind": "p",
       "text": "The offer:"
     },
@@ -710,6 +770,10 @@
     {
       "kind": "p",
       "text": "Where a client receives the introductory discount and ends the qualifying recurring arrangement before completing the agreed minimum term, HQC may charge the discount balance that would have been payable on the first clean without the introductory discount, subject to statutory rights and the fairness requirements applicable to the contract."
+    },
+    {
+      "kind": "callout",
+      "text": "Discount balance = normal first-clean price - discounted first-clean price"
     },
     {
       "kind": "p",

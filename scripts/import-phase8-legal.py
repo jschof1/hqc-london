@@ -6,11 +6,15 @@ checklist must be completed before publication.
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 
 from docx import Document
 from docx.text.paragraph import Paragraph
+
+
+CONTROL_NOTE = r'^(STATUS|CONTROL|LEGAL|CHECKPOINT|LOCAL PROOF|This approved Batch 6|By submitting|I would like)'
 
 
 def extract(path):
@@ -35,6 +39,14 @@ def extract(path):
             pages[current].append({'kind': kind, 'text': value})
         elif current == 'terms' and len(block.rows) == 15 and len(block.columns) == 4:
             pages[current].append({'kind': 'table', 'rows': [[cell.text.strip() for cell in row.cells] for row in block.rows]})
+        elif current == 'privacy' and len(block.columns) == 3 and block.rows[0].cells[0].text.strip() == 'Record type':
+            # Approved customer-facing retention schedule (header plus nine rows).
+            pages[current].append({'kind': 'table', 'stack': True, 'rows': [[cell.text.strip() for cell in row.cells] for row in block.rows]})
+        elif current and len(block.rows) == 1 and len(block.columns) == 1:
+            # Boxed lines: keep customer copy, skip internal control/status notes.
+            value = block.rows[0].cells[0].text.strip()
+            if value and not re.match(CONTROL_NOTE, value):
+                pages[current].append({'kind': 'callout', 'text': value})
     for key in pages:
         grouped = []
         for block in pages[key]:
