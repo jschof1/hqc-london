@@ -33,9 +33,10 @@ const keepPhotos = {
 };
 
 const propertyGallery = [keepPhotos.livingRoom, keepPhotos.ensuite, keepPhotos.hallway];
-const lettingGallery = [keepPhotos.armchair, keepPhotos.hallway, keepPhotos.townhouse];
-const moveInGallery = [keepPhotos.mews, keepPhotos.armchair, keepPhotos.hallway];
-const postConstructionGallery = [keepPhotos.bathroom, keepPhotos.ensuite, keepPhotos.livingRoom];
+
+// Round 4 (H1/H2): pages whose hero used a skip-marked photo now use a keep photo as the hero,
+// and their gallery excludes that hero so the same image is not shown twice.
+const heroFromKeep = (photo: { src: string; alt: string }) => ({ hero: photo.src, heroAlt: photo.alt });
 
 const commercialGallery = [
   { src: '/images/generated/hqc-office-hero.png', alt: 'Illustrative London meeting room prepared for the working day' },
@@ -63,44 +64,39 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Portfolio and site requirements', 'Keys, access and parking', 'Frequency, reporting and escalation']
   },
   'communal-area-cleaning-london': {
-    hero: '/images/instock/IMG-20250813-WA0032.jpg',
-    heroAlt: 'Bright communal landing prepared by a cleaning team',
+    hero: '/images/phase8-nov6/complex-a-1600.webp',
+    heroAlt: 'Illustrative cleaner in a teal uniform wiping a communal stair handrail.',
     gallery: propertyGallery,
     outcomes: ['Presentable shared entrances', 'Reliable recurring attendance', 'Issues reported to the managing team'],
     scope: ['Entrances, stairs and landings', 'Lifts, touchpoints and shared facilities', 'Bin stores and agreed external areas']
   },
   'estate-letting-agent-cleaning-london': {
-    hero: '/images/instock/IMG-20250813-WA0026.jpg',
-    heroAlt: 'Vacant London property cleaned for marketing and handover',
-    gallery: lettingGallery,
+    ...heroFromKeep(keepPhotos.townhouse),
+    gallery: [keepPhotos.armchair, keepPhotos.hallway, keepPhotos.livingRoom],
     outcomes: ['Properties ready for viewings', 'Faster instruction-to-handover route', 'One contact for repeat requirements'],
     scope: ['Void and move-in cleans', 'End of tenancy requirements', 'Access, inventories and deadline coordination']
   },
   'move-in-void-property-cleaning-london': {
-    hero: '/images/instock/IMG-20250813-WA0030.jpg',
-    heroAlt: 'Empty property cleaned before a new occupant moves in',
-    gallery: lettingGallery,
+    ...heroFromKeep(keepPhotos.hallway),
+    gallery: [keepPhotos.armchair, keepPhotos.townhouse, keepPhotos.ensuite],
     outcomes: ['A clean baseline before occupation', 'A handover-ready property', 'Condition concerns identified early'],
     scope: ['Empty-room and fitted-surface cleaning', 'Kitchen and bathroom reset', 'Inside cupboards and agreed appliances']
   },
   'end-of-tenancy-cleaning-london': {
-    hero: '/images/instock/IMG-20250813-WA0027.jpg',
-    heroAlt: 'Empty London room prepared for end-of-tenancy handover',
-    gallery: lettingGallery,
+    ...heroFromKeep(keepPhotos.armchair),
+    gallery: [keepPhotos.hallway, keepPhotos.townhouse, keepPhotos.livingRoom],
     outcomes: ['A documented handover standard', 'Attention to inventory-sensitive areas', 'A realistic scope for the condition'],
     scope: ['Kitchen, bathrooms and living areas', 'Inside agreed cupboards and appliances', 'Access, parking and key deadlines']
   },
   'post-construction-cleaning-london': {
-    hero: '/images/instock/IMG-20250813-WA0033.jpg',
-    heroAlt: 'Newly completed kitchen after a post-construction clean',
-    gallery: postConstructionGallery,
+    ...heroFromKeep(keepPhotos.bathroom),
+    gallery: [keepPhotos.ensuite, keepPhotos.livingRoom, keepPhotos.hallway],
     outcomes: ['Dust removed in planned stages', 'Finishes prepared for inspection', 'A defined snagging and handover point'],
     scope: ['Build dust and surface residue', 'High-level and detailed finishing', 'Programme, other trades and safe access']
   },
   'portfolio-cleaning-support-london': {
-    hero: '/images/instock/IMG-20250813-WA0024.jpg',
-    heroAlt: 'London property prepared for a portfolio client',
-    gallery: propertyGallery,
+    ...heroFromKeep(keepPhotos.livingRoom),
+    gallery: [keepPhotos.ensuite, keepPhotos.hallway, keepPhotos.townhouse],
     outcomes: ['Consistent instructions across sites', 'Centralised communication', 'A clearer mobilisation process'],
     scope: ['Property list and service types', 'Local access arrangements', 'Reporting, approvals and invoicing needs']
   },
@@ -148,9 +144,8 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Build-up and problem areas', 'Inside agreed fixtures and appliances', 'Time, labour and specialist treatment needs']
   },
   'move-in-cleaning-london': {
-    hero: '/images/instock/IMG-20250813-WA0015.jpg',
-    heroAlt: 'Clean empty room ready for a household to move in',
-    gallery: moveInGallery,
+    ...heroFromKeep(keepPhotos.mews),
+    gallery: [keepPhotos.armchair, keepPhotos.hallway, keepPhotos.livingRoom],
     outcomes: ['A clean start before belongings arrive', 'Kitchen and bathroom confidence', 'A clear completion point before move day'],
     scope: ['Move date and access window', 'Empty or partly furnished condition', 'Cupboards, appliances and priority areas']
   },

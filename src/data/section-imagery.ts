@@ -69,7 +69,7 @@ export const sectionImagery: Record<string, { after: string; images: SectionImag
   'move-in-cleaning-london': [{ after: 'Start with a Clean Baseline', images: [propertyHandover] }],
   'post-construction-cleaning-london': [{ after: 'The Property Must Be Ready for Cleaning', images: [propertyHandover] }],
   'communal-area-cleaning-london': [
-    { after: 'Clean Shared Spaces Support a Better-Managed Building', images: [offeringImages.complex] },
+    { after: 'Clean Shared Spaces Support a Better-Managed Building', images: [complexLobby] },
     { after: 'Areas We Can Include', images: [communalLiftLobby] }
   ],
   'estate-letting-agent-cleaning-london': [{ after: 'One Route for Different Property Outcomes', images: [propertyHandover] }],
