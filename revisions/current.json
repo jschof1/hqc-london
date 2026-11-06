@@ -1,124 +1,95 @@
 {
   "schemaVersion": 1,
-  "baseline": "dbab23a4c2f9a4f50eb1e140ce603cd6a007ca2f",
-  "request": "Jack, 6 November 2026: after his check of preview de1fdf73, register the 6 Nov meeting revisions for handover by appending a version to the review room (AGENTS.md 'Keep visual versions ready'; tools/photo-review/VERSION_REVIEW.md). Source commit 39518d62cbad5018ee63d9d7ebecfd90a9bf4a45 on client-win/hqc-phase8-nov6-revisions; immutable deployment https://de1fdf73.hqc-london.pages.dev. Review candidate, not launched.",
+  "baseline": "2717e98f10e089dea304618269dcd521bdc9779c",
+  "request": "Jack, 6 November 2026, final-review follow-up (W8 only; private: reports/website-final-review.md, W8 row and 'Blocks complete review-room handover' item 2): complete the hosted photo-review update append-only, keeping every saved choice and comment.",
   "requirements": [
     {
-      "id": "V1",
-      "text": "Append version 'nov6-revisions' (label '6 Nov meeting revisions — review candidate, not launched') with exact source commit, immutable deployment, dated 1440 and 390 captures of Home, Request a Quote, How We Work, Contact and End of Tenancy, plain-English change notes and outstanding items; capture time recorded separately from the release date. Add page entries for Contact and End of Tenancy; earlier versions keep them absent (missing-image state)."
+      "id": "W8a",
+      "text": "Add Pedro's three 4 Nov WhatsApp photos (20260630_092540.jpg, 20260630_092544.jpg, 20260630_130107.jpg) to the photo-review inventory as separate photos, provenance 'Sent by Pedro on WhatsApp, 4 Nov 2026; recent HQC clean; project details and publication permission to be confirmed.', literal titles, not paired as before/after and not presented as three separate jobs; their IDs are added to image-ids.json so Pedro can mark them; choices left unset. Web copies are re-encoded (orientation applied, max 2048px, camera metadata removed)."
     },
     {
-      "id": "V2",
-      "text": "Never overwrite or delete earlier versions, capture files, notes, comments or photo selections: earlier manifest entries stay byte-for-byte equal; a note is appended; defaultAfter points to the newest version."
+      "id": "W8b",
+      "text": "Apply Pedro's saved relabel notes to inventory titles only: p-d2badadefc (remove 'Marble restoration', title from 'Complex project'), p-1a211e6792 (literal description plus 'Move in/out'), p-6fa73ebd8f and p-43a452bebc ('Change the title': literal titles following his notes), p-cc17837fe6 ('logo question open', no invented HQC signage). Choices, notes and comments are never touched."
     },
     {
-      "id": "V3",
-      "text": "Record capture method and per-file evidence in tools/photo-review/evidence/version-captures-20261106.json; deploy only the review Worker with its existing config and --keep-vars; read back the hosted room."
+      "id": "W8c",
+      "text": "Update the nov6-revisions version's outstanding items append-only: the three 4 Nov photos are now in the photo review awaiting Pedro's choice; three archive photos need his provenance confirmation. Captures and all other version fields unchanged."
+    },
+    {
+      "id": "W8d",
+      "text": "Back up hosted state, record the rollback Worker version, deploy only the review Worker with its existing config and --keep-vars, and read back: new photos load, relabels show, choices, comments, earlier versions and captures byte-identical apart from the intended fields."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "V3"
+        "W8d"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/data.json",
+      "requirements": [
+        "W8a",
+        "W8b"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/image-ids.json",
+      "requirements": [
+        "W8a"
       ],
       "allowDelete": false
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "V1",
-        "V2"
+        "W8c"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261106.json",
+      "path": "tools/photo-review/evidence/photo-review-update-20261106.json",
       "requirements": [
-        "V3"
+        "W8a",
+        "W8b",
+        "W8d"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-home-desktop.jpg",
+      "path": "tools/photo-review/public/assets/p-ea4844c550.jpg",
       "requirements": [
-        "V1"
+        "W8a"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-home-mobile.jpg",
+      "path": "tools/photo-review/public/assets/p-33738a5c46.jpg",
       "requirements": [
-        "V1"
+        "W8a"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-quote-desktop.jpg",
+      "path": "tools/photo-review/public/assets/p-aae2e0904a.jpg",
       "requirements": [
-        "V1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-quote-mobile.jpg",
-      "requirements": [
-        "V1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-how-desktop.jpg",
-      "requirements": [
-        "V1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-how-mobile.jpg",
-      "requirements": [
-        "V1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-contact-desktop.jpg",
-      "requirements": [
-        "V1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-contact-mobile.jpg",
-      "requirements": [
-        "V1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-tenancy-desktop.jpg",
-      "requirements": [
-        "V1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov6-revisions-tenancy-mobile.jpg",
-      "requirements": [
-        "V1"
+        "W8a"
       ],
       "allowDelete": false
     }
   ],
   "preserve": [
-    "Earlier review versions (live-oct29, oct14, oct20, oct28), their capture files and notes text.",
-    "Photo-review data, photo selections (pedro-may-2026 / review) and website comments (pedro-website-versions-v1 / discussion) in Durable Object storage.",
-    "Worker code, wrangler config, secrets, Durable Object binding, namespace and migration.",
-    "Customer website source and revisions/versions.json on this branch; the branch is not merged anywhere."
+    "Photo selections and notes (pedro-may-2026 / review) and website comments (pedro-website-versions-v1 / discussion) in Durable Object storage.",
+    "All other inventory entries and fields, heroes, pages, feedback and snapshot metadata in data.json.",
+    "All review versions, captures, notes and defaults except the nov6-revisions outstanding/provenance text.",
+    "Worker code, wrangler config, secret, Durable Object binding, namespace and migration; customer website source and previews; this branch is not merged anywhere."
   ],
   "verification": [
     "node tools/photo-review/check-version-captures.mjs; node --test tools/photo-review/version-review.test.mjs; node tools/client-revisions/check.mjs.",
-    "Local Worker run: /versions/ shows the new version, images load, slider/toggle work, older versions show the missing-image state for the new pages.",
-    "Hosted read-back after deploy: manifest lists five versions, earlier entries unchanged, all capture images load with matching hashes, /api/review and /api/versions unchanged from the pre-deploy backup."
+    "Local Worker: legacy photo-review suite against local storage only; read-only drive of the photo review and the version comparison.",
+    "Hosted read-back after deploy: data.json diff against backup limited to 5 titles and 3 appended images; /api/review and /api/versions byte-identical; manifest diff limited to nov6-revisions outstanding/provenance; 34 captures hash-match; comparison drive passes."
   ]
 }
