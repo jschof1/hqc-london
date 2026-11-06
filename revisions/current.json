@@ -1,53 +1,171 @@
 {
   "schemaVersion": 1,
-  "baseline": "53224c6dd6c93abbf8a1cca4c8088c976cfe141e",
-  "request": "Jack, 6 November 2026, final-review follow-up (W8 only; private: reports/website-final-review.md, W8 row and 'Blocks complete review-room handover' item 2): complete the hosted photo-review update append-only, keeping every saved choice and comment. Amendment: the library card shows a hardcoded 'Earlier library file · no verified May placement' line for any photo without placements, which misdescribes the three 4 Nov photos.",
+  "baseline": "3b61dc944293ef08540d334ac177e584d5b33a78",
+  "request": "Jack, 6 November 2026: record the W2 copy-restoration version in the review room (append, same capture method; notes: privacy retention table, about/reviews trust lines and terms offer lines restored). Source commit 4454208b00c503a914f0259a7c3798e9199b7b66 on client-win/hqc-phase8-nov6-revisions; immutable deployment https://6306e751.hqc-london.pages.dev. Review candidate, not launched.",
   "requirements": [
     {
-      "id": "W8e",
-      "text": "Show an honest card line for the three 4 Nov photos via a per-photo placementNote in data.json ('Sent by Pedro on WhatsApp, 4 Nov 2026 · not yet placed on the website'); app.js falls back to the existing 'Earlier library file · no verified May placement' text for every other photo, so no other card changes. Earlier requirements W8a-W8d (packet 8b78354) stay in force."
+      "id": "V4",
+      "text": "Append version 'nov6-copy-restoration' with exact source commit and immutable deployment, dated 1440/390 captures of Home, Request a Quote, How We Work, Contact, End of Tenancy and the four changed pages (About, Reviews & Case Studies, Privacy Policy, Terms), plain-English change notes and the carried-forward outstanding items. Add page entries for the four new pages (earlier versions show the missing-image state). defaultAfter points to the newest version; earlier versions, captures, notes, photo inventory, choices and comments unchanged."
+    },
+    {
+      "id": "V5",
+      "text": "Record capture evidence; deploy only the review Worker with --keep-vars after a backup and rollback record; read back the hosted room."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "W8e"
+        "V5"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/app.js",
+      "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "W8e"
+        "V4"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/data.json",
+      "path": "tools/photo-review/evidence/version-captures-20261106-restoration.json",
       "requirements": [
-        "W8e"
+        "V5"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/evidence/photo-review-update-20261106.json",
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-home-desktop.jpg",
       "requirements": [
-        "W8e"
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-home-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-quote-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-quote-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-how-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-how-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-contact-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-contact-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-tenancy-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-tenancy-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-about-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-about-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-reviews-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-reviews-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-privacy-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-privacy-mobile.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-terms-desktop.jpg",
+      "requirements": [
+        "V4"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-terms-mobile.jpg",
+      "requirements": [
+        "V4"
       ],
       "allowDelete": false
     }
   ],
   "preserve": [
-    "Photo selections and notes (pedro-may-2026 / review) and website comments (pedro-website-versions-v1 / discussion) in Durable Object storage.",
-    "All other inventory entries and fields, heroes, pages, feedback and snapshot metadata in data.json.",
-    "All review versions, captures, notes and defaults except the nov6-revisions outstanding/provenance text.",
-    "Worker code, wrangler config, secret, Durable Object binding, namespace and migration; customer website source and previews; this branch is not merged anywhere."
+    "All earlier review versions, captures and notes; photo-review inventory (data.json), assets and image IDs; choices and comments in Durable Object storage; Worker code, config, secret, binding and migration; branch not merged."
   ],
   "verification": [
-    "node tools/photo-review/check-version-captures.mjs; node --test tools/photo-review/version-review.test.mjs; node tools/client-revisions/check.mjs.",
-    "Local Worker: legacy photo-review suite against local storage only; read-only drive of the photo review and the version comparison.",
-    "Hosted read-back after deploy: data.json diff against backup limited to 5 titles and 3 appended images; /api/review and /api/versions byte-identical; manifest diff limited to nov6-revisions outstanding/provenance; 34 captures hash-match; comparison drive passes.",
-    "Card text for all other photos unchanged (fallback string identical)."
+    "check-version-captures.mjs; version-review.test.mjs; full client-revision guard.",
+    "Local and hosted read-only drives of the version comparison; hosted read-back of manifest, captures, /api/review, /api/versions and data.json against the pre-deploy backup."
   ]
 }
