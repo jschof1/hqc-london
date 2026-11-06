@@ -290,6 +290,127 @@
         }
       },
       "provenance": "Captured on 29 October from this fixed Cloudflare deployment. Original assets were loaded at capture time."
+    },
+    {
+      "id": "nov6-revisions",
+      "label": "6 Nov meeting revisions — review candidate, not launched",
+      "date": "2026-11-06",
+      "captureDate": "2026-11-06",
+      "commit": "39518d62cbad5018ee63d9d7ebecfd90a9bf4a45",
+      "deploymentUrl": "https://de1fdf73.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://de1fdf73.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "Review candidate built from the 6 November meeting with Pedro. Not launched: the live website is unchanged and the Phase 8 production hold remains.",
+      "changes": [
+        "The idle pop-up offer has been removed from every page.",
+        "The founder-video placeholder is hidden until Pedro records his video; his photo and vision text stay.",
+        "The homepage hero now shows all three offerings: Property & Facilities, Workplaces & Commercial, and Homes. On phones they appear straight under the headline.",
+        "Agreed copy and buttons from the approved copy documents are restored: in-page buttons, closing button pairs, homepage sections, contact and quote page text, page titles and descriptions.",
+        "The Contact page has the WhatsApp button again for sending requested photos or video (07824 390336), including on phones.",
+        "More images on text-heavy sections, and new page heroes replacing photos Pedro marked \"skip\".",
+        "Images are labelled honestly: generated, stock and not-yet-confirmed photos say \"Illustrative image\", and no gallery claims to show HQC work until Pedro confirms the photos.",
+        "Image descriptions for screen readers now describe the scene instead of claiming a cleaning result."
+      ],
+      "outstanding": [
+        "Pedro to choose the proof stories (Chelsea recurring client, Fulham referral, overseas owners, agent or portfolio, office programme, post-construction project) and supply source, quote and permission.",
+        "Pedro to confirm project and permission for photos p-ae4372f37d (bedroom), p-2267193ade (living area) and p-1ef63f3b16 (shutter dusting) before they can be shown as HQC work.",
+        "Pedro to confirm the pricing-page button wording: \"Book an Essential Clean™\" (Batch 4 metadata) or \"Check Essential Clean™ Pricing\" (Batch 4 hero).",
+        "Pedro to send portraits and his image-ideas document.",
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end."
+      ],
+      "provenance": "Captured on 2026-11-06 from the immutable preview https://de1fdf73.hqc-london.pages.dev (commit 39518d6) at 1440px and 390px, non-essential cookies rejected, no forms submitted. The release date is the source deployment date, not a launch date. Outstanding before launch: proof stories; Pedro confirming three library photos; pricing button wording; portraits and image ideas; GHL webhooks for the Phase 8 forms.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-home-desktop.jpg",
+            "width": 1440,
+            "height": 13462,
+            "sha256": "63efa33bb45d22858e3c873e7a6876721e068a991c84f3c9ca1867e2b054739c",
+            "capturedAt": "2026-11-06T20:59:56.147Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-home-mobile.jpg",
+            "width": 390,
+            "height": 21706,
+            "sha256": "d74380e79b3712b19274369f3ebfc1b65bb7360749c53ce29495163b1648caaa",
+            "capturedAt": "2026-11-06T21:01:11.194Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-quote-desktop.jpg",
+            "width": 1440,
+            "height": 4766,
+            "sha256": "11599b72f507c49a44621243f2878910554eb214cd32a0059d7d74e3cbb660dd",
+            "capturedAt": "2026-11-06T21:00:06.254Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-quote-mobile.jpg",
+            "width": 390,
+            "height": 7764,
+            "sha256": "dce0ae6b68d635215f7cf948eb86ca5c9c589dd4afe49363a7b100d720698008",
+            "capturedAt": "2026-11-06T21:01:23.212Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-how-desktop.jpg",
+            "width": 1440,
+            "height": 11647,
+            "sha256": "098804ac3fc5ba04b47661fd8a6882f109fadaf6f89581ba445d3875eafe5a36",
+            "capturedAt": "2026-11-06T21:00:21.346Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-how-mobile.jpg",
+            "width": 390,
+            "height": 14711,
+            "sha256": "1cca2f31b15cadca369a5156db47135f397dbeff56c9652f0950c33cccf08ebd",
+            "capturedAt": "2026-11-06T21:01:41.274Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-contact-desktop.jpg",
+            "width": 1440,
+            "height": 5566,
+            "sha256": "51652bc57d64d73530a898a997852ca0cbbbac494245942c03ea3502ec719694",
+            "capturedAt": "2026-11-06T21:00:32.335Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-contact-mobile.jpg",
+            "width": 390,
+            "height": 8537,
+            "sha256": "66cfb101f59bb1cebef0ef981c66dbd17abdc97575e5d0348bcdd2f010fe2024",
+            "capturedAt": "2026-11-06T21:01:52.888Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov6-revisions-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 11240,
+            "sha256": "486fd0b5bd8d4e48000951e976de21e8ac1706e6320e485d9f1aee0f132daceb",
+            "capturedAt": "2026-11-06T21:00:47.810Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov6-revisions-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 14166,
+            "sha256": "c92ced5c08b6d0b4e616cbb5e198d398b6b454e9c491f4671e2700cc1c264a5a",
+            "capturedAt": "2026-11-06T21:02:09.709Z",
+            "sourceUrl": "https://de1fdf73.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -307,15 +428,26 @@
       "id": "how",
       "label": "How it works",
       "path": "/how-we-work/"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "path": "/contact/"
+    },
+    {
+      "id": "tenancy",
+      "label": "End of tenancy cleaning",
+      "path": "/end-of-tenancy-cleaning-london/"
     }
   ],
   "defaultBefore": "live-oct29",
-  "defaultAfter": "oct28",
+  "defaultAfter": "nov6-revisions",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
     "Earlier October layouts may look identical because subsequent work concerned controls and evidence.",
     "Review comments are shared by Pedro and Jack. Author names are chosen labels, not verified identities.",
-    "The earlier May source is retained elsewhere, but no May page capture is included in this comparison."
+    "The earlier May source is retained elsewhere, but no May page capture is included in this comparison.",
+    "The 6 November candidate (nov6-revisions) was captured on 2026-11-06 from its own immutable preview. Contact and End of tenancy cleaning were first captured for this version, so earlier versions show no screenshot for those pages."
   ]
 }
