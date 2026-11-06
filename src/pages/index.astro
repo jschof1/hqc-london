@@ -8,6 +8,7 @@ import ClientEvidence from '../components/ClientEvidence.astro';
 import phase8Copy from '../data/phase8-copy.json';
 import { controlledCtaHref } from '../data/controlled-cta-links';
 import { offeringImages, sectionImagery } from '../data/section-imagery';
+import { libraryPhotos } from '../data/page-visuals';
 
 const homeCopy = phase8Copy.home;
 const approvedSections = homeCopy.sections.filter((section) => [
@@ -101,7 +102,8 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
               copy: paragraphs('Start with what you need to achieve')[2],
               cta: ctaLabels('Start with what you need to achieve')[0],
               href: '/property-facilities-cleaning-london/',
-              image: '/images/generated/hqc-property-hero.webp'
+              image: '/images/generated/hqc-property-hero.webp',
+              alt: 'Illustrative empty flat hallway with wooden floors and open doors.'
             },
             {
               number: '02',
@@ -110,7 +112,8 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
               copy: paragraphs('Start with what you need to achieve')[3],
               cta: ctaLabels('Start with what you need to achieve')[1],
               href: '/commercial-cleaning-london/',
-              image: '/images/generated/hqc-office-hero.png'
+              image: '/images/generated/hqc-office-hero.png',
+              alt: 'Illustrative meeting room with a long table and a view of the City of London.'
             },
             {
               number: '03',
@@ -119,7 +122,8 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
               copy: paragraphs('Start with what you need to achieve')[4],
               cta: ctaLabels('Start with what you need to achieve')[2],
               href: '/home-cleaning-london/',
-              image: '/images/generated/hqc-home-hero.webp'
+              image: '/images/generated/hqc-home-hero.webp',
+              alt: 'Illustrative living room with a corner sofa and tall windows.'
             }
           ].map((route) => (
             <a href={route.href} class="group grid min-h-56 overflow-hidden rounded-2xl border border-midnight/10 bg-white text-inherit no-underline transition duration-500 hover:-translate-y-1 hover:border-copper hover:shadow-[0_25px_70px_rgba(14,42,49,.12)] sm:grid-cols-[1fr_15rem]">
@@ -130,7 +134,7 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
                 <span class="mt-7 font-bold text-midnight">{route.cta} <span class="inline-block text-copper-ink transition group-hover:translate-x-1">→</span></span>
               </div>
               <div class="relative min-h-56 overflow-hidden">
-                <img src={route.image} alt={`${route.eyebrow} cleaning result`} class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="800" height="650" />
+                <img src={route.image} alt={route.alt} class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" width="800" height="650" />
                 <div class="absolute inset-0 bg-gradient-to-r from-midnight/15 to-transparent"></div>
               </div>
             </a>
@@ -223,8 +227,12 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
     <section class="section-shell">
       <div class="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
         <div class="grid auto-rows-[210px] grid-cols-2 gap-4 md:auto-rows-[260px]">
-          <figure class="row-span-2 overflow-hidden rounded-[2rem]"><img src="/images/phase8-nov6/old-living-room-wide-1536.webp" alt="Bedroom with a double bed, bedside lamps and full-height curtains." class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" /></figure>
-          <figure class="row-span-2 overflow-hidden rounded-[2rem]"><img src="/images/phase8-nov6/old-living-room-1536.webp" alt="Living area with a dining table, sofa and wide windows." class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" /></figure>
+          {[libraryPhotos.bedroom, libraryPhotos.livingArea].map((photo) => (
+            <figure class="relative row-span-2 overflow-hidden rounded-[2rem]">
+              <img src={photo.src} alt={photo.alt} class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" />
+              {!photo.hqc && <figcaption class="absolute bottom-3 left-3 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[.12em] text-midnight">Illustrative image</figcaption>}
+            </figure>
+          ))}
         </div>
         <div class="flex flex-col justify-center">
           <p class="section-kicker">Evidence, not adjectives</p>

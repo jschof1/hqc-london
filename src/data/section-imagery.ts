@@ -1,3 +1,5 @@
+import { isConfirmedHqcPhoto } from './page-visuals';
+
 // Section imagery from the 6 November 2026 images report. Each entry places
 // images after an approved copy section that was previously text only.
 // Generated images are illustrative and are never used as client proof.
@@ -25,21 +27,22 @@ export const offeringImages = {
 const complexLobby = generated('complex-b', 'Illustrative cleaner mopping a shared apartment-block lobby beside a lift.');
 const scopeAndPlanning = generated('scope-and-planning', 'Illustrative cleaners inspecting a stair handrail with a clipboard.');
 const communalLiftLobby = generated('communal-lift-lobby', 'Illustrative shared apartment-block entrance with lift doors and a cleaning trolley.');
-const propertyHandover = generated('property-handover', 'Illustrative vacant apartment kitchen with open cupboards awaiting a planned clean.');
+const propertyHandover = generated('property-handover', 'Illustrative empty apartment kitchen with open cupboards.');
 const workplaceTouchpoints = generated('workplace-touchpoints', 'Illustrative cleaner wiping a meeting table in a bright office.');
 
-// Earlier HQC library photographs: brightness only, no retouching or crop.
+// Earlier HQC library photographs: brightness only, no retouching or crop. Captioned as
+// illustrative until Pedro confirms them (confirmedHqcPhotoIds in page-visuals.ts).
 const livingRoom: SectionImage = {
   src: `${base}/old-living-room-800.webp`,
   srcset: `${base}/old-living-room-800.webp 800w, ${base}/old-living-room-1536.webp 1536w`,
   alt: 'Living area with a dining table, sofa and wide windows.',
-  illustrative: false
+  illustrative: !isConfirmedHqcPhoto('p-2267193ade')
 };
 const windowCleaning: SectionImage = {
   src: `${base}/old-approved-window-cleaning-800.webp`,
   srcset: `${base}/old-approved-window-cleaning-800.webp 800w, ${base}/old-approved-window-cleaning-1079.webp 1079w`,
-  alt: 'Cleaner wiping window shutters inside a property.',
-  illustrative: false
+  alt: 'Person dusting white window shutters with a long-handled duster.',
+  illustrative: !isConfirmedHqcPhoto('p-1ef63f3b16')
 };
 
 const threeOfferings = [offeringImages.home, offeringImages.workplace, complexLobby];
