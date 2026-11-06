@@ -1,23 +1,15 @@
 {
   "schemaVersion": 1,
-  "baseline": "f8d65610454ab1029422685d7c827a5a52cdf803",
-  "request": "Jack's round 5 instruction of 6 November 2026 after the third independent Codex review (private: reports/website-independent-review-round3.md, review3-evidence/): fix B1 provenance presentation, S1 alt text and S3 console capture; S2 left as recorded history. Cumulative source: Pedro Ndombasi and Jack Schofield meeting of 6 November 2026; packets ef2dee1, 7c88934, 6da5ffb, 6021b0f.",
+  "baseline": "39518d62cbad5018ee63d9d7ebecfd90a9bf4a45",
+  "request": "Jack, 6 November 2026, after checking preview de1fdf73: register this version for handover following AGENTS.md 'Keep visual versions ready' - append it to the review room (done on codex/hqc-visual-version-review-2026-10-29 at 2717e98, deployed and read back) and record it in revisions/versions.json, then pass npm run check:revision without bypass. Production untouched; no merge to main.",
   "requirements": [
     {
       "id": "M0",
-      "text": "Scope amendment for round 5 after the third independent Codex review. Earlier requirements N1-N12 (ef2dee1), M1-M9 (7c88934), B1 (6da5ffb) and H1-H3 (6021b0f) stay in force in the cumulative acceptance matrix; this packet governs changes since f8d6561. Review finding S2 (guard prerequisite committed before the first packet) is recorded history and git is not rewritten."
+      "text": "Planning amendment for version registration. All earlier requirements (N1-N12, M1-M9, B1, H1-H3, P1-P3) stay in force; no website source changes in this step."
     },
     {
-      "id": "P1",
-      "text": "Review B1 (blocker): no image is presented as HQC work unless Pedro has confirmed it is his own job and that it may be published. A single list, confirmedHqcPhotoIds in src/data/page-visuals.ts, starts empty; the library photos p-ae4372f37d (bedroom), p-2267193ade (living area) and p-1ef63f3b16 (shutter dusting), whose inventory says 'project and permission to be confirmed', are therefore shown as illustrative: every gallery (including /reviews-case-studies/) uses the neutral captioned 'Illustrative images' presentation, the section images captioned, and the homepage 'Evidence, not adjectives / The work should be visible' images captioned neutrally while its copy stays. Adding an ID to the list later switches that photo back to 'HQC work' everywhere. The illustrative gallery note is reworded so it does not claim library photos are not HQC's ('not presented as records of specific HQC jobs')."
-    },
-    {
-      "id": "P2",
-      "text": "Review S1: every generated or unverified image's alt text is a literal scene description with no cleaning-result or purpose claim, found by auditing all rendered alts on every served route (homepage route cards, page heroes and galleries, contact hero, East London and areas galleries, section images, and the CTABanner stock image on /disclaimer/)."
-    },
-    {
-      "id": "P3",
-      "text": "Review S3: Playwright console capture (console messages, page errors, failed requests, 4xx/5xx) on the 15 QA pages at 1440 and 390 on the new preview; logs saved privately. Pre-change capture on 48f328e4 found zero errors, so no console fix is in scope."
+      "id": "R1",
+      "text": "Append version 'nov6-revisions' to revisions/versions.json in the same shape as existing entries: commit 39518d62cbad5018ee63d9d7ebecfd90a9bf4a45, immutable deployment https://de1fdf73.hqc-london.pages.dev, review URL https://review.highqualityclean.co.uk/versions/, capture manifest tools/photo-review/public/versions/manifest.json at commit 2717e98f10e089dea304618269dcd521bdc9779c, and the dated desktop/mobile captures with SHA-256. Earlier registry entries unchanged."
     }
   ],
   "allowedFiles": [
@@ -30,55 +22,12 @@
       "reason": "Planning-only scope amendment."
     },
     {
-      "path": "src/data/page-visuals.ts",
+      "path": "revisions/versions.json",
       "requirements": [
-        "P1",
-        "P2"
+        "R1"
       ],
       "allowDelete": false,
-      "reason": "confirmedHqcPhotoIds flag; library photos unflagged; literal hero and gallery alts."
-    },
-    {
-      "path": "src/data/section-imagery.ts",
-      "requirements": [
-        "P1",
-        "P2"
-      ],
-      "allowDelete": false,
-      "reason": "Library section images captioned unless confirmed; literal alts."
-    },
-    {
-      "path": "src/pages/index.astro",
-      "requirements": [
-        "P1",
-        "P2"
-      ],
-      "allowDelete": false,
-      "reason": "Evidence-section images captioned via the flag; literal route-card alts."
-    },
-    {
-      "path": "src/components/OutcomePage.astro",
-      "requirements": [
-        "P1"
-      ],
-      "allowDelete": false,
-      "reason": "Accurate illustrative-gallery note."
-    },
-    {
-      "path": "src/pages/contact.astro",
-      "requirements": [
-        "P2"
-      ],
-      "allowDelete": false,
-      "reason": "Literal hero image alt."
-    },
-    {
-      "path": "src/components/CTABanner.astro",
-      "requirements": [
-        "P2"
-      ],
-      "allowDelete": false,
-      "reason": "Literal alt for the stock image rendered on /disclaimer/ (new to the packet)."
+      "reason": "Register the reviewed version and its committed capture manifest."
     }
   ],
   "preserve": [
@@ -89,12 +38,11 @@
     "Desktop homepage hero layout (lg and up) unchanged.",
     "CI workflow, Pages build command and build scripts unchanged; Phase 8 production hold; no merge to main; review room and revisions/versions.json not updated in this round.",
     "Homepage, contact and every page hero not using a skip photo are unchanged in this round.",
-    "All copy, CTAs, layouts and image choices outside the listed provenance captions and alt text are unchanged in this round."
+    "All copy, CTAs, layouts and image choices outside the listed provenance captions and alt text are unchanged in this round.",
+    "No application file (src, public, functions, scripts, configs) changes, so the application fingerprint stays equal to commit 39518d6."
   ],
   "verification": [
-    "check:revision:scope; test:revisions; test:forms; release, analytics and intake tests; build:review; test-phase8-audit.mjs; skip-photo scan; content checks updated for P1.",
-    "Rendered alt audit on every served route shows no cleaning-result or purpose claim on generated or unverified images; no 'HQC work' heading anywhere while confirmedHqcPhotoIds is empty.",
-    "Playwright console capture on 15 QA pages at 1440 and 390 on the new preview.",
-    "Screenshots of changed pages on the new preview; fresh quick check by Jack before review-room publication."
+    "npm run check:revision (full mode) passes: fingerprint matches the registered commit, deployment and review URLs well formed, capture manifest read from git at 2717e98 with matching id, commit, deployment and SHA-256 captures.",
+    "npm run test:revisions; earlier registry entries byte-identical."
   ]
 }
