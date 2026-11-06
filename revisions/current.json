@@ -1,15 +1,31 @@
 {
   "schemaVersion": 1,
-  "baseline": "39518d62cbad5018ee63d9d7ebecfd90a9bf4a45",
-  "request": "Jack, 6 November 2026, after checking preview de1fdf73: register this version for handover following AGENTS.md 'Keep visual versions ready' - append it to the review room (done on codex/hqc-visual-version-review-2026-10-29 at 2717e98, deployed and read back) and record it in revisions/versions.json, then pass npm run check:revision without bypass. Production untouched; no merge to main.",
+  "baseline": "3d0841505ba9b1de3e47bc32714ac14111d0df2a",
+  "request": "Jack, 6 November 2026: W2 copy-restoration round from the final reconciliation (private: reports/copy-checklist-final.md and .csv, run against preview de1fdf73). Restore exactly the agreed customer copy that was dropped without authority. Pricing CTA, company number and registered office, SMS opt-in and proof stories are Pedro/legal decisions and stay unchanged.",
   "requirements": [
     {
       "id": "M0",
-      "text": "Planning amendment for version registration. All earlier requirements (N1-N12, M1-M9, B1, H1-H3, P1-P3) stay in force; no website source changes in this step."
+      "text": "Planning amendment for the W2 restoration round; all earlier requirements stay in force (cumulative acceptance matrix). Afterwards the new version is recorded in the review room and revisions/versions.json (R2)."
     },
     {
-      "id": "R1",
-      "text": "Append version 'nov6-revisions' to revisions/versions.json in the same shape as existing entries: commit 39518d62cbad5018ee63d9d7ebecfd90a9bf4a45, immutable deployment https://de1fdf73.hqc-london.pages.dev, review URL https://review.highqualityclean.co.uk/versions/, capture manifest tools/photo-review/public/versions/manifest.json at commit 2717e98f10e089dea304618269dcd521bdc9779c, and the dated desktop/mobile captures with SHA-256. Earlier registry entries unchanged."
+      "id": "C1",
+      "text": "/about-high-quality-clean/ (final CSV rows 2508-2513): restore 'As the company develops, verified client evidence and case studies will be used carefully to show real examples across:' with homes; workplaces; property management; specialist projects. and 'Named organisations, photographs and logos will be used only where appropriate permissions exist.' The 300-client heading and sentence stay withheld; the restored lines sit under a neutral 'Client Evidence' heading in the same position."
+    },
+    {
+      "id": "C2",
+      "text": "/reviews-case-studies/ (row 2627): restore 'The purpose of this page is not to claim that every job is identical. It is to show the types of situations where clients have trusted HQC to help.' in the same neutral section; the existing client-evidence paragraph stays. Only these two pages get this treatment."
+    },
+    {
+      "id": "C3",
+      "text": "/privacy-policy/ (rows 3844-3853): restore the retention table (header plus all nine rows, exact agreed text) as an accessible, responsive table in the site's legal-page style (table with column headers on wider screens, stacked rows on phones)."
+    },
+    {
+      "id": "C4",
+      "text": "/terms-and-conditions/ (rows 3855-3856): restore the 30% introductory paragraph and 'Discount balance = normal first-clean price - discounted first-clean price' exactly, in their agreed positions; the Essential Clean in-page offer stays."
+    },
+    {
+      "id": "R2",
+      "text": "Record the resulting version in the review room (append, same capture method; notes: privacy retention table, about/reviews trust lines and terms offer lines restored) and in revisions/versions.json; full npm run check:revision passes."
     }
   ],
   "allowedFiles": [
@@ -22,12 +38,48 @@
       "reason": "Planning-only scope amendment."
     },
     {
-      "path": "revisions/versions.json",
+      "path": "src/components/OutcomePage.astro",
       "requirements": [
-        "R1"
+        "C1",
+        "C2"
       ],
       "allowDelete": false,
-      "reason": "Register the reviewed version and its committed capture manifest."
+      "reason": "Render the agreed generic evidence lines on about/reviews without the count heading or sentence."
+    },
+    {
+      "path": "scripts/import-phase8-legal.py",
+      "requirements": [
+        "C3",
+        "C4"
+      ],
+      "allowDelete": false,
+      "reason": "Keep the privacy retention table and the two customer-facing boxed terms lines on re-import."
+    },
+    {
+      "path": "src/data/phase8-legal.json",
+      "requirements": [
+        "C3",
+        "C4"
+      ],
+      "allowDelete": false,
+      "reason": "Add the retention table and two terms lines; every other block byte-identical."
+    },
+    {
+      "path": "src/components/ControlledLegalPage.astro",
+      "requirements": [
+        "C3",
+        "C4"
+      ],
+      "allowDelete": false,
+      "reason": "Render the stacked mobile table and boxed callout lines."
+    },
+    {
+      "path": "revisions/versions.json",
+      "requirements": [
+        "R2"
+      ],
+      "allowDelete": false,
+      "reason": "Register the new reviewed version."
     }
   ],
   "preserve": [
@@ -39,10 +91,14 @@
     "CI workflow, Pages build command and build scripts unchanged; Phase 8 production hold; no merge to main; review room and revisions/versions.json not updated in this round.",
     "Homepage, contact and every page hero not using a skip photo are unchanged in this round.",
     "All copy, CTAs, layouts and image choices outside the listed provenance captions and alt text are unchanged in this round.",
-    "No application file (src, public, functions, scripts, configs) changes, so the application fingerprint stays equal to commit 39518d6."
+    "No application file (src, public, functions, scripts, configs) changes, so the application fingerprint stays equal to commit 39518d6.",
+    "Pricing CTA wording, company number and registered office placeholders, SMS opt-in and proof stories are unchanged (Pedro/legal decisions).",
+    "Home and home-cleaning count sections and their internal proof notes stay unpublished.",
+    "Existing terms cancellation table renders as before apart from accessibility attributes."
   ],
   "verification": [
-    "npm run check:revision (full mode) passes: fingerprint matches the registered commit, deployment and review URLs well formed, capture manifest read from git at 2717e98 with matching id, commit, deployment and SHA-256 captures.",
-    "npm run test:revisions; earlier registry entries byte-identical."
+    "check:revision:scope; test:revisions; test:forms; release, analytics and intake tests; build:review; test-phase8-audit.mjs; skip-photo scan; alt audit; console capture; content checks plus new C1-C4 exact-text checks.",
+    "Script proof that phase8-legal.json minus the added blocks equals the baseline file.",
+    "Desktop 1440 and mobile 390 captures of the four pages on the new preview; review-room version appended and read back; full npm run check:revision passes."
   ]
 }
