@@ -1,64 +1,22 @@
 {
   "schemaVersion": 1,
-  "baseline": "48f4776d3d78a777b84aa27c9879f7c6b7327e1f",
-  "request": "Jack, 29 October 2026: keep visual version history current, prepare Pedro an email, and strictly preserve everything outside specifically requested client revisions using the client revision gauntlet.",
+  "baseline": "84390051b9ee589d3468e1a3dabec61a2637395c",
+  "request": "Pedro, 4 November 2026 (WhatsApp, private evidence reference: personal WhatsApp chat with Pedro, messages 04:39 to 05:28 UTC): \"Please add these to the list of photos that we can use.\" Jack confirmed he would add them. Add the publishable photos to an approved photo library without changing the live website.",
   "requirements": [
     {
       "id": "R1",
-      "text": "Make narrowly scoped revisions mandatory in AGENTS with cumulative preservation and independent review."
+      "text": "Add the publishable photos Pedro sent on 4 November 2026 as optimised, metadata-stripped WebP files in a tracked photo library outside the deployed application."
     },
     {
       "id": "R2",
-      "text": "Mechanically reject unlisted files, unapproved deletions and stale website version evidence."
+      "text": "List every added photo with what it shows, alt text, suggested use and date received, and record which supplied photos were excluded and why."
     },
     {
       "id": "R3",
-      "text": "Keep the public site unchanged and the Phase 8 production release held."
+      "text": "Keep the public website unchanged: no edits under src/, public/, functions/ or scripts/, and the application fingerprint must still match recorded version live-oct29."
     }
   ],
   "allowedFiles": [
-    {
-      "path": "AGENTS.md",
-      "requirements": [
-        "R1"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "package.json",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": ".github/workflows/client-revisions.yml",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/check.mjs",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/check.test.mjs",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/README.md",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
     {
       "path": "revisions/current.json",
       "requirements": [
@@ -67,20 +25,119 @@
       "allowDelete": false
     },
     {
-      "path": "revisions/versions.json",
+      "path": "photo-library/README.md",
       "requirements": [
         "R2"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-after-builders-clean-before.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-basement-steps-railings-before.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-bath-tap-limescale-after.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-bath-tap-limescale-before.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-bathroom-shower-wall-grout-after.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-bathroom-shower-wall-grout-before.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-bathroom-tiles-grout-corner-after.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-bathroom-tiles-grout-corner-before.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-exterior-window-cleaning-water-fed-pole.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-living-room-after.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-navy-bedroom-after.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-navy-bedroom-before.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-small-bedroom-after.webp",
+      "requirements": [
+        "R1"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "photo-library/hqc-small-bedroom-boxes-before.webp",
+      "requirements": [
+        "R1"
       ],
       "allowDelete": false
     }
   ],
   "preserve": [
     "All customer website source, photos, copy, forms, CRM routing and tracking.",
-    "The Phase 8 production hold and existing photo review selections."
+    "The Phase 8 production hold and existing photo review selections.",
+    "Earlier accepted requirements: narrowly scoped revisions in AGENTS, the client revision guard, and the recorded live-oct29 version evidence."
   ],
   "verification": [
-    "Guard unit tests and deliberate forbidden change/deletion/stale-version failures.",
-    "Exact customer application source comparison against baseline.",
-    "Independent review of implementation and policy."
+    "npm run check:revision passes (scope and unchanged application fingerprint).",
+    "npm run build passes.",
+    "Every added image inspected visually; EXIF, GPS and device metadata stripped."
   ]
 }
