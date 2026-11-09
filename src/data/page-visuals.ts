@@ -1,7 +1,7 @@
 export type PageVisual = {
   hero: string;
   heroAlt: string;
-  /** hqc is true only for photos listed in confirmedHqcPhotoIds; anything else is shown without an HQC-work label. */
+  /** hqc is true only for photos listed in confirmedHqcPhotoIds; anything else is shown as illustrative. */
   gallery: { src: string; alt: string; hqc?: boolean }[];
   outcomes: string[];
   scope: string[];
@@ -10,7 +10,7 @@ export type PageVisual = {
 
 // Single provenance switch (round 5, review B1). A photo is presented as "HQC work" only when
 // its photo-review ID is listed here, i.e. Pedro has confirmed it is his own job and that it may
-// be published. Every other image renders without an HQC-work label.
+// be published. Every other image renders as an illustrative image with a caption.
 // Awaiting Pedro: p-ae4372f37d (bedroom), p-2267193ade (living area), p-1ef63f3b16 (shutters).
 export const confirmedHqcPhotoIds: string[] = [];
 export const isConfirmedHqcPhoto = (photoId: string) => confirmedHqcPhotoIds.includes(photoId);
@@ -30,7 +30,7 @@ const homeGallery = hqcLibraryGallery;
 // Round 3 (B1): Pedro marked the earlier library photos WA0024, WA0027 and WA0033 "skip",
 // so they are not shown. These replacements are his "keep" choices matched to his notes.
 // The inventory classifies them as archived site images or stock, not HQC project photos,
-// so they are deliberately not flagged hqc and the gallery uses the neutral heading.
+// so they are deliberately not flagged hqc and the gallery renders as illustrative.
 const keepPhotos = {
   ensuite: { src: '/images/luxury-home/luxurious-kensington-ensuite.png', alt: 'Bathroom with a double vanity and large mirrors.' }, // p-51ee039643 managed properties, portfolios and projects
   livingRoom: { src: '/images/luxury-home/richmond-living-room.png', alt: 'Living room with a fireplace, sofas and a bay window.' }, // p-5ace2161c5 managed properties, portfolios and projects
