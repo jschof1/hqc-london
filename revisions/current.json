@@ -1,31 +1,27 @@
 {
   "schemaVersion": 1,
-  "baseline": "3d0841505ba9b1de3e47bc32714ac14111d0df2a",
-  "request": "Jack, 6 November 2026: W2 copy-restoration round from the final reconciliation (private: reports/copy-checklist-final.md and .csv, run against preview de1fdf73). Restore exactly the agreed customer copy that was dropped without authority. Pricing CTA, company number and registered office, SMS opt-in and proof stories are Pedro/legal decisions and stay unchanged.",
+  "baseline": "5afb6bfdbf31a6b48028fdb728249bebf5fa46e9",
+  "request": "Jack, 9 November 2026 (native thread): 'remove anything that says illustrative on the site'. Remove every visible 'Illustrative' caption, note, heading and alt-text prefix from the Phase 8 candidate. Provenance stays truthful: no image is newly labelled as HQC work.",
   "requirements": [
     {
       "id": "M0",
-      "text": "Planning amendment for the W2 restoration round; all earlier requirements stay in force (cumulative acceptance matrix). Afterwards the new version is recorded in the review room and revisions/versions.json (R2)."
+      "text": "Planning amendment for the illustrative-label removal round; all earlier requirements stay in force (cumulative acceptance matrix)."
     },
     {
-      "id": "C1",
-      "text": "/about-high-quality-clean/ (final CSV rows 2508-2513): restore 'As the company develops, verified client evidence and case studies will be used carefully to show real examples across:' with homes; workplaces; property management; specialist projects. and 'Named organisations, photographs and logos will be used only where appropriate permissions exist.' The 300-client heading and sentence stay withheld; the restored lines sit under a neutral 'Client Evidence' heading in the same position."
+      "id": "I1",
+      "text": "Remove the 'Illustrative image' figcaptions (homepage outcome image, homepage library photos, OutcomePage lead image, section imagery and gallery) and the homepage 'Images are illustrative.' notes (mobile and desktop hero)."
     },
     {
-      "id": "C2",
-      "text": "/reviews-case-studies/ (row 2627): restore 'The purpose of this page is not to claim that every job is identical. It is to show the types of situations where clients have trusted HQC to help.' in the same neutral section; the existing client-evidence paragraph stays. Only these two pages get this treatment."
+      "id": "I2",
+      "text": "OutcomePage non-HQC gallery header: replace kicker 'Illustrative imagery' with 'Gallery' and title 'Illustrative images' with 'The kinds of spaces we clean'; drop the sentence 'These images are illustrative and are not presented as records of specific HQC jobs.' and keep 'The exact scope and finish varies by property, condition and agreed service.' The HQC-work branch is unchanged."
     },
     {
-      "id": "C3",
-      "text": "/privacy-policy/ (rows 3844-3853): restore the retention table (header plus all nine rows, exact agreed text) as an accessible, responsive table in the site's legal-page style (table with column headers on wider screens, stacked rows on phones)."
-    },
-    {
-      "id": "C4",
-      "text": "/terms-and-conditions/ (rows 3855-3856): restore the 30% introductory paragraph and 'Discount balance = normal first-clean price - discounted first-clean price' exactly, in their agreed positions; the Essential Clean in-page offer stays."
+      "id": "I3",
+      "text": "Remove the leading word 'Illustrative' from image alt text (capitalising the next word); the rest of each alt text is unchanged."
     },
     {
       "id": "R2",
-      "text": "Record the resulting version in the review room (append, same capture method; notes: privacy retention table, about/reviews trust lines and terms offer lines restored) and in revisions/versions.json; full npm run check:revision passes."
+      "text": "Record the resulting version in the review room (append, same capture method; note: illustrative labels removed at Jack's request) and in revisions/versions.json; full npm run check:revision passes."
     }
   ],
   "allowedFiles": [
@@ -40,38 +36,44 @@
     {
       "path": "src/components/OutcomePage.astro",
       "requirements": [
-        "C1",
-        "C2"
+        "I1",
+        "I2"
       ],
       "allowDelete": false,
-      "reason": "Render the agreed generic evidence lines on about/reviews without the count heading or sentence."
+      "reason": "Remove illustrative captions and gallery heading wording."
     },
     {
-      "path": "scripts/import-phase8-legal.py",
+      "path": "src/pages/index.astro",
       "requirements": [
-        "C3",
-        "C4"
+        "I1",
+        "I3"
       ],
       "allowDelete": false,
-      "reason": "Keep the privacy retention table and the two customer-facing boxed terms lines on re-import."
+      "reason": "Remove homepage illustrative notes, captions and alt prefixes."
     },
     {
-      "path": "src/data/phase8-legal.json",
+      "path": "src/pages/contact.astro",
       "requirements": [
-        "C3",
-        "C4"
+        "I3"
       ],
       "allowDelete": false,
-      "reason": "Add the retention table and two terms lines; every other block byte-identical."
+      "reason": "Alt-text prefix only."
     },
     {
-      "path": "src/components/ControlledLegalPage.astro",
+      "path": "src/data/page-visuals.ts",
       "requirements": [
-        "C3",
-        "C4"
+        "I3"
       ],
       "allowDelete": false,
-      "reason": "Render the stacked mobile table and boxed callout lines."
+      "reason": "Alt-text prefixes only."
+    },
+    {
+      "path": "src/data/section-imagery.ts",
+      "requirements": [
+        "I3"
+      ],
+      "allowDelete": false,
+      "reason": "Alt-text prefixes only; the illustrative provenance flag stays in data."
     },
     {
       "path": "revisions/versions.json",
@@ -83,22 +85,16 @@
     }
   ],
   "preserve": [
-    "Everything accepted in packet ef2dee1 and implemented in c298746 outside the listed fixes: restored CTAs and copy, popup removal, hidden founder video, hero cards on desktop, section imagery, honest proof wording, WhatsApp button.",
-    "Forms, form fields, API routes, CRM routing, webhook payloads, tracking and analytics events, consent controls, Service schema, redirects, middleware, sitemap and robots behaviour.",
-    "Release Pack 28 Sep 2026 section 15 hero CTA amendments; 300+ client number withheld; no invented reviews, counts, named stories, logos or before/after claims.",
-    "Public phone link tel:+442088703925 and display 0208 870 3925; the 07427 forwarding mobile is never displayed; AGENTS.md unchanged.",
-    "Desktop homepage hero layout (lg and up) unchanged.",
-    "CI workflow, Pages build command and build scripts unchanged; Phase 8 production hold; no merge to main; review room and revisions/versions.json not updated in this round.",
-    "Homepage, contact and every page hero not using a skip photo are unchanged in this round.",
-    "All copy, CTAs, layouts and image choices outside the listed provenance captions and alt text are unchanged in this round.",
-    "No application file (src, public, functions, scripts, configs) changes, so the application fingerprint stays equal to commit 39518d6.",
-    "Pricing CTA wording, company number and registered office placeholders, SMS opt-in and proof stories are unchanged (Pedro/legal decisions).",
-    "Home and home-cleaning count sections and their internal proof notes stay unpublished.",
-    "Existing terms cancellation table renders as before apart from accessibility attributes."
+    "Everything accepted in earlier packets (ef2dee1, c298746, 39518d6, 4454208): restored copy and CTAs, popup removal, hidden founder video, hero offering cards, section imagery choices, WhatsApp button, privacy retention table, about/reviews evidence lines, terms offer lines.",
+    "No image is relabelled as HQC work; confirmedHqcPhotoIds stays empty; the HQC-work gallery branch and its wording are unchanged; no skip photo is introduced.",
+    "Image choices, sources, layout, sizes and all copy outside the listed labels, headings and alt prefixes are unchanged.",
+    "Forms, API routes, CRM routing, webhook payloads, tracking, consent, schema, redirects, middleware, sitemap and robots behaviour unchanged.",
+    "Public phone link tel:+442088703925 and display 0208 870 3925; AGENTS.md unchanged.",
+    "Pricing CTA wording, company details, SMS opt-in and proof stories unchanged (Pedro/legal decisions). CaseStudies.astro is not rendered on any page and stays unchanged.",
+    "CI workflow, build scripts and Pages build command unchanged; Phase 8 production hold; no merge to main."
   ],
   "verification": [
-    "check:revision:scope; test:revisions; test:forms; release, analytics and intake tests; build:review; test-phase8-audit.mjs; skip-photo scan; alt audit; console capture; content checks plus new C1-C4 exact-text checks.",
-    "Script proof that phase8-legal.json minus the added blocks equals the baseline file.",
-    "Desktop 1440 and mobile 390 captures of the four pages on the new preview; review-room version appended and read back; full npm run check:revision passes."
+    "check:revision:scope; build:review; no 'illustrat' (case-insensitive) in built HTML of every page; image count per page unchanged versus preview 6306e751; console capture; desktop 1440 and mobile 390 captures of homepage, contact and an outcome page.",
+    "Independent Codex review of the full diff against 5afb6bf; review-room version appended and read back; full npm run check:revision passes."
   ]
 }
