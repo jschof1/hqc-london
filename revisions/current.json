@@ -1,162 +1,162 @@
 {
   "schemaVersion": 1,
-  "baseline": "3b61dc944293ef08540d334ac177e584d5b33a78",
-  "request": "Jack, 6 November 2026: record the W2 copy-restoration version in the review room (append, same capture method; notes: privacy retention table, about/reviews trust lines and terms offer lines restored). Source commit 4454208b00c503a914f0259a7c3798e9199b7b66 on client-win/hqc-phase8-nov6-revisions; immutable deployment https://6306e751.hqc-london.pages.dev. Review candidate, not launched.",
+  "baseline": "9e8dd1d071dc7e4f812036d6e44cdc1f08180176",
+  "request": "Jack, 9 November 2026: record the illustrative-label removal version in the review room (append, same capture method as nov6-copy-restoration). Version id nov9-illustrative-removed, label \"9 Nov: illustrative labels removed\". Source commit 1e2f7277c904d000b08e43086872ebbdbc74bdf9 on client-win/hqc-phase8-nov6-revisions; immutable deployment https://4cfc9473.hqc-london.pages.dev. Review candidate, not launched.",
   "requirements": [
     {
-      "id": "V4",
-      "text": "Append version 'nov6-copy-restoration' with exact source commit and immutable deployment, dated 1440/390 captures of Home, Request a Quote, How We Work, Contact, End of Tenancy and the four changed pages (About, Reviews & Case Studies, Privacy Policy, Terms), plain-English change notes and the carried-forward outstanding items. Add page entries for the four new pages (earlier versions show the missing-image state). defaultAfter points to the newest version; earlier versions, captures, notes, photo inventory, choices and comments unchanged."
+      "id": "V6",
+      "text": "Append version \"nov9-illustrative-removed\" with exact source commit and immutable deployment, dated 1440/390 captures of the same nine pages as nov6-copy-restoration (Home, Request a Quote, How We Work, Contact, End of Tenancy, About, Reviews & Case Studies, Privacy Policy, Terms), Jack's notes, plain-English change notes and the carried-forward outstanding items. defaultAfter points to the newest version; earlier versions, captures, notes, page list, photo inventory, choices and comments unchanged."
     },
     {
-      "id": "V5",
-      "text": "Record capture evidence; deploy only the review Worker with --keep-vars after a backup and rollback record; read back the hosted room."
+      "id": "V7",
+      "text": "Record capture evidence; deploy only the review Worker with --keep-vars after a private backup and rollback record; read back the hosted room."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "V5"
+        "V7"
       ],
       "allowDelete": false
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261106-restoration.json",
+      "path": "tools/photo-review/evidence/version-captures-20261109-illustrative.json",
       "requirements": [
-        "V5"
+        "V7"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-home-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-home-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-home-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-quote-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-quote-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-how-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-how-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-how-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-how-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-contact-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-contact-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-contact-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-contact-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-tenancy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-tenancy-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-tenancy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-tenancy-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-about-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-about-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-about-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-about-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-reviews-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-reviews-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-reviews-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-reviews-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-privacy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-privacy-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-privacy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-privacy-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-terms-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-terms-desktop.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov6-copy-restoration-terms-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov9-illustrative-removed-terms-mobile.jpg",
       "requirements": [
-        "V4"
+        "V6"
       ],
       "allowDelete": false
     }
