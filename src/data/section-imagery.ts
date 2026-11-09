@@ -19,16 +19,16 @@ const generated = (name: string, alt: string): SectionImage => ({
 });
 
 export const offeringImages = {
-  home: generated('home-a', 'Illustrative Georgian living room with sash windows and a linen sofa.'),
-  workplace: generated('workplace-a', 'Illustrative modern office with desks and the London skyline beyond.'),
-  complex: generated('complex-a', 'Illustrative cleaner in a teal uniform wiping a communal stair handrail.')
+  home: generated('home-a', 'Georgian living room with sash windows and a linen sofa.'),
+  workplace: generated('workplace-a', 'Modern office with desks and the London skyline beyond.'),
+  complex: generated('complex-a', 'Cleaner in a teal uniform wiping a communal stair handrail.')
 };
 
-const complexLobby = generated('complex-b', 'Illustrative cleaner mopping a shared apartment-block lobby beside a lift.');
-const scopeAndPlanning = generated('scope-and-planning', 'Illustrative cleaners inspecting a stair handrail with a clipboard.');
-const communalLiftLobby = generated('communal-lift-lobby', 'Illustrative shared apartment-block entrance with lift doors and a cleaning trolley.');
-const propertyHandover = generated('property-handover', 'Illustrative empty apartment kitchen with open cupboards.');
-const workplaceTouchpoints = generated('workplace-touchpoints', 'Illustrative cleaner wiping a meeting table in a bright office.');
+const complexLobby = generated('complex-b', 'Cleaner mopping a shared apartment-block lobby beside a lift.');
+const scopeAndPlanning = generated('scope-and-planning', 'Cleaners inspecting a stair handrail with a clipboard.');
+const communalLiftLobby = generated('communal-lift-lobby', 'Shared apartment-block entrance with lift doors and a cleaning trolley.');
+const propertyHandover = generated('property-handover', 'Empty apartment kitchen with open cupboards.');
+const workplaceTouchpoints = generated('workplace-touchpoints', 'Cleaner wiping a meeting table in a bright office.');
 
 // Earlier HQC library photographs: brightness only, no retouching or crop. Captioned as
 // illustrative until Pedro confirms them (confirmedHqcPhotoIds in page-visuals.ts).

@@ -1,7 +1,7 @@
 export type PageVisual = {
   hero: string;
   heroAlt: string;
-  /** hqc is true only for photos listed in confirmedHqcPhotoIds; anything else is shown as illustrative. */
+  /** hqc is true only for photos listed in confirmedHqcPhotoIds; anything else is shown without an HQC-work label. */
   gallery: { src: string; alt: string; hqc?: boolean }[];
   outcomes: string[];
   scope: string[];
@@ -10,7 +10,7 @@ export type PageVisual = {
 
 // Single provenance switch (round 5, review B1). A photo is presented as "HQC work" only when
 // its photo-review ID is listed here, i.e. Pedro has confirmed it is his own job and that it may
-// be published. Every other image renders as an illustrative image with a caption.
+// be published. Every other image renders without an HQC-work label.
 // Awaiting Pedro: p-ae4372f37d (bedroom), p-2267193ade (living area), p-1ef63f3b16 (shutters).
 export const confirmedHqcPhotoIds: string[] = [];
 export const isConfirmedHqcPhoto = (photoId: string) => confirmedHqcPhotoIds.includes(photoId);
@@ -30,7 +30,7 @@ const homeGallery = hqcLibraryGallery;
 // Round 3 (B1): Pedro marked the earlier library photos WA0024, WA0027 and WA0033 "skip",
 // so they are not shown. These replacements are his "keep" choices matched to his notes.
 // The inventory classifies them as archived site images or stock, not HQC project photos,
-// so they are deliberately not flagged hqc and the gallery renders as illustrative.
+// so they are deliberately not flagged hqc and the gallery uses the neutral heading.
 const keepPhotos = {
   ensuite: { src: '/images/luxury-home/luxurious-kensington-ensuite.png', alt: 'Bathroom with a double vanity and large mirrors.' }, // p-51ee039643 managed properties, portfolios and projects
   livingRoom: { src: '/images/luxury-home/richmond-living-room.png', alt: 'Living room with a fireplace, sofas and a bay window.' }, // p-5ace2161c5 managed properties, portfolios and projects
@@ -48,9 +48,9 @@ const propertyGallery = [keepPhotos.livingRoom, keepPhotos.ensuite, keepPhotos.h
 const heroFromKeep = (photo: { src: string; alt: string }) => ({ hero: photo.src, heroAlt: photo.alt });
 
 const commercialGallery = [
-  { src: '/images/generated/hqc-office-hero.png', alt: 'Illustrative meeting room with a long table and a view of the City of London.' },
-  { src: '/images/generated/hqc-workplace-detail.png', alt: 'Illustrative office kitchen and breakout area with an island and bar stools.' },
-  { src: '/images/generated/hqc-kitchen-detail.png', alt: 'Illustrative kitchen with a stone worktop, sink and flowers.' }
+  { src: '/images/generated/hqc-office-hero.png', alt: 'Meeting room with a long table and a view of the City of London.' },
+  { src: '/images/generated/hqc-workplace-detail.png', alt: 'Office kitchen and breakout area with an island and bar stools.' },
+  { src: '/images/generated/hqc-kitchen-detail.png', alt: 'Kitchen with a stone worktop, sink and flowers.' }
 ];
 
 const restorationGallery = hqcLibraryGallery;
@@ -67,14 +67,14 @@ const defaultVisual: PageVisual = {
 const visualBySlug: Record<string, Partial<PageVisual>> = {
   'property-facilities-cleaning-london': {
     hero: '/images/generated/hqc-property-hero.webp',
-    heroAlt: 'Illustrative empty flat hallway with wooden floors and open doors.',
+    heroAlt: 'Empty flat hallway with wooden floors and open doors.',
     gallery: propertyGallery,
     outcomes: ['One accountable cleaning route', 'Repeatable scopes across properties', 'Clear reporting and handover'],
     scope: ['Portfolio and site requirements', 'Keys, access and parking', 'Frequency, reporting and escalation']
   },
   'communal-area-cleaning-london': {
     hero: '/images/phase8-nov6/complex-a-1600.webp',
-    heroAlt: 'Illustrative cleaner in a teal uniform wiping a communal stair handrail.',
+    heroAlt: 'Cleaner in a teal uniform wiping a communal stair handrail.',
     gallery: propertyGallery,
     outcomes: ['Presentable shared entrances', 'Reliable recurring attendance', 'Issues reported to the managing team'],
     scope: ['Entrances, stairs and landings', 'Lifts, touchpoints and shared facilities', 'Bin stores and agreed external areas']
@@ -111,28 +111,28 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   },
   'commercial-cleaning-london': {
     hero: '/images/generated/hqc-office-hero.png',
-    heroAlt: 'Illustrative meeting room with a long table and a view of the City of London.',
+    heroAlt: 'Meeting room with a long table and a view of the City of London.',
     gallery: commercialGallery,
     outcomes: ['A programme that fits operations', 'Visible standards and accountability', 'A route for periodic deeper work'],
     scope: ['Occupancy and operating hours', 'Washrooms, kitchens and work areas', 'Security, keys and site procedures']
   },
   'office-cleaning-london': {
     hero: '/images/generated/hqc-workplace-detail.png',
-    heroAlt: 'Illustrative office kitchen and breakout area with an island and bar stools.',
+    heroAlt: 'Office kitchen and breakout area with an island and bar stools.',
     gallery: commercialGallery,
     outcomes: ['Work-ready spaces', 'Reliable recurring attendance', 'A clearly managed service scope'],
     scope: ['Desks and shared workspaces', 'Washrooms and staff kitchens', 'Floors, waste and agreed touchpoints']
   },
   'commercial-deep-cleaning-london': {
     hero: '/images/generated/hqc-workplace-detail.png',
-    heroAlt: 'Illustrative office kitchen and breakout area with an island and bar stools.',
+    heroAlt: 'Office kitchen and breakout area with an island and bar stools.',
     gallery: commercialGallery,
     outcomes: ['A planned operational reset', 'Detailed attention beyond routine visits', 'A handover aligned to reopening'],
     scope: ['Current condition and build-up', 'Equipment, access and specialist needs', 'Shutdown windows and reinstatement']
   },
   'home-cleaning-london': {
     hero: '/images/generated/hqc-home-hero.webp',
-    heroAlt: 'Illustrative living room with a corner sofa and tall windows.',
+    heroAlt: 'Living room with a corner sofa and tall windows.',
     gallery: homeGallery,
     outcomes: ['The right level of cleaning', 'A clear recurring or one-off route', 'Care around your home and routines'],
     scope: ['Maintenance or restoration need', 'Property condition and priorities', 'Access, products and household requirements']
@@ -147,7 +147,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   },
   'deep-cleaning-london': {
     hero: '/images/generated/hqc-kitchen-detail.png',
-    heroAlt: 'Illustrative kitchen with a stone worktop, sink and flowers.',
+    heroAlt: 'Kitchen with a stone worktop, sink and flowers.',
     gallery: restorationGallery,
     outcomes: ['A reset beyond routine maintenance', 'Priorities agreed before arrival', 'A finish matched to the actual condition'],
     scope: ['Build-up and problem areas', 'Inside agreed fixtures and appliances', 'Time, labour and specialist treatment needs']
@@ -181,7 +181,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   },
   'how-we-work': {
     hero: '/images/generated/hqc-office-hero.png',
-    heroAlt: 'Illustrative meeting room with a long table and a view of the City of London.',
+    heroAlt: 'Meeting room with a long table and a view of the City of London.',
     gallery: commercialGallery,
     outcomes: ['Enquiry routed correctly', 'Scope agreed before delivery', 'Result checked at handover'],
     scope: ['1. Understand the outcome', '2. Assess and quote', '3. Plan, deliver and review']
@@ -195,7 +195,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   },
   'reviews-case-studies': {
     hero: '/images/generated/hqc-restoration-interior.png',
-    heroAlt: 'Illustrative period living room with a bay window and a fireplace.',
+    heroAlt: 'Period living room with a bay window and a fireplace.',
     gallery: restorationGallery,
     outcomes: ['See the condition before work', 'Understand the requested outcome', 'Review the visible result'],
     scope: ['Permissioned project imagery', 'Relevant service context', 'Client privacy where required']
@@ -216,7 +216,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     heroAlt: 'Open-plan living area with sofas, a patterned rug and an olive tree.',
     gallery: [
       { src: '/images/instock/london-property-living-room.webp', alt: 'Open-plan living area with sofas, a patterned rug and an olive tree.' },
-      { src: '/images/generated/hqc-office-hero.png', alt: 'Illustrative meeting room with a long table and a view of the City of London.' },
+      { src: '/images/generated/hqc-office-hero.png', alt: 'Meeting room with a long table and a view of the City of London.' },
       { src: '/images/luxury-home/richmond-living-room.webp', alt: 'Living room with a fireplace, chandelier and sofas.' }
     ],
     outcomes: ['One East London service hub', 'Availability checked before commitment', 'Home, workplace and property routes'],

@@ -130,7 +130,6 @@ const enquiryType = page.assessment
         {page.slug === 'about-high-quality-clean' ? <FounderPortrait /> : (
           <figure class="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_70px_rgba(14,36,42,.12)]">
             <img src={visual.gallery[0].src} alt={visual.gallery[0].alt} class="aspect-[4/3] w-full object-cover" loading="lazy" width="1000" height="750" />
-            {!visual.gallery[0].hqc && <figcaption class="px-5 py-2 text-xs font-semibold uppercase tracking-[.14em] text-slate">Illustrative image</figcaption>}
           </figure>
         )}
         <div class="mt-8 grid gap-px overflow-hidden rounded-2xl border border-midnight/10 bg-midnight/10 sm:grid-cols-3">
@@ -169,7 +168,6 @@ const enquiryType = page.assessment
                 {imageryAfter(section.heading).map((image) => (
                   <figure class="overflow-hidden rounded-2xl bg-midnight">
                     <img src={image.src} srcset={image.srcset} sizes={imageryAfter(section.heading).length > 1 ? '(min-width: 640px) 30vw, 100vw' : '(min-width: 1024px) 896px, 100vw'} alt={image.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" width="1600" height="900" />
-                    {image.illustrative && <figcaption class="bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[.14em] text-slate">Illustrative image</figcaption>}
                   </figure>
                 ))}
               </div>
@@ -297,18 +295,17 @@ const enquiryType = page.assessment
         </div>
       ) : (
         <div class="max-w-3xl">
-          <p class="section-kicker">Illustrative imagery</p>
-          <h2 class="section-title">Illustrative images</h2>
+          <p class="section-kicker">Gallery</p>
+          <h2 class="section-title">The kinds of spaces we clean</h2>
         </div>
       )}
-      <p class="max-w-md text-sm leading-6 text-slate">{galleryIsHqcWork ? 'Selected imagery from the HQC project library.' : 'These images are illustrative and are not presented as records of specific HQC jobs.'} The exact scope and finish varies by property, condition and agreed service.</p>
+      <p class="max-w-md text-sm leading-6 text-slate">{galleryIsHqcWork ? 'Selected imagery from the HQC project library. ' : ''}The exact scope and finish varies by property, condition and agreed service.</p>
     </div>
     <div class="mt-12 grid auto-rows-[220px] gap-4 md:grid-cols-12 md:auto-rows-[250px]">
       {visual.gallery.map((image, index) => (
         <figure class:list={['group relative overflow-hidden rounded-2xl bg-midnight', index === 0 ? 'md:col-span-7 md:row-span-2' : 'md:col-span-5']}>
           <img src={image.src} alt={image.alt} class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" loading="lazy" width="1000" height="750" />
           <div class="absolute inset-0 bg-gradient-to-t from-midnight/50 via-transparent to-transparent opacity-70"></div>
-          {!image.hqc && <figcaption class="absolute bottom-3 left-3 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[.12em] text-midnight">Illustrative image</figcaption>}
         </figure>
       ))}
     </div>
