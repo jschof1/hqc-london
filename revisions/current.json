@@ -1,19 +1,23 @@
 {
   "schemaVersion": 1,
-  "baseline": "6fdc10fe63958b1409b93b5fc156658342dc6526",
-  "request": "Pedro via Jack, 10 November 2026 (native thread): use HQC's new logo (the logo kit made for Pedro, 8 Oct 2026) wherever an image shows a staff member doing the work; make about five images clearer about the service or process. Keep it quick; do not change many images.",
+  "baseline": "e8d68471531d009e851780a3d435c69c4262eb29",
+  "request": "Pedro via Jack, 10 November 2026 (native thread): use HQC's new logo (the logo kit made for Pedro, 8 Oct 2026) wherever an image shows a staff member doing the work; make about five images clearer about the service or process. Keep it quick; do not change many images. Amendment after independent review of e8d6847 (FAIL: B1 unbranded staff, B2 unrequested van logo, B3 reframed 6 Nov images).",
   "requirements": [
     {
       "id": "M0",
-      "text": "Planning amendment for the logo-and-clarity image round; all earlier requirements, including the 10 Nov image-led round and its recorded exceptions, stay in force."
+      "text": "Planning amendment: fix the independent-review blockers on the logo round; requirements L1 and L2 stay in force."
     },
     {
-      "id": "L1",
-      "text": "Every generated image that shows a staff member at work in the deep-teal uniform gets the gold HQC monogram embroidered on the uniform (back or chest), edited in place with the scene otherwise unchanged; the same file paths are kept, so no layout or code change. Hands-only crops are unchanged."
+      "id": "F1",
+      "text": "B1: add the gold HQC monogram to the visible uniform (chest, back or sleeve) in the remaining generated images where a uniformed torso is visible (r-kitchen-wipe, p-signoff, p-plans, p-lift, r-sofa-vacuum, p-bin-store, c-washroom, g-quality-review, p-portfolio-map, p-key-hooks, r-shower-glass, r-oven-inside, g-scope-plan, p-postcode, p-report-photo, g-service-profile), and to the two unbranded cleaners in g-planner; scene and crop otherwise unchanged. Arm-only fragments stay exempt."
     },
     {
-      "id": "L2",
-      "text": "Replace five library images whose scene does not show the service or process clearly (p-snagging, g-planner, g-phone-desk, c-coats-office, g-enquiry) with clearer scenes of HQC-uniformed staff doing that step, keeping the same ids and paths; update only their alt text."
+      "id": "F2",
+      "text": "B2: p-van-street keeps the uniform logo only; the van returns to a plain, unbranded panel."
+    },
+    {
+      "id": "F3",
+      "text": "B3: the 6 Nov images complex-a, complex-b and scope-and-planning keep their original pixels and framing; the monogram is composited onto the uniform only, at both sizes."
     },
     {
       "id": "R4",
@@ -30,14 +34,6 @@
       "reason": "Planning-only scope amendment."
     },
     {
-      "path": "src/data/card-imagery.ts",
-      "requirements": [
-        "L2"
-      ],
-      "allowDelete": false,
-      "reason": "Alt text for the five replaced scenes only."
-    },
-    {
       "path": "revisions/versions.json",
       "requirements": [
         "R4"
@@ -46,276 +42,196 @@
       "reason": "Register the new reviewed version."
     },
     {
-      "path": "public/images/phase8-nov10/r-living-dust.webp",
+      "path": "public/images/phase8-nov10/r-kitchen-wipe.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/r-routine-visit.webp",
+      "path": "public/images/phase8-nov10/p-signoff.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/r-hallway-floor.webp",
+      "path": "public/images/phase8-nov10/p-plans.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-desks.webp",
+      "path": "public/images/phase8-nov10/p-lift.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-floor-scrubber.webp",
+      "path": "public/images/phase8-nov10/r-sofa-vacuum.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-waste.webp",
+      "path": "public/images/phase8-nov10/p-bin-store.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-high-level.webp",
+      "path": "public/images/phase8-nov10/c-washroom.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-deep-kitchen.webp",
+      "path": "public/images/phase8-nov10/g-quality-review.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-supervisor.webp",
+      "path": "public/images/phase8-nov10/p-portfolio-map.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-glass-partition.webp",
+      "path": "public/images/phase8-nov10/p-key-hooks.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-staff-kitchen.webp",
+      "path": "public/images/phase8-nov10/r-shower-glass.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/c-after-hours.webp",
+      "path": "public/images/phase8-nov10/r-oven-inside.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/p-lobby.webp",
+      "path": "public/images/phase8-nov10/g-scope-plan.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/p-stairwell.webp",
+      "path": "public/images/phase8-nov10/p-postcode.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/p-high-windows.webp",
+      "path": "public/images/phase8-nov10/p-report-photo.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/p-van-street.webp",
+      "path": "public/images/phase8-nov10/g-service-profile.webp",
       "requirements": [
-        "L1"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place"
-    },
-    {
-      "path": "public/images/phase8-nov10/g-site-review.webp",
-      "requirements": [
-        "L1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo added in place"
-    },
-    {
-      "path": "public/images/phase8-nov10/g-delivery.webp",
-      "requirements": [
-        "L1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo added in place"
-    },
-    {
-      "path": "public/images/phase8-nov10/g-walkthrough.webp",
-      "requirements": [
-        "L1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo added in place"
-    },
-    {
-      "path": "public/images/phase8-nov10/k-supplies.webp",
-      "requirements": [
-        "L1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo added in place"
-    },
-    {
-      "path": "public/images/phase8-nov10/g-assessment.webp",
-      "requirements": [
-        "L1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo added in place"
-    },
-    {
-      "path": "public/images/phase8-nov10/p-snagging.webp",
-      "requirements": [
-        "L2"
-      ],
-      "allowDelete": false,
-      "reason": "Clearer replacement scene with logo."
+      "reason": "Logo on visible uniform."
     },
     {
       "path": "public/images/phase8-nov10/g-planner.webp",
       "requirements": [
-        "L2"
+        "F1"
       ],
       "allowDelete": false,
-      "reason": "Clearer replacement scene with logo."
+      "reason": "Logo on visible uniform."
     },
     {
-      "path": "public/images/phase8-nov10/g-phone-desk.webp",
+      "path": "public/images/phase8-nov10/p-van-street.webp",
       "requirements": [
-        "L2"
+        "F2"
       ],
       "allowDelete": false,
-      "reason": "Clearer replacement scene with logo."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-coats-office.webp",
-      "requirements": [
-        "L2"
-      ],
-      "allowDelete": false,
-      "reason": "Clearer replacement scene with logo."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-enquiry.webp",
-      "requirements": [
-        "L2"
-      ],
-      "allowDelete": false,
-      "reason": "Clearer replacement scene with logo."
+      "reason": "Remove unrequested van logo."
     },
     {
       "path": "public/images/phase8-nov6/complex-a-800.webp",
       "requirements": [
-        "L1"
+        "F3"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
+      "reason": "Logo on original framing."
     },
     {
       "path": "public/images/phase8-nov6/complex-a-1600.webp",
       "requirements": [
-        "L1"
+        "F3"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
+      "reason": "Logo on original framing."
     },
     {
       "path": "public/images/phase8-nov6/complex-b-800.webp",
       "requirements": [
-        "L1"
+        "F3"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
+      "reason": "Logo on original framing."
     },
     {
       "path": "public/images/phase8-nov6/complex-b-1600.webp",
       "requirements": [
-        "L1"
+        "F3"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
+      "reason": "Logo on original framing."
     },
     {
       "path": "public/images/phase8-nov6/scope-and-planning-800.webp",
       "requirements": [
-        "L1"
+        "F3"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
+      "reason": "Logo on original framing."
     },
     {
       "path": "public/images/phase8-nov6/scope-and-planning-1600.webp",
       "requirements": [
-        "L1"
+        "F3"
       ],
       "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
-    },
-    {
-      "path": "public/images/phase8-nov6/workplace-touchpoints-800.webp",
-      "requirements": [
-        "L1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
-    },
-    {
-      "path": "public/images/phase8-nov6/workplace-touchpoints-1600.webp",
-      "requirements": [
-        "L1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo added in place (both sizes)."
+      "reason": "Logo on original framing."
     }
   ],
   "preserve": [
