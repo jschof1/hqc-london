@@ -377,7 +377,8 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'Quoted Residential Services': 'r-oven-inside',
       'Commercial Pricing': 'c-desks',
       'Why Some Services Require Assessment': 'p-trades',
-      'Extras Are Separated Where Appropriate': 'r-fridge'
+      'Extras Are Separated Where Appropriate': 'r-fridge',
+      'What We Do Not Publish': 'g-planner'
     }
   },
   'areas-we-cover': {
@@ -385,8 +386,7 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
     scope: ['p-mansion-blocks', 'r-hallway-floor', 'r-front-door-keys', 'n6-property-handover'],
     sections: {
       'Selected Surrey Coverage': 'r-routine-visit',
-      'Not Every Service Has the Same Coverage': 'p-lobby',
-      'East London': 'c-coats-office'
+      'Not Every Service Has the Same Coverage': 'p-lobby'
     }
   },
   'cleaning-services-east-london': {
