@@ -94,7 +94,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
                   <span class="block overflow-hidden rounded-lg">
                     <img src={offering.image.src} srcset={offering.image.srcset} sizes="33vw" alt={offering.image.alt} class="aspect-[4/3] w-full rounded-lg object-cover object-[70%_50%] transition duration-700 group-active:scale-95" width="800" height="600" fetchpriority="high" />
                   </span>
-                  <span class="mt-1.5 block text-[11px] font-bold leading-tight">{offering.eyebrow} <span class="text-copper" aria-hidden="true">→</span></span>
+                  <span class="mt-1.5 block text-[11px] font-bold leading-tight">{offering.eyebrow}&nbsp;<span class="text-copper" aria-hidden="true">→</span></span>
                 </a>
               </li>
             ))}
@@ -133,11 +133,11 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
 
     <section class="section-shell">
       <div class="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-24">
-        <div class="hm-chapter-head">
+        <div class="hm-chapter-head"><div class="hm-sticky">
           <p class="section-kicker hm-kicker-line" data-reveal="fade">Start with what you need to achieve</p>
           <h2 class="section-title" data-split>Tell Us the Result You Need</h2>
           {paragraphs('Start with what you need to achieve').slice(0, 2).map((paragraph, index) => <p class="mt-7 text-lg leading-8 text-slate" data-reveal style={`--d: ${150 + index * 100}ms`}>{paragraph}</p>)}
-        </div>
+        </div></div>
         <div class="space-y-4" data-stagger="120">
           {[
             {
@@ -214,8 +214,8 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
         return (
           <section class:list={['hm-chapter relative overflow-clip py-20 md:py-28', toneClass[chapter.tone], dark && 'hm-spotlight isolate']} data-spotlight={dark ? '' : undefined}>
             {dark && <div class="hm-orb hm-orb-a opacity-60" aria-hidden="true"></div>}
-            <div class:list={['relative mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:gap-20 lg:px-14', chapter.layout === 'grid' ? '' : 'lg:grid-cols-[.72fr_1.28fr]']}>
-              <div class:list={[chapter.layout === 'grid' ? 'max-w-4xl' : 'hm-chapter-head']}>
+            <div class:list={['relative mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:gap-20 lg:px-14', chapter.layout === 'split' ? 'lg:grid-cols-[.72fr_1.28fr]' : '']}>
+              <div class:list={[chapter.layout === 'split' ? 'hm-chapter-head' : 'max-w-4xl']}><div class="hm-sticky">
                 <p class="section-kicker hm-kicker-line" data-reveal="fade">Cleaning Defined by the Outcome</p>
                 <h2 class:list={['section-title', dark && 'text-white']} data-split>{section.heading}</h2>
                 {section.heading === 'Cleaning Defined by the Outcome' && (
@@ -223,18 +223,18 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
                     <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 480px, 100vw" alt={outcomeImage.alt} class="aspect-[16/10] w-full object-cover transition duration-1000 hover:scale-[1.03]" loading="lazy" width="1600" height="1000" />
                   </figure>
                 )}
-              </div>
+              </div></div>
               {chapter.layout === 'split' && (
                 <div class="space-y-5 text-lg leading-8 text-slate">{renderFlow(section.blocks)}</div>
               )}
               {chapter.layout !== 'split' && (
                 <div class:list={['text-lg leading-8', dark ? 'text-white/70' : 'text-slate']}>
                   {intro.length > 0 && <div class="mb-6 space-y-5">{renderFlow(intro)}</div>}
-                  <div class:list={['hm-cards', chapter.layout === 'cards' ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3']} data-stagger="90">
+                  <div class="hm-cards md:grid-cols-2 lg:grid-cols-3" data-stagger="90">
                     {groups.map((group, groupIndex) => {
                       const featured = chapter.layout === 'cards' && groupIndex === 0;
                       return (
-                        <article class:list={['hm-card', dark ? 'hm-card-dark' : 'hm-card-light', featured && 'hm-card-featured md:col-span-2']}>
+                        <article class:list={['hm-card', dark ? 'hm-card-dark' : 'hm-card-light', featured && 'hm-card-featured md:col-span-2 lg:col-span-2']}>
                           <h3 class:list={['font-serif text-2xl font-medium leading-tight md:text-[1.75rem]', !dark && 'text-midnight']}>{group.heading.text}</h3>
                           {group.body.map((block, blockIndex) => {
                             if (block.kind === 'cta') return <p class="hm-card-foot mt-auto text-base"><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
@@ -292,12 +292,12 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
 
     <section class="bg-white py-20 md:py-28">
       <div class="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-24 lg:px-14">
-        <div class="hm-chapter-head">
+        <div class="hm-chapter-head"><div class="hm-sticky">
           <p class="section-kicker hm-kicker-line" data-reveal="fade">Complex service route</p>
           <h2 class="section-title" data-split>When Routine Cleaning Is Not Enough</h2>
           {paragraphs('When Routine Cleaning Is Not Enough').map((paragraph) => <p class="mt-7 text-lg leading-8 text-slate" data-reveal>{paragraph}</p>)}
           {ctaLabels('When Routine Cleaning Is Not Enough').map((label) => <a href={controlledCtaHref(label)} class="hm-cta-link mt-7" data-reveal>{label} <span class="hm-cta-chip" aria-hidden="true">→</span></a>)}
-        </div>
+        </div></div>
         <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Complex service process" data-stagger="90">
           {['Qualification', 'Assessment', 'Defined scope', 'Delivery plan', 'Controlled delivery', 'Handover'].map((step, index) => {
             const image = cardImage(homeComplexStepImagery[step]);

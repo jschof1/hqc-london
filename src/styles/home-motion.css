@@ -255,9 +255,9 @@ html.hqc-motion [data-parallax] {
 
 /* ---------- Narrative sections (approved copy, presentation only) ---------- */
 .hm-chapter { position: relative; }
-.hm-chapter-head { align-self: start; }
+/* The head column stretches to the row height; its inner wrapper sticks inside it. */
 @media (min-width: 1024px) {
-  .hm-chapter-head { position: sticky; top: 7.5rem; }
+  .hm-chapter-head > .hm-sticky { position: sticky; top: 7.5rem; }
 }
 
 .hm-lead { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.4vw, 2.15rem); line-height: 1.22; color: var(--color-midnight); font-weight: 500; letter-spacing: -.01em; }
@@ -591,7 +591,16 @@ html.hqc-motion [data-parallax] {
 .hqc-motion [data-scroll-track] .hm-step.is-current::after { opacity: 1; }
 .hqc-motion [data-scroll-track] .hm-step.is-current .hm-step-num { transform: translateY(-4px) scale(1.12); }
 @media (min-width: 1024px) and (min-height: 820px) {
-  .hqc-motion .hm-pin { height: 250vh; padding-block: 0; }
+  .hqc-motion .hm-pin { height: 175vh; padding-block: 0; }
+  /* One dominant step while pinned: the current step takes the copper wash, the rest recede. */
+  .hqc-motion .hm-pin .hm-step { transition: opacity .5s ease, transform .6s var(--hm-ease), background-color .5s ease, color .5s ease; }
+  .hqc-motion .hm-pin .hm-step:not(.is-current) { background: var(--color-midnight); color: white; opacity: .5; }
+  .hqc-motion .hm-pin .hm-step:not(.is-current) .hm-step-num { color: var(--color-copper); }
+  .hqc-motion .hm-pin .hm-step:not(.is-current) p { color: rgb(255 255 255 / .65); }
+  .hqc-motion .hm-pin .hm-step.is-current { background: var(--color-copper); color: var(--color-midnight); opacity: 1; }
+  .hqc-motion .hm-pin .hm-step.is-current .hm-step-num, .hqc-motion .hm-pin .hm-step.is-current p { color: var(--color-midnight); }
+  .hqc-motion .hm-pin .hm-step.is-current::after { opacity: 0; }
+  .hqc-motion .hm-pin .hm-step.is-current img { filter: none; }
   .hqc-motion .hm-pin-stage {
     position: sticky;
     top: 5rem;
@@ -631,3 +640,9 @@ html.hqc-motion [data-parallax] {
 @media (prefers-reduced-motion: reduce) {
   [data-intro], [data-intro] em { animation: none !important; }
 }
+
+/* The site-wide main.js adds .stagger-children to every .grid and fades the children with
+   fill-mode forwards. On the homepage this engine owns entrance motion, so the legacy fade is
+   switched off here (other pages are unaffected). */
+.hqc-motion .stagger-children > * { animation: none; }
+.hqc-motion .stagger-children > :not([data-reveal]) { opacity: 1; }

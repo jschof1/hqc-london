@@ -152,7 +152,8 @@ const proofPoints = [
   }
 
   @media (min-width: 1024px) {
-    .trust-rail { grid-auto-columns: minmax(20rem, 25%); }
+    /* About 3.4 cards in view, so the cut card shows the rail continues. */
+    .trust-rail { grid-auto-columns: max(20rem, 28.5%); }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -188,6 +189,8 @@ const proofPoints = [
     const visible = rail.scrollWidth > 0 ? rail.clientWidth / rail.scrollWidth : 1;
     progress?.style.setProperty('--rail', String(Math.min(1, visible + (1 - visible) * ratio)));
     // aria-disabled, not disabled: a focused button must keep focus at the end of the rail.
+    const controls = previous?.parentElement;
+    if (controls) controls.hidden = max < 8;
     previous?.setAttribute('aria-disabled', String(rail.scrollLeft <= 2));
     next?.setAttribute('aria-disabled', String(rail.scrollLeft >= max - 2));
   };
