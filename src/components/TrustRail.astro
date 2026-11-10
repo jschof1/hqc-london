@@ -37,17 +37,17 @@ const proofPoints = [
   <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
     <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
       <div class="max-w-3xl">
-        <p class="section-kicker">Confidence before commitment</p>
-        <h2 id="trust-rail-title" class="section-title">A clear standard from the first conversation.</h2>
-        <p class="mt-6 text-lg leading-8 text-slate">Good cleaning starts long before the visit. Move through the checks that keep the right service, scope and handover in view.</p>
+        <p class="section-kicker hm-kicker-line" data-reveal="fade">Confidence before commitment</p>
+        <h2 id="trust-rail-title" class="section-title" data-split>A clear standard from the first conversation.</h2>
+        <p class="mt-6 text-lg leading-8 text-slate" data-reveal style="--d: 200ms">Good cleaning starts long before the visit. Move through the checks that keep the right service, scope and handover in view.</p>
       </div>
-      <div class="flex items-center gap-3" aria-label="Proof rail controls">
+      <div class="flex items-center gap-3" aria-label="Proof rail controls" data-reveal="fade" style="--d: 300ms">
         <button type="button" class="trust-rail-control" data-trust-prev aria-label="Show previous proof point">←</button>
         <button type="button" class="trust-rail-control" data-trust-next aria-label="Show next proof point">→</button>
       </div>
     </div>
 
-    <div class="trust-rail mt-12" data-trust-rail tabindex="0" aria-label="How HQC builds confidence before a clean">
+    <div class="trust-rail mt-12" data-trust-rail tabindex="0" aria-label="How HQC builds confidence before a clean" data-stagger="90" data-stagger-type="right" data-stagger-together>
       {proofPoints.map((point, index) => (
         <article class:list={['trust-rail-card', index === 0 && 'trust-rail-card-featured']}>
           <span class:list={['font-serif text-5xl', index === 0 ? 'text-copper' : 'text-copper-ink']}>{point.number}</span>
@@ -57,6 +57,7 @@ const proofPoints = [
         </article>
       ))}
     </div>
+    <div class="trust-rail-progress" aria-hidden="true"><span data-trust-progress></span></div>
 
     <div class="mt-8 flex flex-col justify-between gap-4 border-t border-midnight/10 pt-6 sm:flex-row sm:items-center">
       <p class="max-w-2xl text-sm leading-6 text-slate">Evidence is more useful when it is specific. Client names, reviews and logos are added only when their publication is approved.</p>
@@ -126,12 +127,37 @@ const proofPoints = [
 
   .trust-rail-control:hover { border-color: var(--color-copper); background: var(--color-copper); }
 
+  .trust-rail-control:disabled { opacity: .35; cursor: default; }
+  .trust-rail-control:disabled:hover { border-color: rgb(14 42 49 / .2); background: white; }
+
+  .trust-rail.is-dragging { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
+  @media (hover: hover) and (pointer: fine) { .trust-rail { cursor: grab; } }
+
+  .trust-rail-progress {
+    position: relative;
+    height: 2px;
+    margin-top: 1.25rem;
+    overflow: hidden;
+    border-radius: 9999px;
+    background: rgb(14 42 49 / .1);
+  }
+
+  .trust-rail-progress span {
+    position: absolute;
+    inset: 0;
+    background: var(--color-copper);
+    transform: scaleX(var(--rail, .25));
+    transform-origin: 0 50%;
+    transition: transform 200ms ease-out;
+  }
+
   @media (min-width: 1024px) {
     .trust-rail { grid-auto-columns: minmax(20rem, 25%); }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .trust-rail { scroll-behavior: auto; }
+    .trust-rail-progress span { transition: none; }
     .trust-rail-card, .trust-rail-control { transition: none; }
   }
 </style>
@@ -150,6 +176,64 @@ const proofPoints = [
 
   previous?.addEventListener('click', () => scrollRail(-1));
   next?.addEventListener('click', () => scrollRail(1));
+
+  // Presentation only (10 Nov 2026): progress indicator, control state and mouse drag.
+  const progress = document.querySelector<HTMLElement>('[data-trust-progress]');
+  const syncRail = () => {
+    if (!rail) return;
+    const max = rail.scrollWidth - rail.clientWidth;
+    const ratio = max > 0 ? rail.scrollLeft / max : 1;
+    const visible = rail.scrollWidth > 0 ? rail.clientWidth / rail.scrollWidth : 1;
+    progress?.style.setProperty('--rail', String(Math.min(1, visible + (1 - visible) * ratio)));
+    if (previous) previous.disabled = rail.scrollLeft <= 2;
+    if (next) next.disabled = rail.scrollLeft >= max - 2;
+  };
+  rail?.addEventListener('scroll', syncRail, { passive: true });
+  addEventListener('resize', syncRail, { passive: true });
+  syncRail();
+
+  if (rail && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let startX = 0;
+    let startLeft = 0;
+    let moved = false;
+    let pointerId: number | null = null;
+    rail.addEventListener('pointerdown', (event) => {
+      if (event.pointerType !== 'mouse' || event.button !== 0) return;
+      pointerId = event.pointerId;
+      startX = event.clientX;
+      startLeft = rail.scrollLeft;
+      moved = false;
+    });
+    rail.addEventListener('pointermove', (event) => {
+      if (pointerId !== event.pointerId) return;
+      const delta = event.clientX - startX;
+      if (!moved && Math.abs(delta) < 6) return;
+      if (!moved) {
+        moved = true;
+        rail.classList.add('is-dragging');
+        rail.setPointerCapture(event.pointerId);
+      }
+      rail.scrollLeft = startLeft - delta;
+    });
+    const release = (event: PointerEvent) => {
+      if (pointerId !== event.pointerId) return;
+      pointerId = null;
+      if (!moved) return;
+      rail.classList.remove('is-dragging');
+      const firstCard = rail.querySelector<HTMLElement>('.trust-rail-card');
+      const width = firstCard ? firstCard.offsetWidth + 16 : rail.clientWidth;
+      rail.scrollTo({ left: Math.round(rail.scrollLeft / width) * width, behavior: 'smooth' });
+    };
+    rail.addEventListener('pointerup', release);
+    rail.addEventListener('pointercancel', release);
+    rail.addEventListener('click', (event) => {
+      if (moved) {
+        event.preventDefault();
+        event.stopPropagation();
+        moved = false;
+      }
+    }, true);
+  }
 
   rail?.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {
