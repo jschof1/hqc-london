@@ -6,6 +6,8 @@ import FounderPortrait from './FounderPortrait.astro';
 import ClientEvidence from './ClientEvidence.astro';
 import { closingCtas, controlledCtaHref } from '../data/controlled-cta-links';
 import { sectionImagery } from '../data/section-imagery';
+import { outcomePages } from '../data/outcome-pages';
+import { cardImage, outcomeCardImagery, relatedRouteImagery, type CardImage } from '../data/card-imagery';
 
 interface Props {
   page: OutcomePageData;
@@ -55,6 +57,37 @@ const closing = closingCtas(page, (master as { closing?: { primary?: string; sec
 // The 'HQC work' heading is used only when every gallery image is a verified HQC library photo.
 const galleryIsHqcWork = visual.gallery.every((image) => image.hqc);
 const imageryAfter = (heading: string) => (sectionImagery[page.slug] ?? []).find((entry) => entry.after === heading)?.images ?? [];
+// Image-led round (10 Nov 2026): card and section images from the generated card library.
+// reviews-case-studies has no entry, so its outcome, scope and section copy stays text-only.
+const cardImagery = outcomeCardImagery[page.slug];
+const outcomeImages = visual.outcomes.map((_, index) => cardImage(cardImagery?.outcomes[index]));
+const scopeImages = [...visual.scope, 'confirmed'].map((_, index) => cardImage(cardImagery?.scope[index]));
+// A section image is shown only where the section has no existing imagery.
+const sectionImage = (heading: string) => imageryAfter(heading).length > 0 ? undefined : cardImage(cardImagery?.sections[heading]);
+const imagedSections = controlledSections.map((section) => section.heading).filter((heading) => sectionImage(heading));
+// Related routes show the destination's hero, unless that image is already on this page.
+const imageKey = (src: string) => src.split('/').pop()!.replace(/-(800|1536|1600)\.webp$/, '').replace(/\.(webp|png|jpe?g)$/i, '');
+const pageImageKeys = new Set([
+  visual.hero,
+  ...visual.gallery.map((image) => image.src),
+  ...(sectionImagery[page.slug] ?? []).flatMap((entry) => entry.images.map((image) => image.src)),
+  ...outcomeImages.map((image) => image?.src),
+  ...scopeImages.map((image) => image?.src),
+  ...controlledSections.map((section) => sectionImage(section.heading)?.src)
+].filter((src): src is string => Boolean(src)).map(imageKey));
+const renderedOutcomeSlugs = outcomePages.map((entry) => entry.slug).filter((slug) => !['request-a-quote', 'cleaning-faqs'].includes(slug));
+const relatedImages: CardImage[] = page.related.map((link) => {
+  const slug = link.href.replace(/^\/|\/$/g, '');
+  const destination = renderedOutcomeSlugs.includes(slug) ? getPageVisual(slug) : undefined;
+  const hero = destination ? { src: destination.hero, alt: destination.heroAlt } : undefined;
+  const chosen = hero && !pageImageKeys.has(imageKey(hero.src))
+    ? hero
+    : cardImage(cardImagery?.related?.[link.href] ?? relatedRouteImagery[link.href]);
+  if (!chosen) throw new Error(`No related-route image for ${link.href} on ${page.slug}`);
+  if (pageImageKeys.has(imageKey(chosen.src))) throw new Error(`Related-route image ${chosen.src} repeats on ${page.slug}`);
+  pageImageKeys.add(imageKey(chosen.src));
+  return chosen;
+});
 const enquiryType = page.assessment
   ? 'Assessment before quotation'
   : page.slug === 'essential-clean-london'
@@ -134,9 +167,12 @@ const enquiryType = page.assessment
         )}
         <div class="mt-8 grid gap-px overflow-hidden rounded-2xl border border-midnight/10 bg-midnight/10 sm:grid-cols-3">
           {visual.outcomes.map((item, index) => (
-            <div class="bg-white p-6">
-              <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
-              <p class="mt-5 font-semibold leading-snug text-midnight">{item}</p>
+            <div class="bg-white">
+              {outcomeImages[index] && <img src={outcomeImages[index].src} alt={outcomeImages[index].alt} class="aspect-[4/3] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
+              <div class="p-6">
+                <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
+                <p class="mt-5 font-semibold leading-snug text-midnight">{item}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -146,9 +182,21 @@ const enquiryType = page.assessment
 
   {master && (
     <section class="border-t border-midnight/10 bg-white py-20 md:py-28" data-controlled-copy={master.source}>
-      <div class="mx-auto max-w-5xl space-y-14 px-5 sm:px-8 lg:px-14">
-        {controlledSections.map((section) => (
-          <section class="border-b border-midnight/10 pb-12 last:border-b-0 last:pb-0">
+      <div class="mx-auto max-w-[1280px] space-y-14 px-5 sm:px-8 lg:px-14">
+        {controlledSections.map((section) => {
+          const image = sectionImage(section.heading);
+          const imageLeft = imagedSections.indexOf(section.heading) % 2 === 1;
+          return (
+          <section class:list={[
+            'border-b border-midnight/10 pb-12 last:border-b-0 last:pb-0',
+            image ? ['grid gap-7 lg:items-start lg:gap-12 xl:gap-16', imageLeft ? 'lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]' : 'lg:grid-cols-[minmax(0,1fr)_minmax(0,20rem)] xl:grid-cols-[minmax(0,1fr)_minmax(0,26rem)]'] : 'max-w-[57rem]'
+          ]}>
+            {image && (
+              <figure class:list={['order-first overflow-hidden rounded-2xl bg-midnight lg:sticky lg:top-28', imageLeft ? 'lg:order-first' : 'lg:order-last']} data-card-imagery="section">
+                <img src={image.src} alt={image.alt} class="aspect-[3/2] w-full object-cover lg:aspect-[4/3]" loading="lazy" decoding="async" width="1200" height="900" />
+              </figure>
+            )}
+            <div>
             <h2 class="font-serif text-3xl font-medium text-midnight md:text-4xl">{section.heading}</h2>
             <div class="mt-5 space-y-4 text-lg leading-8 text-slate">
               {groupCtas(section.blocks).map((block) => (
@@ -172,8 +220,10 @@ const enquiryType = page.assessment
                 ))}
               </div>
             )}
+            </div>
           </section>
-        ))}
+          );
+        })}
       </div>
     </section>
   )}
@@ -272,14 +322,20 @@ const enquiryType = page.assessment
         </div>
         <div class="grid gap-5 sm:grid-cols-2">
           {visual.scope.map((item, index) => (
-            <article class:list={['rounded-2xl border p-6 md:p-8', index === 0 ? 'border-copper bg-copper text-midnight' : 'border-white/15 bg-white/[.04]']}>
-              <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 0 ? 'text-midnight' : 'text-copper']}>Scope {index + 1}</span>
-              <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">{item}</h3>
+            <article class:list={['overflow-hidden rounded-2xl border', index === 0 ? 'border-copper bg-copper text-midnight' : 'border-white/15 bg-white/[.04]']}>
+              {scopeImages[index] && <img src={scopeImages[index].src} alt={scopeImages[index].alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
+              <div class="p-6 md:p-8">
+                <span class:list={['text-xs font-bold uppercase tracking-[.2em]', index === 0 ? 'text-midnight' : 'text-copper']}>Scope {index + 1}</span>
+                <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">{item}</h3>
+              </div>
             </article>
           ))}
-          <article class="rounded-2xl border border-white/15 bg-white/[.04] p-6 md:p-8">
-            <span class="text-xs font-bold uppercase tracking-[.2em] text-copper">Confirmed before work</span>
-            <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">Inclusions, timing and the handover standard</h3>
+          <article class="overflow-hidden rounded-2xl border border-white/15 bg-white/[.04]">
+            {scopeImages[visual.scope.length] && <img src={scopeImages[visual.scope.length]!.src} alt={scopeImages[visual.scope.length]!.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
+            <div class="p-6 md:p-8">
+              <span class="text-xs font-bold uppercase tracking-[.2em] text-copper">Confirmed before work</span>
+              <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">Inclusions, timing and the handover standard</h3>
+            </div>
           </article>
         </div>
       </div>
@@ -339,9 +395,12 @@ const enquiryType = page.assessment
       <p class="section-kicker">Related routes</p>
       <div class="mt-7 grid gap-4 md:grid-cols-3">
         {page.related.map((link, index) => (
-          <a class="group flex min-h-40 flex-col justify-between rounded-2xl border border-midnight/10 bg-white p-6 text-midnight no-underline transition hover:-translate-y-1 hover:border-copper hover:shadow-xl" href={link.href}>
-            <span class="meta-label">0{index + 1}</span>
-            <span class="flex items-end justify-between gap-5 font-serif text-2xl font-medium">{link.label}<span class="text-copper-ink transition group-hover:translate-x-1" aria-hidden="true">→</span></span>
+          <a class="group flex flex-col overflow-hidden rounded-2xl border border-midnight/10 bg-white text-midnight no-underline transition hover:-translate-y-1 hover:border-copper hover:shadow-xl" href={link.href}>
+            <img src={relatedImages[index].src} alt={relatedImages[index].alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="675" />
+            <span class="flex min-h-32 flex-1 flex-col justify-between p-6">
+              <span class="meta-label">0{index + 1}</span>
+              <span class="flex items-end justify-between gap-5 font-serif text-2xl font-medium">{link.label}<span class="text-copper-ink transition group-hover:translate-x-1" aria-hidden="true">→</span></span>
+            </span>
           </a>
         ))}
       </div>

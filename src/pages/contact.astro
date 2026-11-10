@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from '../components/HeroSection.astro';
+import { cardImage, contactCardImagery } from '../data/card-imagery';
+
+// Image-led round (10 Nov 2026): one library image per information card.
+const contactImage = (heading: string) => cardImage(contactCardImagery[heading])!;
 ---
 
 <Layout 
@@ -156,41 +160,51 @@ import HeroSection from '../components/HeroSection.astro';
 
     <section class="bg-white py-16 md:py-20" aria-label="Other contact routes">
       <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
-        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Existing Clients</h2>
-          <p class="mt-3 leading-7 text-ink/70">Use the contact route for matters such as:</p>
-          <ul class="mt-2 list-disc space-y-1 pl-6 leading-7 text-ink/70">
-            <li>an existing booking;</li>
-            <li>access update;</li>
-            <li>invoice query;</li>
-            <li>service question;</li>
-            <li>existing recurring arrangement;</li>
-            <li>feedback;</li>
-            <li>administrative support.</li>
-          </ul>
-          <p class="mt-3 leading-7 text-ink/70">Where a matter relates to a booking, include the relevant name, property address and booking date or reference where available.</p>
+        <article class="overflow-hidden rounded-2xl border border-gold/25 bg-mist">
+          <img src={contactImage('Existing Clients').src} alt={contactImage('Existing Clients').alt} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />
+          <div class="p-6">
+            <h2 class="font-serif text-2xl font-semibold text-navy">Existing Clients</h2>
+            <p class="mt-3 leading-7 text-ink/70">Use the contact route for matters such as:</p>
+            <ul class="mt-2 list-disc space-y-1 pl-6 leading-7 text-ink/70">
+              <li>an existing booking;</li>
+              <li>access update;</li>
+              <li>invoice query;</li>
+              <li>service question;</li>
+              <li>existing recurring arrangement;</li>
+              <li>feedback;</li>
+              <li>administrative support.</li>
+            </ul>
+            <p class="mt-3 leading-7 text-ink/70">Where a matter relates to a booking, include the relevant name, property address and booking date or reference where available.</p>
+          </div>
         </article>
-        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Suppliers and Subcontractors</h2>
-          <p class="mt-3 leading-7 text-ink/70">Supplier or subcontractor enquiries should be clearly marked as such.</p>
-          <p class="mt-3 leading-7 text-ink/70">Please do not use the customer quotation route for:</p>
-          <ul class="mt-2 list-disc space-y-1 pl-6 leading-7 text-ink/70">
-            <li>recruitment;</li>
-            <li>supplier introductions;</li>
-            <li>subcontractor administration;</li>
-            <li>product sales;</li>
-            <li>general business proposals.</li>
-          </ul>
+        <article class="overflow-hidden rounded-2xl border border-gold/25 bg-mist">
+          <img src={contactImage('Suppliers and Subcontractors').src} alt={contactImage('Suppliers and Subcontractors').alt} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />
+          <div class="p-6">
+            <h2 class="font-serif text-2xl font-semibold text-navy">Suppliers and Subcontractors</h2>
+            <p class="mt-3 leading-7 text-ink/70">Supplier or subcontractor enquiries should be clearly marked as such.</p>
+            <p class="mt-3 leading-7 text-ink/70">Please do not use the customer quotation route for:</p>
+            <ul class="mt-2 list-disc space-y-1 pl-6 leading-7 text-ink/70">
+              <li>recruitment;</li>
+              <li>supplier introductions;</li>
+              <li>subcontractor administration;</li>
+              <li>product sales;</li>
+              <li>general business proposals.</li>
+            </ul>
+          </div>
         </article>
-        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Media, Partnerships and Other Enquiries</h2>
-          <p class="mt-3 leading-7 text-ink/70">For legitimate business, media or partnership enquiries, provide enough information for HQC to understand who you are, your organisation, purpose of contact, relevant website or information and preferred contact details.</p>
+        <article class="overflow-hidden rounded-2xl border border-gold/25 bg-mist">
+          <img src={contactImage('Media, Partnerships and Other Enquiries').src} alt={contactImage('Media, Partnerships and Other Enquiries').alt} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />
+          <div class="p-6">
+            <h2 class="font-serif text-2xl font-semibold text-navy">Media, Partnerships and Other Enquiries</h2>
+            <p class="mt-3 leading-7 text-ink/70">For legitimate business, media or partnership enquiries, provide enough information for HQC to understand who you are, your organisation, purpose of contact, relevant website or information and preferred contact details.</p>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="bg-navy py-12 text-white" aria-labelledby="assessment-media-title">
-      <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-[1fr_auto] md:items-center lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-[14rem_1fr_auto] md:items-center md:gap-8 lg:px-8">
+        <img src={contactImage('Assessment Media').src} alt={contactImage('Assessment Media').alt} class="aspect-[16/10] w-full rounded-2xl object-cover md:aspect-[4/3]" loading="lazy" decoding="async" width="1200" height="900" />
         <div>
           <h2 id="assessment-media-title" class="font-serif text-2xl font-semibold">Assessment Media</h2>
           <p class="mt-3 max-w-3xl leading-7 text-white/75">Where HQC has specifically requested photos or video to assess a cleaning requirement, these may be sent using the approved assessment channel:</p>
@@ -203,17 +217,23 @@ import HeroSection from '../components/HeroSection.astro';
 
     <section class="bg-white py-14 md:py-16" aria-label="Service area and quotation routes">
       <div class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
-        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Service Area Questions</h2>
-          <p class="mt-3 leading-7 text-ink/70">If you want to know whether HQC covers your postcode:</p>
-          <a href="/areas-we-cover/" class="mt-4 inline-flex font-semibold text-copper-ink hover:text-navy">Check Areas We Cover <span class="ml-2" aria-hidden="true">→</span></a>
+        <article class="overflow-hidden rounded-2xl border border-gold/25 bg-mist">
+          <img src={contactImage('Service Area Questions').src} alt={contactImage('Service Area Questions').alt} class="aspect-[16/10] md:aspect-[21/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />
+          <div class="p-6">
+            <h2 class="font-serif text-2xl font-semibold text-navy">Service Area Questions</h2>
+            <p class="mt-3 leading-7 text-ink/70">If you want to know whether HQC covers your postcode:</p>
+            <a href="/areas-we-cover/" class="mt-4 inline-flex font-semibold text-copper-ink hover:text-navy">Check Areas We Cover <span class="ml-2" aria-hidden="true">→</span></a>
+          </div>
         </article>
-        <article class="rounded-2xl border border-gold/25 bg-mist p-6">
-          <h2 class="font-serif text-2xl font-semibold text-navy">Need a Cleaning Quote Rather Than General Support?</h2>
-          <p class="mt-3 leading-7 text-ink/70">Use the quotation route so we can direct the enquiry correctly.</p>
-          <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-            <a href="/request-a-quote/" class="inline-flex font-semibold text-copper-ink hover:text-navy">Request a Cleaning Quote <span class="ml-2" aria-hidden="true">→</span></a>
-            <a href="#contact-methods" class="inline-flex font-semibold text-copper-ink hover:text-navy">Contact HQC <span class="ml-2" aria-hidden="true">→</span></a>
+        <article class="overflow-hidden rounded-2xl border border-gold/25 bg-mist">
+          <img src={contactImage('Need a Cleaning Quote Rather Than General Support?').src} alt={contactImage('Need a Cleaning Quote Rather Than General Support?').alt} class="aspect-[16/10] md:aspect-[21/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />
+          <div class="p-6">
+            <h2 class="font-serif text-2xl font-semibold text-navy">Need a Cleaning Quote Rather Than General Support?</h2>
+            <p class="mt-3 leading-7 text-ink/70">Use the quotation route so we can direct the enquiry correctly.</p>
+            <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+              <a href="/request-a-quote/" class="inline-flex font-semibold text-copper-ink hover:text-navy">Request a Cleaning Quote <span class="ml-2" aria-hidden="true">→</span></a>
+              <a href="#contact-methods" class="inline-flex font-semibold text-copper-ink hover:text-navy">Contact HQC <span class="ml-2" aria-hidden="true">→</span></a>
+            </div>
           </div>
         </article>
       </div>

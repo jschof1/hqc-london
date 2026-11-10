@@ -9,6 +9,7 @@ import phase8Copy from '../data/phase8-copy.json';
 import { controlledCtaHref } from '../data/controlled-cta-links';
 import { offeringImages, sectionImagery } from '../data/section-imagery';
 import { libraryPhotos } from '../data/page-visuals';
+import { cardImage, homeComplexStepImagery, homeProcessImagery } from '../data/card-imagery';
 
 const homeCopy = phase8Copy.home;
 const approvedSections = homeCopy.sections.filter((section) => [
@@ -188,13 +189,19 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
             ['03', 'Mobilisation', 'Confirm access, allocation, equipment and practical controls before delivery.'],
             ['04', 'Delivery', 'Work from the authorised service and property information, not assumptions.'],
             ['05', 'Quality review', 'Review the standard and adjust the service as requirements change.']
-          ].map(([number, title, copy], index) => (
-            <article class:list={['min-h-72 p-7 md:p-9', index === 2 ? 'bg-copper text-midnight' : 'bg-midnight']}>
-              <span class:list={['font-serif text-4xl', index === 2 ? 'text-midnight' : 'text-copper']}>{number}</span>
-              <h3 class="mt-16 font-serif text-3xl font-medium">{title}</h3>
-              <p class:list={['mt-4 leading-7', index === 2 ? 'text-midnight' : 'text-white/65']}>{copy}</p>
+          ].map(([number, title, copy], index) => {
+            const image = cardImage(homeProcessImagery[title]);
+            return (
+            <article class:list={['flex flex-col', index === 2 ? 'bg-copper text-midnight' : 'bg-midnight']}>
+              {image && <img src={image.src} alt={image.alt} class="aspect-[16/10] w-full object-cover lg:aspect-[4/3]" loading="lazy" decoding="async" width="1200" height="900" />}
+              <div class="p-7 md:p-9">
+                <span class:list={['font-serif text-4xl', index === 2 ? 'text-midnight' : 'text-copper']}>{number}</span>
+                <h3 class="mt-8 font-serif text-3xl font-medium">{title}</h3>
+                <p class:list={['mt-4 leading-7', index === 2 ? 'text-midnight' : 'text-white/65']}>{copy}</p>
+              </div>
             </article>
-          ))}
+            );
+          })}
         </div>
         <a href="/how-we-work/" class="button button-ghost mt-9">See how the service works <span aria-hidden="true">→</span></a>
       </div>
@@ -209,12 +216,18 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
           {ctaLabels('When Routine Cleaning Is Not Enough').map((label) => <a href={controlledCtaHref(label)} class="mt-7 inline-flex font-bold text-midnight no-underline hover:text-copper-ink">{label} <span class="ml-2 text-copper-ink" aria-hidden="true">→</span></a>)}
         </div>
         <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Complex service process">
-          {['Qualification', 'Assessment', 'Defined scope', 'Delivery plan', 'Controlled delivery', 'Handover'].map((step, index) => (
-            <li class="rounded-2xl border border-midnight/10 bg-porcelain p-6">
-              <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
-              <p class="mt-10 font-serif text-2xl leading-tight text-midnight">{step}</p>
+          {['Qualification', 'Assessment', 'Defined scope', 'Delivery plan', 'Controlled delivery', 'Handover'].map((step, index) => {
+            const image = cardImage(homeComplexStepImagery[step]);
+            return (
+            <li class="overflow-hidden rounded-2xl border border-midnight/10 bg-porcelain">
+              {image && <img src={image.src} alt={image.alt} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
+              <div class="p-6">
+                <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
+                <p class="mt-6 font-serif text-2xl leading-tight text-midnight">{step}</p>
+              </div>
             </li>
-          ))}
+            );
+          })}
         </ol>
       </div>
     </section>
