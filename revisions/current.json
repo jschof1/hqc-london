@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "baseline": "0507d2b82eb881ae25475e937a713d72cece52f9",
-  "request": "Jack, 10 November 2026: record the image-led cards and sections version in the review room (append, same capture method as nov9-illustrative-removed). Version id nov10-image-led, label \"10 Nov: image-led cards and sections\". Source commit 5f65a1cf9fd6b7408ed09f6332cad4541c730586 on client-win/hqc-phase8-nov6-revisions; immutable deployment https://f8132e20.hqc-london.pages.dev. Review candidate, not launched.",
+  "baseline": "258f467274ff9b639a93dc887d2d67aff6c21344",
+  "request": "Jack, 10 November 2026: record the HQC logo on staff and clearer scenes version in the review room (append, same capture method as nov10-image-led). Version id nov10-logo-clarity, label \"10 Nov: HQC logo on staff, clearer scenes\". Source commit e8d68471531d009e851780a3d435c69c4262eb29 on client-win/hqc-phase8-nov6-revisions; immutable deployment https://c76b6daa.hqc-london.pages.dev. Review candidate, not launched.",
   "requirements": [
     {
-      "id": "V8",
-      "text": "Append version \"nov10-image-led\" with exact source commit and immutable deployment, dated 1440/390 captures of the same nine pages as nov9-illustrative-removed (Home, Request a Quote, How We Work, Contact, End of Tenancy, About, Reviews & Case Studies, Privacy Policy, Terms), Jack summary, plain-English change notes, provenance and the carried-forward outstanding items. defaultAfter points to the newest version; earlier versions, captures, notes, page list, photo inventory, choices and comments unchanged."
+      "id": "V10",
+      "text": "Append version \"nov10-logo-clarity\" with exact source commit and immutable deployment, dated 1440/390 captures of the same nine pages as nov10-image-led (Home, Request a Quote, How We Work, Contact, End of Tenancy, About, Reviews & Case Studies, Privacy Policy, Terms), Jack summary, plain-English change notes, provenance and the carried-forward outstanding items. defaultAfter points to the newest version; earlier versions, captures, notes, page list, photo inventory, choices and comments unchanged."
     },
     {
-      "id": "V9",
+      "id": "V11",
       "text": "Record capture evidence; deploy only the review Worker with --keep-vars after a private backup and rollback record; read back the hosted room."
     }
   ],
@@ -16,147 +16,147 @@
     {
       "path": "revisions/current.json",
       "requirements": [
-        "V9"
+        "V11"
       ],
       "allowDelete": false
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261110-image-led.json",
+      "path": "tools/photo-review/evidence/version-captures-20261110-logo-clarity.json",
       "requirements": [
-        "V9"
+        "V11"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-home-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-home-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-home-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-quote-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-quote-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-how-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-how-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-how-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-how-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-contact-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-contact-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-contact-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-contact-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-tenancy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-tenancy-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-tenancy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-tenancy-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-about-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-about-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-about-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-about-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-reviews-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-reviews-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-reviews-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-reviews-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-privacy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-privacy-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-privacy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-privacy-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-terms-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-terms-desktop.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov10-image-led-terms-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov10-logo-clarity-terms-mobile.jpg",
       "requirements": [
-        "V8"
+        "V10"
       ],
       "allowDelete": false
     }
