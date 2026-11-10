@@ -249,8 +249,14 @@ function initDock() {
     let changed = false;
     for (const el of blockers) {
       if (el.dataset.dockHide !== 'after') continue;
-      const past = el.getBoundingClientRect().top < 0;
-      if (past && !state.blocked.has(el)) { state.blocked.add(el); changed = true; }
+      // Reconcile in both directions: blocked while visible or above, released once fully below.
+      const rect = el.getBoundingClientRect();
+      const block = rect.top < innerHeight && (rect.top < 0 || rect.bottom > 0);
+      if (block !== state.blocked.has(el)) {
+        if (block) state.blocked.add(el);
+        else state.blocked.delete(el);
+        changed = true;
+      }
     }
     if (changed) render();
   }, { passive: true });
