@@ -7,7 +7,7 @@ import ClientEvidence from './ClientEvidence.astro';
 import { closingCtas, controlledCtaHref } from '../data/controlled-cta-links';
 import { sectionImagery } from '../data/section-imagery';
 import { outcomePages } from '../data/outcome-pages';
-import { cardImage, outcomeCardImagery, relatedRouteImagery, type CardImage } from '../data/card-imagery';
+import { cardImage, destinationThumbnails, outcomeCardImagery, relatedRouteImagery, type CardImage } from '../data/card-imagery';
 
 interface Props {
   page: OutcomePageData;
@@ -79,10 +79,18 @@ const renderedOutcomeSlugs = outcomePages.map((entry) => entry.slug).filter((slu
 const relatedImages: CardImage[] = page.related.map((link) => {
   const slug = link.href.replace(/^\/|\/$/g, '');
   const destination = renderedOutcomeSlugs.includes(slug) ? getPageVisual(slug) : undefined;
-  const hero = destination ? { src: destination.hero, alt: destination.heroAlt } : undefined;
+  // Review B3: only a light WebP hero is used as a thumbnail (its 800px variant when one exists).
+  const hero = destination && destination.hero.endsWith('.webp')
+    ? { src: destination.hero.replace(/-1600\.webp$/, '-800.webp'), alt: destination.heroAlt }
+    : undefined;
+  const fallbacks = [
+    cardImagery?.related?.[link.href],
+    ...(destinationThumbnails[slug] ?? []),
+    relatedRouteImagery[link.href]
+  ].map((id) => cardImage(id)).filter((image): image is CardImage => Boolean(image));
   const chosen = hero && !pageImageKeys.has(imageKey(hero.src))
     ? hero
-    : cardImage(cardImagery?.related?.[link.href] ?? relatedRouteImagery[link.href]);
+    : fallbacks.find((image) => !pageImageKeys.has(imageKey(image.src))) ?? fallbacks[0];
   if (!chosen) throw new Error(`No related-route image for ${link.href} on ${page.slug}`);
   if (pageImageKeys.has(imageKey(chosen.src))) throw new Error(`Related-route image ${chosen.src} repeats on ${page.slug}`);
   pageImageKeys.add(imageKey(chosen.src));
@@ -189,7 +197,7 @@ const enquiryType = page.assessment
           return (
           <section class:list={[
             'border-b border-midnight/10 pb-12 last:border-b-0 last:pb-0',
-            image ? ['grid gap-7 lg:items-start lg:gap-12 xl:gap-16', imageLeft ? 'lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]' : 'lg:grid-cols-[minmax(0,1fr)_minmax(0,20rem)] xl:grid-cols-[minmax(0,1fr)_minmax(0,26rem)]'] : 'max-w-[57rem]'
+            image ? ['grid gap-7 lg:items-start lg:gap-12 xl:gap-16', imageLeft ? 'lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]' : 'lg:grid-cols-[minmax(0,1fr)_minmax(0,20rem)] xl:grid-cols-[minmax(0,1fr)_minmax(0,26rem)]'] : 'mx-auto max-w-[57rem]'
           ]}>
             {image && (
               <figure class:list={['order-first overflow-hidden rounded-2xl bg-midnight lg:sticky lg:top-28', imageLeft ? 'lg:order-first' : 'lg:order-last']} data-card-imagery="section">

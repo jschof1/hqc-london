@@ -37,7 +37,7 @@ export const cardLibrary = {
   'c-floor-scrubber': nov10('c-floor-scrubber', 'Cleaner in a teal uniform using a floor scrubber across an office lobby.'),
   'c-waste': nov10('c-waste', 'Cleaner in a teal uniform emptying office recycling bins into a sack.'),
   'c-touchpoints': nov10('c-touchpoints', 'Gloved hand wiping a stainless steel lift call button panel.'),
-  'c-after-hours': nov10('c-after-hours', 'Empty office at dusk with a cleaning trolley in the aisle and city lights outside.'),
+  'c-after-hours': nov10('c-after-hours', 'Office at dusk with a cleaning trolley in the aisle, a cleaner partly in view and city lights outside.'),
   'c-reception': nov10('c-reception', 'Office reception with glass security gates and a key fob on the desk.'),
   'c-meeting-reset': nov10('c-meeting-reset', 'Gloved hand wiping a long meeting room table with a city view.'),
   'c-high-level': nov10('c-high-level', 'Cleaner in a teal uniform on a step ladder dusting a pendant light in an office.'),
@@ -110,6 +110,33 @@ export const relatedRouteImagery: Record<string, CardImageId> = {
   '/terms-and-conditions/': 'g-scope-plan'
 };
 
+// Related-route thumbnails (review B3): a destination's hero is used only when it is a light WebP;
+// otherwise the first of these candidates that is not already on the page.
+export const destinationThumbnails: Record<string, CardImageId[]> = {
+  'property-facilities-cleaning-london': ['p-lobby', 'p-mansion-blocks', 'p-corridor', 'p-trades', 'p-report-photo', 'p-signoff', 'p-lift', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'communal-area-cleaning-london': ['p-stairwell', 'p-lift', 'p-bin-store', 'p-corridor', 'p-trades', 'p-report-photo', 'p-signoff', 'p-mansion-blocks', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'estate-letting-agent-cleaning-london': ['r-viewing-ready', 'p-handover-keys', 'r-front-door-keys', 'r-skirting', 'r-sofa-vacuum', 'r-pets-home', 'r-bathroom-reset', 'r-hallway-floor', 'r-bed-made', 'r-kitchen-wipe', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'move-in-void-property-cleaning-london': ['p-void-flat', 'r-empty-flat', 'p-snagging', 'p-corridor', 'p-trades', 'p-report-photo', 'p-signoff', 'p-lift', 'p-mansion-blocks', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'end-of-tenancy-cleaning-london': ['r-oven-inside', 'r-cupboard-inside', 'r-inventory', 'r-skirting', 'r-sofa-vacuum', 'r-pets-home', 'r-bathroom-reset', 'r-hallway-floor', 'r-bed-made', 'r-viewing-ready', 'r-kitchen-wipe', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'post-construction-cleaning-london': ['p-build-dust', 'p-film-peel', 'p-high-windows', 'p-corridor', 'p-trades', 'p-report-photo', 'p-signoff', 'p-lift', 'p-mansion-blocks', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'portfolio-cleaning-support-london': ['p-portfolio-map', 'p-key-hooks', 'p-van-street', 'p-corridor', 'p-trades', 'p-report-photo', 'p-signoff', 'p-lift', 'p-mansion-blocks', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'commercial-cleaning-london': ['c-floor-scrubber', 'c-glass-partition', 'c-after-hours', 'c-supervisor', 'c-waste', 'c-touchpoints', 'c-reception', 'c-staff-kitchen', 'c-meeting-reset', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'office-cleaning-london': ['c-desks', 'c-meeting-reset', 'c-coats-office', 'c-supervisor', 'c-waste', 'c-touchpoints', 'c-reception', 'c-staff-kitchen', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'commercial-deep-cleaning-london': ['c-deep-kitchen', 'c-high-level', 'c-washroom', 'c-supervisor', 'c-waste', 'c-touchpoints', 'c-reception', 'c-staff-kitchen', 'c-meeting-reset', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'home-cleaning-london': ['r-routine-visit', 'r-living-dust', 'r-bed-made', 'r-skirting', 'r-sofa-vacuum', 'r-pets-home', 'r-bathroom-reset', 'r-hallway-floor', 'r-viewing-ready', 'r-kitchen-wipe', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'essential-clean-london': ['r-kitchen-wipe', 'r-bathroom-shine', 'r-checklist-home', 'r-skirting', 'r-sofa-vacuum', 'r-pets-home', 'r-bathroom-reset', 'r-hallway-floor', 'r-bed-made', 'r-viewing-ready', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'deep-cleaning-london': ['r-shower-glass', 'r-oven-inside', 'r-sofa-vacuum', 'r-skirting', 'r-pets-home', 'r-bathroom-reset', 'r-hallway-floor', 'r-bed-made', 'r-viewing-ready', 'r-kitchen-wipe', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'move-in-cleaning-london': ['r-boxes-movein', 'r-fridge', 'r-empty-flat', 'r-hallway-floor', 'r-bed-made', 'r-skirting', 'r-sofa-vacuum', 'r-pets-home', 'r-bathroom-reset', 'r-viewing-ready', 'r-kitchen-wipe', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'complex-property-cleaning-london': ['p-plans', 'p-stone-floor', 'p-signoff', 'p-corridor', 'p-trades', 'p-report-photo', 'p-lift', 'p-mansion-blocks', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'about-high-quality-clean': ['g-delivery', 'g-mobilisation', 'k-supplies', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'g-site-review', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'g-site-review'],
+  'why-choose-hqc': ['g-quality-review', 'g-scope-plan', 'g-site-review', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies'],
+  'how-we-work': ['g-walkthrough', 'g-planner', 'g-service-profile', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'cleaning-prices-london': ['g-scope-plan', 'r-checklist-home', 'g-enquiry', 'g-planner', 'g-phone-desk', 'k-media', 'k-supplies', 'g-site-review', 'g-planner', 'g-phone-desk', 'k-media', 'k-supplies', 'g-site-review'],
+  'reviews-case-studies': ['g-phone-desk', 'k-media', 'g-enquiry', 'g-planner', 'k-supplies', 'g-site-review', 'g-planner', 'k-supplies', 'g-site-review'],
+  'areas-we-cover': ['p-postcode', 'p-van-street', 'p-mansion-blocks', 'p-corridor', 'p-trades', 'p-report-photo', 'p-signoff', 'p-lift', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review'],
+  'cleaning-services-east-london': ['p-mansion-blocks', 'p-van-street', 'p-postcode', 'p-corridor', 'p-trades', 'p-report-photo', 'p-signoff', 'p-lift', 'g-planner', 'g-phone-desk', 'k-media', 'g-enquiry', 'k-supplies', 'g-site-review']
+};
+
 // reviews-case-studies is deliberately absent: its outcome, scope and section copy sits beside
 // evidence wording, so it stays text-only apart from the related-route thumbnails.
 export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
@@ -147,7 +174,8 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'Access and Communication Matter as Much as the Clean': 'r-front-door-keys',
       'For Repeated Instructions': 'p-portfolio-map',
       'End of Tenancy Remains a Separate Service': 'r-cupboard-inside',
-      'Tell Us How Your Agency Works': 'p-corridor'
+      'Tell Us How Your Agency Works': 'p-corridor',
+      'Defined Scope Before Attendance': 'g-scope-plan'
     },
     related: { '/move-in-void-property-cleaning-london/': 'r-boxes-movein', '/end-of-tenancy-cleaning-london/': 'r-skirting' }
   },
@@ -159,7 +187,8 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'When a Void Property May Need More Than Routine Cleaning': 'r-shower-glass',
       'Void Property Cleaning Is Not the Same as Private Move-In Reset™': 'r-boxes-movein',
       'Access Is Often Easier, but Coordination Still Matters': 'p-key-hooks',
-      'If Works Have Recently Taken Place': 'p-build-dust'
+      'If Works Have Recently Taken Place': 'p-build-dust',
+      'For Repeated Void Instructions': 'p-portfolio-map'
     }
   },
   'end-of-tenancy-cleaning-london': {
@@ -224,7 +253,8 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'Commercial Deep Cleaning When Routine Maintenance Is Not Enough': 'c-deep-kitchen',
       'Clear Scope. Labour-Based Quotations. Careful Delivery.': 'c-glass-partition',
       'Changing Cleaning Provider?': 'g-mobilisation',
-      'Tell Us About Your Workplace': 'c-reception'
+      'Tell Us About Your Workplace': 'c-reception',
+      'Who We Work With': 'g-delivery'
     },
     related: { '/commercial-cleaning-london/': 'c-floor-scrubber', '/how-we-work/': 'g-walkthrough' }
   },
@@ -236,7 +266,8 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'What Commercial Deep Cleaning May Cover': 'c-deep-kitchen',
       'What It Does Not Automatically Include': 'c-washroom',
       'Commercial Deep Cleaning vs Post-Construction™': 'p-build-dust',
-      'Commercial Deep Cleaning vs Routine Office Cleaning': 'c-desks'
+      'Commercial Deep Cleaning vs Routine Office Cleaning': 'c-desks',
+      'Restore the Site Before Returning to Maintenance': 'c-touchpoints'
     },
     related: { '/commercial-cleaning-london/': 'c-glass-partition' }
   },
@@ -269,7 +300,9 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
     sections: {
       'What Deep Clean™ Does Not Automatically Include': 'r-sofa-vacuum',
       'We Assess the Property Before Confirming the Price': 'g-site-review',
-      'Photos and Video Help Us Quote More Accurately': 'g-assessment'
+      'Photos and Video Help Us Quote More Accurately': 'g-assessment',
+      'Restore First. Maintain Afterwards.': 'r-living-dust',
+      'After the Deep Clean™': 'r-routine-visit'
     }
   },
   'move-in-cleaning-london': {
@@ -280,7 +313,8 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'What We Need to Know': 'g-enquiry',
       'What Move-In Reset™ May Include': 'r-fridge',
       'Move-In Reset™ Is Different from End of Tenancy™': 'r-inventory',
-      'What Happens Next': 'r-bed-made'
+      'What Happens Next': 'r-bed-made',
+      'If Building Work Has Just Finished': 'p-build-dust'
     }
   },
   'complex-property-cleaning-london': {
@@ -316,7 +350,11 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'The Service Matches the Need': 'r-routine-visit',
       'The Labour Is Considered Properly': 'g-mobilisation',
       'We Protect Service Boundaries': 'p-stone-floor',
-      'Professional Controls Behind the Service': 'c-supervisor'
+      'Professional Controls Behind the Service': 'c-supervisor',
+      'Complex Work Is Assessed': 'g-assessment',
+      'Specialists Are Used Where Necessary': 'p-high-windows',
+      'Quality Is Connected to the Agreed Outcome': 'g-quality-review',
+      'Cleaning Defined by the Outcome': 'r-living-dust'
     }
   },
   'how-we-work': {
@@ -347,7 +385,8 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
     scope: ['p-mansion-blocks', 'r-hallway-floor', 'r-front-door-keys', 'n6-property-handover'],
     sections: {
       'Selected Surrey Coverage': 'r-routine-visit',
-      'Not Every Service Has the Same Coverage': 'p-lobby'
+      'Not Every Service Has the Same Coverage': 'p-lobby',
+      'East London': 'c-coats-office'
     }
   },
   'cleaning-services-east-london': {
@@ -358,7 +397,9 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'Property & Facilities Cleaning in East London': 'p-corridor',
       'Workplace and Commercial Cleaning': 'c-glass-partition',
       'Shoreditch and Spitalfields': 'c-coats-office',
-      'Canary Wharf': 'c-after-hours'
+      'Canary Wharf': 'c-after-hours',
+      'Whitechapel and Limehouse': 'p-mansion-blocks',
+      'Stratford': 'p-lift'
     }
   }
 };
