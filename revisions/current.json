@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "baseline": "258f467274ff9b639a93dc887d2d67aff6c21344",
+  "baseline": "a5f80f99f1ea0273f71b172503eaf6514ba073d1",
   "request": "Jack, 10 November 2026: record the HQC logo on staff and clearer scenes version in the review room (append, same capture method as nov10-image-led). Version id nov10-logo-clarity, label \"10 Nov: HQC logo on staff, clearer scenes\". Source commit 3f212dfd5d020df63fc89d9ddf8ddf0369d96a1f on client-win/hqc-phase8-nov6-revisions; immutable deployment https://6b5c2f00.hqc-london.pages.dev. Review candidate, not launched. Amended 10 November 2026: source and deployment updated from e8d6847/c76b6daa to the logo-round fix commit 3f212df and its immutable deployment 6b5c2f00; file scope unchanged.",
   "requirements": [
     {
