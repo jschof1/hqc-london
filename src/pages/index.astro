@@ -219,7 +219,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
                 <p class="section-kicker hm-kicker-line" data-reveal="fade">Cleaning Defined by the Outcome</p>
                 <h2 class:list={['section-title', dark && 'text-white']} data-split>{section.heading}</h2>
                 {section.heading === 'Cleaning Defined by the Outcome' && (
-                  <figure class="mt-8 overflow-hidden rounded-2xl bg-midnight" data-reveal="clip">
+                  <figure class="mt-8 overflow-hidden rounded-2xl bg-midnight" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
                     <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 480px, 100vw" alt={outcomeImage.alt} class="aspect-[16/10] w-full object-cover transition duration-1000 hover:scale-[1.03]" loading="lazy" width="1600" height="1000" />
                   </figure>
                 )}
@@ -343,7 +343,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
 
     <section class="overflow-hidden bg-white">
       <div class="mx-auto grid max-w-[1440px] lg:grid-cols-2">
-        <div class="flex items-center bg-mist px-5 py-12 sm:px-8" data-reveal="clip">
+        <div class="flex items-center bg-mist px-5 py-12 sm:px-8" data-reveal="clip" style="--hm-cover: var(--color-mist)">
           <FounderPortrait />
         </div>
         <div class="flex items-center px-5 py-20 sm:px-8 lg:px-20">

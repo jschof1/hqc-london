@@ -168,7 +168,7 @@ const proofPoints = [
   const previous = document.querySelector<HTMLButtonElement>('[data-trust-prev]');
   const next = document.querySelector<HTMLButtonElement>('[data-trust-next]');
 
-  const scrollMode = (): ScrollBehavior => (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth');
+  const scrollMode = (): ScrollBehavior => (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth');
 
   const scrollRail = (direction: 1 | -1) => {
     if (!rail) return;

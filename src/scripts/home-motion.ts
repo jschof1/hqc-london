@@ -12,8 +12,6 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 const motionOn = () => root.classList.contains('hqc-motion') && !reduceMotion.matches;
 
-window.__hqcMotion = true;
-
 // Split display headings into masked words. Text nodes are wrapped in place, so textContent,
 // element order and nested emphasis stay exactly as authored. The heading keeps its authored text
 // as its accessible name, so screen readers do not stop on each word.
@@ -63,7 +61,9 @@ function reveal(el: Element) {
 function initReveals() {
   document.querySelectorAll<HTMLElement>('[data-split]').forEach(splitWords);
   document.querySelectorAll<HTMLElement>('[data-stagger]').forEach((group) => {
-    const step = Number(group.dataset.stagger) || 80;
+    const count = group.children.length;
+    // Cap a group's total stagger at 250ms so late items never trail a quick scroll.
+    const step = Math.min(Number(group.dataset.stagger) || 80, count > 1 ? 250 / (count - 1) : 0);
     const startAt = Number(group.dataset.staggerStart) || 0;
     Array.from(group.children).forEach((child, i) => {
       (child as HTMLElement).style.setProperty('--d', `${startAt + i * step}ms`);
@@ -134,7 +134,7 @@ function initScrollLinked() {
       const steps = Array.from(el.querySelectorAll<HTMLElement>('[data-step]'));
       let current = -1;
       steps.forEach((step, i) => {
-        const active = p >= (i + 0.35) / steps.length;
+        const active = p >= i / steps.length; // step 01 leads from the first frame
         step.classList.toggle('is-active', active);
         if (active) current = i;
       });
@@ -206,7 +206,7 @@ function initDock() {
   const blockers = Array.from(document.querySelectorAll<HTMLElement>('[data-dock-hide]'));
   const state = { heroActionsHidden: false, blocked: new Set<Element>() };
   const overlays = ['#conversion-prompt', '#hqc-cookie-banner'];
-  const desktop = matchMedia('(min-width: 1024px)');
+  const desktop = matchMedia('(min-width: 1280px)'); // tablets and small laptops keep the dock
 
   const overlayOpen = () => overlays.some((selector) => {
     const el = document.querySelector<HTMLElement>(selector);
@@ -222,10 +222,11 @@ function initDock() {
     dock.setAttribute('aria-hidden', String(!show));
   };
 
+  // A sliver of the hero buttons is not "in view": treat them as hidden below 60% visibility.
   new IntersectionObserver(([entry]) => {
-    state.heroActionsHidden = !entry.isIntersecting;
+    state.heroActionsHidden = entry.intersectionRatio < 0.6;
     render();
-  }).observe(heroActions);
+  }, { threshold: [0, 0.6, 1] }).observe(heroActions);
 
   const blockIo = new IntersectionObserver((entries) => {
     for (const entry of entries) {
@@ -243,11 +244,28 @@ function initDock() {
     if (el) mo.observe(el, { attributes: true, attributeFilter: ['class', 'hidden', 'style'] });
   });
   desktop.addEventListener('change', render);
+  // Jumps and restored scroll positions skip observer transitions: re-check "after" blockers on scroll.
+  addEventListener('scroll', () => {
+    let changed = false;
+    for (const el of blockers) {
+      if (el.dataset.dockHide !== 'after') continue;
+      const past = el.getBoundingClientRect().top < 0;
+      if (past && !state.blocked.has(el)) { state.blocked.add(el); changed = true; }
+    }
+    if (changed) render();
+  }, { passive: true });
   render();
 }
 
 function start() {
-  if (motionOn()) initReveals();
+  try {
+    if (motionOn()) initReveals();
+  } catch (error) {
+    root.classList.remove('hqc-motion'); // never leave content hidden
+    console.error(error);
+  } finally {
+    window.__hqcMotion = true;
+  }
   initAmbient();
   initScrollLinked();
   initPointer();
