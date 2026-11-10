@@ -1,246 +1,33 @@
 {
   "schemaVersion": 1,
-  "baseline": "e8d68471531d009e851780a3d435c69c4262eb29",
-  "request": "Pedro via Jack, 10 November 2026 (native thread): use HQC's new logo (the logo kit made for Pedro, 8 Oct 2026) wherever an image shows a staff member doing the work; make about five images clearer about the service or process. Keep it quick; do not change many images. Amendment after independent review of e8d6847 (FAIL: B1 unbranded staff, B2 unrequested van logo, B3 reframed 6 Nov images).",
+  "baseline": "8f5331b9aeba857974408ace710fa71335ee9f59",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met.",
   "requirements": [
-    {
-      "id": "M0",
-      "text": "Planning amendment: fix the independent-review blockers on the logo round; requirements L1 and L2 stay in force."
-    },
-    {
-      "id": "F1",
-      "text": "B1: add the gold HQC monogram to the visible uniform (chest, back or sleeve) in the remaining generated images where a uniformed torso is visible (r-kitchen-wipe, p-signoff, p-plans, p-lift, r-sofa-vacuum, p-bin-store, c-washroom, g-quality-review, p-portfolio-map, p-key-hooks, r-shower-glass, r-oven-inside, g-scope-plan, p-postcode, p-report-photo, g-service-profile), and to the two unbranded cleaners in g-planner; scene and crop otherwise unchanged. Arm-only fragments stay exempt."
-    },
-    {
-      "id": "F2",
-      "text": "B2: p-van-street keeps the uniform logo only; the van returns to a plain, unbranded panel."
-    },
-    {
-      "id": "F3",
-      "text": "B3: the 6 Nov images complex-a, complex-b and scope-and-planning keep their original pixels and framing; the monogram is composited onto the uniform only, at both sizes."
-    },
-    {
-      "id": "R4",
-      "text": "Record the resulting version in the review room (append) and in revisions/versions.json; full npm run check:revision passes."
-    }
+    { "id": "M1", "text": "Planning: freeze this scope on the nov10-logo-clarity line; earlier accepted Phase 8 requirements (logo round L1/L2, F1-F3, copy restoration, imagery) stay in force." },
+    { "id": "D1", "text": "Homepage only: significantly improve presentation, layout rhythm and motion design (entrance choreography, scroll-linked motion, interactive states) so the page reads as a guided journey." },
+    { "id": "D2", "text": "Raise conversion potential: clearer CTA hierarchy, persistent access to the existing primary actions, a stronger service-selector interaction and less friction, reusing only existing on-page CTA labels." },
+    { "id": "D3", "text": "Preserve every word of homepage copy (visible text, alt text, aria labels, title and meta), its order, every link destination, data-track attribute, selector routing and conversion event. A mechanical text comparison against the baseline must show no changed, removed or reordered copy." },
+    { "id": "D4", "text": "Honour prefers-reduced-motion, keep all content readable without JavaScript, avoid layout shift and LCP delay, keep keyboard and screen-reader behaviour, and add no new runtime dependencies." },
+    { "id": "D5", "text": "Leave every other page, shared component, form, CRM routing, tracking, schema, redirect, every image and the Phase 8 production hold unchanged." },
+    { "id": "R6", "text": "Record the resulting version in revisions/versions.json (and the review room) before handover; full npm run check:revision passes." }
   ],
   "allowedFiles": [
-    {
-      "path": "revisions/current.json",
-      "requirements": [
-        "M0"
-      ],
-      "allowDelete": false,
-      "reason": "Planning-only scope amendment."
-    },
-    {
-      "path": "revisions/versions.json",
-      "requirements": [
-        "R4"
-      ],
-      "allowDelete": false,
-      "reason": "Register the new reviewed version."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-kitchen-wipe.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-signoff.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-plans.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-lift.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-sofa-vacuum.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-bin-store.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-washroom.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-quality-review.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-portfolio-map.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-key-hooks.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-shower-glass.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-oven-inside.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-scope-plan.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-postcode.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-report-photo.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-service-profile.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-planner.webp",
-      "requirements": [
-        "F1"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on visible uniform."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-van-street.webp",
-      "requirements": [
-        "F2"
-      ],
-      "allowDelete": false,
-      "reason": "Remove unrequested van logo."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-a-800.webp",
-      "requirements": [
-        "F3"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on original framing."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-a-1600.webp",
-      "requirements": [
-        "F3"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on original framing."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-b-800.webp",
-      "requirements": [
-        "F3"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on original framing."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-b-1600.webp",
-      "requirements": [
-        "F3"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on original framing."
-    },
-    {
-      "path": "public/images/phase8-nov6/scope-and-planning-800.webp",
-      "requirements": [
-        "F3"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on original framing."
-    },
-    {
-      "path": "public/images/phase8-nov6/scope-and-planning-1600.webp",
-      "requirements": [
-        "F3"
-      ],
-      "allowDelete": false,
-      "reason": "Logo on original framing."
-    }
+    { "path": "revisions/current.json", "requirements": ["M1"], "allowDelete": false, "reason": "Planning-only scope freeze." },
+    { "path": "revisions/versions.json", "requirements": ["R6"], "allowDelete": false, "reason": "Register the reviewed version." },
+    { "path": "src/pages/index.astro", "requirements": ["D1", "D2", "D3", "D4"], "allowDelete": false, "reason": "Homepage presentation, motion hooks and sticky CTA using existing labels." },
+    { "path": "src/components/ServiceSelector.astro", "requirements": ["D1", "D2", "D3", "D4"], "allowDelete": false, "reason": "Homepage-only component: selection state and animated result panel; results copy untouched." },
+    { "path": "src/components/TrustRail.astro", "requirements": ["D1", "D3", "D4"], "allowDelete": false, "reason": "Homepage-only component: rail progress, drag and reveal." },
+    { "path": "src/styles/home-motion.css", "requirements": ["D1", "D2", "D4"], "allowDelete": false, "reason": "New homepage-only stylesheet." },
+    { "path": "src/scripts/home-motion.ts", "requirements": ["D1", "D2", "D4"], "allowDelete": false, "reason": "New dependency-free homepage motion engine." }
   ],
   "preserve": [
-    "All copy, layout, card and section assignments, CTAs, links, forms, tracking, schema and routing unchanged; only the listed image files and five alt texts change.",
-    "No generated image is placed in evidence, review or client-count contexts; generated images are not labelled as HQC jobs; confirmedHqcPhotoIds stays empty.",
-    "Everything accepted in earlier packets stays in force; Phase 8 production hold; no merge to main."
+    "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events.",
+    "Shared components used elsewhere (Header, Footer, Layout, ConversionPrompt, CookiePreferences, ClientEvidence, FounderPortrait, OutcomePage) and global.css.",
+    "Every image file and image choice, including the nov10 logo-clarity images; the Phase 8 production hold."
   ],
   "verification": [
-    "check:revision:scope; build:review; visual check of every edited image (logo legible as HQC, no garbled text, scene otherwise unchanged, no identifiable faces); visible-text diff versus the previous build is empty.",
-    "Independent Codex check of the image set and diff; review-room version appended and read back; full npm run check:revision passes."
+    "Mechanical text, attribute and link comparison of rendered homepage HTML against 6b5c2f00 / 8f5331b.",
+    "Desktop and mobile browser checks of every homepage section, the service selector journey, reduced-motion and no-JS rendering, and console health.",
+    "Council review by three independent model reviewers (Claude, GPT, DeepSeek) with scores, repeated after fixes."
   ]
 }
