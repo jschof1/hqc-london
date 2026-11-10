@@ -34,13 +34,13 @@ const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
 // Presentation only (10 Nov 2026): approved blocks render in their authored order. The layout
 // groups each h3 with the blocks that follow it, so cards hold the same copy in the same sequence.
 type Block = (typeof homeCopy.sections)[number]['blocks'][number];
-type Chapter = { layout: 'split' | 'cards' | 'grid'; list: 'tiles' | 'chips' | 'checks'; tone: 'light' | 'pale' | 'dark' };
+type Chapter = { layout: 'split' | 'cards' | 'grid'; list: 'checks' | 'panel'; tone: 'light' | 'pale' | 'dark' };
 const chapters: Record<string, Chapter> = {
-  'Cleaning Defined by the Outcome': { layout: 'split', list: 'tiles', tone: 'pale' },
-  'Cleaning Services for London Homes': { layout: 'cards', list: 'tiles', tone: 'dark' },
-  'One Cleaning Partner Across Properties, Projects and Portfolios': { layout: 'split', list: 'chips', tone: 'light' },
-  'Cleaning Programmes Built Around the Workplace': { layout: 'split', list: 'checks', tone: 'pale' },
-  'Why Clients Choose HQC When the Result Matters': { layout: 'grid', list: 'tiles', tone: 'light' }
+  'Cleaning Defined by the Outcome': { layout: 'split', list: 'panel', tone: 'pale' },
+  'Cleaning Services for London Homes': { layout: 'cards', list: 'checks', tone: 'dark' },
+  'One Cleaning Partner Across Properties, Projects and Portfolios': { layout: 'split', list: 'checks', tone: 'light' },
+  'Cleaning Programmes Built Around the Workplace': { layout: 'split', list: 'panel', tone: 'pale' },
+  'Why Clients Choose HQC When the Result Matters': { layout: 'grid', list: 'checks', tone: 'light' }
 };
 const groupBlocks = (blocks: Block[], trailingCtasOutside: boolean) => {
   const intro: Block[] = [];
@@ -70,26 +70,26 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
       if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       root.classList.add('hqc-motion');
       // Fail open: if the motion module never starts, show everything.
-      setTimeout(function () { if (!window.__hqcMotion) root.classList.remove('hqc-motion'); }, 2500);
+      setTimeout(function () { if (!window.__hqcMotion) root.classList.remove('hqc-motion'); }, 1200);
     })();
   </script>
   <Header />
   <div class="hm-progress" data-page-progress aria-hidden="true"></div>
 
   <main class="bg-porcelain pt-20">
-    <section class="hm-hero hm-spotlight relative overflow-hidden bg-midnight text-white" data-hero data-spotlight>
+    <section class="hm-hero hm-spotlight relative overflow-hidden bg-midnight text-white" data-hero data-spotlight data-ambient>
       <div class="hm-hero-grid" aria-hidden="true"></div>
       <div class="hm-orb hm-orb-a" aria-hidden="true"></div>
       <div class="hm-orb hm-orb-b" aria-hidden="true"></div>
-      <div class="relative mx-auto grid min-h-[780px] max-w-[1440px] items-center gap-12 px-5 py-14 sm:px-8 lg:min-h-[min(780px,calc(100svh-5rem))] lg:grid-cols-[.92fr_1.08fr] lg:px-14 lg:py-10">
-        <div class="relative z-10 py-8">
-          <p class="section-kicker hm-kicker-line text-copper" data-reveal="fade">Cleaning Defined by the Outcome</p>
-          <h1 class="hm-hero-h1 mt-5 max-w-3xl font-serif text-[clamp(3.8rem,7vw,7.2rem)] font-medium leading-[.88] tracking-[-.045em]" data-split>
+      <div class="relative mx-auto grid max-w-[1440px] items-center gap-12 px-5 pb-14 pt-8 sm:px-8 sm:py-14 lg:min-h-[min(780px,calc(100svh-5rem))] lg:grid-cols-[.92fr_1.08fr] lg:px-14 lg:py-10">
+        <div class="relative z-10 lg:py-8">
+          <p class="section-kicker hm-kicker-line text-copper" data-intro="fade">Cleaning Defined by the Outcome</p>
+          <h1 class="hm-hero-h1 mt-4 max-w-3xl font-serif text-[clamp(3.1rem,7vw,7.2rem)] sm:mt-5 font-medium leading-[.88] tracking-[-.045em]" data-intro="title">
             The Right Cleaning Service<br /><em class="font-medium text-copper">for the Result You Need</em>
           </h1>
-          <ul class="mt-6 grid grid-cols-3 gap-2 lg:hidden" aria-label="Our three core services" data-stagger="90" data-stagger-start="420">
-            {offerings.map((offering) => (
-              <li>
+          <ul class="mt-5 grid grid-cols-3 gap-2 lg:hidden" aria-label="Our three core services">
+            {offerings.map((offering, index) => (
+              <li data-intro style={`--d: ${180 + index * 60}ms`}>
                 <a href={offering.href} class="group block text-white no-underline">
                   <span class="block overflow-hidden rounded-lg">
                     <img src={offering.image.src} srcset={offering.image.srcset} sizes="33vw" alt={offering.image.alt} class="aspect-[4/3] w-full rounded-lg object-cover object-[70%_50%] transition duration-700 group-active:scale-95" width="800" height="600" fetchpriority="high" />
@@ -99,20 +99,20 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
               </li>
             ))}
           </ul>
-          <p class="mt-7 max-w-xl text-lg leading-8 text-white/75 md:text-xl" data-reveal style="--d: 550ms">From recurring home cleaning to workplace programmes, property handovers and complex projects, High Quality Clean matches the service, labour and delivery approach to the condition of the space and the outcome required.</p>
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-hero-actions data-reveal style="--d: 700ms">
+          <p class="mt-5 max-w-xl text-base leading-7 text-white/75 sm:mt-7 sm:text-lg sm:leading-8 md:text-xl" data-intro style="--d: 120ms">From recurring home cleaning to workplace programmes, property handovers and complex projects, High Quality Clean matches the service, labour and delivery approach to the condition of the space and the outcome required.</p>
+          <div class="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row" data-hero-actions data-intro style="--d: 150ms">
             <a href="#find-my-service" class="button button-primary hm-shine shadow-[0_18px_45px_-15px_rgba(209,164,103,.7)]" data-track="find_my_service" data-magnetic>Find my service <span class="hm-arrow-nudge" aria-hidden="true">↓</span></a>
             <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote" data-magnetic>Request a Cleaning Quote</a>
           </div>
-          <div class="hm-trust-row mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-7 text-xs font-semibold uppercase tracking-[.14em] text-white/55" data-stagger="110" data-stagger-start="850">
+          <div class="hm-trust-row mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-7 text-xs font-semibold uppercase tracking-[.14em] text-white/55" data-intro="fade" style="--d: 350ms">
             <span>London-based</span><span>Outcome-led</span><span>Founder-led</span>
           </div>
         </div>
 
         <div class="relative z-10 hidden lg:block">
-          <ul class="grid gap-4" aria-label="Our three core services" data-stagger="130" data-stagger-start="250" data-stagger-type="right">
-            {offerings.map((offering) => (
-              <li>
+          <ul class="grid gap-4" aria-label="Our three core services">
+            {offerings.map((offering, index) => (
+              <li data-intro="right" style={`--d: ${100 + index * 90}ms`}>
                 <a href={offering.href} class="hm-offer-card group grid grid-cols-[42%_1fr] overflow-hidden rounded-2xl border border-white/15 bg-white/[.05] text-white no-underline backdrop-blur-sm hover:-translate-y-0.5 hover:border-copper sm:grid-cols-[1.15fr_1fr]" data-tilt>
                   <span class="block overflow-hidden">
                     <img src={offering.image.src} srcset={offering.image.srcset} sizes="(min-width: 1024px) 380px, 42vw" alt={offering.image.alt} class="hm-kenburns aspect-[4/3] h-full w-full object-cover object-[70%_50%] sm:aspect-[2/1]" width="800" height="400" fetchpriority="high" />
@@ -188,7 +188,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
       </div>
     </section>
 
-    <div data-dock-hide>
+    <div data-dock-hide data-ambient>
       <ServiceSelector />
     </div>
 
@@ -202,8 +202,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
         const renderFlow = (blocks: Block[]) => blocks.map((block, index) => {
           const next = blocks[index + 1];
           if (block.kind === 'ul') {
-            const listClass = { tiles: 'hm-tiles', chips: 'hm-chips', checks: 'hm-checks' }[chapter.list];
-            return <ul class:list={[listClass, 'pt-1']} data-stagger={chapter.list === 'chips' ? '70' : '80'} data-stagger-type={chapter.list === 'chips' ? 'pop' : 'up'}>{block.items.map((item) => <li>{item}</li>)}</ul>;
+            return <ul class:list={['hm-checks', chapter.list === 'panel' && 'hm-checks-panel']} data-stagger="45" data-stagger-type="fade">{block.items.map((item) => <li>{item}</li>)}</ul>;
           }
           if (block.kind === 'cta') return <p class="pt-2 text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
           if (block.kind === 'support') return <p class="hm-support" data-reveal="left">{block.text}</p>;
@@ -213,7 +212,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
           return <p data-reveal>{block.text}</p>;
         });
         return (
-          <section class:list={['hm-chapter relative overflow-hidden py-20 md:py-28', toneClass[chapter.tone], dark && 'hm-spotlight isolate']} data-spotlight={dark ? '' : undefined}>
+          <section class:list={['hm-chapter relative overflow-clip py-20 md:py-28', toneClass[chapter.tone], dark && 'hm-spotlight isolate']} data-spotlight={dark ? '' : undefined}>
             {dark && <div class="hm-orb hm-orb-a opacity-60" aria-hidden="true"></div>}
             <div class:list={['relative mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:gap-20 lg:px-14', chapter.layout === 'grid' ? '' : 'lg:grid-cols-[.72fr_1.28fr]']}>
               <div class:list={[chapter.layout === 'grid' ? 'max-w-4xl' : 'hm-chapter-head']}>
@@ -256,8 +255,8 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
       })}
     </div>
 
-    <section class="hm-spotlight relative overflow-hidden bg-midnight py-20 text-white md:py-28" data-spotlight>
-      <div class="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+    <section class="hm-pin hm-spotlight relative overflow-clip bg-midnight py-20 text-white md:py-28" data-spotlight data-pin>
+      <div class="hm-pin-stage relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14" data-pin-stage>
         <div class="grid items-end gap-10 lg:grid-cols-[1fr_.7fr]">
           <div>
             <p class="section-kicker hm-kicker-line text-copper" data-reveal="fade">How HQC works</p>
@@ -265,7 +264,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
           </div>
           <p class="max-w-xl text-lg leading-8 text-white/65" data-reveal style="--d: 200ms">The condition, access, timing and required finish are captured before the work is confirmed. That means the service can be staffed and delivered responsibly.</p>
         </div>
-        <div class="relative mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 lg:grid-cols-5" data-scroll-track data-reveal="scale">
+        <div class="hm-steps relative mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 lg:grid-cols-5" data-scroll-track data-reveal="scale">
           <div class="hm-track-line" aria-hidden="true"></div>
           {[
             ['01', 'Site review', 'Understand the outcome, condition, access and operating constraints.'],
@@ -334,8 +333,8 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
           <h2 class="section-title" data-split>The work should be visible.</h2>
           <p class="mt-7 text-lg leading-8 text-slate" data-reveal>Each quotation starts with the property, workplace or project in front of us. Relevant evidence is added only where it is approved for use and helps explain the required outcome.</p>
           <div class="mt-8 grid grid-cols-2 gap-4 border-y border-midnight/10 py-7" data-stagger="120">
-            <div><strong class="font-serif text-5xl font-medium text-midnight" data-count>1</strong><span class="mt-1 block text-sm text-slate">clear route from requirement to review</span></div>
-            <div><strong class="font-serif text-5xl font-medium text-midnight" data-count>3</strong><span class="mt-1 block text-sm text-slate">clear enquiry routes</span></div>
+            <div><strong class="font-serif text-5xl font-medium text-midnight">1</strong><span class="mt-1 block text-sm text-slate">clear route from requirement to review</span></div>
+            <div><strong class="font-serif text-5xl font-medium text-midnight">3</strong><span class="mt-1 block text-sm text-slate">clear enquiry routes</span></div>
           </div>
           <a href="/reviews-case-studies/" class="hm-cta-link mt-8" data-reveal>View project evidence <span class="hm-cta-chip">→</span></a>
         </div>
@@ -359,7 +358,7 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
       </div>
     </section>
 
-    <section class="relative overflow-hidden bg-copper py-20 text-midnight md:py-28" data-dock-hide="after">
+    <section class="relative overflow-hidden bg-copper py-20 text-midnight md:py-28" data-dock-hide="after" data-ambient>
       <div class="hm-ring -right-20 -top-40 h-96 w-96" aria-hidden="true"></div>
       <div class="hm-ring hm-ring-dash -right-44 -top-64 h-[36rem] w-[36rem]" aria-hidden="true"></div>
       <div class="hm-ring -bottom-56 -left-24 h-[28rem] w-[28rem]" aria-hidden="true"></div>

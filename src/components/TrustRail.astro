@@ -127,8 +127,8 @@ const proofPoints = [
 
   .trust-rail-control:hover { border-color: var(--color-copper); background: var(--color-copper); }
 
-  .trust-rail-control:disabled { opacity: .35; cursor: default; }
-  .trust-rail-control:disabled:hover { border-color: rgb(14 42 49 / .2); background: white; }
+  .trust-rail-control[aria-disabled='true'] { opacity: .35; cursor: default; }
+  .trust-rail-control[aria-disabled='true']:hover { border-color: rgb(14 42 49 / .2); background: white; }
 
   .trust-rail.is-dragging { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
   @media (hover: hover) and (pointer: fine) { .trust-rail { cursor: grab; } }
@@ -167,11 +167,13 @@ const proofPoints = [
   const previous = document.querySelector<HTMLButtonElement>('[data-trust-prev]');
   const next = document.querySelector<HTMLButtonElement>('[data-trust-next]');
 
+  const scrollMode = (): ScrollBehavior => (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth');
+
   const scrollRail = (direction: 1 | -1) => {
     if (!rail) return;
     const firstCard = rail.querySelector<HTMLElement>('.trust-rail-card');
     const distance = firstCard ? firstCard.offsetWidth + 16 : rail.clientWidth * 0.8;
-    rail.scrollBy({ left: distance * direction, behavior: 'smooth' });
+    rail.scrollBy({ left: distance * direction, behavior: scrollMode() });
   };
 
   previous?.addEventListener('click', () => scrollRail(-1));
@@ -185,8 +187,9 @@ const proofPoints = [
     const ratio = max > 0 ? rail.scrollLeft / max : 1;
     const visible = rail.scrollWidth > 0 ? rail.clientWidth / rail.scrollWidth : 1;
     progress?.style.setProperty('--rail', String(Math.min(1, visible + (1 - visible) * ratio)));
-    if (previous) previous.disabled = rail.scrollLeft <= 2;
-    if (next) next.disabled = rail.scrollLeft >= max - 2;
+    // aria-disabled, not disabled: a focused button must keep focus at the end of the rail.
+    previous?.setAttribute('aria-disabled', String(rail.scrollLeft <= 2));
+    next?.setAttribute('aria-disabled', String(rail.scrollLeft >= max - 2));
   };
   rail?.addEventListener('scroll', syncRail, { passive: true });
   addEventListener('resize', syncRail, { passive: true });
@@ -222,7 +225,7 @@ const proofPoints = [
       rail.classList.remove('is-dragging');
       const firstCard = rail.querySelector<HTMLElement>('.trust-rail-card');
       const width = firstCard ? firstCard.offsetWidth + 16 : rail.clientWidth;
-      rail.scrollTo({ left: Math.round(rail.scrollLeft / width) * width, behavior: 'smooth' });
+      rail.scrollTo({ left: Math.round(rail.scrollLeft / width) * width, behavior: scrollMode() });
     };
     rail.addEventListener('pointerup', release);
     rail.addEventListener('pointercancel', release);

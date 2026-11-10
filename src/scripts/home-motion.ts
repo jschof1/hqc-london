@@ -1,6 +1,7 @@
 // Homepage motion engine. Dependency-free and presentation-only: it never changes copy.
 // The inline gate in index.astro adds `hqc-motion` to <html> before first paint when
 // reduced motion is off; without JavaScript, or if this module fails, everything stays visible.
+// The hero intro is pure CSS (data-intro), so the headline and actions never wait for this module.
 
 declare global {
   interface Window { __hqcMotion?: boolean }
@@ -13,11 +14,14 @@ const motionOn = () => root.classList.contains('hqc-motion') && !reduceMotion.ma
 
 window.__hqcMotion = true;
 
-// Split display headings into masked words. Text nodes are wrapped in place, so
-// textContent, element order and nested emphasis stay exactly as authored.
+// Split display headings into masked words. Text nodes are wrapped in place, so textContent,
+// element order and nested emphasis stay exactly as authored. The heading keeps its authored text
+// as its accessible name, so screen readers do not stop on each word.
 function splitWords(el: HTMLElement) {
   if (el.dataset.splitDone) return;
   el.dataset.splitDone = '1';
+  const name = (el.textContent ?? '').replace(/\s+/g, ' ').trim();
+  if (name && !el.hasAttribute('aria-label')) el.setAttribute('aria-label', name);
   let index = 0;
   const walk = (node: Node) => {
     for (const child of Array.from(node.childNodes)) {
@@ -33,6 +37,7 @@ function splitWords(el: HTMLElement) {
           }
           const outer = document.createElement('span');
           outer.className = 'hm-word';
+          outer.setAttribute('aria-hidden', 'true');
           const inner = document.createElement('span');
           inner.className = 'hm-word-inner';
           inner.style.setProperty('--w', String(index++));
@@ -49,6 +54,12 @@ function splitWords(el: HTMLElement) {
   walk(el);
 }
 
+function reveal(el: Element) {
+  el.classList.add('is-in');
+  // Once the masked words have risen, release the mask so italic swashes and descenders show.
+  if (el.hasAttribute('data-split')) setTimeout(() => el.classList.add('is-done'), 1500);
+}
+
 function initReveals() {
   document.querySelectorAll<HTMLElement>('[data-split]').forEach(splitWords);
   document.querySelectorAll<HTMLElement>('[data-stagger]').forEach((group) => {
@@ -60,33 +71,34 @@ function initReveals() {
     });
   });
 
-  const targets = document.querySelectorAll<HTMLElement>('[data-reveal], [data-split]');
+  const options = { rootMargin: '0px 0px -4% 0px', threshold: 0 };
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-in');
+      reveal(entry.target);
       io.unobserve(entry.target);
     }
-  }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
-  targets.forEach((el) => {
-    if (el.closest('[data-hero]')) return; // hero choreography starts immediately
+  }, options);
+  document.querySelectorAll<HTMLElement>('[data-reveal], [data-split]').forEach((el) => {
     if (el.parentElement?.hasAttribute('data-stagger-together')) return; // revealed with the group
     io.observe(el);
   });
   const groupIo = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      Array.from(entry.target.children).forEach((child) => child.classList.add('is-in'));
+      Array.from(entry.target.children).forEach(reveal);
       groupIo.unobserve(entry.target);
     }
-  }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
+  }, options);
   document.querySelectorAll<HTMLElement>('[data-stagger-together]').forEach((group) => groupIo.observe(group));
+}
 
-  // Hero plays on load, without waiting for observers, so first paint is never delayed.
-  requestAnimationFrame(() => {
-    document.querySelectorAll<HTMLElement>('[data-hero] [data-reveal], [data-hero] [data-split]').forEach((el) => el.classList.add('is-in'));
-    document.querySelector('[data-hero]')?.classList.add('is-in');
+// Pause looping ambient animation while its section is off screen.
+function initAmbient() {
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) entry.target.classList.toggle('is-paused', !entry.isIntersecting);
   });
+  document.querySelectorAll<HTMLElement>('[data-ambient]').forEach((el) => io.observe(el));
 }
 
 // Scroll-linked values: one rAF loop writes CSS custom properties; CSS does the drawing.
@@ -103,15 +115,30 @@ function initScrollLinked() {
     if (progressBar) progressBar.style.transform = `scaleX(${max > 0 ? Math.min(1, scrollY / max) : 0})`;
 
     for (const el of tracks) {
-      const rect = el.getBoundingClientRect();
-      // 0 when the element's top reaches 85% of the viewport, 1 when its bottom reaches 55%.
-      const start = vh * 0.85;
-      const end = vh * 0.55;
-      const total = rect.height + (start - end);
-      const p = Math.min(1, Math.max(0, (start - rect.top) / total));
+      let p: number;
+      const pin = el.closest<HTMLElement>('[data-pin]');
+      const stage = pin?.querySelector<HTMLElement>('[data-pin-stage]');
+      if (pin && stage && getComputedStyle(stage).position === 'sticky') {
+        // Pinned sequence: progress runs across the extra scroll height of the section.
+        const rect = pin.getBoundingClientRect();
+        const range = Math.max(1, rect.height - stage.offsetHeight);
+        p = Math.min(1, Math.max(0, (80 - rect.top) / range));
+      } else {
+        // 0 when the element's top reaches 85% of the viewport, 1 when its bottom reaches 55%.
+        const rect = el.getBoundingClientRect();
+        const start = vh * 0.85;
+        const end = vh * 0.55;
+        p = Math.min(1, Math.max(0, (start - rect.top) / (rect.height + (start - end))));
+      }
       el.style.setProperty('--p', p.toFixed(4));
-      const steps = el.querySelectorAll<HTMLElement>('[data-step]');
-      steps.forEach((step, i) => step.classList.toggle('is-active', p >= (i + 0.35) / steps.length));
+      const steps = Array.from(el.querySelectorAll<HTMLElement>('[data-step]'));
+      let current = -1;
+      steps.forEach((step, i) => {
+        const active = p >= (i + 0.35) / steps.length;
+        step.classList.toggle('is-active', active);
+        if (active) current = i;
+      });
+      steps.forEach((step, i) => step.classList.toggle('is-current', i === current));
     }
 
     if (!motionOn() || !finePointer.matches) return;
@@ -134,7 +161,7 @@ function initScrollLinked() {
   update();
 }
 
-// Spotlight and magnetic pull, for precise pointers only.
+// Spotlight, magnetic pull and tilt, for precise pointers only.
 function initPointer() {
   if (!finePointer.matches) return;
   document.querySelectorAll<HTMLElement>('[data-spotlight]').forEach((el) => {
@@ -148,10 +175,8 @@ function initPointer() {
   document.querySelectorAll<HTMLElement>('[data-magnetic]').forEach((el) => {
     el.addEventListener('pointermove', (event) => {
       const rect = el.getBoundingClientRect();
-      const x = (event.clientX - rect.left - rect.width / 2) * 0.18;
-      const y = (event.clientY - rect.top - rect.height / 2) * 0.28;
-      el.style.setProperty('--mgx', `${x.toFixed(1)}px`);
-      el.style.setProperty('--mgy', `${y.toFixed(1)}px`);
+      el.style.setProperty('--mgx', `${((event.clientX - rect.left - rect.width / 2) * 0.18).toFixed(1)}px`);
+      el.style.setProperty('--mgy', `${((event.clientY - rect.top - rect.height / 2) * 0.28).toFixed(1)}px`);
     });
     el.addEventListener('pointerleave', () => {
       el.style.setProperty('--mgx', '0px');
@@ -161,10 +186,8 @@ function initPointer() {
   document.querySelectorAll<HTMLElement>('[data-tilt]').forEach((el) => {
     el.addEventListener('pointermove', (event) => {
       const rect = el.getBoundingClientRect();
-      const rx = ((event.clientY - rect.top) / rect.height - 0.5) * -4;
-      const ry = ((event.clientX - rect.left) / rect.width - 0.5) * 5;
-      el.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
-      el.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+      el.style.setProperty('--rx', `${(((event.clientY - rect.top) / rect.height - 0.5) * -4).toFixed(2)}deg`);
+      el.style.setProperty('--ry', `${(((event.clientX - rect.left) / rect.width - 0.5) * 5).toFixed(2)}deg`);
     });
     el.addEventListener('pointerleave', () => {
       el.style.setProperty('--rx', '0deg');
@@ -173,41 +196,17 @@ function initPointer() {
   });
 }
 
-// Count up figures that are already rendered; the final text is the authored text.
-function initCounts() {
-  if (!motionOn()) return;
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      io.unobserve(entry.target);
-      const el = entry.target as HTMLElement;
-      const final = el.textContent ?? '';
-      const target = Number(final);
-      if (!Number.isFinite(target) || target <= 0) continue;
-      const started = performance.now();
-      const duration = 900 + target * 120;
-      const frame = (now: number) => {
-        const t = Math.min(1, (now - started) / duration);
-        const eased = 1 - Math.pow(1 - t, 3);
-        el.textContent = t < 1 ? String(Math.max(0, Math.round(eased * target))) : final;
-        if (t < 1) requestAnimationFrame(frame);
-      };
-      el.textContent = '0';
-      requestAnimationFrame(frame);
-    }
-  }, { threshold: 0.6 });
-  document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => io.observe(el));
-}
-
-// Mobile action dock: visible once the hero actions leave view, hidden while the
-// selector or the closing call to action is on screen, or while another bottom layer is open.
+// Mobile action dock: visible whenever the hero actions are out of view (above or, on short
+// phones, below), hidden while the selector or the closing call to action is on screen, after
+// the closing call to action, and while the cookie banner or help prompt is open.
 function initDock() {
   const dock = document.querySelector<HTMLElement>('[data-action-dock]');
   const heroActions = document.querySelector<HTMLElement>('[data-hero-actions]');
   if (!dock || !heroActions) return;
   const blockers = Array.from(document.querySelectorAll<HTMLElement>('[data-dock-hide]'));
-  const state = { pastHero: false, blocked: new Set<Element>() };
+  const state = { heroActionsHidden: false, blocked: new Set<Element>() };
   const overlays = ['#conversion-prompt', '#hqc-cookie-banner'];
+  const desktop = matchMedia('(min-width: 1024px)');
 
   const overlayOpen = () => overlays.some((selector) => {
     const el = document.querySelector<HTMLElement>(selector);
@@ -217,21 +216,19 @@ function initDock() {
   });
 
   const render = () => {
-    const show = state.pastHero && state.blocked.size === 0 && !overlayOpen();
+    const show = !desktop.matches && state.heroActionsHidden && state.blocked.size === 0 && !overlayOpen();
     dock.classList.toggle('is-visible', show);
     dock.toggleAttribute('inert', !show);
     dock.setAttribute('aria-hidden', String(!show));
   };
 
   new IntersectionObserver(([entry]) => {
-    state.pastHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+    state.heroActionsHidden = !entry.isIntersecting;
     render();
   }).observe(heroActions);
 
   const blockIo = new IntersectionObserver((entries) => {
     for (const entry of entries) {
-      // data-dock-hide="after" keeps the dock away once the visitor has scrolled past it
-      // (the closing call to action and footer already carry the same actions).
       const after = (entry.target as HTMLElement).dataset.dockHide === 'after' && entry.boundingClientRect.top < 0;
       if (entry.isIntersecting || after) state.blocked.add(entry.target);
       else state.blocked.delete(entry.target);
@@ -245,14 +242,15 @@ function initDock() {
     const el = document.querySelector(selector);
     if (el) mo.observe(el, { attributes: true, attributeFilter: ['class', 'hidden', 'style'] });
   });
+  desktop.addEventListener('change', render);
   render();
 }
 
 function start() {
   if (motionOn()) initReveals();
+  initAmbient();
   initScrollLinked();
   initPointer();
-  initCounts();
   initDock();
 }
 

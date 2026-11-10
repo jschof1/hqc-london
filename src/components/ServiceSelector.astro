@@ -9,7 +9,7 @@
       <p class="max-w-2xl text-lg leading-8 text-midnight" data-reveal style="--d: 200ms">Choose the situation that best describes what you need.</p>
     </div>
 
-    <div class="hm-choices mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-stagger="55" data-stagger-type="pop">
+    <div class="hm-choices mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-stagger="25" data-stagger-type="quick">
       <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="maintain" aria-pressed="false" aria-controls="selector-result">
         <span class="font-serif text-3xl text-copper-ink">01</span>
         <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Keep my home consistently clean</strong>
@@ -138,7 +138,7 @@
       void resultPanel.offsetWidth;
       resultPanel.classList.add('is-swap');
       button.closest('.hm-choices')?.setAttribute('data-has-choice', '');
-      resultPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      resultPanel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
       window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'service_selector_result', result: key } }));
     });
   });
