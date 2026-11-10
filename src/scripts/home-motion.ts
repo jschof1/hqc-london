@@ -251,7 +251,7 @@ function initDock() {
       if (el.dataset.dockHide !== 'after') continue;
       // Reconcile in both directions: blocked while visible or above, released once fully below.
       const rect = el.getBoundingClientRect();
-      const block = rect.top < innerHeight && (rect.top < 0 || rect.bottom > 0);
+      const block = rect.top < innerHeight;
       if (block !== state.blocked.has(el)) {
         if (block) state.blocked.add(el);
         else state.blocked.delete(el);

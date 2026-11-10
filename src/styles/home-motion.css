@@ -689,3 +689,12 @@ html.hqc-motion [data-parallax] {
   .hm-hero-h1 { font-size: min(5.6vw, 8.6svh); }
   .hm-hero [data-hero-actions] { margin-top: 1.25rem; }
 }
+
+/* Revealed cards keep their hover easing: the reveal transition otherwise owns `transition`
+   on these elements and the lift, border and shadow would snap. */
+.hqc-motion [data-stagger] > :is(.hm-card, .hm-complex-step, .hm-route)[data-reveal] {
+  transition-property: opacity, transform, translate, border-color, background-color, box-shadow;
+  transition-duration: .45s, .55s, .45s, .35s, .35s, .5s;
+  transition-delay: var(--d, 0ms), var(--d, 0ms), 0s, 0s, 0s, 0s;
+  transition-timing-function: var(--hm-ease-soft), var(--hm-ease), var(--hm-ease), ease, ease, ease;
+}
