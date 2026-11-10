@@ -1,35 +1,23 @@
 {
   "schemaVersion": 1,
-  "baseline": "1c4a853da40fe075fe23250303f9717962d7cf2d",
-  "request": "Jack, 10 November 2026 (native thread), following Pedro's 6 Nov meeting ('we need to make them more image kind of'; 'the words are good but we need to accompany that with some proof'; go back to the image-led original but improved): do not cut any words; make the site feel image-led; add images wherever there are cards (number 1 priority) and wherever long text sections lack images. Images supplement the cards and copy. Private evidence: hqc-20261106-actions/imagegen-nov10 and the meeting transcript in Jack's vault.",
+  "baseline": "6fdc10fe63958b1409b93b5fc156658342dc6526",
+  "request": "Pedro via Jack, 10 November 2026 (native thread): use HQC's new logo (the logo kit made for Pedro, 8 Oct 2026) wherever an image shows a staff member doing the work; make about five images clearer about the service or process. Keep it quick; do not change many images.",
   "requirements": [
     {
       "id": "M0",
-      "text": "Planning amendment for the image-led round (10 Nov); all earlier requirements, including the 9 Nov illustrative-label removal, stay in force (cumulative acceptance matrix)."
+      "text": "Planning amendment for the logo-and-clarity image round; all earlier requirements, including the 10 Nov image-led round and its recorded exceptions, stay in force."
     },
     {
-      "id": "C1",
-      "text": "OutcomePage cards: every outcome card (3) and every scope card (including 'Confirmed before work') gets an image from the new card library, relevant to the card text; every related-route card shows the destination page's existing hero image. No image repeats within one page. Exception: the reviews-case-studies outcome and scope cards stay text-only because they sit beside evidence wording."
+      "id": "L1",
+      "text": "Every generated image that shows a staff member at work in the deep-teal uniform gets the gold HQC monogram embroidered on the uniform (back or chest), edited in place with the scene otherwise unchanged; the same file paths are kept, so no layout or code change. Hands-only crops are unchanged."
     },
     {
-      "id": "C2",
-      "text": "Homepage: the five service-process cards ('Clarity before anyone picks up a cloth') and the six complex-process step cards each get a distinct relevant image."
+      "id": "L2",
+      "text": "Replace five library images whose scene does not show the service or process clearly (p-snagging, g-planner, g-phone-desk, c-coats-office, g-enquiry) with clearer scenes of HQC-uniformed staff doing that step, keeping the same ids and paths; update only their alt text."
     },
     {
-      "id": "C3",
-      "text": "Contact page information cards (Existing Clients, Suppliers and Subcontractors, Media/Partnerships, Assessment Media, Service Area Questions, Need a Cleaning Quote) and the four request-a-quote route cards each get an image; the quote route cards reuse the existing three-offerings images."
-    },
-    {
-      "id": "C4",
-      "text": "OutcomePage long copy sections: controlled-copy sections that currently have no imagery get one supporting image laid out beside or above the text (alternating on desktop, stacked on mobile), so pages read image-led; existing section imagery stays where it is. No image repeats within one page. reviews-case-studies sections and any section whose copy is evidence, proof, review or client-count wording get no generated image."
-    },
-    {
-      "id": "G1",
-      "text": "Add the generated card-library images under public/images/phase8-nov10/ (Codex ImageGen, house style, deep-teal plain uniforms, no text, logos or identifiable faces), with factual alt text. Generated images are never labelled or described as HQC work."
-    },
-    {
-      "id": "R3",
-      "text": "Record the resulting version in the review room (append; note: image-led cards and sections, no copy change) and in revisions/versions.json; full npm run check:revision passes."
+      "id": "R4",
+      "text": "Record the resulting version in the review room (append) and in revisions/versions.json; full npm run check:revision passes."
     }
   ],
   "allowedFiles": [
@@ -44,612 +32,299 @@
     {
       "path": "src/data/card-imagery.ts",
       "requirements": [
-        "C1",
-        "C2",
-        "C3",
-        "C4",
-        "G1"
+        "L2"
       ],
       "allowDelete": false,
-      "reason": "New card and section image library and per-page assignment."
-    },
-    {
-      "path": "src/components/OutcomePage.astro",
-      "requirements": [
-        "C1",
-        "C4"
-      ],
-      "allowDelete": false,
-      "reason": "Render card and section images."
-    },
-    {
-      "path": "src/pages/index.astro",
-      "requirements": [
-        "C2"
-      ],
-      "allowDelete": false,
-      "reason": "Images on homepage process cards."
-    },
-    {
-      "path": "src/pages/contact.astro",
-      "requirements": [
-        "C3"
-      ],
-      "allowDelete": false,
-      "reason": "Images on contact information cards."
-    },
-    {
-      "path": "src/pages/request-a-quote.astro",
-      "requirements": [
-        "C3"
-      ],
-      "allowDelete": false,
-      "reason": "Images on quote route cards."
+      "reason": "Alt text for the five replaced scenes only."
     },
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "R3"
+        "R4"
       ],
       "allowDelete": false,
       "reason": "Register the new reviewed version."
     },
     {
-      "path": "public/images/phase8-nov10/r-kitchen-wipe.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-bathroom-shine.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-bed-made.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
       "path": "public/images/phase8-nov10/r-living-dust.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-checklist-home.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-oven-inside.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-cupboard-inside.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-fridge.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-pets-home.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-front-door-keys.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/r-routine-visit.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-skirting.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-shower-glass.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-sofa-vacuum.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-empty-flat.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-boxes-movein.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-inventory.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-viewing-ready.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/r-hallway-floor.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-bathroom-reset.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/c-desks.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-washroom.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-staff-kitchen.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/c-floor-scrubber.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/c-waste.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-touchpoints.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-after-hours.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-reception.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-meeting-reset.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/c-high-level.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/c-deep-kitchen.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/c-supervisor.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-coats-office.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/c-glass-partition.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
+    },
+    {
+      "path": "public/images/phase8-nov10/c-staff-kitchen.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place"
+    },
+    {
+      "path": "public/images/phase8-nov10/c-after-hours.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/p-lobby.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/p-stairwell.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-lift.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-bin-store.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-key-hooks.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-mansion-blocks.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-report-photo.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-portfolio-map.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-void-flat.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-handover-keys.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-build-dust.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/p-high-windows.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-film-peel.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-snagging.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-trades.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-stone-floor.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-plans.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-signoff.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/p-van-street.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-postcode.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-corridor.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/g-site-review.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-service-profile.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-mobilisation.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/g-delivery.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-quality-review.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-enquiry.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-assessment.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-scope-plan.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-planner.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/g-walkthrough.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-phone-desk.webp",
-      "requirements": [
-        "G1"
-      ],
-      "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
       "path": "public/images/phase8-nov10/k-supplies.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
     },
     {
-      "path": "public/images/phase8-nov10/k-media.webp",
+      "path": "public/images/phase8-nov10/g-assessment.webp",
       "requirements": [
-        "G1"
+        "L1"
       ],
       "allowDelete": false,
-      "reason": "Generated card-library image."
+      "reason": "Logo added in place"
+    },
+    {
+      "path": "public/images/phase8-nov10/p-snagging.webp",
+      "requirements": [
+        "L2"
+      ],
+      "allowDelete": false,
+      "reason": "Clearer replacement scene with logo."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-planner.webp",
+      "requirements": [
+        "L2"
+      ],
+      "allowDelete": false,
+      "reason": "Clearer replacement scene with logo."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-phone-desk.webp",
+      "requirements": [
+        "L2"
+      ],
+      "allowDelete": false,
+      "reason": "Clearer replacement scene with logo."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-coats-office.webp",
+      "requirements": [
+        "L2"
+      ],
+      "allowDelete": false,
+      "reason": "Clearer replacement scene with logo."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-enquiry.webp",
+      "requirements": [
+        "L2"
+      ],
+      "allowDelete": false,
+      "reason": "Clearer replacement scene with logo."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-a-800.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-a-1600.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-b-800.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-b-1600.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
+    },
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-800.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
+    },
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-1600.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-touchpoints-800.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-touchpoints-1600.webp",
+      "requirements": [
+        "L1"
+      ],
+      "allowDelete": false,
+      "reason": "Logo added in place (both sizes)."
     }
   ],
   "preserve": [
-    "Every word of copy, every heading, CTA label and link target is unchanged; built-page visible text (images and alt text excluded) matches the baseline on every page.",
-    "Everything accepted in earlier packets (ef2dee1, c298746, 39518d6, 4454208, 9484ffe): restored copy and CTAs, popup removal, hidden founder video, hero offering cards, existing section imagery and gallery choices, WhatsApp button, privacy retention table, about/reviews evidence lines, terms offer lines, no 'Illustrative' labels.",
-    "No image is relabelled as HQC work; confirmedHqcPhotoIds stays empty; the HQC-work gallery branch, the homepage 'The work should be visible' block, ClientEvidence and the reviews-case-studies evidence context get no generated images; no skip photo is introduced.",
-    "Existing images, heroes, galleries and section imagery stay where they are.",
-    "Forms, form fields, API routes, CRM routing, webhook payloads, tracking attributes, consent, schema, redirects, middleware, sitemap and robots behaviour unchanged.",
-    "Public phone link tel:+442088703925 and display 0208 870 3925; AGENTS.md unchanged.",
-    "CI workflow, build scripts and Pages build command unchanged; Phase 8 production hold; no merge to main."
+    "All copy, layout, card and section assignments, CTAs, links, forms, tracking, schema and routing unchanged; only the listed image files and five alt texts change.",
+    "No generated image is placed in evidence, review or client-count contexts; generated images are not labelled as HQC jobs; confirmedHqcPhotoIds stays empty.",
+    "Everything accepted in earlier packets stays in force; Phase 8 production hold; no merge to main."
   ],
   "verification": [
-    "check:revision:scope; build:review; visible-text diff of every built page versus the baseline build is empty; every card listed in C1-C3 renders an image; no image repeats within a page; images lazy-load with width and height; desktop 1440 and mobile 390 captures of homepage, contact, request-a-quote and three outcome pages (one per cluster); console capture.",
-    "Independent Codex review of the full diff against the baseline plus a visual check of every new image (no text, logos, faces or artefacts); review-room version appended and read back; full npm run check:revision passes."
+    "check:revision:scope; build:review; visual check of every edited image (logo legible as HQC, no garbled text, scene otherwise unchanged, no identifiable faces); visible-text diff versus the previous build is empty.",
+    "Independent Codex check of the image set and diff; review-room version appended and read back; full npm run check:revision passes."
   ]
 }
