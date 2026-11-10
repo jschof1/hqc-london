@@ -987,6 +987,197 @@
           }
         }
       }
+    },
+    {
+      "id": "nov10-logo-clarity",
+      "label": "10 Nov: HQC logo on staff, clearer scenes",
+      "date": "2026-11-10",
+      "captureDate": "2026-11-10",
+      "commit": "3f212dfd5d020df63fc89d9ddf8ddf0369d96a1f",
+      "deploymentUrl": "https://6b5c2f00.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://6b5c2f00.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "HQC's logo added to staff in the images, and five images made clearer about the service, following Pedro's feedback. No words were changed.",
+      "changes": [
+        "The gold HQC monogram is on the uniform wherever a generated image shows staff at work. That covers 37 card images, plus 4 earlier generated images in heroes and sections.",
+        "Five scenes were replaced with clearer service shots: a post-construction clean, a team briefing, confirming arrangements by phone, a routine office clean, and a first consultation."
+      ],
+      "outstanding": [
+        "Pedro to confirm whether the bedroom (WA0016) and living-area (WA0015) library photos are HQC jobs; until then they sit unlabelled beside evidence wording on the homepage and the reviews page.",
+        "Some pages already repeated an image before this round (hero and gallery). These are kept as they were and recorded as an inherited exception for Jack to decide.",
+        "Related-route cards whose destination hero is a large PNG use a library image instead of that hero, to keep page weight down.",
+        "Pedro to choose the proof stories (Chelsea recurring client, Fulham referral, overseas owners, agent or portfolio, office programme, post-construction project) and supply source, quote and permission.",
+        "Pedro to confirm project and permission for photos p-ae4372f37d (bedroom), p-2267193ade (living area) and p-1ef63f3b16 (shutter dusting) before they can be shown as HQC work.",
+        "Pedro to confirm the pricing-page button wording: \"Book an Essential Clean™\" (Batch 4 metadata) or \"Check Essential Clean™ Pricing\" (Batch 4 hero).",
+        "Pedro to send portraits and his image-ideas document.",
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end.",
+        "Photo review (added 6 Nov 2026): the three photos Pedro sent on 4 Nov are now in the photo review, awaiting his choice; three archive photos (p-ae4372f37d, p-2267193ade, p-1ef63f3b16) still need his confirmation of project and publication permission."
+      ],
+      "provenance": "These are still generated scenes, not photos of HQC jobs. Captured on 2026-11-10 from the immutable preview https://6b5c2f00.hqc-london.pages.dev (commit 3f212df) at 1440px and 390px with the same method as nov10-image-led, non-essential cookies rejected, no forms submitted. The release date is the source deployment date, not a launch date. Review candidate, not launched: the live website is unchanged and the Phase 8 production hold remains.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-home-desktop.jpg",
+            "width": 1440,
+            "height": 13703,
+            "sha256": "b8fea06079d5ba8eb1fc6bb5b9a0ff0c20c121fab62442258bff5e95f3285beb",
+            "capturedAt": "2026-11-10T16:39:04.055Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-home-mobile.jpg",
+            "width": 390,
+            "height": 23685,
+            "sha256": "4b64779d5479f4c04ee9b5d2add7190dc65038b9467629db689986a39b0262bd",
+            "capturedAt": "2026-11-10T16:41:32.416Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-quote-desktop.jpg",
+            "width": 1440,
+            "height": 5258,
+            "sha256": "be867d2720e30c978c4b97736eb46b01b6caf1516494344b76a7f42c811685e8",
+            "capturedAt": "2026-11-10T16:39:15.736Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-quote-mobile.jpg",
+            "width": 390,
+            "height": 8565,
+            "sha256": "a86790f86a788be1c0431d25dda0980fcbce1eccdc45a813e3b54ec32ae3c87e",
+            "capturedAt": "2026-11-10T16:41:45.800Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-how-desktop.jpg",
+            "width": 1440,
+            "height": 12480,
+            "sha256": "a27c2735dd932252819c1e8f74d757728a3c7c29da224d25b6bcfcfc2d26ee4d",
+            "capturedAt": "2026-11-10T16:39:32.756Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-how-mobile.jpg",
+            "width": 390,
+            "height": 17832,
+            "sha256": "68fdc871d0934d19c190828b5a9ff5754f0c9e037ac13946667d79c4fff1574b",
+            "capturedAt": "2026-11-10T16:42:05.767Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-contact-desktop.jpg",
+            "width": 1440,
+            "height": 6065,
+            "sha256": "088ec3bd5611c59f6c9e94c435a810acfd7f51486e145ed7481bf5c7b871194e",
+            "capturedAt": "2026-11-10T16:39:45.302Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-contact-mobile.jpg",
+            "width": 390,
+            "height": 9893,
+            "sha256": "00a8cae77159f7a615bd5c553bb503a17f617bcc48c4124fd2bfc7f41bb50b21",
+            "capturedAt": "2026-11-10T16:42:24.435Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 11993,
+            "sha256": "3fa8c79041aa3301c63065923f3124526b90b186abfd415aa1957f7f71644879",
+            "capturedAt": "2026-11-10T16:40:02.663Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 17842,
+            "sha256": "52839b715b3051629c750f29260aa527f3d8b6d9c536e273040b74263abd23d9",
+            "capturedAt": "2026-11-10T16:42:48.847Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-about-desktop.jpg",
+            "width": 1440,
+            "height": 12600,
+            "sha256": "3039623eb5ef1aa43c7b31d1885b6234c699c08757e4aa39087bcb2a8016bc4d",
+            "capturedAt": "2026-11-10T16:40:21.793Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-about-mobile.jpg",
+            "width": 390,
+            "height": 20061,
+            "sha256": "b00b778290bfb9249b66f4cb760e9c0c4c14d9fa7e6cf49779827384a4678c3a",
+            "capturedAt": "2026-11-10T16:43:09.958Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10157,
+            "sha256": "3d701075501eebeb21e028597d8acf5ea07537418885d38a00d6a196be0a852a",
+            "capturedAt": "2026-11-10T16:40:36.004Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-reviews-mobile.jpg",
+            "width": 390,
+            "height": 13953,
+            "sha256": "9e764ffcc1129cb0b47a0945f9e0cd08425b0f9eb35d812668e7377fc0acad55",
+            "capturedAt": "2026-11-10T16:43:29.286Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 11245,
+            "sha256": "89aee5c81a894394d7800ebaf674375d2ccf4ea34a3658c64f3c9e3b408bc5de",
+            "capturedAt": "2026-11-10T16:40:50.466Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-privacy-mobile.jpg",
+            "width": 390,
+            "height": 17322,
+            "sha256": "bc866e9a194cad69625ebc8c580dd1a58202482461cd1713d7382a4e3bbc55cf",
+            "capturedAt": "2026-11-10T16:43:47.907Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov10-logo-clarity-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13748,
+            "sha256": "359a5b045f7e4f8419791825595d5329e7cf590277541cd6fddafe2bab128997",
+            "capturedAt": "2026-11-10T16:41:08.357Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov10-logo-clarity-terms-mobile.jpg",
+            "width": 390,
+            "height": 22560,
+            "sha256": "c1c7bfe13b4897a0c16d9a90ee0ef59d82d0326aadead83aa6f0b4f1506cdd8b",
+            "capturedAt": "2026-11-10T16:44:12.830Z",
+            "sourceUrl": "https://6b5c2f00.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -1037,7 +1228,7 @@
     }
   ],
   "defaultBefore": "live-oct29",
-  "defaultAfter": "nov10-image-led",
+  "defaultAfter": "nov10-logo-clarity",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
