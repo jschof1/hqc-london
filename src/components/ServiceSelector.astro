@@ -1,69 +1,53 @@
 ---
 import { cardLibrary } from '../data/card-imagery';
 const photo = cardLibrary['r-routine-visit'];
+// Presentation only (Jack, 11 Nov 2026): photograph as the section background, heading on top, and the
+// nine situations in a split grid (homes on one side, workplaces and property on the other). Choice
+// labels, order, routing and results are unchanged.
+const choices = [
+  { number: '01', result: 'maintain', label: 'Keep my home consistently clean' },
+  { number: '02', result: 'restore', label: 'Restore a home that needs more attention' },
+  { number: '03', result: 'restore', label: 'Prepare a property before moving in' },
+  { number: '04', result: 'restore', label: 'Prepare a property for handover' },
+  { number: '05', result: 'restore', label: 'Remove dust and residue after building work' },
+  { number: '06', result: 'professional', label: 'Arrange cleaning for a workplace' },
+  { number: '07', result: 'professional', label: 'Arrange cleaning across properties or a portfolio' },
+  { number: '08', result: 'professional', label: 'Discuss a large or complex property' },
+  { number: '09', result: 'unsure', label: 'I am not sure' }
+];
+const groups = [
+  { label: 'Homes', items: choices.slice(0, 5) },
+  { label: 'Workplaces and property', items: choices.slice(5) }
+];
 ---
 
-<section id="find-my-service" class="hm-selector relative isolate scroll-mt-20 bg-copper py-20 md:py-28">
-  <div class="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16 lg:px-14">
-    <div class="hm-chapter-head"><div class="hm-sticky">
-      <p class="hm-kicker-line text-xs font-bold uppercase tracking-[0.22em] text-midnight" data-reveal="fade">Find my service</p>
-      <h2 class="mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-midnight md:text-6xl" data-reveal="title">What Do You Need Help With?</h2>
-      <p class="mt-5 max-w-xl text-lg leading-8 text-midnight" data-reveal style="--d: 120ms">Choose the situation that best describes what you need.</p>
-      <figure class="hm-selector-photo mt-8 hidden overflow-hidden rounded-[1.25rem] lg:block" data-reveal="clip" style="--hm-cover: var(--color-copper)">
-        <img src={photo.src} alt={photo.alt} class="aspect-[5/4] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />
-      </figure>
-    </div></div>
-
-    <div>
-    <div class="hm-choices grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1" data-stagger="25" data-stagger-type="quick">
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="maintain" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">01</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Keep my home consistently clean</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">02</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Restore a home that needs more attention</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">03</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Prepare a property before moving in</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">04</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Prepare a property for handover</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">05</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Remove dust and residue after building work</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="professional" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">06</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Arrange cleaning for a workplace</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="professional" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">07</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Arrange cleaning across properties or a portfolio</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="professional" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">08</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Discuss a large or complex property</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="unsure" aria-pressed="false" aria-controls="selector-result">
-        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">09</span>
-        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">I am not sure</strong>
-        <span class="hm-choice-mark" aria-hidden="true"></span>
-      </button>
+<section id="find-my-service" class="hm-selector relative isolate scroll-mt-20 overflow-hidden py-20 text-white md:py-28">
+  <img class="hm-selector-bg" src={photo.src} alt={photo.alt} loading="lazy" decoding="async" width="1200" height="900" />
+  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+    <div class="max-w-3xl">
+      <p class="hm-kicker-line text-xs font-bold uppercase tracking-[0.22em] text-copper" data-reveal="fade">Find my service</p>
+      <h2 class="mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-white md:text-6xl" data-reveal="title">What Do You Need Help With?</h2>
+      <p class="mt-5 max-w-xl text-lg leading-8 text-white/85" data-reveal style="--d: 120ms">Choose the situation that best describes what you need.</p>
     </div>
 
-    <div id="selector-result" class="hm-result relative mt-5 hidden overflow-hidden rounded-2xl bg-white p-7 text-midnight shadow-2xl md:p-10" aria-live="polite">
+    <div class="hm-choices mt-10 grid gap-6 md:mt-12 lg:grid-cols-2 lg:gap-8">
+      {groups.map((group) => (
+        <div class="hm-choice-group">
+          <p class="hm-choice-group-label">{group.label}</p>
+          <div class="grid gap-2.5" data-stagger="30" data-stagger-type="quick">
+            {group.items.map((choice) => (
+              <button type="button" class:list={['service-choice hm-choice group relative flex items-center gap-4 rounded-2xl px-5 py-4 pr-16 text-left md:gap-5', choice.result === 'unsure' && 'hm-choice-unsure']} data-result={choice.result} aria-pressed="false" aria-controls="selector-result">
+                <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">{choice.number}</span>
+                <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.45rem]">{choice.label}</strong>
+                <span class="hm-choice-mark" aria-hidden="true"></span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div id="selector-result" class="hm-result relative mt-6 hidden scroll-mt-28 overflow-hidden rounded-2xl bg-white p-7 text-midnight shadow-2xl md:p-10" aria-live="polite">
       <span class="hm-result-bar" aria-hidden="true"></span>
       <p id="selector-label" class="text-xs font-bold uppercase tracking-[0.2em] text-copper-ink"></p>
       <h3 id="selector-heading" class="mt-4 max-w-4xl font-serif text-3xl font-medium md:text-4xl">Your recommended route</h3>
@@ -72,7 +56,6 @@ const photo = cardLibrary['r-routine-visit'];
         <a id="selector-primary" class="button button-dark hm-result-primary" href="/request-a-quote/">Continue to your enquiry</a>
         <a id="selector-secondary" class="button border border-midnight/20 text-midnight hover:border-copper" href="/home-cleaning-london/">Compare home services</a>
       </div>
-    </div>
     </div>
   </div>
 </section>

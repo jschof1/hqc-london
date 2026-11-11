@@ -4,7 +4,7 @@
   "capturedOn": "2026-11-11",
   "rating": 4.9,
   "reviewCount": 92,
-  "note": "Snapshot of the public profile. Review text is verbatim; reviewers are shown by first name and last initial; reviews rated 4 or 5 stars are displayed.",
+  "note": "Snapshot of the public profile. Review text is verbatim; reviewers are shown by first name and last initial; written reviews rated 4 or 5 stars are displayed. Rating-only reviews are not shown, because their only text is HQC's reply.",
   "reviews": [
     {
       "name": "Anne K.",
@@ -415,46 +415,6 @@
       "name": "Audrey L.",
       "rating": 5,
       "text": "The gentleman dressed very smart and was polite.\nHe explained the process before starting the job. I observed his body language which was very positive.\nHe took care of my belongings before and after the process.\nThe job was professionally done and others that use the space commented on it.\nHis cost was just perfect for the job done.\nI highly recommend him because I will be using him again."
-    },
-    {
-      "name": "Luke K.",
-      "rating": 5,
-      "text": "Luke, Thank you so much for your fantastic 5-star review and for recognising our mission, values, and goals at High Quality Clean Ltd. It means a lot to us to receive such positive feedback and support from another business. Our team is dedicated to providing exceptional cleaning services while maintaining our commitment to our mission, values, and goals. We are grateful for your support and appreciation."
-    },
-    {
-      "name": "James W.",
-      "rating": 5,
-      "text": "Thank you so much, James, for your 5-star rating! ⭐️ We truly appreciate your support and are glad you had a positive experience with High Quality Clean Ltd. If you ever need our services again, we’ll be more than happy to help. 😊✨ …"
-    },
-    {
-      "name": "Mary",
-      "rating": 5,
-      "text": "Thank you so much, Mary, for the 5-star rating! ⭐️ We truly appreciate your support and are glad you had a positive experience with us. If there’s ever anything more we can do for you, we’re always here and happy to help! 😊✨ …"
-    },
-    {
-      "name": "Louis P.",
-      "rating": 5,
-      "text": "Thank you so much, Louis, for your 5-star review! We're thrilled to hear that you were satisfied with our service. Your feedback means a lot to us, and we look forward to assisting you again in the future! 😊 …"
-    },
-    {
-      "name": "Chris C.",
-      "rating": 5,
-      "text": "Thank you so much, Chris, for your 5-star review! We’re thrilled to hear that you had a positive experience with us. Your satisfaction is our top priority, and we appreciate your support. If you ever need our services again or have any special requests, please don't hesitate to reach out. We look forward to serving you in the future!"
-    },
-    {
-      "name": "Will C.",
-      "rating": 5,
-      "text": "Thank you so much, Will, for the 5-star review! We truly appreciate your feedback and are delighted to hear that you were satisfied with our service. If you ever need anything else or have any questions, please don't hesitate to reach out. We're here to help!"
-    },
-    {
-      "name": "James T.",
-      "rating": 5,
-      "text": "James, Thank you so much for your wonderful 5-star review! We are thrilled to hear that you had such a positive experience with High Quality Clean Ltd. Our team strives to provide the highest quality cleaning services and it is great to hear that our efforts have been recognized. We appreciate your kind words and are grateful for your support. Thank you for choosing High Quality Clean Ltd and we look forward to serving you again soon."
-    },
-    {
-      "name": "Mantas D.",
-      "rating": 5,
-      "text": "Thank you Mantas so much for your fantastic 5-star review! We are thrilled to hear that our team's efforts during the builders clean were a success and contributed to the successful opening of your shop. At High Quality Clean Ltd, we take great pride in providing high-quality cleaning services and it is wonderful to hear that our efforts have been recognized. We are grateful for your kind words and appreciate your support. Thank you for choosing High Quality Clean Ltd and we look forward to supporting your future cleaning needs. Congratulations on the successful opening of your shop!"
     }
   ]
 }
