@@ -3553,6 +3553,196 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-banister-photo",
+      "label": "11 Nov: banister photo without the latch plate",
+      "date": "2026-11-11",
+      "captureDate": "2026-11-11",
+      "commit": "e45ba305eb217aac1844bd3e425cc7a6c14c6b4c",
+      "deploymentUrl": "https://93c64546.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://93c64546.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "Follows the 3D gold header logo version. The photo of the cleaner wiping the stair handrail no longer has the brass latch plate on the banister post.",
+      "changes": [
+        "Banister photo (homepage hero and wherever it appears): the brass latch plate on the front of the newel post is removed with a Codex Imagen edit. Only the post changed; it was colour-matched and blended into the original, and the rest of the photo is pixel-identical before compression.",
+        "Everything else is as in the 3D gold header logo version (nov11-header-3d)."
+      ],
+      "outstanding": [
+        "The Google reviews are a saved snapshot from 11 Nov; new reviews appear only when the snapshot is refreshed.",
+        "Three older pages (services, why us and the founder story section) still use the earlier photo of Pedro.",
+        "Pedro to confirm whether the bedroom (WA0016) and living-area (WA0015) library photos are HQC jobs; until then they sit unlabelled beside evidence wording on the homepage and the reviews page.",
+        "Pedro to choose the proof stories and supply source, quote and permission.",
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end.",
+        "Pedro to review the flat gold logo set at actual size on the site, especially the 16px favicon, before it is treated as approved.",
+        "The Privacy Policy and Terms still show their staging placeholders (approval date, privacy contact) from the approved legal draft; these need final legal details before launch.",
+        "Pedro's 8 Oct 2026 email asked for a flat logo on the website; Jack chose the 3D gold logo for the header on 11 Nov. Pedro to review."
+      ],
+      "provenance": "Generated scenes remain illustrative, not photos of HQC jobs. Captured on 2026-11-11 from the immutable preview https://93c64546.hqc-london.pages.dev (commit e45ba30) at 1440px and 390px, non-essential cookies rejected, no forms submitted. Review candidate, not launched: the live website is unchanged and the Phase 8 production hold remains.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-home-desktop.jpg",
+            "width": 1440,
+            "height": 15611,
+            "sha256": "ed5ec53badd48915c64640aee97051f8e3a1c2fd1677e8d6b4040f14e78c4117",
+            "capturedAt": "2026-11-11T22:04:58.067Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-home-mobile.jpg",
+            "width": 390,
+            "height": 24726,
+            "sha256": "0eb4c23890c89d4e924ebd89e55fb7f9f1c4347b4244d7e33b3699d2ba26d4f1",
+            "capturedAt": "2026-11-11T22:07:49.430Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-quote-desktop.jpg",
+            "width": 1440,
+            "height": 6617,
+            "sha256": "4598f96b427f224c68ce000d0d6df0eac14bf4381f8d798adf164fbbc719a1db",
+            "capturedAt": "2026-11-11T22:05:15.935Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-quote-mobile.jpg",
+            "width": 390,
+            "height": 11104,
+            "sha256": "77d5b583d81a767df8902553c88cdfdf9a3f82e76aa39af9f021e63ddb023960",
+            "capturedAt": "2026-11-11T22:08:05.339Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-how-desktop.jpg",
+            "width": 1440,
+            "height": 13379,
+            "sha256": "b9803db825cfc3d922b91adae0c12ed3f591abe3b935a01ae13bea45ba44f74a",
+            "capturedAt": "2026-11-11T22:05:34.700Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-how-mobile.jpg",
+            "width": 390,
+            "height": 18860,
+            "sha256": "6e1d15c0cdac69b6146e4481257f3b68ad81aeebc9ff6a320f13688b1a9c32ab",
+            "capturedAt": "2026-11-11T22:08:28.160Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-contact-desktop.jpg",
+            "width": 1440,
+            "height": 7249,
+            "sha256": "2a11987390d65d3026c57d40841171cc70c2ea18b4e9942ca954b02996103c0d",
+            "capturedAt": "2026-11-11T22:05:49.759Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-contact-mobile.jpg",
+            "width": 390,
+            "height": 10726,
+            "sha256": "808cf466ad6aa9fd7d82f2371c50cd5490ca2c5a9be18b260c4b04b0ed9f00c9",
+            "capturedAt": "2026-11-11T22:08:43.745Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 13193,
+            "sha256": "ab8d32452d4f98d5bac9709607e4c3bc336d661a0123cf6b4f7835e8155302bd",
+            "capturedAt": "2026-11-11T22:06:08.258Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 18968,
+            "sha256": "8a60e799a159e233f0a8e87c8ed43f3623a2df524d3ee8fa49b4ded1f4da91b8",
+            "capturedAt": "2026-11-11T22:09:04.950Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-about-desktop.jpg",
+            "width": 1440,
+            "height": 14459,
+            "sha256": "b88292a0a02e5c7106d5c1551c53167e5e30ac0a29ace1c81b6a81b1a7a1f1e7",
+            "capturedAt": "2026-11-11T22:06:29.166Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-about-mobile.jpg",
+            "width": 390,
+            "height": 21369,
+            "sha256": "4598ffb37369abe5cb813dc368315e952aee381c188b1b7ec9c9fa3d141e1011",
+            "capturedAt": "2026-11-11T22:09:28.966Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10442,
+            "sha256": "dbe23c2642898e25e3326aeab0ce1c3b66b93406514dc87133bc7d0fdcfaea55",
+            "capturedAt": "2026-11-11T22:06:46.757Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-reviews-mobile.jpg",
+            "width": 390,
+            "height": 14948,
+            "sha256": "d07864180b2f5c44db07f7a21c95467f9a29e126942ab6492cc5a92ffad7ef92",
+            "capturedAt": "2026-11-11T22:09:47.567Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 10785,
+            "sha256": "6dae276bd669eccd97d38a3941fe3f3b97aec520c559bd64305d687bc61bea3d",
+            "capturedAt": "2026-11-11T22:07:03.008Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-privacy-mobile.jpg",
+            "width": 390,
+            "height": 16905,
+            "sha256": "5d87b8c8293837fe9d08f0006f6bf542f6677ea41d2bd744622a80e164d80186",
+            "capturedAt": "2026-11-11T22:10:06.744Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov11-banister-photo-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13948,
+            "sha256": "6600ead898623f678990e368bd4579ccbcdb8184314465fe4c5904c9641ebfe3",
+            "capturedAt": "2026-11-11T22:07:22.112Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-banister-photo-terms-mobile.jpg",
+            "width": 390,
+            "height": 21970,
+            "sha256": "a080eaf91603288312204e201cd5c73addf89532686ee0de34e51058a8f4fb56",
+            "capturedAt": "2026-11-11T22:10:32.230Z",
+            "sourceUrl": "https://93c64546.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -3603,7 +3793,7 @@
     }
   ],
   "defaultBefore": "live-oct29",
-  "defaultAfter": "nov11-header-3d",
+  "defaultAfter": "nov11-banister-photo",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
