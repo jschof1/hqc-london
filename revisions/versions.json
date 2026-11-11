@@ -1771,6 +1771,181 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-outcome-buttons",
+      "commit": "52f2150924e883022e22c632a0aecfc59425e687",
+      "immutableDeploymentUrl": "https://690fdd2e.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
+      "captureManifest": {
+        "commit": "9887183d2ceb8f9033bfcb70b6222c89a8da24b6",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-11",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-home-desktop.jpg",
+            "width": 1440,
+            "height": 16730,
+            "sha256": "4019c2c6a377ecd48019a4b9308a18525eb583d13a3a13a0e649ae793b37ee3f",
+            "capturedAt": "2026-11-11T12:12:14.816Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-home-mobile.jpg",
+            "width": 390,
+            "height": 25518,
+            "sha256": "7463e87440e6d189f7ac20c739bc541685d1a314c7636c349b97692751509993",
+            "capturedAt": "2026-11-11T12:14:54.538Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-quote-desktop.jpg",
+            "width": 1440,
+            "height": 5258,
+            "sha256": "02bf87f037e930a084022738594cd99f92f3e44174345195053c164e752a09c2",
+            "capturedAt": "2026-11-11T12:12:31.700Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-quote-mobile.jpg",
+            "width": 390,
+            "height": 8565,
+            "sha256": "d20bb6c64f2b09d8a00f77b6b38878085e20a5954913f1f9ff4e4eed82d0f06f",
+            "capturedAt": "2026-11-11T12:15:08.765Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-how-desktop.jpg",
+            "width": 1440,
+            "height": 12480,
+            "sha256": "8d266ac064b2f7380f7bb2ad63c18afe2dd97cc81fbca255cbff2f4f25f19597",
+            "capturedAt": "2026-11-11T12:12:49.838Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-how-mobile.jpg",
+            "width": 390,
+            "height": 17832,
+            "sha256": "b53ecfc0c3ed84b2b05a38f304f49f2cd79f45d7b62bb3205b73886ff2b2f117",
+            "capturedAt": "2026-11-11T12:15:30.384Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-contact-desktop.jpg",
+            "width": 1440,
+            "height": 6065,
+            "sha256": "c22968d1f514b9e8f1889f28e065e9ee09c77010a3fa9533b23e9f20245088f1",
+            "capturedAt": "2026-11-11T12:13:01.984Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-contact-mobile.jpg",
+            "width": 390,
+            "height": 9893,
+            "sha256": "8ba964aed758924b769c48d1cee77273ef06cb01fc069d856c783dfa54262320",
+            "capturedAt": "2026-11-11T12:15:45.266Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 11993,
+            "sha256": "f066f205311eda40bbd8f662eed80b963c198eba18fcf92f9f28f3d4e7930724",
+            "capturedAt": "2026-11-11T12:13:20.057Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 17842,
+            "sha256": "56345fbf4fb02d62d138a52a90a235fea50e11e3572f9912c7bf7c567b04e64d",
+            "capturedAt": "2026-11-11T12:16:07.019Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-about-desktop.jpg",
+            "width": 1440,
+            "height": 12398,
+            "sha256": "602fe0307dde008e986935fe88cc8e376968029fd011e0adddc6696e8cb83d2d",
+            "capturedAt": "2026-11-11T12:13:36.880Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-about-mobile.jpg",
+            "width": 390,
+            "height": 19876,
+            "sha256": "da5ef8031282b1bde6bf3c9abb5eb237a6c25a5fd588eb6b5655f2f678f65ba8",
+            "capturedAt": "2026-11-11T12:16:29.886Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10157,
+            "sha256": "30b5ab346e7eba7fefb9a5e2676af9e677ddd32ce3a76631d4d438eb3756e74f",
+            "capturedAt": "2026-11-11T12:13:51.809Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-reviews-mobile.jpg",
+            "width": 390,
+            "height": 13953,
+            "sha256": "9e764ffcc1129cb0b47a0945f9e0cd08425b0f9eb35d812668e7377fc0acad55",
+            "capturedAt": "2026-11-11T12:16:48.111Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 11245,
+            "sha256": "89aee5c81a894394d7800ebaf674375d2ccf4ea34a3658c64f3c9e3b408bc5de",
+            "capturedAt": "2026-11-11T12:14:07.284Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-privacy-mobile.jpg",
+            "width": 390,
+            "height": 17322,
+            "sha256": "ad16e7b539234ba9219882e80f41d667cbd5c0dc74f4cf88547b0d953f7c4375",
+            "capturedAt": "2026-11-11T12:17:09.151Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov11-outcome-buttons-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13748,
+            "sha256": "359a5b045f7e4f8419791825595d5329e7cf590277541cd6fddafe2bab128997",
+            "capturedAt": "2026-11-11T12:14:25.444Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-outcome-buttons-terms-mobile.jpg",
+            "width": 390,
+            "height": 22560,
+            "sha256": "c1c7bfe13b4897a0c16d9a90ee0ef59d82d0326aadead83aa6f0b4f1506cdd8b",
+            "capturedAt": "2026-11-11T12:17:35.512Z",
+            "sourceUrl": "https://690fdd2e.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ]
 }
