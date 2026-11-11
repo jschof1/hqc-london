@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "988e77f52e188845998995298aee848985eec02d",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site. Follow-up, Jack, 11 November 2026: Jack is happy with the homepage; using the taste skill, update every other page to the same design, pragmatically through shared components, with agents working on different pages in parallel. No copy changes. Follow-up, Jack, 11 November 2026 (after the 575ddc71 preview): the other pages have many silly mistakes and lack the homepage's range of presentation; do much more so they are far better. Follow-up, Jack, 11 November 2026: the header logo in the top left looks weird; work on it. Follow-up, Jack, 11 November 2026: use the more golden, alive 3D logo in the header instead of the flat one.",
+  "baseline": "39fc985b5facc6028bf5201430cbf57238b78d2b",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site. Follow-up, Jack, 11 November 2026: Jack is happy with the homepage; using the taste skill, update every other page to the same design, pragmatically through shared components, with agents working on different pages in parallel. No copy changes. Follow-up, Jack, 11 November 2026 (after the 575ddc71 preview): the other pages have many silly mistakes and lack the homepage's range of presentation; do much more so they are far better. Follow-up, Jack, 11 November 2026: the header logo in the top left looks weird; work on it. Follow-up, Jack, 11 November 2026: use the more golden, alive 3D logo in the header instead of the flat one. Follow-up, Jack, 11 November 2026 (same T3 thread): fix the photo of the cleaner wiping the banister using Codex Imagen, because it has a stray lock-like fitting on the front of the banister post.",
   "requirements": [
     {
       "id": "M1",
@@ -86,6 +86,10 @@
     {
       "id": "LG19",
       "text": "Header logo (Jack, 11 Nov): the header uses the 3D gold logo: the HQC monogram cut from the approved 3D artwork along the clean traced outline, with HIGH QUALITY CLEAN and the rule in the approved lettering filled with a metallic gold gradient. The footer and icons keep the flat set. Pedro's 8 Oct request for a flat website logo is noted for his review."
+    },
+    {
+      "id": "PH20",
+      "text": "Banister photo (Jack, 11 Nov): remove the brass hinge or latch plate from the front of the newel post in the complex-a photograph (cleaner wiping a communal stair handrail) using a Codex Imagen edit. Only the newel post area changes; the edited post is colour-matched and blended into the untouched original, and the file names, sizes and alt text stay the same."
     }
   ],
   "allowedFiles": [
@@ -489,12 +493,28 @@
       ],
       "allowDelete": false,
       "reason": "3D gold monogram for the tight header range."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-a-1600.webp",
+      "requirements": [
+        "PH20"
+      ],
+      "allowDelete": false,
+      "reason": "Banister photo at 1600px with the latch plate removed."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-a-800.webp",
+      "requirements": [
+        "PH20"
+      ],
+      "allowDelete": false,
+      "reason": "Banister photo at 800px with the latch plate removed."
     }
   ],
   "preserve": [
     "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events, except the C8 list punctuation, the K11 kicker removals and the G10 review content.",
     "Shared components used elsewhere (Header, Footer, Layout, ConversionPrompt, CookiePreferences, ClientEvidence, FounderPortrait, OutcomePage) and global.css.",
-    "Every existing image file is kept (no deletions); generated library images stay illustrative; the Phase 8 production hold. New files are the P13 founder photograph and the LG15 logo kit exports; public/favicon.ico is replaced by the kit favicon (LG15)."
+    "Every existing image file is kept (no deletions) and unedited except the PH20 banister photograph; generated library images stay illustrative; the Phase 8 production hold. New files are the P13 founder photograph and the LG15 logo kit exports; public/favicon.ico is replaced by the kit favicon (LG15)."
   ],
   "verification": [
     "Mechanical text, attribute and link comparison of rendered homepage HTML against 6b5c2f00 / 8f5331b.",
@@ -502,6 +522,7 @@
     "Council review by three independent model reviewers (Claude, GPT, DeepSeek) with scores, repeated after fixes.",
     "Round 5: mechanical copy comparison against 8f5331b shows only the C8 punctuation removals plus the existing dock labels; desktop, laptop and phone captures of every section; scroll-through recordings checked for jank; independent Codex review.",
     "Round 6: review snapshot count and rating match the live profile at capture; carousel motion, pause, reduced-motion and screen-reader checks; header on one line at 1024, 1280 and 1440 on the homepage and an outcome page; founder photograph on the homepage and an outcome page.",
-    "SW16: per-page mechanical copy comparison (words, attributes, links, data-track, form field names) of every redesigned page against its pre-change render; desktop and phone captures of every page type; forms submitted only against no-send previews; taste-skill consistency check on representative pages; independent review."
+    "SW16: per-page mechanical copy comparison (words, attributes, links, data-track, form field names) of every redesigned page against its pre-change render; desktop and phone captures of every page type; forms submitted only against no-send previews; taste-skill consistency check on representative pages; independent review.",
+    "PH20: side-by-side zoom of the newel post before and after; pixel difference outside the post patch is zero; homepage hero checked on desktop and phone."
   ]
 }
