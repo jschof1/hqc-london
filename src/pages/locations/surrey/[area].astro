@@ -2,6 +2,8 @@
 import Layout from '../../../layouts/Layout.astro';
 import areaData from '../../../data/area-data.json';
 import Header from '../../../components/Header.astro';
+import MotionKit from '../../../components/MotionKit.astro';
+import '../../../styles/utility-pages.css';
 
 export const prerender = true;
 
@@ -48,86 +50,91 @@ const schema = {
 
 <Layout title={pageTitle} description={metaDescription} schemaNodes={[schema]}>
   <Header />
+  <MotionKit />
 
-  <main class="page-transition overflow-x-hidden pt-16">
-    <section class="relative bg-navy py-20 lg:py-28">
+  <main class="hm-page utility-page utility-location page-transition pt-20">
+    <section class="utility-location-hero hm-dark relative bg-midnight text-white">
       <div class="absolute inset-0 overflow-hidden">
-        <img src={areaInfo.heroImage} alt={`Homes and properties in ${areaInfo.name}`} class="h-full w-full object-cover opacity-20" />
-        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/70"></div>
+        <img src={areaInfo.heroImage} alt={`Homes and properties in ${areaInfo.name}`} class="h-full w-full object-cover" />
+        <div class="utility-location-tint absolute inset-0"></div>
       </div>
 
-      <div class="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+      <div class="utility-shell utility-location-hero-grid relative grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
         <div>
-          <p class="mb-6 inline-block rounded-full border border-gold/40 bg-gold/20 px-3 py-1 text-sm font-medium text-gold">
+          <p class="section-kicker hm-kicker-line mb-6 text-gold">
             <i class="fas fa-map-marker-alt mr-2"></i>{areaInfo.name} · {areaInfo.postcodes.join(', ')}
           </p>
           <h1 class="mb-6 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">Home cleaning enquiries for {areaInfo.name}</h1>
           <p class="max-w-2xl text-xl leading-relaxed text-white/85">Tell us what needs attention at your {areaInfo.name} property. We will review the condition, access and required outcome before preparing the appropriate next step.</p>
           <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href={quoteHref} class="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-bold text-navy shadow-lg shadow-gold/20 transition-colors hover:bg-white">Request a quote <i class="fas fa-arrow-right ml-2"></i></a>
-            <a href="#what-to-share" class="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-base font-medium text-white transition-colors hover:bg-white/10">What to share</a>
+            <a href={quoteHref} class="hm-cta-link">Request a quote <span class="hm-cta-chip" aria-hidden="true"></span></a>
+            <a href="#what-to-share" class="hm-cta-link hm-cta-secondary">What to share <span class="hm-cta-chip" aria-hidden="true"></span></a>
           </div>
         </div>
 
-        <aside class="grid gap-4" aria-label="Quote review steps">
-          <div class="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
-            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><i class="fas fa-clipboard-list"></i></span>
+        <aside class="utility-review-steps grid gap-4" aria-label="Quote review steps">
+          <div class="utility-review-step flex gap-4 p-5">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M8 5H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 12h8M8 16h5"/></svg></span>
             <div><h2 class="font-serif text-xl text-white">Explain the outcome</h2><p class="mt-1 text-sm leading-6 text-white/70">Choose the service route and describe the result you need.</p></div>
           </div>
-          <div class="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
-            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><i class="fas fa-house"></i></span>
+          <div class="utility-review-step flex gap-4 p-5">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span>
             <div><h2 class="font-serif text-xl text-white">Share property context</h2><p class="mt-1 text-sm leading-6 text-white/70">Include the address, approximate size, condition, access and parking details.</p></div>
           </div>
-          <div class="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
-            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><i class="fas fa-comments"></i></span>
+          <div class="utility-review-step flex gap-4 p-5">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold text-navy"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a7 7 0 0 1-7 7H7l-4 3V5a2 2 0 0 1 2-2h9a7 7 0 0 1 7 8ZM7 8h10M7 12h7"/></svg></span>
             <div><h2 class="font-serif text-xl text-white">Receive a considered response</h2><p class="mt-1 text-sm leading-6 text-white/70">The enquiry is reviewed against the work requested before a quotation is discussed.</p></div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="what-to-share" class="bg-white py-20">
-      <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.15fr_.85fr] lg:items-start">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Plan the enquiry</p>
-          <h2 class="mt-4 max-w-3xl font-serif text-4xl text-navy">Useful detail for a {areaInfo.name} home-cleaning review</h2>
-          <p class="mt-5 max-w-3xl text-lg leading-8 text-ink/70">The quickest route to a considered response is a clear picture of the property and what needs to be ready. Postcodes help us understand the location; the scope and condition help us assess the work.</p>
-          <div class="mt-9 grid gap-4 sm:grid-cols-2">
-            <div class="rounded-2xl border border-gold/20 bg-mist p-6"><h3 class="font-serif text-2xl text-navy">Property and access</h3><p class="mt-3 leading-7 text-ink/70">Share the full address, property type, approximate size, access notes and parking information.</p></div>
-            <div class="rounded-2xl border border-gold/20 bg-mist p-6"><h3 class="font-serif text-2xl text-navy">Condition and timing</h3><p class="mt-3 leading-7 text-ink/70">Describe the current condition, desired date and any areas or requirements that need particular attention.</p></div>
+    <section id="what-to-share" class="utility-location-details bg-white">
+      <div class="utility-shell utility-location-details-grid grid gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-start">
+        <div class="utility-location-plan">
+          <p class="section-kicker" data-reveal="fade">Plan the enquiry</p>
+          <h2 class="section-title mt-4 max-w-3xl font-serif text-navy" data-reveal="title">Useful detail for a {areaInfo.name} home-cleaning review</h2>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-slate" data-reveal>The quickest route to a considered response is a clear picture of the property and what needs to be ready. Postcodes help us understand the location; the scope and condition help us assess the work.</p>
+          <div class="utility-property-notes mt-9 grid gap-4 sm:grid-cols-2" data-stagger="70">
+            <div class="utility-property-note" data-reveal="quick"><h3 class="font-serif text-2xl text-navy">Property and access</h3><p class="mt-3 leading-7 text-ink/70">Share the full address, property type, approximate size, access notes and parking information.</p></div>
+            <div class="utility-property-note" data-reveal="quick"><h3 class="font-serif text-2xl text-navy">Condition and timing</h3><p class="mt-3 leading-7 text-ink/70">Describe the current condition, desired date and any areas or requirements that need particular attention.</p></div>
           </div>
         </div>
 
-        <aside class="rounded-2xl border border-gold/30 bg-mist p-7 shadow-soft">
-          <h2 class="font-serif text-3xl text-navy">{areaInfo.name} coverage</h2>
+        <aside class="utility-coverage bg-porcelain" data-reveal="fade">
+          <figure class="utility-coverage-photo hm-parallax"><img src="/images/phase8-nov10/r-front-door-keys.webp" alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" /></figure>
+          <div class="utility-coverage-copy">
+          <h2 class="section-title font-serif text-navy">{areaInfo.name} coverage</h2>
           <dl class="mt-6 space-y-5">
             <div><dt class="text-sm font-semibold uppercase tracking-[.14em] text-ink/55">Postcodes</dt><dd class="mt-1 text-lg text-navy">{areaInfo.postcodes.join(', ')}</dd></div>
             <div><dt class="text-sm font-semibold uppercase tracking-[.14em] text-ink/55">Enquiry route</dt><dd class="mt-1 leading-7 text-ink/70">Residential requirements are reviewed with property, access and condition context before a quotation is discussed.</dd></div>
           </dl>
-          <a href={quoteHref} class="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-navy px-6 py-3 text-center font-semibold text-white transition hover:bg-navy/90">Request a {areaInfo.name} quote</a>
+          <a href={quoteHref} class="hm-cta-link mt-8">Request a {areaInfo.name} quote <span class="hm-cta-chip" aria-hidden="true"></span></a>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="bg-mist py-20">
-      <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
+    <section class="utility-nearby hm-split hm-split-media-left bg-porcelain">
+      <div class="hm-split-copy utility-nearby-copy">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Nearby areas</p>
-          <h2 class="mt-4 font-serif text-4xl text-navy">Explore nearby Surrey locations</h2>
+          <p class="section-kicker" data-reveal="fade">Nearby areas</p>
+          <h2 class="section-title mt-4 font-serif text-navy" data-reveal="title">Explore nearby Surrey locations</h2>
           <p class="mt-5 max-w-xl leading-7 text-ink/70">If the property is closer to another area, use the page that best reflects its postcode and location context.</p>
         </div>
-        <ul class="grid gap-3 sm:grid-cols-2">
-          {nearbyAreas.map((nearby) => <li><a href={`/locations/surrey/${nearby.slug}/`} class="flex min-h-16 items-center rounded-xl border border-gold/20 bg-white px-5 font-medium text-navy transition hover:border-gold hover:text-gold"><i class="fas fa-map-marker-alt mr-3 text-gold"></i>{nearby.name}</a></li>)}
+        <ul class="hm-checks utility-nearby-list mt-7" data-stagger="70">
+          {nearbyAreas.map((nearby) => <li data-reveal="quick"><span><a href={`/locations/surrey/${nearby.slug}/`} class="utility-area-link">{nearby.name}</a></span></li>)}
         </ul>
       </div>
+      <figure class="hm-split-media hm-parallax" data-reveal="clip" style="--hm-cover: var(--color-porcelain)"><img src="/images/phase8-nov10/r-viewing-ready.webp" alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" /></figure>
     </section>
 
-    <section class="bg-navy py-20">
-      <div class="mx-auto max-w-3xl px-6 text-center">
-        <p class="text-sm font-semibold uppercase tracking-[.2em] text-gold">Start with the right details</p>
-        <h2 class="mt-4 font-serif text-4xl text-white">Request a home-cleaning review for {areaInfo.name}</h2>
+    <section class="utility-closing hm-dark bg-midnight text-white">
+      <div class="utility-shell utility-closing-copy text-center" data-reveal="fade">
+        <p class="section-kicker">Start with the right details</p>
+        <h2 class="section-title mt-4 font-serif text-white">Request a home-cleaning review for {areaInfo.name}</h2>
         <p class="mt-5 text-lg leading-8 text-white/75">Use the residential enquiry route to share the property details and outcome you need.</p>
-        <a href={quoteHref} class="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-gold px-8 py-4 text-lg font-bold text-navy transition hover:bg-white">Request a quote <i class="fas fa-arrow-right ml-2"></i></a>
+        <a href={quoteHref} class="hm-cta-link mt-8">Request a quote <span class="hm-cta-chip" aria-hidden="true"></span></a>
       </div>
     </section>
   </main>

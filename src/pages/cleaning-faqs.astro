@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import MotionKit from '../components/MotionKit.astro';
+import '../styles/utility-pages.css';
 import faqGroups from '../data/phase8-faq.json';
 
 const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
@@ -12,25 +14,26 @@ const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
 
 <Layout title="Cleaning FAQs London | High Quality Clean" description="Answers to common questions about HQC cleaning services, pricing, bookings, quotations, access, service scope, recurring cleaning and specialist requirements." pageType="FAQPage" mainEntity={faqEntities}>
   <Header />
-  <main class="bg-white pt-20">
-    <section class="bg-midnight px-5 py-20 text-white sm:px-8">
-      <div class="mx-auto max-w-5xl">
-        <p class="section-kicker">Cleaning FAQs</p>
+  <MotionKit />
+  <main class="hm-page utility-page utility-faq bg-white pt-20">
+    <section class="utility-hero utility-hero-photo hm-dark bg-midnight text-white">
+      <div class="utility-shell utility-hero-copy">
+        <p class="section-kicker hm-kicker-line">Cleaning FAQs</p>
         <h1 class="mt-4 font-serif text-4xl md:text-6xl">Frequently Asked Questions About HQC Cleaning Services</h1>
         <p class="mt-5 max-w-3xl text-lg leading-8 text-white/75">Different properties need different cleaning routes. These answers explain how HQC approaches service selection, quotations, booking, access, scope and delivery.</p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a class="button button-primary" href="/#find-my-service">Find My Service</a>
-          <a class="button button-ghost" href="/contact/">Contact HQC</a>
+          <a class="hm-cta-link" href="/#find-my-service">Find My Service <span class="hm-cta-chip" aria-hidden="true"></span></a>
+          <a class="hm-cta-link hm-cta-secondary" href="/contact/">Contact HQC <span class="hm-cta-chip" aria-hidden="true"></span></a>
         </div>
       </div>
     </section>
-    <div class="mx-auto max-w-5xl space-y-14 px-5 py-16 sm:px-8">
+    <div class="utility-faq-body">
       {faqGroups.map((group) => (
-        <section>
-          <h2 class="font-serif text-3xl text-midnight md:text-4xl">{group.title}</h2>
-          <div class="mt-6 divide-y divide-midnight/10 rounded-xl border border-midnight/10">
+        <section class="utility-faq-group">
+          <div class="utility-faq-heading" data-reveal="title"><h2 class="section-title font-serif text-midnight">{group.title}</h2></div>
+          <div class="utility-questions" data-stagger="70">
             {group.items.map((faq) => (
-              <details class="group p-5 sm:p-6">
+              <details class="group utility-question" data-reveal="quick">
                 <summary class="cursor-pointer pr-8 font-semibold text-midnight focus-visible:outline-2 focus-visible:outline-copper">{faq.question}</summary>
                 <p class="mt-4 leading-7 text-slate">{faq.answer}</p>
               </details>
@@ -38,15 +41,15 @@ const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
           </div>
         </section>
       ))}
-      <section class="rounded-2xl bg-midnight p-8 text-white md:p-10" aria-labelledby="faq-still-not-sure">
-        <h2 id="faq-still-not-sure" class="font-serif text-3xl md:text-4xl">Still Not Sure?</h2>
+      <section class="utility-closing hm-dark bg-midnight text-white" data-reveal="fade" aria-labelledby="faq-still-not-sure">
+        <h2 id="faq-still-not-sure" class="section-title font-serif">Still Not Sure?</h2>
         <p class="mt-4 text-lg leading-8 text-white/75">Tell us what you need the cleaning to achieve.</p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a class="button button-primary" href="/#find-my-service">Find My Service</a>
-          <a class="button button-ghost" href="/request-a-quote/">Request a Quote</a>
+          <a class="hm-cta-link" href="/#find-my-service">Find My Service <span class="hm-cta-chip" aria-hidden="true"></span></a>
+          <a class="hm-cta-link hm-cta-secondary" href="/request-a-quote/">Request a Quote <span class="hm-cta-chip" aria-hidden="true"></span></a>
         </div>
       </section>
-      <p class="text-sm text-slate">These answers explain the service. The <a class="underline" href="/terms-and-conditions/">Terms and Conditions</a> set out the applicable rules.</p>
+      <p class="utility-faq-note text-sm text-slate">These answers explain the service. The <a class="underline" href="/terms-and-conditions/">Terms and Conditions</a> set out the applicable rules.</p>
     </div>
   </main>
 </Layout>
