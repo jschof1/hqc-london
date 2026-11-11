@@ -2308,6 +2308,100 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-live-plausible",
+      "label": "11 Nov: live site with visit tracking",
+      "date": "2026-11-11",
+      "captureDate": "2026-11-11",
+      "commit": "cf7afe2d635c7aae41cb664f78817edaacd7c31d",
+      "deploymentUrl": "https://04c98545.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://04c98545.hqc-london.pages.dev",
+      "kind": "release",
+      "summary": "The current public website (live-oct29) with cookieless Plausible visit tracking added. No visible change: each capture has the same dimensions as live-oct29.",
+      "changes": [
+        "Adds a small cookieless Plausible script to every page. It records one visit per page load and clicks on phone, email and WhatsApp links, plus enquiries the server has accepted. It sends no query strings, form values or contact details.",
+        "No layout, wording, photo, form or routing change. Everything else is as in live-oct29."
+      ],
+      "outstanding": [
+        "The Phase 8 review candidates remain on hold and are not part of this release.",
+        "Captures show appearance only; event delivery to Plausible is checked separately on the live site."
+      ],
+      "provenance": "Captured on 2026-11-11 from the immutable preview https://04c98545.hqc-london.pages.dev (commit cf7afe2, PR 18) at 1440px and 390px, non-essential cookies rejected, non-GET requests aborted, no forms submitted. Previews do not send analytics. Production is published by merging PR 18 into main.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-home-desktop.jpg",
+            "width": 1440,
+            "height": 9496,
+            "sha256": "1e8cd1ce53b108aae84d1786014ec93ec7a49355a127ee975fea914c1f544a73",
+            "capturedAt": "2026-11-11T13:25:36.634Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-home-mobile.jpg",
+            "width": 390,
+            "height": 16089,
+            "sha256": "610decd964c28b5431201073d1011ceb36ec3b02a12de8c59cf27f8de9849f07",
+            "capturedAt": "2026-11-11T13:25:58.627Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-quote-desktop.jpg",
+            "width": 1440,
+            "height": 2506,
+            "sha256": "1d74acc82e6dfbfd7cb10482a3812c9a921c6452970dce9c117320e408501d50",
+            "capturedAt": "2026-11-11T13:25:41.310Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-quote-mobile.jpg",
+            "width": 390,
+            "height": 3923,
+            "sha256": "c888c65bdda54aab3e774df991f56ad6652056a7f728986e810a8093a9a5a2b3",
+            "capturedAt": "2026-11-11T13:26:03.437Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-how-desktop.jpg",
+            "width": 1440,
+            "height": 5412,
+            "sha256": "352b4c065e77ee262806b5026418d62891dc487d8111d3ad62932cb5a86c726f",
+            "capturedAt": "2026-11-11T13:25:46.578Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-how-mobile.jpg",
+            "width": 390,
+            "height": 7815,
+            "sha256": "bf9cfd279fdf40b2950b4e611605b009089ccedcf2f9375ffc5f575a399183b2",
+            "capturedAt": "2026-11-11T13:26:09.093Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-contact-desktop.jpg",
+            "width": 1440,
+            "height": 4690,
+            "sha256": "c0ebf8ba0077239a1bbe94f5bbd3f280063dc93f18f8e482ed8c7e16e2ef1533",
+            "capturedAt": "2026-11-11T13:25:51.454Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-contact-mobile.jpg",
+            "width": 390,
+            "height": 7388,
+            "sha256": "6e8bcc22b9618c13ed1911cd8ee5fcbb168807043b16794faa2c183aa265f924",
+            "capturedAt": "2026-11-11T13:26:14.467Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/contact/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -2366,6 +2460,7 @@
     "Review comments are shared by Pedro and Jack. Author names are chosen labels, not verified identities.",
     "The earlier May source is retained elsewhere, but no May page capture is included in this comparison.",
     "The 6 November candidate (nov6-revisions) was captured on 2026-11-06 from its own immutable preview. Contact and End of tenancy cleaning were first captured for this version, so earlier versions show no screenshot for those pages.",
-    "The 6 November copy restoration (nov6-copy-restoration) was captured on 2026-11-06. About HQC, Reviews & case studies, Privacy policy and Terms and conditions were first captured for this version, so earlier versions show no screenshot for those pages."
+    "The 6 November copy restoration (nov6-copy-restoration) was captured on 2026-11-06. About HQC, Reviews & case studies, Privacy policy and Terms and conditions were first captured for this version, so earlier versions show no screenshot for those pages.",
+    "The 11 November tracking release (nov11-live-plausible) was captured on 2026-11-11 from its own immutable preview for Homepage, Request a quote, How it works and Contact. It adds analytics only; defaultBefore and defaultAfter are unchanged."
   ]
 }

@@ -1,0 +1,147 @@
+{
+  "capturedAt": "2026-11-11",
+  "method": "Playwright with Google Chrome on Libby's Mac mini: 1440px and 390px CSS viewports at device scale 1, non-essential cookies rejected when offered, lazy images set eager and page scrolled, images and fonts awaited, back to top, 2.5 s settle; full-page capture in tiles up to 8000px joined without layout edits; JPEG quality 90; non-GET requests aborted, no forms submitted.",
+  "version": "nov11-live-plausible",
+  "commit": "cf7afe2d635c7aae41cb664f78817edaacd7c31d",
+  "immutableDeploymentUrl": "https://04c98545.hqc-london.pages.dev",
+  "independentReview": {
+    "reviewer": "Claude Opus 5.5 implementation sub-agent, separate from the Codex author of PR 18",
+    "scope": "Every hunk of public/hqc-plausible.js, src/components/Plausible.astro, src/layouts/Layout.astro, tests/plausible.test.mjs and revisions/current.json against R1 to R3",
+    "findings": [
+      {
+        "issue": "Every mailto click sent both 'Website Email Click' and 'Website Email Draft Opened'. The shared client tracking standard fires 'Draft Opened' only from a separate form-generated draft hook, which HQC does not have, so email clicks were double counted.",
+        "fix": "cf7afe2 sends only Website Email Click; test updated."
+      }
+    ],
+    "confirmed": [
+      "Single Layout covers every rendered page (areas/areas.astro only redirects).",
+      "Enquiry Accepted fires only from existing hqc:conversion hooks dispatched after a non-preview accepted response (/api/quote form_submit, /api/quick-form/, /api/discount/); feedback form excluded.",
+      "No CSP in public/_headers blocks analytics.aspectstudio.net.",
+      "Preview and other hosts send nothing; query strings, fragments and form values never sent.",
+      "PostHog, Umami consent path, dataLayer and October enquiry code untouched."
+    ],
+    "tests": "tests/plausible.test.mjs 3/3, test:forms 34+1 pass, test:analytics 7 pass, build:review ok"
+  },
+  "records": [
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "home",
+      "viewport": "desktop",
+      "requested": "https://04c98545.hqc-london.pages.dev/",
+      "final": "https://04c98545.hqc-london.pages.dev/",
+      "file": "nov11-live-plausible-home-desktop.jpg",
+      "width": 1440,
+      "height": 9496,
+      "sha256": "1e8cd1ce53b108aae84d1786014ec93ec7a49355a127ee975fea914c1f544a73",
+      "title": "Professional Cleaning Services London | High Quality Clean",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:25:36.634Z",
+      "method": "playwright-fullpage-tiled"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "quote",
+      "viewport": "desktop",
+      "requested": "https://04c98545.hqc-london.pages.dev/request-a-quote/",
+      "final": "https://04c98545.hqc-london.pages.dev/request-a-quote/",
+      "file": "nov11-live-plausible-quote-desktop.jpg",
+      "width": 1440,
+      "height": 2506,
+      "sha256": "1d74acc82e6dfbfd7cb10482a3812c9a921c6452970dce9c117320e408501d50",
+      "title": "Request a Cleaning Quote | High Quality Clean London",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:25:41.310Z",
+      "method": "playwright-fullpage-tiled"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "how",
+      "viewport": "desktop",
+      "requested": "https://04c98545.hqc-london.pages.dev/how-we-work/",
+      "final": "https://04c98545.hqc-london.pages.dev/how-we-work/",
+      "file": "nov11-live-plausible-how-desktop.jpg",
+      "width": 1440,
+      "height": 5412,
+      "sha256": "352b4c065e77ee262806b5026418d62891dc487d8111d3ad62932cb5a86c726f",
+      "title": "How Our Cleaning Service Works | High Quality Clean",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:25:46.578Z",
+      "method": "playwright-fullpage-tiled"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "contact",
+      "viewport": "desktop",
+      "requested": "https://04c98545.hqc-london.pages.dev/contact/",
+      "final": "https://04c98545.hqc-london.pages.dev/contact/",
+      "file": "nov11-live-plausible-contact-desktop.jpg",
+      "width": 1440,
+      "height": 4690,
+      "sha256": "c0ebf8ba0077239a1bbe94f5bbd3f280063dc93f18f8e482ed8c7e16e2ef1533",
+      "title": "Contact High Quality Clean | London",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:25:51.454Z",
+      "method": "playwright-fullpage-tiled"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "home",
+      "viewport": "mobile",
+      "requested": "https://04c98545.hqc-london.pages.dev/",
+      "final": "https://04c98545.hqc-london.pages.dev/",
+      "file": "nov11-live-plausible-home-mobile.jpg",
+      "width": 390,
+      "height": 16089,
+      "sha256": "610decd964c28b5431201073d1011ceb36ec3b02a12de8c59cf27f8de9849f07",
+      "title": "Professional Cleaning Services London | High Quality Clean",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:25:58.627Z",
+      "method": "playwright-fullpage-tiled"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "quote",
+      "viewport": "mobile",
+      "requested": "https://04c98545.hqc-london.pages.dev/request-a-quote/",
+      "final": "https://04c98545.hqc-london.pages.dev/request-a-quote/",
+      "file": "nov11-live-plausible-quote-mobile.jpg",
+      "width": 390,
+      "height": 3923,
+      "sha256": "c888c65bdda54aab3e774df991f56ad6652056a7f728986e810a8093a9a5a2b3",
+      "title": "Request a Cleaning Quote | High Quality Clean London",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:26:03.437Z",
+      "method": "playwright-fullpage-tiled"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "how",
+      "viewport": "mobile",
+      "requested": "https://04c98545.hqc-london.pages.dev/how-we-work/",
+      "final": "https://04c98545.hqc-london.pages.dev/how-we-work/",
+      "file": "nov11-live-plausible-how-mobile.jpg",
+      "width": 390,
+      "height": 7815,
+      "sha256": "bf9cfd279fdf40b2950b4e611605b009089ccedcf2f9375ffc5f575a399183b2",
+      "title": "How Our Cleaning Service Works | High Quality Clean",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:26:09.093Z",
+      "method": "playwright-fullpage-tiled"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "pageId": "contact",
+      "viewport": "mobile",
+      "requested": "https://04c98545.hqc-london.pages.dev/contact/",
+      "final": "https://04c98545.hqc-london.pages.dev/contact/",
+      "file": "nov11-live-plausible-contact-mobile.jpg",
+      "width": 390,
+      "height": 7388,
+      "sha256": "6e8bcc22b9618c13ed1911cd8ee5fcbb168807043b16794faa2c183aa265f924",
+      "title": "Contact High Quality Clean | London",
+      "broken": [],
+      "capturedAt": "2026-11-11T13:26:14.467Z",
+      "method": "playwright-fullpage-tiled"
+    }
+  ]
+}
