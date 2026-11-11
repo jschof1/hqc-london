@@ -812,11 +812,23 @@ main:has(.hm-hero) h2.section-title, .hm-outcome-title, .hm-homes-title, #find-m
 /* The client-evidence statement is a sentence, so it sits a step down. */
 .hm-evidence h2 { font-size: clamp(1.75rem, 4.4cqi, 2.75rem); line-height: 1.18; }
 .hm-lead { font-size: clamp(1.2rem, 1.6vw, 1.45rem); }
-.hm-founder .hm-lead { font-size: clamp(1.2rem, 1.6vw, 1.45rem) !important; }
+.hm-founder .hm-lead { font-size: clamp(1.2rem, 1.6vw, 1.45rem) !important; color: white; }
 
 /* Section separation: hairlines between light grounds, a copper rule between dark ones. */
 .hm-reviews { border-bottom: 1px solid rgb(14 42 49 / .08); }
-.hm-outcome, .hm-why-section, .hm-visible, .hm-founder, .hm-split-media-right { border-top: 1px solid rgb(14 42 49 / .1); }
+.hm-outcome, .hm-why-section, .hm-visible, .hm-split-media-right { border-top: 1px solid rgb(14 42 49 / .1); }
 .hm-stage { border-top: 1px solid rgb(209 164 103 / .35); }
 .hm-route { border-color: rgb(14 42 49 / .1); }
 @media (min-width: 1024px) { .hm-routes { align-items: stretch; } }
+
+/* ---------- Founder: full-height portrait left, words right on midnight ---------- */
+.hm-founder { border-top: 1px solid rgb(209 164 103 / .35); }
+.hm-founder-photo { position: relative; margin: 0; overflow: hidden; aspect-ratio: 4 / 5; max-height: 34rem; }
+.hm-founder-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%; }
+.hm-founder-copy { display: flex; align-items: center; padding: 3.5rem var(--hm-gutter) 4.5rem; container-type: inline-size; }
+.hm-founder .section-kicker { color: var(--color-copper); }
+@media (min-width: 640px) { .hm-founder-photo { max-height: 40rem; } }
+@media (min-width: 1024px) {
+  .hm-founder-photo { aspect-ratio: auto; max-height: none; min-height: 44rem; }
+  .hm-founder-copy { padding: 6rem var(--hm-edge) 6rem 5rem; }
+}

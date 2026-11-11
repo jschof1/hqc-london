@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ServiceSelector from '../components/ServiceSelector.astro';
 import TrustRail from '../components/TrustRail.astro';
-import FounderPortrait from '../components/FounderPortrait.astro';
 import ClientEvidence from '../components/ClientEvidence.astro';
 import ReviewMarquee from '../components/ReviewMarquee.astro';
 import reviewsData from '../data/google-reviews.json';
@@ -445,19 +444,19 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
     </div>
     </section>
 
-    {/* Founder: words left, portrait right. */}
-    <section class="hm-founder overflow-hidden bg-white">
-      <div class="mx-auto grid max-w-[1440px] lg:grid-cols-2">
-        <div class="flex items-center bg-mist px-5 py-12 sm:px-8 lg:order-2" data-reveal="clip" style="--hm-cover: var(--color-mist)">
-          <FounderPortrait />
-        </div>
-        <div class="flex items-center px-5 py-20 sm:px-8 lg:order-1 lg:px-20">
-          <div class="w-full">
+    {/* Founder (Jack, 11 Nov): portrait left as a full-height photograph, words right on a dark ground. */}
+    <section class="hm-founder hm-dark overflow-hidden bg-midnight text-white">
+      <div class="grid lg:grid-cols-[1fr_1fr]">
+        <figure class="hm-founder-photo" data-reveal="clip" style="--hm-cover: var(--color-midnight)">
+          <img src="/images/pedro-founder-portrait-753.webp" srcset="/images/pedro-founder-portrait-400.webp 400w, /images/pedro-founder-portrait-753.webp 753w" sizes="(min-width: 1024px) 50vw, 100vw" alt="Pedro Ndombasi, founder of High Quality Clean" loading="lazy" decoding="async" width="753" height="941" />
+        </figure>
+        <div class="hm-founder-copy">
+          <div class="w-full max-w-[38rem]">
             <p class="section-kicker" data-reveal="fade">Founder-led</p>
-            <h2 class="section-title" data-reveal="title">Pedro’s Vision for High Quality Clean</h2>
-            {paragraphs('Pedro’s Vision for High Quality Clean').map((paragraph, index) => <p class:list={['mt-7 text-lg leading-8 text-slate', index === 0 && 'hm-lead !text-[clamp(1.45rem,2vw,1.85rem)]']} data-reveal>{paragraph}</p>)}
-            <p class="mt-7 font-bold text-midnight" data-reveal>Pedro Ndombasi <span class="ml-2 font-normal text-slate">Founder & Managing Director</span></p>
-            {ctaLabels('Pedro’s Vision for High Quality Clean').map((label) => <a href={controlledCtaHref(label)} class="hm-cta-link hm-cta-dark mt-8">{label} <span class="hm-cta-chip" aria-hidden="true">→</span></a>)}
+            <h2 class="section-title text-white" data-reveal="title">Pedro’s Vision for High Quality Clean</h2>
+            {paragraphs('Pedro’s Vision for High Quality Clean').map((paragraph, index) => <p class:list={['mt-6 text-lg leading-8 text-white/80', index === 0 && 'hm-lead !text-white']} data-reveal>{paragraph}</p>)}
+            <p class="mt-7 font-bold text-white" data-reveal>Pedro Ndombasi <span class="ml-2 font-normal text-white/70">Founder & Managing Director</span></p>
+            {ctaLabels('Pedro’s Vision for High Quality Clean').map((label) => <a href={controlledCtaHref(label)} class="hm-cta-link mt-8">{label} <span class="hm-cta-chip" aria-hidden="true">→</span></a>)}
           </div>
         </div>
       </div>
