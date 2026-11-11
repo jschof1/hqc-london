@@ -9,17 +9,10 @@ import phase8Copy from '../data/phase8-copy.json';
 import { controlledCtaHref } from '../data/controlled-cta-links';
 import { offeringImages, sectionImagery } from '../data/section-imagery';
 import { libraryPhotos } from '../data/page-visuals';
-import { cardImage, homeComplexStepImagery, homeProcessImagery } from '../data/card-imagery';
+import { cardImage, cardLibrary, homeComplexStepImagery, homeProcessImagery, type CardImageId } from '../data/card-imagery';
 import '../styles/home-motion.css';
 
 const homeCopy = phase8Copy.home;
-const approvedSections = homeCopy.sections.filter((section) => [
-  'Cleaning Defined by the Outcome',
-  'Cleaning Services for London Homes',
-  'One Cleaning Partner Across Properties, Projects and Portfolios',
-  'Cleaning Programmes Built Around the Workplace',
-  'Why Clients Choose HQC When the Result Matters'
-].includes(section.heading));
 const homeSection = (heading: string) => homeCopy.sections.find((section) => section.heading === heading);
 const ctaLabels = (heading: string) => (homeSection(heading)?.blocks ?? []).filter((block) => block.kind === 'cta').map((block) => block.text ?? '');
 const paragraphs = (heading: string) => (homeSection(heading)?.blocks ?? []).filter((block) => block.kind === 'p').map((block) => block.text ?? '');
@@ -30,34 +23,33 @@ const offerings = [
   { eyebrow: 'Homes & Private Clients', title: 'Maintenance, restoration and moving services', href: '/home-cleaning-london/', image: offeringImages.home }
 ];
 const outcomeImage = sectionImagery['cleaning-prices-london'][0].images[0];
+// Illustrative library images (card-imagery.ts); each appears once on the page.
+const lib = (id: CardImageId) => cardLibrary[id];
 
-// Presentation only (10 Nov 2026): approved blocks render in their authored order. The layout
-// groups each h3 with the blocks that follow it, so cards hold the same copy in the same sequence.
+// Presentation only. Approved blocks render in their authored order; each chapter has its own
+// composition so the page alternates between split, full-bleed and centred layouts.
 type Block = (typeof homeCopy.sections)[number]['blocks'][number];
-type Chapter = { layout: 'split' | 'cards' | 'grid'; list: 'checks' | 'panel'; tone: 'light' | 'pale' | 'dark' };
-const chapters: Record<string, Chapter> = {
-  'Cleaning Defined by the Outcome': { layout: 'split', list: 'panel', tone: 'pale' },
-  'Cleaning Services for London Homes': { layout: 'cards', list: 'checks', tone: 'dark' },
-  'One Cleaning Partner Across Properties, Projects and Portfolios': { layout: 'split', list: 'checks', tone: 'light' },
-  'Cleaning Programmes Built Around the Workplace': { layout: 'split', list: 'panel', tone: 'pale' },
-  'Why Clients Choose HQC When the Result Matters': { layout: 'grid', list: 'checks', tone: 'light' }
-};
-const groupBlocks = (blocks: Block[], trailingCtasOutside: boolean) => {
-  const intro: Block[] = [];
+const section = (heading: string) => homeSection(heading)!;
+const groupBlocks = (blocks: Block[], trailingCtasOutside = false) => {
   const groups: { heading: Block; body: Block[] }[] = [];
   for (const block of blocks) {
     if (block.kind === 'h3') groups.push({ heading: block, body: [] });
     else if (groups.length) groups[groups.length - 1].body.push(block);
-    else intro.push(block);
   }
   const outro: Block[] = [];
   const last = groups[groups.length - 1];
-  if (trailingCtasOutside && last) {
-    while (last.body.length && last.body[last.body.length - 1].kind === 'cta') outro.unshift(last.body.pop()!);
-  }
-  return { intro, groups, outro };
+  while (trailingCtasOutside && last && last.body.length && last.body[last.body.length - 1].kind === 'cta') outro.unshift(last.body.pop()!);
+  return { groups, outro };
 };
-const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-midnight text-white' };
+// Jack, 11 Nov 2026 (C8): list items render without trailing semicolons or full stops.
+const listItem = (item: string) => item.replace(/\s*[;.]\s*$/, '');
+
+const outcome = section('Cleaning Defined by the Outcome');
+const homes = groupBlocks(section('Cleaning Services for London Homes').blocks);
+const partner = section('One Cleaning Partner Across Properties, Projects and Portfolios');
+const workplace = section('Cleaning Programmes Built Around the Workplace');
+const why = groupBlocks(section('Why Clients Choose HQC When the Result Matters').blocks, true);
+const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r-boxes-movein', 'r-inventory', 'p-build-dust'];
 ---
 
 <Layout
@@ -77,194 +69,261 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
   <div class="hm-progress" data-page-progress aria-hidden="true"></div>
 
   <main class="bg-porcelain pt-20">
-    <section class="hm-hero hm-spotlight relative overflow-hidden bg-midnight text-white" data-hero data-spotlight data-ambient>
-      <div class="hm-hero-grid" aria-hidden="true"></div>
-      <div class="hm-orb hm-orb-a" aria-hidden="true"></div>
-      <div class="hm-orb hm-orb-b" aria-hidden="true"></div>
-      <div class="relative mx-auto grid max-w-[1440px] items-center gap-12 px-5 pb-14 pt-8 sm:px-8 sm:py-14 lg:min-h-[min(780px,calc(100svh-5rem))] lg:grid-cols-[.92fr_1.08fr] lg:px-14 lg:py-10">
-        <div class="relative z-10 lg:py-8">
+    {/* Hero: one decisive photograph, the promise, two actions, three routes that steer the photograph. */}
+    <section class="hm-hero relative isolate bg-midnight text-white" data-hero>
+      <div class="hm-hero-main">
+        <div class="hm-hero-copy">
           <p class="section-kicker hm-kicker-line text-copper" data-intro="fade">Cleaning Defined by the Outcome</p>
-          <h1 class="hm-hero-h1 mt-4 max-w-3xl font-serif text-[clamp(3.1rem,7vw,7.2rem)] sm:mt-5 font-medium leading-[.88] tracking-[-.045em]" data-intro="title">
+          <h1 class="hm-hero-h1 mt-5 font-serif font-medium" data-intro="title">
             The Right Cleaning Service<br /><em class="font-medium text-copper">for the Result You Need</em>
           </h1>
-          <ul class="mt-5 grid grid-cols-3 gap-2 lg:hidden" aria-label="Our three core services">
+          <ul class="hm-hero-tabs mt-6 grid grid-cols-3 gap-2 lg:hidden" aria-label="Our three core services">
             {offerings.map((offering, index) => (
-              <li data-intro style={`--d: ${180 + index * 60}ms`}>
-                <a href={offering.href} class="group block text-white no-underline">
-                  <span class="block overflow-hidden rounded-lg">
-                    <img src={offering.image.src} srcset={offering.image.srcset} sizes="33vw" alt={offering.image.alt} class="aspect-[4/3] w-full rounded-lg object-cover object-[70%_50%] transition duration-700 group-active:scale-95" width="800" height="600" fetchpriority="high" />
+              <li data-intro style={`--d: ${160 + index * 60}ms`}>
+                <a href={offering.href} class:list={['group block text-white no-underline', index === 0 && 'is-active']} data-slide-tab={index}>
+                  <span class="hm-hero-thumb block overflow-hidden rounded-lg">
+                    <img src={offering.image.src} srcset={offering.image.srcset} sizes="33vw" alt={offering.image.alt} class="aspect-[4/3] w-full object-cover object-[70%_50%]" width="800" height="600" loading="lazy" decoding="async" />
                   </span>
                   <span class="mt-1.5 block text-[11px] font-bold leading-tight">{offering.eyebrow}&nbsp;<span class="text-copper" aria-hidden="true">→</span></span>
                 </a>
               </li>
             ))}
           </ul>
-          <p class="mt-5 max-w-xl text-base leading-7 text-white/75 sm:mt-7 sm:text-lg sm:leading-8 md:text-xl" data-intro style="--d: 120ms">From recurring home cleaning to workplace programmes, property handovers and complex projects, High Quality Clean matches the service, labour and delivery approach to the condition of the space and the outcome required.</p>
-          <div class="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row" data-hero-actions data-intro style="--d: 150ms">
-            <a href="#find-my-service" class="button button-primary hm-shine shadow-[0_18px_45px_-15px_rgba(209,164,103,.7)]" data-track="find_my_service" data-magnetic>Find my service <span class="hm-arrow-nudge" aria-hidden="true">↓</span></a>
-            <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote" data-magnetic>Request a Cleaning Quote</a>
+          <p class="mt-6 max-w-[34rem] text-base leading-7 text-white/80 sm:text-lg sm:leading-8" data-intro style="--d: 120ms">From recurring home cleaning to workplace programmes, property handovers and complex projects, High Quality Clean matches the service, labour and delivery approach to the condition of the space and the outcome required.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-hero-actions data-intro style="--d: 180ms">
+            <a href="#find-my-service" class="button button-primary" data-track="find_my_service">Find my service <span class="hm-arrow-nudge" aria-hidden="true">↓</span></a>
+            <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote">Request a Cleaning Quote</a>
           </div>
-          <div class="hm-trust-row mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-7 text-xs font-semibold uppercase tracking-[.14em] text-white/55" data-intro="fade" style="--d: 350ms">
+          <div class="hm-trust-row mt-9 flex flex-wrap gap-x-7 gap-y-2 text-[11px] font-bold uppercase tracking-[.18em] text-white/65" data-intro="fade" style="--d: 320ms">
             <span>London-based</span><span>Outcome-led</span><span>Founder-led</span>
           </div>
         </div>
 
-        <div class="relative z-10 hidden lg:block">
-          <ul class="grid gap-4" aria-label="Our three core services">
-            {offerings.map((offering, index) => (
-              <li data-intro="right" style={`--d: ${100 + index * 90}ms`}>
-                <a href={offering.href} class="hm-offer-card group grid grid-cols-[42%_1fr] overflow-hidden rounded-2xl border border-white/15 bg-white/[.05] text-white no-underline backdrop-blur-sm hover:-translate-y-0.5 hover:border-copper sm:grid-cols-[1.15fr_1fr]" data-tilt>
-                  <span class="block overflow-hidden">
-                    <img src={offering.image.src} srcset={offering.image.srcset} sizes="(min-width: 1024px) 380px, 42vw" alt={offering.image.alt} class="hm-kenburns aspect-[4/3] h-full w-full object-cover object-[70%_50%] sm:aspect-[2/1]" width="800" height="400" fetchpriority="high" />
-                  </span>
-                  <span class="flex flex-col justify-center p-4 sm:p-6">
-                    <span class="text-[11px] font-bold uppercase tracking-[.16em] text-copper sm:text-xs">{offering.eyebrow}</span>
-                    <span class="mt-2 font-serif text-xl font-medium leading-tight sm:text-2xl">{offering.title}</span>
-                    <span class="hm-offer-cta mt-3 text-sm font-bold text-white/85">Explore <span class="text-copper" aria-hidden="true">→</span></span>
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div class="hm-scroll-cue hidden lg:block" aria-hidden="true"></div>
-    </section>
-
-    <section class="section-shell">
-      <div class="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-24">
-        <div class="hm-chapter-head"><div class="hm-sticky">
-          <p class="section-kicker hm-kicker-line" data-reveal="fade">Start with what you need to achieve</p>
-          <h2 class="section-title" data-split>Tell Us the Result You Need</h2>
-          {paragraphs('Start with what you need to achieve').slice(0, 2).map((paragraph, index) => <p class="mt-7 text-lg leading-8 text-slate" data-reveal style={`--d: ${150 + index * 100}ms`}>{paragraph}</p>)}
-        </div></div>
-        <div class="space-y-4" data-stagger="120">
-          {[
-            {
-              number: '01',
-              eyebrow: 'Property & Facilities',
-              title: 'Managed properties, portfolios and projects',
-              copy: paragraphs('Start with what you need to achieve')[2],
-              cta: ctaLabels('Start with what you need to achieve')[0],
-              href: '/property-facilities-cleaning-london/',
-              image: '/images/generated/hqc-property-hero.webp',
-              alt: 'Empty flat hallway with wooden floors and open doors.'
-            },
-            {
-              number: '02',
-              eyebrow: 'Workplaces & Commercial',
-              title: 'Recurring programmes and operational resets',
-              copy: paragraphs('Start with what you need to achieve')[3],
-              cta: ctaLabels('Start with what you need to achieve')[1],
-              href: '/commercial-cleaning-london/',
-              image: '/images/generated/hqc-office-hero.png',
-              alt: 'Meeting room with a long table and a view of the City of London.'
-            },
-            {
-              number: '03',
-              eyebrow: 'Homes & Private Clients',
-              title: 'Maintenance, restoration and moving services',
-              copy: paragraphs('Start with what you need to achieve')[4],
-              cta: ctaLabels('Start with what you need to achieve')[2],
-              href: '/home-cleaning-london/',
-              image: '/images/generated/hqc-home-hero.webp',
-              alt: 'Living room with a corner sofa and tall windows.'
-            }
-          ].map((route) => (
-            <a href={route.href} class="hm-route group grid min-h-56 overflow-hidden rounded-2xl border border-midnight/10 bg-white text-inherit no-underline hover:-translate-y-1 hover:border-copper hover:shadow-[0_25px_70px_rgba(14,42,49,.12)] sm:grid-cols-[1fr_15rem]">
-              <div class="flex flex-col p-6 md:p-8">
-                <div class="flex items-center justify-between"><span class="meta-label">{route.eyebrow}</span><span class="font-serif text-2xl text-copper-ink">{route.number}</span></div>
-                <h3 class="mt-8 max-w-xl font-serif text-3xl font-medium leading-tight text-midnight md:text-4xl">{route.title}</h3>
-                <p class="mt-4 max-w-xl text-sm leading-6 text-slate">{route.copy}</p>
-                <span class="mt-7 inline-flex items-center font-bold text-midnight">{route.cta} <span class="hm-route-arrow text-copper-ink">→</span></span>
-              </div>
-              <div class="relative min-h-56 overflow-hidden">
-                <img src={route.image} alt={route.alt} class="h-full w-full object-cover transition duration-1000 group-hover:scale-105" loading="lazy" width="800" height="650" />
-                <div class="absolute inset-0 bg-gradient-to-r from-midnight/15 to-transparent"></div>
-              </div>
-            </a>
+        <div class="hm-hero-media" data-hero-media>
+          {offerings.map((offering, index) => (
+            <img
+              src={offering.image.src}
+              srcset={offering.image.srcset}
+              sizes="(min-width: 1024px) 54vw, 100vw"
+              alt={offering.image.alt}
+              class:list={['hm-slide', index === 0 && 'is-active']}
+              data-slide={index}
+              width="1600"
+              height="900"
+              fetchpriority={index === 0 ? 'high' : undefined}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
           ))}
         </div>
       </div>
+
+      <ul class="hm-routebar" aria-label="Our three core services">
+        {offerings.map((offering, index) => (
+          <li data-intro style={`--d: ${240 + index * 70}ms`}>
+            <a href={offering.href} class:list={['hm-route-tab group', index === 0 && 'is-active']} data-slide-tab={index}>
+              <span class="hm-route-tab-timer" aria-hidden="true"></span>
+              <span class="block text-[11px] font-bold uppercase tracking-[.18em] text-copper">{offering.eyebrow}</span>
+              <span class="mt-2 block font-serif text-[1.35rem] font-medium leading-snug xl:text-2xl">{offering.title}</span>
+              <span class="hm-offer-cta mt-3 text-sm font-bold text-white/85">Explore <span class="text-copper" aria-hidden="true">→</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
 
-    <div data-dock-hide data-ambient>
+    {/* Routes: centred introduction, three tall photographic routes. */}
+    <section class="section-shell">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="section-kicker" data-reveal="fade">Start with what you need to achieve</p>
+        <h2 class="section-title mx-auto" data-reveal="title">Tell Us the Result You Need</h2>
+        {paragraphs('Start with what you need to achieve').slice(0, 2).map((paragraph, index) => <p class:list={['mx-auto max-w-2xl text-lg leading-8 text-slate', index === 0 ? 'mt-7' : 'mt-3']} data-reveal style={`--d: ${100 + index * 80}ms`}>{paragraph}</p>)}
+      </div>
+      <div class="hm-routes mt-14 grid gap-5 md:mt-16 lg:grid-cols-3" data-stagger="110">
+        {[
+          {
+            number: '01',
+            eyebrow: 'Property & Facilities',
+            title: 'Managed properties, portfolios and projects',
+            copy: paragraphs('Start with what you need to achieve')[2],
+            cta: ctaLabels('Start with what you need to achieve')[0],
+            href: '/property-facilities-cleaning-london/',
+            image: '/images/generated/hqc-property-hero.webp',
+            alt: 'Empty flat hallway with wooden floors and open doors.'
+          },
+          {
+            number: '02',
+            eyebrow: 'Workplaces & Commercial',
+            title: 'Recurring programmes and operational resets',
+            copy: paragraphs('Start with what you need to achieve')[3],
+            cta: ctaLabels('Start with what you need to achieve')[1],
+            href: '/commercial-cleaning-london/',
+            image: '/images/generated/hqc-office-hero.png',
+            alt: 'Meeting room with a long table and a view of the City of London.'
+          },
+          {
+            number: '03',
+            eyebrow: 'Homes & Private Clients',
+            title: 'Maintenance, restoration and moving services',
+            copy: paragraphs('Start with what you need to achieve')[4],
+            cta: ctaLabels('Start with what you need to achieve')[2],
+            href: '/home-cleaning-london/',
+            image: '/images/generated/hqc-home-hero.webp',
+            alt: 'Living room with a corner sofa and tall windows.'
+          }
+        ].map((route) => (
+          <a href={route.href} class="hm-route group flex flex-col overflow-hidden rounded-[1.25rem] bg-white text-inherit no-underline">
+            <span class="hm-route-media block overflow-hidden">
+              <img src={route.image} alt={route.alt} class="aspect-[4/3] w-full object-cover lg:aspect-[5/4]" loading="lazy" decoding="async" width="800" height="650" />
+            </span>
+            <span class="flex flex-1 flex-col p-6 md:p-8">
+              <span class="flex items-center justify-between gap-4"><span class="meta-label">{route.eyebrow}</span><span class="font-serif text-2xl text-copper-ink">{route.number}</span></span>
+              <span class="mt-4 block font-serif text-[1.75rem] font-medium leading-tight text-midnight md:text-[2rem]">{route.title}</span>
+              <span class="mt-4 block text-[15px] leading-6 text-slate">{route.copy}</span>
+              <span class="mt-auto inline-flex items-center pt-7 font-bold text-midnight">{route.cta} <span class="hm-route-arrow text-copper-ink" aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <div data-dock-hide>
       <ServiceSelector />
     </div>
 
     <TrustRail />
 
     <div data-controlled-copy="Batch 1, page 1">
-      {approvedSections.map((section) => {
-        const chapter = chapters[section.heading];
-        const { intro, groups, outro } = groupBlocks(section.blocks, chapter.layout === 'grid');
-        const dark = chapter.tone === 'dark';
-        const renderFlow = (blocks: Block[]) => blocks.map((block, index) => {
-          const next = blocks[index + 1];
-          if (block.kind === 'ul') {
-            return <ul class:list={['hm-checks', chapter.list === 'panel' && 'hm-checks-panel']} data-stagger="45" data-stagger-type="fade">{block.items.map((item) => <li>{item}</li>)}</ul>;
-          }
-          if (block.kind === 'cta') return <p class="pt-2 text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
-          if (block.kind === 'support') return <p class="hm-support" data-reveal="left">{block.text}</p>;
-          if (block.kind === 'h3') return <h3 class="pt-4 font-serif text-2xl font-medium text-midnight">{block.text}</h3>;
-          if (index === 0) return <p class="hm-lead" data-reveal>{block.text}</p>;
-          if (next?.kind === 'ul') return <p class="hm-label pt-2" data-reveal>{block.text}</p>;
-          return <p data-reveal>{block.text}</p>;
-        });
-        return (
-          <section class:list={['hm-chapter relative overflow-clip py-20 md:py-28', toneClass[chapter.tone], dark && 'hm-spotlight isolate']} data-spotlight={dark ? '' : undefined}>
-            {dark && <div class="hm-orb hm-orb-a opacity-60" aria-hidden="true"></div>}
-            <div class:list={['relative mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:gap-20 lg:px-14', chapter.layout === 'split' ? 'lg:grid-cols-[.72fr_1.28fr]' : '']}>
-              <div class:list={[chapter.layout === 'split' ? 'hm-chapter-head' : 'max-w-4xl']}><div class="hm-sticky">
-                <p class="section-kicker hm-kicker-line" data-reveal="fade">Cleaning Defined by the Outcome</p>
-                <h2 class:list={['section-title', dark && 'text-white']} data-split>{section.heading}</h2>
-                {section.heading === 'Cleaning Defined by the Outcome' && (
-                  <figure class="mt-8 overflow-hidden rounded-2xl bg-midnight" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
-                    <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 480px, 100vw" alt={outcomeImage.alt} class="aspect-[16/10] w-full object-cover transition duration-1000 hover:scale-[1.03]" loading="lazy" width="1600" height="1000" />
-                  </figure>
-                )}
-              </div></div>
-              {chapter.layout === 'split' && (
-                <div class="space-y-5 text-lg leading-8 text-slate">{renderFlow(section.blocks)}</div>
-              )}
-              {chapter.layout !== 'split' && (
-                <div class:list={['text-lg leading-8', dark ? 'text-white/70' : 'text-slate']}>
-                  {intro.length > 0 && <div class="mb-6 space-y-5">{renderFlow(intro)}</div>}
-                  <div class="hm-cards md:grid-cols-2 lg:grid-cols-3" data-stagger="90">
-                    {groups.map((group, groupIndex) => {
-                      const featured = chapter.layout === 'cards' && groupIndex === 0;
-                      return (
-                        <article class:list={['hm-card', dark ? 'hm-card-dark' : 'hm-card-light', featured && 'hm-card-featured md:col-span-2 lg:col-span-2']}>
-                          <h3 class:list={['font-serif text-2xl font-medium leading-tight md:text-[1.75rem]', !dark && 'text-midnight']}>{group.heading.text}</h3>
-                          {group.body.map((block, blockIndex) => {
-                            if (block.kind === 'cta') return <p class="hm-card-foot mt-auto text-base"><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
-                            if (block.kind === 'ul') return <ul class="hm-checks">{block.items.map((item) => <li>{item}</li>)}</ul>;
-                            if (featured && blockIndex === 1) return <p class="hm-offer-note text-base leading-7">{block.text}</p>;
-                            return <p class="text-base leading-7">{block.text}</p>;
-                          })}
-                        </article>
-                      );
+      {/* Outcome: full-height photograph left, reasoning right. */}
+      <section class="hm-split hm-split-media-left bg-porcelain">
+        <div class="hm-split-copy">
+          <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
+          <h2 class="section-title" data-reveal="title">{outcome.heading}</h2>
+          <div class="mt-8 space-y-5 text-lg leading-8 text-slate">
+            {outcome.blocks.map((block, index) => {
+              const next = outcome.blocks[index + 1];
+              if (block.kind === 'ul') return <ul class="hm-checks hm-checks-panel" data-stagger="40" data-stagger-type="fade">{block.items.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>;
+              if (block.kind === 'cta') return <p class="pt-2 text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
+              if (block.kind === 'support') return <p class="hm-support" data-reveal>{block.text}</p>;
+              if (index === 0) return <p class="hm-lead" data-reveal>{block.text}</p>;
+              if (next?.kind === 'ul') return <p class="hm-label pt-2" data-reveal>{block.text}</p>;
+              return <p data-reveal>{block.text}</p>;
+            })}
+          </div>
+        </div>
+        <figure class="hm-split-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
+          <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 50vw, 100vw" alt={outcomeImage.alt} loading="lazy" decoding="async" width="1600" height="900" />
+        </figure>
+      </section>
+
+      {/* Homes: immersive photographic band, then image-led service cards. */}
+      <section class="hm-dark bg-midnight text-white">
+        <div class="hm-band hm-parallax">
+          <img src={lib('r-living-dust').src} alt={lib('r-living-dust').alt} loading="lazy" decoding="async" width="1200" height="900" />
+          <div class="hm-band-copy text-center">
+            <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
+            <h2 class="section-title mx-auto text-white" data-reveal="title">Cleaning Services for London Homes</h2>
+          </div>
+        </div>
+        <div class="mx-auto max-w-[1440px] px-5 pb-20 pt-12 sm:px-8 md:pb-28 md:pt-16 lg:px-14">
+          <div class="hm-cards md:grid-cols-2 lg:grid-cols-3" data-stagger="90">
+            {homes.groups.map((group, groupIndex) => {
+              const featured = groupIndex === 0;
+              const image = lib(homeServiceImages[groupIndex]);
+              return (
+                <article class:list={['hm-card hm-card-dark', featured && 'hm-card-featured md:col-span-2']}>
+                  <span class="hm-card-media block overflow-hidden"><img src={image.src} alt={image.alt} loading="lazy" decoding="async" width="1200" height="900" /></span>
+                  <div class="hm-card-body">
+                    <h3 class="font-serif text-2xl font-medium leading-tight text-white md:text-[1.75rem]">{group.heading.text}</h3>
+                    {group.body.map((block, blockIndex) => {
+                      if (block.kind === 'cta') return <p class="hm-card-foot text-base"><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
+                      if (featured && blockIndex === 1) return <p class="hm-offer-note text-base leading-7">{block.text}</p>;
+                      return <p class="text-base leading-7">{block.text}</p>;
                     })}
                   </div>
-                  {outro.length > 0 && <div class="mt-10 space-y-4">{renderFlow(outro)}</div>}
-                </div>
-              )}
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Partner: full-bleed street photograph, content panel on the right. */}
+      <section class="hm-stage">
+        <div class="hm-stage-media hm-parallax">
+          <img src={lib('p-van-street').src} alt={lib('p-van-street').alt} loading="lazy" decoding="async" width="1200" height="900" />
+        </div>
+        <div class="hm-stage-panel" data-reveal="right">
+          <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
+          <h2 class="section-title" data-reveal="title">{partner.heading}</h2>
+          <div class="mt-7 space-y-5 text-lg leading-8 text-slate">
+            {partner.blocks.map((block, index) => {
+              const next = partner.blocks[index + 1];
+              if (block.kind === 'ul') return <ul class="hm-checks" data-stagger="40" data-stagger-type="fade">{block.items.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>;
+              if (block.kind === 'cta') return <p class="pt-2 text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
+              if (index === 0) return <p class="hm-lead" data-reveal>{block.text}</p>;
+              if (next?.kind === 'ul') return <p class="hm-label pt-2" data-reveal>{block.text}</p>;
+              return <p data-reveal>{block.text}</p>;
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Workplace: reasoning left, full-height photograph right. */}
+      <section class="hm-split hm-split-media-right bg-porcelain">
+        <div class="hm-split-copy">
+          <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
+          <h2 class="section-title" data-reveal="title">{workplace.heading}</h2>
+          <div class="mt-8 space-y-5 text-lg leading-8 text-slate">
+            {workplace.blocks.map((block, index) => {
+              const next = workplace.blocks[index + 1];
+              if (block.kind === 'ul') return <ul class="hm-checks hm-checks-panel" data-stagger="40" data-stagger-type="fade">{block.items.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>;
+              if (block.kind === 'cta') return <p class="text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
+              if (index === 0) return <p class="hm-lead" data-reveal>{block.text}</p>;
+              if (next?.kind === 'ul') return <p class="hm-label pt-2" data-reveal>{block.text}</p>;
+              return <p data-reveal>{block.text}</p>;
+            })}
+          </div>
+        </div>
+        <figure class="hm-split-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
+          <img src={lib('c-after-hours').src} alt={lib('c-after-hours').alt} loading="lazy" decoding="async" width="1200" height="900" />
+        </figure>
+      </section>
+
+      {/* Why HQC: centred heading, one photograph beside six reasons. */}
+      <section class="bg-white py-20 md:py-28">
+        <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+          <div class="mx-auto max-w-4xl text-center">
+            <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
+            <h2 class="section-title mx-auto" data-reveal="title">Why Clients Choose HQC When the Result Matters</h2>
+          </div>
+          <div class="hm-why mt-14 md:mt-16">
+            <figure class="hm-why-media" data-reveal="clip" style="--hm-cover: white">
+              <img src={lib('p-signoff').src} alt={lib('p-signoff').alt} loading="lazy" decoding="async" width="1200" height="900" />
+            </figure>
+            <div class="hm-why-grid" data-stagger="70">
+              {why.groups.map((group) => (
+                <article class="hm-reason">
+                  <h3 class="font-serif text-2xl font-medium leading-tight text-midnight">{group.heading.text}</h3>
+                  {group.body.map((block) => <p class="mt-3 text-base leading-7 text-slate">{block.text}</p>)}
+                </article>
+              ))}
             </div>
-          </section>
-        );
-      })}
+          </div>
+          {why.outro.length > 0 && <div class="mt-12 text-center" data-reveal>{why.outro.map((block) => <a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a>)}</div>}
+        </div>
+      </section>
     </div>
 
-    <section class="hm-pin hm-spotlight relative overflow-clip bg-midnight py-20 text-white md:py-28" data-spotlight data-pin>
+    {/* How HQC works: centred statement, pinned five-step sequence. */}
+    <section class="hm-pin relative overflow-clip bg-midnight py-20 text-white md:py-28" data-pin>
       <div class="hm-pin-stage relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14" data-pin-stage>
-        <div class="grid items-end gap-10 lg:grid-cols-[1fr_.7fr]">
-          <div>
-            <p class="section-kicker hm-kicker-line text-copper" data-reveal="fade">How HQC works</p>
-            <h2 class="mt-4 max-w-4xl font-serif text-4xl font-medium leading-[1.02] tracking-tight md:text-7xl" data-split>Clarity before anyone picks up a cloth.</h2>
-          </div>
-          <p class="max-w-xl text-lg leading-8 text-white/65" data-reveal style="--d: 200ms">The condition, access, timing and required finish are captured before the work is confirmed. That means the service can be staffed and delivered responsibly.</p>
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-kicker text-copper" data-reveal="fade">How HQC works</p>
+          <h2 class="mt-4 font-serif text-4xl font-medium leading-[1.02] tracking-tight md:text-6xl" data-reveal="title">Clarity before anyone picks up a cloth.</h2>
+          <p class="hm-pin-intro mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/75" data-reveal style="--d: 120ms">The condition, access, timing and required finish are captured before the work is confirmed. That means the service can be staffed and delivered responsibly.</p>
         </div>
-        <div class="hm-steps relative mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 lg:grid-cols-5" data-scroll-track data-reveal="scale">
+        <div class="hm-steps relative mt-12 grid gap-px overflow-hidden rounded-[1.25rem] border border-white/15 bg-white/15 lg:grid-cols-5" data-scroll-track data-reveal="fade">
           <div class="hm-track-line" aria-hidden="true"></div>
           {[
             ['01', 'Site review', 'Understand the outcome, condition, access and operating constraints.'],
@@ -280,33 +339,36 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
               <div class="p-7 md:p-9">
                 <span class:list={['hm-step-num font-serif text-4xl', index === 2 ? 'text-midnight' : 'text-copper']}>{number}</span>
                 <h3 class="mt-8 font-serif text-3xl font-medium">{title}</h3>
-                <p class:list={['mt-4 leading-7', index === 2 ? 'text-midnight' : 'text-white/65']}>{copy}</p>
+                <p class:list={['mt-4 leading-7', index === 2 ? 'text-midnight' : 'text-white/70']}>{copy}</p>
               </div>
             </article>
             );
           })}
         </div>
-        <a href="/how-we-work/" class="button button-ghost mt-9" data-magnetic>See how the service works <span aria-hidden="true">→</span></a>
+        <div class="text-center">
+          <a href="/how-we-work/" class="button button-ghost mt-9">See how the service works <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
 
+    {/* Complex route: photographic steps left, reasoning right. */}
     <section class="bg-white py-20 md:py-28">
-      <div class="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-24 lg:px-14">
-        <div class="hm-chapter-head"><div class="hm-sticky">
-          <p class="section-kicker hm-kicker-line" data-reveal="fade">Complex service route</p>
-          <h2 class="section-title" data-split>When Routine Cleaning Is Not Enough</h2>
-          {paragraphs('When Routine Cleaning Is Not Enough').map((paragraph) => <p class="mt-7 text-lg leading-8 text-slate" data-reveal>{paragraph}</p>)}
+      <div class="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-[1.25fr_.75fr] lg:gap-20 lg:px-14">
+        <div class="hm-chapter-head lg:order-2"><div class="hm-sticky">
+          <p class="section-kicker" data-reveal="fade">Complex service route</p>
+          <h2 class="section-title" data-reveal="title">When Routine Cleaning Is Not Enough</h2>
+          {paragraphs('When Routine Cleaning Is Not Enough').map((paragraph) => <p class="mt-6 text-lg leading-8 text-slate" data-reveal>{paragraph}</p>)}
           {ctaLabels('When Routine Cleaning Is Not Enough').map((label) => <a href={controlledCtaHref(label)} class="hm-cta-link mt-7" data-reveal>{label} <span class="hm-cta-chip" aria-hidden="true">→</span></a>)}
         </div></div>
-        <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Complex service process" data-stagger="90">
+        <ol class="hm-complex grid gap-3 sm:grid-cols-2 lg:order-1 lg:grid-cols-3" aria-label="Complex service process" data-stagger="80">
           {['Qualification', 'Assessment', 'Defined scope', 'Delivery plan', 'Controlled delivery', 'Handover'].map((step, index) => {
             const image = cardImage(homeComplexStepImagery[step]);
             return (
-            <li class="hm-complex-step overflow-hidden rounded-2xl border border-midnight/10 bg-porcelain">
-              {image && <span class="block overflow-hidden"><img src={image.src} alt={image.alt} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" /></span>}
-              <div class="p-6">
-                <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
-                <p class="mt-6 font-serif text-2xl leading-tight text-midnight">{step}</p>
+            <li class="hm-complex-step relative overflow-hidden rounded-[1.25rem] bg-midnight text-white">
+              {image && <img src={image.src} alt={image.alt} class="aspect-[4/5] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
+              <div class="hm-complex-caption">
+                <span class="font-serif text-2xl text-copper">0{index + 1}</span>
+                <p class="mt-1 font-serif text-2xl leading-tight">{step}</p>
               </div>
             </li>
             );
@@ -315,24 +377,28 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
       </div>
     </section>
 
-    <div data-reveal>
-      <ClientEvidence id="proof-release-title" />
+    {/* Client evidence: full-bleed London street, statement centred. */}
+    <div class="hm-evidence hm-parallax">
+      <img class="hm-evidence-bg" src={lib('p-mansion-blocks').src} alt={lib('p-mansion-blocks').alt} loading="lazy" decoding="async" width="1200" height="900" />
+      <div class="relative" data-reveal>
+        <ClientEvidence id="proof-release-title" />
+      </div>
     </div>
 
     <section class="section-shell">
-      <div class="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
+      <div class="grid items-center gap-12 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
         <div class="grid auto-rows-[210px] grid-cols-2 gap-4 md:auto-rows-[260px]">
           {[libraryPhotos.bedroom, libraryPhotos.livingArea].map((photo, index) => (
-            <figure class:list={['hm-parallax-frame relative row-span-2 overflow-hidden rounded-[2rem]', index === 1 && 'md:translate-y-12']} data-reveal="clip" style={`--d: ${index * 150}ms`}>
-              <img src={photo.src} alt={photo.alt} class="h-full w-full object-cover" loading="lazy" width="1536" height="2048" data-parallax={index ? '0.07' : '0.04'} />
+            <figure class:list={['relative row-span-2 overflow-hidden rounded-[1.25rem]', index === 1 && 'md:translate-y-12']} data-reveal="clip" style={`--d: ${index * 140}ms`}>
+              <img src={photo.src} alt={photo.alt} class="h-full w-full object-cover" loading="lazy" decoding="async" width="1536" height="2048" />
             </figure>
           ))}
         </div>
-        <div class="flex flex-col justify-center">
-          <p class="section-kicker hm-kicker-line" data-reveal="fade">Evidence, not adjectives</p>
-          <h2 class="section-title" data-split>The work should be visible.</h2>
+        <div>
+          <p class="section-kicker" data-reveal="fade">Evidence, not adjectives</p>
+          <h2 class="section-title" data-reveal="title">The work should be visible.</h2>
           <p class="mt-7 text-lg leading-8 text-slate" data-reveal>Each quotation starts with the property, workplace or project in front of us. Relevant evidence is added only where it is approved for use and helps explain the required outcome.</p>
-          <div class="mt-8 grid grid-cols-2 gap-4 border-y border-midnight/10 py-7" data-stagger="120">
+          <div class="mt-8 grid grid-cols-2 gap-4 border-y border-midnight/10 py-7" data-stagger="100">
             <div><strong class="font-serif text-5xl font-medium text-midnight">1</strong><span class="mt-1 block text-sm text-slate">clear route from requirement to review</span></div>
             <div><strong class="font-serif text-5xl font-medium text-midnight">3</strong><span class="mt-1 block text-sm text-slate">clear enquiry routes</span></div>
           </div>
@@ -341,35 +407,33 @@ const toneClass = { light: 'bg-white', pale: 'bg-porcelain', dark: 'hm-dark bg-m
       </div>
     </section>
 
+    {/* Founder: words left, portrait right. */}
     <section class="overflow-hidden bg-white">
       <div class="mx-auto grid max-w-[1440px] lg:grid-cols-2">
-        <div class="flex items-center bg-mist px-5 py-12 sm:px-8" data-reveal="clip" style="--hm-cover: var(--color-mist)">
+        <div class="flex items-center bg-mist px-5 py-12 sm:px-8 lg:order-2" data-reveal="clip" style="--hm-cover: var(--color-mist)">
           <FounderPortrait />
         </div>
-        <div class="flex items-center px-5 py-20 sm:px-8 lg:px-20">
+        <div class="flex items-center px-5 py-20 sm:px-8 lg:order-1 lg:px-20">
           <div>
-            <p class="section-kicker hm-kicker-line" data-reveal="fade">Founder-led</p>
-            <h2 class="section-title" data-split>Pedro’s Vision for High Quality Clean</h2>
+            <p class="section-kicker" data-reveal="fade">Founder-led</p>
+            <h2 class="section-title" data-reveal="title">Pedro’s Vision for High Quality Clean</h2>
             {paragraphs('Pedro’s Vision for High Quality Clean').map((paragraph, index) => <p class:list={['mt-7 text-lg leading-8 text-slate', index === 0 && 'hm-lead !text-[clamp(1.45rem,2vw,1.85rem)]']} data-reveal>{paragraph}</p>)}
             <p class="mt-7 font-bold text-midnight" data-reveal>Pedro Ndombasi <span class="ml-2 font-normal text-slate">Founder & Managing Director</span></p>
-            {ctaLabels('Pedro’s Vision for High Quality Clean').map((label) => <a href={controlledCtaHref(label)} class="button button-dark mt-8" data-magnetic>{label} <span aria-hidden="true">→</span></a>)}
+            {ctaLabels('Pedro’s Vision for High Quality Clean').map((label) => <a href={controlledCtaHref(label)} class="button button-dark mt-8">{label} <span aria-hidden="true">→</span></a>)}
           </div>
         </div>
       </div>
     </section>
 
-    <section class="relative overflow-hidden bg-copper py-20 text-midnight md:py-28" data-dock-hide="after" data-ambient>
-      <div class="hm-ring -right-20 -top-40 h-96 w-96" aria-hidden="true"></div>
-      <div class="hm-ring hm-ring-dash -right-44 -top-64 h-[36rem] w-[36rem]" aria-hidden="true"></div>
-      <div class="hm-ring -bottom-56 -left-24 h-[28rem] w-[28rem]" aria-hidden="true"></div>
-      <div class="relative mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 px-5 sm:px-8 md:flex-row md:items-center lg:px-14">
-        <div>
-          <h2 class="max-w-4xl font-serif text-4xl font-medium leading-tight md:text-6xl" data-split>Not Sure Which Cleaning Service You Need?</h2>
-          {paragraphs('Not Sure Which Cleaning Service You Need?').map((paragraph) => <p class="mt-4 max-w-2xl text-lg leading-8 text-midnight" data-reveal style="--d: 250ms">{paragraph}</p>)}
-        </div>
-        <div class="flex shrink-0 flex-col gap-3 sm:flex-row" data-reveal style="--d: 350ms">
-          <a href="#find-my-service" class="button button-dark shadow-[0_18px_40px_-16px_rgba(14,42,49,.65)]" data-magnetic>Find My Service <span class="hm-arrow-nudge" aria-hidden="true">↓</span></a>
-          <a href="/request-a-quote/" class="button border border-midnight/30 text-midnight hover:border-midnight hover:bg-white/30" data-magnetic>Request a Quote</a>
+    {/* Closing call to action: handover photograph, centred. */}
+    <section class="hm-closing hm-parallax relative isolate overflow-hidden text-white" data-dock-hide="after">
+      <img class="hm-closing-bg" src={lib('p-handover-keys').src} alt={lib('p-handover-keys').alt} loading="lazy" decoding="async" width="1200" height="900" />
+      <div class="relative mx-auto flex max-w-[1440px] flex-col items-center px-5 py-24 text-center sm:px-8 md:py-36 lg:px-14">
+        <h2 class="max-w-4xl font-serif text-4xl font-medium leading-tight md:text-6xl" data-reveal="title">Not Sure Which Cleaning Service You Need?</h2>
+        {paragraphs('Not Sure Which Cleaning Service You Need?').map((paragraph) => <p class="mt-5 max-w-2xl text-lg leading-8 text-white/90" data-reveal style="--d: 120ms">{paragraph}</p>)}
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row" data-reveal style="--d: 200ms">
+          <a href="#find-my-service" class="button button-primary">Find My Service <span class="hm-arrow-nudge" aria-hidden="true">↓</span></a>
+          <a href="/request-a-quote/" class="button button-ghost">Request a Quote</a>
         </div>
       </div>
     </section>

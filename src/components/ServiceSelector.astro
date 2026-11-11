@@ -1,58 +1,64 @@
-<section id="find-my-service" class="hm-selector relative isolate scroll-mt-20 overflow-hidden bg-copper py-20 md:py-28">
-  <div class="hm-selector-glow" aria-hidden="true"></div>
-  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
-    <div class="grid gap-8 lg:grid-cols-[.75fr_1.25fr] lg:items-end">
-      <div>
-        <p class="hm-kicker-line text-xs font-bold uppercase tracking-[0.22em] text-midnight" data-reveal="fade">Find my service</p>
-        <h2 class="mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-midnight md:text-6xl" data-split>What Do You Need Help With?</h2>
-      </div>
-      <p class="max-w-2xl text-lg leading-8 text-midnight" data-reveal style="--d: 200ms">Choose the situation that best describes what you need.</p>
-    </div>
+---
+import { cardLibrary } from '../data/card-imagery';
+const photo = cardLibrary['r-routine-visit'];
+---
 
-    <div class="hm-choices mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-stagger="25" data-stagger-type="quick">
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="maintain" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">01</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Keep my home consistently clean</strong>
+<section id="find-my-service" class="hm-selector relative isolate scroll-mt-20 bg-copper py-20 md:py-28">
+  <div class="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16 lg:px-14">
+    <div class="hm-chapter-head"><div class="hm-sticky">
+      <p class="hm-kicker-line text-xs font-bold uppercase tracking-[0.22em] text-midnight" data-reveal="fade">Find my service</p>
+      <h2 class="mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-midnight md:text-6xl" data-reveal="title">What Do You Need Help With?</h2>
+      <p class="mt-5 max-w-xl text-lg leading-8 text-midnight" data-reveal style="--d: 120ms">Choose the situation that best describes what you need.</p>
+      <figure class="hm-selector-photo mt-8 hidden overflow-hidden rounded-[1.25rem] lg:block" data-reveal="clip" style="--hm-cover: var(--color-copper)">
+        <img src={photo.src} alt={photo.alt} class="aspect-[5/4] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />
+      </figure>
+    </div></div>
+
+    <div>
+    <div class="hm-choices grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1" data-stagger="25" data-stagger-type="quick">
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="maintain" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">01</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Keep my home consistently clean</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">02</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Restore a home that needs more attention</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">02</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Restore a home that needs more attention</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">03</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Prepare a property before moving in</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">03</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Prepare a property before moving in</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">04</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Prepare a property for handover</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">04</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Prepare a property for handover</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="restore" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">05</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Remove dust and residue after building work</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="restore" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">05</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Remove dust and residue after building work</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="professional" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">06</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Arrange cleaning for a workplace</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="professional" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">06</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Arrange cleaning for a workplace</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="professional" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">07</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Arrange cleaning across properties or a portfolio</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="professional" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">07</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Arrange cleaning across properties or a portfolio</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="professional" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">08</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">Discuss a large or complex property</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="professional" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">08</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">Discuss a large or complex property</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
-      <button type="button" class="service-choice hm-choice group relative flex min-h-28 items-start gap-4 rounded-2xl border border-midnight/15 bg-porcelain p-5 pr-14 text-left transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl md:p-6 md:pr-14" data-result="unsure" aria-pressed="false" aria-controls="selector-result">
-        <span class="font-serif text-3xl text-copper-ink">09</span>
-        <strong class="block font-serif text-2xl font-medium leading-tight text-midnight">I am not sure</strong>
+      <button type="button" class="service-choice hm-choice group relative flex items-center gap-4 rounded-2xl border border-midnight/10 bg-porcelain px-5 py-4 pr-16 text-left md:gap-6 md:px-6" data-result="unsure" aria-pressed="false" aria-controls="selector-result">
+        <span class="w-8 shrink-0 font-serif text-2xl text-copper-ink">09</span>
+        <strong class="block font-serif text-xl font-medium leading-tight text-midnight md:text-[1.6rem]">I am not sure</strong>
         <span class="hm-choice-mark" aria-hidden="true"></span>
       </button>
     </div>
@@ -60,12 +66,13 @@
     <div id="selector-result" class="hm-result relative mt-5 hidden overflow-hidden rounded-2xl bg-white p-7 text-midnight shadow-2xl md:p-10" aria-live="polite">
       <span class="hm-result-bar" aria-hidden="true"></span>
       <p id="selector-label" class="text-xs font-bold uppercase tracking-[0.2em] text-copper-ink"></p>
-      <h3 id="selector-heading" class="mt-4 max-w-4xl font-serif text-3xl font-medium md:text-5xl">Your recommended route</h3>
+      <h3 id="selector-heading" class="mt-4 max-w-4xl font-serif text-3xl font-medium md:text-4xl">Your recommended route</h3>
       <p id="selector-copy" class="mt-5 max-w-3xl leading-7 text-slate"></p>
       <div class="mt-6 flex flex-col gap-3 sm:flex-row">
         <a id="selector-primary" class="button button-dark hm-result-primary" href="/request-a-quote/">Continue to your enquiry</a>
         <a id="selector-secondary" class="button border border-midnight/20 text-midnight hover:border-copper" href="/home-cleaning-london/">Compare home services</a>
       </div>
+    </div>
     </div>
   </div>
 </section>

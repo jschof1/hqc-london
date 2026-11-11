@@ -1,4 +1,8 @@
 ---
+import { cardLibrary, type CardImageId } from '../data/card-imagery';
+
+// Illustrative library images, one per card (Jack, 11 Nov 2026: image-led homepage).
+const railImages: CardImageId[] = ['r-viewing-ready', 'p-report-photo', 'p-postcode', 'r-checklist-home', 'k-media'];
 const proofPoints = [
   {
     number: '01',
@@ -50,8 +54,9 @@ const proofPoints = [
     <div class="trust-rail mt-12" data-trust-rail tabindex="0" aria-label="How HQC builds confidence before a clean" data-stagger="90" data-stagger-type="right" data-stagger-together>
       {proofPoints.map((point, index) => (
         <article class:list={['trust-rail-card', index === 0 && 'trust-rail-card-featured']}>
-          <span class:list={['font-serif text-5xl', index === 0 ? 'text-copper' : 'text-copper-ink']}>{point.number}</span>
-          <h3 class="mt-16 font-serif text-3xl font-medium leading-[1.02] text-midnight">{point.title}</h3>
+          <span class="trust-rail-media"><img src={cardLibrary[railImages[index]].src} alt={cardLibrary[railImages[index]].alt} loading="lazy" decoding="async" width="1200" height="900" draggable="false" /></span>
+          <span class:list={['mt-6 font-serif text-4xl', index === 0 ? 'text-copper' : 'text-copper-ink']}>{point.number}</span>
+          <h3 class="mt-4 font-serif text-3xl font-medium leading-[1.02] text-midnight">{point.title}</h3>
           <p class="mt-5 leading-7 text-slate">{point.copy}</p>
           <p class="mt-auto border-t border-midnight/10 pt-5 text-xs font-bold uppercase tracking-[.16em] text-slate">{point.detail}</p>
         </article>
@@ -84,6 +89,7 @@ const proofPoints = [
   .trust-rail-card {
     display: flex;
     min-height: 25rem;
+    overflow: hidden;
     flex-direction: column;
     scroll-snap-align: start;
     border: 1px solid rgb(14 42 49 / .11);
@@ -92,6 +98,15 @@ const proofPoints = [
     padding: 1.75rem;
     transition: transform 300ms ease, border-color 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
   }
+
+  .trust-rail-media {
+    display: block;
+    margin: -1.75rem -1.75rem 0;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+  }
+  .trust-rail-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 900ms cubic-bezier(.22, 1, .36, 1); -webkit-user-drag: none; }
+  .trust-rail-card:hover .trust-rail-media img { transform: scale(1.05); }
 
   .trust-rail-card:hover {
     transform: translateY(-0.35rem);

@@ -2,6 +2,7 @@
 // The inline gate in index.astro adds `hqc-motion` to <html> before first paint when
 // reduced motion is off; without JavaScript, or if this module fails, everything stays visible.
 // The hero intro is pure CSS (data-intro), so the headline and actions never wait for this module.
+// Parallax runs on the CSS scroll timeline (home-motion.css), not here.
 
 declare global {
   interface Window { __hqcMotion?: boolean }
@@ -9,102 +10,104 @@ declare global {
 
 const root = document.documentElement;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 const motionOn = () => root.classList.contains('hqc-motion') && !reduceMotion.matches;
 
-// Split display headings into masked words. Text nodes are wrapped in place, so textContent,
-// element order and nested emphasis stay exactly as authored. The heading keeps its authored text
-// as its accessible name, so screen readers do not stop on each word.
-function splitWords(el: HTMLElement) {
-  if (el.dataset.splitDone) return;
-  el.dataset.splitDone = '1';
-  const name = (el.textContent ?? '').replace(/\s+/g, ' ').trim();
-  if (name && !el.hasAttribute('aria-label')) el.setAttribute('aria-label', name);
-  let index = 0;
-  const walk = (node: Node) => {
-    for (const child of Array.from(node.childNodes)) {
-      if (child.nodeType === Node.TEXT_NODE) {
-        const parts = (child.textContent ?? '').split(/(\s+)/);
-        if (parts.every((part) => !part.trim())) continue;
-        const fragment = document.createDocumentFragment();
-        for (const part of parts) {
-          if (!part) continue;
-          if (!part.trim()) {
-            fragment.append(document.createTextNode(part));
-            continue;
-          }
-          const outer = document.createElement('span');
-          outer.className = 'hm-word';
-          outer.setAttribute('aria-hidden', 'true');
-          const inner = document.createElement('span');
-          inner.className = 'hm-word-inner';
-          inner.style.setProperty('--w', String(index++));
-          inner.textContent = part;
-          outer.append(inner);
-          fragment.append(outer);
-        }
-        child.replaceWith(fragment);
-      } else if (child.nodeType === Node.ELEMENT_NODE && (child as Element).tagName !== 'BR') {
-        walk(child);
-      }
-    }
-  };
-  walk(el);
-}
-
-function reveal(el: Element) {
-  el.classList.add('is-in');
-  // Once the masked words have risen, release the mask so italic swashes and descenders show.
-  if (el.hasAttribute('data-split')) setTimeout(() => el.classList.add('is-done'), 1500);
-}
-
 function initReveals() {
-  document.querySelectorAll<HTMLElement>('[data-split]').forEach(splitWords);
   document.querySelectorAll<HTMLElement>('[data-stagger]').forEach((group) => {
     const count = group.children.length;
-    // Cap a group's total stagger at 250ms so late items never trail a quick scroll.
-    const step = Math.min(Number(group.dataset.stagger) || 80, count > 1 ? 250 / (count - 1) : 0);
-    const startAt = Number(group.dataset.staggerStart) || 0;
+    // Cap a group's total stagger at 300ms so late items never trail a quick scroll.
+    const step = Math.min(Number(group.dataset.stagger) || 80, count > 1 ? 300 / (count - 1) : 0);
     Array.from(group.children).forEach((child, i) => {
-      (child as HTMLElement).style.setProperty('--d', `${startAt + i * step}ms`);
-      if (!(child as HTMLElement).hasAttribute('data-reveal')) (child as HTMLElement).setAttribute('data-reveal', group.dataset.staggerType || 'up');
+      const el = child as HTMLElement;
+      el.style.setProperty('--d', `${i * step}ms`);
+      if (!el.hasAttribute('data-reveal')) el.setAttribute('data-reveal', group.dataset.staggerType || 'up');
     });
   });
 
-  const options = { rootMargin: '0px 0px -4% 0px', threshold: 0 };
+  // Start slightly before an element enters, so nothing is caught mid-fade at normal speed.
+  const options = { rootMargin: '0px 0px 6% 0px', threshold: 0 };
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      reveal(entry.target);
+      entry.target.classList.add('is-in');
       io.unobserve(entry.target);
     }
   }, options);
-  document.querySelectorAll<HTMLElement>('[data-reveal], [data-split]').forEach((el) => {
+  document.querySelectorAll<HTMLElement>('[data-reveal]').forEach((el) => {
     if (el.parentElement?.hasAttribute('data-stagger-together')) return; // revealed with the group
     io.observe(el);
   });
   const groupIo = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      Array.from(entry.target.children).forEach(reveal);
+      Array.from(entry.target.children).forEach((child) => child.classList.add('is-in'));
       groupIo.unobserve(entry.target);
     }
   }, options);
   document.querySelectorAll<HTMLElement>('[data-stagger-together]').forEach((group) => groupIo.observe(group));
-}
 
-// Pause looping ambient animation while its section is off screen.
-function initAmbient() {
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) entry.target.classList.toggle('is-paused', !entry.isIntersecting);
+  // Anything already above the fold on load (restored scroll, anchors) shows at once.
+  requestAnimationFrame(() => {
+    document.querySelectorAll<HTMLElement>('[data-reveal]:not(.is-in)').forEach((el) => {
+      if (el.getBoundingClientRect().bottom < 0) el.classList.add('is-in');
+    });
   });
-  document.querySelectorAll<HTMLElement>('[data-ambient]').forEach((el) => io.observe(el));
 }
 
-// Scroll-linked values: one rAF loop writes CSS custom properties; CSS does the drawing.
+// Hero: the three routes steer the photograph. Autoplay only while the hero is on screen,
+// the tab is visible and motion is allowed; hovering or focusing a route takes over.
+function initHeroSlides() {
+  const hero = document.querySelector<HTMLElement>('[data-hero]');
+  if (!hero) return;
+  const slides = Array.from(hero.querySelectorAll<HTMLElement>('[data-slide]'));
+  const tabs = Array.from(hero.querySelectorAll<HTMLElement>('[data-slide-tab]'));
+  if (slides.length < 2) return;
+  const interval = 6500;
+  hero.style.setProperty('--hm-slide-ms', `${interval}ms`);
+  let current = 0;
+  let timer = 0;
+  let inView = true;
+  let held = false;
+
+  const show = (index: number) => {
+    if (index === current) return;
+    hero.classList.add('is-started');
+    current = index;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    tabs.forEach((tab) => {
+      const active = Number(tab.dataset.slideTab) === index;
+      tab.classList.toggle('is-active', active);
+      // Restart the tab timer animation.
+      const bar = tab.querySelector<HTMLElement>('.hm-route-tab-timer');
+      if (active && bar) { bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = ''; }
+    });
+  };
+  const playing = () => motionOn() && inView && !held && document.visibilityState === 'visible';
+  const schedule = () => {
+    clearTimeout(timer);
+    hero.classList.toggle('is-playing', playing());
+    if (!playing()) return;
+    timer = window.setTimeout(() => { show((current + 1) % slides.length); schedule(); }, interval);
+  };
+
+  tabs.forEach((tab) => {
+    const index = Number(tab.dataset.slideTab);
+    const take = () => { held = true; show(index); schedule(); };
+    const release = () => { held = false; schedule(); };
+    tab.addEventListener('pointerenter', (event) => { if (event.pointerType === 'mouse') take(); });
+    tab.addEventListener('pointerleave', (event) => { if (event.pointerType === 'mouse') release(); });
+    tab.addEventListener('focus', take);
+    tab.addEventListener('blur', release);
+  });
+  new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; schedule(); }, { threshold: 0.25 }).observe(hero);
+  document.addEventListener('visibilitychange', schedule);
+  reduceMotion.addEventListener('change', schedule);
+  schedule();
+}
+
+// Scroll-linked values: one rAF-throttled pass writes CSS custom properties; CSS does the drawing.
 function initScrollLinked() {
   const progressBar = document.querySelector<HTMLElement>('[data-page-progress]');
-  const parallax = Array.from(document.querySelectorAll<HTMLElement>('[data-parallax]'));
   const tracks = Array.from(document.querySelectorAll<HTMLElement>('[data-scroll-track]'));
   let ticking = false;
 
@@ -140,15 +143,6 @@ function initScrollLinked() {
       });
       steps.forEach((step, i) => step.classList.toggle('is-current', i === current));
     }
-
-    if (!motionOn() || !finePointer.matches) return;
-    for (const el of parallax) {
-      const rect = el.getBoundingClientRect();
-      if (rect.bottom < -200 || rect.top > vh + 200) continue;
-      const speed = Number(el.dataset.parallax) || 0.08;
-      const offset = (rect.top + rect.height / 2 - vh / 2) * -speed;
-      el.style.setProperty('--py', `${offset.toFixed(1)}px`);
-    }
   };
 
   const onScroll = () => {
@@ -161,44 +155,9 @@ function initScrollLinked() {
   update();
 }
 
-// Spotlight, magnetic pull and tilt, for precise pointers only.
-function initPointer() {
-  if (!finePointer.matches) return;
-  document.querySelectorAll<HTMLElement>('[data-spotlight]').forEach((el) => {
-    el.addEventListener('pointermove', (event) => {
-      const rect = el.getBoundingClientRect();
-      el.style.setProperty('--mx', `${event.clientX - rect.left}px`);
-      el.style.setProperty('--my', `${event.clientY - rect.top}px`);
-    });
-  });
-  if (!motionOn()) return;
-  document.querySelectorAll<HTMLElement>('[data-magnetic]').forEach((el) => {
-    el.addEventListener('pointermove', (event) => {
-      const rect = el.getBoundingClientRect();
-      el.style.setProperty('--mgx', `${((event.clientX - rect.left - rect.width / 2) * 0.18).toFixed(1)}px`);
-      el.style.setProperty('--mgy', `${((event.clientY - rect.top - rect.height / 2) * 0.28).toFixed(1)}px`);
-    });
-    el.addEventListener('pointerleave', () => {
-      el.style.setProperty('--mgx', '0px');
-      el.style.setProperty('--mgy', '0px');
-    });
-  });
-  document.querySelectorAll<HTMLElement>('[data-tilt]').forEach((el) => {
-    el.addEventListener('pointermove', (event) => {
-      const rect = el.getBoundingClientRect();
-      el.style.setProperty('--rx', `${(((event.clientY - rect.top) / rect.height - 0.5) * -4).toFixed(2)}deg`);
-      el.style.setProperty('--ry', `${(((event.clientX - rect.left) / rect.width - 0.5) * 5).toFixed(2)}deg`);
-    });
-    el.addEventListener('pointerleave', () => {
-      el.style.setProperty('--rx', '0deg');
-      el.style.setProperty('--ry', '0deg');
-    });
-  });
-}
-
-// Mobile action dock: visible whenever the hero actions are out of view (above or, on short
-// phones, below), hidden while the selector or the closing call to action is on screen, after
-// the closing call to action, and while the cookie banner or help prompt is open.
+// Mobile action dock: visible whenever the hero actions are out of view, hidden while the
+// selector or the closing call to action is on screen, after the closing call to action, and
+// while the cookie banner or help prompt is open.
 function initDock() {
   const dock = document.querySelector<HTMLElement>('[data-action-dock]');
   const heroActions = document.querySelector<HTMLElement>('[data-hero-actions]');
@@ -249,9 +208,7 @@ function initDock() {
     let changed = false;
     for (const el of blockers) {
       if (el.dataset.dockHide !== 'after') continue;
-      // Reconcile in both directions: blocked while visible or above, released once fully below.
-      const rect = el.getBoundingClientRect();
-      const block = rect.top < innerHeight;
+      const block = el.getBoundingClientRect().top < innerHeight;
       if (block !== state.blocked.has(el)) {
         if (block) state.blocked.add(el);
         else state.blocked.delete(el);
@@ -272,9 +229,8 @@ function start() {
   } finally {
     window.__hqcMotion = true;
   }
-  initAmbient();
+  initHeroSlides();
   initScrollLinked();
-  initPointer();
   initDock();
 }
 
