@@ -3168,6 +3168,199 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-logo-rebuild",
+      "label": "11 Nov: logo rebuilt cleanly",
+      "date": "2026-11-11",
+      "captureDate": "2026-11-11",
+      "commit": "028b45098becf5ca4cb0800673f783f3cd98f797",
+      "deploymentUrl": "https://71d122e7.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://71d122e7.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "Follows the second site-wide pass. The flat HQC logo is rebuilt cleanly after Jack found the header logo looked wrong.",
+      "changes": [
+        "The HQC monogram is re-traced from the approved artwork at much higher resolution, so its edges are clean.",
+        "HIGH QUALITY CLEAN and EST. 2021 | LONDON are set as clean vector lettering in the typefaces the approved artwork uses (Cinzel Bold and Montserrat).",
+        "The gold now matches the site gold, and the wordmark lines up with the monogram.",
+        "The header uses a header-size version without the EST. 2021 | LONDON line, which could not be read at that size; the footer keeps the full logo.",
+        "Browser tab and home-screen icons are regenerated from the new monogram on a dark tile.",
+        "Everything else is as in the second site-wide pass (nov11-sitewide-v2)."
+      ],
+      "outstanding": [
+        "The Google reviews are a saved snapshot from 11 Nov; new reviews appear only when the snapshot is refreshed.",
+        "Three older pages (services, why us and the founder story section) still use the earlier photo of Pedro.",
+        "Pedro to confirm whether the bedroom (WA0016) and living-area (WA0015) library photos are HQC jobs; until then they sit unlabelled beside evidence wording on the homepage and the reviews page.",
+        "Pedro to choose the proof stories and supply source, quote and permission.",
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end.",
+        "Pedro to review the flat gold logo set at actual size on the site, especially the 16px favicon, before it is treated as approved.",
+        "The Privacy Policy and Terms still show their staging placeholders (approval date, privacy contact) from the approved legal draft; these need final legal details before launch."
+      ],
+      "provenance": "Generated scenes remain illustrative, not photos of HQC jobs. Captured on 2026-11-11 from the immutable preview https://71d122e7.hqc-london.pages.dev (commit 028b450) at 1440px and 390px, non-essential cookies rejected, no forms submitted. Review candidate, not launched: the live website is unchanged and the Phase 8 production hold remains.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-home-desktop.jpg",
+            "width": 1440,
+            "height": 15667,
+            "sha256": "bce952b014e7c53e17f841139b04651a08e23997a25fedd1585fc372450b60e5",
+            "capturedAt": "2026-11-11T19:32:18.110Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-home-mobile.jpg",
+            "width": 390,
+            "height": 24942,
+            "sha256": "9f8665b67c959358fa1845c317a1a25e37060bac6606bd1b735804b6a60f94ff",
+            "capturedAt": "2026-11-11T19:35:17.942Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-quote-desktop.jpg",
+            "width": 1440,
+            "height": 6617,
+            "sha256": "960a1e675ac15ab4af383bba0423880e0c4d6181e9c8b9733f5387cd4ab54868",
+            "capturedAt": "2026-11-11T19:32:35.101Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-quote-mobile.jpg",
+            "width": 390,
+            "height": 11104,
+            "sha256": "139bc95865f6d2bb0ef3d6acabf1f5a2e17b2668968a555db25202e66b344ef1",
+            "capturedAt": "2026-11-11T19:35:34.036Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-how-desktop.jpg",
+            "width": 1440,
+            "height": 13379,
+            "sha256": "4bc41431c68bf8b58e40205fcfcfbb62444bbca9e2a958d45a515c1632f43fa0",
+            "capturedAt": "2026-11-11T19:32:57.054Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-how-mobile.jpg",
+            "width": 390,
+            "height": 18860,
+            "sha256": "74151d9aa5a70850352f6efc1d410de409978bf3060132a0b4d5806cc9b34909",
+            "capturedAt": "2026-11-11T19:35:56.901Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-contact-desktop.jpg",
+            "width": 1440,
+            "height": 7249,
+            "sha256": "e93b5ea6ce601106275367fb59dadb91a7966b77c5136a372d2df7b7edf55cb4",
+            "capturedAt": "2026-11-11T19:33:14.034Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-contact-mobile.jpg",
+            "width": 390,
+            "height": 10726,
+            "sha256": "fd1a22a9e7e05ee18e2c8fb1d80c66b04dad4808a2058cff406de54a025a717e",
+            "capturedAt": "2026-11-11T19:36:11.851Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 13193,
+            "sha256": "b696ce50e8ea8072bd48a714583a99688fe894225391629c82e1ea15ec7484cb",
+            "capturedAt": "2026-11-11T19:33:32.937Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 18968,
+            "sha256": "fec265e12118a67cef1ce3fc593f71287c4d9b2bbfc21ca94bbc1f56da7aad65",
+            "capturedAt": "2026-11-11T19:36:33.455Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-about-desktop.jpg",
+            "width": 1440,
+            "height": 14459,
+            "sha256": "e533935684b8da9403e9904bcaf785c9ff38e7822e414b740a012c0805dc8456",
+            "capturedAt": "2026-11-11T19:33:54.337Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-about-mobile.jpg",
+            "width": 390,
+            "height": 21369,
+            "sha256": "d0fb9ed560a7e1c4615cdaadeff7a7acfe851f3e0c3056e09dc2887acc0574bf",
+            "capturedAt": "2026-11-11T19:36:57.434Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10442,
+            "sha256": "a935378df2b32b12685e7152031bbab2a1207d79be64ec0b3f904c3802f22878",
+            "capturedAt": "2026-11-11T19:34:12.909Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-reviews-mobile.jpg",
+            "width": 390,
+            "height": 14948,
+            "sha256": "54e02eeb3e4c81082ee1a7777f1602cca25528d75f494f8d3662a4d029c104f2",
+            "capturedAt": "2026-11-11T19:37:16.481Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 10785,
+            "sha256": "784a0889d1b904e7b89c6ee3ef504b0dd6a3423831688dca7a6e598eefd40458",
+            "capturedAt": "2026-11-11T19:34:29.124Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-privacy-mobile.jpg",
+            "width": 390,
+            "height": 16905,
+            "sha256": "54c559196b80febfe904efd02b617e889b2dbc5c240a5a36cde019205541be43",
+            "capturedAt": "2026-11-11T19:37:36.860Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov11-logo-rebuild-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13948,
+            "sha256": "56dcb2b11c86ec0b671b9c794a1f7bf4c9ca8ba754f1ffd2a2f9b242e5ad4a58",
+            "capturedAt": "2026-11-11T19:34:48.926Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-logo-rebuild-terms-mobile.jpg",
+            "width": 390,
+            "height": 21970,
+            "sha256": "6eb1cf74ba2fe665041060bcf21bd77b2ee8dad5e8240fb66071f64f6224b9de",
+            "capturedAt": "2026-11-11T19:38:02.663Z",
+            "sourceUrl": "https://71d122e7.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -3218,7 +3411,7 @@
     }
   ],
   "defaultBefore": "live-oct29",
-  "defaultAfter": "nov11-sitewide-v2",
+  "defaultAfter": "nov11-logo-rebuild",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
