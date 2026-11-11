@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "5aedb71082d7a943c2b6beabe0ce5914072a3573",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site. Follow-up, Jack, 11 November 2026: Jack is happy with the homepage; using the taste skill, update every other page to the same design, pragmatically through shared components, with agents working on different pages in parallel. No copy changes. Follow-up, Jack, 11 November 2026 (after the 575ddc71 preview): the other pages have many silly mistakes and lack the homepage's range of presentation; do much more so they are far better. Follow-up, Jack, 11 November 2026: the header logo in the top left looks weird; work on it.",
+  "baseline": "988e77f52e188845998995298aee848985eec02d",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site. Follow-up, Jack, 11 November 2026: Jack is happy with the homepage; using the taste skill, update every other page to the same design, pragmatically through shared components, with agents working on different pages in parallel. No copy changes. Follow-up, Jack, 11 November 2026 (after the 575ddc71 preview): the other pages have many silly mistakes and lack the homepage's range of presentation; do much more so they are far better. Follow-up, Jack, 11 November 2026: the header logo in the top left looks weird; work on it. Follow-up, Jack, 11 November 2026: use the more golden, alive 3D logo in the header instead of the flat one.",
   "requirements": [
     {
       "id": "M1",
@@ -82,6 +82,10 @@
     {
       "id": "LG18",
       "text": "Logo rebuild (Jack, 11 Nov): the flat logo set is rebuilt cleanly. Monogram re-traced from the approved stacked master at 8x with smoothing (no lumps); wordmark and tagline set as vector paths in the faces the approved artwork uses (Cinzel Bold, Montserrat Medium); flat gold matched to the site gold #D1A467; layout kept to Pedro's horizontal recomposition. A header-size lockup omits the tagline (illegible below about 60px tall); the footer and full lockups keep it. Favicons and app icons regenerated from the new monogram on a midnight tile."
+    },
+    {
+      "id": "LG19",
+      "text": "Header logo (Jack, 11 Nov): the header uses the 3D gold logo: the HQC monogram cut from the approved 3D artwork along the clean traced outline, with HIGH QUALITY CLEAN and the rule in the approved lettering filled with a metallic gold gradient. The footer and icons keep the flat set. Pedro's 8 Oct request for a flat website logo is noted for his review."
     }
   ],
   "allowedFiles": [
@@ -197,7 +201,8 @@
       "requirements": [
         "H12",
         "LG15",
-        "LG18"
+        "LG18",
+        "LG19"
       ],
       "allowDelete": false,
       "reason": "One-line desktop navigation from 1024px."
@@ -468,6 +473,22 @@
       ],
       "allowDelete": false,
       "reason": "Header-size lockup (monogram, wordmark, rule)."
+    },
+    {
+      "path": "public/images/brand/hqc-logo-header-3d.svg",
+      "requirements": [
+        "LG19"
+      ],
+      "allowDelete": false,
+      "reason": "3D gold header lockup."
+    },
+    {
+      "path": "public/images/brand/hqc-monogram-3d.webp",
+      "requirements": [
+        "LG19"
+      ],
+      "allowDelete": false,
+      "reason": "3D gold monogram for the tight header range."
     }
   ],
   "preserve": [
