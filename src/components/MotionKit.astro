@@ -1,0 +1,20 @@
+---
+// Shared design kit (Jack, 11 Nov 2026): the homepage's stylesheet, motion gate and motion engine
+// for every redesigned page. Include it once inside <Layout>, before the page's <main class="hm-page">.
+// Without JavaScript, or with reduced motion, every element stays visible.
+import '../styles/home-motion.css';
+---
+
+<script is:inline>
+  (function () {
+    var root = document.documentElement;
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    root.classList.add('hqc-motion');
+    // Fail open: if the motion module never starts, show everything.
+    setTimeout(function () { if (!window.__hqcMotion) root.classList.remove('hqc-motion'); }, 1200);
+  })();
+</script>
+
+<script>
+  import '../scripts/home-motion';
+</script>

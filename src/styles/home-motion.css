@@ -66,7 +66,7 @@
 @keyframes hm-nudge { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(4px); } }
 
 /* Entrance offsets never widen the page. */
-main:has(.hm-hero) { overflow-x: clip; }
+main.hm-page { overflow-x: clip; }
 
 /* ---------- Hero ---------- */
 .hm-hero-main { display: grid; }
@@ -766,7 +766,7 @@ main:has(.hm-hero) { overflow-x: clip; }
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
-  html:has(.hm-hero) { scroll-behavior: auto; }
+  html:has(main.hm-page) { scroll-behavior: auto; }
   /* Hover keeps its colour feedback but drops lifts and zooms. */
   .hm-route:hover, .hm-card-dark:hover, .hm-complex-step:hover, .hm-choice:hover,
   .hm-choice:hover .hm-choice-mark { translate: none; }
@@ -798,12 +798,12 @@ main:has(.hm-hero) { overflow-x: clip; }
 /* ---------- Type scale and section rhythm (taste review, 11 Nov) ----------
    Section headings size to the column they sit in (container query units), so a heading in a
    half-width column is smaller than one spanning the page, and every h2 shares one scale. */
-main:has(.hm-hero) { --color-slate: #43565b; } /* body text at AA+ on porcelain and white */
+main.hm-page { --color-slate: #43565b; } /* body text at AA+ on porcelain and white */
 .hm-routes-section .max-w-3xl, #find-my-service > div > .max-w-3xl, .hm-outcome .grid:has(> .hm-outcome-title),
 .hm-homes > div, .hm-stage-panel, .hm-split-copy, .hm-why-section .max-w-4xl, .hm-pin-stage .max-w-3xl,
 .hm-chapter-head .hm-sticky, .hm-visible .grid > div:has(> h2), .hm-founder .w-full, .hm-closing > div,
 section[aria-labelledby='trust-rail-title'] .max-w-3xl, .hm-evidence .max-w-4xl { container-type: inline-size; }
-main:has(.hm-hero) h2.section-title, .hm-outcome-title, .hm-homes-title, #find-my-service h2, .hm-pin h2, .hm-closing h2 {
+main.hm-page h2.section-title, .hm-outcome-title, .hm-homes-title, #find-my-service h2, .hm-pin h2, .hm-closing h2 {
   font-size: clamp(2.25rem, 7cqi, 3.4rem);
   line-height: 1.05;
   letter-spacing: -.025em;
@@ -832,3 +832,6 @@ main:has(.hm-hero) h2.section-title, .hm-outcome-title, .hm-homes-title, #find-m
   .hm-founder-photo { aspect-ratio: auto; max-height: none; min-height: 44rem; }
   .hm-founder-copy { padding: 6rem var(--hm-edge) 6rem 5rem; }
 }
+
+/* A secondary pill on a dark ground keeps readable text on hover. */
+.hm-dark .hm-cta-secondary:hover, .bg-midnight .hm-cta-secondary:hover { color: var(--color-midnight); }

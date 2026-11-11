@@ -1,7 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import MotionKit from '../components/MotionKit.astro';
 import { offeringImages } from '../data/section-imagery';
+import { cardLibrary } from '../data/card-imagery';
+import '../styles/enquiry-pages.css';
 
 // Image-led round (10 Nov 2026): route cards reuse the three-offerings images.
 const complexLobby = { src: '/images/phase8-nov6/complex-b-800.webp', srcset: '/images/phase8-nov6/complex-b-800.webp 800w, /images/phase8-nov6/complex-b-1600.webp 1600w', alt: 'Cleaner mopping a shared apartment-block lobby beside a lift.' };
@@ -11,6 +14,17 @@ const routeImages = {
   residential: offeringImages.home,
   complex: complexLobby
 };
+// Site-wide design (11 Nov 2026): decorative library photographs for the hero and two chapters.
+// They repeat nothing written on the page, so they carry empty alt text.
+const heroPhoto = cardLibrary['g-enquiry'];
+const informationPhoto = cardLibrary['g-scope-plan'];
+const accuracyPhoto = cardLibrary['p-signoff'];
+const routeCards = [
+  { image: routeImages.property, title: 'Property or Portfolio', items: ['property managers;', 'estate and letting agents;', 'landlords;', 'block managers;', 'developers;', 'portfolio teams.'], href: '/request-a-quote/?route=property#routed-quote-form', cta: 'Property or Portfolio Requirement' },
+  { image: routeImages.commercial, title: 'Workplace or Commercial Site', items: ['offices;', 'workplaces;', 'commercial premises;', 'recurring programmes;', 'commercial deep cleaning.'], href: '/request-a-quote/?route=commercial#routed-quote-form', cta: 'Workplace or Commercial Requirement' },
+  { image: routeImages.residential, title: 'Home', items: ['Essential Clean™;', 'Deep Clean™;', 'Move-In Reset™;', 'End of Tenancy™;', 'Post-Construction™.'], href: '/request-a-quote/?route=residential#routed-quote-form', cta: 'Home Cleaning Requirement' },
+  { image: routeImages.complex, title: 'Complex Property or Project', items: ['unusually large requirements;', 'specialist finishes;', 'multiple cleaning disciplines;', 'complex access;', 'high-value contents;', 'phased work;', 'project coordination.'], href: '/request-a-quote/?route=complex#routed-quote-form', cta: 'Complex Property or Project' }
+];
 ---
 
 <Layout
@@ -19,15 +33,24 @@ const routeImages = {
   pageType="WebPage"
 >
   <Header />
-  <main class="min-h-screen bg-mist px-4 pb-20 pt-28 sm:px-6">
-    <div class="mx-auto max-w-4xl">
-      <div class="text-center">
-        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-navy">Request a quote</p>
-        <h1 class="mt-4 font-serif text-4xl text-navy md:text-6xl">Tell Us What You Need the Cleaning to Achieve</h1>
-        <p class="mx-auto mt-5 max-w-2xl text-lg text-ink/70">You do not need to select the perfect service before contacting HQC. Start with the property or site, its current condition and what needs to happen next.</p>
+  <MotionKit />
+  <main class="hm-page eq-page min-h-screen bg-porcelain pt-20">
+    {/* Hero: midnight copy beside one photograph; paints at once, no reveal. */}
+    <section class="eq-hero">
+      <div class="eq-hero-copy">
+        <p class="section-kicker hm-kicker-line text-copper">Request a quote</p>
+        <h1 class="eq-hero-h1 mt-5 font-serif font-medium">Tell Us What You Need the Cleaning to Achieve</h1>
+        <p class="eq-hero-lead">You do not need to select the perfect service before contacting HQC. Start with the property or site, its current condition and what needs to happen next.</p>
       </div>
+      <figure class="eq-hero-media">
+        <img src={heroPhoto.src} alt="" width="1200" height="900" fetchpriority="high" loading="eager" decoding="async" />
+      </figure>
+    </section>
 
-      <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="tablist" aria-label="Enquiry type">
+    {/* Form: route tabs and the routed form in a white panel. No reveal here: the form is usable at once. */}
+    <section class="eq-form-section">
+      <div class="eq-form-wrap">
+      <div class="eq-tabs grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="tablist" aria-label="Enquiry type">
         <button id="residential-route-tab" class="route-tab rounded-xl border border-gold bg-white p-4 text-left" type="button" role="tab" data-route="residential" aria-selected="true" aria-controls="quote-route-panel" tabindex="0">
           <strong class="block text-navy">Home</strong><span class="mt-1 block text-sm text-ink/65">Essential Clean™, Deep Clean™, Move-In Reset™, End of Tenancy™ or Post-Construction™</span>
         </button>
@@ -42,7 +65,7 @@ const routeImages = {
         </button>
       </div>
 
-      <form id="routed-quote-form" class="mt-6 rounded-2xl border border-gold/30 bg-white p-6 shadow-xl md:p-10">
+      <form id="routed-quote-form" class="eq-form-panel mt-5">
         <input type="hidden" name="route" id="form-route" value="residential" />
         <input type="hidden" name="source_page" value={Astro.url.pathname} />
         <input type="hidden" name="buyer" id="buyer-context" />
@@ -58,7 +81,7 @@ const routeImages = {
         <input type="hidden" name="utm_content" id="utm-content-context" />
         <input type="hidden" name="utm_id" id="utm-id-context" />
 
-        <div id="quote-route-panel" class="mb-8 rounded-xl bg-navy p-5 text-white" role="tabpanel" tabindex="-1" aria-labelledby="residential-route-tab">
+        <div id="quote-route-panel" class="eq-route-panel mb-8 rounded-xl bg-navy p-5 text-white" role="tabpanel" tabindex="-1" aria-labelledby="residential-route-tab">
           <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Selected route</p>
           <h2 id="route-heading" class="mt-2 font-serif text-2xl">Residential quotation</h2>
           <p id="route-help" class="mt-2 text-sm text-white/75">Tell us the service, property condition, full address, access and parking details.</p>
@@ -102,80 +125,92 @@ const routeImages = {
         </label>
 
         <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" role="status" aria-live="polite"></div>
-        <button id="quote-submit" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy hover:bg-navy hover:text-white" type="submit">Submit Your Requirement</button>
+        <button id="quote-submit" class="eq-submit mt-6 w-full" type="submit">Submit Your Requirement</button>
       </form>
-      <div class="mt-5 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3">
-        <p class="text-sm text-ink/65">Not sure which route fits?</p>
-        <a href="/#find-my-service" class="inline-flex min-h-11 items-center justify-center rounded-full border border-navy/20 px-5 py-2 text-sm font-semibold text-navy transition hover:border-gold hover:bg-white">Find My Service <span class="ml-2" aria-hidden="true">→</span></a>
+      <div class="eq-unsure">
+        <p class="text-sm text-slate">Not sure which route fits?</p>
+        <a href="/#find-my-service" class="hm-cta-link hm-cta-secondary">Find My Service <span class="hm-cta-chip" aria-hidden="true">→</span></a>
+      </div>
+      </div>
+    </section>
+
+    <div data-controlled-copy="Batch 5, page 3">
+      {/* Routes: four dark photo cards on midnight. */}
+      <section class="eq-section eq-dark hm-dark" aria-labelledby="quote-routes-title">
+        <div class="eq-shell">
+          <div class="eq-head eq-head-center">
+            <h2 id="quote-routes-title" class="section-title mx-auto text-white" data-reveal="title">Choose the Route That Best Fits You</h2>
+          </div>
+          <div class="hm-cards eq-route-cards" data-stagger="90">
+            {routeCards.map((card) => (
+              <article class="hm-card hm-card-dark">
+                <span class="hm-card-media block overflow-hidden">
+                  <img src={card.image.src} srcset={card.image.srcset} sizes="(min-width: 1280px) 330px, (min-width: 768px) 50vw, 100vw" alt={card.image.alt} loading="lazy" decoding="async" width="800" height="450" />
+                </span>
+                <div class="hm-card-body">
+                  <h3 class="eq-card-title">{card.title}</h3>
+                  <p class="eq-for">For:</p>
+                  <ul class="eq-ticks">{card.items.map((item) => <li><span>{item}</span></li>)}</ul>
+                  <p class="hm-card-foot"><a class="hm-cta-link" href={card.href}>{card.cta} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Information: photograph left (holds while the list scrolls), checklist panel right. */}
+      <section class="hm-split hm-split-media-left bg-porcelain" aria-labelledby="quote-information-title">
+        <div class="hm-split-copy">
+          <h2 id="quote-information-title" class="section-title" data-reveal="title">Information That Helps Us Route the Enquiry</h2>
+          <ul class="hm-checks hm-checks-panel mt-8" data-stagger="40" data-stagger-type="fade">
+            {['name;', 'email;', 'telephone;', 'property or site address;', 'postcode;', 'buyer type;', 'service requirement;', 'property or site type;', 'condition;', 'desired outcome;', 'preferred timing;', 'access information;', 'photos or supporting files;', 'message or additional details.'].map((item) => <li><span>{item}</span></li>)}
+          </ul>
+          <p class="mt-6 text-lg leading-8 text-slate" data-reveal>Not every enquiry needs every field.</p>
+        </div>
+        <figure class="hm-split-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
+          <img src={informationPhoto.src} alt="" loading="lazy" decoding="async" width="1200" height="900" />
+        </figure>
+      </section>
+
+      {/* After submitting: four numbered dark cards. */}
+      <section class="eq-section bg-white eq-rule" aria-labelledby="quote-after-title">
+        <div class="eq-shell">
+          <div class="eq-head eq-head-center">
+            <h2 id="quote-after-title" class="section-title mx-auto" data-reveal="title">What Happens After You Submit</h2>
+          </div>
+          <dl class="eq-steps" data-stagger="80"><div class="eq-step"><dt>Standard home requirement</dt><dd>We determine whether the enquiry can move into the relevant home-service or booking route.</dd></div><div class="eq-step"><dt>Quoted residential service</dt><dd>HQC reviews the requirement and confirms what further information is needed.</dd></div><div class="eq-step"><dt>Property or commercial service</dt><dd>The enquiry is qualified for quotation or site assessment.</dd></div><div class="eq-step"><dt>Complex requirement</dt><dd>The enquiry enters the Complex Service Assessment route.</dd></div></dl>
+        </div>
+      </section>
+
+      {/* Booking and accuracy: full-bleed photograph with one white panel holding both notes. */}
+      <div class="hm-stage">
+        <div class="hm-stage-media hm-parallax">
+          <img src={accuracyPhoto.src} alt="" loading="lazy" decoding="async" width="1200" height="900" />
+        </div>
+        <div class="hm-stage-panel" data-reveal="right">
+          <section aria-labelledby="quote-not-booking-title">
+            <h2 id="quote-not-booking-title" class="section-title" data-reveal="title">Submitting an Enquiry Does Not Confirm a Booking</h2>
+            <p class="hm-lead mt-6" data-reveal>A quotation request or assessment request is not automatically a confirmed booking.</p>
+            <p class="mt-3 text-lg leading-8 text-slate" data-reveal>A booking is confirmed only through the applicable confirmation process.</p>
+          </section>
+          <section class="eq-panel-next" aria-labelledby="quote-accuracy-title">
+            <h2 id="quote-accuracy-title" class="section-title" data-reveal="title">Send Accurate Information</h2>
+            <p class="mt-6 text-lg leading-8 text-slate" data-reveal>The quotation and service recommendation rely on the information supplied.</p>
+            <p class="mt-3 text-lg leading-8 text-slate" data-reveal>If the property condition, access or requirement differs materially, HQC may need to:</p>
+            <ul class="hm-checks mt-3" data-stagger="40" data-stagger-type="fade"><li><span>clarify;</span></li><li><span>reassess;</span></li><li><span>revise the scope;</span></li><li><span>revise the quotation;</span></li><li><span>recommend another service.</span></li></ul>
+          </section>
+        </div>
       </div>
 
-      <div class="mt-16 space-y-12 text-ink/75" data-controlled-copy="Batch 5, page 3">
-        <section aria-labelledby="quote-routes-title">
-          <h2 id="quote-routes-title" class="font-serif text-3xl text-navy md:text-4xl">Choose the Route That Best Fits You</h2>
-          <div class="mt-6 grid gap-4 sm:grid-cols-2">
-          <article class="overflow-hidden rounded-xl border border-gold/30 bg-white">
-            <img src={routeImages.property.src} srcset={routeImages.property.srcset} sizes="(min-width: 640px) 440px, 100vw" alt={routeImages.property.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="800" height="450" />
-            <div class="p-5">
-            <h3 class="font-serif text-xl text-navy">Property or Portfolio</h3>
-            <p class="mt-2 text-sm text-ink/70">For:</p>
-            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>property managers;</li><li>estate and letting agents;</li><li>landlords;</li><li>block managers;</li><li>developers;</li><li>portfolio teams.</li></ul>
-            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=property#routed-quote-form">Property or Portfolio Requirement <span class="ml-1" aria-hidden="true">→</span></a>
-            </div>
-          </article>
-          <article class="overflow-hidden rounded-xl border border-gold/30 bg-white">
-            <img src={routeImages.commercial.src} srcset={routeImages.commercial.srcset} sizes="(min-width: 640px) 440px, 100vw" alt={routeImages.commercial.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="800" height="450" />
-            <div class="p-5">
-            <h3 class="font-serif text-xl text-navy">Workplace or Commercial Site</h3>
-            <p class="mt-2 text-sm text-ink/70">For:</p>
-            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>offices;</li><li>workplaces;</li><li>commercial premises;</li><li>recurring programmes;</li><li>commercial deep cleaning.</li></ul>
-            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=commercial#routed-quote-form">Workplace or Commercial Requirement <span class="ml-1" aria-hidden="true">→</span></a>
-            </div>
-          </article>
-          <article class="overflow-hidden rounded-xl border border-gold/30 bg-white">
-            <img src={routeImages.residential.src} srcset={routeImages.residential.srcset} sizes="(min-width: 640px) 440px, 100vw" alt={routeImages.residential.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="800" height="450" />
-            <div class="p-5">
-            <h3 class="font-serif text-xl text-navy">Home</h3>
-            <p class="mt-2 text-sm text-ink/70">For:</p>
-            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>Essential Clean™;</li><li>Deep Clean™;</li><li>Move-In Reset™;</li><li>End of Tenancy™;</li><li>Post-Construction™.</li></ul>
-            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=residential#routed-quote-form">Home Cleaning Requirement <span class="ml-1" aria-hidden="true">→</span></a>
-            </div>
-          </article>
-          <article class="overflow-hidden rounded-xl border border-gold/30 bg-white">
-            <img src={routeImages.complex.src} srcset={routeImages.complex.srcset} sizes="(min-width: 640px) 440px, 100vw" alt={routeImages.complex.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="800" height="450" />
-            <div class="p-5">
-            <h3 class="font-serif text-xl text-navy">Complex Property or Project</h3>
-            <p class="mt-2 text-sm text-ink/70">For:</p>
-            <ul class="mt-1 list-disc space-y-0.5 pl-5 text-sm text-ink/70"><li>unusually large requirements;</li><li>specialist finishes;</li><li>multiple cleaning disciplines;</li><li>complex access;</li><li>high-value contents;</li><li>phased work;</li><li>project coordination.</li></ul>
-            <a class="mt-4 inline-flex text-sm font-semibold text-navy underline-offset-4 hover:underline" href="/request-a-quote/?route=complex#routed-quote-form">Complex Property or Project <span class="ml-1" aria-hidden="true">→</span></a>
-            </div>
-          </article>
-          </div>
-        </section>
-        <section aria-labelledby="quote-information-title">
-          <h2 id="quote-information-title" class="font-serif text-3xl text-navy md:text-4xl">Information That Helps Us Route the Enquiry</h2>
-          <ul class="mt-5 grid list-disc gap-x-8 gap-y-1 pl-6 leading-7 sm:grid-cols-2"><li>name;</li><li>email;</li><li>telephone;</li><li>property or site address;</li><li>postcode;</li><li>buyer type;</li><li>service requirement;</li><li>property or site type;</li><li>condition;</li><li>desired outcome;</li><li>preferred timing;</li><li>access information;</li><li>photos or supporting files;</li><li>message or additional details.</li></ul>
-          <p class="mt-4 leading-7">Not every enquiry needs every field.</p>
-        </section>
-        <section aria-labelledby="quote-after-title">
-          <h2 id="quote-after-title" class="font-serif text-3xl text-navy md:text-4xl">What Happens After You Submit</h2>
-          <dl class="mt-5 grid gap-4 sm:grid-cols-2"><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Standard home requirement</dt><dd class="mt-2 leading-7">We determine whether the enquiry can move into the relevant home-service or booking route.</dd></div><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Quoted residential service</dt><dd class="mt-2 leading-7">HQC reviews the requirement and confirms what further information is needed.</dd></div><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Property or commercial service</dt><dd class="mt-2 leading-7">The enquiry is qualified for quotation or site assessment.</dd></div><div class="rounded-xl border border-gold/30 bg-white p-5"><dt class="font-semibold text-navy">Complex requirement</dt><dd class="mt-2 leading-7">The enquiry enters the Complex Service Assessment route.</dd></div></dl>
-        </section>
-        <section aria-labelledby="quote-not-booking-title">
-          <h2 id="quote-not-booking-title" class="font-serif text-3xl text-navy md:text-4xl">Submitting an Enquiry Does Not Confirm a Booking</h2>
-          <p class="mt-4 leading-7">A quotation request or assessment request is not automatically a confirmed booking.</p>
-          <p class="mt-2 leading-7">A booking is confirmed only through the applicable confirmation process.</p>
-        </section>
-        <section aria-labelledby="quote-accuracy-title">
-          <h2 id="quote-accuracy-title" class="font-serif text-3xl text-navy md:text-4xl">Send Accurate Information</h2>
-          <p class="mt-4 leading-7">The quotation and service recommendation rely on the information supplied.</p>
-          <p class="mt-2 leading-7">If the property condition, access or requirement differs materially, HQC may need to:</p>
-          <ul class="mt-2 list-disc space-y-1 pl-6 leading-7"><li>clarify;</li><li>reassess;</li><li>revise the scope;</li><li>revise the quotation;</li><li>recommend another service.</li></ul>
-        </section>
-        <section class="rounded-2xl bg-navy p-8 text-center text-white" aria-labelledby="quote-ready-title">
-          <h2 id="quote-ready-title" class="font-serif text-3xl md:text-4xl">Ready to Tell Us About the Requirement?</h2>
-          <a href="#routed-quote-form" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-md bg-gold px-7 py-3 font-semibold text-navy hover:bg-white">Submit Your Requirement</a>
-        </section>
-      </div>
+      {/* Closing: midnight band, one action back to the form. */}
+      <section class="eq-section eq-dark eq-ready hm-dark" aria-labelledby="quote-ready-title">
+        <div class="eq-shell eq-head eq-head-center">
+          <h2 id="quote-ready-title" class="section-title mx-auto text-white" data-reveal="title">Ready to Tell Us About the Requirement?</h2>
+          {/* Hash links are re-cloned by main.js, so the reveal sits on a wrapper. */}
+          <p class="mt-8" data-reveal><a href="#routed-quote-form" class="hm-cta-link">Submit Your Requirement <span class="hm-cta-chip eq-chip" aria-hidden="true"></span></a></p>
+        </div>
+      </section>
     </div>
   </main>
 </Layout>
@@ -444,9 +479,3 @@ const routeImages = {
     }
   });
 </script>
-
-<style>
-  .form-label { display: block; margin-bottom: .45rem; color: var(--color-navy); font-size: .85rem; font-weight: 700; }
-  .form-input { width: 100%; border: 1px solid rgb(196 163 84 / .45); border-radius: .5rem; background: white; padding: .8rem .9rem; color: var(--color-navy); }
-  .form-input:focus { border-color: var(--color-gold); outline: 2px solid rgb(196 163 84 / .2); outline-offset: 1px; }
-</style>

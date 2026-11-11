@@ -1,0 +1,335 @@
+/* Enquiry pages (request-a-quote, contact): site-wide design, 11 Nov 2026.
+   Builds on the shared kit in home-motion.css (loaded by MotionKit). Form fields are styled here,
+   never revealed or hidden: the scripts own every field's visibility through the `hidden` class,
+   so nothing in this file sets `display` on a field, a field wrapper or a status message. */
+
+/* ---------- Shell and rhythm ---------- */
+.eq-shell { margin-inline: auto; max-width: 1440px; padding-inline: var(--hm-gutter); }
+.eq-section { padding-block: 4.5rem; }
+@media (min-width: 768px) { .eq-section { padding-block: 6.5rem; } }
+.eq-rule { border-top: 1px solid rgb(14 42 49 / .1); }
+.eq-dark { background: var(--color-midnight); color: white; border-top: 1px solid rgb(209 164 103 / .35); }
+.eq-head, .eq-needs-head, .eq-form-intro, .eq-closing-copy, .eq-hero-copy { container-type: inline-size; }
+.eq-head-center { text-align: center; }
+.eq-head-center .section-title { margin-inline: auto; }
+.eq-page .section-title { margin-top: 0; }
+
+/* ---------- Hero: midnight copy beside a photograph ---------- */
+.eq-hero { display: grid; background: var(--color-midnight); color: white; }
+.eq-hero-copy { display: flex; flex-direction: column; justify-content: center; padding: 2rem var(--hm-gutter) 2.75rem; }
+/* The page's one h1 stays a step above every section h2 (kit max 3.4rem). */
+.eq-hero-h1 { max-width: 15ch; font-size: clamp(2.45rem, 10cqi, 4.4rem); line-height: 1.02; letter-spacing: -.03em; text-wrap: balance; }
+.eq-hero-lead { margin-top: 1.25rem; max-width: 36rem; font-size: 1.05rem; line-height: 1.75; color: rgb(255 255 255 / .82); }
+.eq-hero-actions { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.75rem; }
+.eq-hero-actions .button { white-space: nowrap; }
+.eq-trust { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; margin-top: 2rem; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgb(255 255 255 / .7); }
+/* Phones: wrapped trust labels drop the dividers so no line starts with a rule. */
+@media (max-width: 639px) { .eq-hero .eq-trust span + span::before { display: none; } }
+.eq-hero-media { position: relative; order: -1; margin: 0; aspect-ratio: 2.4 / 1; overflow: hidden; background: var(--color-navy); }
+.eq-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 640px) {
+  .eq-hero-copy { padding-block: 3rem 3.5rem; }
+  .eq-hero-lead { font-size: 1.125rem; }
+  .eq-hero-actions { flex-direction: row; }
+}
+@media (min-width: 1024px) {
+  .eq-hero { grid-template-columns: minmax(0, 52fr) minmax(0, 48fr); min-height: clamp(26rem, 58svh, 34rem); }
+  .eq-hero-copy { padding: 3.5rem 4rem 3.5rem var(--hm-edge); }
+  .eq-hero-media { order: 0; aspect-ratio: auto; }
+}
+
+/* ---------- Quote form section ---------- */
+.eq-form-section { padding: 3rem var(--hm-gutter) 4.5rem; }
+@media (min-width: 768px) { .eq-form-section { padding-block: 4rem 6rem; } }
+.eq-form-wrap { margin-inline: auto; max-width: 62rem; }
+
+/* Route tabs: white cards, the selected one midnight with a copper edge. */
+.eq-tabs .route-tab {
+  border: 1px solid rgb(14 42 49 / .12);
+  border-radius: 1rem;
+  background: white;
+  padding: 1.05rem 1.15rem 1.15rem;
+  transition: border-color .3s ease, background-color .3s ease, translate .35s var(--hm-ease);
+}
+.eq-tabs .route-tab strong { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-size: 1.3rem; font-weight: 500; line-height: 1.15; color: var(--color-midnight); }
+.eq-tabs .route-tab span { color: var(--color-slate); }
+.eq-tabs .route-tab:hover { border-color: var(--color-copper); translate: 0 -2px; }
+.eq-tabs .route-tab[aria-selected='true'] { border-color: var(--color-copper); background: var(--color-midnight); box-shadow: 0 22px 50px -34px rgb(14 42 49 / .8); }
+.eq-tabs .route-tab[aria-selected='true'] strong { color: white; }
+.eq-tabs .route-tab[aria-selected='true'] span { color: rgb(255 255 255 / .75); }
+.eq-tabs .route-tab:focus-visible { outline: 2px solid var(--color-midnight); outline-offset: 3px; }
+
+/* The form: a clean white panel. */
+.eq-form-panel {
+  border: 1px solid rgb(14 42 49 / .1);
+  border-radius: 1.25rem;
+  background: white;
+  padding: 1.5rem 1.25rem 1.75rem;
+  box-shadow: 0 34px 80px -56px rgb(14 42 49 / .55);
+}
+@media (min-width: 640px) { .eq-form-panel { padding: 2.5rem; } }
+@media (min-width: 1024px) { .eq-form-panel { padding: 3rem; } }
+.eq-route-panel { border-left: 3px solid var(--color-copper); background: var(--color-midnight); }
+
+/* Fields (quote form uses .form-input/.form-label; the contact form keeps its own classes). */
+.eq-page .form-label { display: block; margin-bottom: .45rem; color: var(--color-midnight); font-size: .85rem; font-weight: 700; }
+.eq-page .form-input,
+.eq-form-panel :is(input[type='text'], input[type='email'], input[type='tel'], select, textarea) {
+  width: 100%;
+  border: 1px solid rgb(14 42 49 / .2);
+  border-radius: .75rem;
+  background: white;
+  padding: .85rem 1rem;
+  color: var(--color-midnight);
+  transition: border-color .2s ease;
+}
+.eq-page .form-input:hover,
+.eq-form-panel :is(input[type='text'], input[type='email'], input[type='tel'], select, textarea):hover { border-color: rgb(14 42 49 / .36); }
+.eq-page .form-input:focus,
+.eq-form-panel :is(input[type='text'], input[type='email'], input[type='tel'], select, textarea):focus {
+  border-color: var(--color-copper-ink);
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(209 164 103 / .35);
+}
+.eq-page .form-input:disabled { background: var(--color-porcelain); }
+/* Notes inside the white panel at 7:1. */
+.eq-page .eq-form-panel > p, .eq-page .eq-form-panel > label { color: var(--color-slate); }
+.eq-form-panel label > span:first-child { color: var(--color-midnight); font-weight: 700; }
+.eq-page input[type='checkbox'] { width: 1.05rem; height: 1.05rem; accent-color: var(--color-copper-ink); }
+.eq-form-panel a { color: var(--color-midnight); text-decoration-color: var(--color-copper); text-underline-offset: .2em; }
+
+/* Gold submit: the pill and dark arrow chip of the site's call to action. The chip is drawn in CSS,
+   so the scripts that swap the button's text or markup while sending keep working unchanged. */
+.eq-submit {
+  display: inline-flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: .9rem;
+  border: 1px solid var(--color-copper);
+  border-radius: 9999px;
+  background: var(--color-copper);
+  padding: .45rem .5rem .45rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-midnight);
+  box-shadow: 0 18px 36px -22px rgb(14 42 49 / .75);
+  cursor: pointer;
+  transition: background-color .3s ease, border-color .3s ease, translate .35s var(--hm-ease);
+}
+.eq-submit::after {
+  content: '→' / '';
+  display: inline-flex;
+  width: 2.5rem; height: 2.5rem;
+  flex: none;
+  align-items: center; justify-content: center;
+  border-radius: 9999px;
+  background: var(--color-midnight);
+  color: var(--color-copper);
+  transition: transform .4s var(--hm-ease);
+}
+.eq-submit:hover { border-color: #ddb57c; background: #ddb57c; translate: 0 -2px; }
+.eq-submit:hover::after { transform: translateX(3px); }
+.eq-submit:focus-visible { outline: 2px solid var(--color-midnight); outline-offset: 3px; }
+.eq-submit:disabled { cursor: progress; opacity: .75; translate: none; }
+/* The contact button's paper-plane icon gives way to the chip; its sending spinner still shows. */
+.eq-submit > .fa-paper-plane { display: none; }
+
+.eq-unsure { display: flex; flex-direction: column; align-items: center; gap: .75rem; margin-top: 1.75rem; text-align: center; }
+@media (min-width: 640px) { .eq-unsure { flex-direction: row; justify-content: center; gap: 1rem; } }
+
+/* Second action beside a first on dark grounds keeps white text on hover. */
+.eq-page .hm-dark .hm-cta-secondary:hover { border-color: var(--color-copper); background: rgb(255 255 255 / .08); color: white; }
+.eq-page .hm-dark .hm-cta-secondary { color: white; }
+/* Arrow chips added where the label had no arrow: drawn in CSS so no characters are added. */
+.eq-chip::before { content: '→' / ''; }
+
+/* ---------- Dark photo cards (quote routes) ---------- */
+.eq-route-cards { margin-top: 2.5rem; }
+@media (min-width: 768px) { .eq-route-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 3rem; } }
+@media (min-width: 1280px) { .eq-route-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.eq-route-cards .hm-card-dark { background: rgb(255 255 255 / .05); }
+.eq-route-cards .hm-card-body { gap: .7rem; padding: 1.4rem 1.4rem 1.5rem; }
+.eq-route-cards .eq-card-title { font-size: 1.4rem; }
+.eq-card-title { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-size: clamp(1.45rem, 1.8vw, 1.7rem); font-weight: 500; line-height: 1.15; }
+.hm-dark .eq-card-title { color: white; }
+.eq-for { font-size: .75rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--color-copper); }
+
+/* Compact tick lists for cards. */
+.eq-ticks { display: grid; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.eq-ticks > li { display: flex; align-items: flex-start; gap: .65rem; font-size: .95rem; line-height: 1.45; color: rgb(255 255 255 / .85); }
+.eq-ticks > li > span::first-letter { text-transform: uppercase; }
+.eq-ticks > li::before {
+  content: '';
+  flex: none;
+  width: 1.15rem; height: 1.15rem;
+  margin-top: .12rem;
+  border-radius: 9999px;
+  background: var(--color-copper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e2a31' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.2 4.2L19 7'/%3E%3C/svg%3E") center / 62% no-repeat;
+}
+.eq-ticks-light > li { color: var(--color-midnight); font-weight: 600; }
+
+/* ---------- Numbered dark steps (after you submit) ---------- */
+.eq-steps { display: grid; gap: 1rem; margin: 2.5rem 0 0; counter-reset: eq-step; }
+@media (min-width: 640px) { .eq-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .eq-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 3rem; } }
+.eq-step {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  border-radius: 1.25rem;
+  background: var(--color-midnight);
+  padding: 1.6rem 1.5rem 1.75rem;
+  color: rgb(255 255 255 / .78);
+  transition: translate .4s var(--hm-ease), background-color .3s ease;
+}
+.eq-step::before {
+  counter-increment: eq-step;
+  content: counter(eq-step, decimal-leading-zero) / '';
+  margin-bottom: .5rem;
+  font-family: var(--font-serif, serif);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--color-copper);
+}
+.eq-step:hover { translate: 0 -3px; background: var(--color-navy); }
+.eq-step dt { font-family: var(--font-serif, serif); font-size: 1.45rem; font-weight: 500; line-height: 1.15; color: white; }
+.eq-step dd { margin: 0; line-height: 1.65; }
+
+/* ---------- Stage panels ---------- */
+.eq-panel-next { margin-top: 2.5rem; border-top: 1px solid rgb(14 42 49 / .1); padding-top: 2.5rem; }
+.eq-stage-left .eq-panel-dark { border: 1px solid rgb(209 164 103 / .35); background: var(--color-midnight); color: white; }
+@media (min-width: 1024px) {
+  .eq-stage-left { justify-content: flex-start; min-height: 40rem; }
+  .eq-stage-left .hm-stage-panel { width: min(40rem, 50%); }
+}
+.eq-whatsapp { font-size: 1.15rem; font-weight: 700; color: white; }
+
+/* ---------- Closing (quote) ---------- */
+.eq-ready .eq-head { display: flex; flex-direction: column; align-items: center; }
+
+/* ---------- Contact: what to quote for ---------- */
+.eq-needs { display: grid; gap: 2rem; }
+.eq-considers { margin-top: 0; }
+@media (min-width: 1024px) { .eq-needs { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: 4rem; } }
+.eq-foot-text { max-width: 44rem; font-size: 1.125rem; line-height: 1.75; color: var(--color-slate); }
+
+/* ---------- Contact: details on midnight ---------- */
+.eq-methods { display: grid; gap: 1rem; margin-top: 2.5rem; }
+@media (min-width: 768px) { .eq-methods { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 3rem; } }
+.eq-method {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgb(255 255 255 / .12);
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / .04);
+  padding: 1.75rem 1.5rem;
+  transition: translate .45s var(--hm-ease), border-color .35s ease, background-color .35s ease;
+}
+.eq-method:hover { translate: 0 -4px; border-color: rgb(209 164 103 / .7); background: rgb(255 255 255 / .07); }
+.eq-method-icon { display: inline-flex; width: 3rem; height: 3rem; align-items: center; justify-content: center; border: 1px solid rgb(209 164 103 / .45); border-radius: 9999px; color: var(--color-copper); }
+.eq-method-icon svg { width: 1.35rem; height: 1.35rem; }
+.eq-method-title { margin-top: 1.25rem; font-family: var(--font-serif, serif); font-size: 1.35rem; font-weight: 500; line-height: 1.1; color: white; }
+.eq-method-note { margin-top: .35rem; font-size: .95rem; color: rgb(255 255 255 / .7); }
+.eq-method-cta { margin-top: auto; }
+.eq-method-note + .eq-method-cta, .eq-method-note + .eq-method-value { margin-top: 1.5rem; }
+.eq-break { overflow-wrap: anywhere; font-size: clamp(.84rem, 3.5vw, .95rem); }
+@media (max-width: 639px) { .eq-method { padding: 1.5rem 1.25rem; } }
+.eq-method-value { font-size: 1.1rem; font-weight: 600; line-height: 1.5; color: white; }
+.eq-social { margin-top: 3rem; text-align: center; color: rgb(255 255 255 / .75); }
+.eq-social-links { display: flex; justify-content: center; gap: .85rem; margin-top: 1rem; }
+.eq-social-link {
+  display: inline-flex;
+  width: 3rem; height: 3rem;
+  align-items: center; justify-content: center;
+  border: 1px solid rgb(255 255 255 / .25);
+  border-radius: 9999px;
+  color: white;
+  transition: border-color .3s ease, background-color .3s ease, color .3s ease, translate .35s var(--hm-ease);
+}
+.eq-social-link:hover { translate: 0 -2px; border-color: var(--color-copper); background: var(--color-copper); color: var(--color-midnight); }
+
+/* ---------- Contact: other routes, light photo cards ---------- */
+.eq-info-cards { display: grid; gap: 1rem; }
+@media (min-width: 768px) { .eq-info-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; } }
+.eq-info-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgb(14 42 49 / .1);
+  border-radius: 1.25rem;
+  background: var(--color-porcelain);
+  transition: translate .5s var(--hm-ease), border-color .4s ease, box-shadow .6s ease;
+}
+.eq-info-card:hover { translate: 0 -4px; border-color: rgb(209 164 103 / .6); box-shadow: 0 30px 70px -44px rgb(14 42 49 / .45); }
+.eq-info-media { display: block; overflow: hidden; }
+.eq-info-media img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 1.2s var(--hm-ease); }
+.eq-info-card:hover .eq-info-media img { transform: scale(1.03); }
+.eq-info-body { display: flex; flex-direction: column; gap: .9rem; padding: 1.6rem 1.5rem 1.85rem; color: var(--color-slate); line-height: 1.7; }
+.eq-info-body .eq-card-title { color: var(--color-midnight); }
+
+/* ---------- Contact: photo cards with a flat tint ---------- */
+.eq-photo-cards { display: grid; gap: 1rem; }
+@media (min-width: 768px) { .eq-photo-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; } }
+.eq-photo-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-width: 0;
+  min-height: 24rem;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: var(--color-midnight);
+  color: white;
+}
+@media (min-width: 1024px) { .eq-photo-card { min-height: 28rem; } }
+.eq-photo-card-bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--hm-ease); }
+.eq-photo-card::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgb(14 42 49 / .72); }
+.eq-photo-card:hover .eq-photo-card-bg { transform: scale(1.03); }
+.eq-photo-card-body { display: flex; flex-direction: column; gap: .9rem; padding: 2rem 1.5rem; }
+@media (min-width: 640px) { .eq-photo-card-body { padding: 2.5rem; } }
+.eq-photo-card-body .eq-card-title { max-width: 22ch; font-size: clamp(1.7rem, 2.4vw, 2.25rem); }
+.eq-photo-card-body p { max-width: 34rem; font-size: 1.05rem; line-height: 1.7; color: rgb(255 255 255 / .88); }
+.eq-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .75rem; }
+
+/* ---------- Contact: form layout ---------- */
+.eq-form-layout { display: grid; gap: 2.5rem; }
+@media (min-width: 1024px) {
+  .eq-form-layout { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 4.5rem; align-items: start; }
+  .eq-sticky { position: sticky; top: 7.5rem; }
+}
+.eq-form-photo { position: relative; margin: 2rem 0 0; overflow: hidden; border-radius: 1.25rem; }
+.eq-form-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 1023px) { .eq-form-photo { display: none; } }
+.eq-form-col { min-width: 0; }
+.eq-form-col #contact-success { background: white; border-color: rgb(209 164 103 / .5); }
+
+/* ---------- Contact: closing band ---------- */
+.eq-closing::before { background: rgb(14 42 49 / .8); }
+/* Small label over a photograph is white: copper fails contrast on mid-tone images. */
+.eq-closing .section-kicker { color: rgb(255 255 255 / .88); }
+.eq-closing-grid { position: relative; display: grid; gap: 2.5rem; padding-block: 5rem; }
+.eq-closing-actions { display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; }
+@media (min-width: 640px) { .eq-closing-actions { flex-direction: row; flex-wrap: wrap; } }
+@media (min-width: 1024px) {
+  .eq-closing-grid { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4rem; padding-block: 7rem; }
+  .eq-closing-actions { flex-direction: column; align-items: stretch; }
+  .eq-closing-actions .hm-cta-link { justify-content: space-between; }
+}
+
+/* ---------- Keyboard focus ---------- */
+.eq-page :is(.hm-cta-link, .button, .eq-social-link, .eq-submit):focus-visible { outline: 2px solid var(--color-midnight); outline-offset: 3px; }
+.eq-page :is(.hm-dark, .eq-hero) :is(.hm-cta-link, .button, .eq-social-link):focus-visible { outline-color: white; }
+/* A link reached by keyboard before its block has scrolled in shows at once. */
+.hqc-motion .eq-page [data-reveal]:focus-within { opacity: 1; transform: none; }
+
+/* ---------- Reduced motion: colour feedback only ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .eq-tabs .route-tab:hover, .eq-submit:hover, .eq-step:hover, .eq-method:hover, .eq-social-link:hover, .eq-info-card:hover { translate: none; }
+  .eq-submit::after, .eq-info-media img, .eq-photo-card-bg { transition: none; }
+  .eq-submit:hover::after, .eq-info-card:hover .eq-info-media img, .eq-photo-card:hover .eq-photo-card-bg { transform: none; }
+}

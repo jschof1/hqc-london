@@ -1,0 +1,83 @@
+/* Outcome templates use the homepage kit; all refinements stay inside this template. */
+.outcome-page .op-hero { display: grid; position: relative; }
+.outcome-page .op-hero-photo { grid-area: 1 / 1; width: 100%; height: 15rem; max-height: 24rem; object-fit: cover; }
+.outcome-page .op-hero-copy { grid-area: 2 / 1; padding: 2rem var(--hm-gutter) 3.5rem; min-width: 0; }
+.outcome-page .op-breadcrumb { margin-bottom: 2.75rem; }
+.outcome-page .op-hero-title { font-size: clamp(2.6rem, 9vw, 4rem); line-height: 1; letter-spacing: -.035em; text-wrap: balance; }
+.outcome-page .op-hero-lead { font-size: 1.15rem; line-height: 1.65; }
+.outcome-page .op-hero-copy > div > p:not(:first-child) { max-width: 36rem; }
+.outcome-page .op-facts .meta-label { font-size: .65rem; }
+.outcome-page .op-facts > div > div { padding-block: 1.25rem; }
+.outcome-page .op-outcome-split { display: grid; gap: 2.5rem; align-items: center; }
+.outcome-page .op-outcome-photo { overflow: hidden; border-radius: 1.25rem; }
+.outcome-page .op-outcome-photo > figure { box-shadow: none; }
+.outcome-page .op-outcome-cards { display: grid; gap: 1rem; margin-top: 2.5rem; }
+.outcome-page .op-outcome-cards > article { border: 1px solid rgb(14 42 49 / .1); border-radius: 1.25rem; }
+.outcome-page .op-outcome-cards > article > img { aspect-ratio: 16 / 10; }
+.outcome-page .grid > div:has(> h2.section-title),
+.outcome-page .op-heading,
+.outcome-page .op-scope .grid > div:has(> h2),
+.outcome-page .op-gallery .max-w-3xl,
+.outcome-page .op-next .grid > div:has(> h2),
+.outcome-page .op-fallback-section > div:first-child,
+.outcome-page .op-closing-content > div:first-child { container-type: inline-size; }
+.outcome-page .op-chapter { border-top: 1px solid rgb(14 42 49 / .1); background: white; }
+.outcome-page .op-chapter:nth-child(even) { background: var(--color-porcelain); }
+.outcome-page .op-copy { min-width: 0; }
+.outcome-page .op-copy .hm-checks { margin-block: 1.75rem; font-size: 1rem; grid-template-columns: 1fr; }
+.outcome-page .op-copy .hm-cta-link { margin-top: .75rem; }
+.outcome-page .op-copy [data-controlled-cta] { gap: .75rem; padding-block: .5rem; }
+.outcome-page .op-chapter-copy-only .op-copy { width: min(100%, 66rem); margin-inline: auto; padding: 4rem var(--hm-gutter); }
+.outcome-page .op-chapter-copy-only .op-copy:has([data-section-imagery]) { width: min(100%, 90rem); }
+.outcome-page .op-copy h3 { line-height: 1.2; }
+.outcome-page .op-scope { border-block: 1px solid rgb(209 164 103 / .35); }
+.outcome-page section.bg-midnight h2.section-title { color: white; }
+.outcome-page .op-scope h3 { color: white; font-size: clamp(1.6rem, 2vw, 2rem); line-height: 1.15; }
+.outcome-page .op-scope article > img { aspect-ratio: 16 / 10; }
+.outcome-page .op-gallery { border-top: 1px solid rgb(14 42 49 / .1); }
+.outcome-page .op-gallery > div:first-child > .max-w-3xl { flex: 1; width: 100%; min-width: 0; }
+.outcome-page .op-gallery-grid { display: grid; gap: 1rem; }
+.outcome-page .op-gallery-grid figure { margin: 0; }
+.outcome-page .op-gallery-grid img { aspect-ratio: 4 / 3; height: 100%; width: 100%; object-fit: cover; }
+.outcome-page .op-next li { padding-block: 1.75rem; }
+.outcome-page .op-related .hm-route-arrow { width: 2.75rem; height: 2.75rem; flex-shrink: 0; border-radius: 50%; }
+.outcome-page .op-closing { position: relative; isolation: isolate; overflow: hidden; background: var(--color-midnight); color: white; border-top: 1px solid rgb(209 164 103 / .35); }
+.outcome-page .op-closing-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.outcome-page .op-closing::before { content: ''; position: absolute; inset: 0; background: rgb(14 42 49 / .8); z-index: -1; }
+.outcome-page .op-closing-content { max-width: 60rem; margin-inline: auto; padding: 5.5rem var(--hm-gutter); text-align: center; }
+.outcome-page .op-closing h2 { color: white; margin-inline: auto; }
+.outcome-page .op-closing-actions { justify-content: center; align-items: center; margin-top: 2rem; }
+.outcome-page .op-closing-actions .hm-cta-secondary,
+.outcome-page .op-hero .hm-cta-secondary { min-height: 3.25rem; justify-content: center; padding: .8rem 1.35rem; }
+.outcome-page .hm-cta-secondary:hover { color: var(--color-midnight); }
+.outcome-page .hm-cta-link:focus-visible,
+.outcome-page .hm-route:focus-visible { outline: 3px solid var(--color-copper); outline-offset: 5px; }
+@media (min-width: 640px) {
+  .outcome-page .op-outcome-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .outcome-page .op-gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .outcome-page .op-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .outcome-page .op-hero-photo { grid-area: 1 / 2; height: 100%; max-height: none; min-height: 100%; }
+  .outcome-page .op-hero-copy { grid-area: 1 / 1; padding: 2.5rem 3rem 4rem var(--hm-edge); align-self: center; }
+  .outcome-page .op-hero-title { font-size: clamp(3.1rem, 4.4vw, 4.65rem); }
+  .outcome-page .op-hero-lead { font-size: 1.2rem; }
+  .outcome-page .op-outcome-split { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 5rem; }
+  .outcome-page .op-outcome-cards { grid-column: 1 / -1; margin-top: 0; }
+  .outcome-page .op-outcome-photo [data-founder-portrait] { max-width: 26rem; }
+  .outcome-page .op-chapter .hm-split-copy { padding-block: 5rem; }
+  .outcome-page .op-chapter .hm-split-media { overflow: clip; }
+  .outcome-page .op-chapter .hm-split-media img { min-height: 34rem; }
+  .outcome-page .op-chapter-copy-only .op-copy { padding-block: 5rem; }
+  .outcome-page .op-closing-content { padding-block: 8rem; }
+}
+@media (max-width: 639px) {
+  .outcome-page .op-facts > div { grid-template-columns: 1fr; }
+  .outcome-page .op-facts > div > div { padding-block: .9rem; }
+  .outcome-page .op-hero-copy .hm-cta-link { align-self: flex-start; }
+  .outcome-page .op-outcome-cards .p-6 { padding: 1.4rem; }
+  .outcome-page .op-gallery-grid img { aspect-ratio: 3 / 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .outcome-page .op-gallery-grid img { transition: none; transform: none; }
+}
