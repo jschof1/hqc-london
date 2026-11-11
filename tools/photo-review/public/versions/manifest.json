@@ -2975,6 +2975,199 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-sitewide-v2",
+      "label": "11 Nov: every page, second pass",
+      "date": "2026-11-11",
+      "captureDate": "2026-11-11",
+      "commit": "06e2b3e9e7e97bf7b009363c1d016c3f66223651",
+      "deploymentUrl": "https://6a2978f4.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://6a2978f4.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "A much fuller second pass on every page after Jack's review of the first site-wide version. Each section is now laid out to suit what it holds, as on the homepage.",
+      "changes": [
+        "Service and information pages (22): each section picks a layout from its content (photograph beside the text, full-width photograph with a white panel, dark icon cards for short lists, centred lists across the page, card grids beside a photograph, dark centred statements), so no two sections in a row look the same. Numbered headings carry gold numerals. A photograph is shown at most once per page.",
+        "Cleaning FAQs: the question groups alternate between photo splits, panels and dark bands.",
+        "Privacy and Terms: numbered clause headings, compact two-column lists and the retention schedule as a proper table.",
+        "Location pages: split opening with the area photograph, a coverage card and photo cards for nearby areas. Book Essential Clean and the 404 page are complete photo-led pages.",
+        "Request a Quote and Contact: more varied sections and a repeated photograph removed; the forms are unchanged.",
+        "List items no longer end with semicolons or full stops on any page, as on the homepage. No other wording changed."
+      ],
+      "outstanding": [
+        "The Google reviews are a saved snapshot from 11 Nov; new reviews appear only when the snapshot is refreshed.",
+        "Three older pages (services, why us and the founder story section) still use the earlier photo of Pedro.",
+        "Pedro to confirm whether the bedroom (WA0016) and living-area (WA0015) library photos are HQC jobs; until then they sit unlabelled beside evidence wording on the homepage and the reviews page.",
+        "Pedro to choose the proof stories and supply source, quote and permission.",
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end.",
+        "Pedro to review the flat gold logo set at actual size on the site, especially the 16px favicon, before it is treated as approved.",
+        "The Privacy Policy and Terms still show their staging placeholders (approval date, privacy contact) from the approved legal draft; these need final legal details before launch."
+      ],
+      "provenance": "Generated scenes remain illustrative, not photos of HQC jobs. Review text is copied from HQC's public Google Business Profile. Captured on 2026-11-11 from the immutable preview https://6a2978f4.hqc-london.pages.dev (commit 06e2b3e) at 1440px and 390px, non-essential cookies rejected, no forms submitted. Review candidate, not launched: the live website is unchanged and the Phase 8 production hold remains.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-home-desktop.jpg",
+            "width": 1440,
+            "height": 15673,
+            "sha256": "5ed7c294fdeb9905aa2166ecd00a7be3393a97b44366bb145659f87b97f8f89c",
+            "capturedAt": "2026-11-11T18:35:19.395Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-home-mobile.jpg",
+            "width": 390,
+            "height": 24947,
+            "sha256": "59fd9a00e76569ace151644e27a1894aa31d8b6ca05cf538b4909be5ef95587b",
+            "capturedAt": "2026-11-11T18:38:19.238Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-quote-desktop.jpg",
+            "width": 1440,
+            "height": 6624,
+            "sha256": "ceec98ef9f819e39d9431ae8ec566d66c0606534bd634e1213cf04a10406ac79",
+            "capturedAt": "2026-11-11T18:35:36.118Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-quote-mobile.jpg",
+            "width": 390,
+            "height": 11109,
+            "sha256": "cf45ae720809bf961bcef2b4f90eb799e55ec92a28db094c3c9f47e7e786ca29",
+            "capturedAt": "2026-11-11T18:38:36.389Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-how-desktop.jpg",
+            "width": 1440,
+            "height": 13385,
+            "sha256": "8c69aca7f65ad009faade4df60e588d9ff092d5f4abb4beef68ea26b4bf09a2b",
+            "capturedAt": "2026-11-11T18:35:55.173Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-how-mobile.jpg",
+            "width": 390,
+            "height": 18865,
+            "sha256": "a2e0149fca184498fb22e5d34f5ee228a17eaef88f300d1bb3f8f3634a2fb017",
+            "capturedAt": "2026-11-11T18:38:59.210Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-contact-desktop.jpg",
+            "width": 1440,
+            "height": 7255,
+            "sha256": "d2e194082adabbaf5b8943c4f29ad0e86d59025241b72b987c2dcf9c1fa22cfe",
+            "capturedAt": "2026-11-11T18:36:13.893Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-contact-mobile.jpg",
+            "width": 390,
+            "height": 10731,
+            "sha256": "a8a8fce2a208237efa4388f57a0caef6b0497aa3b049371d36bd3404093583fe",
+            "capturedAt": "2026-11-11T18:39:14.337Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 13199,
+            "sha256": "4b74d4fb7baaab730e1eef720f83802387465bcf36b139381255eab8c964e021",
+            "capturedAt": "2026-11-11T18:36:33.915Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 18973,
+            "sha256": "c5e82aa6fad832ae6dd2e401a74c829793093df67bc777075abed2f7356b771f",
+            "capturedAt": "2026-11-11T18:39:36.257Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-about-desktop.jpg",
+            "width": 1440,
+            "height": 14465,
+            "sha256": "2c68c8061df7330238af50e9819cfc8e61f169394a640c325d1e8b40f56dfe54",
+            "capturedAt": "2026-11-11T18:36:56.367Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-about-mobile.jpg",
+            "width": 390,
+            "height": 21375,
+            "sha256": "f295db434db4a93e11514d6beb131978879c32f5f4ab018636f329527ec5777a",
+            "capturedAt": "2026-11-11T18:40:00.507Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10448,
+            "sha256": "d1130e3920a3a03cb0192482cf07dd0cc8ba6db4370444148a01fbb8cc405e73",
+            "capturedAt": "2026-11-11T18:37:15.565Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-reviews-mobile.jpg",
+            "width": 390,
+            "height": 14954,
+            "sha256": "db85df819b4204c57d504cf75f94ce3fa05898e432ee899b07b431351f82ea5a",
+            "capturedAt": "2026-11-11T18:40:19.940Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 10791,
+            "sha256": "cfc11f46c7d242e8199eb18197e723d0dd1206cd32aed3322193d05ab29ed07c",
+            "capturedAt": "2026-11-11T18:37:31.181Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-privacy-mobile.jpg",
+            "width": 390,
+            "height": 16910,
+            "sha256": "f600b6b75da424114c5dcca52eb36094346f9dc04bb121068465b48bbc1c4cbb",
+            "capturedAt": "2026-11-11T18:40:40.649Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov11-sitewide-v2-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13954,
+            "sha256": "e941e6bea43d477665517ae5d2555ebafb4e24ffad8fe7962fb8126372beeb88",
+            "capturedAt": "2026-11-11T18:37:50.271Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-sitewide-v2-terms-mobile.jpg",
+            "width": 390,
+            "height": 21975,
+            "sha256": "e5b8e842e54bcb64c9a49c16a46fedbae78ed81f81b22f9b9d15763a6e84a397",
+            "capturedAt": "2026-11-11T18:41:06.203Z",
+            "sourceUrl": "https://6a2978f4.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -3025,7 +3218,7 @@
     }
   ],
   "defaultBefore": "live-oct29",
-  "defaultAfter": "nov11-sitewide",
+  "defaultAfter": "nov11-sitewide-v2",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
