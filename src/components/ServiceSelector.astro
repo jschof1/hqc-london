@@ -24,13 +24,13 @@ const groups = [
 <section id="find-my-service" class="hm-selector relative isolate scroll-mt-20 overflow-hidden py-20 text-white md:py-28">
   <img class="hm-selector-bg" src={photo.src} alt={photo.alt} loading="lazy" decoding="async" width="1200" height="900" />
   <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
-    <div class="max-w-3xl">
-      <p class="hm-kicker-line text-xs font-bold uppercase tracking-[0.22em] text-copper" data-reveal="fade">Find my service</p>
-      <h2 class="mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-white md:text-6xl" data-reveal="title">What Do You Need Help With?</h2>
-      <p class="mt-5 max-w-xl text-lg leading-8 text-white/85" data-reveal style="--d: 120ms">Choose the situation that best describes what you need.</p>
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-copper" data-reveal="fade">Find my service</p>
+      <h2 class="mx-auto mt-4 max-w-2xl font-serif text-4xl font-medium leading-[1.02] text-white md:text-6xl" data-reveal="title">What Do You Need Help With?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-lg leading-8 text-white/85" data-reveal style="--d: 120ms">Choose the situation that best describes what you need.</p>
     </div>
 
-    <div class="hm-choices mt-10 grid gap-6 md:mt-12 lg:grid-cols-2 lg:gap-8">
+    <div class="hm-choices mt-8 grid gap-6 lg:grid-cols-2 lg:gap-8">
       {groups.map((group) => (
         <div class="hm-choice-group">
           <p class="hm-choice-group-label">{group.label}</p>

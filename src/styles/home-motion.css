@@ -312,7 +312,8 @@ main:has(.hm-hero) { overflow-x: clip; }
   text-transform: uppercase;
   color: rgb(255 255 255 / .85);
 }
-.hm-choice-group-label::after { content: ''; flex: 1; height: 1px; background: rgb(255 255 255 / .2); }
+.hm-choice-group-label::before, .hm-choice-group-label::after { content: ''; flex: 1; height: 1px; background: rgb(255 255 255 / .2); }
+.hm-choice-group-label { justify-content: center; }
 .hm-choice { border: 1px solid transparent; background: var(--color-porcelain); }
 .hm-choice-unsure { border-color: rgb(255 255 255 / .35); background: transparent; }
 .hm-choice-unsure strong { color: white; }
