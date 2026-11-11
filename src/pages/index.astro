@@ -184,7 +184,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
               <span class="flex items-center justify-between gap-4"><span class="meta-label">{route.eyebrow}</span><span class="font-serif text-2xl text-copper-ink">{route.number}</span></span>
               <span class="mt-4 block font-serif text-[1.75rem] font-medium leading-tight text-midnight md:text-[2rem]">{route.title}</span>
               <span class="mt-4 block text-[15px] leading-6 text-slate">{route.copy}</span>
-              <span class="mt-auto inline-flex items-center pt-7 font-bold text-midnight">{route.cta} <span class="hm-route-arrow text-copper-ink" aria-hidden="true">→</span></span>
+              <span class="mt-auto block pt-7"><span class="hm-cta-link">{route.cta} <span class="hm-cta-chip" aria-hidden="true">→</span></span></span>
             </span>
           </a>
         ))}
@@ -274,7 +274,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
             {workplace.blocks.map((block, index) => {
               const next = workplace.blocks[index + 1];
               if (block.kind === 'ul') return <ul class="hm-checks hm-checks-panel" data-stagger="40" data-stagger-type="fade">{block.items.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>;
-              if (block.kind === 'cta') return <p class="text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
+              if (block.kind === 'cta') return <p class="text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class:list={['hm-cta-link', workplace.blocks[index - 1]?.kind === 'cta' && 'hm-cta-secondary']}>{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
               if (index === 0) return <p class="hm-lead" data-reveal>{block.text}</p>;
               if (next?.kind === 'ul') return <p class="hm-label pt-2" data-reveal>{block.text}</p>;
               return <p data-reveal>{block.text}</p>;
