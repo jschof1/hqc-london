@@ -1370,6 +1370,194 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-selector-split",
+      "label": "11 Nov: service selector rework, review fix",
+      "date": "2026-11-11",
+      "captureDate": "2026-11-11",
+      "commit": "fb758959e751ac1188489fd0514297b55104e5a6",
+      "deploymentUrl": "https://d3804069.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://d3804069.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "Follows the 11 Nov homepage redesign. The service selector is reworked and the Google reviews carousel now shows only reviewers' own words.",
+      "changes": [
+        "Service selector: the photograph is now the section background, the heading sits on top, and the nine situations are split into two columns, Homes (01 to 05) and Workplaces and property (06 to 09), with the recommendation directly underneath. Wording, order and routing are unchanged.",
+        "Google reviews: eight rating-only reviews were showing HQC's reply as if it were the reviewer's words (in the 2531bf56 preview). They are removed, leaving 82 written reviews in the reviewers' own words. The summary stays 4.9 from 92 reviews.",
+        "Everything else is as in the 11 Nov homepage redesign (nov11-home-motion)."
+      ],
+      "outstanding": [
+        "The Google reviews are a saved snapshot from 11 Nov; new reviews appear only when the snapshot is refreshed.",
+        "Three older pages (services, why us and the founder story section) still use the earlier photo of Pedro.",
+        "Pedro to confirm whether the bedroom (WA0016) and living-area (WA0015) library photos are HQC jobs; until then they sit unlabelled beside evidence wording on the homepage and the reviews page.",
+        "Pedro to choose the proof stories and supply source, quote and permission.",
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end."
+      ],
+      "provenance": "Generated scenes remain illustrative, not photos of HQC jobs. Review text is copied from HQC's public Google Business Profile. Captured on 2026-11-11 from the immutable preview https://d3804069.hqc-london.pages.dev (commit fb75895) at 1440px and 390px, non-essential cookies rejected, no forms submitted. Review candidate, not launched: the live website is unchanged and the Phase 8 production hold remains.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-home-desktop.jpg",
+            "width": 1440,
+            "height": 17062,
+            "sha256": "703b8db193e0b54af2540754a291ce41e48266a9f782a5bf26fb31e7df790442",
+            "capturedAt": "2026-11-11T11:17:16.565Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-home-mobile.jpg",
+            "width": 390,
+            "height": 25516,
+            "sha256": "bfcb37883161c97e91f25807818cc737ec5a0e5de4cb4808953cd274a2b91e3d",
+            "capturedAt": "2026-11-11T11:19:58.553Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-quote-desktop.jpg",
+            "width": 1440,
+            "height": 5258,
+            "sha256": "02bf87f037e930a084022738594cd99f92f3e44174345195053c164e752a09c2",
+            "capturedAt": "2026-11-11T11:17:32.402Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-quote-mobile.jpg",
+            "width": 390,
+            "height": 8565,
+            "sha256": "f4345ed23b8164dd03747ee4a330e9ba853418824837fad29c4f3c41927f9be8",
+            "capturedAt": "2026-11-11T11:20:16.672Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-how-desktop.jpg",
+            "width": 1440,
+            "height": 12480,
+            "sha256": "644ef1d923056ed0f8828b59ce2e13d2f3c5fe137d77f171a1ff9f01634d2945",
+            "capturedAt": "2026-11-11T11:17:50.588Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-how-mobile.jpg",
+            "width": 390,
+            "height": 17832,
+            "sha256": "773e1986e02ffaaf3edd67ed890e9bc0384217a7b6f4868f23761b76047a14d8",
+            "capturedAt": "2026-11-11T11:20:39.396Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-contact-desktop.jpg",
+            "width": 1440,
+            "height": 6065,
+            "sha256": "974a3d12677ce02fa40a34104df9ab53fdbcd538caec82bb30e16c4a924f35a0",
+            "capturedAt": "2026-11-11T11:18:03.641Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-contact-mobile.jpg",
+            "width": 390,
+            "height": 9893,
+            "sha256": "eae3588c713ace531544fd0e66daad486979bd68cd560bbfe3f04a1bd9ee5ae5",
+            "capturedAt": "2026-11-11T11:20:53.634Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 11993,
+            "sha256": "cdf33eb0b2b20d080fbefc5a9167be87ca5f192f9eb65f0b181995b82cbacccf",
+            "capturedAt": "2026-11-11T11:18:20.781Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 17842,
+            "sha256": "a7f244db6a83383125dac2d69f98d2a6d3411521abdd56b7e3c235a73de62aec",
+            "capturedAt": "2026-11-11T11:21:15.772Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-about-desktop.jpg",
+            "width": 1440,
+            "height": 12398,
+            "sha256": "d00a2b571f67198e1aa18f4a13fa1516151121fa7d736ab347de6745f6fb55b6",
+            "capturedAt": "2026-11-11T11:18:38.038Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-about-mobile.jpg",
+            "width": 390,
+            "height": 19876,
+            "sha256": "97e11401d307eec134e2a5f1f25c1fcc8bbc15abb3486a6acf6b1ac1c72a4730",
+            "capturedAt": "2026-11-11T11:21:39.691Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10157,
+            "sha256": "3d701075501eebeb21e028597d8acf5ea07537418885d38a00d6a196be0a852a",
+            "capturedAt": "2026-11-11T11:18:53.317Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-reviews-mobile.jpg",
+            "width": 390,
+            "height": 13953,
+            "sha256": "9e764ffcc1129cb0b47a0945f9e0cd08425b0f9eb35d812668e7377fc0acad55",
+            "capturedAt": "2026-11-11T11:21:58.658Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 11245,
+            "sha256": "89aee5c81a894394d7800ebaf674375d2ccf4ea34a3658c64f3c9e3b408bc5de",
+            "capturedAt": "2026-11-11T11:19:09.945Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-privacy-mobile.jpg",
+            "width": 390,
+            "height": 17322,
+            "sha256": "ad16e7b539234ba9219882e80f41d667cbd5c0dc74f4cf88547b0d953f7c4375",
+            "capturedAt": "2026-11-11T11:22:19.982Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov11-selector-split-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13748,
+            "sha256": "359a5b045f7e4f8419791825595d5329e7cf590277541cd6fddafe2bab128997",
+            "capturedAt": "2026-11-11T11:19:29.099Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-selector-split-terms-mobile.jpg",
+            "width": 390,
+            "height": 22560,
+            "sha256": "1b924d2a17cc3d888227efa3ce93e0cb7ae4184e6503fc0a189b4615da1a1342",
+            "capturedAt": "2026-11-11T11:22:46.107Z",
+            "sourceUrl": "https://d3804069.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -1420,7 +1608,7 @@
     }
   ],
   "defaultBefore": "live-oct29",
-  "defaultAfter": "nov11-home-motion",
+  "defaultAfter": "nov11-selector-split",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
