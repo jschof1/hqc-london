@@ -257,17 +257,21 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
       {/* Homes: one continuous section over a tinted photograph; the heading sits directly above the cards. */}
       <section class="hm-dark hm-homes hm-parallax relative isolate overflow-hidden text-white">
         <img class="hm-homes-bg" src={lib('r-living-dust').src} alt={lib('r-living-dust').alt} loading="lazy" decoding="async" width="1200" height="900" />
-        <div class="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 md:py-28 lg:px-14">
-          <h2 class="section-title mx-auto text-center text-white" data-reveal="title">Cleaning Services for London Homes</h2>
-          <div class="hm-cards mt-10 md:mt-12 md:grid-cols-2 lg:grid-cols-3" data-stagger="90">
+        <div class="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 md:py-24 lg:px-14">
+          <h2 class="hm-homes-title mx-auto text-center font-serif font-medium text-white" data-reveal="title">Cleaning Services for London Homes</h2>
+          <div class="hm-cards mt-8 md:mt-10 md:grid-cols-2 xl:grid-cols-4" data-stagger="90">
             {homes.groups.map((group, groupIndex) => {
               const featured = groupIndex === 0;
               const image = lib(homeServiceImages[groupIndex]);
               return (
-                <article class:list={['hm-card hm-card-dark', featured && 'hm-card-featured md:col-span-2']}>
+                <article class:list={['hm-card hm-card-dark', featured && 'hm-card-featured md:col-span-2 xl:col-span-4']}>
                   <span class="hm-card-media block overflow-hidden"><img src={image.src} alt={image.alt} loading="lazy" decoding="async" width="1200" height="900" /></span>
                   <div class="hm-card-body">
-                    <h3 class="font-serif text-2xl font-medium leading-tight text-white md:text-[1.75rem]">{group.heading.text}</h3>
+                    {(() => {
+                      // Service name, then its short descriptor; the full heading stays the accessible name.
+                      const [name, ...rest] = (group.heading.text ?? '').split(' - ');
+                      return <h3 class="hm-service-title" aria-label={group.heading.text}><span class="hm-service-name">{name}</span>{rest.length > 0 && <><span class="sr-only"> - </span><span class="hm-service-sub">{rest.join(' - ')}</span></>}</h3>;
+                    })()}
                     {group.body.map((block, blockIndex) => {
                       if (block.kind === 'cta') return <p class="hm-card-foot text-base"><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
                       if (featured && blockIndex === 1) return <p class="hm-offer-note text-base leading-7">{block.text}</p>;

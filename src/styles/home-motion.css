@@ -420,7 +420,7 @@ main:has(.hm-hero) { overflow-x: clip; }
   align-items: center;
   gap: .8rem;
   border: 1px solid var(--color-copper);
-  border-radius: 9999px;
+  border-radius: 1.6rem; /* a full pill on one line, a soft rectangle if a long label wraps */
   background: var(--color-copper);
   padding: .45rem .45rem .45rem 1.35rem;
   font-size: .95rem;
@@ -554,10 +554,14 @@ main:has(.hm-hero) { overflow-x: clip; }
 .hm-card-dark { border: 1px solid rgb(255 255 255 / .12); background: rgb(255 255 255 / .04); color: rgb(255 255 255 / .78); }
 .hm-card-dark:hover { translate: 0 -5px; border-color: rgb(209 164 103 / .7); background: rgb(255 255 255 / .07); }
 .hm-card-featured { border-color: rgb(209 164 103 / .55); background: rgb(209 164 103 / .1); }
+.hm-card-featured .hm-card-foot { margin-top: .5rem; }
 @media (min-width: 768px) {
   .hm-card-featured { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .hm-card-featured .hm-card-media img { height: 100%; aspect-ratio: auto; }
+  .hm-card-featured .hm-card-media { position: relative; min-height: 18rem; }
+  .hm-card-featured .hm-card-media img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+  .hm-homes .hm-card-featured .hm-card-body { justify-content: center; padding: 2.25rem 2.5rem; }
 }
+@media (min-width: 1024px) { .hm-card-featured { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); } }
 .hm-offer-note {
   border: 1px dashed rgb(209 164 103 / .6);
   border-radius: 1rem;
@@ -673,7 +677,14 @@ main:has(.hm-hero) { overflow-x: clip; }
 /* Homes: deep tint so the cards read as the foreground and the room stays a backdrop. */
 .hm-homes { background: var(--color-midnight); }
 .hm-homes::before { background: rgb(14 42 49 / .84); }
-.hm-homes .section-title { max-width: 18ch; }
+.hm-homes-title { max-width: 16ch; font-size: clamp(2.3rem, 4.2vw, 3.75rem); line-height: 1.02; letter-spacing: -.025em; text-wrap: balance; }
+.hm-service-title { display: flex; flex-direction: column; gap: .3rem; }
+.hm-service-name { font-family: var(--font-serif, serif); font-size: clamp(1.4rem, 1.7vw, 1.6rem); font-weight: 500; line-height: 1.15; color: white; }
+.hm-service-sub { font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--color-copper); }
+.hm-homes .hm-card-body { gap: .75rem; padding: 1.4rem 1.4rem 1.5rem; }
+.hm-homes .hm-card-body > p { font-size: .98rem; line-height: 1.6; }
+.hm-homes .hm-card-foot .hm-cta-link { font-size: .9rem; }
+.hm-homes .hm-offer-note { padding: .8rem 1rem; font-size: .95rem; line-height: 1.5; }
 .hm-homes .hm-card-dark { background: rgb(14 42 49 / .72); }
 .hm-homes .hm-card-featured { background: rgb(36 52 52 / .9); }
 
