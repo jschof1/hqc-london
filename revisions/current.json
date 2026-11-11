@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "34be5fc7e9bd79514270a3dabc5798b538036af7",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability.",
+  "baseline": "bd5ddd981da46ec2b39eba5da1cea50de7305959",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site.",
   "requirements": [
     {
       "id": "M1",
@@ -66,6 +66,10 @@
     {
       "id": "G10a",
       "text": "Review data correction (found 11 Nov): rating-only Google reviews whose captured text was HQC's reply are removed from the carousel, so every displayed quote is the reviewer's own words."
+    },
+    {
+      "id": "LG15",
+      "text": "Logo (Jack, 11 Nov): the flat gold horizontal logo in the site header (the compact monogram where the header is tight), the flat gold stacked lock-up in the footer in place of the 3D plaque, favicons (16/32/48 ICO and PNG), an Apple touch icon and web manifest icons from the same kit, and the organisation schema logo pointing at a raster logo file. Artwork copied unchanged from the kit; alt text and link labels unchanged; the old 3D plaque file is kept, not deleted."
     }
   ],
   "allowedFiles": [
@@ -176,7 +180,8 @@
     {
       "path": "src/components/Header.astro",
       "requirements": [
-        "H12"
+        "H12",
+        "LG15"
       ],
       "allowDelete": false,
       "reason": "One-line desktop navigation from 1024px."
@@ -204,12 +209,116 @@
       ],
       "allowDelete": false,
       "reason": "Founder photograph, large."
+    },
+    {
+      "path": "src/components/Footer.astro",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Stacked flat gold logo in the footer."
+    },
+    {
+      "path": "src/layouts/Layout.astro",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Favicon, touch icon, manifest links and schema logo."
+    },
+    {
+      "path": "public/favicon.ico",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Favicon from the logo kit (16/32/48)."
+    },
+    {
+      "path": "public/favicon-32.png",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Favicon PNG from the logo kit."
+    },
+    {
+      "path": "public/favicon-48.png",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Favicon PNG from the logo kit."
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Apple touch icon from the logo kit (180)."
+    },
+    {
+      "path": "public/site.webmanifest",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Web manifest naming the app icons."
+    },
+    {
+      "path": "public/images/brand/hqc-logo-horizontal-flat-gold.svg",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Header logo from the kit."
+    },
+    {
+      "path": "public/images/brand/hqc-logo-stacked-flat-gold.svg",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Footer logo from the kit."
+    },
+    {
+      "path": "public/images/brand/hqc-monogram-flat-gold.svg",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Compact monogram from the kit."
+    },
+    {
+      "path": "public/images/brand/hqc-logo-horizontal-flat-gold.png",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Raster logo for schema and sharing."
+    },
+    {
+      "path": "public/images/brand/hqc-app-icon-192.png",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Manifest icon from the kit."
+    },
+    {
+      "path": "public/images/brand/hqc-app-icon-512.png",
+      "requirements": [
+        "LG15"
+      ],
+      "allowDelete": false,
+      "reason": "Manifest icon from the kit."
     }
   ],
   "preserve": [
     "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events, except the C8 list punctuation, the K11 kicker removals and the G10 review content.",
     "Shared components used elsewhere (Header, Footer, Layout, ConversionPrompt, CookiePreferences, ClientEvidence, FounderPortrait, OutcomePage) and global.css.",
-    "Every existing image file (no edits or deletions); generated library images stay illustrative and are never presented as client evidence; the Phase 8 production hold. New files are limited to the P13 founder photograph."
+    "Every existing image file is kept (no deletions); generated library images stay illustrative; the Phase 8 production hold. New files are the P13 founder photograph and the LG15 logo kit exports; public/favicon.ico is replaced by the kit favicon (LG15)."
   ],
   "verification": [
     "Mechanical text, attribute and link comparison of rendered homepage HTML against 6b5c2f00 / 8f5331b.",
