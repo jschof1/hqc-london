@@ -449,6 +449,46 @@ main:has(.hm-hero) { overflow-x: clip; }
 .hm-dark .hm-cta-secondary { border-color: rgb(255 255 255 / .35); color: white; }
 .hm-dark .section-kicker { color: var(--color-copper); }
 
+/* ---------- Outcome: heading and opening lines, photograph and icon grid, closing strip ---------- */
+.hm-outcome-title { font-size: clamp(2.6rem, 5.4vw, 5.25rem); line-height: .98; letter-spacing: -.03em; text-wrap: balance; }
+.hm-outcome-lead { font-size: clamp(1.15rem, 1.7vw, 1.45rem); line-height: 1.45; color: var(--color-midnight); }
+.hm-outcome-media { margin: 0; overflow: hidden; border-radius: 1.25rem; }
+.hm-outcome-media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.hm-considers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.4rem; padding: 0; list-style: none; }
+.hm-considers > li {
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  padding: 1.3rem 1.25rem 1.4rem 0;
+  border-bottom: 1px solid rgb(14 42 49 / .12);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: var(--color-midnight);
+}
+.hm-considers > li > span::first-letter { text-transform: uppercase; }
+.hm-considers svg { width: 2.4rem; height: 2.4rem; color: var(--color-copper-ink); }
+.hm-considers > li:nth-last-child(-n + 2) { border-bottom: 0; }
+@media (min-width: 640px) {
+  .hm-considers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hm-considers > li { font-size: 1.15rem; }
+  .hm-considers > li:nth-last-child(-n + 2) { border-bottom: 1px solid rgb(14 42 49 / .12); }
+  .hm-considers > li:nth-last-child(-n + 3) { border-bottom: 0; }
+}
+.hm-outcome-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  border-top: 1px solid rgb(209 164 103 / .5);
+  padding-top: 2.5rem;
+}
+@media (min-width: 768px) { .hm-outcome-foot { flex-direction: row; align-items: center; justify-content: space-between; } }
+.hm-outcome-support { font-family: var(--font-serif, serif); font-size: clamp(1.5rem, 2.6vw, 2.25rem); line-height: 1.2; color: var(--color-midnight); }
+/* Dark variant of the call-to-action pill. */
+.hm-cta-dark { border-color: var(--color-midnight); background: var(--color-midnight); color: white; }
+.hm-cta-dark .hm-cta-chip { background: transparent; color: var(--color-copper); }
+.hm-cta-dark:hover { border-color: var(--color-navy); background: var(--color-navy); }
+
 /* ---------- Split chapters: full-height photograph against one edge ---------- */
 .hm-split { display: grid; }
 .hm-split-copy { padding: 3.5rem var(--hm-gutter) 5rem; }
@@ -744,3 +784,5 @@ main:has(.hm-hero) { overflow-x: clip; }
   .hqc-motion [data-reveal='clip']::after { display: none; }
   .hm-dock, .hm-progress { display: none !important; }
 }
+
+.hm-outcome .hm-label { font-size: .95rem; letter-spacing: .22em; }

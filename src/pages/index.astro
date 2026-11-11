@@ -198,25 +198,60 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
     <TrustRail />
 
     <div data-controlled-copy="Batch 1, page 1">
-      {/* Outcome: full-height photograph left, reasoning right. */}
-      <section class="hm-split hm-split-media-left bg-porcelain">
-        <div class="hm-split-copy">
-          <h2 class="section-title" data-reveal="title">{outcome.heading}</h2>
-          <div class="mt-8 space-y-5 text-lg leading-8 text-slate">
-            {outcome.blocks.map((block, index) => {
-              const next = outcome.blocks[index + 1];
-              if (block.kind === 'ul') return <ul class="hm-checks hm-checks-panel" data-stagger="40" data-stagger-type="fade">{block.items.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>;
-              if (block.kind === 'cta') return <p class="pt-2 text-base" data-reveal><a href={controlledCtaHref(block.text ?? '')} class="hm-cta-link">{block.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>;
-              if (block.kind === 'support') return <p class="hm-support" data-reveal>{block.text}</p>;
-              if (index === 0) return <p class="hm-lead" data-reveal>{block.text}</p>;
-              if (next?.kind === 'ul') return <p class="hm-label pt-2" data-reveal>{block.text}</p>;
-              return <p data-reveal>{block.text}</p>;
-            })}
-          </div>
+      {/* Outcome (Jack's layout, 11 Nov): heading beside the opening lines, photograph beside an icon grid of
+          what HQC considers, then the support line and the pricing link. Copy and order unchanged. */}
+      <section class="hm-outcome bg-porcelain py-20 md:py-28">
+        <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+          {(() => {
+            const b = outcome.blocks;
+            const ul = b.find((block) => block.kind === 'ul');
+            const ulIndex = b.findIndex((block) => block.kind === 'ul');
+            const intro = b.slice(0, ulIndex - 1).filter((block) => block.kind === 'p');
+            const label = b[ulIndex - 1];
+            const after = b.slice(ulIndex + 1).filter((block) => block.kind === 'p');
+            const support = b.find((block) => block.kind === 'support');
+            const cta = b.find((block) => block.kind === 'cta');
+            // Lucide icons (ISC licence), inlined so no icon package is added.
+            const icons = [
+              '<rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 12 1.5 1.5L13 11"/><path d="M15 12h1"/><path d="m9 17 1.5 1.5L13 16"/><path d="M15 17h1"/>',
+              '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+              '<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>',
+              '<rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/>',
+              '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+              '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>'
+            ];
+            return (
+              <>
+                <div class="grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16">
+                  <h2 class="hm-outcome-title font-serif font-medium text-midnight" data-reveal="title">{outcome.heading}</h2>
+                  <div class="space-y-3">
+                    {intro.map((block, index) => <p class:list={[index === 0 ? 'hm-outcome-lead' : 'text-lg leading-8 text-slate']} data-reveal style={`--d: ${index * 80}ms`}>{block.text}</p>)}
+                  </div>
+                </div>
+                <div class="mt-12 grid gap-10 md:mt-16 lg:grid-cols-[.95fr_1.05fr] lg:items-center lg:gap-16">
+                  <figure class="hm-outcome-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
+                    <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 45vw, 100vw" alt={outcomeImage.alt} loading="lazy" decoding="async" width="1600" height="900" />
+                  </figure>
+                  <div>
+                    {label && <p class="hm-label" data-reveal>{label.text}</p>}
+                    {ul && ul.kind === 'ul' && (
+                      <ul class="hm-considers" data-stagger="50" data-stagger-type="fade">
+                        {ul.items.map((item, index) => (
+                          <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={icons[index % icons.length]} /><span>{listItem(item)}</span></li>
+                        ))}
+                      </ul>
+                    )}
+                    {after.map((block) => <p class="mt-6 text-lg leading-8 text-slate" data-reveal>{block.text}</p>)}
+                  </div>
+                </div>
+                <div class="hm-outcome-foot">
+                  {support && <p class="hm-outcome-support" data-reveal>{support.text}</p>}
+                  {cta && <a href={controlledCtaHref(cta.text ?? '')} class="hm-cta-link hm-cta-dark shrink-0" data-reveal>{cta.text} <span class="hm-cta-chip" aria-hidden="true">→</span></a>}
+                </div>
+              </>
+            );
+          })()}
         </div>
-        <figure class="hm-split-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
-          <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 50vw, 100vw" alt={outcomeImage.alt} loading="lazy" decoding="async" width="1600" height="900" />
-        </figure>
       </section>
 
       {/* Homes: one continuous section over a tinted photograph; the heading sits directly above the cards. */}
