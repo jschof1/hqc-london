@@ -270,10 +270,7 @@ main:has(.hm-hero) { overflow-x: clip; }
 @keyframes hm-marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 
 /* ---------- Route cards ---------- */
-@media (min-width: 1024px) {
-  .hm-routes { align-items: start; }
-  .hm-routes > :nth-child(2) { margin-top: 3.5rem; }
-}
+
 .hm-route {
   border: 1px solid rgb(14 42 49 / .08);
   transition: translate .5s var(--hm-ease), box-shadow .6s ease, border-color .4s ease;
@@ -638,10 +635,7 @@ main:has(.hm-hero) { overflow-x: clip; }
   background: rgb(14 42 49 / .92);
   padding: .85rem 1rem 1rem;
 }
-@media (min-width: 1024px) {
-  .hm-complex { align-items: start; }
-  .hm-complex > :nth-child(3n + 2) { margin-top: 2.5rem; }
-}
+
 
 @media (max-width: 639px) {
   .hm-complex { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
@@ -800,3 +794,29 @@ main:has(.hm-hero) { overflow-x: clip; }
 }
 
 .hm-outcome .hm-label { font-size: .95rem; letter-spacing: .22em; }
+
+/* ---------- Type scale and section rhythm (taste review, 11 Nov) ----------
+   Section headings size to the column they sit in (container query units), so a heading in a
+   half-width column is smaller than one spanning the page, and every h2 shares one scale. */
+main:has(.hm-hero) { --color-slate: #43565b; } /* body text at AA+ on porcelain and white */
+.hm-routes-section .max-w-3xl, #find-my-service > div > .max-w-3xl, .hm-outcome .grid:has(> .hm-outcome-title),
+.hm-homes > div, .hm-stage-panel, .hm-split-copy, .hm-why-section .max-w-4xl, .hm-pin-stage .max-w-3xl,
+.hm-chapter-head .hm-sticky, .hm-visible .grid > div:has(> h2), .hm-founder .w-full, .hm-closing > div,
+section[aria-labelledby='trust-rail-title'] .max-w-3xl, .hm-evidence .max-w-4xl { container-type: inline-size; }
+main:has(.hm-hero) h2.section-title, .hm-outcome-title, .hm-homes-title, #find-my-service h2, .hm-pin h2, .hm-closing h2 {
+  font-size: clamp(2.25rem, 7cqi, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+/* The client-evidence statement is a sentence, so it sits a step down. */
+.hm-evidence h2 { font-size: clamp(1.75rem, 4.4cqi, 2.75rem); line-height: 1.18; }
+.hm-lead { font-size: clamp(1.2rem, 1.6vw, 1.45rem); }
+.hm-founder .hm-lead { font-size: clamp(1.2rem, 1.6vw, 1.45rem) !important; }
+
+/* Section separation: hairlines between light grounds, a copper rule between dark ones. */
+.hm-reviews { border-bottom: 1px solid rgb(14 42 49 / .08); }
+.hm-outcome, .hm-why-section, .hm-visible, .hm-founder, .hm-split-media-right { border-top: 1px solid rgb(14 42 49 / .1); }
+.hm-stage { border-top: 1px solid rgb(209 164 103 / .35); }
+.hm-route { border-color: rgb(14 42 49 / .1); }
+@media (min-width: 1024px) { .hm-routes { align-items: stretch; } }

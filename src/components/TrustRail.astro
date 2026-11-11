@@ -42,7 +42,7 @@ const proofPoints = [
     <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
       <div class="max-w-3xl">
         <p class="section-kicker hm-kicker-line" data-reveal="fade">Confidence before commitment</p>
-        <h2 id="trust-rail-title" class="section-title" data-split>A clear standard from the first conversation.</h2>
+        <h2 id="trust-rail-title" class="section-title">A clear standard from the first conversation.</h2>
         <p class="mt-6 text-lg leading-8 text-slate" data-reveal style="--d: 200ms">Good cleaning starts long before the visit. Move through the checks that keep the right service, scope and handover in view.</p>
       </div>
       <div class="flex items-center gap-3" aria-label="Proof rail controls" data-reveal="fade" style="--d: 300ms">
@@ -56,7 +56,7 @@ const proofPoints = [
         <article class:list={['trust-rail-card', index === 0 && 'trust-rail-card-featured']}>
           <span class="trust-rail-media"><img src={cardLibrary[railImages[index]].src} alt={cardLibrary[railImages[index]].alt} loading="lazy" decoding="async" width="1200" height="900" draggable="false" /></span>
           <span class:list={['mt-6 font-serif text-4xl', index === 0 ? 'text-copper' : 'text-copper-ink']}>{point.number}</span>
-          <h3 class="mt-4 font-serif text-3xl font-medium leading-[1.02] text-midnight">{point.title}</h3>
+          <h3 class="mt-4 font-serif text-[1.6rem] font-medium leading-[1.1] text-midnight">{point.title}</h3>
           <p class="mt-5 leading-7 text-slate">{point.copy}</p>
           <p class="mt-auto border-t border-midnight/10 pt-5 text-xs font-bold uppercase tracking-[.16em] text-slate">{point.detail}</p>
         </article>
