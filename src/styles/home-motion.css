@@ -467,15 +467,6 @@ main:has(.hm-hero) { overflow-x: clip; }
    moves); the copper line fills as the sequence passes through the viewport. */
 
 /* ---------- Complex route: captioned photographs ---------- */
-@media (max-width: 639px) {
-  .hm-complex { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
-  .hm-complex-step img { aspect-ratio: 1 / 1; }
-  .hm-complex-caption { inset: auto .4rem .4rem; padding: .55rem .7rem .65rem; border-radius: .7rem; }
-  .hm-complex-caption span, .hm-complex-caption p { font-size: 1.05rem; }
-  .hm-routes .hm-route img { aspect-ratio: 16 / 9; }
-  .hm-routes .hm-route > span:last-child { padding: 1.25rem 1.25rem 1.5rem; }
-  .hm-routes .hm-route > span:last-child > span:nth-child(2) { margin-top: .6rem; font-size: 1.55rem; }
-}
 .hm-complex-step img { display: block; transition: transform 1.2s var(--hm-ease); }
 .hm-complex-step { transition: translate .5s var(--hm-ease), box-shadow .6s ease; }
 .hm-complex-step:hover { translate: 0 -5px; box-shadow: 0 26px 60px -34px rgb(14 42 49 / .55); }
@@ -490,6 +481,16 @@ main:has(.hm-hero) { overflow-x: clip; }
 @media (min-width: 1024px) {
   .hm-complex { align-items: start; }
   .hm-complex > :nth-child(3n + 2) { margin-top: 2.5rem; }
+}
+
+@media (max-width: 639px) {
+  .hm-complex { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+  .hm-complex-step img { aspect-ratio: 1 / 1; }
+  .hm-complex-caption { inset: auto .4rem .4rem; padding: .55rem .7rem .65rem; border-radius: .7rem; }
+  .hm-complex-caption span, .hm-complex-caption p { font-size: 1.05rem; }
+  .hm-routes .hm-route img { aspect-ratio: 16 / 9; }
+  .hm-routes .hm-route > span:last-child { padding: 1.25rem 1.25rem 1.5rem; }
+  .hm-routes .hm-route > span:last-child > span:nth-child(2) { margin-top: .6rem; font-size: 1.55rem; }
 }
 
 /* ---------- Client evidence: shared component over a full-bleed photograph ---------- */
