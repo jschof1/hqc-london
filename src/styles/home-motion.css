@@ -454,26 +454,29 @@ main:has(.hm-hero) { overflow-x: clip; }
 .hm-outcome-lead { font-size: clamp(1.15rem, 1.7vw, 1.45rem); line-height: 1.45; color: var(--color-midnight); }
 .hm-outcome-media { margin: 0; overflow: hidden; border-radius: 1.25rem; }
 .hm-outcome-media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.hm-considers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.4rem; padding: 0; list-style: none; }
+.hm-considers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-top: 1.4rem; padding: 0; list-style: none; }
+/* Dark cards: white label (about 14:1 on midnight) and light copper icon (about 7:1). */
 .hm-considers > li {
   display: flex;
   flex-direction: column;
-  gap: .85rem;
-  padding: 1.3rem 1.25rem 1.4rem 0;
-  border-bottom: 1px solid rgb(14 42 49 / .12);
-  font-size: 1.05rem;
+  gap: .9rem;
+  border-radius: 1rem;
+  background: var(--color-midnight);
+  padding: 1.25rem 1.2rem 1.35rem;
+  font-size: 1rem;
   line-height: 1.35;
-  color: var(--color-midnight);
+  color: white;
+  transition: translate .4s var(--hm-ease), background-color .3s ease;
 }
+.hm-considers > li:hover { translate: 0 -3px; background: var(--color-navy); }
 .hm-considers > li > span::first-letter { text-transform: uppercase; }
-.hm-considers svg { width: 2.4rem; height: 2.4rem; color: var(--color-copper-ink); }
-.hm-considers > li:nth-last-child(-n + 2) { border-bottom: 0; }
+.hm-considers svg { width: 2.2rem; height: 2.2rem; color: var(--color-copper); }
 @media (min-width: 640px) {
-  .hm-considers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .hm-considers > li { font-size: 1.15rem; }
-  .hm-considers > li:nth-last-child(-n + 2) { border-bottom: 1px solid rgb(14 42 49 / .12); }
-  .hm-considers > li:nth-last-child(-n + 3) { border-bottom: 0; }
+  .hm-considers { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .hm-considers > li { padding: 1.5rem 1.4rem 1.6rem; font-size: 1.08rem; }
 }
+@media (prefers-reduced-motion: reduce) { .hm-considers > li:hover { translate: none; } }
+.hqc-motion [data-stagger] > li[data-reveal] { transition-property: opacity, transform, translate, background-color; transition-duration: .5s, .7s, .4s, .3s; transition-delay: var(--d, 0ms), var(--d, 0ms), 0s, 0s; }
 .hm-outcome-foot {
   display: flex;
   flex-direction: column;
