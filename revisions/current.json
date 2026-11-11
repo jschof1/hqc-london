@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "25e5f7af3ed0ba25c346ac642961b45e90b07389",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 12 November 2026 (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait.",
+  "baseline": "9f338ed41218d225519740704155341aa88c27b4",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait.",
   "requirements": [
     {
       "id": "M1",
@@ -45,19 +45,19 @@
     },
     {
       "id": "G10",
-      "text": "Google reviews (Jack, 12 Nov): a dated snapshot of HQC's public Google Business Profile reviews (4.9 rating, 92 reviews at capture) shown as a moving carousel directly below the hero, plus the rating in the hero trust row. Review text verbatim; reviewers shown by first name and last initial; 4- and 5-star reviews shown; no dates. Pauses on hover and focus, static and scrollable under reduced motion, duplicates hidden from assistive technology."
+      "text": "Google reviews (Jack, 11 Nov, later): a dated snapshot of HQC's public Google Business Profile reviews (4.9 rating, 92 reviews at capture) shown as a moving carousel directly below the hero, plus the rating in the hero trust row. Review text verbatim; reviewers shown by first name and last initial; 4- and 5-star reviews shown; no dates. Pauses on hover and focus, static and scrollable under reduced motion, duplicates hidden from assistive technology."
     },
     {
       "id": "K11",
-      "text": "Remove the five repeated 'Cleaning Defined by the Outcome' kickers above the homepage chapters (Jack, 12 Nov); the hero kicker and the chapter heading of the same name remain."
+      "text": "Remove the five repeated 'Cleaning Defined by the Outcome' kickers above the homepage chapters (Jack, 11 Nov, later); the hero kicker and the chapter heading of the same name remain."
     },
     {
       "id": "H12",
-      "text": "Header (Jack, 12 Nov): primary navigation and the Request a Quote button stay on one line from 1024px; no label or link changes."
+      "text": "Header (Jack, 11 Nov, later): primary navigation and the Request a Quote button stay on one line from 1024px; no label or link changes."
     },
     {
       "id": "P13",
-      "text": "Founder portrait (Jack, 12 Nov): replace the founder portrait image with the photograph Pedro sent on WhatsApp, cropped to portrait; same alt text."
+      "text": "Founder portrait (Jack, 11 Nov, later): replace the founder portrait image with the photograph Pedro sent on WhatsApp, cropped to portrait; same alt text."
     }
   ],
   "allowedFiles": [
