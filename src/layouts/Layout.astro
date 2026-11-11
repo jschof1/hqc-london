@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import ConversionPrompt from '../components/ConversionPrompt.astro';
 import CookiePreferences from '../components/CookiePreferences.astro';
 import PostHog from '../components/PostHog.astro';
+import Plausible from '../components/Plausible.astro';
 
 import { Schema } from 'astro-seo-schema';
 
@@ -188,6 +189,7 @@ const schemaItem = {
     <meta name="twitter:image" content={defaultImage} />
     <title>{title}</title>
     <PostHog />
+    <Plausible />
     <script is:inline>
       // Retain first-touch campaign context in this browser session only. Quote submissions
       // read it later; this script does not send it to any third party.

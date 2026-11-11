@@ -1,67 +1,58 @@
 {
   "schemaVersion": 1,
-  "baseline": "48f4776d3d78a777b84aa27c9879f7c6b7327e1f",
-  "request": "Jack, 29 October 2026: keep visual version history current, prepare Pedro an email, and strictly preserve everything outside specifically requested client revisions using the client revision gauntlet.",
+  "baseline": "84390051b9ee589d3468e1a3dabec61a2637395c",
+  "request": "Jack, 11 November 2026: add cookieless Plausible tracking to existing live production, preserve Phase 8 hold, deploy through existing revision controls and verify site 8 events. Source: current native task, private request retained there.",
   "requirements": [
     {
       "id": "R1",
-      "text": "Make narrowly scoped revisions mandatory in AGENTS with cumulative preservation and independent review."
+      "text": "Record one pageview on live apex and www only, independent of optional cookie preferences; send no query strings or form values."
     },
     {
       "id": "R2",
-      "text": "Mechanically reject unlisted files, unapproved deletions and stale website version evidence."
+      "text": "Use existing accepted-enquiry hooks and safe contact link clicks for standard goal names, without changing forms or destinations."
     },
     {
       "id": "R3",
-      "text": "Keep the public site unchanged and the Phase 8 production release held."
+      "text": "Preserve all content, visuals, PostHog/Umami, October enquiry fixes, revision controls and Phase 8 hold; record immutable preview and captures before production."
     }
   ],
   "allowedFiles": [
     {
-      "path": "AGENTS.md",
+      "path": "revisions/current.json",
+      "requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "allowDelete": false
+    },
+    {
+      "path": "src/layouts/Layout.astro",
       "requirements": [
         "R1"
       ],
       "allowDelete": false
     },
     {
-      "path": "package.json",
+      "path": "src/components/Plausible.astro",
       "requirements": [
+        "R1",
         "R2"
       ],
       "allowDelete": false
     },
     {
-      "path": ".github/workflows/client-revisions.yml",
+      "path": "public/hqc-plausible.js",
       "requirements": [
+        "R1",
         "R2"
       ],
       "allowDelete": false
     },
     {
-      "path": "tools/client-revisions/check.mjs",
+      "path": "tests/plausible.test.mjs",
       "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/check.test.mjs",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "tools/client-revisions/README.md",
-      "requirements": [
-        "R2"
-      ],
-      "allowDelete": false
-    },
-    {
-      "path": "revisions/current.json",
-      "requirements": [
+        "R1",
         "R2"
       ],
       "allowDelete": false
@@ -69,18 +60,17 @@
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "R2"
+        "R3"
       ],
       "allowDelete": false
     }
   ],
   "preserve": [
-    "All customer website source, photos, copy, forms, CRM routing and tracking.",
-    "The Phase 8 production hold and existing photo review selections."
+    "Baseline production source 48f4776d3d78a777b84aa27c9879f7c6b7327e1f and immutable deployment https://828d0b90.hqc-london.pages.dev.",
+    "All prior accepted content, images, layout, forms, routes, integrations, review records and protected main. PRs 3 and 17 untouched."
   ],
   "verification": [
-    "Guard unit tests and deliberate forbidden change/deletion/stale-version failures.",
-    "Exact customer application source comparison against baseline.",
-    "Independent review of implementation and policy."
+    "Scope check, isolated browser-script tests, existing form and analytics tests, review build.",
+    "Preview capture and version registration, full revision guard, live browser two pages and read-only ClickHouse site_id 8."
   ]
 }
