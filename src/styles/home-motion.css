@@ -456,7 +456,7 @@ main:has(.hm-hero) { overflow-x: clip; }
   align-items: end;
   overflow: hidden;
 }
-.hm-band > img, .hm-stage-media > img, .hm-evidence-bg, .hm-closing-bg {
+.hm-band > img, .hm-stage-media > img, .hm-evidence-bg, .hm-closing-bg, .hm-homes-bg {
   position: absolute;
   inset: 0;
   z-index: -2;
@@ -464,7 +464,7 @@ main:has(.hm-hero) { overflow-x: clip; }
   height: 100%;
   object-fit: cover;
 }
-.hm-band::before, .hm-evidence::before, .hm-closing::before {
+.hm-band::before, .hm-evidence::before, .hm-closing::before, .hm-homes::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -601,6 +601,12 @@ main:has(.hm-hero) { overflow-x: clip; }
 /* ---------- Closing call to action ---------- */
 .hm-closing { background: var(--color-midnight); }
 .hm-closing::before { background: rgb(14 42 49 / .7); }
+/* Homes: deep tint so the cards read as the foreground and the room stays a backdrop. */
+.hm-homes { background: var(--color-midnight); }
+.hm-homes::before { background: rgb(14 42 49 / .84); }
+.hm-homes .section-title { max-width: 18ch; }
+.hm-homes .hm-card-dark { background: rgb(14 42 49 / .72); }
+.hm-homes .hm-card-featured { background: rgb(36 52 52 / .9); }
 
 /* ---------- Parallax on photographic bands: the browser's own scroll timeline, so it runs off the
    main thread and never stutters. Unsupported browsers keep a still photograph. ---------- */

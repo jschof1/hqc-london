@@ -219,16 +219,12 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
         </figure>
       </section>
 
-      {/* Homes: immersive photographic band, then image-led service cards. */}
-      <section class="hm-dark bg-midnight text-white">
-        <div class="hm-band hm-parallax">
-          <img src={lib('r-living-dust').src} alt={lib('r-living-dust').alt} loading="lazy" decoding="async" width="1200" height="900" />
-          <div class="hm-band-copy text-center">
-            <h2 class="section-title mx-auto text-white" data-reveal="title">Cleaning Services for London Homes</h2>
-          </div>
-        </div>
-        <div class="mx-auto max-w-[1440px] px-5 pb-20 pt-12 sm:px-8 md:pb-28 md:pt-16 lg:px-14">
-          <div class="hm-cards md:grid-cols-2 lg:grid-cols-3" data-stagger="90">
+      {/* Homes: one continuous section over a tinted photograph; the heading sits directly above the cards. */}
+      <section class="hm-dark hm-homes hm-parallax relative isolate overflow-hidden text-white">
+        <img class="hm-homes-bg" src={lib('r-living-dust').src} alt={lib('r-living-dust').alt} loading="lazy" decoding="async" width="1200" height="900" />
+        <div class="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 md:py-28 lg:px-14">
+          <h2 class="section-title mx-auto text-center text-white" data-reveal="title">Cleaning Services for London Homes</h2>
+          <div class="hm-cards mt-10 md:mt-12 md:grid-cols-2 lg:grid-cols-3" data-stagger="90">
             {homes.groups.map((group, groupIndex) => {
               const featured = groupIndex === 0;
               const image = lib(homeServiceImages[groupIndex]);
