@@ -149,7 +149,7 @@ main:has(.hm-hero) { overflow-x: clip; }
 .hm-route-tab:hover .hm-offer-cta > span { background: var(--color-copper); color: var(--color-midnight); transform: translateX(3px); }
 
 @media (min-width: 640px) {
-  .hm-hero-media { aspect-ratio: 16 / 9; }
+  .hm-hero-media { aspect-ratio: 2.4 / 1; }
   .hm-hero-copy { padding-block: 2.5rem 3.5rem; }
 }
 @media (min-width: 1024px) {
@@ -167,13 +167,11 @@ main:has(.hm-hero) { overflow-x: clip; }
   .hm-routebar {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding-inline: var(--hm-edge);
+    /* Tab text lines up with the hero copy; the active wash extends past it. */
+    padding-inline: calc(var(--hm-edge) - 2rem);
     border-top: 1px solid rgb(255 255 255 / .12);
   }
   .hm-routebar > li + li { border-left: 1px solid rgb(255 255 255 / .12); }
-  .hm-routebar > li:first-child .hm-route-tab { padding-left: 0; }
-  .hm-routebar > li:first-child .hm-route-tab:hover,
-  .hm-routebar > li:first-child .hm-route-tab.is-active { background: transparent; }
 }
 @media (min-width: 1024px) and (max-width: 1279px) {
   .hm-hero-main { grid-template-columns: minmax(0, 56fr) minmax(0, 44fr); }
@@ -379,6 +377,9 @@ main:has(.hm-hero) { overflow-x: clip; }
   background: rgb(14 42 49 / .6);
 }
 .hm-band-copy { padding: 6rem var(--hm-gutter) 3.5rem; }
+.hm-band::before { background: rgb(14 42 49 / .66); }
+/* Small labels over photographs are white: copper fails contrast on mid-tone images. */
+.hm-band .section-kicker, .hm-evidence .section-kicker { color: rgb(255 255 255 / .88); }
 .hm-band-copy .section-title { max-width: 14ch; font-size: clamp(2.6rem, 6vw, 5.25rem); }
 
 /* Homes service cards: photograph first. */
@@ -462,36 +463,8 @@ main:has(.hm-hero) { overflow-x: clip; }
   .hm-pin .hm-step > div { padding: 1.35rem 1.15rem 1.5rem; }
   .hm-pin .hm-step h3 { font-size: clamp(1.4rem, 1.9vw, 1.65rem); overflow-wrap: break-word; }
 }
-@media (min-width: 1024px) and (min-height: 820px) {
-  .hqc-motion .hm-pin { height: 175vh; padding-block: 0; }
-  .hqc-motion .hm-pin-stage {
-    position: sticky;
-    top: 5rem;
-    display: flex;
-    height: calc(100vh - 5rem);
-    flex-direction: column;
-    justify-content: center;
-    padding-block: 2rem;
-  }
-  .hqc-motion .hm-pin h2 { font-size: clamp(2.75rem, 4.2vw, 4.2rem); }
-  .hqc-motion .hm-pin .hm-pin-intro { margin-top: 1rem; }
-  .hqc-motion .hm-pin .hm-steps { margin-top: 2.25rem; }
-  .hqc-motion .hm-pin .hm-step img { aspect-ratio: 16 / 9; }
-  .hqc-motion .hm-pin .hm-step > div { padding: 1.4rem clamp(1.15rem, 1.4vw, 1.6rem) 1.6rem; }
-  .hqc-motion .hm-pin .hm-step h3 { margin-top: .9rem; }
-  .hqc-motion .hm-pin .hm-step p { line-height: 1.6; }
-  .hqc-motion .hm-pin .button { margin-top: 1.5rem; }
-  /* One dominant step: the current step takes the copper wash, the rest recede but stay legible. */
-  .hqc-motion .hm-pin .hm-step { transition: background-color .5s ease, color .5s ease; }
-  .hqc-motion .hm-pin .hm-step:not(.is-current) { background: var(--color-midnight); color: white; }
-  .hqc-motion .hm-pin .hm-step:not(.is-current) .hm-step-num { color: var(--color-copper); opacity: .68; }
-  .hqc-motion .hm-pin .hm-step:not(.is-current) h3 { color: rgb(255 255 255 / .85); }
-  .hqc-motion .hm-pin .hm-step:not(.is-current) p { color: rgb(255 255 255 / .72); }
-  .hqc-motion .hm-pin .hm-step:not(.is-current) img { filter: saturate(.3) brightness(.6); }
-  .hqc-motion .hm-pin .hm-step.is-current { background: var(--color-copper); color: var(--color-midnight); }
-  .hqc-motion .hm-pin .hm-step.is-current .hm-step-num, .hqc-motion .hm-pin .hm-step.is-current p { color: var(--color-midnight); }
-  .hqc-motion .hm-pin .hm-step.is-current .hm-step-num { transform: translateY(-3px); }
-}
+/* The steps scroll in normal flow (no pinning, so there is no stretch of scroll where nothing
+   moves); the copper line fills as the sequence passes through the viewport. */
 
 /* ---------- Complex route: captioned photographs ---------- */
 @media (max-width: 639px) {
@@ -524,7 +497,6 @@ main:has(.hm-hero) { overflow-x: clip; }
 .hm-evidence::before { background: rgb(14 42 49 / .66); }
 .hm-evidence > div > section { border-color: transparent; background: transparent; padding-block: clamp(6rem, 13vw, 10rem); }
 .hm-evidence .max-w-4xl { margin-inline: auto; text-align: center; }
-.hm-evidence .section-kicker { color: var(--color-copper); }
 .hm-evidence h2 { margin-inline: auto; color: white; }
 .hm-evidence a { color: white; }
 .hm-evidence a:hover { color: var(--color-copper); }
