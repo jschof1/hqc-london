@@ -54,7 +54,7 @@ const organizationNode = {
   url: baseUrl,
   description,
   image: defaultImage,
-  logo: `${baseUrl}/favicon.ico`,
+  logo: `${baseUrl}/images/brand/hqc-logo-horizontal-flat-gold.png`,
   email: 'sales@highqualityclean.co.uk',
   telephone: '+44 20 8870 3925',
   priceRange: '££',
@@ -170,7 +170,11 @@ const schemaItem = {
     <meta name="bingbot" content={effectiveRobots} />
     <meta name="yandexbot" content={effectiveRobots} />
     <meta name="google" content="notranslate" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="sitemap" href="/sitemap-0.xml" />
     <meta property="og:type" content="website" />
