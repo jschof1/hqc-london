@@ -23,7 +23,7 @@ test('contact goals never include contact details; unrelated links do not conver
   for (const href of ['tel:+441234', 'mailto:private@example.com', 'https://wa.me/441234', 'https://wa.me.attacker.test/', 'https://highqualityclean.co.uk/contact/']) {
     handlers.click({ target: { closest: () => ({ href }) } });
   }
-  assert.deepEqual(events.map(e => e.n), ['pageview','Website Phone Click','Website Email Click','Website Email Draft Opened','Website WhatsApp Click']);
+  assert.deepEqual(events.map(e => e.n), ['pageview','Website Phone Click','Website Email Click','Website WhatsApp Click']);
   assert.ok(!JSON.stringify(events).includes('441234'));
 });
 test('only existing accepted form hooks count, no event properties copied', () => {

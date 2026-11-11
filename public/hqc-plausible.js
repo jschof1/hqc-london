@@ -28,10 +28,8 @@
     let url;
     try { url = new URL(link.href); } catch { return; }
     if (url.protocol === 'tel:') track('Website Phone Click');
-    else if (url.protocol === 'mailto:') {
-      track('Website Email Click');
-      track('Website Email Draft Opened');
-    } else if (url.protocol === 'https:' && ['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname)) {
+    else if (url.protocol === 'mailto:') track('Website Email Click');
+    else if (url.protocol === 'https:' && ['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname)) {
       track('Website WhatsApp Click');
     }
   });
