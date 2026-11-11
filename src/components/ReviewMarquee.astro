@@ -1,0 +1,62 @@
+---
+// Google reviews carousel (Jack, 11 Nov 2026). Content is a dated snapshot of HQC's public
+// Google Business Profile (src/data/google-reviews.json): review text verbatim, reviewers by
+// first name and last initial. Two rows drift in opposite directions; hover, focus or the pause
+// button stops them, and reduced motion turns each row into a still, scrollable strip.
+import reviewsData from '../data/google-reviews.json';
+
+const reviews = reviewsData.reviews;
+const rows = [reviews.filter((_, i) => i % 2 === 0), reviews.filter((_, i) => i % 2 === 1)];
+const flat = (text: string) => text.replace(/\s*\n+\s*/g, ' ');
+---
+
+<section id="google-reviews" class="hm-reviews scroll-mt-20 overflow-hidden bg-porcelain py-16 md:py-20" aria-labelledby="google-reviews-title" data-reviews>
+  <div class="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 sm:px-8 md:flex-row md:items-end md:justify-between lg:px-14">
+    <div class="flex items-center gap-5">
+      <p class="font-serif text-6xl font-medium leading-none text-midnight md:text-7xl"><span class="sr-only">Rated </span>{reviewsData.rating}<span class="sr-only"> out of 5</span></p>
+      <div>
+        <span class="hm-stars text-lg" aria-hidden="true">★★★★★</span>
+        <h2 id="google-reviews-title" class="mt-1 font-serif text-2xl font-medium leading-tight text-midnight md:text-3xl">What clients say on Google</h2>
+        <p class="mt-1 text-sm text-slate">From {reviewsData.reviewCount} reviews</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-3">
+      <a href={reviewsData.profileUrl} class="hm-cta-link whitespace-nowrap" target="_blank" rel="noopener">Read all reviews on Google <span class="hm-cta-chip" aria-hidden="true">↗</span></a>
+      <button type="button" class="hm-reviews-toggle" data-reviews-toggle aria-pressed="false">Pause reviews</button>
+    </div>
+  </div>
+
+  <div class="mt-10 grid gap-4">
+    {rows.map((row, rowIndex) => (
+      <div class:list={['hm-marquee', rowIndex === 1 && 'hm-marquee-reverse']} style={`--hm-marquee-dur: ${row.length * 9}s`}>
+        <div class="hm-marquee-track">
+          {[0, 1].map((copy) => (
+            <ul class="hm-marquee-list" aria-label={copy === 0 ? `Google reviews, row ${rowIndex + 1}` : undefined} aria-hidden={copy === 1 ? 'true' : undefined} inert={copy === 1 ? true : undefined}>
+              {row.map((review) => (
+                <li class="hm-review">
+                  <span class="hm-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>{'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}</span>
+                  <blockquote class="hm-review-text"><p>{flat(review.text)}</p></blockquote>
+                  <p class="hm-review-by"><span class="hm-review-initial" aria-hidden="true">{review.name.charAt(0)}</span><span><strong>{review.name}</strong><span class="block">Google review</span></span></p>
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector<HTMLElement>('[data-reviews]');
+  const toggle = section?.querySelector<HTMLButtonElement>('[data-reviews-toggle]');
+  if (section && toggle) {
+    toggle.addEventListener('click', () => {
+      const paused = section.classList.toggle('is-user-paused');
+      toggle.setAttribute('aria-pressed', String(paused));
+      toggle.textContent = paused ? 'Play reviews' : 'Pause reviews';
+    });
+    // Only drift while the strip is on screen.
+    new IntersectionObserver(([entry]) => section.classList.toggle('is-offscreen', !entry.isIntersecting)).observe(section);
+  }
+</script>

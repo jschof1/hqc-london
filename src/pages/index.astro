@@ -5,6 +5,8 @@ import ServiceSelector from '../components/ServiceSelector.astro';
 import TrustRail from '../components/TrustRail.astro';
 import FounderPortrait from '../components/FounderPortrait.astro';
 import ClientEvidence from '../components/ClientEvidence.astro';
+import ReviewMarquee from '../components/ReviewMarquee.astro';
+import reviewsData from '../data/google-reviews.json';
 import phase8Copy from '../data/phase8-copy.json';
 import { controlledCtaHref } from '../data/controlled-cta-links';
 import { offeringImages, sectionImagery } from '../data/section-imagery';
@@ -95,7 +97,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
             <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote">Request a Cleaning Quote</a>
           </div>
           <div class="hm-trust-row mt-9 flex flex-wrap gap-x-7 gap-y-2 text-[11px] font-bold uppercase tracking-[.18em] text-white/65" data-intro="fade" style="--d: 320ms">
-            <span>London-based</span><span>Outcome-led</span><span>Founder-led</span>
+            <a href="#google-reviews" class="hm-trust-rating"><span class="text-copper" aria-hidden="true">★★★★★</span>{reviewsData.rating} on Google from {reviewsData.reviewCount} reviews</a><span>London-based</span><span>Outcome-led</span><span>Founder-led</span>
           </div>
         </div>
 
@@ -131,6 +133,8 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
         ))}
       </ul>
     </section>
+
+    <ReviewMarquee />
 
     {/* Routes: centred introduction, three tall photographic routes. */}
     <section class="section-shell">
@@ -197,7 +201,6 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
       {/* Outcome: full-height photograph left, reasoning right. */}
       <section class="hm-split hm-split-media-left bg-porcelain">
         <div class="hm-split-copy">
-          <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
           <h2 class="section-title" data-reveal="title">{outcome.heading}</h2>
           <div class="mt-8 space-y-5 text-lg leading-8 text-slate">
             {outcome.blocks.map((block, index) => {
@@ -221,7 +224,6 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
         <div class="hm-band hm-parallax">
           <img src={lib('r-living-dust').src} alt={lib('r-living-dust').alt} loading="lazy" decoding="async" width="1200" height="900" />
           <div class="hm-band-copy text-center">
-            <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
             <h2 class="section-title mx-auto text-white" data-reveal="title">Cleaning Services for London Homes</h2>
           </div>
         </div>
@@ -254,7 +256,6 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
           <img src={lib('p-van-street').src} alt={lib('p-van-street').alt} loading="lazy" decoding="async" width="1200" height="900" />
         </div>
         <div class="hm-stage-panel" data-reveal="right">
-          <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
           <h2 class="section-title" data-reveal="title">{partner.heading}</h2>
           <div class="mt-7 space-y-5 text-lg leading-8 text-slate">
             {partner.blocks.map((block, index) => {
@@ -272,7 +273,6 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
       {/* Workplace: reasoning left, full-height photograph right. */}
       <section class="hm-split hm-split-media-right bg-porcelain">
         <div class="hm-split-copy">
-          <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
           <h2 class="section-title" data-reveal="title">{workplace.heading}</h2>
           <div class="mt-8 space-y-5 text-lg leading-8 text-slate">
             {workplace.blocks.map((block, index) => {
@@ -294,7 +294,6 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
       <section class="bg-white py-20 md:py-28">
         <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
           <div class="mx-auto max-w-4xl text-center">
-            <p class="section-kicker" data-reveal="fade">Cleaning Defined by the Outcome</p>
             <h2 class="section-title mx-auto" data-reveal="title">Why Clients Choose HQC When the Result Matters</h2>
           </div>
           <div class="hm-why mt-14 md:mt-16">
