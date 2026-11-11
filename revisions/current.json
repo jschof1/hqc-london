@@ -1,33 +1,139 @@
 {
   "schemaVersion": 1,
-  "baseline": "8f5331b9aeba857974408ace710fa71335ee9f59",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met.",
+  "baseline": "8e852eb5c00aa6da4c290bf19a2081e219c4d840",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero.",
   "requirements": [
-    { "id": "M1", "text": "Planning: freeze this scope on the nov10-logo-clarity line; earlier accepted Phase 8 requirements (logo round L1/L2, F1-F3, copy restoration, imagery) stay in force." },
-    { "id": "D1", "text": "Homepage only: significantly improve presentation, layout rhythm and motion design (entrance choreography, scroll-linked motion, interactive states) so the page reads as a guided journey." },
-    { "id": "D2", "text": "Raise conversion potential: clearer CTA hierarchy, persistent access to the existing primary actions, a stronger service-selector interaction and less friction, reusing only existing on-page CTA labels." },
-    { "id": "D3", "text": "Preserve every word of homepage copy (visible text, alt text, aria labels, title and meta), its order, every link destination, data-track attribute, selector routing and conversion event. A mechanical text comparison against the baseline must show no changed, removed or reordered copy." },
-    { "id": "D4", "text": "Honour prefers-reduced-motion, keep all content readable without JavaScript, avoid layout shift and LCP delay, keep keyboard and screen-reader behaviour, and add no new runtime dependencies." },
-    { "id": "D5", "text": "Leave every other page, shared component, form, CRM routing, tracking, schema, redirect, every image and the Phase 8 production hold unchanged." },
-    { "id": "R6", "text": "Record the resulting version in revisions/versions.json (and the review room) before handover; full npm run check:revision passes." }
+    {
+      "id": "M1",
+      "text": "Planning: freeze this scope on the nov10-logo-clarity line; earlier accepted Phase 8 requirements (logo round L1/L2, F1-F3, copy restoration, imagery) stay in force."
+    },
+    {
+      "id": "D1",
+      "text": "Homepage only: significantly improve presentation, layout rhythm and motion design (entrance choreography, scroll-linked motion, interactive states) so the page reads as a guided journey."
+    },
+    {
+      "id": "D2",
+      "text": "Raise conversion potential: clearer CTA hierarchy, persistent access to the existing primary actions, a stronger service-selector interaction and less friction, reusing only existing on-page CTA labels."
+    },
+    {
+      "id": "D3",
+      "text": "Preserve every word of homepage copy (visible text, alt text, aria labels, title and meta), its order, every link destination, data-track attribute, selector routing and conversion event. A mechanical text comparison against the baseline must show no changed, removed or reordered copy."
+    },
+    {
+      "id": "D4",
+      "text": "Honour prefers-reduced-motion, keep all content readable without JavaScript, avoid layout shift and LCP delay, keep keyboard and screen-reader behaviour, and add no new runtime dependencies."
+    },
+    {
+      "id": "D5",
+      "text": "Leave every other page, shared component, form, CRM routing, tracking, schema, redirect, every image and the Phase 8 production hold unchanged."
+    },
+    {
+      "id": "R6",
+      "text": "Record the resulting version in revisions/versions.json (and the review room) before handover; full npm run check:revision passes."
+    },
+    {
+      "id": "I7",
+      "text": "Image-led homepage (Jack, 11 Nov): each major section gets a deliberate photographic treatment (full-bleed bands, split media, image-led cards) using only existing library images under public/images, no image repeated on the page, no decorative gradients, glows or orbs; readability overlays are flat tints."
+    },
+    {
+      "id": "C8",
+      "text": "Copy punctuation (Jack, 11 Nov): homepage list items render without trailing semicolons or full stops; no other copy changes. This is the only authorised exception to D3."
+    },
+    {
+      "id": "L9",
+      "text": "Layout and motion (Jack, 11 Nov): vary alignment and composition across sections (centred, right, split, full-bleed), split sections where it clarifies, diagnose and fix the hero (one decisive image, clear hierarchy, routes in view), and make all motion smooth: no jitter, no late pop-in, no cursor gimmicks; scroll effects run on transform and opacity only."
+    }
   ],
   "allowedFiles": [
-    { "path": "revisions/current.json", "requirements": ["M1"], "allowDelete": false, "reason": "Planning-only scope freeze." },
-    { "path": "revisions/versions.json", "requirements": ["R6"], "allowDelete": false, "reason": "Register the reviewed version." },
-    { "path": "src/pages/index.astro", "requirements": ["D1", "D2", "D3", "D4"], "allowDelete": false, "reason": "Homepage presentation, motion hooks and sticky CTA using existing labels." },
-    { "path": "src/components/ServiceSelector.astro", "requirements": ["D1", "D2", "D3", "D4"], "allowDelete": false, "reason": "Homepage-only component: selection state and animated result panel; results copy untouched." },
-    { "path": "src/components/TrustRail.astro", "requirements": ["D1", "D3", "D4"], "allowDelete": false, "reason": "Homepage-only component: rail progress, drag and reveal." },
-    { "path": "src/styles/home-motion.css", "requirements": ["D1", "D2", "D4"], "allowDelete": false, "reason": "New homepage-only stylesheet." },
-    { "path": "src/scripts/home-motion.ts", "requirements": ["D1", "D2", "D4"], "allowDelete": false, "reason": "New dependency-free homepage motion engine." }
+    {
+      "path": "revisions/current.json",
+      "requirements": [
+        "M1"
+      ],
+      "allowDelete": false,
+      "reason": "Planning-only scope freeze."
+    },
+    {
+      "path": "revisions/versions.json",
+      "requirements": [
+        "R6"
+      ],
+      "allowDelete": false,
+      "reason": "Register the reviewed version."
+    },
+    {
+      "path": "src/pages/index.astro",
+      "requirements": [
+        "C8",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "I7",
+        "L9"
+      ],
+      "allowDelete": false,
+      "reason": "Homepage presentation, motion hooks and sticky CTA using existing labels."
+    },
+    {
+      "path": "src/components/ServiceSelector.astro",
+      "requirements": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "I7",
+        "L9"
+      ],
+      "allowDelete": false,
+      "reason": "Homepage-only component: selection state and animated result panel; results copy untouched."
+    },
+    {
+      "path": "src/components/TrustRail.astro",
+      "requirements": [
+        "D1",
+        "D3",
+        "D4",
+        "I7",
+        "L9"
+      ],
+      "allowDelete": false,
+      "reason": "Homepage-only component: rail progress, drag and reveal."
+    },
+    {
+      "path": "src/styles/home-motion.css",
+      "requirements": [
+        "D1",
+        "D2",
+        "D4",
+        "I7",
+        "L9"
+      ],
+      "allowDelete": false,
+      "reason": "New homepage-only stylesheet."
+    },
+    {
+      "path": "src/scripts/home-motion.ts",
+      "requirements": [
+        "D1",
+        "D2",
+        "D4",
+        "I7",
+        "L9"
+      ],
+      "allowDelete": false,
+      "reason": "New dependency-free homepage motion engine."
+    }
   ],
   "preserve": [
-    "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events.",
+    "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events, except the C8 list punctuation.",
     "Shared components used elsewhere (Header, Footer, Layout, ConversionPrompt, CookiePreferences, ClientEvidence, FounderPortrait, OutcomePage) and global.css.",
-    "Every image file and image choice, including the nov10 logo-clarity images; the Phase 8 production hold."
+    "Every image file (no new, edited or deleted images); generated library images stay illustrative and are never presented as client evidence; the Phase 8 production hold."
   ],
   "verification": [
     "Mechanical text, attribute and link comparison of rendered homepage HTML against 6b5c2f00 / 8f5331b.",
     "Desktop and mobile browser checks of every homepage section, the service selector journey, reduced-motion and no-JS rendering, and console health.",
-    "Council review by three independent model reviewers (Claude, GPT, DeepSeek) with scores, repeated after fixes."
+    "Council review by three independent model reviewers (Claude, GPT, DeepSeek) with scores, repeated after fixes.",
+    "Round 5: mechanical copy comparison against 8f5331b shows only the C8 punctuation removals plus the existing dock labels; desktop, laptop and phone captures of every section; scroll-through recordings checked for jank; independent Codex review."
   ]
 }
