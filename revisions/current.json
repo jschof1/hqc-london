@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "8e852eb5c00aa6da4c290bf19a2081e219c4d840",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero.",
+  "baseline": "25e5f7af3ed0ba25c346ac642961b45e90b07389",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 12 November 2026 (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait.",
   "requirements": [
     {
       "id": "M1",
@@ -42,6 +42,22 @@
     {
       "id": "L9",
       "text": "Layout and motion (Jack, 11 Nov): vary alignment and composition across sections (centred, right, split, full-bleed), split sections where it clarifies, diagnose and fix the hero (one decisive image, clear hierarchy, routes in view), and make all motion smooth: no jitter, no late pop-in, no cursor gimmicks; scroll effects run on transform and opacity only."
+    },
+    {
+      "id": "G10",
+      "text": "Google reviews (Jack, 12 Nov): a dated snapshot of HQC's public Google Business Profile reviews (4.9 rating, 92 reviews at capture) shown as a moving carousel directly below the hero, plus the rating in the hero trust row. Review text verbatim; reviewers shown by first name and last initial; 4- and 5-star reviews shown; no dates. Pauses on hover and focus, static and scrollable under reduced motion, duplicates hidden from assistive technology."
+    },
+    {
+      "id": "K11",
+      "text": "Remove the five repeated 'Cleaning Defined by the Outcome' kickers above the homepage chapters (Jack, 12 Nov); the hero kicker and the chapter heading of the same name remain."
+    },
+    {
+      "id": "H12",
+      "text": "Header (Jack, 12 Nov): primary navigation and the Request a Quote button stay on one line from 1024px; no label or link changes."
+    },
+    {
+      "id": "P13",
+      "text": "Founder portrait (Jack, 12 Nov): replace the founder portrait image with the photograph Pedro sent on WhatsApp, cropped to portrait; same alt text."
     }
   ],
   "allowedFiles": [
@@ -69,7 +85,9 @@
         "D2",
         "D3",
         "D4",
+        "G10",
         "I7",
+        "K11",
         "L9"
       ],
       "allowDelete": false,
@@ -106,7 +124,9 @@
         "D1",
         "D2",
         "D4",
+        "G10",
         "I7",
+        "K11",
         "L9"
       ],
       "allowDelete": false,
@@ -118,22 +138,73 @@
         "D1",
         "D2",
         "D4",
+        "G10",
         "I7",
+        "K11",
         "L9"
       ],
       "allowDelete": false,
       "reason": "New dependency-free homepage motion engine."
+    },
+    {
+      "path": "src/data/google-reviews.json",
+      "requirements": [
+        "G10"
+      ],
+      "allowDelete": false,
+      "reason": "Dated snapshot of public Google reviews."
+    },
+    {
+      "path": "src/components/ReviewMarquee.astro",
+      "requirements": [
+        "G10"
+      ],
+      "allowDelete": false,
+      "reason": "Homepage review carousel component."
+    },
+    {
+      "path": "src/components/Header.astro",
+      "requirements": [
+        "H12"
+      ],
+      "allowDelete": false,
+      "reason": "One-line desktop navigation from 1024px."
+    },
+    {
+      "path": "src/components/FounderPortrait.astro",
+      "requirements": [
+        "P13"
+      ],
+      "allowDelete": false,
+      "reason": "New founder photograph."
+    },
+    {
+      "path": "public/images/pedro-founder-portrait-400.webp",
+      "requirements": [
+        "P13"
+      ],
+      "allowDelete": false,
+      "reason": "Founder photograph, small."
+    },
+    {
+      "path": "public/images/pedro-founder-portrait-753.webp",
+      "requirements": [
+        "P13"
+      ],
+      "allowDelete": false,
+      "reason": "Founder photograph, large."
     }
   ],
   "preserve": [
-    "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events, except the C8 list punctuation.",
+    "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events, except the C8 list punctuation, the K11 kicker removals and the G10 review content.",
     "Shared components used elsewhere (Header, Footer, Layout, ConversionPrompt, CookiePreferences, ClientEvidence, FounderPortrait, OutcomePage) and global.css.",
-    "Every image file (no new, edited or deleted images); generated library images stay illustrative and are never presented as client evidence; the Phase 8 production hold."
+    "Every existing image file (no edits or deletions); generated library images stay illustrative and are never presented as client evidence; the Phase 8 production hold. New files are limited to the P13 founder photograph."
   ],
   "verification": [
     "Mechanical text, attribute and link comparison of rendered homepage HTML against 6b5c2f00 / 8f5331b.",
     "Desktop and mobile browser checks of every homepage section, the service selector journey, reduced-motion and no-JS rendering, and console health.",
     "Council review by three independent model reviewers (Claude, GPT, DeepSeek) with scores, repeated after fixes.",
-    "Round 5: mechanical copy comparison against 8f5331b shows only the C8 punctuation removals plus the existing dock labels; desktop, laptop and phone captures of every section; scroll-through recordings checked for jank; independent Codex review."
+    "Round 5: mechanical copy comparison against 8f5331b shows only the C8 punctuation removals plus the existing dock labels; desktop, laptop and phone captures of every section; scroll-through recordings checked for jank; independent Codex review.",
+    "Round 6: review snapshot count and rating match the live profile at capture; carousel motion, pause, reduced-motion and screen-reader checks; header on one line at 1024, 1280 and 1440 on the homepage and an outcome page; founder photograph on the homepage and an outcome page."
   ]
 }
