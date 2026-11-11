@@ -116,9 +116,9 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
           <li data-intro style={`--d: ${240 + index * 70}ms`}>
             <a href={offering.href} class:list={['hm-route-tab group', index === 0 && 'is-active']} data-slide-tab={index}>
               <span class="hm-route-tab-timer" aria-hidden="true"></span>
-              <span class="block text-[11px] font-bold uppercase tracking-[.18em] text-copper">{offering.eyebrow}</span>
-              <span class="mt-2 block font-serif text-[1.35rem] font-medium leading-snug xl:text-2xl">{offering.title}</span>
-              <span class="hm-offer-cta mt-3 text-sm font-bold text-white/85">Explore <span class="text-copper" aria-hidden="true">→</span></span>
+              <span class="hm-route-tab-eyebrow block text-[11px] font-bold uppercase tracking-[.18em] text-copper">{offering.eyebrow}</span>
+              <span class="hm-route-tab-title block font-serif font-medium">{offering.title}</span>
+              <span class="hm-offer-cta text-sm font-bold text-white/85">Explore <span class="text-copper" aria-hidden="true">→</span></span>
             </a>
           </li>
         ))}
