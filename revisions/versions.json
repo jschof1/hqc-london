@@ -2121,6 +2121,181 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-taste-review",
+      "commit": "b2df6e8541527acdb83877b0c67f698bc77507ec",
+      "immutableDeploymentUrl": "https://d79f0783.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
+      "captureManifest": {
+        "commit": "c995cd9b18649d94616de5da28ce4821e3c3dcf9",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-11",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-home-desktop.jpg",
+            "width": 1440,
+            "height": 15770,
+            "sha256": "0609c196a81eb4f3bd73a8c281dd7ee11925cf64f6bb16d533d6765e93183b21",
+            "capturedAt": "2026-11-11T13:32:36.312Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-home-mobile.jpg",
+            "width": 390,
+            "height": 25167,
+            "sha256": "3ba9ee1cd626d940edf69e249fe0ce245471de7ac1037abe04ef0c504832a702",
+            "capturedAt": "2026-11-11T13:35:33.579Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-quote-desktop.jpg",
+            "width": 1440,
+            "height": 5258,
+            "sha256": "eb35fbff0737dfea2dc41297d13027e08c92c1f8236b376f82b7170083b1d9f4",
+            "capturedAt": "2026-11-11T13:32:53.655Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-quote-mobile.jpg",
+            "width": 390,
+            "height": 8565,
+            "sha256": "a86790f86a788be1c0431d25dda0980fcbce1eccdc45a813e3b54ec32ae3c87e",
+            "capturedAt": "2026-11-11T13:35:49.650Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-how-desktop.jpg",
+            "width": 1440,
+            "height": 12480,
+            "sha256": "7c58468db7b4acdeff020bdd18ab5968423bbac1890840f240eba9f790ec3a65",
+            "capturedAt": "2026-11-11T13:33:14.499Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-how-mobile.jpg",
+            "width": 390,
+            "height": 17832,
+            "sha256": "9dc78fe005749d7ee30f1a3e77885b7bba692c54281e4518044de48abc07a4ef",
+            "capturedAt": "2026-11-11T13:36:12.873Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-contact-desktop.jpg",
+            "width": 1440,
+            "height": 6065,
+            "sha256": "395ca9e5397e4e7507c52c79cbc82f4c60c6ada32c2441cb638cc6c6d0c81933",
+            "capturedAt": "2026-11-11T13:33:30.966Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-contact-mobile.jpg",
+            "width": 390,
+            "height": 9893,
+            "sha256": "04839831b13a1ca1cbd35c3ebdbfecf702572e44f42769f9856b497ccbcd189d",
+            "capturedAt": "2026-11-11T13:36:29.638Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 11993,
+            "sha256": "dcfba336f526cb320daa72d699295e10a03b3a9ad84e4bf11fb5110ac23a983c",
+            "capturedAt": "2026-11-11T13:33:50.495Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 17842,
+            "sha256": "f8a44529b29ff804b872139b138ab44eca3e81b26e83a962fe041186ce1ff7f6",
+            "capturedAt": "2026-11-11T13:36:53.547Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-about-desktop.jpg",
+            "width": 1440,
+            "height": 12398,
+            "sha256": "1cfb03c9d105d362207a670c6efeb7ffe1e54006927fa5565a84f31151f5bba9",
+            "capturedAt": "2026-11-11T13:34:09.413Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-about-mobile.jpg",
+            "width": 390,
+            "height": 19876,
+            "sha256": "725b77aa26c259d86c6e286b730d06177a1fe58e63e92206c908912a5eae0415",
+            "capturedAt": "2026-11-11T13:37:17.768Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10157,
+            "sha256": "343ef016adbbd62f786a48d23d8aecc99265ef6f58b0923c498d3f25a9f54ddc",
+            "capturedAt": "2026-11-11T13:34:26.482Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-reviews-mobile.jpg",
+            "width": 390,
+            "height": 13953,
+            "sha256": "1485eb5e6f9aaa799199b2dfa8b34d4489510fb0b0e4c84c8a5756813f46b013",
+            "capturedAt": "2026-11-11T13:37:36.780Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 11245,
+            "sha256": "89aee5c81a894394d7800ebaf674375d2ccf4ea34a3658c64f3c9e3b408bc5de",
+            "capturedAt": "2026-11-11T13:34:43.737Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-privacy-mobile.jpg",
+            "width": 390,
+            "height": 17322,
+            "sha256": "ad16e7b539234ba9219882e80f41d667cbd5c0dc74f4cf88547b0d953f7c4375",
+            "capturedAt": "2026-11-11T13:37:58.216Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov11-taste-review-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13748,
+            "sha256": "359a5b045f7e4f8419791825595d5329e7cf590277541cd6fddafe2bab128997",
+            "capturedAt": "2026-11-11T13:35:03.992Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-taste-review-terms-mobile.jpg",
+            "width": 390,
+            "height": 22560,
+            "sha256": "c1c7bfe13b4897a0c16d9a90ee0ef59d82d0326aadead83aa6f0b4f1506cdd8b",
+            "capturedAt": "2026-11-11T13:38:25.471Z",
+            "sourceUrl": "https://d79f0783.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ]
 }
