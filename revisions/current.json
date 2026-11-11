@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "9f338ed41218d225519740704155341aa88c27b4",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait.",
+  "baseline": "34be5fc7e9bd79514270a3dabc5798b538036af7",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability.",
   "requirements": [
     {
       "id": "M1",
@@ -58,6 +58,14 @@
     {
       "id": "P13",
       "text": "Founder portrait (Jack, 11 Nov, later): replace the founder portrait image with the photograph Pedro sent on WhatsApp, cropped to portrait; same alt text."
+    },
+    {
+      "id": "S14",
+      "text": "Service selector (Jack, 11 Nov): photograph as the section background with a flat tint, heading and intro at the top, the nine situations in a two-column split grid (Homes: 01 to 05; Workplaces and property: 06 to 09) with the recommendation directly beneath; labels, order, routing, results copy and events unchanged."
+    },
+    {
+      "id": "G10a",
+      "text": "Review data correction (found 11 Nov): rating-only Google reviews whose captured text was HQC's reply are removed from the carousel, so every displayed quote is the reviewer's own words."
     }
   ],
   "allowedFiles": [
@@ -101,7 +109,8 @@
         "D3",
         "D4",
         "I7",
-        "L9"
+        "L9",
+        "S14"
       ],
       "allowDelete": false,
       "reason": "Homepage-only component: selection state and animated result panel; results copy untouched."
@@ -127,7 +136,8 @@
         "G10",
         "I7",
         "K11",
-        "L9"
+        "L9",
+        "S14"
       ],
       "allowDelete": false,
       "reason": "New homepage-only stylesheet."
@@ -149,7 +159,8 @@
     {
       "path": "src/data/google-reviews.json",
       "requirements": [
-        "G10"
+        "G10",
+        "G10a"
       ],
       "allowDelete": false,
       "reason": "Dated snapshot of public Google reviews."
