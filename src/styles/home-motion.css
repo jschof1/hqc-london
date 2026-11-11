@@ -80,11 +80,15 @@ main.hm-page { overflow-x: clip; }
   text-wrap: balance;
 }
 .hm-hero-h1 em { display: inline; padding-right: .05em; }
-.hm-trust-row span { display: inline-flex; align-items: center; }
+.hm-trust-row > span { display: inline-flex; align-items: center; }
 .hm-trust-rating { flex-basis: 100%; color: white; text-decoration: none; text-transform: none; letter-spacing: .02em; font-size: .9rem; }
-.hm-trust-rating span { margin-right: .35rem; letter-spacing: .1em; }
+.hm-trust-rating { display: inline-flex; align-items: center; gap: .1rem; }
+.hm-trust-rating > span[aria-hidden] { margin-right: .4rem; letter-spacing: .1em; }
+/* Google's multicolour G on a white disc (brand guidelines for dark grounds); the word stays for screen readers. */
+.hm-google-g { display: inline-flex; width: 1.35rem; height: 1.35rem; margin: 0 .3rem; align-items: center; justify-content: center; border-radius: 9999px; background: #fff; vertical-align: middle; }
+.hm-google-g svg { width: .85rem; height: .85rem; }
 .hm-trust-rating:hover { color: var(--color-copper); }
-.hm-trust-row span + span::before { content: ''; width: 1px; height: .9rem; margin-right: 1.15rem; background: rgb(255 255 255 / .3); }
+.hm-trust-row > span + span::before { content: ''; width: 1px; height: .9rem; margin-right: 1.15rem; background: rgb(255 255 255 / .3); }
 
 .hm-hero-media {
   position: relative;
