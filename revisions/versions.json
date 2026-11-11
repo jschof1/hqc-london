@@ -275,8 +275,8 @@
       "immutableDeploymentUrl": "https://04c98545.hqc-london.pages.dev",
       "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
       "captureManifest": {
-        "commit": "fabffd46b3b5b4545c962f6ef5d97fce5f7f8a3c",
-        "path": "tools/photo-review/public/versions/manifest.json"
+        "commit": "aaad4fa80de44d3413f8d94a7be45b9fcbbe9ac8",
+        "path": "revisions/versions.json"
       },
       "pages": {
         "home": {
