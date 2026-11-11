@@ -2593,6 +2593,196 @@
           }
         }
       }
+    },
+    {
+      "id": "nov11-founder-logo",
+      "label": "11 Nov: founder section, flat gold logo",
+      "date": "2026-11-11",
+      "captureDate": "2026-11-11",
+      "commit": "2908d42e9ac3b59140efcea80a51e5a1246865ab",
+      "deploymentUrl": "https://b3cace91.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://b3cace91.hqc-london.pages.dev",
+      "kind": "candidate",
+      "summary": "Follows the heading sizes version. Pedro's portrait leads a dark founder section, and the flat gold HQC logo set built to Pedro's 8 October specification is used across the site.",
+      "changes": [
+        "Founder section: Pedro's portrait fills the left half at full height; the words sit on the right on a dark ground. Wording is unchanged.",
+        "Logo, on every page: the flat gold horizontal logo (Pedro's chosen horizontal recomposition) in the header, the compact HQC monogram where the header is tight (1024 to 1279px), and the flat gold stacked lock-up in the footer in place of the 3D plaque.",
+        "Browser and device icons: a new favicon (16, 32 and 48px), an Apple touch icon and web manifest icons from the same set.",
+        "Everything else is as in the heading sizes version (nov11-taste-review)."
+      ],
+      "outstanding": [
+        "The Google reviews are a saved snapshot from 11 Nov; new reviews appear only when the snapshot is refreshed.",
+        "Three older pages (services, why us and the founder story section) still use the earlier photo of Pedro.",
+        "Pedro to confirm whether the bedroom (WA0016) and living-area (WA0015) library photos are HQC jobs; until then they sit unlabelled beside evidence wording on the homepage and the reviews page.",
+        "Pedro to choose the proof stories and supply source, quote and permission.",
+        "Before launch: connect the Phase 8 forms to the GHL webhooks and test every enquiry route end to end.",
+        "Pedro to review the flat gold logo set at actual size on the site, especially the 16px favicon, before it is treated as approved."
+      ],
+      "provenance": "Generated scenes remain illustrative, not photos of HQC jobs. Review text is copied from HQC's public Google Business Profile. The logo files are the 28 Oct 2026 flat gold kit, unchanged. Captured on 2026-11-11 from the immutable preview https://b3cace91.hqc-london.pages.dev (commit 2908d42) at 1440px and 390px, non-essential cookies rejected, no forms submitted. Review candidate, not launched: the live website is unchanged and the Phase 8 production hold remains.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-home-desktop.jpg",
+            "width": 1440,
+            "height": 15673,
+            "sha256": "e2c35f30d16b61ef484cdde1c76c29f256f4ef8b5edd4d84f1bc70538fde8ef9",
+            "capturedAt": "2026-11-11T14:20:04.537Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-home-mobile.jpg",
+            "width": 390,
+            "height": 24947,
+            "sha256": "b11fecd1ea2d74ea9b27ac7a0a0d7c25cecbcbfa9fb7d00b1ca4c421787c9465",
+            "capturedAt": "2026-11-11T14:22:41.973Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-quote-desktop.jpg",
+            "width": 1440,
+            "height": 5194,
+            "sha256": "05c3b4259651666c3f1997ff46999f1c2ccc26bb5ae19a40b1795a181ed0479c",
+            "capturedAt": "2026-11-11T14:20:19.758Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-quote-mobile.jpg",
+            "width": 390,
+            "height": 8482,
+            "sha256": "8aa545038328031ca425f80b1febc868c3d5ca83aabf441482597067cffdf0a8",
+            "capturedAt": "2026-11-11T14:22:57.038Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-how-desktop.jpg",
+            "width": 1440,
+            "height": 12416,
+            "sha256": "81df27c3c9fa125c73b6c972ffbb3ba1ad7383a73a2060c7dbf89c579fd3d38f",
+            "capturedAt": "2026-11-11T14:20:37.930Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-how-mobile.jpg",
+            "width": 390,
+            "height": 17749,
+            "sha256": "7b0645ee22a5724c4140a4ac73a3f427c97d5be63b085369d4f773b10281d820",
+            "capturedAt": "2026-11-11T14:23:19.329Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-contact-desktop.jpg",
+            "width": 1440,
+            "height": 6001,
+            "sha256": "19130c5119a8d3c8ccf05a32aa0de61a55d1cf0efbcfd58376e648c1444ed1e6",
+            "capturedAt": "2026-11-11T14:20:50.166Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-contact-mobile.jpg",
+            "width": 390,
+            "height": 9810,
+            "sha256": "246411b812ab7ca769f3ae3a44d2d05b5b90b5fd427ccee7ca8bb2bcf1af5660",
+            "capturedAt": "2026-11-11T14:23:33.989Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 11929,
+            "sha256": "83a0396a0c2e92304abb163dd01fbaa521f2e084bf8e2ee441d23e05040dda8a",
+            "capturedAt": "2026-11-11T14:21:07.311Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 17760,
+            "sha256": "fe17f633356a9011086b4c67252b503b3c1b3725c57862b5d26d9efe64aecd66",
+            "capturedAt": "2026-11-11T14:23:56.515Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-about-desktop.jpg",
+            "width": 1440,
+            "height": 12333,
+            "sha256": "8bb7b7baefdeb8b20899c094c7f5359c0e8b53331b3188b58b0b9bbca75d5006",
+            "capturedAt": "2026-11-11T14:21:24.276Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-about-mobile.jpg",
+            "width": 390,
+            "height": 19793,
+            "sha256": "adf38e051a2449f8f09e5337f9b45190e6bb99101e2e4240fc634c0943f64241",
+            "capturedAt": "2026-11-11T14:24:19.027Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10093,
+            "sha256": "c4f506e989834c614da4a5ab893902ab184672be7798783bd10860a26600d4ee",
+            "capturedAt": "2026-11-11T14:21:39.338Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-reviews-mobile.jpg",
+            "width": 390,
+            "height": 13871,
+            "sha256": "ff8fddec5b9b0c1389c63d0f8b3678741654c23e81b6b55197b02692ffe365e3",
+            "capturedAt": "2026-11-11T14:24:37.810Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 11180,
+            "sha256": "e48230e7a31c599a722aa05f0db0e247c266788679945728941003bb8a262fd3",
+            "capturedAt": "2026-11-11T14:21:55.107Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-privacy-mobile.jpg",
+            "width": 390,
+            "height": 17239,
+            "sha256": "d2bca83088b6df9419d3bbfb164f5e8ccbd3edd7cd26e7a6740a9cc69cbd7b21",
+            "capturedAt": "2026-11-11T14:24:57.834Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov11-founder-logo-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13683,
+            "sha256": "e779c2ef5aea5a3effb330e59dd9f27a9aee0e3c07c996bbc9ac31cf63f0b0d9",
+            "capturedAt": "2026-11-11T14:22:13.946Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-founder-logo-terms-mobile.jpg",
+            "width": 390,
+            "height": 22478,
+            "sha256": "5a39612714bbe673bb9f580fd4d95a32e561ad7e6cc8a6114bf04b1b2aec8766",
+            "capturedAt": "2026-11-11T14:25:23.980Z",
+            "sourceUrl": "https://b3cace91.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -2643,7 +2833,7 @@
     }
   ],
   "defaultBefore": "live-oct29",
-  "defaultAfter": "nov11-taste-review",
+  "defaultAfter": "nov11-founder-logo",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
