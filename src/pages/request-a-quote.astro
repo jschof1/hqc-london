@@ -19,6 +19,8 @@ const routeImages = {
 const heroPhoto = cardLibrary['g-enquiry'];
 const informationPhoto = cardLibrary['g-scope-plan'];
 const accuracyPhoto = cardLibrary['p-signoff'];
+// Second pass (11 Nov 2026): content lists drop their trailing semicolon or full stop.
+const listItem = (item: string) => item.replace(/\s*[;.]\s*$/, '');
 const routeCards = [
   { image: routeImages.property, title: 'Property or Portfolio', items: ['property managers;', 'estate and letting agents;', 'landlords;', 'block managers;', 'developers;', 'portfolio teams.'], href: '/request-a-quote/?route=property#routed-quote-form', cta: 'Property or Portfolio Requirement' },
   { image: routeImages.commercial, title: 'Workplace or Commercial Site', items: ['offices;', 'workplaces;', 'commercial premises;', 'recurring programmes;', 'commercial deep cleaning.'], href: '/request-a-quote/?route=commercial#routed-quote-form', cta: 'Workplace or Commercial Requirement' },
@@ -150,7 +152,7 @@ const routeCards = [
                 <div class="hm-card-body">
                   <h3 class="eq-card-title">{card.title}</h3>
                   <p class="eq-for">For:</p>
-                  <ul class="eq-ticks">{card.items.map((item) => <li><span>{item}</span></li>)}</ul>
+                  <ul class="eq-ticks">{card.items.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>
                   <p class="hm-card-foot"><a class="hm-cta-link" href={card.href}>{card.cta} <span class="hm-cta-chip" aria-hidden="true">→</span></a></p>
                 </div>
               </article>
@@ -164,7 +166,7 @@ const routeCards = [
         <div class="hm-split-copy">
           <h2 id="quote-information-title" class="section-title" data-reveal="title">Information That Helps Us Route the Enquiry</h2>
           <ul class="hm-checks hm-checks-panel mt-8" data-stagger="40" data-stagger-type="fade">
-            {['name;', 'email;', 'telephone;', 'property or site address;', 'postcode;', 'buyer type;', 'service requirement;', 'property or site type;', 'condition;', 'desired outcome;', 'preferred timing;', 'access information;', 'photos or supporting files;', 'message or additional details.'].map((item) => <li><span>{item}</span></li>)}
+            {['name;', 'email;', 'telephone;', 'property or site address;', 'postcode;', 'buyer type;', 'service requirement;', 'property or site type;', 'condition;', 'desired outcome;', 'preferred timing;', 'access information;', 'photos or supporting files;', 'message or additional details.'].map((item) => <li><span>{listItem(item)}</span></li>)}
           </ul>
           <p class="mt-6 text-lg leading-8 text-slate" data-reveal>Not every enquiry needs every field.</p>
         </div>
@@ -173,11 +175,11 @@ const routeCards = [
         </figure>
       </section>
 
-      {/* After submitting: four numbered dark cards. */}
+      {/* After submitting: four numbered porcelain cards on a copper track, heading left. */}
       <section class="eq-section bg-white eq-rule" aria-labelledby="quote-after-title">
         <div class="eq-shell">
-          <div class="eq-head eq-head-center">
-            <h2 id="quote-after-title" class="section-title mx-auto" data-reveal="title">What Happens After You Submit</h2>
+          <div class="eq-head">
+            <h2 id="quote-after-title" class="section-title" data-reveal="title">What Happens After You Submit</h2>
           </div>
           <dl class="eq-steps" data-stagger="80"><div class="eq-step"><dt>Standard home requirement</dt><dd>We determine whether the enquiry can move into the relevant home-service or booking route.</dd></div><div class="eq-step"><dt>Quoted residential service</dt><dd>HQC reviews the requirement and confirms what further information is needed.</dd></div><div class="eq-step"><dt>Property or commercial service</dt><dd>The enquiry is qualified for quotation or site assessment.</dd></div><div class="eq-step"><dt>Complex requirement</dt><dd>The enquiry enters the Complex Service Assessment route.</dd></div></dl>
         </div>
@@ -198,15 +200,15 @@ const routeCards = [
             <h2 id="quote-accuracy-title" class="section-title" data-reveal="title">Send Accurate Information</h2>
             <p class="mt-6 text-lg leading-8 text-slate" data-reveal>The quotation and service recommendation rely on the information supplied.</p>
             <p class="mt-3 text-lg leading-8 text-slate" data-reveal>If the property condition, access or requirement differs materially, HQC may need to:</p>
-            <ul class="hm-checks mt-3" data-stagger="40" data-stagger-type="fade"><li><span>clarify;</span></li><li><span>reassess;</span></li><li><span>revise the scope;</span></li><li><span>revise the quotation;</span></li><li><span>recommend another service.</span></li></ul>
+            <ul class="hm-checks mt-3" data-stagger="40" data-stagger-type="fade">{['clarify;', 'reassess;', 'revise the scope;', 'revise the quotation;', 'recommend another service.'].map((item) => <li><span>{listItem(item)}</span></li>)}</ul>
           </section>
         </div>
       </div>
 
-      {/* Closing: midnight band, one action back to the form. */}
-      <section class="eq-section eq-dark eq-ready hm-dark" aria-labelledby="quote-ready-title">
+      {/* Closing: a light centred statement band, so it does not merge with the midnight footer. */}
+      <section class="eq-section bg-porcelain eq-rule eq-ready" aria-labelledby="quote-ready-title">
         <div class="eq-shell eq-head eq-head-center">
-          <h2 id="quote-ready-title" class="section-title mx-auto text-white" data-reveal="title">Ready to Tell Us About the Requirement?</h2>
+          <h2 id="quote-ready-title" class="section-title mx-auto" data-reveal="title">Ready to Tell Us About the Requirement?</h2>
           {/* Hash links are re-cloned by main.js, so the reveal sits on a wrapper. */}
           <p class="mt-8" data-reveal><a href="#routed-quote-form" class="hm-cta-link">Submit Your Requirement <span class="hm-cta-chip eq-chip" aria-hidden="true"></span></a></p>
         </div>

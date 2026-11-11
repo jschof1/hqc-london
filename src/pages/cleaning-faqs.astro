@@ -5,6 +5,13 @@ import MotionKit from '../components/MotionKit.astro';
 import '../styles/utility-pages.css';
 import faqGroups from '../data/phase8-faq.json';
 
+// Each chapter uses the existing heading and keeps its questions in source order.
+const chapterStyles = ['centred', 'split', 'midnight', 'cards', 'stage', 'rail', 'split-reverse', 'midnight-cards', 'centred'];
+const chapterPhotos: Record<number, string> = {
+  1: '/images/phase8-nov10/r-routine-visit.webp',
+  4: '/images/phase8-nov10/r-front-door-keys.webp',
+  6: '/images/phase8-nov10/p-build-dust.webp'
+};
 const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
   '@type': 'Question',
   name: faq.question,
@@ -28,20 +35,21 @@ const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
       </div>
     </section>
     <div class="utility-faq-body">
-      {faqGroups.map((group) => (
-        <section class="utility-faq-group">
-          <div class="utility-faq-heading" data-reveal="title"><h2 class="section-title font-serif text-midnight">{group.title}</h2></div>
+      {faqGroups.map((group, index) => (
+        <section id={`faq-group-${index + 1}`} class:list={['utility-faq-group', `utility-faq-${chapterStyles[index]}`, { 'hm-dark': index === 2 || index === 7 }]}>
+          <div class="utility-faq-heading" data-reveal="title"><h2 class="section-title font-serif">{group.title}</h2></div>
           <div class="utility-questions" data-stagger="70">
             {group.items.map((faq) => (
               <details class="group utility-question" data-reveal="quick">
-                <summary class="cursor-pointer pr-8 font-semibold text-midnight focus-visible:outline-2 focus-visible:outline-copper">{faq.question}</summary>
-                <p class="mt-4 leading-7 text-slate">{faq.answer}</p>
+                <summary class="cursor-pointer pr-8 font-semibold focus-visible:outline-2 focus-visible:outline-copper">{faq.question}</summary>
+                <p class="mt-4 leading-7">{faq.answer}</p>
               </details>
             ))}
           </div>
+          {chapterPhotos[index] && <figure class="utility-faq-photo hm-parallax" data-reveal="clip" style="--hm-cover: var(--color-porcelain)"><img src={chapterPhotos[index]} alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" /></figure>}
         </section>
       ))}
-      <section class="utility-closing hm-dark bg-midnight text-white" data-reveal="fade" aria-labelledby="faq-still-not-sure">
+      <section class="utility-closing utility-closing-photo hm-dark bg-midnight text-white" data-reveal="fade" aria-labelledby="faq-still-not-sure">
         <h2 id="faq-still-not-sure" class="section-title font-serif">Still Not Sure?</h2>
         <p class="mt-4 text-lg leading-8 text-white/75">Tell us what you need the cleaning to achieve.</p>
         <div class="mt-7 flex flex-wrap gap-3">

@@ -9,7 +9,10 @@ import '../styles/enquiry-pages.css';
 const contactImage = (heading: string) => cardImage(contactCardImagery[heading])!;
 // Site-wide design (11 Nov 2026): decorative library photographs beside the form and behind the
 // closing band. They repeat nothing written on the page, so they carry empty alt text.
-const formPhoto = cardLibrary['g-phone-desk'];
+// Second pass: the checklist still life, since the phone-call photo shares the Assessment Media hallway.
+const formPhoto = cardLibrary['r-checklist-home'];
+// Second pass (11 Nov 2026): content lists drop their trailing semicolon or full stop.
+const listItem = (item: string) => item.replace(/\s*[;.]\s*$/, '');
 const closingPhoto = cardLibrary['p-mansion-blocks'];
 // Lucide icons (ISC licence), inlined so no icon package is added.
 const needIcons = [
@@ -37,13 +40,13 @@ const methodIcons = {
 
   <main class="hm-page eq-page page-transition bg-porcelain pt-20">
     {/* Hero: midnight copy beside the photograph; paints at once, no reveal. */}
-    <section class="eq-hero">
+    <section class="eq-hero hm-dark">
       <div class="eq-hero-copy">
         <h1 class="eq-hero-h1 font-serif font-medium">Contact High Quality Clean</h1>
         <p class="eq-hero-lead">For new cleaning requirements, the fastest route is usually to tell us about the property, site and result required through the quotation form. For existing-client, supplier or general administrative matters, contact HQC here.</p>
         <div class="eq-hero-actions">
-          <a href="#contact-methods" class="button button-primary">Contact HQC</a>
-          <a href="/request-a-quote/" class="button button-ghost">Request a Quote</a>
+          <a href="#contact-methods" class="hm-cta-link">Contact HQC <span class="hm-cta-chip eq-chip" aria-hidden="true"></span></a>
+          <a href="/request-a-quote/" class="hm-cta-link hm-cta-secondary">Request a Quote <span class="hm-cta-chip eq-chip" aria-hidden="true"></span></a>
         </div>
         <div class="hm-trust-row eq-trust"><span>Clear scope</span><span>Labour-based quotations</span><span>Careful delivery</span></div>
       </div>
@@ -62,7 +65,7 @@ const methodIcons = {
           </div>
           <ul class="hm-considers eq-considers" data-stagger="50" data-stagger-type="fade">
             {['home cleaning;', 'property cleaning;', 'office or commercial cleaning;', 'post-construction work;', 'portfolio support;', 'complex-property assessment;'].map((item, index) => (
-              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={needIcons[index]} /><span>{item}</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={needIcons[index]} /><span>{listItem(item)}</span></li>
             ))}
           </ul>
         </div>
@@ -174,13 +177,13 @@ const methodIcons = {
             <h2 class="eq-card-title">Existing Clients</h2>
             <p>Use the contact route for matters such as:</p>
             <ul class="eq-ticks eq-ticks-light">
-              <li><span>an existing booking;</span></li>
-              <li><span>access update;</span></li>
-              <li><span>invoice query;</span></li>
-              <li><span>service question;</span></li>
-              <li><span>existing recurring arrangement;</span></li>
-              <li><span>feedback;</span></li>
-              <li><span>administrative support.</span></li>
+              <li><span>an existing booking</span></li>
+              <li><span>access update</span></li>
+              <li><span>invoice query</span></li>
+              <li><span>service question</span></li>
+              <li><span>existing recurring arrangement</span></li>
+              <li><span>feedback</span></li>
+              <li><span>administrative support</span></li>
             </ul>
             <p>Where a matter relates to a booking, include the relevant name, property address and booking date or reference where available.</p>
           </div>
@@ -192,11 +195,11 @@ const methodIcons = {
             <p>Supplier or subcontractor enquiries should be clearly marked as such.</p>
             <p>Please do not use the customer quotation route for:</p>
             <ul class="eq-ticks eq-ticks-light">
-              <li><span>recruitment;</span></li>
-              <li><span>supplier introductions;</span></li>
-              <li><span>subcontractor administration;</span></li>
-              <li><span>product sales;</span></li>
-              <li><span>general business proposals.</span></li>
+              <li><span>recruitment</span></li>
+              <li><span>supplier introductions</span></li>
+              <li><span>subcontractor administration</span></li>
+              <li><span>product sales</span></li>
+              <li><span>general business proposals</span></li>
             </ul>
           </div>
         </article>
@@ -224,10 +227,10 @@ const methodIcons = {
       </div>
     </section>
 
-    {/* Service area and quotation: two photo cards with a flat tint. */}
+    {/* Service area and quotation: two split rows, photograph and copy alternating sides. */}
     <section class="eq-section bg-white" aria-label="Service area and quotation routes">
       <div class="eq-shell eq-photo-cards" data-stagger="100">
-        <article class="eq-photo-card hm-dark">
+        <article class="eq-photo-card">
           <img class="eq-photo-card-bg" src={contactImage('Service Area Questions').src} alt={contactImage('Service Area Questions').alt} loading="lazy" decoding="async" width="1200" height="900" />
           <div class="eq-photo-card-body">
             <h2 class="eq-card-title">Service Area Questions</h2>
@@ -235,7 +238,7 @@ const methodIcons = {
             <div class="eq-actions"><a href="/areas-we-cover/" class="hm-cta-link">Check Areas We Cover <span class="hm-cta-chip" aria-hidden="true">→</span></a></div>
           </div>
         </article>
-        <article class="eq-photo-card hm-dark">
+        <article class="eq-photo-card eq-photo-card-flip">
           <img class="eq-photo-card-bg" src={contactImage('Need a Cleaning Quote Rather Than General Support?').src} alt={contactImage('Need a Cleaning Quote Rather Than General Support?').alt} loading="lazy" decoding="async" width="1200" height="900" />
           <div class="eq-photo-card-body">
             <h2 class="eq-card-title">Need a Cleaning Quote Rather Than General Support?</h2>

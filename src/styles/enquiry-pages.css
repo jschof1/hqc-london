@@ -20,17 +20,17 @@
 /* The page's one h1 stays a step above every section h2 (kit max 3.4rem). */
 .eq-hero-h1 { max-width: 15ch; font-size: clamp(2.45rem, 10cqi, 4.4rem); line-height: 1.02; letter-spacing: -.03em; text-wrap: balance; }
 .eq-hero-lead { margin-top: 1.25rem; max-width: 36rem; font-size: 1.05rem; line-height: 1.75; color: rgb(255 255 255 / .82); }
-.eq-hero-actions { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.75rem; }
-.eq-hero-actions .button { white-space: nowrap; }
+.eq-hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.eq-hero-actions .hm-cta-link { white-space: nowrap; }
 .eq-trust { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; margin-top: 2rem; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgb(255 255 255 / .7); }
 /* Phones: wrapped trust labels drop the dividers so no line starts with a rule. */
-@media (max-width: 639px) { .eq-hero .eq-trust span + span::before { display: none; } }
+/* Below wide desktop the labels can wrap, so drop the dividers and no line starts with a rule. */
+@media (max-width: 1439px) { .eq-hero .eq-trust span + span::before { display: none; } }
 .eq-hero-media { position: relative; order: -1; margin: 0; aspect-ratio: 2.4 / 1; overflow: hidden; background: var(--color-navy); }
 .eq-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 @media (min-width: 640px) {
   .eq-hero-copy { padding-block: 3rem 3.5rem; }
   .eq-hero-lead { font-size: 1.125rem; }
-  .eq-hero-actions { flex-direction: row; }
 }
 @media (min-width: 1024px) {
   .eq-hero { grid-template-columns: minmax(0, 52fr) minmax(0, 48fr); min-height: clamp(26rem, 58svh, 34rem); }
@@ -138,16 +138,17 @@
 .eq-unsure { display: flex; flex-direction: column; align-items: center; gap: .75rem; margin-top: 1.75rem; text-align: center; }
 @media (min-width: 640px) { .eq-unsure { flex-direction: row; justify-content: center; gap: 1rem; } }
 
-/* Second action beside a first on dark grounds keeps white text on hover. */
-.eq-page .hm-dark .hm-cta-secondary:hover { border-color: var(--color-copper); background: rgb(255 255 255 / .08); color: white; }
-.eq-page .hm-dark .hm-cta-secondary { color: white; }
 /* Arrow chips added where the label had no arrow: drawn in CSS so no characters are added. */
 .eq-chip::before { content: '→' / ''; }
 
 /* ---------- Dark photo cards (quote routes) ---------- */
 .eq-route-cards { margin-top: 2.5rem; }
 @media (min-width: 768px) { .eq-route-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 3rem; } }
-@media (min-width: 1280px) { .eq-route-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1280px) {
+  .eq-route-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* Two-line title slot so every card's "For:" label and list start on one line. */
+  .eq-route-cards .eq-card-title { min-height: 2.3em; }
+}
 .eq-route-cards .hm-card-dark { background: rgb(255 255 255 / .05); }
 .eq-route-cards .hm-card-body { gap: .7rem; padding: 1.4rem 1.4rem 1.5rem; }
 .eq-route-cards .eq-card-title { font-size: 1.4rem; }
@@ -169,31 +170,41 @@
 }
 .eq-ticks-light > li { color: var(--color-midnight); font-weight: 600; }
 
-/* ---------- Numbered dark steps (after you submit) ---------- */
+/* ---------- Numbered steps on a copper track (after you submit) ----------
+   Light porcelain cards under a copper rule with a midnight number badge, so they read
+   differently from the dark route cards above. */
 .eq-steps { display: grid; gap: 1rem; margin: 2.5rem 0 0; counter-reset: eq-step; }
 @media (min-width: 640px) { .eq-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1024px) { .eq-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 3rem; } }
+@media (min-width: 1024px) { .eq-steps { gap: 1.25rem; margin-top: 3rem; } }
+/* Four across only where each card keeps a comfortable measure. */
+@media (min-width: 1280px) { .eq-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .eq-step {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
-  border-radius: 1.25rem;
-  background: var(--color-midnight);
-  padding: 1.6rem 1.5rem 1.75rem;
-  color: rgb(255 255 255 / .78);
-  transition: translate .4s var(--hm-ease), background-color .3s ease;
+  gap: .7rem;
+  border-top: 3px solid var(--color-copper);
+  border-radius: 0 0 1.25rem 1.25rem;
+  background: var(--color-porcelain);
+  padding: 1.5rem 1.5rem 1.75rem;
+  color: var(--color-slate);
+  transition: translate .4s var(--hm-ease), box-shadow .5s ease;
 }
 .eq-step::before {
   counter-increment: eq-step;
-  content: counter(eq-step, decimal-leading-zero) / '';
-  margin-bottom: .5rem;
+  content: counter(eq-step) / '';
+  display: inline-flex;
+  width: 2.6rem; height: 2.6rem;
+  align-items: center; justify-content: center;
+  margin-bottom: .45rem;
+  border-radius: 9999px;
+  background: var(--color-midnight);
   font-family: var(--font-serif, serif);
-  font-size: 2rem;
+  font-size: 1.15rem;
   line-height: 1;
   color: var(--color-copper);
 }
-.eq-step:hover { translate: 0 -3px; background: var(--color-navy); }
-.eq-step dt { font-family: var(--font-serif, serif); font-size: 1.45rem; font-weight: 500; line-height: 1.15; color: white; }
+.eq-step:hover { translate: 0 -3px; box-shadow: 0 26px 60px -44px rgb(14 42 49 / .55); }
+.eq-step dt { font-family: var(--font-serif, serif); font-size: 1.4rem; font-weight: 500; line-height: 1.15; color: var(--color-midnight); }
 .eq-step dd { margin: 0; line-height: 1.65; }
 
 /* ---------- Stage panels ---------- */
@@ -205,18 +216,21 @@
 }
 .eq-whatsapp { font-size: 1.15rem; font-weight: 700; color: white; }
 
-/* ---------- Closing (quote) ---------- */
+/* ---------- Closing (quote): light centred statement band before the midnight footer ---------- */
 .eq-ready .eq-head { display: flex; flex-direction: column; align-items: center; }
+.eq-ready .section-title { max-width: 20ch; }
 
 /* ---------- Contact: what to quote for ---------- */
 .eq-needs { display: grid; gap: 2rem; }
 .eq-considers { margin-top: 0; }
-@media (min-width: 1024px) { .eq-needs { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: 4rem; } }
+@media (min-width: 1024px) { .eq-needs { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: start; gap: 4rem; } }
 .eq-foot-text { max-width: 44rem; font-size: 1.125rem; line-height: 1.75; color: var(--color-slate); }
 
 /* ---------- Contact: details on midnight ---------- */
 .eq-methods { display: grid; gap: 1rem; margin-top: 2.5rem; }
-@media (min-width: 768px) { .eq-methods { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 3rem; } }
+/* Three across from 1024px, the email card a little wider so the address stays on one line. */
+@media (min-width: 768px) { .eq-methods { margin-top: 3rem; } }
+@media (min-width: 1024px) { .eq-methods { grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr); } }
 .eq-method {
   display: flex;
   min-width: 0;
@@ -271,29 +285,38 @@
 .eq-info-body { display: flex; flex-direction: column; gap: .9rem; padding: 1.6rem 1.5rem 1.85rem; color: var(--color-slate); line-height: 1.7; }
 .eq-info-body .eq-card-title { color: var(--color-midnight); }
 
-/* ---------- Contact: photo cards with a flat tint ---------- */
-.eq-photo-cards { display: grid; gap: 1rem; }
-@media (min-width: 768px) { .eq-photo-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; } }
+/* ---------- Contact: service area and quotation as split rows ----------
+   Each row is one light card, photograph on one side and copy on the other; the second row
+   flips sides. Distinct from the dark panel over a photograph just above it. */
+.eq-photo-cards { display: grid; gap: 1.25rem; }
 .eq-photo-card {
-  position: relative;
-  isolation: isolate;
-  display: flex;
+  display: grid;
   min-width: 0;
-  min-height: 24rem;
-  align-items: flex-end;
   overflow: hidden;
+  border: 1px solid rgb(14 42 49 / .1);
   border-radius: 1.25rem;
-  background: var(--color-midnight);
-  color: white;
+  background: var(--color-porcelain);
+  color: var(--color-midnight);
+  transition: border-color .4s ease, box-shadow .6s ease;
 }
-@media (min-width: 1024px) { .eq-photo-card { min-height: 28rem; } }
-.eq-photo-card-bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--hm-ease); }
-.eq-photo-card::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgb(14 42 49 / .72); }
+.eq-photo-card:hover { border-color: rgb(209 164 103 / .6); box-shadow: 0 30px 70px -48px rgb(14 42 49 / .45); }
+.eq-photo-card-bg { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 1.2s var(--hm-ease); }
 .eq-photo-card:hover .eq-photo-card-bg { transform: scale(1.03); }
-.eq-photo-card-body { display: flex; flex-direction: column; gap: .9rem; padding: 2rem 1.5rem; }
-@media (min-width: 640px) { .eq-photo-card-body { padding: 2.5rem; } }
-.eq-photo-card-body .eq-card-title { max-width: 22ch; font-size: clamp(1.7rem, 2.4vw, 2.25rem); }
-.eq-photo-card-body p { max-width: 34rem; font-size: 1.05rem; line-height: 1.7; color: rgb(255 255 255 / .88); }
+.eq-photo-card-body { display: flex; min-width: 0; flex-direction: column; justify-content: center; gap: .9rem; padding: 1.75rem 1.5rem 2rem; container-type: inline-size; }
+@media (min-width: 768px) {
+  .eq-photo-card { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .eq-photo-card-bg { height: 100%; min-height: 20rem; aspect-ratio: auto; }
+  .eq-photo-card-flip .eq-photo-card-bg { order: 2; }
+  .eq-photo-card-body { padding: 2.5rem; }
+}
+@media (min-width: 1024px) {
+  .eq-photo-card { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+  .eq-photo-card-flip { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .eq-photo-card-bg { min-height: 24rem; }
+  .eq-photo-card-body { padding: 3rem 3.5rem; }
+}
+.eq-photo-card-body .eq-card-title { max-width: 22ch; font-size: clamp(1.7rem, 2.4vw, 2.25rem); color: var(--color-midnight); }
+.eq-photo-card-body p { max-width: 34rem; font-size: 1.05rem; line-height: 1.7; color: var(--color-slate); }
 .eq-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .75rem; }
 
 /* ---------- Contact: form layout ---------- */
@@ -311,21 +334,20 @@
 /* ---------- Contact: closing band ---------- */
 .eq-closing::before { background: rgb(14 42 49 / .8); }
 /* Small label over a photograph is white: copper fails contrast on mid-tone images. */
-.eq-closing .section-kicker { color: rgb(255 255 255 / .88); }
+.eq-closing .section-kicker { margin-bottom: 1.1rem; color: rgb(255 255 255 / .88); }
 .eq-closing-grid { position: relative; display: grid; gap: 2.5rem; padding-block: 5rem; }
-.eq-closing-actions { display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; }
-@media (min-width: 640px) { .eq-closing-actions { flex-direction: row; flex-wrap: wrap; } }
+.eq-closing-actions { display: flex; flex-direction: column; align-items: stretch; gap: .75rem; }
+.eq-closing-actions .hm-cta-link { justify-content: space-between; }
+@media (min-width: 640px) and (max-width: 1023px) { .eq-closing-actions { flex-direction: row; flex-wrap: wrap; align-items: flex-start; } }
 @media (min-width: 1024px) {
   .eq-closing-grid { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4rem; padding-block: 7rem; }
-  .eq-closing-actions { flex-direction: column; align-items: stretch; }
-  .eq-closing-actions .hm-cta-link { justify-content: space-between; }
 }
 
 /* ---------- Keyboard focus ---------- */
 .eq-page :is(.hm-cta-link, .button, .eq-social-link, .eq-submit):focus-visible { outline: 2px solid var(--color-midnight); outline-offset: 3px; }
 .eq-page :is(.hm-dark, .eq-hero) :is(.hm-cta-link, .button, .eq-social-link):focus-visible { outline-color: white; }
 /* A link reached by keyboard before its block has scrolled in shows at once. */
-.hqc-motion .eq-page [data-reveal]:focus-within { opacity: 1; transform: none; }
+.hqc-motion .eq-page [data-reveal]:focus-within { opacity: 1; transform: none; transition: none; }
 
 /* ---------- Reduced motion: colour feedback only ---------- */
 @media (prefers-reduced-motion: reduce) {

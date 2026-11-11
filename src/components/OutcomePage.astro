@@ -103,138 +103,288 @@ const enquiryType = page.assessment
   : page.slug === 'essential-clean-london'
     ? 'Booking request, followed by HQC review'
     : 'Tailored quotation';
+
+// ---------------------------------------------------------------------------------------------
+// Presentation (Jack, 11 Nov 2026): every section picks a composition from its content, the way the
+// homepage does, and no two neighbours share one. Copy, order and links are unchanged.
+// List items drop trailing semicolons and full stops, as on the homepage (C8).
+const listItem = (item: string) => item.replace(/\s*[;.]\s*$/, '');
+const numbered = (heading: string) => {
+  const match = heading.match(/^(\d+\.)\s+(.*)$/);
+  return match ? { num: match[1], rest: match[2] } : null;
+};
+type Plan = { layout: 'split' | 'stage' | 'icons' | 'columns' | 'cards' | 'statement' | 'text'; image?: CardImage; extra: { src: string; srcset?: string; alt: string }[]; side: 'left' | 'right'; ground: 'white' | 'porcelain' | 'midnight' };
+const wordCount = (text = '') => text.trim().split(/\s+/).length;
+const isShortLabel = (text = '') => wordCount(text) < 9;
+let lastLayout = '';
+let splitCount = 0;
+let lightIndex = 0;
+const plans: Plan[] = controlledSections.map((section, index) => {
+  const blocks = section.blocks as CopyBlock[];
+  const kinds = blocks.map((block) => block.kind);
+  const lists = blocks.filter((block) => block.kind === 'ul');
+  const items = lists.flatMap((block) => block.items ?? []);
+  const h3s = kinds.filter((kind) => kind === 'h3').length;
+  const paragraphs = blocks.filter((block) => block.kind === 'p');
+  const after = imageryAfter(section.heading);
+  const image = sectionImage(section.heading) ?? (after.length === 1 ? { src: after[0].src, alt: after[0].alt } : undefined);
+  const extra = after.length > 1 ? after : [];
+  const shortList = lists.length === 1 && items.length <= 9 && items.every((item) => wordCount(item) <= 9);
+  let layout: Plan['layout'];
+  if (h3s >= 2) layout = 'cards';
+  else if (image) layout = 'split';
+  else if (lists.length === 0 && paragraphs.length <= 3 && paragraphs.every((block) => wordCount(block.text) <= 45)) layout = 'statement';
+  else if (shortList) layout = 'icons';
+  else if (lists.length >= 1) layout = 'columns';
+  else layout = 'text';
+  // Neighbours differ: swap between the two list treatments, and keep statements apart.
+  if (layout === lastLayout && layout === 'icons') layout = 'columns';
+  else if (layout === lastLayout && layout === 'columns' && shortList) layout = 'icons';
+  else if (layout === lastLayout && layout === 'statement') layout = 'text';
+  // Photographs alternate between a split and a full-bleed photograph with a floating panel.
+  else if (layout === 'split' && lastLayout === 'split') layout = 'stage';
+  lastLayout = layout;
+  const side = layout === 'split' || layout === 'stage' ? (splitCount++ % 2 === 0 ? 'right' : 'left') : 'right';
+  // The last section sits on a light ground so it does not run into the midnight scope band.
+  const isLast = index === controlledSections.length - 1;
+  const ground = layout === 'statement' && !isLast ? 'midnight' : (lightIndex++ % 2 === 0 ? 'white' : 'porcelain');
+  return { layout, image, extra, side, ground };
+});
+// Photographs appear once per page: the outcome figure avoids the hero, the gallery skips both,
+// and the closing band uses a library photograph not shown elsewhere on the page.
+const heroKey = imageKey(visual.hero);
+const outcomeFigure = visual.gallery.find((image) => imageKey(image.src) !== heroKey) ?? visual.gallery[0];
+// The About page shows the founder portrait instead of the outcome figure, so its gallery keeps that photograph.
+const outcomeFigureShown = page.slug !== 'about-high-quality-clean';
+const shownGallery = visual.gallery.filter((image) => imageKey(image.src) !== heroKey && !(outcomeFigureShown && image.src === outcomeFigure.src));
+const closingPool = [...(destinationThumbnails[page.slug] ?? []), 'p-mansion-blocks', 'p-handover-keys', 'r-front-door-keys', 'g-walkthrough']
+  .map((id) => cardImage(id as never)).filter((image): image is CardImage => Boolean(image));
+const closingImage = closingPool.find((image) => !pageImageKeys.has(imageKey(image.src)) && imageKey(image.src) !== heroKey) ?? closingPool[0];
+if (closingImage) pageImageKeys.add(imageKey(closingImage.src));
+const evidencePool = closingPool.filter((image) => image !== closingImage);
+const evidenceImage = evidencePool.find((image) => !pageImageKeys.has(imageKey(image.src)) && imageKey(image.src) !== heroKey);
+if (evidenceImage) pageImageKeys.add(imageKey(evidenceImage.src));
+const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 4 : 3) : Math.min(Math.max(count, 1), 3));
 ---
 
 <MotionKit />
 <main class="hm-page outcome-page bg-porcelain pt-20">
+  {/* Hero: copy on midnight beside the page photograph. */}
   <section class="op-hero hm-dark bg-midnight text-white">
-    <img
-      src={visual.hero}
-      alt={visual.heroAlt}
-      class="op-hero-photo"
-      width="1600"
-      height="1100"
-      fetchpriority="high"
-    />
-
+    <img src={visual.hero} alt={visual.heroAlt} class="op-hero-photo" width="1600" height="1100" fetchpriority="high" />
     <div class="op-hero-copy">
-      <nav aria-label="Breadcrumb" class="op-breadcrumb flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/65">
-        <a href="/" class="text-white/65 no-underline hover:text-copper">Home</a>
+      <nav aria-label="Breadcrumb" class="op-breadcrumb">
+        <a href="/">Home</a>
         <span aria-hidden="true">/</span>
         <span>{page.cluster}</span>
       </nav>
+      <p class="op-eyebrow">{page.eyebrow}</p>
+      <h1 class="op-hero-title font-serif font-medium">{master?.title || page.title}</h1>
+      <p class="op-hero-lead">{master?.lead[0] || page.message}</p>
+      {master?.lead.slice(1).map((paragraph) => <p class="op-hero-more">{paragraph}</p>)}
+      {master?.heroItems.length > 0 && <ul class="op-hero-items">{master.heroItems.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>}
+      <div class="op-actions">
+        <a class="hm-cta-link" href={page.primaryHref} data-track="primary_cta" data-service={page.slug}>{page.primaryCta}<span class="hm-cta-chip" aria-hidden="true">↗</span></a>
+        <a class="hm-cta-link hm-cta-secondary" href={page.secondaryHref} data-track="secondary_cta" data-service={page.slug}>{page.secondaryCta}</a>
+      </div>
+    </div>
+  </section>
 
-      <div class="max-w-4xl">
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-copper md:text-sm">{page.eyebrow}</p>
-        <h1 class="op-hero-title font-serif font-medium text-white">{master?.title || page.title}</h1>
-        <p class="op-hero-lead mt-7 max-w-2xl leading-relaxed text-white/82">{master?.lead[0] || page.message}</p>
-        {master?.lead.slice(1).map((paragraph) => <p class="mt-3 max-w-2xl leading-7 text-white/80">{paragraph}</p>)}
-        {master?.heroItems.length > 0 && <ul class="mt-4 list-disc space-y-1 pl-6 text-white/80">{master.heroItems.map((item) => <li>{item}</li>)}</ul>}
-        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-          <a class="hm-cta-link" href={page.primaryHref} data-track="primary_cta" data-service={page.slug}>
-            {page.primaryCta}<span class="hm-cta-chip" aria-hidden="true">↗</span>
-          </a>
-          <a class="hm-cta-link hm-cta-secondary" href={page.secondaryHref} data-track="secondary_cta" data-service={page.slug}>
-            {page.secondaryCta}
-          </a>
+  <section class="op-facts">
+    <div class="op-facts-row">
+      <div><p class="meta-label">Service route</p><p class="op-fact">{page.cluster}</p></div>
+      <div><p class="meta-label">Designed for</p><p class="op-fact op-fact-quiet">{page.audience}</p></div>
+      <div><p class="meta-label">Next step</p><p class="op-fact">{enquiryType}</p></div>
+    </div>
+  </section>
+
+  {/* Outcome: reasoning beside one photograph, then the three outcomes as photo cards. */}
+  <section class="op-outcomes">
+    <div class="op-wrap">
+      <div class="op-outcome-split">
+        <div class="op-col">
+          <p class="section-kicker" data-reveal="fade">The outcome comes first</p>
+          <h2 class="section-title" data-reveal="title">A service shaped around what has to be ready.</h2>
+          <p class="hm-lead mt-6" data-reveal>{page.description}</p>
+          <p class="mt-5 text-lg leading-8 text-slate" data-reveal>{visual.note}</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="op-facts border-b border-midnight/10 bg-white">
-    <div class="mx-auto grid max-w-[1440px] divide-y divide-midnight/10 px-5 sm:px-8 md:grid-cols-3 md:divide-x md:divide-y-0 lg:px-14">
-      <div class="py-6 md:pr-8">
-        <p class="meta-label">Service route</p>
-        <p class="mt-2 font-semibold text-midnight">{page.cluster}</p>
-      </div>
-      <div class="py-6 md:px-8">
-        <p class="meta-label">Designed for</p>
-        <p class="mt-2 text-sm leading-relaxed text-slate">{page.audience}</p>
-      </div>
-      <div class="py-6 md:pl-8">
-        <p class="meta-label">Next step</p>
-        <p class="mt-2 font-semibold text-midnight">{enquiryType}</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="op-outcomes section-shell">
-    <div class="op-outcome-split">
-      <div class="op-heading" data-reveal>
-        <p class="section-kicker">The outcome comes first</p>
-        <h2 class="section-title">A service shaped around what has to be ready.</h2>
-        <p class="mt-7 text-lg leading-8 text-slate">{page.description}</p>
-        <p class="mt-5 leading-7 text-slate">{visual.note}</p>
-      </div>
-
-      <div class="op-outcome-photo" data-reveal="fade">
-        {page.slug === 'about-high-quality-clean' ? <FounderPortrait /> : (
-          <figure class="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_70px_rgba(14,36,42,.12)]">
-            <img src={visual.gallery[0].src} alt={visual.gallery[0].alt} class="aspect-[4/3] w-full object-cover" loading="lazy" width="1000" height="750" />
+        {page.slug === 'about-high-quality-clean' ? (
+          <div class="op-founder" data-reveal="fade"><FounderPortrait /></div>
+        ) : (
+          <figure class="op-outcome-photo" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
+            <img src={outcomeFigure.src} alt={outcomeFigure.alt} loading="lazy" decoding="async" width="1000" height="750" />
           </figure>
         )}
       </div>
-      <div class="op-outcome-cards" data-stagger="70">
-          {visual.outcomes.map((item, index) => (
-            <article class="hm-card bg-white" data-reveal>
-              {outcomeImages[index] && <img src={outcomeImages[index].src} alt={outcomeImages[index].alt} class="aspect-[4/3] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
-              <div class="p-6">
-                <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
-                <p class="mt-5 font-semibold leading-snug text-midnight">{item}</p>
-              </div>
-            </article>
-          ))}
+      <div class="op-outcome-cards" data-stagger="80">
+        {visual.outcomes.map((item, index) => (
+          <article class="op-outcome-card">
+            {outcomeImages[index] && <span class="op-card-media"><img src={outcomeImages[index].src} alt={outcomeImages[index].alt} loading="lazy" decoding="async" width="1200" height="900" /></span>}
+            <div class="op-outcome-card-body">
+              <span class="op-num" aria-hidden="true">0{index + 1}</span>
+              <p>{item}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
+  {/* Controlled copy: each section composed from its content (see the frontmatter). */}
   {master && (
-    <section class="op-controlled" data-controlled-copy={master.source}>
-      <div class="op-chapters">
-        {controlledSections.map((section) => {
-          const image = sectionImage(section.heading);
-          const imageLeft = imagedSections.indexOf(section.heading) % 2 === 1;
-          return (
-          <section class:list={[
-            'op-chapter',
-            image ? ['hm-split', imageLeft ? 'hm-split-media-left' : 'hm-split-media-right'] : 'op-chapter-copy-only'
-          ]}>
-            {image && (
-              <figure class:list={['hm-split-media hm-parallax']} data-card-imagery="section" data-reveal="fade">
-                <img src={image.src} alt={image.alt} class="aspect-[3/2] w-full object-cover lg:aspect-[4/3]" loading="lazy" decoding="async" width="1200" height="900" />
-              </figure>
-            )}
-            <div class="hm-split-copy op-copy">
-            <h2 class="section-title" data-reveal="title">{section.heading}</h2>
-            <div class="mt-5 space-y-4 text-lg leading-8 text-slate">
-              {groupCtas(section.blocks).map((block) => (
-                block.kind === 'h3' ? <h3 class="pt-4 font-serif text-2xl font-medium text-midnight">{block.text}</h3> :
-                block.kind === 'ul' ? <ul class="hm-checks hm-checks-panel" data-stagger="70">{block.items.map((item) => <li data-reveal="quick"><span>{item}</span></li>)}</ul> :
-                block.kind === 'ctas' ? (
-                  <p class="flex flex-wrap gap-x-7 gap-y-2 text-base" data-controlled-cta>
-                    {block.labels.map((label, index) => <a class:list={["hm-cta-link", index > 0 && "hm-cta-secondary"]} href={controlledCtaHref(label, page)}>{label} <span class="hm-cta-chip" aria-hidden="true">→</span></a>)}
-                  </p>
-                ) :
-                block.kind === 'support' ? <p class="hm-support">{block.text}</p> :
-                <p>{block.text}</p>
-              ))}
+    <div class="op-controlled" data-controlled-copy={master.source}>
+      {controlledSections.map((section, sectionIndex) => {
+        const plan = plans[sectionIndex];
+        const blocks = groupCtas(section.blocks);
+        const num = numbered(section.heading);
+        const heading = num ? <><span class="op-step-num">{num.num}</span> {num.rest}</> : section.heading;
+        const renderBlock = (block: (typeof blocks)[number], index: number, all: typeof blocks, opts: { list?: 'checks' | 'icons' | 'columns'; dark?: boolean } = {}) => {
+          if (block.kind === 'h3') return <h3 class="op-h3">{block.text}</h3>;
+          if (block.kind === 'ul') {
+            const listItems = (block as CopyBlock).items ?? [];
+            if (opts.list === 'icons') return (
+              <ul class="op-icon-cards" data-stagger="50" data-stagger-type="fade">
+                {listItems.map((item) => <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5" /><path d="m8 12.4 2.7 2.7L16.2 9.4" /></svg><span>{listItem(item)}</span></li>)}
+              </ul>
+            );
+            return <ul class:list={['hm-checks', opts.list === 'columns' ? 'op-checks-columns' : 'op-checks']} data-stagger="40" data-stagger-type="fade">{listItems.map((item) => <li><span>{listItem(item)}</span></li>)}</ul>;
+          }
+          if (block.kind === 'ctas') return (
+            <p class="op-ctas" data-controlled-cta>
+              {(block as { labels: string[] }).labels.map((label, labelIndex) => <a class:list={['hm-cta-link', labelIndex > 0 && 'hm-cta-secondary']} href={controlledCtaHref(label, page)}>{label} <span class="hm-cta-chip" aria-hidden="true">→</span></a>)}
+            </p>
+          );
+          if (block.kind === 'support') return <p class="hm-support">{(block as CopyBlock).text}</p>;
+          const next = all[index + 1];
+          const first = all.findIndex((entry) => entry.kind === 'p') === index;
+          if (next?.kind === 'ul' && isShortLabel((block as CopyBlock).text)) return <p class="op-label">{(block as CopyBlock).text}</p>;
+          if (next?.kind === 'ul') return <p class="op-p op-p-strong">{(block as CopyBlock).text}</p>;
+          return <p class:list={[first && !opts.dark ? 'hm-lead' : 'op-p']}>{(block as CopyBlock).text}</p>;
+        };
+        // Split blocks into an introduction (before the first list/h3) and the rest.
+        const firstStructured = blocks.findIndex((block, index) => block.kind === 'h3' || block.kind === 'ul' || (block.kind === 'p' && blocks[index + 1]?.kind === 'ul'));
+        const intro = firstStructured === -1 ? blocks : blocks.slice(0, firstStructured);
+        const rest = firstStructured === -1 ? [] : blocks.slice(firstStructured);
+        const groups: { heading: (typeof blocks)[number]; body: typeof blocks }[] = [];
+        const outro: typeof blocks = [];
+        for (const block of rest) {
+          if (block.kind === 'h3') groups.push({ heading: block, body: [] });
+          else if (groups.length) groups[groups.length - 1].body.push(block);
+          else outro.push(block);
+        }
+        // Trailing calls to action leave the last card and close the section.
+        const lastGroup = groups[groups.length - 1];
+        const tail: typeof blocks = [];
+        while (lastGroup && lastGroup.body.length && ['ctas', 'support'].includes(lastGroup.body[lastGroup.body.length - 1].kind) && groups.length > 1 && groups.slice(0, -1).every((g) => !g.body.some((b) => b.kind === 'ctas'))) tail.unshift(lastGroup.body.pop()!);
+        const extra = plan.extra.length > 0 && (
+          <div class="op-strip" data-section-imagery data-stagger="90">
+            {plan.extra.map((image) => <figure><img src={image.src} srcset={image.srcset} sizes="(min-width: 640px) 30vw, 100vw" alt={image.alt} loading="lazy" decoding="async" width="1600" height="900" /></figure>)}
+          </div>
+        );
+        const sectionClass = ['op-chapter', `op-l-${plan.layout}`, `op-ground-${plan.ground}`, plan.ground === 'midnight' && 'hm-dark'];
+
+        if (plan.layout === 'split') return (
+          <section class:list={[...sectionClass, 'hm-split', plan.side === 'left' ? 'hm-split-media-left' : 'hm-split-media-right']}>
+            <div class="hm-split-copy op-col">
+              <h2 class="section-title" data-reveal="title">{heading}</h2>
+              <div class="op-flow">{blocks.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all, { list: 'checks' })}</div>)}</div>
+              {extra}
             </div>
-            {imageryAfter(section.heading).length > 0 && (
-              <div class:list={['mt-10 grid gap-4', imageryAfter(section.heading).length > 1 && 'sm:grid-cols-3']} data-section-imagery>
-                {imageryAfter(section.heading).map((image) => (
-                  <figure class="overflow-hidden rounded-2xl bg-midnight">
-                    <img src={image.src} srcset={image.srcset} sizes={imageryAfter(section.heading).length > 1 ? '(min-width: 640px) 30vw, 100vw' : '(min-width: 1024px) 896px, 100vw'} alt={image.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" width="1600" height="900" />
-                  </figure>
-                ))}
-              </div>
-            )}
+            <figure class="hm-split-media" data-card-imagery="section" data-reveal="clip" style={`--hm-cover: var(--color-${plan.ground === 'white' ? 'white' : 'porcelain'})`}>
+              <img src={plan.image!.src} alt={plan.image!.alt} loading="lazy" decoding="async" width="1200" height="900" />
+            </figure>
+          </section>
+        );
+
+        if (plan.layout === 'stage') return (
+          <section class:list={[...sectionClass, 'hm-stage', plan.side === 'left' && 'op-stage-left']}>
+            <div class="hm-stage-media hm-parallax">
+              <img src={plan.image!.src} alt={plan.image!.alt} data-card-imagery="section" loading="lazy" decoding="async" width="1200" height="900" />
+            </div>
+            <div class="hm-stage-panel op-col" data-reveal={plan.side === 'left' ? 'fade' : 'right'}>
+              <h2 class="section-title">{heading}</h2>
+              <div class="op-flow">{blocks.map((block, index, all) => renderBlock(block, index, all, { list: 'checks' }))}</div>
+              {extra}
             </div>
           </section>
+        );
+
+        if (plan.layout === 'icons') return (
+          <section class:list={sectionClass}>
+            <div class="op-wrap op-icons-grid">
+              <div class="op-col">
+                <h2 class="section-title" data-reveal="title">{heading}</h2>
+                <div class="op-flow">{intro.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all)}</div>)}</div>
+              </div>
+              <div class="op-flow">
+                {rest.map((block, index, all) => block.kind === 'ul' ? renderBlock(block, index, all, { list: 'icons' }) : <div data-reveal>{renderBlock(block, index, all)}</div>)}
+              </div>
+            </div>
+            {extra && <div class="op-wrap">{extra}</div>}
+          </section>
+        );
+
+        if (plan.layout === 'columns') return (
+          <section class:list={sectionClass}>
+            <div class="op-wrap">
+              <div class="op-head-centre op-col">
+                <h2 class="section-title" data-reveal="title">{heading}</h2>
+                <div class="op-flow">{intro.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all)}</div>)}</div>
+              </div>
+              <div class="op-flow op-columns-body">{rest.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all, { list: 'columns' })}</div>)}</div>
+              {extra}
+            </div>
+          </section>
+        );
+
+        if (plan.layout === 'cards') {
+          const count = groups.length;
+          return (
+            <section class:list={sectionClass}>
+              <div class="op-wrap">
+                <div class="op-head-centre op-col">
+                  <h2 class="section-title" data-reveal="title">{heading}</h2>
+                  <div class="op-flow">{intro.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all)}</div>)}</div>
+                </div>
+                <div class:list={[plan.image && 'op-cards-with-photo']}>
+                {plan.image && <figure class="op-card-photo" data-card-imagery="section" data-reveal="clip" style={`--hm-cover: var(--color-${plan.ground === 'white' ? 'white' : 'porcelain'})`}><img src={plan.image.src} alt={plan.image.alt} loading="lazy" decoding="async" width="1200" height="900" /></figure>}
+                <div class:list={['op-cards', plan.image ? 'op-cards-2' : `op-cards-${cols(count)}`]} data-stagger="70">
+                  {groups.map((group) => (
+                    <article class="op-card">
+                      <h3 class="op-card-title">{(group.heading as CopyBlock).text}</h3>
+                      {group.body.map((block, index, all) => renderBlock(block, index, all, { list: 'checks' }))}
+                    </article>
+                  ))}
+                </div>
+                </div>
+                {(outro.length > 0 || tail.length > 0) && <div class="op-flow op-after-cards">{[...outro, ...tail].map((block, index, all) => <div data-reveal>{renderBlock(block, index, all)}</div>)}</div>}
+                {extra}
+              </div>
+            </section>
           );
-        })}
-      </div>
-    </section>
+        }
+
+        if (plan.layout === 'statement') return (
+          <section class:list={sectionClass}>
+            <div class="op-wrap op-statement-inner">
+              <h2 class="section-title" data-reveal="title">{heading}</h2>
+              <div class="op-flow">{blocks.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all, { dark: true })}</div>)}</div>
+              {extra}
+            </div>
+          </section>
+        );
+
+        return (
+          <section class:list={sectionClass}>
+            <div class="op-wrap op-text-inner op-col">
+              <h2 class="section-title" data-reveal="title">{heading}</h2>
+              <div class="op-flow">{blocks.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all, { list: 'checks' })}</div>)}</div>
+              {extra}
+            </div>
+          </section>
+        );
+      })}
+    </div>
   )}
 
   {!master && page.sections && (
@@ -305,109 +455,107 @@ const enquiryType = page.assessment
   )}
 
   {page.slug === 'home-cleaning-london' && (
-    <section class="border-t border-midnight/10 bg-midnight py-20 text-white md:py-28">
-      <div class="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-14">
-        <div>
-          <p class="section-kicker text-copper">Private client work</p>
-          <h2 class="section-title mt-4">Private clients across London</h2>
-        </div>
-        <div>
-          <p class="max-w-3xl text-lg leading-8 text-white/75">HQC has worked with private clients across London, including clients who live abroad and rely on us to look after their London properties.</p>
-        </div>
+    <section class="op-chapter op-l-statement op-ground-midnight hm-dark">
+      <div class="op-wrap op-statement-inner">
+        <p class="section-kicker" data-reveal="fade">Private client work</p>
+        <h2 class="section-title" data-reveal="title">Private clients across London</h2>
+        <p class="op-p" data-reveal>HQC has worked with private clients across London, including clients who live abroad and rely on us to look after their London properties.</p>
       </div>
     </section>
   )}
 
   {['home-cleaning-london', 'property-facilities-cleaning-london', 'office-cleaning-london', 'reviews-case-studies'].includes(page.slug) && (
-    <ClientEvidence scope={page.slug === 'home-cleaning-london' ? 'residential' : page.slug === 'reviews-case-studies' ? 'all' : 'commercial'} />
+    <div class="hm-evidence hm-parallax op-evidence">
+      {evidenceImage && <img class="hm-evidence-bg" src={evidenceImage.src} alt={evidenceImage.alt} loading="lazy" decoding="async" width="1200" height="900" />}
+      <div class="relative" data-reveal>
+        <ClientEvidence scope={page.slug === 'home-cleaning-london' ? 'residential' : page.slug === 'reviews-case-studies' ? 'all' : 'commercial'} />
+      </div>
+    </div>
   )}
 
-  <section class="op-scope hm-dark bg-midnight py-20 text-white md:py-28">
-    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
-      <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
-        <div>
-          <p class="section-kicker text-copper">What we establish</p>
-          <h2 class="section-title" data-reveal="title">Clear inputs. A realistic scope. No guesswork.</h2>
-        </div>
-        <div class="grid gap-5 sm:grid-cols-2" data-stagger="70">
-          {visual.scope.map((item, index) => (
-            <article class="hm-card hm-card-dark" data-reveal>
-              {scopeImages[index] && <img src={scopeImages[index].src} alt={scopeImages[index].alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
-              <div class="p-6 md:p-8">
-                <span class:list={['text-xs font-bold uppercase tracking-[.2em] text-copper']}>Scope {index + 1}</span>
-                <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">{item}</h3>
-              </div>
-            </article>
-          ))}
-          <article class="hm-card hm-card-dark" data-reveal>
-            {scopeImages[visual.scope.length] && <img src={scopeImages[visual.scope.length]!.src} alt={scopeImages[visual.scope.length]!.alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
-            <div class="p-6 md:p-8">
-              <span class="text-xs font-bold uppercase tracking-[.2em] text-copper">Confirmed before work</span>
-              <h3 class="mt-8 font-serif text-2xl font-medium md:text-3xl">Inclusions, timing and the handover standard</h3>
+  {/* Scope: centred statement over a row of dark photo cards. */}
+  <section class="op-scope hm-dark bg-midnight text-white">
+    <div class="op-wrap">
+      <div class="op-head-centre op-col">
+        <p class="section-kicker" data-reveal="fade">What we establish</p>
+        <h2 class="section-title" data-reveal="title">Clear inputs. A realistic scope. No guesswork.</h2>
+      </div>
+      <div class="op-scope-grid" data-stagger="70">
+        {visual.scope.map((item, index) => (
+          <article class="hm-card hm-card-dark">
+            {scopeImages[index] && <span class="hm-card-media"><img src={scopeImages[index].src} alt={scopeImages[index].alt} loading="lazy" decoding="async" width="1200" height="900" /></span>}
+            <div class="hm-card-body">
+              <span class="op-scope-label">Scope {index + 1}</span>
+              <h3 class="op-scope-title">{item}</h3>
             </div>
           </article>
-        </div>
+        ))}
+        <article class="hm-card hm-card-dark hm-card-featured">
+          {scopeImages[visual.scope.length] && <span class="hm-card-media"><img src={scopeImages[visual.scope.length]!.src} alt={scopeImages[visual.scope.length]!.alt} loading="lazy" decoding="async" width="1200" height="900" /></span>}
+          <div class="hm-card-body">
+            <span class="op-scope-label">Confirmed before work</span>
+            <h3 class="op-scope-title">Inclusions, timing and the handover standard</h3>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="op-gallery section-shell">
-    <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-      {galleryIsHqcWork ? (
-        <div class="max-w-3xl">
-          <p class="section-kicker">HQC work</p>
-          <h2 class="section-title">Real spaces. Visible care.</h2>
+  {/* Gallery: only photographs not already shown on the page. */}
+  {shownGallery.length > 0 && (
+    <section class="op-gallery">
+      <div class="op-wrap">
+        <div class="op-gallery-head">
+          <div class="op-col">
+            {galleryIsHqcWork ? <p class="section-kicker" data-reveal="fade">HQC work</p> : <p class="section-kicker" data-reveal="fade">Gallery</p>}
+            <h2 class="section-title" data-reveal="title">{galleryIsHqcWork ? 'Real spaces. Visible care.' : 'The kinds of spaces we clean'}</h2>
+          </div>
+          <p class="op-gallery-note" data-reveal>{galleryIsHqcWork ? 'Selected imagery from the HQC project library. ' : ''}The exact scope and finish varies by property, condition and agreed service.</p>
         </div>
-      ) : (
-        <div class="max-w-3xl">
-          <p class="section-kicker">Gallery</p>
-          <h2 class="section-title">The kinds of spaces we clean</h2>
-        </div>
-      )}
-      <p class="max-w-md text-sm leading-6 text-slate">{galleryIsHqcWork ? 'Selected imagery from the HQC project library. ' : ''}The exact scope and finish varies by property, condition and agreed service.</p>
-    </div>
-    <div class="op-gallery-grid mt-12" data-stagger="70">
-      {visual.gallery.map((image) => (
-        <figure class="hm-parallax overflow-hidden rounded-2xl bg-midnight" data-reveal="fade">
-          <img src={image.src} alt={image.alt} class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" loading="lazy" width="1000" height="750" />
-        </figure>
-      ))}
-    </div>
-  </section>
-
-  <section class="op-next border-y border-midnight/10 bg-white py-20 md:py-28">
-    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
-      <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
-        <div>
-          <p class="section-kicker">What happens next</p>
-          <h2 class="section-title">A calm route from enquiry to result.</h2>
-        </div>
-        <ol class="divide-y divide-midnight/10 border-y border-midnight/10" data-stagger="70">
-          {[
-            ['Tell us what has to be achieved', 'Share the property, condition, timing and any access or operational constraints.'],
-            ['HQC confirms the right route', page.slug === 'essential-clean-london' ? 'Submit a booking request. HQC reviews suitability, availability, cleaner allocation and payment requirements before confirming.' : page.assessment ? 'We arrange the information or assessment needed to define a responsible scope.' : 'We review the details and prepare the appropriate tailored quotation.'],
-            ['The scope is agreed', 'You receive a clear route forward with the relevant inclusions, assumptions and next steps.']
-          ].map(([title, copy], index) => (
-            <li class="grid gap-4 py-7 sm:grid-cols-[4rem_1fr]" data-reveal="quick">
-              <span class="font-serif text-3xl text-copper-ink">0{index + 1}</span>
-              <div><h3 class="font-serif text-2xl font-medium text-midnight">{title}</h3><p class="mt-2 leading-7 text-slate">{copy}</p></div>
-            </li>
+        <div class:list={['op-gallery-grid', `op-cards-${cols(shownGallery.length)}`]} data-stagger="80">
+          {shownGallery.map((image) => (
+            <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" width="1000" height="750" /></figure>
           ))}
-        </ol>
+        </div>
       </div>
+    </section>
+  )}
+
+  {/* What happens next: three steps on a copper track. */}
+  <section class="op-next">
+    <div class="op-wrap">
+      <div class="op-head-centre op-col">
+        <p class="section-kicker" data-reveal="fade">What happens next</p>
+        <h2 class="section-title" data-reveal="title">A calm route from enquiry to result.</h2>
+      </div>
+      <ol class="op-steps" data-stagger="90">
+        {[
+          ['Tell us what has to be achieved', 'Share the property, condition, timing and any access or operational constraints.'],
+          ['HQC confirms the right route', page.slug === 'essential-clean-london' ? 'Submit a booking request. HQC reviews suitability, availability, cleaner allocation and payment requirements before confirming.' : page.assessment ? 'We arrange the information or assessment needed to define a responsible scope.' : 'We review the details and prepare the appropriate tailored quotation.'],
+          ['The scope is agreed', 'You receive a clear route forward with the relevant inclusions, assumptions and next steps.']
+        ].map(([title, copy], index) => (
+          <li>
+            <span class="op-step-badge" aria-hidden="true">0{index + 1}</span>
+            <h3 class="op-card-title">{title}</h3>
+            <p class="op-p">{copy}</p>
+          </li>
+        ))}
+      </ol>
     </div>
   </section>
 
-  <section class="op-related bg-porcelain py-20">
-    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
-      <p class="section-kicker">Related routes</p>
-      <div class="mt-7 grid gap-4 md:grid-cols-3" data-stagger="70">
+  {/* Related routes: photo cards, as many columns as there are routes. */}
+  <section class="op-related">
+    <div class="op-wrap">
+      <p class="section-kicker" data-reveal="fade">Related routes</p>
+      <div class:list={['op-related-grid', `op-cards-${cols(page.related.length)}`]} data-stagger="80">
         {page.related.map((link, index) => (
-          <a class="hm-route group flex flex-col overflow-hidden rounded-2xl border border-midnight/10 bg-white text-midnight no-underline" data-reveal href={link.href}>
-            <img src={relatedImages[index].src} alt={relatedImages[index].alt} class="aspect-[16/9] w-full object-cover" loading="lazy" decoding="async" width="1200" height="675" />
-            <span class="flex min-h-32 flex-1 flex-col justify-between p-6">
-              <span class="meta-label">0{index + 1}</span>
-              <span class="flex items-end justify-between gap-5 font-serif text-2xl font-medium">{link.label}<span class="hm-route-arrow" aria-hidden="true">→</span></span>
+          <a class="hm-route group flex flex-col overflow-hidden rounded-[1.25rem] bg-white text-inherit no-underline" href={link.href}>
+            <span class="hm-route-media block overflow-hidden"><img src={relatedImages[index].src} alt={relatedImages[index].alt} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="675" /></span>
+            <span class="op-related-body">
+              <span class="meta-label" aria-hidden="true">0{index + 1}</span>
+              <span class="op-related-title">{link.label}</span>
+              <span class="hm-cta-chip op-related-chip" aria-hidden="true">→</span>
             </span>
           </a>
         ))}
@@ -415,14 +563,13 @@ const enquiryType = page.assessment
     </div>
   </section>
 
-  <section class="op-closing hm-dark">
-    <img class="op-closing-photo" src={visual.hero} alt="" aria-hidden="true" loading="lazy" width="1600" height="1100" />
+  {/* Closing: a photograph not used elsewhere on the page, flat tint, centred actions. */}
+  <section class="op-closing hm-dark hm-parallax">
+    {closingImage && <img class="op-closing-photo" src={closingImage.src} alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="900" />}
     <div class="op-closing-content">
-      <div>
-        <p class="text-xs font-bold uppercase tracking-[.22em] text-copper">The next step is simple</p>
-        <h2 class="section-title mt-3">{closing.primary.label}</h2>
-      </div>
-      <div class="op-closing-actions flex flex-col gap-3 sm:flex-row" data-closing-cta>
+      <p class="section-kicker" data-reveal="fade">The next step is simple</p>
+      <h2 class="section-title" data-reveal="title">{closing.primary.label}</h2>
+      <div class="op-actions op-actions-centre" data-closing-cta data-reveal>
         <a class="hm-cta-link" href={closing.primary.href}>{closing.primary.label}<span class="hm-cta-chip" aria-hidden="true">↗</span></a>
         {closing.secondary && <a class="hm-cta-link hm-cta-secondary" href={closing.secondary.href}>{closing.secondary.label}</a>}
       </div>
