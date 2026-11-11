@@ -268,6 +268,96 @@
         }
       },
       "captureDate": "2026-10-29"
+    },
+    {
+      "id": "nov11-live-plausible",
+      "commit": "cf7afe2d635c7aae41cb664f78817edaacd7c31d",
+      "immutableDeploymentUrl": "https://04c98545.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/",
+      "captureManifest": {
+        "commit": "fabffd46b3b5b4545c962f6ef5d97fce5f7f8a3c",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-home-desktop.jpg",
+            "width": 1440,
+            "height": 9496,
+            "sha256": "1e8cd1ce53b108aae84d1786014ec93ec7a49355a127ee975fea914c1f544a73",
+            "capturedAt": "2026-11-11T13:25:36.634Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-home-mobile.jpg",
+            "width": 390,
+            "height": 16089,
+            "sha256": "610decd964c28b5431201073d1011ceb36ec3b02a12de8c59cf27f8de9849f07",
+            "capturedAt": "2026-11-11T13:25:58.627Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-quote-desktop.jpg",
+            "width": 1440,
+            "height": 2506,
+            "sha256": "1d74acc82e6dfbfd7cb10482a3812c9a921c6452970dce9c117320e408501d50",
+            "capturedAt": "2026-11-11T13:25:41.310Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-quote-mobile.jpg",
+            "width": 390,
+            "height": 3923,
+            "sha256": "c888c65bdda54aab3e774df991f56ad6652056a7f728986e810a8093a9a5a2b3",
+            "capturedAt": "2026-11-11T13:26:03.437Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-how-desktop.jpg",
+            "width": 1440,
+            "height": 5412,
+            "sha256": "352b4c065e77ee262806b5026418d62891dc487d8111d3ad62932cb5a86c726f",
+            "capturedAt": "2026-11-11T13:25:46.578Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-how-mobile.jpg",
+            "width": 390,
+            "height": 7815,
+            "sha256": "bf9cfd279fdf40b2950b4e611605b009089ccedcf2f9375ffc5f575a399183b2",
+            "capturedAt": "2026-11-11T13:26:09.093Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov11-live-plausible-contact-desktop.jpg",
+            "width": 1440,
+            "height": 4690,
+            "sha256": "c0ebf8ba0077239a1bbe94f5bbd3f280063dc93f18f8e482ed8c7e16e2ef1533",
+            "capturedAt": "2026-11-11T13:25:51.454Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov11-live-plausible-contact-mobile.jpg",
+            "width": 390,
+            "height": 7388,
+            "sha256": "6e8bcc22b9618c13ed1911cd8ee5fcbb168807043b16794faa2c183aa265f924",
+            "capturedAt": "2026-11-11T13:26:14.467Z",
+            "sourceUrl": "https://04c98545.hqc-london.pages.dev/contact/"
+          }
+        }
+      },
+      "captureDate": "2026-11-11",
+      "notes": {
+        "change": "live-oct29 source plus cookieless Plausible tracking (PR 18). No visible change; capture dimensions match live-oct29.",
+        "independentReview": "Every hunk reviewed. One finding fixed in cf7afe2: mailto clicks also sent 'Website Email Draft Opened', double counting email clicks; that goal is reserved for a form-generated draft hook HQC does not have. Evidence: tools/photo-review/evidence/version-captures-20261111-live-plausible.json on the review branch.",
+        "outstanding": "Phase 8 hold unchanged. Event delivery checked separately on production."
+      }
     }
   ]
 }
