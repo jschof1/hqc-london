@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "bd5ddd981da46ec2b39eba5da1cea50de7305959",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site.",
+  "baseline": "dd7169d4444ca7baffed79754ca6a5afe72846e4",
+  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site. Follow-up, Jack, 11 November 2026: Jack is happy with the homepage; using the taste skill, update every other page to the same design, pragmatically through shared components, with agents working on different pages in parallel. No copy changes.",
   "requirements": [
     {
       "id": "M1",
@@ -70,6 +70,10 @@
     {
       "id": "LG15",
       "text": "Logo (Jack, 11 Nov): the flat gold horizontal logo in the site header (the compact monogram where the header is tight), the flat gold stacked lock-up in the footer in place of the 3D plaque, favicons (16/32/48 ICO and PNG), an Apple touch icon and web manifest icons from the same kit, and the organisation schema logo pointing at a raster logo file. Artwork copied unchanged from the kit; alt text and link labels unchanged; the old 3D plaque file is kept, not deleted."
+    },
+    {
+      "id": "SW16",
+      "text": "Site-wide design (Jack, 11 Nov): bring the 27 other controlled pages (the 22 outcome pages via OutcomePage.astro, Request a Quote, Contact, Cleaning FAQs, Privacy Policy, Terms and Conditions) plus the 17 location pages, Book Essential Clean and the 404 page in line with the approved homepage design through a shared kit (MotionKit component and the homepage stylesheet's components): image-led sections, gold pill calls to action, one heading scale, section borders, smooth reveal motion with reduced-motion and no-JS fallbacks. Every visible word, alt text, link destination, data-track attribute, form field, form action, routing, schema and meta stays exactly as it is; forms keep their markup, names, validation and submission scripts. Legacy noindex pages (/faq, /disclaimer, /offer, /feedback) are out of scope."
     }
   ],
   "allowedFiles": [
@@ -100,7 +104,8 @@
         "G10",
         "I7",
         "K11",
-        "L9"
+        "L9",
+        "SW16"
       ],
       "allowDelete": false,
       "reason": "Homepage presentation, motion hooks and sticky CTA using existing labels."
@@ -141,7 +146,8 @@
         "I7",
         "K11",
         "L9",
-        "S14"
+        "S14",
+        "SW16"
       ],
       "allowDelete": false,
       "reason": "New homepage-only stylesheet."
@@ -155,7 +161,8 @@
         "G10",
         "I7",
         "K11",
-        "L9"
+        "L9",
+        "SW16"
       ],
       "allowDelete": false,
       "reason": "New dependency-free homepage motion engine."
@@ -313,6 +320,126 @@
       ],
       "allowDelete": false,
       "reason": "Manifest icon from the kit."
+    },
+    {
+      "path": "src/components/MotionKit.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Shared motion gate, stylesheet and script for every redesigned page."
+    },
+    {
+      "path": "src/components/OutcomePage.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Outcome page template (22 pages)."
+    },
+    {
+      "path": "src/components/ControlledLegalPage.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Privacy and terms template."
+    },
+    {
+      "path": "src/pages/request-a-quote.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Request a Quote page (form preserved)."
+    },
+    {
+      "path": "src/pages/contact.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Contact page (form preserved)."
+    },
+    {
+      "path": "src/pages/cleaning-faqs.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Cleaning FAQs page."
+    },
+    {
+      "path": "src/pages/privacy-policy.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Privacy page wrapper."
+    },
+    {
+      "path": "src/pages/terms-and-conditions.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Terms page wrapper."
+    },
+    {
+      "path": "src/pages/book-essential-clean.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Essential Clean booking page."
+    },
+    {
+      "path": "src/pages/404.astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Not found page."
+    },
+    {
+      "path": "src/pages/locations/london/[area].astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "London location pages."
+    },
+    {
+      "path": "src/pages/locations/surrey/[area].astro",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Surrey location pages."
+    },
+    {
+      "path": "src/styles/outcome-page.css",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Outcome page styles."
+    },
+    {
+      "path": "src/styles/enquiry-pages.css",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "Quote and contact styles."
+    },
+    {
+      "path": "src/styles/utility-pages.css",
+      "requirements": [
+        "SW16"
+      ],
+      "allowDelete": false,
+      "reason": "FAQ, legal, booking, 404 and location styles."
     }
   ],
   "preserve": [
@@ -325,6 +452,7 @@
     "Desktop and mobile browser checks of every homepage section, the service selector journey, reduced-motion and no-JS rendering, and console health.",
     "Council review by three independent model reviewers (Claude, GPT, DeepSeek) with scores, repeated after fixes.",
     "Round 5: mechanical copy comparison against 8f5331b shows only the C8 punctuation removals plus the existing dock labels; desktop, laptop and phone captures of every section; scroll-through recordings checked for jank; independent Codex review.",
-    "Round 6: review snapshot count and rating match the live profile at capture; carousel motion, pause, reduced-motion and screen-reader checks; header on one line at 1024, 1280 and 1440 on the homepage and an outcome page; founder photograph on the homepage and an outcome page."
+    "Round 6: review snapshot count and rating match the live profile at capture; carousel motion, pause, reduced-motion and screen-reader checks; header on one line at 1024, 1280 and 1440 on the homepage and an outcome page; founder photograph on the homepage and an outcome page.",
+    "SW16: per-page mechanical copy comparison (words, attributes, links, data-track, form field names) of every redesigned page against its pre-change render; desktop and phone captures of every page type; forms submitted only against no-send previews; taste-skill consistency check on representative pages; independent review."
   ]
 }
