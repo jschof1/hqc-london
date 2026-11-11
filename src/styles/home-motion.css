@@ -232,8 +232,8 @@ main:has(.hm-hero) { overflow-x: clip; }
   padding: 1.4rem 1.5rem 1.3rem;
 }
 .hm-review-text { margin: 0; color: var(--color-ink); font-size: .95rem; line-height: 1.6; }
-.hm-review-text p { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 5; }
-.hm-review.is-open .hm-review-text p { display: block; -webkit-line-clamp: unset; }
+.hm-reviews.is-ready .hm-review-text p { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 5; }
+.hm-reviews.is-ready .hm-review.is-open .hm-review-text p { display: block; -webkit-line-clamp: unset; }
 .hm-review-more {
   align-self: flex-start;
   margin-top: -.35rem;
