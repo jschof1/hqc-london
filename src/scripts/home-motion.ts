@@ -220,6 +220,21 @@ function initDock() {
   render();
 }
 
+// Reduced motion: the shared site script always smooth-scrolls in-page anchors. On the homepage,
+// finish that scroll instantly instead. Nothing is cancelled or stopped, so analytics and the
+// shared handler still see the click.
+function initReducedMotionAnchors() {
+  document.addEventListener('click', (event) => {
+    if (!reduceMotion.matches) return;
+    const link = (event.target as Element | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
+    const href = link?.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector<HTMLElement>(href);
+    if (!target) return;
+    setTimeout(() => window.scrollTo({ top: target.offsetTop - 80, behavior: 'instant' }), 0);
+  }, true);
+}
+
 function start() {
   try {
     if (motionOn()) initReveals();
@@ -229,6 +244,7 @@ function start() {
   } finally {
     window.__hqcMotion = true;
   }
+  initReducedMotionAnchors();
   initHeroSlides();
   initScrollLinked();
   initDock();

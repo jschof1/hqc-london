@@ -73,11 +73,6 @@ main:has(.hm-hero) { overflow-x: clip; }
 .hm-hero-copy { position: relative; z-index: 1; display: flex; flex-direction: column; padding: 1.5rem var(--hm-gutter) 2.5rem; }
 /* Phones: the photograph leads, the actions follow the promise, the three routes close the hero. */
 .hm-hero-tabs { order: 5; }
-@media (max-width: 639px) {
-  .hm-hero-copy > .hm-kicker-line::before { display: none; }
-  .hm-hero-copy > .hm-kicker-line { letter-spacing: .18em; }
-  .hm-hero-copy > [data-hero-actions] { margin-top: 1.5rem; }
-}
 .hm-hero-h1 {
   font-size: clamp(2.45rem, 10vw, 4.2rem);
   line-height: .98;
@@ -109,6 +104,16 @@ main:has(.hm-hero) { overflow-x: clip; }
 .hm-slide.is-active { opacity: 1; transform: none; }
 .hm-hero-thumb { outline: 2px solid transparent; outline-offset: 2px; transition: outline-color .4s ease; }
 .hm-hero-tabs .is-active .hm-hero-thumb { outline-color: var(--color-copper); }
+@media (max-width: 639px) {
+  .hm-hero-media { aspect-ratio: 2.5 / 1; }
+  .hm-hero-copy { padding-top: 1.15rem; }
+  .hm-hero-h1 { margin-top: .8rem; font-size: clamp(2.3rem, 9.4vw, 2.6rem); }
+  .hm-hero-copy > [data-hero-actions] { gap: .6rem; }
+  .hm-hero-copy > p { margin-top: 1rem; }
+  .hm-hero-copy > .hm-kicker-line::before { display: none; }
+  .hm-hero-copy > .hm-kicker-line { letter-spacing: .18em; }
+  .hm-hero-copy > [data-hero-actions] { margin-top: 1.25rem; }
+}
 
 .hm-routebar { display: none; }
 .hm-route-tab {
@@ -489,6 +494,15 @@ main:has(.hm-hero) { overflow-x: clip; }
 }
 
 /* ---------- Complex route: captioned photographs ---------- */
+@media (max-width: 639px) {
+  .hm-complex { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+  .hm-complex-step img { aspect-ratio: 1 / 1; }
+  .hm-complex-caption { inset: auto .4rem .4rem; padding: .55rem .7rem .65rem; border-radius: .7rem; }
+  .hm-complex-caption span, .hm-complex-caption p { font-size: 1.05rem; }
+  .hm-routes .hm-route img { aspect-ratio: 16 / 9; }
+  .hm-routes .hm-route > span:last-child { padding: 1.25rem 1.25rem 1.5rem; }
+  .hm-routes .hm-route > span:last-child > span:nth-child(2) { margin-top: .6rem; font-size: 1.55rem; }
+}
 .hm-complex-step img { display: block; transition: transform 1.2s var(--hm-ease); }
 .hm-complex-step { transition: translate .5s var(--hm-ease), box-shadow .6s ease; }
 .hm-complex-step:hover { translate: 0 -5px; box-shadow: 0 26px 60px -34px rgb(14 42 49 / .55); }
@@ -604,6 +618,15 @@ main:has(.hm-hero) { overflow-x: clip; }
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
+  html:has(.hm-hero) { scroll-behavior: auto; }
+  /* Hover keeps its colour feedback but drops lifts and zooms. */
+  .hm-route:hover, .hm-card-dark:hover, .hm-complex-step:hover, .hm-choice:hover,
+  .hm-choice:hover .hm-choice-mark { translate: none; }
+  .hm-route img, .hm-card-media img, .hm-complex-step img, .hm-step img,
+  .hm-route-arrow, .hm-cta-link .hm-cta-chip, .hm-offer-cta > span, .hm-reason h3::before { transition: none; }
+  .hm-route:hover img, .hm-card:hover .hm-card-media img, .hm-complex-step:hover img,
+  .hm-route:hover .hm-route-arrow, .hm-cta-link:hover .hm-cta-chip,
+  .hm-route-tab:hover .hm-offer-cta > span, .hm-reason:hover h3::before { transform: none; }
   [data-intro], [data-intro] em, .hm-arrow-nudge, .hm-result.is-swap, .hm-result.is-swap > *,
   .hm-result-bar, .hm-route-tab-timer { animation: none !important; }
   .hm-slide { transition: opacity .3s ease; transform: none; }
