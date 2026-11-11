@@ -1,8 +1,9 @@
 ---
 // Google reviews carousel (Jack, 11 Nov 2026). Content is a dated snapshot of HQC's public
 // Google Business Profile (src/data/google-reviews.json): review text verbatim, reviewers by
-// first name and last initial. Two rows drift in opposite directions; hover, focus or the pause
-// button stops them, and reduced motion turns each row into a still, scrollable strip.
+// first name and last initial. Without JavaScript, or with reduced motion, each row is a still,
+// scrollable strip. Otherwise two rows drift in opposite directions; hover, keyboard focus anywhere
+// in the section, an open review or the pause button stops them.
 import reviewsData from '../data/google-reviews.json';
 
 const reviews = reviewsData.reviews;
@@ -17,12 +18,12 @@ const flat = (text: string) => text.replace(/\s*\n+\s*/g, ' ');
       <div>
         <span class="hm-stars text-lg" aria-hidden="true">★★★★★</span>
         <h2 id="google-reviews-title" class="mt-1 font-serif text-2xl font-medium leading-tight text-midnight md:text-3xl">What clients say on Google</h2>
-        <p class="mt-1 text-sm text-slate">From {reviewsData.reviewCount} reviews</p>
+        <p class="mt-1 text-sm text-slate">From {reviewsData.reviewCount} reviews. Showing the 4 and 5 star reviews.</p>
       </div>
     </div>
     <div class="flex flex-wrap items-center gap-3">
       <a href={reviewsData.profileUrl} class="hm-cta-link whitespace-nowrap" target="_blank" rel="noopener">Read all reviews on Google <span class="hm-cta-chip" aria-hidden="true">↗</span></a>
-      <button type="button" class="hm-reviews-toggle" data-reviews-toggle aria-pressed="false">Pause reviews</button>
+      <button type="button" class="hm-reviews-toggle" data-reviews-toggle aria-pressed="false" hidden>Pause reviews</button>
     </div>
   </div>
 
@@ -36,6 +37,7 @@ const flat = (text: string) => text.replace(/\s*\n+\s*/g, ' ');
                 <li class="hm-review">
                   <span class="hm-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>{'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}</span>
                   <blockquote class="hm-review-text"><p>{flat(review.text)}</p></blockquote>
+                  {copy === 0 && <button type="button" class="hm-review-more" data-review-more aria-expanded="false" hidden>Read more</button>}
                   <p class="hm-review-by"><span class="hm-review-initial" aria-hidden="true">{review.name.charAt(0)}</span><span><strong>{review.name}</strong><span class="block">Google review</span></span></p>
                 </li>
               ))}
@@ -50,13 +52,34 @@ const flat = (text: string) => text.replace(/\s*\n+\s*/g, ' ');
 <script>
   const section = document.querySelector<HTMLElement>('[data-reviews]');
   const toggle = section?.querySelector<HTMLButtonElement>('[data-reviews-toggle]');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   if (section && toggle) {
+    // Motion starts only once its controls work; reduced motion keeps the still strips.
+    const sync = () => {
+      section.classList.toggle('is-live', !reduce.matches);
+      toggle.hidden = reduce.matches;
+    };
+    sync();
+    reduce.addEventListener('change', sync);
     toggle.addEventListener('click', () => {
       const paused = section.classList.toggle('is-user-paused');
       toggle.setAttribute('aria-pressed', String(paused));
       toggle.textContent = paused ? 'Play reviews' : 'Pause reviews';
     });
-    // Only drift while the strip is on screen.
     new IntersectionObserver(([entry]) => section.classList.toggle('is-offscreen', !entry.isIntersecting)).observe(section);
+
+    // Read more: offered only where the five-line preview cuts the review short.
+    section.querySelectorAll<HTMLButtonElement>('[data-review-more]').forEach((button) => {
+      const card = button.closest<HTMLElement>('.hm-review');
+      const text = card?.querySelector<HTMLElement>('.hm-review-text p');
+      if (!card || !text) return;
+      button.hidden = text.scrollHeight <= text.clientHeight + 2;
+      button.addEventListener('click', () => {
+        const open = card.classList.toggle('is-open');
+        button.setAttribute('aria-expanded', String(open));
+        button.textContent = open ? 'Show less' : 'Read more';
+        section.classList.toggle('has-open-review', !!section.querySelector('.hm-review.is-open'));
+      });
+    });
   }
 </script>
