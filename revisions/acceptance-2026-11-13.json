@@ -9,7 +9,7 @@
   "privateEvidenceReference": "hqc-review-2026-11-13",
   "productionReleaseAuthorised": false,
   "clientAcceptance": false,
-  "newImmutableDeployment": null,
+  "newImmutableDeployment": "https://5bf03519.hqc-london.pages.dev",
   "newCaptureManifest": null,
   "criteria": [
     {
@@ -182,15 +182,15 @@
         "P8-SEO-024"
       ],
       "status": "partial",
-      "sourceResult": "Source scope, exact regression, syntax, forms runtime and analytics contract checks run.",
-      "remaining": "No full site build/browser/capture performed: resource checks deny heavy work: the approximately 16:30 UTC readback on 13 November has 24.85 GiB free below the 25 GiB reserve and another guarded heavy job holds the lock; Jack Drive is unmounted. Earlier hosted Pages API reads returned 503, then a wrangler deployment-list retry succeeded; the read outage is recovered. No new hosted candidate or captures exist yet. Staged full revision check FAIL solely because the application has no matching recorded visual version/capture. Earlier unstaged-application failure resolved. No provider submission, booking, payment, pop-up interactive record, deployment or client acceptance established."
+      "sourceResult": "Source scope, exact regression, syntax, forms runtime and analytics contract checks run. Full review build passed on the isolated VPS checkout; exact immutable preview is published. Local full-page captures remain unrun.",
+      "remaining": "Fresh full-page desktop/mobile captures and registration remain due, with source and provider/client gates still separate. Local resource guard currently denies capture batches. Full revision gate remains blocked by the missing new capture record."
     }
   ],
   "checks": [
     {
       "command": "node --test scripts/verify-pedro-audit-corrections.test.mjs",
       "result": "PASS",
-      "coverage": "14 passing regression cases: exact controlled copy, preserved approved wording, exported routes, selector interaction, provenance, site-wide phone source scan, requested floor-plan separation, AST heading/error-layout structure and changed Astro compiler syntax. Source checks do not establish rendered CSS or live provider behaviour."
+      "coverage": "14 passing regression cases: exact controlled copy, preserved approved wording, exported routes, selector interaction, provenance, site-wide phone source scan, requested floor-plan separation, AST heading/error-layout structure and changed Astro compiler syntax. Source checks do not establish rendered CSS or live provider behaviour. Compiled Astro output is also checked by esbuild as TypeScript, catching expression defects that Astro diagnostics alone missed."
     },
     {
       "command": "npm run test:forms",
@@ -216,6 +216,11 @@
       "command": "npm run check:revision",
       "result": "FAIL / BLOCKED",
       "coverage": "Staged rerun: current application matches no recorded version/capture manifest, the sole remaining failure. Earlier unstaged-application failure resolved. A real immutable deployment and capture registration remain required."
+    },
+    {
+      "command": "npm run build:review on isolated VPS checkout",
+      "result": "PASS",
+      "coverage": "Full preview build, controlled route prerender and sitemap generation; does not authorize production."
     }
   ],
   "artwork": [
@@ -414,8 +419,17 @@
   "continuation": {
     "owner": "Implementation agent with Jack",
     "gate": "Resource guard must permit build and browser verification; no production release authority.",
-    "nextAction": "Build the review candidate, verify the changed pages on desktop/mobile, publish an immutable preview and append its real capture/version record when resources permit.",
+    "nextAction": "Complete full-page desktop/mobile captures, register their committed manifest, then pass the full revision gate. Review preview and private checklist are available.",
     "followUpPoint": "Next working continuation and before any client handover or release.",
     "clientClarificationOwner": "Jack approves the exact WhatsApp draft; Pedro supplies the held decisions, including the newly identified Reviews intro anchor."
+  },
+  "previewSourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+  "reviewChecklistUrl": "https://review.highqualityclean.co.uk/versions/?before=nov11-banister-photo&after=nov13-pedro-audit#updates",
+  "previewBuild": {
+    "result": "PASS",
+    "host": "VPS isolated temporary checkout",
+    "command": "npm run build:review",
+    "sourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+    "notes": "Full build initially exposed adjacent image/caption expressions and location alt interpolation defects. These were repaired, and the correction suite now also parses compiled Astro output as TypeScript through esbuild."
   }
 }

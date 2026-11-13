@@ -1,6 +1,6 @@
 # Pedro audit corrections: 13 November source candidate
 
-Status: source implementation in progress, not a release or client handover. No new immutable deployment, hosted capture manifest or client acceptance is claimed.
+Status: internal review preview published, not a production release or client handover. Source `177b6e202dee86e9703f0a6bbcd746fb5cf26ece` is at `https://5bf03519.hqc-london.pages.dev`. Fresh full-page captures and client acceptance remain outstanding.
 
 The cumulative implementation baseline is `d4c296e54787acd682700ea952bc72707159981d`. Pedro audited source `028b45098becf5ca4cb0800673f783f3cd98f797` at immutable deployment `https://71d122e7.hqc-london.pages.dev/`. Those are separate references. Planning amendments preserve the original cumulative baseline while freezing exact additional paths before edits. The private source evidence is referenced as `hqc-review-2026-11-13`; it is not copied into this repository.
 
@@ -50,3 +50,9 @@ Still required: complete corrected artwork and layout inspection in context; des
 The Phase 8 production hold remains. No provider settings, credentials, client messages, live submissions, bookings, payments, deployment or thread settlement/archive were performed by this source implementation pass.
 
 Continuation owner: the implementation agent with Jack. Next action is the review build, desktop/mobile verification and real immutable preview/capture registration once the resource guard permits it. Revisit at the next working continuation and before any client handover. Jack owns exact-draft message approval; Pedro owns the outstanding clarification and acceptance responses.
+
+## Internal review preview, 13 November evening
+
+The full review build passed on an isolated VPS checkout after build-stage validation exposed invalid adjacent image/caption expressions and location alt interpolation. Those narrow syntax fixes preserve the same content/layout. The 14-case correction suite now also sends Astro compiler output through esbuild TypeScript parsing. The candidate was deployed only to the non-production `pedro-audit-nov13` Pages branch.
+
+Private checklist and comparison entry: https://review.highqualityclean.co.uk/versions/?before=nov11-banister-photo&after=nov13-pedro-audit#updates . Live before/after links are available; the new saved-capture comparison is explicitly pending. No old captures are relabelled as new, and no completed visual registry entry is fabricated. The full revision gate remains held until genuine captures are registered.
