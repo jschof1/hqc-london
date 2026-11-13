@@ -41,10 +41,17 @@ test('the nine omitted controlled call-outs have been restored without replacing
     ['about-high-quality-clean', 'Why HQC Exists', 'Understand the result first. Then define the cleaning required to achieve it.'],
     ['about-high-quality-clean', 'Labour Matters', 'Price Labour. Not Bedrooms.']
   ];
+  assert.equal(section('deep-cleaning-london', 'Restore First. Maintain Afterwards.').blocks[1].text, 'Deep Clean™ → improved baseline → Essential Clean™ maintenance');
+  assert.equal(section('cleaning-prices-london', 'The Principle Is Simple').blocks[0].text, 'Clear scope. Labour-based quotations. Careful delivery.');
   const before = original('src/data/phase8-copy.json');
   for (const [slug, heading, text] of cases) {
-    assert.equal(section(slug, heading).blocks.at(-1).text, text);
-    assert.deepEqual(section(slug, heading).blocks.slice(0, -1), before[slug].sections.find((s) => s.heading === heading).blocks);
+    if (slug === 'cleaning-prices-london' && text === 'Price Labour. Not Bedrooms.') {
+      assert.equal(copy[slug].heroSupport, text);
+      assert.deepEqual(section(slug, heading).blocks, before[slug].sections.find((s) => s.heading === heading).blocks);
+    } else {
+      assert.equal(section(slug, heading).blocks.filter((b) => b.text === text).length, 1);
+      assert.deepEqual(section(slug, heading).blocks.filter((b) => b.text !== text), before[slug].sections.find((s) => s.heading === heading).blocks);
+    }
   }
 });
 

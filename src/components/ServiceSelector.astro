@@ -1,5 +1,5 @@
 ---
-import { cardLibrary } from '../data/card-imagery';
+import { isIllustrativeImage, illustrativeAlt, cardLibrary } from '../data/card-imagery';
 const photo = cardLibrary['r-routine-visit'];
 // Presentation only (Jack, 11 Nov 2026): photograph as the section background, heading on top, and the
 // nine situations in a split grid (homes on one side, workplaces and property on the other). Choice
@@ -22,7 +22,7 @@ const groups = [
 ---
 
 <section id="find-my-service" class="hm-selector relative isolate scroll-mt-20 overflow-hidden py-20 text-white md:py-28">
-  <img class="hm-selector-bg" src={photo.src} alt={photo.alt} loading="lazy" decoding="async" width="1200" height="900" />
+  <img class="hm-selector-bg" src={photo.src} alt={illustrativeAlt(photo.src, photo.alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(photo.src) && <span class="image-disclosure">Illustrative</span>}
   <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
     <div class="mx-auto max-w-3xl text-center">
       <p class="text-xs font-bold uppercase tracking-[0.22em] text-copper" data-reveal="fade">Find my service</p>

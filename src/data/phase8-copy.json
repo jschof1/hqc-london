@@ -1527,12 +1527,12 @@
             "text": "Where appropriate, Deep Clean™ can create a more suitable baseline for future Essential Clean™ visits."
           },
           {
-            "kind": "p",
-            "text": "This avoids repeatedly trying to complete restoration work inside a maintenance-clean allowance."
-          },
-          {
             "kind": "support",
             "text": "Deep Clean™ → improved baseline → Essential Clean™ maintenance"
+          },
+          {
+            "kind": "p",
+            "text": "This avoids repeatedly trying to complete restoration work inside a maintenance-clean allowance."
           }
         ]
       },
@@ -4138,12 +4138,12 @@
             "text": "Where appropriate, the sequence may be:"
           },
           {
-            "kind": "p",
-            "text": "This prevents routine cleaning time being repeatedly consumed by restoration work."
-          },
-          {
             "kind": "support",
             "text": "Commercial Deep Clean → improved baseline → recurring commercial programme"
+          },
+          {
+            "kind": "p",
+            "text": "This prevents routine cleaning time being repeatedly consumed by restoration work."
           }
         ]
       },
@@ -4573,12 +4573,12 @@
             "text": "The public journey is straightforward:"
           },
           {
-            "kind": "p",
-            "text": "The purpose is not to make the service complicated. It is to reduce uncertainty before work begins."
-          },
-          {
             "kind": "support",
             "text": "Qualification → Assessment → Defined Scope → Delivery Plan → Controlled Delivery → Handover"
+          },
+          {
+            "kind": "p",
+            "text": "The purpose is not to make the service complicated. It is to reduce uncertainty before work begins."
           }
         ]
       },
@@ -5155,10 +5155,6 @@
           {
             "kind": "p",
             "text": "Calling both simply 'two-bedroom cleans' would hide a substantial difference in required work."
-          },
-          {
-            "kind": "support",
-            "text": "Price Labour. Not Bedrooms."
           }
         ]
       },
@@ -5346,12 +5342,12 @@
         "heading": "The Principle Is Simple",
         "blocks": [
           {
-            "kind": "p",
-            "text": "The quotation should reflect the work required to achieve the agreed result."
-          },
-          {
             "kind": "support",
             "text": "Clear scope. Labour-based quotations. Careful delivery."
+          },
+          {
+            "kind": "p",
+            "text": "The quotation should reflect the work required to achieve the agreed result."
           }
         ]
       },
@@ -5373,7 +5369,8 @@
     "closing": {
       "primary": "Get a Cleaning Quote",
       "secondary": "Check Essential Clean™ Suitability"
-    }
+    },
+    "heroSupport": "Price Labour. Not Bedrooms."
   },
   "why-choose-hqc": {
     "title": "Why Clients Choose HQC When the Result Matters",
@@ -5604,6 +5601,10 @@
             "text": "The central HQC principle is simple:"
           },
           {
+            "kind": "support",
+            "text": "The Right Cleaning Service for the Result You Need"
+          },
+          {
             "kind": "p",
             "text": "That means looking at:"
           },
@@ -5621,10 +5622,6 @@
           {
             "kind": "p",
             "text": "Then selecting the appropriate route."
-          },
-          {
-            "kind": "support",
-            "text": "The Right Cleaning Service for the Result You Need"
           }
         ]
       },
@@ -5818,12 +5815,12 @@
             "text": "Publicly, the principle is:"
           },
           {
-            "kind": "p",
-            "text": "Internally, the commercial controls remain confidential."
-          },
-          {
             "kind": "support",
             "text": "Price Labour. Not Bedrooms."
+          },
+          {
+            "kind": "p",
+            "text": "Internally, the commercial controls remain confidential."
           }
         ]
       },

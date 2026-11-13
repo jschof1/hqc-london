@@ -1,4 +1,5 @@
 ---
+import { isIllustrativeImage, illustrativeAlt } from '../data/card-imagery';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import MotionKit from '../components/MotionKit.astro';
@@ -13,7 +14,7 @@ import '../styles/utility-pages.css';
       <p class="section-kicker hm-kicker-line">Essential Clean™</p>
       <h1 class="mt-4 font-serif text-4xl md:text-6xl">Request an Essential Clean™ booking</h1>
       <p class="mt-5 max-w-3xl text-lg leading-8 text-white/85">Choose one-off, weekly or fortnightly where available. Your submission is a booking request. HQC checks the home, availability, cleaner allocation and applicable payment requirements before sending confirmation.</p>
-    </div><figure class="utility-book-photo"><img src="/images/phase8-nov10/r-bed-made.webp" alt="" aria-hidden="true" width="800" height="600" decoding="async" /></figure></section>
+    </div><figure class="utility-book-photo"><img src="/images/phase8-nov10/r-bed-made.webp" alt={illustrativeAlt("/images/phase8-nov10/r-bed-made.webp", "")} aria-hidden={isIllustrativeImage("/images/phase8-nov10/r-bed-made.webp") ? undefined : "true"} width="800" height="600" decoding="async" />{isIllustrativeImage("/images/phase8-nov10/r-bed-made.webp") && <span class="image-disclosure">Illustrative</span>}</figure></section>
     <div class="utility-shell utility-book-body">
       <div class="utility-book-notices">
       <p class="mt-4 max-w-3xl leading-7 text-slate" data-reveal>Entering payment details does not itself collect payment or confirm a booking. HQC decides whether a deposit or payment applies to your service and collects it where required before sending its confirmation email.</p>

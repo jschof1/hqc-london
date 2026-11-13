@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import MotionKit from '../components/MotionKit.astro';
-import { cardImage, cardLibrary, contactCardImagery } from '../data/card-imagery';
+import { isIllustrativeImage, illustrativeAlt, cardImage, cardLibrary, contactCardImagery } from '../data/card-imagery';
 import '../styles/enquiry-pages.css';
 
 // Image-led round (10 Nov 2026): one library image per information card.
@@ -51,7 +51,7 @@ const methodIcons = {
         <div class="hm-trust-row eq-trust"><span>Clear scope</span><span>Labour-based quotations</span><span>Careful delivery</span></div>
       </div>
       <figure class="eq-hero-media">
-        <img src="/images/generated/hqc-restoration-interior.png" alt="Period living room with a bay window and a fireplace." width="1536" height="1024" fetchpriority="high" loading="eager" decoding="async" />
+        <img src="/images/generated/hqc-restoration-interior.png" alt={illustrativeAlt("/images/generated/hqc-restoration-interior.png", "Period living room with a bay window and a fireplace.")} width="1536" height="1024" fetchpriority="high" loading="eager" decoding="async" />{isIllustrativeImage("/images/generated/hqc-restoration-interior.png") && <span class="image-disclosure">Illustrative</span>}
       </figure>
     </section>
 
@@ -169,7 +169,7 @@ const methodIcons = {
     <section class="eq-section bg-white" aria-label="Other contact routes">
       <div class="eq-shell eq-info-cards" data-stagger="90">
         <article class="eq-info-card">
-          <span class="eq-info-media"><img src={contactImage('Existing Clients').src} alt={contactImage('Existing Clients').alt} loading="lazy" decoding="async" width="1200" height="900" /></span>
+          <span class="eq-info-media"><img src={contactImage('Existing Clients').src} alt={illustrativeAlt(contactImage('Existing Clients').src, contactImage('Existing Clients').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Existing Clients').src) && <span class="image-disclosure">Illustrative</span>}</span>
           <div class="eq-info-body">
             <h2 class="eq-card-title">Existing Clients</h2>
             <p>Use the contact route for matters such as:</p>
@@ -186,7 +186,7 @@ const methodIcons = {
           </div>
         </article>
         <article class="eq-info-card">
-          <span class="eq-info-media"><img src={contactImage('Suppliers and Subcontractors').src} alt={contactImage('Suppliers and Subcontractors').alt} loading="lazy" decoding="async" width="1200" height="900" /></span>
+          <span class="eq-info-media"><img src={contactImage('Suppliers and Subcontractors').src} alt={illustrativeAlt(contactImage('Suppliers and Subcontractors').src, contactImage('Suppliers and Subcontractors').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Suppliers and Subcontractors').src) && <span class="image-disclosure">Illustrative</span>}</span>
           <div class="eq-info-body">
             <h2 class="eq-card-title">Suppliers and Subcontractors</h2>
             <p>Supplier or subcontractor enquiries should be clearly marked as such.</p>
@@ -201,7 +201,7 @@ const methodIcons = {
           </div>
         </article>
         <article class="eq-info-card">
-          <span class="eq-info-media"><img src={contactImage('Media, Partnerships and Other Enquiries').src} alt={contactImage('Media, Partnerships and Other Enquiries').alt} loading="lazy" decoding="async" width="1200" height="900" /></span>
+          <span class="eq-info-media"><img src={contactImage('Media, Partnerships and Other Enquiries').src} alt={illustrativeAlt(contactImage('Media, Partnerships and Other Enquiries').src, contactImage('Media, Partnerships and Other Enquiries').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Media, Partnerships and Other Enquiries').src) && <span class="image-disclosure">Illustrative</span>}</span>
           <div class="eq-info-body">
             <h2 class="eq-card-title">Media, Partnerships and Other Enquiries</h2>
             <p>For legitimate business, media or partnership enquiries, provide enough information for HQC to understand who you are, your organisation, purpose of contact, relevant website or information and preferred contact details.</p>
@@ -213,7 +213,7 @@ const methodIcons = {
     {/* Assessment media: full-bleed photograph, dark panel on the left. */}
     <section class="hm-stage eq-stage-left" aria-labelledby="assessment-media-title">
       <div class="hm-stage-media hm-parallax">
-        <img src={contactImage('Assessment Media').src} alt={contactImage('Assessment Media').alt} loading="lazy" decoding="async" width="1200" height="900" />
+        <img src={contactImage('Assessment Media').src} alt={illustrativeAlt(contactImage('Assessment Media').src, contactImage('Assessment Media').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Assessment Media').src) && <span class="image-disclosure">Illustrative</span>}
       </div>
       <div class="hm-stage-panel eq-panel-dark hm-dark" data-reveal>
         <h2 id="assessment-media-title" class="section-title text-white" data-reveal="title">Assessment Media</h2>
@@ -228,7 +228,7 @@ const methodIcons = {
     <section class="eq-section bg-white" aria-label="Service area and quotation routes">
       <div class="eq-shell eq-photo-cards" data-stagger="100">
         <article class="eq-photo-card">
-          <img class="eq-photo-card-bg" src={contactImage('Service Area Questions').src} alt={contactImage('Service Area Questions').alt} loading="lazy" decoding="async" width="1200" height="900" />
+          <img class="eq-photo-card-bg" src={contactImage('Service Area Questions').src} alt={illustrativeAlt(contactImage('Service Area Questions').src, contactImage('Service Area Questions').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Service Area Questions').src) && <span class="image-disclosure">Illustrative</span>}
           <div class="eq-photo-card-body">
             <h2 class="eq-card-title">Service Area Questions</h2>
             <p>If you want to know whether HQC covers your postcode:</p>
@@ -236,7 +236,7 @@ const methodIcons = {
           </div>
         </article>
         <article class="eq-photo-card eq-photo-card-flip">
-          <img class="eq-photo-card-bg" src={contactImage('Need a Cleaning Quote Rather Than General Support?').src} alt={contactImage('Need a Cleaning Quote Rather Than General Support?').alt} loading="lazy" decoding="async" width="1200" height="900" />
+          <img class="eq-photo-card-bg" src={contactImage('Need a Cleaning Quote Rather Than General Support?').src} alt={illustrativeAlt(contactImage('Need a Cleaning Quote Rather Than General Support?').src, contactImage('Need a Cleaning Quote Rather Than General Support?').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Need a Cleaning Quote Rather Than General Support?').src) && <span class="image-disclosure">Illustrative</span>}
           <div class="eq-photo-card-body">
             <h2 class="eq-card-title">Need a Cleaning Quote Rather Than General Support?</h2>
             <p>Use the quotation route so we can direct the enquiry correctly.</p>
@@ -261,7 +261,7 @@ const methodIcons = {
             Use this contact form for existing-client, supplier or general administrative matters. For new cleaning work, use the quotation route.
           </p>
           <figure class="eq-form-photo">
-            <img src={formPhoto.src} alt="" loading="lazy" decoding="async" width="1200" height="900" />
+            <img src={formPhoto.src} alt={illustrativeAlt(formPhoto.src, "")} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(formPhoto.src) && <span class="image-disclosure">Illustrative</span>}
           </figure>
           </div>
         </div>
@@ -455,7 +455,7 @@ const methodIcons = {
 
     {/* Closing: London street under a flat tint, words left, three routes right. */}
     <section class="hm-closing hm-parallax eq-closing relative isolate overflow-hidden text-white hm-dark" aria-labelledby="contact-quote-title">
-      <img class="hm-closing-bg" src={closingPhoto.src} alt="" loading="lazy" decoding="async" width="1200" height="900" />
+      <img class="hm-closing-bg" src={closingPhoto.src} alt={illustrativeAlt(closingPhoto.src, "")} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(closingPhoto.src) && <span class="image-disclosure">Illustrative</span>}
       <div class="eq-shell eq-closing-grid">
         <div class="eq-closing-copy">
           <p class="section-kicker" data-reveal="fade">Need a cleaning quote?</p>
