@@ -38,5 +38,22 @@
     "result": "No blocking defect; five low-severity accuracy issues corrected after review.",
     "privateEvidenceReference": "hqc-review-2026-11-13/private-checklist-independent-review.json",
     "releaseApproval": false
+  },
+  "accuracyPublication": {
+    "workerVersion": "3158d5a0-0182-48ab-b762-20eaac4c68ad",
+    "hostedFilesMatchSource": true,
+    "anonymousChecklistStatus": 401,
+    "noindexHeaders": true,
+    "photoStateUnchanged": true,
+    "discussionUnchanged": true,
+    "allPrior23VersionsUnchanged": true,
+    "beforeCommit": "d4c296e54787acd682700ea952bc72707159981d",
+    "doneInSource": 18,
+    "due": 23,
+    "newFullPageCaptures": "pending",
+    "checkedAt": "2026-11-13T21:50:06.514445Z",
+    "reviewSourceCommit": "aeb9fd1df8337544e9a358c59aec9f41e96792c5",
+    "websiteEvidenceFixCommit": "0694295f45de4317c299acad2b7a5ad89feacbed",
+    "privateEvidenceReference": "hqc-review-2026-11-13/review-accuracy-readback.json"
   }
 }
