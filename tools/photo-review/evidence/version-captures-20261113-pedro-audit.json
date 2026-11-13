@@ -24,5 +24,19 @@
     "Duefilterreturns23rows; before/audited/updatedlinks resolve to recorded origins",
     "Homepage390px has6selectedreviewcards and no document overflow",
     "Booking1440px photograph remains absolute in the right column; no document overflow"
-  ]
+  ],
+  "beforePreview": {
+    "url": "https://1a8fa837.hqc-london.pages.dev",
+    "sourceCommit": "d4c296e54787acd682700ea952bc72707159981d",
+    "deploymentId": "1a8fa837-c715-48fe-b998-606bb09d7903",
+    "environment": "preview",
+    "verification": "Cloudflare GET deployment metadata and git diff against e45ba305eb217aac1844bd3e425cc7a6c14c6b4c; only revisions/versions.json differs.",
+    "privateEvidenceReference": "hqc-review-2026-11-13/before-preview-provider-evidence.json"
+  },
+  "independentReview": {
+    "head": "d0cf26bfae7b91417358448bb37f88a82a2f4915",
+    "result": "No blocking defect; five low-severity accuracy issues corrected after review.",
+    "privateEvidenceReference": "hqc-review-2026-11-13/private-checklist-independent-review.json",
+    "releaseApproval": false
+  }
 }

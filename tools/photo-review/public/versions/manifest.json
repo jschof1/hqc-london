@@ -3761,10 +3761,10 @@
       ],
       "outstanding": [
         "New full-page desktop/mobile captures and the full revision gate remain due.",
-        "Five clarification points, legal date, local proof, case-study permission and provider/client acceptance remain open.",
+        "Five core clarification points, the held Contact introduction, legal date, local proof, case-study permission and provider/client acceptance remain open.",
         "Use the updates checklist to compare live before/after links. The missing screenshot state is intentional until fresh captures are recorded."
       ],
-      "provenance": "Source177b6e202dee86e9703f0a6bbcd746fb5cf26ece built on the VPS with build:review and directly deployed to a non-production Pages branch. No new capture date is claimed.",
+      "provenance": "Source 177b6e202dee86e9703f0a6bbcd746fb5cf26ece built on the VPS with build:review and directly deployed to a non-production Pages branch. No new capture date is claimed.",
       "pages": {}
     }
   ],
@@ -3819,7 +3819,7 @@
   "defaultAfter": "nov13-pedro-audit",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
-    "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",
+    "Each saved version records its actual capture date. Version dates refer to source deployments, not screenshot dates. The 13 November preview has no new saved captures yet.",
     "Earlier October layouts may look identical because subsequent work concerned controls and evidence.",
     "Review comments are shared by Pedro and Jack. Author names are chosen labels, not verified identities.",
     "The earlier May source is retained elsewhere, but no May page capture is included in this comparison.",

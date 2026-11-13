@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-13T21:31:27.375258Z",
+  "updatedAt": "2026-11-13T21:45:56.741010Z",
   "candidateUrl": "https://5bf03519.hqc-london.pages.dev",
   "candidateCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
   "beforeUrl": "https://1a8fa837.hqc-london.pages.dev/",
@@ -423,5 +423,14 @@
       ],
       "pages": []
     }
-  ]
+  ],
+  "beforeCommit": "d4c296e54787acd682700ea952bc72707159981d",
+  "beforeProvenance": {
+    "deploymentId": "1a8fa837-c715-48fe-b998-606bb09d7903",
+    "sourceBranch": "t3/hqc-home-motion-cro-nov10",
+    "meaning": "Frozen preview immediately before these audit edits.",
+    "sameApplicationAsVersion": "nov11-banister-photo",
+    "sameApplicationCommit": "e45ba305eb217aac1844bd3e425cc7a6c14c6b4c",
+    "verification": "Cloudflare deployment record identifies the before-preview source. Git diff between the source commits contains only revisions/versions.json; application files are unchanged."
+  }
 }

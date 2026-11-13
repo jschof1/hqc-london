@@ -166,6 +166,7 @@ async function loadUpdates() {
     $('#updates-meta').replaceChildren(
       'Status recorded ', h('time', { datetime: data.updatedAt }, fmtDate(data.updatedAt, true)),
       ` · ${data.groups.length} work groups`,
+      data.beforeCommit ? ` · Before ${shortCommit(data.beforeCommit)}` : '',
       data.candidateCommit ? ` · Candidate source ${shortCommit(data.candidateCommit)}` : '');
     const links = [
       ['Open before', data.beforeUrl],
@@ -177,7 +178,7 @@ async function loadUpdates() {
     });
     $('#updates-links').replaceChildren(...links);
     $('#updates-preview').textContent = safeExternal(data.candidateUrl)
-      ? 'Open the live before and updated preview links to compare the changes. Fresh saved screenshots for this update are still due. A preview is not production approval.'
+      ? 'Before opens the frozen site immediately before these edits. Open it beside the updated preview to compare the changes. Fresh saved screenshots for this update are still due. A preview is not production approval.'
       : data.previewNote;
     $('#updates-content').hidden = false;
     renderUpdates();
