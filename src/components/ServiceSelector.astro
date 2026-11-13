@@ -138,7 +138,7 @@ const groups = [
       resultPanel.classList.add('is-swap');
       button.closest('.hm-choices')?.setAttribute('data-has-choice', '');
       resultPanel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest' });
-      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'service_selector_result', result: key } }));
+      window.dispatchEvent(new CustomEvent('hqc:conversion', { detail: { event: 'service_selector_result', result: key === 'complex' ? 'professional' : key } }));
     });
   });
 </script>

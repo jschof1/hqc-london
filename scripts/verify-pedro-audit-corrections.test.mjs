@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import vm from 'node:vm';
 import { transform } from 'esbuild';
 import { transform as transformAstro } from '@astrojs/compiler';
 
@@ -117,6 +118,27 @@ test('actual route data retains the corrected route, service and intent states',
   const selector = read('src/components/ServiceSelector.astro');
   assert.match(selector, /number: '08', result: 'complex'/);
   assert.match(selector, /href: '\/essential-clean-london\/\?next=booking'/);
+});
+
+test('the complex selector click changes the destination while preserving the established analytics category', async () => {
+  const script = read('src/components/ServiceSelector.astro').match(/<script>([\s\S]*?)<\/script>/)[1];
+  const { code } = await transform(script, { loader: 'ts' });
+  const elements = new Map();
+  const element = () => ({ textContent: '', attrs: {}, classList: { add() {}, remove() {} }, setAttribute(name, value) { this.attrs[name] = value; }, scrollIntoView() {} });
+  for (const id of ['selector-result', 'selector-label', 'selector-heading', 'selector-copy', 'selector-primary', 'selector-secondary']) elements.set(id, element());
+  let click; const button = { ...element(), dataset: { result: 'complex' }, addEventListener(_, fn) { click = fn; }, closest() { return null; } };
+  const events = [];
+  vm.runInNewContext(code, {
+    document: { getElementById: (id) => elements.get(id), querySelectorAll: () => [button] },
+    window: { dispatchEvent: (event) => events.push(event) },
+    CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options.detail; } },
+    matchMedia: () => ({ matches: true })
+  });
+  click();
+  assert.equal(elements.get('selector-primary').attrs.href, '/request-a-quote/?route=complex');
+  assert.equal(events[0].detail.result, 'professional');
+  button.dataset.result = 'professional'; click();
+  assert.equal(elements.get('selector-primary').attrs.href, '/request-a-quote/?route=commercial');
 });
 
 test('disclosure follows explicit provenance and never relabels a genuine founder or unknown archive photo', async () => {

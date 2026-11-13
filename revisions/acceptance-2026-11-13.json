@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "status": "source_candidate_not_handed_over",
+  "originalImplementationBaseline": "d4c296e54787acd682700ea952bc72707159981d",
+  "auditedSourceCommit": "028b45098becf5ca4cb0800673f783f3cd98f797",
+  "auditedImmutableDeployment": "https://71d122e7.hqc-london.pages.dev/",
+  "currentPlanningBaseline": "713804da86d7616652a7a74037b6dffd0f6ad52c",
+  "privateEvidenceReference": "hqc-review-2026-11-13",
+  "productionReleaseAuthorised": false,
+  "clientAcceptance": false,
+  "newImmutableDeployment": null,
+  "newCaptureManifest": null,
+  "criteria": [
+    {
+      "id": "COPY",
+      "findingRefs": [
+        "P8-COPY-070",
+        "P8-COPY-076",
+        "P8-COPY-085",
+        "P8-COPY-097",
+        "P8-COPY-098",
+        "P8-COPY-112",
+        "P8-COPY-118",
+        "P8-COPY-119",
+        "P8-COPY-120",
+        "P8-COPY-127",
+        "P8-COPY-128",
+        "P8-COPY-136",
+        "P8-COPY-137",
+        "P8-COPY-138",
+        "P8-COPY-196"
+      ],
+      "status": "implemented_source",
+      "sourceResult": "Exact supplied offer/call-out wording and identified public wording amendments. Original table anchors recovered from Batches 2-4. Footer line capitalisation corrected.",
+      "remaining": "Rendered position, visual continuity, footer artwork text and client acceptance remain unverified."
+    },
+    {
+      "id": "LEGAL",
+      "findingRefs": [
+        "P8-LEGAL-001",
+        "P8-COPY-183",
+        "P8-COPY-184",
+        "P8-COPY-185",
+        "P8-COPY-186",
+        "P8-COPY-187",
+        "P8-COPY-188",
+        "P8-COPY-189",
+        "P8-COPY-190",
+        "P8-COPY-191",
+        "P8-COPY-192"
+      ],
+      "status": "partial",
+      "sourceResult": "Privacy/support email values, exact section 7 and booking disclaimer correction applied. Existing legal H1s retained. Draft warning restricted to previews. Approved section 5 and EC steps 4-5 preserved.",
+      "remaining": "Legal approval date, section 5/processor naming clarification, final legal review and production render evidence remain open."
+    },
+    {
+      "id": "REVIEWS",
+      "findingRefs": [
+        "P8-COPY-001",
+        "P8-COPY-002",
+        "P8-COPY-005",
+        "P8-COPY-077",
+        "P8-COPY-121",
+        "P8-COPY-122",
+        "P8-COPY-145",
+        "P8-COPY-146",
+        "P8-COPY-147",
+        "P8-COPY-148",
+        "P8-COPY-149",
+        "P8-COPY-150",
+        "P8-COPY-151",
+        "P8-COPY-155"
+      ],
+      "status": "partial",
+      "sourceResult": "300+ controlled statements restored. Homepage carousel replaced by the six explicitly selected proof cards. Thomas B. and Andre B. removed from shared public review data. Explicit Reviews placeholders and its gallery removed.",
+      "remaining": "Reviews-page review selection and prior case-study approval remain held. Review figures remain the 11 November snapshot, not a newly refreshed live figure. 300+ evidence is Pedro-confirmed, not independently audited here."
+    },
+    {
+      "id": "REMOVALS",
+      "findingRefs": [],
+      "status": "partial",
+      "sourceResult": "Named homepage standards carousel removed and Client evidence bands removed outside homepage. Approved count statements retained as page content.",
+      "remaining": "Generic section/heading removal depth and route boundary remain held; no inferred removal of closing CTAs or Complex controlled process."
+    },
+    {
+      "id": "CONTACT",
+      "findingRefs": [
+        "P8-COPY-166",
+        "P8-COPY-167",
+        "P8-COPY-168",
+        "P8-COPY-169",
+        "P8-COPY-170"
+      ],
+      "status": "partial",
+      "sourceResult": "Sales/support purposes and card destinations corrected. Misleading location card removed. Visible phone formatting standardised, technical dial destinations preserved.",
+      "remaining": "New intro wording held. Existing confirmed-success logic retained and covered by existing executable handler/frontend tests; browser and live receiver receipts remain unverified."
+    },
+    {
+      "id": "ROUTES",
+      "findingRefs": [
+        "P8-ROUTE-001",
+        "P8-ROUTE-002",
+        "P8-ROUTE-003",
+        "P8-ROUTE-004",
+        "P8-ROUTE-005",
+        "P8-ROUTE-006"
+      ],
+      "status": "implemented_source",
+      "sourceResult": "Six route/service/intent corrections plus Pricing CTA to the existing Essential Clean page. Actual exported route data checked.",
+      "remaining": "Hosted interaction, field/intent retention and GHL routing receipts remain unverified."
+    },
+    {
+      "id": "COMPLEX",
+      "findingRefs": [],
+      "status": "implemented_source",
+      "sourceResult": "Scoped hero support, mandatory site-visit intro, original-list preservation, exact confidentiality commitments, step 3 and capacity line applied only to Complex.",
+      "remaining": "Desktop/mobile layout, client review and acceptance remain unverified."
+    },
+    {
+      "id": "LOCATIONS",
+      "findingRefs": [
+        "P8-LOC-001 through P8-LOC-017",
+        "P8-SEO-004 through P8-SEO-020"
+      ],
+      "status": "partial",
+      "sourceResult": "17 retained URLs keep their inventory and gain approved H1/intro/CTAs/four-route module. Controlled metadata applied after review of finalized Search Console evidence; no new local business claims.",
+      "remaining": "Unique-local factual modules still need substantiated earlier evidence. Search equity assessment covers 92 finalized days through 10 November; absent legacy rows do not prove absence of all historic equity. Rendered pages and actual indexing unverified."
+    },
+    {
+      "id": "IMAGERY",
+      "findingRefs": [
+        "P8-COPY-199"
+      ],
+      "status": "partial",
+      "sourceResult": "Explicit generated-image provenance drives visible Illustrative captions and descriptive alt text across current shared/home/contact/quote/FAQ/booking/location surfaces. Service galleries preserved; Reviews gallery removed. Non-home living-room assignments replaced, one near-duplicate floor-plan assignment changed, corrected vacuum and 22 checked uniform outputs integrated.",
+      "remaining": "Actual page compositions, exhaustive uniform consistency in context and image continuity still require desktop/mobile capture. Archived/stock/genuine photos are not reclassified as AI by appearance."
+    },
+    {
+      "id": "FOUNDER",
+      "findingRefs": [],
+      "status": "implemented_source",
+      "sourceResult": "Supplied genuine PNG copied byte-identical to public asset, exact alt retained and modest CSS display crop in existing homepage founder slot. No colour/logo or raster edit. About portrait unchanged.",
+      "remaining": "Rendered crop and desktop/mobile presentation remain unverified."
+    },
+    {
+      "id": "SEMANTICS",
+      "findingRefs": [
+        "P8-COPY-010",
+        "P8-COPY-011",
+        "P8-COPY-012",
+        "P8-COPY-144",
+        "P8-COPY-162",
+        "P8-COPY-163",
+        "P8-COPY-164",
+        "P8-COPY-165",
+        "P8-COPY-194"
+      ],
+      "status": "implemented_source",
+      "sourceResult": "Exact controlled 404 copy and useful routes; server response status set to 404. FAQ questions, four quote cards and homepage route-card headings use H3. Existing legal H1s retained.",
+      "remaining": "Actual HTTP 404, browser accessibility tree and responsive results remain unverified."
+    },
+    {
+      "id": "PARITY",
+      "findingRefs": [
+        "P8-SEO-001",
+        "P8-SEO-002",
+        "P8-SEO-003",
+        "P8-SEO-022"
+      ],
+      "status": "open_dependency",
+      "sourceResult": "Existing environment-conditional robots source and confirmed Contact receipt handling preserved. No handler, consent, schema, redirect or analytics rewrite.",
+      "remaining": "A straight main Plausible port would duplicate consented production pageviews and misses current form-stage receipts. Deliberate analytics event reconciliation remains required. Production-style robots/header proof and all live provider gates remain unverified."
+    },
+    {
+      "id": "VERIFY",
+      "findingRefs": [
+        "P8-TECH-001",
+        "P8-TECH-002",
+        "P8-TECH-004",
+        "P8-SEO-023",
+        "P8-SEO-024"
+      ],
+      "status": "partial",
+      "sourceResult": "Source scope, exact regression, syntax, forms runtime and analytics contract checks run.",
+      "remaining": "No full site build/browser/capture performed: latest resource guard at approximately 16:07 UTC on 13 November reports 25.97 GiB free and healthy disk, but denies heavy work for one-minute load 14.31 over 8 CPUs; Jack Drive is unmounted. Earlier hosted Pages API reads returned 503, then a wrangler deployment-list retry succeeded; the read outage is recovered. No new hosted candidate or captures exist yet. Staged full revision check FAIL solely because the application has no matching recorded visual version/capture. Earlier unstaged-application failure resolved. No provider submission, booking, payment, pop-up interactive record, deployment or client acceptance established."
+    }
+  ],
+  "checks": [
+    {
+      "command": "node --test scripts/verify-pedro-audit-corrections.test.mjs",
+      "result": "PASS",
+      "coverage": "10 regression cases including client-copy oracle, protected wording, actual route exports, provenance and changed Astro compiler syntax; not browser rendering."
+    },
+    {
+      "command": "npm run test:forms",
+      "result": "PASS",
+      "coverage": "Routing check, 12 staged-runtime groups, 37 submission/frontend checks and one workerd test using controlled in-process receivers; no real customer/provider send."
+    },
+    {
+      "command": "npm run test:analytics",
+      "result": "PASS",
+      "coverage": "Two real-adapter/contract checks, including consent, preview isolation, PII stripping and receipt deduplication."
+    },
+    {
+      "command": "npm run check:revision:scope",
+      "result": "PASS",
+      "coverage": "Exact-path scope only, not semantic approval or handover."
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS",
+      "coverage": "Whitespace errors only."
+    },
+    {
+      "command": "npm run check:revision",
+      "result": "FAIL / BLOCKED",
+      "coverage": "Staged rerun: current application matches no recorded version/capture manifest, the sole remaining failure. Earlier unstaged-application failure resolved. A real immutable deployment and capture registration remain required."
+    }
+  ],
+  "artwork": [
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-800.webp",
+      "sha256": "2487a3f3700b69521b830e02dd38520f55db7fa4699a6f3bb725a7941d42ce34",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-1600.webp",
+      "sha256": "d85c7cb78c79e043657bf6af24a2b695951c11067a4dea41d93417555a3a8af2",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-planner.webp",
+      "sha256": "7abb42ca7f7505696be9eb42c4b14a006a16d88486dad4014e66b76ddb8be8c0",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-living-dust.webp",
+      "sha256": "aa98908a739d42d4dd2f6a06ea42d07c41863c5bf75f6b30cb73f0f7b854055d",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-hallway-floor.webp",
+      "sha256": "fd1a38c22e1a7bf95f717893521bf091573e80092423882a2ce5d560832388f0",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-staff-kitchen.webp",
+      "sha256": "6e9366d7b6c15ca195ee164cd11fdc15d9a338ef7d5271a01cd680c5c2fced55",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-floor-scrubber.webp",
+      "sha256": "073eb710d8f56e66afd749732476193ae339b868a064f603122742315f14b7b6",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-after-hours.webp",
+      "sha256": "af9e4696576ccf7ba64b5d1dde7e96c003586ed9183073adf97dc81a6630a12d",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-high-level.webp",
+      "sha256": "e5b01b84903406870edce827a7d1756971be01eacb5c499621bff0c2385db865",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-deep-kitchen.webp",
+      "sha256": "b87b3cfceaf193958a5990bcb15de99576299a116e8ddf5eab72a134bcbf2ca5",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-supervisor.webp",
+      "sha256": "d30c65cfadb5bc6bf16dd30cdf651b728e6159f97497ecd3648ac1c743132c7f",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-coats-office.webp",
+      "sha256": "3f51c540b213a10e9b3556ff3bc8adff0b4a051723a246ddf9117978a1f54690",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-glass-partition.webp",
+      "sha256": "f6ee7746b2aa0532e4bc306110158f046c7b1bfad9c1788a375b36faf7720580",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-lobby.webp",
+      "sha256": "c4e3335fd99d4d4bc25c99a9b71342df64972aef8ec6e34c72b4c7a1a989f2cd",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-stairwell.webp",
+      "sha256": "98dfc8d214932a1ad7200dd9f36a7122e65c8f538b6ba9967d0f1ce54cd9abf0",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-high-windows.webp",
+      "sha256": "720b6f2992f7e87bd2f1b9df5a2f9262279dfd9ac27287f343e50abed7f7a028",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-snagging.webp",
+      "sha256": "0aa09b72d3c8287912ff13e140e15ae40bc3181098f533435ab02ec0c1fb6d06",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-van-street.webp",
+      "sha256": "9bc62a28980b108bd4fdb76a6c2c6d820a513b966be0b1f1b610d0bdb1ab69df",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-site-review.webp",
+      "sha256": "85fb7931e66a02b51ce5659a748b1a3eaa92e1877ebb6f1e69ff556adbebe125",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-delivery.webp",
+      "sha256": "3040e983c46d0d7bcefbff448c5bbf6903fd88bb60198d731dd424764bbd45d3",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/k-supplies.webp",
+      "sha256": "1eab8a345dc41734a74621baee48757e20561a1807ecee9ff3344d8dfae03535",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-desks.webp",
+      "sha256": "9fdef228ff523f86f277741ff7059d9d7e6c4756b2e57591025f7055c22c8632",
+      "purpose": "AI uniform logo placement correction; teal direction retained; parent visually inspected output; rendered-scene verification remains open."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-routine-visit.webp",
+      "sha256": "48978e11edb50bf832ff8bc4cb15de9d1f4a2a03238eb35de24235eda6f6c70c",
+      "purpose": "Correct vacuum orientation and left-chest logo in generated routine-cleaning image; parent visually inspected output; rendered usages unverified."
+    }
+  ],
+  "genuineFounder": {
+    "path": "public/images/pedro-on-site-original.png",
+    "sha256": "5b5fe29232e15b7356df4a33e6ea6f9fca9950260ef65a625da7c595fa78bd71",
+    "rasterEdited": false
+  },
+  "resourceEvidence": {
+    "checkedApproximately": "2026-11-13T16:07:00Z",
+    "homeFreeGiB": 25.97,
+    "diskStatus": "healthy",
+    "heavyAllowed": false,
+    "denialReason": "one-minute load 14.31 exceeds 8 logical CPUs",
+    "jackDriveMounted": false
+  },
+  "hostedReadEvidence": {
+    "earlierResult": "Pages API/wrangler reads returned 503",
+    "latestResult": "wrangler pages deployment list succeeded on retry",
+    "readOutageRecovered": true,
+    "newHostedCandidateExists": false,
+    "newCapturesExist": false
+  }
+}

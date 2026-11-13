@@ -219,7 +219,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     gallery: [
       { src: '/images/instock/london-property-living-room.webp', alt: 'Open-plan living area with sofas, a patterned rug and an olive tree.' },
       { src: '/images/generated/hqc-office-hero.png', alt: 'Meeting room with a long table and a view of the City of London.' },
-      { src: '/images/luxury-home/richmond-living-room.webp', alt: 'Living room with a fireplace, chandelier and sofas.' }
+      communalSpace
     ],
     outcomes: ['One East London service hub', 'Availability checked before commitment', 'Home, workplace and property routes'],
     scope: ['East London postcode', 'Required outcome', 'Site access and preferred timing']

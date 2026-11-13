@@ -62,7 +62,7 @@ for (const field of ['type', 'name', 'email', 'phone', 'message']) {
 expect(!offer.includes('Wire up your actual submission logic here'), 'Offer still contains placeholder submission logic');
 
 const main = await read('src/scripts/main.js');
-for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home'", "payload.type === 'commercial'", "CustomEvent('hqc:form-stage'", '0208 870 3925']) {
+for (const required of ['fetch(endpoint', 'response.ok', "payload.type === 'home'", "payload.type === 'commercial'", "CustomEvent('hqc:form-stage'", '020 8870 3925']) {
   expect(main.includes(required), `Shared form handler is missing: ${required}`);
 }
 
