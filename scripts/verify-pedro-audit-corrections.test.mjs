@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import vm from 'node:vm';
 import { transform } from 'esbuild';
-import { transform as transformAstro } from '@astrojs/compiler';
+import { parse as parseAstro, transform as transformAstro } from '@astrojs/compiler';
 
 const read = (path) => fs.readFileSync(path, 'utf8');
 const data = (path) => JSON.parse(read(path));
@@ -164,7 +164,44 @@ test('location templates implement the controlled cross-buyer structure without 
     for (const route of ['/home-cleaning-london/', '/property-facilities-cleaning-london/', '/commercial-cleaning-london/', '/complex-property-cleaning-london/']) assert.ok(source.includes(route));
     assert.ok(!source.includes('areaInfo.aboutArea'));
     assert.ok(source.includes('Cleaning Services ${areaInfo.name} | High Quality Clean'));
+    assert.equal(source.split('HQC supports suitable homes, workplaces and managed properties in {areaInfo.name}, subject to service requirements, scheduling and team availability.').length - 1, 1);
   }
+});
+
+test('an ambiguous Reviews replacement cannot remove the previously approved hero lead', () => {
+  assert.deepEqual(copy['reviews-case-studies'].lead, original('src/data/phase8-copy.json')['reviews-case-studies'].lead);
+  const template = read('src/components/OutcomePage.astro');
+  assert.match(template, /page\.slug === 'reviews-case-studies' &&[\s\S]*?href=\{reviewsData\.profileUrl\}[\s\S]*?>Read all reviews on Google<\/a>/);
+  assert.equal(data('src/data/google-reviews.json').profileUrl, original('src/data/google-reviews.json').profileUrl);
+});
+
+test('the requested public phone display includes Terms and all current source surfaces', () => {
+  assert.match(JSON.stringify(legal), /Telephone: 020 8870 3925/);
+  const files = fs.readdirSync('src', { recursive: true }).filter((file) => /\.(astro|json|[jt]s)$/.test(file));
+  for (const file of files) assert.doesNotMatch(read(`src/${file}`), /0208 870 3925/, file);
+});
+
+test('the retained floor-plan image is no longer paired with its look-alike in the requested contexts', async () => {
+  const { outcomeCardImagery, homeProcessImagery, homeComplexStepImagery, cardLibrary } = await moduleAt('src/data/card-imagery.ts');
+  assert.equal(homeProcessImagery['Service profile'], 'g-service-profile');
+  assert.notEqual(homeComplexStepImagery['Defined scope'], 'g-scope-plan');
+  for (const slug of ['how-we-work', 'complex-property-cleaning-london']) assert.ok(!JSON.stringify(outcomeCardImagery[slug]).includes('g-scope-plan'), slug);
+  assert.notEqual(cardLibrary[homeComplexStepImagery['Defined scope']].src, cardLibrary['g-service-profile'].src);
+});
+
+test('heading semantics retain the two-column error composition and valid homepage nesting', async () => {
+  const classOf = (node) => node.attributes?.find((attr) => attr.name === 'class')?.value || '';
+  const walk = (node, visit, ancestors = []) => { visit(node, ancestors); for (const child of node.children || []) walk(child, visit, [...ancestors, node]); };
+  const error = (await parseAstro(read('src/pages/404.astro'))).ast;
+  let intro;
+  walk(error, (node) => { if (node.name === 'section' && classOf(node).includes('utility-error-intro')) intro = node; });
+  const columns = intro.children.filter((node) => node.type === 'element' && node.name !== 'span');
+  assert.deepEqual(columns.map((node) => node.name), ['div', 'div']);
+  assert.ok(classOf(columns[0]).includes('utility-error-number'));
+  assert.ok(columns[1].children.some((node) => node.name === 'h1'));
+  walk(error, (node) => { if (node.name === 'ul') assert.ok(!classOf(node).includes('text-white'), 'useful routes inherit their porcelain panel contrast'); });
+  const home = (await parseAstro(read('src/pages/index.astro'))).ast;
+  walk(home, (node, ancestors) => { if (/^h[1-6]$/.test(node.name || '')) assert.ok(!ancestors.some((parent) => parent.name === 'span'), `invalid heading in span at line ${node.position?.start?.line}`); });
 });
 
 test('changed Astro sources compile without a site build; this does not claim browser or provider verification', async () => {

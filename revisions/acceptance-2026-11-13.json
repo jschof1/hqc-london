@@ -5,7 +5,7 @@
   "originalImplementationBaseline": "d4c296e54787acd682700ea952bc72707159981d",
   "auditedSourceCommit": "028b45098becf5ca4cb0800673f783f3cd98f797",
   "auditedImmutableDeployment": "https://71d122e7.hqc-london.pages.dev/",
-  "currentPlanningBaseline": "713804da86d7616652a7a74037b6dffd0f6ad52c",
+  "currentPlanningBaseline": "9ffee824a76dacab0ee3f802c362deb3aa0697e4",
   "privateEvidenceReference": "hqc-review-2026-11-13",
   "productionReleaseAuthorised": false,
   "clientAcceptance": false,
@@ -73,8 +73,8 @@
         "P8-COPY-155"
       ],
       "status": "partial",
-      "sourceResult": "300+ controlled statements restored. Homepage carousel replaced by the six explicitly selected proof cards. Thomas B. and Andre B. removed from shared public review data. Explicit Reviews placeholders and its gallery removed.",
-      "remaining": "Reviews-page review selection and prior case-study approval remain held. Review figures remain the 11 November snapshot, not a newly refreshed live figure. 300+ evidence is Pedro-confirmed, not independently audited here."
+      "sourceResult": "300+ controlled statements restored. Homepage carousel replaced by the six explicitly selected proof cards. Thomas B. and Andre B. removed from shared public review data. Explicit Reviews placeholders and its gallery removed. Requested Google link added from the existing snapshot profile URL. Both approved hero lead paragraphs restored after review identified an ambiguous replacement anchor.",
+      "remaining": "Reviews-page review selection and prior case-study approval remain held. Review figures remain the 11 November snapshot, not a newly refreshed live figure. 300+ evidence is Pedro-confirmed, not independently audited here. The replacement Reviews intro sentence needs its exact anchor confirmed; no guessed replacement remains."
     },
     {
       "id": "REMOVALS",
@@ -93,7 +93,7 @@
         "P8-COPY-170"
       ],
       "status": "partial",
-      "sourceResult": "Sales/support purposes and card destinations corrected. Misleading location card removed. Visible phone formatting standardised, technical dial destinations preserved.",
+      "sourceResult": "Sales/support purposes and card destinations corrected. Misleading location card removed. Visible phone formatting standardised, technical dial destinations preserved. Terms section 33 phone display is included; the current source tree has no occurrence of the old spaced display.",
       "remaining": "New intro wording held. Existing confirmed-success logic retained and covered by existing executable handler/frontend tests; browser and live receiver receipts remain unverified."
     },
     {
@@ -124,7 +124,7 @@
         "P8-SEO-004 through P8-SEO-020"
       ],
       "status": "partial",
-      "sourceResult": "17 retained URLs keep their inventory and gain approved H1/intro/CTAs/four-route module. Controlled metadata applied after review of finalized Search Console evidence; no new local business claims.",
+      "sourceResult": "17 retained URLs keep their inventory and gain approved H1/intro/CTAs/four-route module. Controlled metadata applied after review of finalized Search Console evidence; no new local business claims. Coverage and closing copy retain baseline wording with only residential-only restrictions neutralised, rather than repeating the controlled intro.",
       "remaining": "Unique-local factual modules still need substantiated earlier evidence. Search equity assessment covers 92 finalized days through 10 November; absent legacy rows do not prove absence of all historic equity. Rendered pages and actual indexing unverified."
     },
     {
@@ -133,8 +133,8 @@
         "P8-COPY-199"
       ],
       "status": "partial",
-      "sourceResult": "Explicit generated-image provenance drives visible Illustrative captions and descriptive alt text across current shared/home/contact/quote/FAQ/booking/location surfaces. Service galleries preserved; Reviews gallery removed. Non-home living-room assignments replaced, one near-duplicate floor-plan assignment changed, corrected vacuum and 22 checked uniform outputs integrated.",
-      "remaining": "Actual page compositions, exhaustive uniform consistency in context and image continuity still require desktop/mobile capture. Archived/stock/genuine photos are not reclassified as AI by appearance."
+      "sourceResult": "Explicit generated-image provenance drives Illustrative caption/alt wiring. Independent-review source fixes preserve absolute photo placement, anchor service and Contact captions to their photo frames, lift location captions outside the negative background layer and separate complex-step captions from step text. Service galleries preserved; Reviews gallery removed. Non-home living-room assignments replaced; the similar floor-plan asset is replaced in How We Work, Complex and the homepage complex steps while retaining the other image. Corrected vacuum and22 checked uniform outputs integrated.",
+      "remaining": "Actual caption visibility, image continuity and page compositions still require desktop/mobile rendering and capture. Archived/stock/genuine photos are not reclassified as AI by appearance."
     },
     {
       "id": "FOUNDER",
@@ -157,7 +157,7 @@
         "P8-COPY-194"
       ],
       "status": "implemented_source",
-      "sourceResult": "Exact controlled 404 copy and useful routes; server response status set to 404. FAQ questions, four quote cards and homepage route-card headings use H3. Existing legal H1s retained.",
+      "sourceResult": "Exact controlled 404 copy and useful routes; server response status set to 404. FAQ questions, four quote cards and homepage route-card headings use H3. Existing legal H1s retained. Review fixes retain the 404 two-column composition, large numeral and inherited route contrast, inherit FAQ heading typography, and remove all homepage heading-in-span nesting.",
       "remaining": "Actual HTTP 404, browser accessibility tree and responsive results remain unverified."
     },
     {
@@ -183,14 +183,14 @@
       ],
       "status": "partial",
       "sourceResult": "Source scope, exact regression, syntax, forms runtime and analytics contract checks run.",
-      "remaining": "No full site build/browser/capture performed: latest resource guard at approximately 16:07 UTC on 13 November reports 25.97 GiB free and healthy disk, but denies heavy work for one-minute load 14.31 over 8 CPUs; Jack Drive is unmounted. Earlier hosted Pages API reads returned 503, then a wrangler deployment-list retry succeeded; the read outage is recovered. No new hosted candidate or captures exist yet. Staged full revision check FAIL solely because the application has no matching recorded visual version/capture. Earlier unstaged-application failure resolved. No provider submission, booking, payment, pop-up interactive record, deployment or client acceptance established."
+      "remaining": "No full site build/browser/capture performed: resource checks deny heavy work: the approximately 16:30 UTC readback on 13 November has 24.85 GiB free below the 25 GiB reserve and another guarded heavy job holds the lock; Jack Drive is unmounted. Earlier hosted Pages API reads returned 503, then a wrangler deployment-list retry succeeded; the read outage is recovered. No new hosted candidate or captures exist yet. Staged full revision check FAIL solely because the application has no matching recorded visual version/capture. Earlier unstaged-application failure resolved. No provider submission, booking, payment, pop-up interactive record, deployment or client acceptance established."
     }
   ],
   "checks": [
     {
       "command": "node --test scripts/verify-pedro-audit-corrections.test.mjs",
       "result": "PASS",
-      "coverage": "10 regression cases including client-copy oracle, protected wording, actual route exports, provenance and changed Astro compiler syntax; not browser rendering."
+      "coverage": "14 passing regression cases: exact controlled copy, preserved approved wording, exported routes, selector interaction, provenance, site-wide phone source scan, requested floor-plan separation, AST heading/error-layout structure and changed Astro compiler syntax. Source checks do not establish rendered CSS or live provider behaviour."
     },
     {
       "command": "npm run test:forms",
@@ -341,11 +341,11 @@
     "rasterEdited": false
   },
   "resourceEvidence": {
-    "checkedApproximately": "2026-11-13T16:07:00Z",
-    "homeFreeGiB": 25.97,
-    "diskStatus": "healthy",
+    "checkedAtUtc": "2026-11-13 approximately 16:30",
+    "homeFreeGiB": 24.85,
+    "diskStatus": "low",
     "heavyAllowed": false,
-    "denialReason": "one-minute load 14.31 exceeds 8 logical CPUs",
+    "denialReason": "Below 25 GiB reserve and another guarded heavy job holds the lock",
     "jackDriveMounted": false
   },
   "hostedReadEvidence": {
@@ -354,5 +354,68 @@
     "readOutageRecovered": true,
     "newHostedCandidateExists": false,
     "newCapturesExist": false
+  },
+  "independentReview": {
+    "reviewedHead": "9ffee824a76dacab0ee3f802c362deb3aa0697e4",
+    "cumulativeBaseline": "d4c296e54787acd682700ea952bc72707159981d",
+    "provider": "claudeAgent",
+    "model": "claude-opus-5-5",
+    "privateEvidenceReference": "hqc-review-2026-11-13/independent-review-9ffee824.json",
+    "findingDisposition": [
+      {
+        "id": 1,
+        "result": "source_fixed_unrendered",
+        "change": "Caption anchoring has zero specificity so existing absolute booking/FAQ photo rules win."
+      },
+      {
+        "id": 2,
+        "result": "source_fixed_unrendered",
+        "change": "Caption frames and layers corrected for service heroes, Contact cards, location closing photos and complex steps; FAQ background caption kept in exposed photo area."
+      },
+      {
+        "id": 3,
+        "result": "held_ambiguity_restored",
+        "change": "Approved Reviews hero paragraphs restored; new sentence anchor awaits clarification."
+      },
+      {
+        "id": 4,
+        "result": "source_fixed",
+        "change": "Retained g-service-profile; replaced g-scope-plan in the requested How We Work, Complex and homepage contexts with the distinct existing checklist."
+      },
+      {
+        "id": 5,
+        "result": "source_fixed",
+        "change": "Terms section 33 phone display corrected; source scan added."
+      },
+      {
+        "id": 6,
+        "result": "source_fixed_unrendered",
+        "change": "404 retains two main columns, numeral scale and readable route-colour inheritance."
+      },
+      {
+        "id": 7,
+        "result": "source_fixed",
+        "change": "Reviews Google profile link added using the existing profileUrl."
+      },
+      {
+        "id": 8,
+        "result": "source_fixed",
+        "change": "Controlled location intro appears once; baseline support wording minimally neutralised."
+      },
+      {
+        "id": 9,
+        "result": "source_fixed_unrendered",
+        "change": "FAQ H3 inherits prior typography; homepage H3 has valid flow parents."
+      }
+    ],
+    "fixesCheckedBy": "Parent source review, 14 regression cases and existing forms/analytics suites; fresh reviewer has not rerun these fixes.",
+    "releaseApproved": false
+  },
+  "continuation": {
+    "owner": "Implementation agent with Jack",
+    "gate": "Resource guard must permit build and browser verification; no production release authority.",
+    "nextAction": "Build the review candidate, verify the changed pages on desktop/mobile, publish an immutable preview and append its real capture/version record when resources permit.",
+    "followUpPoint": "Next working continuation and before any client handover or release.",
+    "clientClarificationOwner": "Jack approves the exact WhatsApp draft; Pedro supplies the held decisions, including the newly identified Reviews intro anchor."
   }
 }

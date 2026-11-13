@@ -15,20 +15,25 @@ const routes = [
 <Layout title="Page Not Found | High Quality Clean" description="The page may have moved, been replaced or the address may have been entered incorrectly.">
   <Header />
   <MotionKit />
-  <main class="hm-page utility-page utility-not-found hm-dark pt-20 min-h-screen bg-midnight text-white">
+  <main class="hm-page utility-page utility-not-found hm-dark page-transition pt-20 relative min-h-screen bg-midnight text-white">
     <div class="utility-shell utility-not-found-body text-center">
       <section class="utility-error-intro">
-        <p class="font-serif text-7xl text-gold" aria-hidden="true">404</p>
-        <h1 class="section-title mt-8 font-serif text-white">That Page Is Not Available</h1>
-        <p class="mt-6 mx-auto max-w-2xl text-lg leading-8 text-white/80">The page may have moved, been replaced or the address may have been entered incorrectly.</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a href="/#find-my-service" class="hm-cta-link">Find My Service <span class="hm-cta-chip" aria-hidden="true">→</span></a>
-          <a href="/request-a-quote/" class="hm-cta-link hm-cta-secondary">Request a Quote <span class="hm-cta-chip" aria-hidden="true">→</span></a>
+        <div class="utility-error-number" aria-hidden="true">
+          <p class="font-serif text-gold select-none">404</p>
         </div>
+        <div class="mb-12 space-y-6">
+          <h1 class="section-title font-serif text-white mb-4">That Page Is Not Available</h1>
+          <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">The page may have moved, been replaced or the address may have been entered incorrectly.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <a href="/#find-my-service" class="hm-cta-link">Find My Service <span class="hm-cta-chip" aria-hidden="true">→</span></a>
+            <a href="/request-a-quote/" class="hm-cta-link hm-cta-secondary">Request a Quote <span class="hm-cta-chip" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <span class="image-disclosure">Illustrative</span>
       </section>
       <nav class="utility-error-areas mt-12" aria-label="Useful routes">
-        <ul class="flex flex-wrap justify-center gap-6 text-white/80">
-          {routes.map(([label, href]) => <li><a href={href} class="underline hover:text-gold">{label}</a></li>)}
+        <ul class="flex flex-wrap justify-center gap-6">
+          {routes.map(([label, href]) => <li><a href={href} class="underline">{label}</a></li>)}
         </ul>
       </nav>
     </div>

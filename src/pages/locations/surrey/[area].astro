@@ -124,7 +124,7 @@ const schema = {
           <h2 class="section-title font-serif text-navy">{areaInfo.name} coverage</h2>
           <dl class="mt-6 space-y-5">
             <div><dt class="text-sm font-semibold uppercase tracking-[.14em] text-ink/55">Postcodes</dt><dd class="mt-1 text-lg text-navy">{areaInfo.postcodes.join(', ')}</dd></div>
-            <div><dt class="text-sm font-semibold uppercase tracking-[.14em] text-ink/55">Enquiry route</dt><dd class="mt-1 leading-7 text-ink/70">HQC supports suitable homes, workplaces and managed properties, subject to service requirements, scheduling and team availability.</dd></div>
+            <div><dt class="text-sm font-semibold uppercase tracking-[.14em] text-ink/55">Enquiry route</dt><dd class="mt-1 leading-7 text-ink/70">Requirements are reviewed with property, access and condition context before a quotation is discussed.</dd></div>
           </dl>
           <a href={quoteHref} class="hm-cta-link mt-8">Request a {areaInfo.name} quote <span class="hm-cta-chip" aria-hidden="true"></span></a>
           </div>
@@ -147,11 +147,12 @@ const schema = {
     </section>
 
     <section class="utility-closing utility-location-closing hm-dark bg-midnight text-white">
-      <div class="utility-location-closing-photo hm-parallax"><img src="/images/phase8-nov10/r-viewing-ready.webp" alt={illustrativeAlt("/images/phase8-nov10/r-viewing-ready.webp", "")} aria-hidden={isIllustrativeImage("/images/phase8-nov10/r-viewing-ready.webp") ? undefined : "true"} width="800" height="600" loading="lazy" decoding="async" />{isIllustrativeImage("/images/phase8-nov10/r-viewing-ready.webp") && <span class="image-disclosure">Illustrative</span>}</div>
+      <div class="utility-location-closing-photo hm-parallax"><img src="/images/phase8-nov10/r-viewing-ready.webp" alt={illustrativeAlt("/images/phase8-nov10/r-viewing-ready.webp", "")} aria-hidden={isIllustrativeImage("/images/phase8-nov10/r-viewing-ready.webp") ? undefined : "true"} width="800" height="600" loading="lazy" decoding="async" /></div>
+      {isIllustrativeImage("/images/phase8-nov10/r-viewing-ready.webp") && <span class="image-disclosure">Illustrative</span>}
       <div class="utility-shell utility-closing-copy text-center" data-reveal="fade">
         <p class="section-kicker">Start with the right details</p>
-        <h2 class="section-title mt-4 font-serif text-white">Professional Cleaning Services in {areaInfo.name}</h2>
-        <p class="mt-5 text-lg leading-8 text-white/75">HQC supports suitable homes, workplaces and managed properties in {areaInfo.name}, subject to service requirements, scheduling and team availability.</p>
+        <h2 class="section-title mt-4 font-serif text-white">Request a cleaning review for {areaInfo.name}</h2>
+        <p class="mt-5 text-lg leading-8 text-white/75">Use the enquiry route to share the property details and outcome you need.</p>
         <a href={quoteHref} class="hm-cta-link mt-8">Request a quote <span class="hm-cta-chip" aria-hidden="true"></span></a>
       </div>
     </section>

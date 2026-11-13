@@ -172,12 +172,12 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
             <span class="hm-route-media block overflow-hidden">
               <img src={route.image} alt={illustrativeAlt(route.image, route.alt)} class="aspect-[4/3] w-full object-cover lg:aspect-[5/4]" loading="lazy" decoding="async" width="800" height="650" />{isIllustrativeImage(route.image) && <span class="image-disclosure">Illustrative</span>}
             </span>
-            <span class="flex flex-1 flex-col p-6 md:p-8">
-              <span class="flex items-center justify-between gap-4"><h3 class="meta-label">{route.eyebrow}</h3><span class="font-serif text-2xl text-copper-ink">{route.number}</span></span>
+            <div class="flex flex-1 flex-col p-6 md:p-8">
+              <div class="flex items-center justify-between gap-4"><h3 class="meta-label">{route.eyebrow}</h3><span class="font-serif text-2xl text-copper-ink">{route.number}</span></div>
               <span class="mt-4 block font-serif text-[1.75rem] font-medium leading-tight text-midnight md:text-[2rem]">{route.title}</span>
               <span class="mt-4 block text-[15px] leading-6 text-slate">{route.copy}</span>
               <span class="mt-auto block pt-7"><span class="hm-cta-link">{route.cta} <span class="hm-cta-chip" aria-hidden="true">→</span></span></span>
-            </span>
+            </div>
           </a>
         ))}
       </div>

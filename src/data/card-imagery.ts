@@ -331,7 +331,7 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
   },
   'complex-property-cleaning-london': {
     outcomes: ['p-plans', 'p-stone-floor', 'g-walkthrough'],
-    scope: ['g-scope-plan', 'p-trades', 'p-signoff', 'p-snagging'],
+    scope: ['r-checklist-home', 'p-trades', 'p-signoff', 'p-snagging'],
     sections: {
       'Large Does Not Automatically Mean Complex': 'p-mansion-blocks',
       'The HQC Complex Service Assessment & Delivery System™': 'g-assessment',
@@ -429,7 +429,7 @@ export const homeProcessImagery: Record<string, CardImageId> = {
 export const homeComplexStepImagery: Record<string, CardImageId> = {
   Qualification: 'g-enquiry',
   Assessment: 'g-assessment',
-  'Defined scope': 'g-scope-plan',
+  'Defined scope': 'r-checklist-home',
   'Delivery plan': 'g-planner',
   'Controlled delivery': 'p-high-windows',
   Handover: 'g-walkthrough'

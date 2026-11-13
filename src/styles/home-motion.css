@@ -901,4 +901,6 @@ main.hm-page h2.section-title, .hm-outcome-title, .hm-homes-title, #find-my-serv
 
 /* A visible caption accompanies each explicitly generated image, including decorative uses. */
 .image-disclosure { position: absolute; z-index: 3; right: .5rem; bottom: .5rem; display: block; width: max-content; max-width: calc(100% - 1rem); padding: .2rem .4rem; border-radius: .2rem; background: rgb(14 42 49 / .86); color: white; font: 500 .65rem/1.4 var(--font-sans, sans-serif); letter-spacing: .04em; }
-figure:has(> .image-disclosure), span:has(> .image-disclosure), .hm-route-media:has(> .image-disclosure) { position: relative; }
+:where(figure:has(> .image-disclosure), span:has(> .image-disclosure), .hm-route-media:has(> .image-disclosure)) { position: relative; }
+/* Captions must not displace positioned photographs or cover the step labels. */
+.hm-complex-step > .image-disclosure { top: .5rem; bottom: auto; }

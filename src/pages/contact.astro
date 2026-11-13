@@ -228,7 +228,9 @@ const methodIcons = {
     <section class="eq-section bg-white" aria-label="Service area and quotation routes">
       <div class="eq-shell eq-photo-cards" data-stagger="100">
         <article class="eq-photo-card">
-          <img class="eq-photo-card-bg" src={contactImage('Service Area Questions').src} alt={illustrativeAlt(contactImage('Service Area Questions').src, contactImage('Service Area Questions').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Service Area Questions').src) && <span class="image-disclosure">Illustrative</span>}
+          <figure class="relative m-0 min-w-0 overflow-hidden">
+            <img class="eq-photo-card-bg" src={contactImage('Service Area Questions').src} alt={illustrativeAlt(contactImage('Service Area Questions').src, contactImage('Service Area Questions').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Service Area Questions').src) && <span class="image-disclosure">Illustrative</span>}
+          </figure>
           <div class="eq-photo-card-body">
             <h2 class="eq-card-title">Service Area Questions</h2>
             <p>If you want to know whether HQC covers your postcode:</p>
@@ -236,7 +238,9 @@ const methodIcons = {
           </div>
         </article>
         <article class="eq-photo-card eq-photo-card-flip">
-          <img class="eq-photo-card-bg" src={contactImage('Need a Cleaning Quote Rather Than General Support?').src} alt={illustrativeAlt(contactImage('Need a Cleaning Quote Rather Than General Support?').src, contactImage('Need a Cleaning Quote Rather Than General Support?').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Need a Cleaning Quote Rather Than General Support?').src) && <span class="image-disclosure">Illustrative</span>}
+          <figure class="relative m-0 min-w-0 overflow-hidden md:order-2">
+            <img class="eq-photo-card-bg" src={contactImage('Need a Cleaning Quote Rather Than General Support?').src} alt={illustrativeAlt(contactImage('Need a Cleaning Quote Rather Than General Support?').src, contactImage('Need a Cleaning Quote Rather Than General Support?').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(contactImage('Need a Cleaning Quote Rather Than General Support?').src) && <span class="image-disclosure">Illustrative</span>}
+          </figure>
           <div class="eq-photo-card-body">
             <h2 class="eq-card-title">Need a Cleaning Quote Rather Than General Support?</h2>
             <p>Use the quotation route so we can direct the enquiry correctly.</p>

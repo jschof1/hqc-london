@@ -2,6 +2,7 @@
 import type { OutcomePage as OutcomePageData } from '../data/outcome-pages';
 import { getPageVisual } from '../data/page-visuals';
 import phase8Copy from '../data/phase8-copy.json';
+import reviewsData from '../data/google-reviews.json';
 import FounderPortrait from './FounderPortrait.astro';
 import MotionKit from './MotionKit.astro';
 import '../styles/outcome-page.css';
@@ -153,7 +154,9 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
 <main class="hm-page outcome-page bg-porcelain pt-20">
   {/* Hero: copy on midnight beside the page photograph. */}
   <section class="op-hero hm-dark bg-midnight text-white">
-    <img src={visual.hero} alt={illustrativeAlt(visual.hero, visual.heroAlt)} class="op-hero-photo" width="1600" height="1100" fetchpriority="high" />{isIllustrativeImage(visual.hero) && <span class="image-disclosure">Illustrative</span>}
+    <figure class="op-hero-media">
+      <img src={visual.hero} alt={illustrativeAlt(visual.hero, visual.heroAlt)} class="op-hero-photo" width="1600" height="1100" fetchpriority="high" />{isIllustrativeImage(visual.hero) && <span class="image-disclosure">Illustrative</span>}
+    </figure>
     <div class="op-hero-copy">
       <nav aria-label="Breadcrumb" class="op-breadcrumb">
         <a href="/">Home</a>
@@ -170,6 +173,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
         <a class="hm-cta-link hm-cta-secondary" href={page.secondaryHref} data-track="secondary_cta" data-service={page.slug}>{page.secondaryCta}</a>
       </div>
       {heroSupport && <p class="mt-6 max-w-3xl text-lg leading-8 text-white/85" data-controlled-hero-support>{heroSupport}</p>}
+      {page.slug === 'reviews-case-studies' && <p class="op-hero-more"><a href={reviewsData.profileUrl} class="underline underline-offset-4" target="_blank" rel="noopener">Read all reviews on Google</a></p>}
     </div>
   </section>
 
