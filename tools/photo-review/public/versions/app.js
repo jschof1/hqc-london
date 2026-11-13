@@ -1,5 +1,6 @@
 const fragmentKey = (() => {
   const raw = location.hash.slice(1);
+  if (['updates', 'compare'].includes(raw)) return '';
   if (raw) history.replaceState(null, '', location.pathname + location.search);
   try { return decodeURIComponent(raw).trim(); } catch { return ''; }
 })();
@@ -41,6 +42,7 @@ const ZOOMS = ['fit', 'actual'];
 const AUTHORS = ['Pedro', 'Jack'];
 
 let manifest, versions = [], pages = [];
+let updates;
 let comments = [], revision = 0;
 const sel = { before: '', after: '', page: '', view: 'desktop', mode: 'side', zoom: 'fit', flip: 'after', split: 50 };
 const pending = new Map();
@@ -133,8 +135,105 @@ async function start() {
   $('#loading').hidden = true;
   $('#content').hidden = false;
   status('Signed in');
-  await loadComments();
+  await Promise.all([loadComments(), loadUpdates()]);
+  if (['#updates', '#compare'].includes(location.hash)) {
+    const target = $(location.hash);
+    target?.focus();
+    target?.scrollIntoView({ block: 'start' });
+  }
 }
+
+const UPDATE_STATUSES = {
+  source: 'Done in source',
+  clarification: 'Awaiting clarification',
+  verification: 'Awaiting verification',
+};
+
+async function loadUpdates() {
+  $('#updates-error').hidden = true;
+  try {
+    const data = await api('/versions/updates.json');
+    if (data?.schemaVersion !== 1 || !Array.isArray(data.groups) || !data.groups.length ||
+      data.groups.some(g => !g || typeof g.id !== 'string' || typeof g.title !== 'string' ||
+        !Array.isArray(g.items) || !g.items.length || g.items.some(item => !item ||
+          typeof item.id !== 'string' || !Object.hasOwn(UPDATE_STATUSES, item.status) ||
+          typeof item.title !== 'string' || typeof item.detail !== 'string'))) {
+      throw Error('Invalid checklist');
+    }
+    updates = data;
+    $('#updates-summary').textContent = data.summary;
+    $('#updates-scope').textContent = data.scopeNote;
+    $('#updates-meta').replaceChildren(
+      'Status recorded ', h('time', { datetime: data.updatedAt }, fmtDate(data.updatedAt, true)),
+      ` · ${data.groups.length} work groups`,
+      data.candidateCommit ? ` · Candidate source ${shortCommit(data.candidateCommit)}` : '');
+    const links = [
+      ['Open before', data.beforeUrl],
+      ['Open audited version', data.auditedUrl],
+      ['Open updated preview', data.candidateUrl],
+    ].flatMap(([label, url]) => {
+      const href = safeExternal(url);
+      return href ? [h('a', { href, target: '_blank', rel: 'noopener noreferrer', class: 'secondary' }, `${label} ↗`)] : [];
+    });
+    $('#updates-links').replaceChildren(...links);
+    $('#updates-preview').textContent = safeExternal(data.candidateUrl)
+      ? 'Open the live before and updated preview links to compare the changes. Fresh saved screenshots for this update are still due. A preview is not production approval.'
+      : data.previewNote;
+    $('#updates-content').hidden = false;
+    renderUpdates();
+  } catch (e) {
+    if (e.status === 401) return showLogin('Your session has ended. Open the private link again.');
+    $('#updates-summary').textContent = 'The comparison below is still available.';
+    $('#updates-error').hidden = false;
+    $('#updates-error').replaceChildren('The updates checklist could not be loaded. ',
+      h('button', { type: 'button', class: 'secondary', onclick: loadUpdates }, 'Try again'));
+  }
+}
+
+function renderUpdates() {
+  if (!updates) return;
+  const items = updates.groups.flatMap(g => g.items);
+  const done = items.filter(item => item.status === 'source').length;
+  const due = items.length - done;
+  $('#updates-counts').replaceChildren(...[
+    [done, 'Done in source'], [due, 'Still due'],
+  ].map(([count, label]) => h('div', {}, h('dt', {}, label), h('dd', {}, count))));
+  const filter = $('#updates-filter').value;
+  let shown = 0;
+  const groups = updates.groups.flatMap(group => {
+    const rows = group.items.filter(item => filter === 'all' ||
+      (filter === 'due' ? item.status !== 'source' : item.status === filter));
+    if (!rows.length) return [];
+    shown += rows.length;
+    const groupPages = Array.isArray(group.pages) ? group.pages : [];
+    const candidate = safeExternal(updates.candidateUrl);
+    return [h('article', { class: 'update-group', 'aria-labelledby': `update-${group.id}` },
+      h('h3', { id: `update-${group.id}` }, group.title),
+      h('ul', { class: 'update-items' }, rows.map(item => h('li', { class: `update-item update-${item.status}` },
+        h('span', { class: 'update-status' }, UPDATE_STATUSES[item.status]),
+        h('h4', {}, item.title), h('p', {}, item.detail)))),
+      groupPages.length ? h('p', { class: 'update-pages' }, 'Pages: ',
+        groupPages.flatMap((p, i) => {
+          const path = safeSrc(p.path);
+          const link = candidate && path ? new URL(path, candidate).href : null;
+          return [i ? ' · ' : null, link
+            ? h('a', { href: link, target: '_blank', rel: 'noopener noreferrer' }, p.label)
+            : p.label];
+        })) : null)];
+  });
+  $('#updates-groups').replaceChildren(...groups);
+  $('#updates-result').textContent = `Showing ${shown} of ${items.length} checklist items across ${groups.length} work groups. Totals above include every item.`;
+}
+
+$('#updates-filter').addEventListener('change', renderUpdates);
+$$('.review-jumps a, .updates-compare').forEach(link => link.addEventListener('click', e => {
+  const target = $(link.getAttribute('href'));
+  if (!target) return;
+  e.preventDefault();
+  history.replaceState(null, '', `${location.pathname}${location.search}${link.getAttribute('href')}`);
+  target.focus();
+  target.scrollIntoView({ block: 'start' });
+}));
 
 function setupManifest(m) {
   manifest = m && typeof m === 'object' ? m : {};
@@ -183,7 +282,7 @@ function readUrl() {
 function writeUrl() {
   const q = new URLSearchParams({ before: sel.before, after: sel.after, page: sel.page, view: sel.view, mode: sel.mode });
   if (sel.zoom !== 'fit') q.set('zoom', sel.zoom);
-  history.replaceState(null, '', `${location.pathname}?${q}`);
+  history.replaceState(null, '', `${location.pathname}?${q}${location.hash}`);
 }
 
 

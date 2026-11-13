@@ -42,14 +42,49 @@
     <p class="eyebrow">WEBSITE VERSION HISTORY</p>
     <h1>Your website, before and after.</h1>
     <p>Compare saved versions and leave feedback on a specific page. Your comments stay with the version you reviewed.</p>
+    <nav class="review-jumps" aria-label="On this page">
+      <a href="#updates">Updates checklist</a>
+      <a href="#compare">Compare saved versions</a>
+    </nav>
   </section>
 
-  <details class="notice"><summary>About these saved captures</summary><p>These images show the page layout. Forms, CRM routing and payments need separate tests. All captures were made on 29 October from the recorded builds. Release notes explain changes that are not visible in screenshots.</p></details>
+  <details class="notice"><summary>About these saved captures</summary><p>These images show the page layout. Forms, CRM routing and payments need separate tests. Check the date and source recorded for each saved version. Release notes explain changes that are not visible in screenshots.</p></details>
 
   <div id="load-error" class="error" role="alert" hidden></div>
   <p id="loading" class="loading" role="status">Loading version history…</p>
 
   <div id="content" hidden>
+    <section id="updates" class="updates" aria-labelledby="updates-title" tabindex="-1">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PEDRO’S REVIEW</p>
+          <h2 id="updates-title">What’s changed, and what’s still due</h2>
+        </div>
+        <a href="#compare" class="updates-compare">Jump to comparison</a>
+      </div>
+      <p id="updates-summary">Loading the updates checklist…</p>
+      <p id="updates-meta" class="muted"></p>
+      <div id="updates-error" class="error" role="alert" hidden></div>
+      <div id="updates-content" hidden>
+        <p id="updates-scope" class="inline-note"></p>
+        <div id="updates-links" class="updates-links" aria-label="Live website versions"></div>
+        <p id="updates-preview" class="fine"></p>
+        <dl id="updates-counts" class="updates-counts" aria-label="Checklist totals"></dl>
+        <div class="updates-filter">
+          <label for="updates-filter">Show checklist items</label>
+          <select id="updates-filter">
+            <option value="all">Everything</option>
+            <option value="source">Done in source</option>
+            <option value="due">Everything still due</option>
+            <option value="clarification">Awaiting clarification</option>
+            <option value="verification">Awaiting verification</option>
+          </select>
+          <p id="updates-result" class="muted" role="status" aria-live="polite"></p>
+        </div>
+        <div id="updates-groups" class="updates-groups"></div>
+      </div>
+    </section>
+
     <section id="compare" class="compare" aria-labelledby="compare-title" tabindex="-1">
       <h2 id="compare-title" class="visually-hidden">Comparison</h2>
       <div class="toolbar" role="group" aria-label="Comparison settings">

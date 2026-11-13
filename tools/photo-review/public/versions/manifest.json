@@ -3743,6 +3743,29 @@
           }
         }
       }
+    },
+    {
+      "id": "nov13-pedro-audit",
+      "label": "13 Nov: Pedro audit updates (preview)",
+      "date": "2026-11-13",
+      "commit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+      "deploymentUrl": "https://5bf03519.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://5bf03519.hqc-london.pages.dev",
+      "kind": "review preview; captures pending",
+      "summary": "Clear audit changes and review fixes in a successful preview build. Open the live preview and checklist; new saved screenshots remain due. This is not a production release.",
+      "changes": [
+        "Controlled wording, offer conditions, legal contacts and paragraph 7 corrected.",
+        "Homepage selected reviews, requested routes, location structure and supplied founder photo applied.",
+        "Generated image disclosures, uniform corrections and review-found source fixes applied.",
+        "Existing design retained; ambiguous client decisions remain held."
+      ],
+      "outstanding": [
+        "New full-page desktop/mobile captures and the full revision gate remain due.",
+        "Five clarification points, legal date, local proof, case-study permission and provider/client acceptance remain open.",
+        "Use the updates checklist to compare live before/after links. The missing screenshot state is intentional until fresh captures are recorded."
+      ],
+      "provenance": "Source177b6e202dee86e9703f0a6bbcd746fb5cf26ece built on the VPS with build:review and directly deployed to a non-production Pages branch. No new capture date is claimed.",
+      "pages": {}
     }
   ],
   "pages": [
@@ -3792,8 +3815,8 @@
       "path": "/terms-and-conditions/"
     }
   ],
-  "defaultBefore": "live-oct29",
-  "defaultAfter": "nov11-banister-photo",
+  "defaultBefore": "nov11-banister-photo",
+  "defaultAfter": "nov13-pedro-audit",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Capture date is 29 October 2026. Version dates refer to source deployments, not historical screenshot dates.",

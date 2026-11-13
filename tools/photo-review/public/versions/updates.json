@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-13T21:31:27.375258Z",
+  "candidateUrl": "https://5bf03519.hqc-london.pages.dev",
+  "candidateCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+  "beforeUrl": "https://1a8fa837.hqc-london.pages.dev/",
+  "auditedUrl": "https://71d122e7.hqc-london.pages.dev/",
+  "summary": "The clear changes from Pedro’s review have been made in the source. The design is being kept. Anything ambiguous stays on hold until its meaning is confirmed.",
+  "scopeNote": "“Done in source” means the edit or named source check is recorded in the acceptance matrix. It does not mean the live site is approved. These are grouped work items, not a fresh verification of all 252 audit findings. This checklist is read-only.",
+  "previewNote": "The review build and immutable preview are available. The customer-facing production site is unchanged. Fresh full-page captures remain due.",
+  "groups": [
+    {
+      "id": "COPY",
+      "title": "Wording and offers",
+      "items": [
+        {
+          "id": "copy-exact",
+          "status": "source",
+          "title": "Requested wording restored",
+          "detail": "Both offers include the minimum three-month condition. Missing call-outs and the identified wording corrections are restored at their original anchors."
+        },
+        {
+          "id": "copy-render",
+          "status": "verification",
+          "title": "Check the wording in place",
+          "detail": "Confirm the rendered positions, footer artwork text and continuity with the existing design on desktop and mobile."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Homepage",
+          "path": "/"
+        },
+        {
+          "label": "How we work",
+          "path": "/how-we-work/"
+        }
+      ]
+    },
+    {
+      "id": "LEGAL",
+      "title": "Terms, privacy and booking wording",
+      "items": [
+        {
+          "id": "legal-edits",
+          "status": "source",
+          "title": "Specific legal edits applied",
+          "detail": "Legal contact emails, Terms section 7 and the named booking disclaimer are corrected. Existing legal headings and approved section 5 remain. Draft warnings are restricted to previews."
+        },
+        {
+          "id": "decision-provider-name",
+          "status": "clarification",
+          "title": "Confirm the Automaid naming boundary",
+          "detail": "Resolve the instruction about removing the name against the approved section 5 and privacy processor disclosure before changing either."
+        },
+        {
+          "id": "legal-date",
+          "status": "clarification",
+          "title": "Legal sign-off and final date",
+          "detail": "Pedro or the legal reviewer needs to approve the legal text and supply the final “Last reviewed” date for both pages."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Terms",
+          "path": "/terms-and-conditions/"
+        },
+        {
+          "label": "Privacy",
+          "path": "/privacy-policy/"
+        },
+        {
+          "label": "Essential booking",
+          "path": "/book-essential-clean/"
+        }
+      ]
+    },
+    {
+      "id": "REVIEWS",
+      "title": "Reviews and evidence",
+      "items": [
+        {
+          "id": "reviews-edits",
+          "status": "source",
+          "title": "Homepage proof and named removals applied",
+          "detail": "The six selected homepage reviews are in place. Thomas B. and Andre B. are excluded from the shared review data. Reviews placeholders and its gallery are removed; the Google link is added. The approved hero lead is retained."
+        },
+        {
+          "id": "reviews-count",
+          "status": "source",
+          "title": "Approved count statements restored",
+          "detail": "The 300+ wording is restored using Pedro’s confirmation. The 4.9 / 92 Google badge is the 11 November snapshot; neither figure is a newly refreshed independent audit."
+        },
+        {
+          "id": "decision-review-selection",
+          "status": "clarification",
+          "title": "Choose the Reviews-page review set",
+          "detail": "Confirm whether the six homepage reviews should also be used by service on the Reviews page. No additional selection has been guessed."
+        },
+        {
+          "id": "decision-review-intro",
+          "status": "clarification",
+          "title": "Confirm where the new Reviews intro belongs",
+          "detail": "The supplied replacement sentence needs an exact placement. The approved hero paragraphs stay until that anchor is confirmed."
+        },
+        {
+          "id": "case-study-permission",
+          "status": "clarification",
+          "title": "Approve any case study before reuse",
+          "detail": "Earlier case-study material needs Pedro’s permission and confirmation before it can be published."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Homepage",
+          "path": "/"
+        },
+        {
+          "label": "Reviews and case studies",
+          "path": "/reviews-case-studies/"
+        }
+      ]
+    },
+    {
+      "id": "REMOVALS",
+      "title": "Requested section removals",
+      "items": [
+        {
+          "id": "removals-named",
+          "status": "source",
+          "title": "The clearly named blocks are removed",
+          "detail": "The homepage standards carousel and Client evidence bands outside the homepage are removed. Approved count statements and controlled content are retained."
+        },
+        {
+          "id": "decision-removal-boundary",
+          "status": "clarification",
+          "title": "Confirm section depth and page list",
+          "detail": "Decide which added sections should disappear in full and which instructions refer only to a heading. Preserve approved closing calls to action and the Complex process until that boundary is clear."
+        }
+      ],
+      "pages": []
+    },
+    {
+      "id": "CONTACT",
+      "title": "Contact details and enquiry messages",
+      "items": [
+        {
+          "id": "contact-cards",
+          "status": "source",
+          "title": "Contact card purposes corrected",
+          "detail": "Sales and support cards have the right purpose and destination. The misleading location card is removed. The public phone display is consistent; dial links are preserved."
+        },
+        {
+          "id": "contact-intro",
+          "status": "clarification",
+          "title": "Approve the new Contact introduction",
+          "detail": "The proposed introduction needs a wording decision before it replaces the current copy."
+        },
+        {
+          "id": "contact-success",
+          "status": "verification",
+          "title": "Prove success and failure in the real journey",
+          "detail": "Existing confirmed-success logic is preserved and executable tests pass. A browser journey and a real receiver record are still needed to prove delivery."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Contact",
+          "path": "/contact/"
+        }
+      ]
+    },
+    {
+      "id": "ROUTES",
+      "title": "Service choices and links",
+      "items": [
+        {
+          "id": "routes-edits",
+          "status": "source",
+          "title": "Requested route corrections applied",
+          "detail": "The six service and intent corrections are applied. The Pricing secondary call to action leads to the existing Essential Clean page; exported route data is checked."
+        },
+        {
+          "id": "routes-live",
+          "status": "verification",
+          "title": "Check choices survive the hosted journey",
+          "detail": "Confirm that clicks retain the right service, fields and intent through the forms and into the intended CRM route."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Request a quote",
+          "path": "/request-a-quote/"
+        }
+      ]
+    },
+    {
+      "id": "COMPLEX",
+      "title": "Complex Property Cleaning",
+      "items": [
+        {
+          "id": "complex-edits",
+          "status": "source",
+          "title": "The specific amendment is applied",
+          "detail": "The hero support, mandatory site-visit introduction, confidentiality commitments, step 3 and capacity line are updated. The original list, seven-step process, SEO and calls to action are preserved."
+        },
+        {
+          "id": "complex-render",
+          "status": "verification",
+          "title": "Review the amended page in context",
+          "detail": "Check desktop/mobile layout and the calls to action with the existing design before acceptance."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Complex Property Cleaning",
+          "path": "/complex-property-cleaning-london/"
+        }
+      ]
+    },
+    {
+      "id": "LOCATIONS",
+      "title": "The 17 location pages",
+      "items": [
+        {
+          "id": "locations-structure",
+          "status": "source",
+          "title": "Approved structure added to retained URLs",
+          "detail": "All 17 URLs retain their inventory and have the approved cross-buyer heading, introduction, two calls to action and four-route module. Controlled metadata follows the Search Console evidence review."
+        },
+        {
+          "id": "locations-facts",
+          "status": "verification",
+          "title": "Substantiate useful local details",
+          "detail": "Recover the previously approved factual evidence before restoring unique local modules. Existing marketing text alone does not prove local projects, offices, customers or availability."
+        },
+        {
+          "id": "locations-evidence",
+          "status": "verification",
+          "title": "Check search and rendered-page evidence",
+          "detail": "The reviewed Search Console window covers 92 finalised days through 10 November. Missing legacy rows do not prove no historical search equity. Rendered pages and indexing still need proof."
+        }
+      ],
+      "pages": []
+    },
+    {
+      "id": "IMAGERY",
+      "title": "Illustrative images and assignments",
+      "items": [
+        {
+          "id": "imagery-edits",
+          "status": "source",
+          "title": "Disclosures and image assignments corrected",
+          "detail": "Generated uses have provenance-based Illustrative captions and alt text. Non-home living-room assignments and the similar floor-plan assignment are corrected. Service galleries are preserved."
+        },
+        {
+          "id": "imagery-artwork",
+          "status": "source",
+          "title": "23 corrected artwork files integrated",
+          "detail": "The corrected vacuum image and 22 inspected uniform outputs are in their exact target files with hash checks. Scene continuity still needs review in the page."
+        },
+        {
+          "id": "decision-logo",
+          "status": "clarification",
+          "title": "Choose the header logo version",
+          "detail": "Confirm flat or 3D before changing the current header logo."
+        },
+        {
+          "id": "imagery-render",
+          "status": "verification",
+          "title": "Check every affected image in context",
+          "detail": "Confirm captions are visible, crops and layers work, and the corrected uniforms and vacuum look right on desktop and mobile. Genuine, stock and archived photos are not labelled AI by appearance."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Homepage",
+          "path": "/"
+        },
+        {
+          "label": "How we work",
+          "path": "/how-we-work/"
+        },
+        {
+          "label": "Contact",
+          "path": "/contact/"
+        }
+      ]
+    },
+    {
+      "id": "FOUNDER",
+      "title": "Pedro’s genuine photo",
+      "items": [
+        {
+          "id": "founder-source",
+          "status": "source",
+          "title": "Original photo used unchanged",
+          "detail": "The supplied genuine PNG is copied byte-for-byte with its exact alt text. Only a modest CSS display crop is used in the existing homepage slot. The About portrait stays as it was."
+        },
+        {
+          "id": "founder-render",
+          "status": "verification",
+          "title": "Approve the visible crop",
+          "detail": "Check the homepage crop and presentation at desktop and mobile sizes."
+        }
+      ],
+      "pages": [
+        {
+          "label": "Homepage",
+          "path": "/"
+        },
+        {
+          "label": "About HQC",
+          "path": "/about-high-quality-clean/"
+        }
+      ]
+    },
+    {
+      "id": "SEMANTICS",
+      "title": "404 page and heading structure",
+      "items": [
+        {
+          "id": "semantics-source",
+          "status": "source",
+          "title": "Controlled copy and heading fixes applied",
+          "detail": "The 404 wording and useful routes are corrected, with a 404 response set in source. FAQ questions, quote cards and homepage route cards use H3 headings while retaining their styling and the legal H1s."
+        },
+        {
+          "id": "semantics-live",
+          "status": "verification",
+          "title": "Confirm the actual response and accessibility",
+          "detail": "Check the real HTTP 404, browser heading tree and responsive layout. Source checks alone cannot prove these results."
+        }
+      ],
+      "pages": [
+        {
+          "label": "404 page",
+          "path": "/404/"
+        },
+        {
+          "label": "Request a quote",
+          "path": "/request-a-quote/"
+        }
+      ]
+    },
+    {
+      "id": "PARITY",
+      "title": "Existing behaviour, analytics and indexing",
+      "items": [
+        {
+          "id": "parity-preserved",
+          "status": "source",
+          "title": "Existing operational safeguards preserved",
+          "detail": "Preview indexing rules and confirmed Contact receipts remain. There is no wholesale rewrite of handlers, consent, schema or redirects."
+        },
+        {
+          "id": "analytics-parity",
+          "status": "verification",
+          "title": "Reconcile the two analytics approaches deliberately",
+          "detail": "Copying the newer main-branch Plausible code straight across would duplicate consented pageviews and miss current form-stage receipt events. Agree the event mapping and verify it before release."
+        },
+        {
+          "id": "indexing-proof",
+          "status": "verification",
+          "title": "Prove redirects and production indexing",
+          "detail": "Collect direct redirect evidence plus production-target HTML, response headers and robots.txt. Keep preview protection. Actual indexing needs its own evidence."
+        }
+      ],
+      "pages": []
+    },
+    {
+      "id": "VERIFY",
+      "title": "Checks, preview and release gates",
+      "items": [
+        {
+          "id": "checks-regression",
+          "status": "source",
+          "title": "14 regression checks passed",
+          "detail": "Recorded source checks cover controlled wording, protected content, exported routes, selector behaviour, provenance, phones, image assignments, heading structure and Astro syntax. They are not a full site build."
+        },
+        {
+          "id": "checks-forms",
+          "status": "source",
+          "title": "Form suites passed with controlled receivers",
+          "detail": "Routing checks, 12 staged-runtime groups, 37 submission/frontend checks and one workerd test passed. These tests did not send a real customer or provider message."
+        },
+        {
+          "id": "checks-analytics",
+          "status": "source",
+          "title": "Two analytics contract checks passed",
+          "detail": "Consent, preview isolation, field sanitisation and receipt deduplication are covered. The remaining analytics parity decision still applies."
+        },
+        {
+          "id": "checks-scope",
+          "status": "source",
+          "title": "Scope and whitespace checks passed",
+          "detail": "The recorded exact-path scope and diff checks pass. They do not certify every visual result, client approval or release readiness."
+        },
+        {
+          "id": "preview-captures",
+          "status": "verification",
+          "title": "Complete the dated capture and version record",
+          "detail": "The full review build passed and the immutable preview is live at the recorded source commit. Fresh full-page desktop/mobile captures and their registered manifest are still due; the full revision handover gate stays blocked until that evidence exists."
+        },
+        {
+          "id": "browser-journeys",
+          "status": "verification",
+          "title": "Run desktop and mobile journeys",
+          "detail": "Inspect changed pages, image continuity, accessibility, form failure/success and consent. Complete all 18 interactive pop-up scenarios and record the outcomes."
+        },
+        {
+          "id": "crm-booking-payment",
+          "status": "verification",
+          "title": "Obtain real CRM, booking and payment evidence",
+          "detail": "Use agreed controlled tests to prove enquiry receipt, correct CRM routing, booking and payment outcomes. Reconcile outstanding enquiries and the existing lifecycle/notification requirements; automated source tests are not provider receipts."
+        },
+        {
+          "id": "acceptance-release",
+          "status": "verification",
+          "title": "Pedro’s acceptance and release authority",
+          "detail": "Complete legal sign-off, review-room readback, fresh independent review and Pedro’s acceptance. The Phase 8 production hold remains until these gates and explicit release authority are recorded."
+        }
+      ],
+      "pages": []
+    }
+  ]
+}

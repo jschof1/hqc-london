@@ -1,0 +1,10 @@
+{
+  "versionId": "nov13-pedro-audit",
+  "sourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+  "immutableDeploymentUrl": "https://5bf03519.hqc-london.pages.dev",
+  "build": "PASS build:review on VPS",
+  "status": "preview_available_full_page_captures_due",
+  "capturedAt": null,
+  "captures": [],
+  "note": "No screenshots have been invented or copied from an older version. Existing review state backed up privately; no photo/comment changes authorized."
+}
