@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "713804da86d7616652a7a74037b6dffd0f6ad52c",
-  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments. Scope amendment, same explicit site-wide visible phone instruction: add the five exact discovered legacy/public error-text sources. This follows a checkpoint of the initial clear corrections; cumulative original baseline d4c296e54787acd682700ea952bc72707159981d and original planning commit 026203c remain source references. No additional behaviour or message authority. Scope linkage amendment under the same explicit AI imagery disclosure instruction: Contact, Booking and ServiceSelector already allowed paths now also map to IMAGERY. Preserve all cumulative changes since original d4c296e across checkpoints; no new interpretation or release authority. Necessary verification dependency amendment: permit scripts/verify-form-routing.mjs solely to align its existing required visible-phone expectation with the already authorised 020 8870 3925 format. No handler contract or test weakening.",
+  "baseline": "9ffee824a76dacab0ee3f802c362deb3aa0697e4",
+  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments. Scope amendment, same explicit site-wide visible phone instruction: add the five exact discovered legacy/public error-text sources. This follows a checkpoint of the initial clear corrections; cumulative original baseline d4c296e54787acd682700ea952bc72707159981d and original planning commit 026203c remain source references. No additional behaviour or message authority. Scope linkage amendment under the same explicit AI imagery disclosure instruction: Contact, Booking and ServiceSelector already allowed paths now also map to IMAGERY. Preserve all cumulative changes since original d4c296e across checkpoints; no new interpretation or release authority. Necessary verification dependency amendment: permit scripts/verify-form-routing.mjs solely to align its existing required visible-phone expectation with the already authorised 020 8870 3925 format. No handler contract or test weakening. Independent review checkpoint 13 Nov: review of cumulative d4c296e to 9ffee824 found image-caption anchoring, inherited 404/heading layout, missed Terms phone, missing clear Google link and repeated location prose defects. Correct these within existing allowed paths and the original requests. Restore approved Reviews hero lead pending confirmation of the replacement sentence anchor. Baseline moves only for this checkpoint; original cumulative d4c296e and prior planning references remain authoritative.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -17,7 +17,7 @@
     },
     {
       "id": "REVIEWS",
-      "text": "Replace homepage reviews carousel with exactly Kara O., Lucy M., Yori Z., Fabio K., Chris M., Liv M. in approved stars/quotation/public-name/service card format. Preserve 4.9/92 badge. Exclude Thomas B. and Andre B. from every public review path. Reviews-page selection remains held: no inferred reuse of six. Remove only explicit evidence placeholders/gallery on Reviews; preserve pending visible proof/selection gate in evidence register rather than inventing cards/case studies."
+      "text": "Replace homepage reviews carousel with exactly Kara O., Lucy M., Yori Z., Fabio K., Chris M., Liv M. in approved stars/quotation/public-name/service card format. Preserve 4.9/92 badge. Exclude Thomas B. and Andre B. from every public review path. Reviews-page selection remains held: no inferred reuse of six. Remove only explicit evidence placeholders/gallery on Reviews; preserve pending visible proof/selection gate in evidence register rather than inventing cards/case studies. Add the requested Google profile link using the existing reviewed profileUrl; preserve both approved hero lead paragraphs until the anchor of the supplied replacement intro is confirmed."
     },
     {
       "id": "REMOVALS",
@@ -37,7 +37,7 @@
     },
     {
       "id": "LOCATIONS",
-      "text": "Restore exact Batch 6 H1/intro/CTAs/four-route module on 17 retained location URLs with existing visual language. No invented local claims or blind restoration of historical marketing claims. Local-fact and metadata changes await source/equity evidence; preserve metadata pending that evidence. Retain existing location URL inventory and service coverage gates."
+      "text": "Restore exact Batch 6 H1/intro/CTAs/four-route module on 17 retained location URLs with existing visual language. No invented local claims or blind restoration of historical marketing claims. Local-fact and metadata changes await source/equity evidence; preserve metadata pending that evidence. Retain existing location URL inventory and service coverage gates. Avoid repeating the new controlled intro in coverage and closing blocks. Preserve their baseline wording with only the residential-only restriction neutralised as required by the cross-buyer route; no new local claims."
     },
     {
       "id": "IMAGERY",
@@ -57,7 +57,7 @@
     },
     {
       "id": "VERIFY",
-      "text": "Run scope while editing, meaningful lightweight regression checks and available forms/analytics suites under resource guard. No local build/browser/image-render batches while guard denies. Independent other-provider hunk review; then hosted review build/captures and registry before any handover. No live form submit/payment/provider write or message send without matching authority. External legal/booking/CRM/acceptance gates remain explicit."
+      "text": "Run scope while editing, meaningful lightweight regression checks and available forms/analytics suites under resource guard. No local build/browser/image-render batches while guard denies. Independent other-provider hunk review; then hosted review build/captures and registry before any handover. No live form submit/payment/provider write or message send without matching authority. External legal/booking/CRM/acceptance gates remain explicit. Resolve the fresh independent review findings within these requests and record source fixes separately from outstanding rendered verification."
     },
     {
       "id": "RECORD",
@@ -110,10 +110,11 @@
     {
       "path": "src/data/phase8-legal.json",
       "requirements": [
-        "LEGAL"
+        "LEGAL",
+        "CONTACT"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Existing legal amendments plus the explicitly site-wide public phone display correction only. Preserve other legal copy, dates and approved section 5."
     },
     {
       "path": "src/data/outcome-pages.ts",
