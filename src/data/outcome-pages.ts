@@ -79,7 +79,7 @@ export const outcomePages: OutcomePage[] = [
     primaryCta: 'Request a Communal Cleaning Proposal',
     primaryHref: `${quote}?route=commercial&service=communal`,
     secondaryCta: 'Arrange a Site Visit',
-    secondaryHref: `${quote}?route=complex&service=communal`,
+    secondaryHref: `${quote}?route=commercial&service=communal&intent=site-visit`,
     proof: ['Site-specific service profile', 'Access and communication controls', 'Agreed inspection and reporting process'],
     related: [{ label: 'Property and facilities cleaning', href: '/property-facilities-cleaning-london/' }, { label: 'How we work', href: '/how-we-work/' }]
   },
@@ -133,7 +133,7 @@ export const outcomePages: OutcomePage[] = [
     primaryCta: 'Request an End of Tenancy Quote',
     primaryHref: `${quote}?route=residential&service=end-of-tenancy`,
     secondaryCta: 'Check Your Property Requirements',
-    secondaryHref: '/cleaning-faqs/',
+    secondaryHref: `${quote}?route=residential&service=end-of-tenancy`,
     proof: ['Appliances and exclusions made clear', 'Property condition reviewed before quoting', 'No unsupported deposit-return promise'],
     related: [{ label: 'How HQC pricing works', href: '/cleaning-prices-london/' }, { label: 'Home cleaning', href: '/home-cleaning-london/' }]
   },
@@ -188,7 +188,7 @@ export const outcomePages: OutcomePage[] = [
     primaryCta: 'Discuss Commercial Cleaning',
     primaryHref: `${quote}?route=commercial`,
     secondaryCta: 'Request a Site Assessment',
-    secondaryHref: `${quote}?route=complex&buyer=commercial`,
+    secondaryHref: `${quote}?route=commercial&intent=site-assessment`,
     proof: ['Site details captured before proposal', 'Operating hours and access considered', 'A service profile agreed before mobilisation'],
     related: [{ label: 'Office cleaning', href: '/office-cleaning-london/' }, { label: 'Commercial deep cleaning', href: '/commercial-deep-cleaning-london/' }]
   },
@@ -238,7 +238,7 @@ export const outcomePages: OutcomePage[] = [
     message: 'Restore a workplace or commercial site through assessed labour, access and delivery planning.',
     audience: 'Facilities teams, office managers, landlords, project managers and operators.',
     primaryCta: 'Request a Commercial Deep-Clean Assessment',
-    primaryHref: `${quote}?route=complex&service=commercial-deep`,
+    primaryHref: `${quote}?route=commercial&service=commercial-deep&intent=assessment`,
     secondaryCta: 'Send Site Details',
     secondaryHref: `${quote}?route=commercial&service=commercial-deep`,
     proof: ['Condition and scope reviewed first', 'Access and phased work considered', 'Quoted separately from recurring office programmes'],

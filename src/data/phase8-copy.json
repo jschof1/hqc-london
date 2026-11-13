@@ -1020,6 +1020,10 @@
             ]
           },
           {
+            "kind": "support",
+            "text": "Receive 30% off your first Essential Clean™ when you start a weekly or fortnightly plan with a minimum three-month commitment."
+          },
+          {
             "kind": "p",
             "text": "A one-off Essential Clean™ can be booked where the property is suitable, but does not qualify for the recurring-client introductory offer."
           },
@@ -1267,6 +1271,10 @@
         "heading": "30% Off Your First Clean for Eligible New Recurring Clients",
         "blocks": [
           {
+            "kind": "support",
+            "text": "30% off the first Essential Clean™ when starting an eligible weekly or fortnightly plan with a minimum three-month commitment."
+          },
+          {
             "kind": "p",
             "text": "The offer:"
           },
@@ -1476,7 +1484,8 @@
     "closing": {
       "primary": "Check Essential Clean™ Suitability",
       "secondary": "Find My Service"
-    }
+    },
+    "heroSupport": "Cleaning Defined by the Outcome"
   },
   "deep-cleaning-london": {
     "title": "Deep Clean™ for London Homes",
@@ -1520,6 +1529,10 @@
           {
             "kind": "p",
             "text": "This avoids repeatedly trying to complete restoration work inside a maintenance-clean allowance."
+          },
+          {
+            "kind": "support",
+            "text": "Deep Clean™ → improved baseline → Essential Clean™ maintenance"
           }
         ]
       },
@@ -4127,6 +4140,10 @@
           {
             "kind": "p",
             "text": "This prevents routine cleaning time being repeatedly consumed by restoration work."
+          },
+          {
+            "kind": "support",
+            "text": "Commercial Deep Clean → improved baseline → recurring commercial programme"
           }
         ]
       },
@@ -4558,6 +4575,10 @@
           {
             "kind": "p",
             "text": "The purpose is not to make the service complicated. It is to reduce uncertainty before work begins."
+          },
+          {
+            "kind": "support",
+            "text": "Qualification → Assessment → Defined Scope → Delivery Plan → Controlled Delivery → Handover"
           }
         ]
       },
@@ -4565,13 +4586,16 @@
         "heading": "What the Assessment May Involve",
         "blocks": [
           {
+            "kind": "p",
+            "text": "Every complex assessment includes a site visit. Depending on the property, we may also ask for:"
+          },
+          {
             "kind": "ul",
             "items": [
               "property details;",
               "floor plans;",
               "photographs;",
               "video;",
-              "a site visit;",
               "information about finishes;",
               "contractor schedules;",
               "access restrictions;",
@@ -4638,12 +4662,21 @@
           },
           {
             "kind": "p",
-            "text": "Those requirements should be understood before mobilisation rather than left for the cleaning team to interpret on arrival."
+            "text": "We agree these arrangements with you before the first visit:"
+          },
+          {
+            "kind": "ul",
+            "items": [
+              "key-holding and access protocols agreed in writing;",
+              "a consistent, vetted team;",
+              "confidentiality agreements on request;",
+              "we never photograph or publish your home without your consent."
+            ]
           }
         ]
       },
       {
-        "heading": "Complex Cleaning Is Still Defined by the Outcome",
+        "heading": "Cleaning Defined by the Outcome",
         "blocks": [
           {
             "kind": "p",
@@ -4686,11 +4719,11 @@
           },
           {
             "kind": "h3",
-            "text": "3. Assessment"
+            "text": "3. Site assessment"
           },
           {
             "kind": "p",
-            "text": "A site visit or further information may be required."
+            "text": "We visit the property to confirm its condition, access and requirements."
           },
           {
             "kind": "h3",
@@ -4723,6 +4756,10 @@
           {
             "kind": "p",
             "text": "Completion is checked against the agreed scope."
+          },
+          {
+            "kind": "p",
+            "text": "We take on new recurring clients only when we can staff them properly."
           }
         ]
       },
@@ -4740,7 +4777,8 @@
     "closing": {
       "primary": "Request a Complex Service Assessment",
       "secondary": "Discuss the Property or Project"
-    }
+    },
+    "heroSupport": "Every complex or executive property begins with a site assessment. One point of contact. A clear scope before we start. Confirmation when the work is done."
   },
   "how-we-work": {
     "title": "A Clearer Route from Requirement to Delivery",
@@ -5117,6 +5155,10 @@
           {
             "kind": "p",
             "text": "Calling both simply 'two-bedroom cleans' would hide a substantial difference in required work."
+          },
+          {
+            "kind": "support",
+            "text": "Price Labour. Not Bedrooms."
           }
         ]
       },
@@ -5306,6 +5348,10 @@
           {
             "kind": "p",
             "text": "The quotation should reflect the work required to achieve the agreed result."
+          },
+          {
+            "kind": "support",
+            "text": "Clear scope. Labour-based quotations. Careful delivery."
           }
         ]
       },
@@ -5511,6 +5557,10 @@
           {
             "kind": "p",
             "text": "It means delivering the authorised scope carefully and addressing issues through the appropriate quality and corrective-action process."
+          },
+          {
+            "kind": "support",
+            "text": "Quality and attention to detail define HQC. Property condition and required outcome determine the service."
           }
         ]
       },
@@ -5571,6 +5621,10 @@
           {
             "kind": "p",
             "text": "Then selecting the appropriate route."
+          },
+          {
+            "kind": "support",
+            "text": "The Right Cleaning Service for the Result You Need"
           }
         ]
       },
@@ -5617,6 +5671,10 @@
           {
             "kind": "p",
             "text": "High Quality Clean was developed around a different principle:"
+          },
+          {
+            "kind": "support",
+            "text": "Understand the result first. Then define the cleaning required to achieve it."
           }
         ]
       },
@@ -5762,6 +5820,10 @@
           {
             "kind": "p",
             "text": "Internally, the commercial controls remain confidential."
+          },
+          {
+            "kind": "support",
+            "text": "Price Labour. Not Bedrooms."
           }
         ]
       },
@@ -5850,10 +5912,6 @@
               "property management;",
               "specialist projects."
             ]
-          },
-          {
-            "kind": "p",
-            "text": "Named organisations, photographs and logos will be used only where appropriate permissions exist."
           }
         ]
       },
@@ -5898,8 +5956,7 @@
   "reviews-case-studies": {
     "title": "What Clients Say About High Quality Clean",
     "lead": [
-      "Cleaning claims are more useful when they are supported by real client experience.",
-      "This page brings together verified reviews and approved client situations across homes, property and facilities, workplaces and project cleaning."
+      "Every property is different. These are the kinds of situations where clients have trusted HQC to help."
     ],
     "heroItems": [],
     "sections": [
@@ -5921,7 +5978,7 @@
         "blocks": [
           {
             "kind": "p",
-            "text": "Suitable evidence may include:"
+            "text": "We help home clients with:"
           },
           {
             "kind": "ul",
@@ -5933,26 +5990,6 @@
               "Post-Construction™;",
               "clients living overseas who require support for a London property."
             ]
-          },
-          {
-            "kind": "h3",
-            "text": "Review format"
-          },
-          {
-            "kind": "p",
-            "text": "★★★★★"
-          },
-          {
-            "kind": "p",
-            "text": "Short verified quotation"
-          },
-          {
-            "kind": "p",
-            "text": "Public review name"
-          },
-          {
-            "kind": "p",
-            "text": "Service or location context"
           }
         ]
       },
@@ -5961,7 +5998,7 @@
         "blocks": [
           {
             "kind": "p",
-            "text": "Suitable evidence may include:"
+            "text": "We support property clients with:"
           },
           {
             "kind": "ul",
@@ -5977,7 +6014,7 @@
           },
           {
             "kind": "p",
-            "text": "Useful property-sector proof may demonstrate:"
+            "text": "Property clients rely on us for:"
           },
           {
             "kind": "ul",
@@ -5997,7 +6034,7 @@
         "blocks": [
           {
             "kind": "p",
-            "text": "Suitable workplace evidence may include:"
+            "text": "Workplace cleaning we deliver:"
           },
           {
             "kind": "ul",
@@ -6009,10 +6046,6 @@
               "mobilisation;",
               "service-profile delivery."
             ]
-          },
-          {
-            "kind": "p",
-            "text": "Where organisations can be named, use the name or logo only when permission has been confirmed."
           }
         ]
       },
@@ -6222,7 +6255,7 @@
           },
           {
             "kind": "p",
-            "text": "Surrey availability should be confirmed for the specific service rather than presented as blanket coverage across the whole county."
+            "text": "In Surrey, availability depends on the service, so please check with us for your address."
           }
         ]
       },

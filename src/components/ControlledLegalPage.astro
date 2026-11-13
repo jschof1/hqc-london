@@ -5,6 +5,7 @@ import '../styles/utility-pages.css';
 interface Props { kind: 'privacy' | 'terms'; }
 const { kind } = Astro.props;
 const blocks = legal[kind];
+const isPreview = process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH !== 'main' || !['highqualityclean.co.uk', 'www.highqualityclean.co.uk'].includes(Astro.url.hostname);
 // Keep the original headings once, as sticky chapter markers beside their clauses.
 const chapters: { heading: string; blocks: (typeof blocks)[number][] }[] = [{ heading: '', blocks: [] }];
 for (const block of blocks) {
@@ -20,7 +21,7 @@ for (const block of blocks) {
     <h1 class="mt-4 font-serif text-4xl md:text-6xl">{kind === 'privacy' ? 'Privacy Policy' : 'Terms and Conditions of Service'}</h1>
     </div></header>
     <div class="utility-shell utility-legal-body">
-    <p class="mt-5 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Staging draft: company details, legal review date and production behavior must be verified before release.</p>
+    {isPreview && <p class="mt-5 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Staging draft: company details, legal review date and production behavior must be verified before release.</p>}
     <div class="mt-10 utility-legal-chapters text-base leading-7 text-slate">
       {chapters.map((chapter, index) => <section class:list={["utility-legal-chapter", { "utility-legal-preamble": !chapter.heading }]} id={`legal-clause-${index + 1}`}>
         {chapter.heading && <div class="utility-legal-marker"><h2 class="section-title font-serif text-midnight"><span class="utility-clause-number">{chapter.heading.split(' ')[0]}</span>{' '}{chapter.heading.split(' ').slice(1).join(' ')}</h2></div>}

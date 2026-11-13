@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ServiceSelector from '../components/ServiceSelector.astro';
-import TrustRail from '../components/TrustRail.astro';
 import ClientEvidence from '../components/ClientEvidence.astro';
 import ReviewMarquee from '../components/ReviewMarquee.astro';
 import reviewsData from '../data/google-reviews.json';
@@ -87,6 +86,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
             <a href="#find-my-service" class="button button-primary" data-track="find_my_service">Find my service <span class="hm-arrow-nudge" aria-hidden="true">↓</span></a>
             <a href="/request-a-quote/" class="button button-ghost" data-track="request_quote">Request a Cleaning Quote</a>
           </div>
+          <p class="mt-6 text-lg leading-8 text-white/85" data-controlled-trust-line>Join more than 300 clients who have chosen HQC.</p>
           <div class="hm-trust-row mt-9 flex flex-wrap gap-x-7 gap-y-2 text-[11px] font-bold uppercase tracking-[.18em] text-white/65" data-intro="fade" style="--d: 320ms">
             <a href="#google-reviews" class="hm-trust-rating"><span class="text-copper" aria-hidden="true">★★★★★</span>{reviewsData.rating} on <span class="hm-google-g"><span class="sr-only">Google</span><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span> from {reviewsData.reviewCount} reviews</a><span>London-based</span><span>Outcome-led</span><span>Founder-led</span>
           </div>
@@ -173,7 +173,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
               <img src={route.image} alt={route.alt} class="aspect-[4/3] w-full object-cover lg:aspect-[5/4]" loading="lazy" decoding="async" width="800" height="650" />
             </span>
             <span class="flex flex-1 flex-col p-6 md:p-8">
-              <span class="flex items-center justify-between gap-4"><span class="meta-label">{route.eyebrow}</span><span class="font-serif text-2xl text-copper-ink">{route.number}</span></span>
+              <span class="flex items-center justify-between gap-4"><h3 class="meta-label">{route.eyebrow}</h3><span class="font-serif text-2xl text-copper-ink">{route.number}</span></span>
               <span class="mt-4 block font-serif text-[1.75rem] font-medium leading-tight text-midnight md:text-[2rem]">{route.title}</span>
               <span class="mt-4 block text-[15px] leading-6 text-slate">{route.copy}</span>
               <span class="mt-auto block pt-7"><span class="hm-cta-link">{route.cta} <span class="hm-cta-chip" aria-hidden="true">→</span></span></span>
@@ -188,7 +188,6 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
       <ServiceSelector />
     </div>
 
-    <TrustRail />
 
     <div data-controlled-copy="Batch 1, page 1">
       {/* Outcome (Jack's layout, 11 Nov): heading beside the opening lines, photograph beside an icon grid of
@@ -425,7 +424,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
         <div>
           <p class="section-kicker" data-reveal="fade">Evidence, not adjectives</p>
           <h2 class="section-title" data-reveal="title">The work should be visible.</h2>
-          <p class="mt-7 text-lg leading-8 text-slate" data-reveal>Each quotation starts with the property, workplace or project in front of us. Relevant evidence is added only where it is approved for use and helps explain the required outcome.</p>
+          <p class="mt-7 text-lg leading-8 text-slate" data-reveal>Each quotation starts with the property, workplace or project in front of us.</p>
           <div class="mt-8 grid grid-cols-2 gap-4 border-y border-midnight/10 py-7" data-stagger="100">
             <div><strong class="font-serif text-5xl font-medium text-midnight">1</strong><span class="mt-1 block text-sm text-slate">clear route from requirement to review</span></div>
             <div><strong class="font-serif text-5xl font-medium text-midnight">3</strong><span class="mt-1 block text-sm text-slate">clear enquiry routes</span></div>
@@ -440,7 +439,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
     <section class="hm-founder hm-dark overflow-hidden bg-midnight text-white">
       <div class="grid lg:grid-cols-[1fr_1fr]">
         <figure class="hm-founder-photo" data-reveal="clip" style="--hm-cover: var(--color-midnight)">
-          <img src="/images/pedro-founder-portrait-753.webp" srcset="/images/pedro-founder-portrait-400.webp 400w, /images/pedro-founder-portrait-753.webp 753w" sizes="(min-width: 1024px) 50vw, 100vw" alt="Pedro Ndombasi, founder of High Quality Clean" loading="lazy" decoding="async" width="753" height="941" />
+          <img src="/images/pedro-on-site-original.png" alt="Pedro Ndombasi, founder of High Quality Clean, on site with a team member." loading="lazy" decoding="async" width="1448" height="1086" style="object-position: 50% 40%;" />
         </figure>
         <div class="hm-founder-copy">
           <div class="w-full max-w-[38rem]">

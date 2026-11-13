@@ -41,7 +41,7 @@ const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
           <div class="utility-questions" data-stagger="70">
             {group.items.map((faq) => (
               <details class="group utility-question" data-reveal="quick">
-                <summary class="cursor-pointer pr-8 font-semibold focus-visible:outline-2 focus-visible:outline-copper">{faq.question}</summary>
+                <summary class="cursor-pointer pr-8 font-semibold focus-visible:outline-2 focus-visible:outline-copper"><h3 class="inline font-inherit text-inherit">{faq.question}</h3></summary>
                 <p class="mt-4 leading-7">{faq.answer}</p>
               </details>
             ))}

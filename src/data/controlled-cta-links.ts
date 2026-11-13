@@ -13,6 +13,7 @@ const destinations: Record<string, string> = {
   'Arrange a Site Visit': pageHref('office-cleaning-london', 'secondaryHref'),
   'Check Areas We Cover': '/areas-we-cover/',
   'Check Essential Clean™ Suitability': essentialSuitability,
+  'Check Essential Clean™ Pricing': '/essential-clean-london/?next=booking',
   'Check My Eligibility': essentialSuitability,
   'Check My Home': essentialSuitability,
   'Cleaning Services in East London': '/cleaning-services-east-london/',

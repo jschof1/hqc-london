@@ -5,16 +5,15 @@ interface Props {
 }
 const { scope = 'all', id = 'client-evidence' } = Astro.props;
 const onStoriesPage = Astro.url.pathname.startsWith('/reviews-case-studies');
-// Agreed non-numeric trust wording (Batch 1). The client-count heading stays
-// withheld until its evidence basis exists, and no review, name or logo is
-// shown until Pedro selects a story and its publication permission is confirmed.
+// Pedro confirmed the 300+ evidence and approved restoring this statement on 12 November.
 ---
 
 <section class="border-y border-midnight/10 bg-porcelain py-20 md:py-24" aria-labelledby={id} data-client-evidence={scope}>
   <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
     <div class="max-w-4xl">
       <p class="section-kicker">Client evidence</p>
-      <h2 id={id} class="mt-4 max-w-4xl font-serif text-3xl font-medium leading-tight tracking-[-0.02em] text-midnight md:text-5xl">From private homes to workplaces and managed properties, clients have trusted HQC with a wide range of cleaning requirements across London.</h2>
+      <h2 id={id} class="mt-4 max-w-4xl font-serif text-3xl font-medium leading-tight tracking-[-0.02em] text-midnight md:text-5xl">Chosen by More Than 300 Clients</h2>
+      <p class="mt-6 text-lg leading-8 text-slate">From private homes to workplaces and managed properties, clients have trusted HQC with a wide range of cleaning requirements across London.</p>
       {!onStoriesPage && (
         <a href="/reviews-case-studies/" class="mt-8 inline-flex font-bold text-midnight no-underline hover:text-copper-ink">Read Client Success Stories <span class="ml-2 text-copper-ink" aria-hidden="true">→</span></a>
       )}

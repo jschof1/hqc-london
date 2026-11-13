@@ -5,7 +5,6 @@ import phase8Copy from '../data/phase8-copy.json';
 import FounderPortrait from './FounderPortrait.astro';
 import MotionKit from './MotionKit.astro';
 import '../styles/outcome-page.css';
-import ClientEvidence from './ClientEvidence.astro';
 import { closingCtas, controlledCtaHref } from '../data/controlled-cta-links';
 import { sectionImagery } from '../data/section-imagery';
 import { outcomePages } from '../data/outcome-pages';
@@ -17,32 +16,10 @@ interface Props {
 
 const { page } = Astro.props;
 const master = phase8Copy[page.slug as keyof typeof phase8Copy];
-// The approved draft reserves a client-count proof position; publish it only
-// after Pedro supplies the substantiation required by the Release Pack.
-// On these two pages the approved count section also carries generic evidence wording
-// (final reconciliation, 6 Nov 2026). Keep that wording under a neutral heading and drop
-// only the client-count heading and sentence. Other count sections stay withheld.
-const countClaim = /300\+?|three hundred/i;
-const keepEvidenceLines = ['about-high-quality-clean', 'reviews-case-studies'];
-const controlledSections = master?.sections
-  .map((section) => !countClaim.test(section.heading) || !keepEvidenceLines.includes(page.slug) ? section : {
-    ...section,
-    heading: 'Client Evidence',
-    blocks: section.blocks.filter((block) => block.kind !== 'p' || !countClaim.test(block.text ?? ''))
-  })
-  .filter((section) => !countClaim.test(section.heading))
-  .map((section) => {
-    const reviewFormat = section.blocks.findIndex((block) => block.kind === 'h3' && block.text === 'Review format');
-    if (page.slug !== 'reviews-case-studies' || reviewFormat === -1) return section;
-    return {
-      ...section,
-      blocks: [
-        ...section.blocks.slice(0, reviewFormat),
-        { kind: 'h3' as const, text: 'Residential review evidence' },
-        { kind: 'p' as const, text: 'Verified review text, public attribution and client permission are required before publication.' }
-      ]
-    };
-  }) ?? [];
+// Pedro confirmed the 300+ evidence on 12 November. Keep the controlled count
+// sections; the Reviews selection itself remains pending a separate decision.
+const controlledSections = master?.sections ?? [];
+const heroSupport = (master as { heroSupport?: string } | undefined)?.heroSupport;
 const visual = getPageVisual(page.slug);
 // Approved in-body CTAs are kept as `cta` blocks; consecutive ones share a row.
 type CopyBlock = { kind: string; text?: string; items?: string[] };
@@ -156,7 +133,7 @@ const heroKey = imageKey(visual.hero);
 const outcomeFigure = visual.gallery.find((image) => imageKey(image.src) !== heroKey) ?? visual.gallery[0];
 // The About page shows the founder portrait instead of the outcome figure, so its gallery keeps that photograph.
 const outcomeFigureShown = page.slug !== 'about-high-quality-clean';
-const shownGallery = visual.gallery.filter((image) => imageKey(image.src) !== heroKey && !(outcomeFigureShown && image.src === outcomeFigure.src));
+const shownGallery = page.slug === 'reviews-case-studies' ? [] : visual.gallery.filter((image) => imageKey(image.src) !== heroKey && !(outcomeFigureShown && image.src === outcomeFigure.src));
 const closingPool = [...(destinationThumbnails[page.slug] ?? []), 'p-mansion-blocks', 'p-handover-keys', 'r-front-door-keys', 'g-walkthrough']
   .map((id) => cardImage(id as never)).filter((image): image is CardImage => Boolean(image));
 const closingImage = closingPool.find((image) => !pageImageKeys.has(imageKey(image.src)) && imageKey(image.src) !== heroKey) ?? closingPool[0];
@@ -187,6 +164,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
         <a class="hm-cta-link" href={page.primaryHref} data-track="primary_cta" data-service={page.slug}>{page.primaryCta}<span class="hm-cta-chip" aria-hidden="true">↗</span></a>
         <a class="hm-cta-link hm-cta-secondary" href={page.secondaryHref} data-track="secondary_cta" data-service={page.slug}>{page.secondaryCta}</a>
       </div>
+      {heroSupport && <p class="mt-6 max-w-3xl text-lg leading-8 text-white/85" data-controlled-hero-support>{heroSupport}</p>}
     </div>
   </section>
 
@@ -462,15 +440,6 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
         <p class="op-p" data-reveal>HQC has worked with private clients across London, including clients who live abroad and rely on us to look after their London properties.</p>
       </div>
     </section>
-  )}
-
-  {['home-cleaning-london', 'property-facilities-cleaning-london', 'office-cleaning-london', 'reviews-case-studies'].includes(page.slug) && (
-    <div class="hm-evidence hm-parallax op-evidence">
-      {evidenceImage && <img class="hm-evidence-bg" src={evidenceImage.src} alt={evidenceImage.alt} loading="lazy" decoding="async" width="1200" height="900" />}
-      <div class="relative" data-reveal>
-        <ClientEvidence scope={page.slug === 'home-cleaning-london' ? 'residential' : page.slug === 'reviews-case-studies' ? 'all' : 'commercial'} />
-      </div>
-    </div>
   )}
 
   {/* Scope: centred statement over a row of dark photo cards. */}

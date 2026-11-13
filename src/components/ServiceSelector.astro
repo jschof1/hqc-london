@@ -12,7 +12,7 @@ const choices = [
   { number: '05', result: 'restore', label: 'Remove dust and residue after building work' },
   { number: '06', result: 'professional', label: 'Arrange cleaning for a workplace' },
   { number: '07', result: 'professional', label: 'Arrange cleaning across properties or a portfolio' },
-  { number: '08', result: 'professional', label: 'Discuss a large or complex property' },
+  { number: '08', result: 'complex', label: 'Discuss a large or complex property' },
   { number: '09', result: 'unsure', label: 'I am not sure' }
 ];
 const groups = [
@@ -66,7 +66,7 @@ const groups = [
       label: 'Essential Clean™ suitability',
       heading: 'First, check whether the home is maintenance-ready',
       copy: 'Weekly and fortnightly Essential Clean™ enquiries are checked for suitability. Heavy build-up, monthly requests and restoration work are routed to manual review.',
-      href: '/essential-clean-london/',
+      href: '/essential-clean-london/?next=booking',
       cta: 'Explore Essential Clean™',
       secondaryHref: '/deep-cleaning-london/',
       secondary: 'The home needs restoration'
@@ -85,6 +85,15 @@ const groups = [
       heading: 'Route the site or portfolio to the right assessment',
       copy: 'Workplaces, managed properties and complex projects use the tailored quotation or assessment route. They are not publicly bookable services.',
       href: '/request-a-quote/?route=commercial',
+      cta: 'Start a professional enquiry',
+      secondaryHref: '/complex-property-cleaning-london/',
+      secondary: 'Complex service assessment'
+    },
+    complex: {
+      label: 'Professional or complex enquiry',
+      heading: 'Route the site or portfolio to the right assessment',
+      copy: 'Workplaces, managed properties and complex projects use the tailored quotation or assessment route. They are not publicly bookable services.',
+      href: '/request-a-quote/?route=complex',
       cta: 'Start a professional enquiry',
       secondaryHref: '/complex-property-cleaning-london/',
       secondary: 'Complex service assessment'
