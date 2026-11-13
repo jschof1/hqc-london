@@ -6,5 +6,23 @@
   "status": "preview_available_full_page_captures_due",
   "capturedAt": null,
   "captures": [],
-  "note": "No screenshots have been invented or copied from an older version. Existing review state backed up privately; no photo/comment changes authorized."
+  "note": "No screenshots have been invented or copied from an older version. Existing review state backed up privately; no photo/comment changes authorized.",
+  "reviewPublication": {
+    "workerVersion": "c7dd59c4-d0c3-4a35-8ad6-fb29f18bfe8b",
+    "hostedChecklistReadback": true,
+    "groups": 13,
+    "doneInSource": 18,
+    "due": 23,
+    "anonymousChecklistStatus": 401,
+    "priorVersionsUnchanged": true,
+    "photoSelectionsUnchanged": true,
+    "discussionUnchanged": true,
+    "url": "https://review.highqualityclean.co.uk/versions/?before=nov11-banister-photo&after=nov13-pedro-audit#updates"
+  },
+  "limitedBrowserChecks": [
+    "Authenticated checklist loads41rows/13groups with18source and23due",
+    "Duefilterreturns23rows; before/audited/updatedlinks resolve to recorded origins",
+    "Homepage390px has6selectedreviewcards and no document overflow",
+    "Booking1440px photograph remains absolute in the right column; no document overflow"
+  ]
 }
