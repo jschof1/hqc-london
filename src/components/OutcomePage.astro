@@ -533,7 +533,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
 
   {/* Closing: a photograph not used elsewhere on the page, flat tint, centred actions. */}
   <section class="op-closing hm-dark hm-parallax">
-    {closingImage && <img class="op-closing-photo" src={closingImage.src} alt={illustrativeAlt(closingImage.src, "")} aria-hidden={isIllustrativeImage(closingImage.src) ? undefined : "true"} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(closingImage.src) && <span class="image-disclosure">Illustrative</span>}}
+    {closingImage && <Fragment><img class="op-closing-photo" src={closingImage.src} alt={illustrativeAlt(closingImage.src, "")} aria-hidden={isIllustrativeImage(closingImage.src) ? undefined : "true"} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(closingImage.src) && <span class="image-disclosure">Illustrative</span>}</Fragment>}
     <div class="op-closing-content">
       <p class="section-kicker" data-reveal="fade">The next step is simple</p>
       <h2 class="section-title" data-reveal="title">{closing.primary.label}</h2>

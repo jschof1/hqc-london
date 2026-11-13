@@ -94,7 +94,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
 
         <div class="hm-hero-media" data-hero-media>
           {offerings.map((offering, index) => (
-            <img
+            <Fragment><img
               src={offering.image.src}
               srcset={offering.image.srcset}
               sizes="(min-width: 1024px) 54vw, 100vw"
@@ -106,7 +106,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
               fetchpriority={index === 0 ? 'high' : undefined}
               loading={index === 0 ? 'eager' : 'lazy'}
               decoding="async"
-            />{isIllustrativeImage(offering.image.src) && <span class="image-disclosure">Illustrative</span>}
+            />{isIllustrativeImage(offering.image.src) && <span class="image-disclosure">Illustrative</span>}</Fragment>
           ))}
         </div>
       </div>
@@ -391,7 +391,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
             const image = cardImage(homeComplexStepImagery[step]);
             return (
             <li class="hm-complex-step relative overflow-hidden rounded-[1.25rem] bg-midnight text-white">
-              {image && <img src={image.src} alt={illustrativeAlt(image.src, image.alt)} class="aspect-[4/5] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(image.src) && <span class="image-disclosure">Illustrative</span>}}
+              {image && <Fragment><img src={image.src} alt={illustrativeAlt(image.src, image.alt)} class="aspect-[4/5] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(image.src) && <span class="image-disclosure">Illustrative</span>}</Fragment>}
               <div class="hm-complex-caption">
                 <span class="font-serif text-2xl text-copper">0{index + 1}</span>
                 <p class="mt-1 font-serif text-2xl leading-tight">{step}</p>

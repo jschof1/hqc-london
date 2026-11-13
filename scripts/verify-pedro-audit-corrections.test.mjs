@@ -209,5 +209,6 @@ test('changed Astro sources compile without a site build; this does not claim br
   for (const file of files) {
     const result = await transformAstro(read(file), { filename: file });
     assert.deepEqual(result.diagnostics.filter((d) => d.severity === 1), [], file);
+    await transform(result.code, { loader: 'ts', sourcefile: file });
   }
 });
