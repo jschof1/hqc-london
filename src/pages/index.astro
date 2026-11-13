@@ -9,7 +9,7 @@ import phase8Copy from '../data/phase8-copy.json';
 import { controlledCtaHref } from '../data/controlled-cta-links';
 import { offeringImages, sectionImagery } from '../data/section-imagery';
 import { libraryPhotos } from '../data/page-visuals';
-import { cardImage, cardLibrary, homeComplexStepImagery, homeProcessImagery, type CardImageId } from '../data/card-imagery';
+import { isIllustrativeImage, illustrativeAlt, cardImage, cardLibrary, homeComplexStepImagery, homeProcessImagery, type CardImageId } from '../data/card-imagery';
 import MotionKit from '../components/MotionKit.astro';
 
 const homeCopy = phase8Copy.home;
@@ -74,7 +74,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
               <li data-intro style={`--d: ${160 + index * 60}ms`}>
                 <a href={offering.href} class:list={['group block text-white no-underline', index === 0 && 'is-active']} data-slide-tab={index}>
                   <span class="hm-hero-thumb block overflow-hidden rounded-lg">
-                    <img src={offering.image.src} srcset={offering.image.srcset} sizes="33vw" alt={offering.image.alt} class="aspect-[4/3] w-full object-cover object-[70%_50%]" width="800" height="600" loading="lazy" decoding="async" />
+                    <img src={offering.image.src} srcset={offering.image.srcset} sizes="33vw" alt={illustrativeAlt(offering.image.src, offering.image.alt)} class="aspect-[4/3] w-full object-cover object-[70%_50%]" width="800" height="600" loading="lazy" decoding="async" />{isIllustrativeImage(offering.image.src) && <span class="image-disclosure">Illustrative</span>}
                   </span>
                   <span class="mt-1.5 block text-[11px] font-bold leading-tight">{offering.eyebrow}&nbsp;<span class="text-copper" aria-hidden="true">→</span></span>
                 </a>
@@ -98,7 +98,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
               src={offering.image.src}
               srcset={offering.image.srcset}
               sizes="(min-width: 1024px) 54vw, 100vw"
-              alt={offering.image.alt}
+              alt={illustrativeAlt(offering.image.src, offering.image.alt)}
               class:list={['hm-slide', index === 0 && 'is-active']}
               data-slide={index}
               width="1600"
@@ -106,7 +106,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
               fetchpriority={index === 0 ? 'high' : undefined}
               loading={index === 0 ? 'eager' : 'lazy'}
               decoding="async"
-            />
+            />{isIllustrativeImage(offering.image.src) && <span class="image-disclosure">Illustrative</span>}
           ))}
         </div>
       </div>
@@ -170,7 +170,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
         ].map((route) => (
           <a href={route.href} class="hm-route group flex flex-col overflow-hidden rounded-[1.25rem] bg-porcelain text-inherit no-underline">
             <span class="hm-route-media block overflow-hidden">
-              <img src={route.image} alt={route.alt} class="aspect-[4/3] w-full object-cover lg:aspect-[5/4]" loading="lazy" decoding="async" width="800" height="650" />
+              <img src={route.image} alt={illustrativeAlt(route.image, route.alt)} class="aspect-[4/3] w-full object-cover lg:aspect-[5/4]" loading="lazy" decoding="async" width="800" height="650" />{isIllustrativeImage(route.image) && <span class="image-disclosure">Illustrative</span>}
             </span>
             <span class="flex flex-1 flex-col p-6 md:p-8">
               <span class="flex items-center justify-between gap-4"><h3 class="meta-label">{route.eyebrow}</h3><span class="font-serif text-2xl text-copper-ink">{route.number}</span></span>
@@ -222,7 +222,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
                 </div>
                 <div class="mt-12 grid gap-10 md:mt-16 lg:grid-cols-[.95fr_1.05fr] lg:items-center lg:gap-16">
                   <figure class="hm-outcome-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
-                    <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 45vw, 100vw" alt={outcomeImage.alt} loading="lazy" decoding="async" width="1600" height="900" />
+                    <img src={outcomeImage.src} srcset={outcomeImage.srcset} sizes="(min-width: 1024px) 45vw, 100vw" alt={illustrativeAlt(outcomeImage.src, outcomeImage.alt)} loading="lazy" decoding="async" width="1600" height="900" />{isIllustrativeImage(outcomeImage.src) && <span class="image-disclosure">Illustrative</span>}
                   </figure>
                   <div>
                     {label && <p class="hm-label" data-reveal>{label.text}</p>}
@@ -248,7 +248,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
 
       {/* Homes: one continuous section over a tinted photograph; the heading sits directly above the cards. */}
       <section class="hm-dark hm-homes hm-parallax relative isolate overflow-hidden text-white">
-        <img class="hm-homes-bg" src={lib('r-living-dust').src} alt={lib('r-living-dust').alt} loading="lazy" decoding="async" width="1200" height="900" />
+        <img class="hm-homes-bg" src={lib('r-living-dust').src} alt={illustrativeAlt(lib('r-living-dust').src, lib('r-living-dust').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(lib('r-living-dust').src) && <span class="image-disclosure">Illustrative</span>}
         <div class="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 md:py-24 lg:px-14">
           <h2 class="hm-homes-title mx-auto text-center font-serif font-medium text-white" data-reveal="title">Cleaning Services for London Homes</h2>
           <div class="hm-cards mt-10 md:mt-12 md:grid-cols-2 xl:grid-cols-4" data-stagger="90">
@@ -257,7 +257,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
               const image = lib(homeServiceImages[groupIndex]);
               return (
                 <article class:list={['hm-card hm-card-dark', featured && 'hm-card-featured md:col-span-2 xl:col-span-4']}>
-                  <span class="hm-card-media block overflow-hidden"><img src={image.src} alt={image.alt} loading="lazy" decoding="async" width="1200" height="900" /></span>
+                  <span class="hm-card-media block overflow-hidden"><img src={image.src} alt={illustrativeAlt(image.src, image.alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(image.src) && <span class="image-disclosure">Illustrative</span>}</span>
                   <div class="hm-card-body">
                     {(() => {
                       // Service name, then its short descriptor; the full heading stays the accessible name.
@@ -280,7 +280,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
       {/* Partner: full-bleed street photograph, content panel on the right. */}
       <section class="hm-stage">
         <div class="hm-stage-media hm-parallax">
-          <img src={lib('p-van-street').src} alt={lib('p-van-street').alt} loading="lazy" decoding="async" width="1200" height="900" />
+          <img src={lib('p-van-street').src} alt={illustrativeAlt(lib('p-van-street').src, lib('p-van-street').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(lib('p-van-street').src) && <span class="image-disclosure">Illustrative</span>}
         </div>
         <div class="hm-stage-panel" data-reveal="right">
           <h2 class="section-title" data-reveal="title">{partner.heading}</h2>
@@ -313,7 +313,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
           </div>
         </div>
         <figure class="hm-split-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
-          <img src={lib('c-after-hours').src} alt={lib('c-after-hours').alt} loading="lazy" decoding="async" width="1200" height="900" />
+          <img src={lib('c-after-hours').src} alt={illustrativeAlt(lib('c-after-hours').src, lib('c-after-hours').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(lib('c-after-hours').src) && <span class="image-disclosure">Illustrative</span>}
         </figure>
       </section>
 
@@ -325,7 +325,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
           </div>
           <div class="hm-why mt-10 md:mt-12">
             <figure class="hm-why-media" data-reveal="clip" style="--hm-cover: white">
-              <img src={lib('p-signoff').src} alt={lib('p-signoff').alt} loading="lazy" decoding="async" width="1200" height="900" />
+              <img src={lib('p-signoff').src} alt={illustrativeAlt(lib('p-signoff').src, lib('p-signoff').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(lib('p-signoff').src) && <span class="image-disclosure">Illustrative</span>}
             </figure>
             <div class="hm-why-grid" data-stagger="70">
               {why.groups.map((group) => (
@@ -361,7 +361,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
             const image = cardImage(homeProcessImagery[title]);
             return (
             <article class:list={['hm-step flex flex-col', index === 2 ? 'bg-copper text-midnight' : 'bg-midnight']} data-step>
-              {image && <span class="block overflow-hidden"><img src={image.src} alt={image.alt} class="aspect-[16/10] w-full object-cover lg:aspect-[4/3]" loading="lazy" decoding="async" width="1200" height="900" /></span>}
+              {image && <span class="block overflow-hidden"><img src={image.src} alt={illustrativeAlt(image.src, image.alt)} class="aspect-[16/10] w-full object-cover lg:aspect-[4/3]" loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(image.src) && <span class="image-disclosure">Illustrative</span>}</span>}
               <div class="p-7 md:p-9">
                 <span class:list={['hm-step-num font-serif text-4xl', index === 2 ? 'text-midnight' : 'text-copper']}>{number}</span>
                 <h3 class="mt-8 font-serif text-3xl font-medium">{title}</h3>
@@ -391,7 +391,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
             const image = cardImage(homeComplexStepImagery[step]);
             return (
             <li class="hm-complex-step relative overflow-hidden rounded-[1.25rem] bg-midnight text-white">
-              {image && <img src={image.src} alt={image.alt} class="aspect-[4/5] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />}
+              {image && <img src={image.src} alt={illustrativeAlt(image.src, image.alt)} class="aspect-[4/5] w-full object-cover" loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(image.src) && <span class="image-disclosure">Illustrative</span>}}
               <div class="hm-complex-caption">
                 <span class="font-serif text-2xl text-copper">0{index + 1}</span>
                 <p class="mt-1 font-serif text-2xl leading-tight">{step}</p>
@@ -405,7 +405,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
 
     {/* Client evidence: full-bleed London street, statement centred. */}
     <div class="hm-evidence hm-parallax">
-      <img class="hm-evidence-bg" src={lib('p-mansion-blocks').src} alt={lib('p-mansion-blocks').alt} loading="lazy" decoding="async" width="1200" height="900" />
+      <img class="hm-evidence-bg" src={lib('p-mansion-blocks').src} alt={illustrativeAlt(lib('p-mansion-blocks').src, lib('p-mansion-blocks').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(lib('p-mansion-blocks').src) && <span class="image-disclosure">Illustrative</span>}
       <div class="relative" data-reveal>
         <ClientEvidence id="proof-release-title" />
       </div>
@@ -417,7 +417,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
         <div class="grid auto-rows-[210px] grid-cols-2 gap-4 md:auto-rows-[260px]">
           {[libraryPhotos.bedroom, libraryPhotos.livingArea].map((photo, index) => (
             <figure class="relative row-span-2 overflow-hidden rounded-[1.25rem]" data-reveal="clip" style={`--d: ${index * 140}ms`}>
-              <img src={photo.src} alt={photo.alt} class="h-full w-full object-cover" loading="lazy" decoding="async" width="1536" height="2048" />
+              <img src={photo.src} alt={illustrativeAlt(photo.src, photo.alt)} class="h-full w-full object-cover" loading="lazy" decoding="async" width="1536" height="2048" />{isIllustrativeImage(photo.src) && <span class="image-disclosure">Illustrative</span>}
             </figure>
           ))}
         </div>
@@ -455,7 +455,7 @@ const homeServiceImages: CardImageId[] = ['r-kitchen-wipe', 'r-shower-glass', 'r
 
     {/* Closing call to action: handover photograph, centred. */}
     <section class="hm-closing hm-parallax relative isolate overflow-hidden text-white" data-dock-hide="after">
-      <img class="hm-closing-bg" src={lib('p-handover-keys').src} alt={lib('p-handover-keys').alt} loading="lazy" decoding="async" width="1200" height="900" />
+      <img class="hm-closing-bg" src={lib('p-handover-keys').src} alt={illustrativeAlt(lib('p-handover-keys').src, lib('p-handover-keys').alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(lib('p-handover-keys').src) && <span class="image-disclosure">Illustrative</span>}
       <div class="relative mx-auto flex max-w-[1440px] flex-col items-center px-5 py-24 text-center sm:px-8 md:py-36 lg:px-14">
         <h2 class="max-w-4xl font-serif text-4xl font-medium leading-tight md:text-6xl" data-reveal="title">Not Sure Which Cleaning Service You Need?</h2>
         {paragraphs('Not Sure Which Cleaning Service You Need?').map((paragraph) => <p class="mt-5 max-w-2xl text-lg leading-8 text-white/90" data-reveal style="--d: 120ms">{paragraph}</p>)}

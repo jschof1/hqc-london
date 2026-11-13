@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
           console.error('HQC form submission failed:', error);
           status.classList.remove('text-green-700');
           status.classList.add('text-red-700');
-          status.textContent = 'We could not send your enquiry. Please call 0208 870 3925 or email sales@highqualityclean.co.uk.';
+          status.textContent = 'We could not send your enquiry. Please call 020 8870 3925 or email sales@highqualityclean.co.uk.';
           if (submitButton) {
             submitButton.disabled = false;
             submitButton.textContent = originalButtonText || 'Submit';

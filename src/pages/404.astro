@@ -3,112 +3,34 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import MotionKit from '../components/MotionKit.astro';
 import '../styles/utility-pages.css';
+Astro.response.status = 404;
+const routes = [
+  ['Home Cleaning', '/home-cleaning-london/'],
+  ['Property & Facilities', '/property-facilities-cleaning-london/'],
+  ['Workplaces & Commercial', '/commercial-cleaning-london/'],
+  ['Areas We Cover', '/areas-we-cover/'],
+  ['Contact', '/contact/']
+];
 ---
-
-<Layout 
-  title="Page Not Found | High Quality Clean"
-  description="The page you're looking for seems to have been moved or doesn't exist. Explore our luxury cleaning services for London's finest properties."
->
+<Layout title="Page Not Found | High Quality Clean" description="The page may have moved, been replaced or the address may have been entered incorrectly.">
   <Header />
   <MotionKit />
-  
-  <main class="hm-page utility-page utility-not-found hm-dark page-transition pt-20 relative min-h-screen bg-midnight text-white">
+  <main class="hm-page utility-page utility-not-found hm-dark pt-20 min-h-screen bg-midnight text-white">
     <div class="utility-shell utility-not-found-body text-center">
       <section class="utility-error-intro">
-      <!-- 404 Number Display -->
-      <div class="utility-error-number">
-        <h1 class="font-serif text-[10rem] md:text-[14rem] leading-none font-bold text-gold select-none">
-          404
-        </h1>
-      </div>
-
-      <!-- Main Message -->
-      <div class="mb-12 space-y-6">
-        <h2 class="section-title font-serif text-white mb-4">
-          Page Not Found
-        </h2>
-        <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-          It seems this page has been tidied away or doesn't exist. 
-          Don't worry — even the best cleaning can't remove what matters most.
-        </p>
-      </div>
-
-      </section>
-
-      <!-- Navigation Options -->
-      <div class="utility-error-routes grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12" data-stagger="70">
-        <!-- Home -->
-        <a 
-          href="/" 
-          class="utility-error-route group" data-reveal="quick"
-        >
-          <div class="text-gold mb-4">
-            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 10 9-7 9 7v10H15v-7H9v7H3Z"/></svg>
-          </div>
-          <h3 class="hm-cta-link">
-            Go Home <span class="hm-cta-chip" aria-hidden="true"></span>
-          </h3>
-          <p class="text-white/75 text-sm">
-            Return to our homepage
-          </p>
-        </a>
-
-        <!-- Services -->
-        <a 
-          href="/services/" 
-          class="utility-error-route group" data-reveal="quick"
-        >
-          <div class="text-gold mb-4">
-            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5ZM20 2v4M18 4h4"/></svg>
-          </div>
-          <h3 class="hm-cta-link">
-            Our Services <span class="hm-cta-chip" aria-hidden="true"></span>
-          </h3>
-          <p class="text-white/75 text-sm">
-            Explore our cleaning programmes
-          </p>
-        </a>
-
-        <!-- Contact -->
-        <a 
-          href="/#quote" 
-          class="utility-error-route group" data-reveal="quick"
-        >
-          <div class="text-gold mb-4">
-            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
-          </div>
-          <h3 class="hm-cta-link">
-            Get a Quote <span class="hm-cta-chip" aria-hidden="true"></span>
-          </h3>
-          <p class="text-white/75 text-sm">
-            Request a personalised quote
-          </p>
-        </a>
-      </div>
-
-      <!-- Additional Links -->
-      <div class="utility-error-areas space-y-4 text-white/75" data-reveal="fade">
-        <p class="text-sm">
-          Or explore our service areas:
-        </p>
-        <div class="flex flex-wrap justify-center gap-3 text-sm">
-          <a href="/locations/london/belgravia/" class="hover:text-gold transition-colors">Belgravia</a>
-          <span class="text-gold/40">•</span>
-          <a href="/locations/london/chelsea/" class="hover:text-gold transition-colors">Chelsea</a>
-          <span class="text-gold/40">•</span>
-          <a href="/locations/london/kensington/" class="hover:text-gold transition-colors">Kensington</a>
-          <span class="text-gold/40">•</span>
-          <a href="/locations/london/mayfair/" class="hover:text-gold transition-colors">Mayfair</a>
-          <span class="text-gold/40">•</span>
-          <a href="/areas/" class="hover:text-gold transition-colors font-semibold">View All Areas</a>
+        <p class="font-serif text-7xl text-gold" aria-hidden="true">404</p>
+        <h1 class="section-title mt-8 font-serif text-white">That Page Is Not Available</h1>
+        <p class="mt-6 mx-auto max-w-2xl text-lg leading-8 text-white/80">The page may have moved, been replaced or the address may have been entered incorrectly.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="/#find-my-service" class="hm-cta-link">Find My Service <span class="hm-cta-chip" aria-hidden="true">→</span></a>
+          <a href="/request-a-quote/" class="hm-cta-link hm-cta-secondary">Request a Quote <span class="hm-cta-chip" aria-hidden="true">→</span></a>
         </div>
-      </div>
-
-      <!-- Decorative Element -->
-      <div class="mt-16 flex justify-center opacity-20">
-        <i class="fas fa-broom text-6xl text-gold"></i>
-      </div>
+      </section>
+      <nav class="utility-error-areas mt-12" aria-label="Useful routes">
+        <ul class="flex flex-wrap justify-center gap-6 text-white/80">
+          {routes.map(([label, href]) => <li><a href={href} class="underline hover:text-gold">{label}</a></li>)}
+        </ul>
+      </nav>
     </div>
   </main>
-
 </Layout>

@@ -1,99 +1,35 @@
 ---
-// Google reviews carousel (Jack, 11 Nov 2026). Content is a dated snapshot of HQC's public
-// Google Business Profile (src/data/google-reviews.json): review text verbatim, reviewers by
-// first name and last initial. Without JavaScript, or with reduced motion, each row is a still,
-// scrollable strip. Otherwise two rows drift in opposite directions; hover, keyboard focus anywhere
-// in the section, an open review or the pause button stops them.
+// Pedro's six selected public reviews, 12 November 2026. The component path stays
+// compatible with the homepage; the requested proof cards replace the carousel.
 import reviewsData from '../data/google-reviews.json';
-
-const reviews = reviewsData.reviews;
-const rows = [reviews.filter((_, i) => i % 2 === 0), reviews.filter((_, i) => i % 2 === 1)];
-const flat = (text: string) => text.replace(/\s*\n+\s*/g, ' ');
+const selected = [
+  ['Kara O.', 'Home cleaning'], ['Lucy M.', 'Deep clean'],
+  ['Yori Z.', 'End of tenancy'], ['Fabio K.', 'End of tenancy'],
+  ['Chris M.', 'Commercial'], ['Liv M.', 'Post-renovation']
+];
+const reviews = selected.map(([name, service]) => {
+  const review = reviewsData.reviews.find((review) => review.name === name);
+  if (!review) throw new Error(`Missing selected review: ${name}`);
+  return { ...review, service };
+});
 ---
-
-<section id="google-reviews" class="hm-reviews scroll-mt-20 overflow-hidden bg-porcelain py-16 md:py-20" aria-labelledby="google-reviews-title" data-reviews>
-  <div class="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 sm:px-8 md:flex-row md:items-end md:justify-between lg:px-14">
-    <div class="flex items-center gap-5">
-      <p class="font-serif text-6xl font-medium leading-none text-midnight md:text-7xl"><span class="sr-only">Rated </span>{reviewsData.rating}<span class="sr-only"> out of 5</span></p>
+<section id="google-reviews" class="hm-reviews scroll-mt-20 bg-porcelain py-16 md:py-20" aria-labelledby="google-reviews-title">
+  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <span class="hm-stars text-lg" aria-hidden="true">★★★★★</span>
-        <h2 id="google-reviews-title" class="mt-1 font-serif text-2xl font-medium leading-tight text-midnight md:text-3xl">What clients say on Google</h2>
-        <p class="mt-1 text-sm text-slate">From {reviewsData.reviewCount} reviews. Showing the 4 and 5 star reviews.</p>
+        <h2 id="google-reviews-title" class="font-serif text-3xl font-medium text-midnight md:text-4xl">What clients say on Google</h2>
+        <p class="mt-3 text-sm text-slate">{reviewsData.rating} on Google from {reviewsData.reviewCount} reviews</p>
       </div>
+      <a href={reviewsData.profileUrl} class="hm-cta-link" target="_blank" rel="noopener">Read all reviews on Google <span class="hm-cta-chip" aria-hidden="true">↗</span></a>
     </div>
-    <div class="flex flex-wrap items-center gap-3">
-      <a href={reviewsData.profileUrl} class="hm-cta-link whitespace-nowrap" target="_blank" rel="noopener">Read all reviews on Google <span class="hm-cta-chip" aria-hidden="true">↗</span></a>
-      <button type="button" class="hm-reviews-toggle" data-reviews-toggle aria-pressed="false" hidden>Pause reviews</button>
-    </div>
-  </div>
-
-  <div class="mt-10 grid gap-4">
-    {rows.map((row, rowIndex) => (
-      <div class:list={['hm-marquee', rowIndex === 1 && 'hm-marquee-reverse']} style={`--hm-marquee-dur: ${row.length * 9}s`}>
-        <div class="hm-marquee-track">
-          {[0, 1].map((copy) => (
-            <ul class="hm-marquee-list" aria-label={copy === 0 ? `Google reviews, row ${rowIndex + 1}` : undefined} aria-hidden={copy === 1 ? 'true' : undefined}>
-              {row.map((review) => (
-                <li class="hm-review">
-                  <span class="hm-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>{'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}</span>
-                  <blockquote class="hm-review-text"><p>{flat(review.text)}</p></blockquote>
-                  {/* The looping copy is hidden from assistive technology and skipped by the keyboard, but stays usable with a pointer. */}
-                  <button type="button" class="hm-review-more" data-review-more aria-expanded="false" tabindex={copy === 1 ? -1 : undefined} hidden>Read more</button>
-                  <p class="hm-review-by"><span class="hm-review-initial" aria-hidden="true">{review.name.charAt(0)}</span><span><strong>{review.name}</strong><span class="block">Google review</span></span></p>
-                </li>
-              ))}
-            </ul>
-          ))}
-        </div>
-      </div>
-    ))}
+    <ul class="hm-review-cards mt-10">
+      {reviews.map((review) => (
+        <li class="hm-review">
+          <span class="hm-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>{'★'.repeat(review.rating)}</span>
+          <blockquote class="hm-review-text"><p>{review.text}</p></blockquote>
+          <p class="hm-review-by"><strong>{review.name}</strong><span>{review.service}</span></p>
+        </li>
+      ))}
+    </ul>
   </div>
 </section>
-
-<script>
-  const section = document.querySelector<HTMLElement>('[data-reviews]');
-  const toggle = section?.querySelector<HTMLButtonElement>('[data-reviews-toggle]');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  if (section && toggle) {
-    // Motion starts only once its controls work; reduced motion keeps the still strips.
-    const sync = () => {
-      section.classList.toggle('is-live', !reduce.matches);
-      toggle.hidden = reduce.matches;
-    };
-    sync();
-    reduce.addEventListener('change', sync);
-    toggle.addEventListener('click', () => {
-      const paused = section.classList.toggle('is-user-paused');
-      toggle.setAttribute('aria-pressed', String(paused));
-      toggle.textContent = paused ? 'Play reviews' : 'Pause reviews';
-    });
-    new IntersectionObserver(([entry]) => section.classList.toggle('is-offscreen', !entry.isIntersecting)).observe(section);
-
-    // Read more: offered only where the five-line preview cuts the review short. Re-measured when
-    // the card width or fonts change; an open review keeps its control.
-    const buttons = Array.from(section.querySelectorAll<HTMLButtonElement>('[data-review-more]'));
-    const measure = () => {
-      for (const button of buttons) {
-        const card = button.closest<HTMLElement>('.hm-review');
-        const text = card?.querySelector<HTMLElement>('.hm-review-text p');
-        if (!card || !text || card.classList.contains('is-open')) continue;
-        button.hidden = text.scrollHeight <= text.clientHeight + 2;
-      }
-    };
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const card = button.closest<HTMLElement>('.hm-review');
-        if (!card) return;
-        const open = card.classList.toggle('is-open');
-        button.setAttribute('aria-expanded', String(open));
-        button.textContent = open ? 'Show less' : 'Read more';
-        section.classList.toggle('has-open-review', !!section.querySelector('.hm-review.is-open'));
-      });
-    });
-    section.classList.add('is-ready'); // clamp previews only once Read more can be offered
-    measure();
-    document.fonts?.ready.then(measure);
-    let resizeTimer = 0;
-    new ResizeObserver(() => { clearTimeout(resizeTimer); resizeTimer = window.setTimeout(measure, 150); }).observe(section);
-  }
-</script>

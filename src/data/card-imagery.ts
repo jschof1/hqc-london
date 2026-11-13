@@ -5,6 +5,18 @@
 
 export type CardImage = { src: string; alt: string };
 
+// Provenance is explicit: these directories and the named 6 November stems were generated.
+// Archived/stock/library photos are not reclassified by visual appearance.
+export function isIllustrativeImage(src = ''): boolean {
+  return src.startsWith('/images/phase8-nov10/') || src.startsWith('/images/generated/') ||
+    /^\/images\/phase8-nov6\/(home-a|workplace-a|complex-a|complex-b|scope-and-planning|communal-lift-lobby|property-handover|workplace-touchpoints)-(800|1600)\.webp$/.test(src);
+}
+export function illustrativeAlt(src: string, alt: string): string {
+  if (!isIllustrativeImage(src)) return alt;
+  const description = alt || Object.values(cardLibrary).find((image) => image.src === src)?.alt || 'Image.';
+  return description.startsWith('Illustrative:') ? description : `Illustrative: ${description}`;
+}
+
 const nov10 = (id: string, alt: string): CardImage => ({ src: `/images/phase8-nov10/${id}.webp`, alt });
 const nov6 = (name: string, alt: string): CardImage => ({ src: `/images/phase8-nov6/${name}-800.webp`, alt });
 
@@ -326,7 +338,7 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
       'What the Assessment May Involve': 'k-media',
       'Specialist Work Is Separated from Routine Cleaning': 'p-high-windows',
       'Confidentiality and Access': 'c-reception',
-      'Complex Cleaning Is Still Defined by the Outcome': 'n6-complex-b'
+      'Cleaning Defined by the Outcome': 'n6-complex-b'
     }
   },
   'about-high-quality-clean': {
@@ -358,7 +370,7 @@ export const outcomeCardImagery: Record<string, OutcomeCardImagery> = {
     }
   },
   'how-we-work': {
-    outcomes: ['g-enquiry', 'g-scope-plan', 'g-walkthrough'],
+    outcomes: ['g-enquiry', 'r-checklist-home', 'g-walkthrough'],
     scope: ['g-phone-desk', 'g-assessment', 'g-planner', 'g-quality-review'],
     sections: {
       '1. Tell Us What You Need to Achieve': 'p-postcode',

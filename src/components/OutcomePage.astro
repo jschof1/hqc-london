@@ -8,7 +8,7 @@ import '../styles/outcome-page.css';
 import { closingCtas, controlledCtaHref } from '../data/controlled-cta-links';
 import { sectionImagery } from '../data/section-imagery';
 import { outcomePages } from '../data/outcome-pages';
-import { cardImage, destinationThumbnails, outcomeCardImagery, relatedRouteImagery, type CardImage } from '../data/card-imagery';
+import { isIllustrativeImage, illustrativeAlt, cardImage, destinationThumbnails, outcomeCardImagery, relatedRouteImagery, type CardImage } from '../data/card-imagery';
 
 interface Props {
   page: OutcomePageData;
@@ -18,7 +18,12 @@ const { page } = Astro.props;
 const master = phase8Copy[page.slug as keyof typeof phase8Copy];
 // Pedro confirmed the 300+ evidence on 12 November. Keep the controlled count
 // sections; the Reviews selection itself remains pending a separate decision.
-const controlledSections = master?.sections ?? [];
+const controlledSections = (master?.sections ?? []).map((section) => page.slug === 'home-cleaning-london' && section.heading === 'Chosen by More Than 300 Clients' ? {
+  ...section,
+  // These two master-document planning notes were already withheld; restoring the
+  // approved count heading does not turn them into client-facing proof.
+  blocks: section.blocks.filter((block) => !['Potential proof message: Clients trust HQC to care for London homes even when they are not in the country.', 'This message should be used only once the supporting client permissions and evidence are confirmed.'].includes('text' in block ? block.text : ''))
+} : section);
 const heroSupport = (master as { heroSupport?: string } | undefined)?.heroSupport;
 const visual = getPageVisual(page.slug);
 // Approved in-body CTAs are kept as `cta` blocks; consecutive ones share a row.
@@ -148,7 +153,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
 <main class="hm-page outcome-page bg-porcelain pt-20">
   {/* Hero: copy on midnight beside the page photograph. */}
   <section class="op-hero hm-dark bg-midnight text-white">
-    <img src={visual.hero} alt={visual.heroAlt} class="op-hero-photo" width="1600" height="1100" fetchpriority="high" />
+    <img src={visual.hero} alt={illustrativeAlt(visual.hero, visual.heroAlt)} class="op-hero-photo" width="1600" height="1100" fetchpriority="high" />{isIllustrativeImage(visual.hero) && <span class="image-disclosure">Illustrative</span>}
     <div class="op-hero-copy">
       <nav aria-label="Breadcrumb" class="op-breadcrumb">
         <a href="/">Home</a>
@@ -190,14 +195,14 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
           <div class="op-founder" data-reveal="fade"><FounderPortrait /></div>
         ) : (
           <figure class="op-outcome-photo" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
-            <img src={outcomeFigure.src} alt={outcomeFigure.alt} loading="lazy" decoding="async" width="1000" height="750" />
+            <img src={outcomeFigure.src} alt={illustrativeAlt(outcomeFigure.src, outcomeFigure.alt)} loading="lazy" decoding="async" width="1000" height="750" />{isIllustrativeImage(outcomeFigure.src) && <span class="image-disclosure">Illustrative</span>}
           </figure>
         )}
       </div>
       <div class="op-outcome-cards" data-stagger="80">
         {visual.outcomes.map((item, index) => (
           <article class="op-outcome-card">
-            {outcomeImages[index] && <span class="op-card-media"><img src={outcomeImages[index].src} alt={outcomeImages[index].alt} loading="lazy" decoding="async" width="1200" height="900" /></span>}
+            {outcomeImages[index] && <span class="op-card-media"><img src={outcomeImages[index].src} alt={illustrativeAlt(outcomeImages[index].src, outcomeImages[index].alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(outcomeImages[index].src) && <span class="image-disclosure">Illustrative</span>}</span>}
             <div class="op-outcome-card-body">
               <span class="op-num" aria-hidden="true">0{index + 1}</span>
               <p>{item}</p>
@@ -256,7 +261,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
         while (lastGroup && lastGroup.body.length && ['ctas', 'support'].includes(lastGroup.body[lastGroup.body.length - 1].kind) && groups.length > 1 && groups.slice(0, -1).every((g) => !g.body.some((b) => b.kind === 'ctas'))) tail.unshift(lastGroup.body.pop()!);
         const extra = plan.extra.length > 0 && (
           <div class="op-strip" data-section-imagery data-stagger="90">
-            {plan.extra.map((image) => <figure><img src={image.src} srcset={image.srcset} sizes="(min-width: 640px) 30vw, 100vw" alt={image.alt} loading="lazy" decoding="async" width="1600" height="900" /></figure>)}
+            {plan.extra.map((image) => <figure><img src={image.src} srcset={image.srcset} sizes="(min-width: 640px) 30vw, 100vw" alt={illustrativeAlt(image.src, image.alt)} loading="lazy" decoding="async" width="1600" height="900" />{isIllustrativeImage(image.src) && <span class="image-disclosure">Illustrative</span>}</figure>)}
           </div>
         );
         const sectionClass = ['op-chapter', `op-l-${plan.layout}`, `op-ground-${plan.ground}`, plan.ground === 'midnight' && 'hm-dark'];
@@ -269,7 +274,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
               {extra}
             </div>
             <figure class="hm-split-media" data-card-imagery="section" data-reveal="clip" style={`--hm-cover: var(--color-${plan.ground === 'white' ? 'white' : 'porcelain'})`}>
-              <img src={plan.image!.src} alt={plan.image!.alt} loading="lazy" decoding="async" width="1200" height="900" />
+              <img src={plan.image!.src} alt={illustrativeAlt(plan.image!.src, plan.image!.alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(plan.image!.src) && <span class="image-disclosure">Illustrative</span>}
             </figure>
           </section>
         );
@@ -277,7 +282,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
         if (plan.layout === 'stage') return (
           <section class:list={[...sectionClass, 'hm-stage', plan.side === 'left' && 'op-stage-left']}>
             <div class="hm-stage-media hm-parallax">
-              <img src={plan.image!.src} alt={plan.image!.alt} data-card-imagery="section" loading="lazy" decoding="async" width="1200" height="900" />
+              <img src={plan.image!.src} alt={illustrativeAlt(plan.image!.src, plan.image!.alt)} data-card-imagery="section" loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(plan.image!.src) && <span class="image-disclosure">Illustrative</span>}
             </div>
             <div class="hm-stage-panel op-col" data-reveal={plan.side === 'left' ? 'fade' : 'right'}>
               <h2 class="section-title">{heading}</h2>
@@ -325,7 +330,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
                   <div class="op-flow">{intro.map((block, index, all) => <div data-reveal>{renderBlock(block, index, all)}</div>)}</div>
                 </div>
                 <div class:list={[plan.image && 'op-cards-with-photo']}>
-                {plan.image && <figure class="op-card-photo" data-card-imagery="section" data-reveal="clip" style={`--hm-cover: var(--color-${plan.ground === 'white' ? 'white' : 'porcelain'})`}><img src={plan.image.src} alt={plan.image.alt} loading="lazy" decoding="async" width="1200" height="900" /></figure>}
+                {plan.image && <figure class="op-card-photo" data-card-imagery="section" data-reveal="clip" style={`--hm-cover: var(--color-${plan.ground === 'white' ? 'white' : 'porcelain'})`}><img src={plan.image.src} alt={illustrativeAlt(plan.image.src, plan.image.alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(plan.image.src) && <span class="image-disclosure">Illustrative</span>}</figure>}
                 <div class:list={['op-cards', plan.image ? 'op-cards-2' : `op-cards-${cols(count)}`]} data-stagger="70">
                   {groups.map((group) => (
                     <article class="op-card">
@@ -432,16 +437,6 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
     </section>
   )}
 
-  {page.slug === 'home-cleaning-london' && (
-    <section class="op-chapter op-l-statement op-ground-midnight hm-dark">
-      <div class="op-wrap op-statement-inner">
-        <p class="section-kicker" data-reveal="fade">Private client work</p>
-        <h2 class="section-title" data-reveal="title">Private clients across London</h2>
-        <p class="op-p" data-reveal>HQC has worked with private clients across London, including clients who live abroad and rely on us to look after their London properties.</p>
-      </div>
-    </section>
-  )}
-
   {/* Scope: centred statement over a row of dark photo cards. */}
   <section class="op-scope hm-dark bg-midnight text-white">
     <div class="op-wrap">
@@ -452,7 +447,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
       <div class="op-scope-grid" data-stagger="70">
         {visual.scope.map((item, index) => (
           <article class="hm-card hm-card-dark">
-            {scopeImages[index] && <span class="hm-card-media"><img src={scopeImages[index].src} alt={scopeImages[index].alt} loading="lazy" decoding="async" width="1200" height="900" /></span>}
+            {scopeImages[index] && <span class="hm-card-media"><img src={scopeImages[index].src} alt={illustrativeAlt(scopeImages[index].src, scopeImages[index].alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(scopeImages[index].src) && <span class="image-disclosure">Illustrative</span>}</span>}
             <div class="hm-card-body">
               <span class="op-scope-label">Scope {index + 1}</span>
               <h3 class="op-scope-title">{item}</h3>
@@ -460,7 +455,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
           </article>
         ))}
         <article class="hm-card hm-card-dark hm-card-featured">
-          {scopeImages[visual.scope.length] && <span class="hm-card-media"><img src={scopeImages[visual.scope.length]!.src} alt={scopeImages[visual.scope.length]!.alt} loading="lazy" decoding="async" width="1200" height="900" /></span>}
+          {scopeImages[visual.scope.length] && <span class="hm-card-media"><img src={scopeImages[visual.scope.length]!.src} alt={illustrativeAlt(scopeImages[visual.scope.length]!.src, scopeImages[visual.scope.length]!.alt)} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(scopeImages[visual.scope.length]!.src) && <span class="image-disclosure">Illustrative</span>}</span>}
           <div class="hm-card-body">
             <span class="op-scope-label">Confirmed before work</span>
             <h3 class="op-scope-title">Inclusions, timing and the handover standard</h3>
@@ -483,7 +478,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
         </div>
         <div class:list={['op-gallery-grid', `op-cards-${cols(shownGallery.length)}`]} data-stagger="80">
           {shownGallery.map((image) => (
-            <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" width="1000" height="750" /></figure>
+            <figure><img src={image.src} alt={illustrativeAlt(image.src, image.alt)} loading="lazy" decoding="async" width="1000" height="750" />{isIllustrativeImage(image.src) && <span class="image-disclosure">Illustrative</span>}</figure>
           ))}
         </div>
       </div>
@@ -520,7 +515,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
       <div class:list={['op-related-grid', `op-cards-${cols(page.related.length)}`]} data-stagger="80">
         {page.related.map((link, index) => (
           <a class="hm-route group flex flex-col overflow-hidden rounded-[1.25rem] bg-white text-inherit no-underline" href={link.href}>
-            <span class="hm-route-media block overflow-hidden"><img src={relatedImages[index].src} alt={relatedImages[index].alt} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="675" /></span>
+            <span class="hm-route-media block overflow-hidden"><img src={relatedImages[index].src} alt={illustrativeAlt(relatedImages[index].src, relatedImages[index].alt)} class="aspect-[16/10] w-full object-cover" loading="lazy" decoding="async" width="1200" height="675" />{isIllustrativeImage(relatedImages[index].src) && <span class="image-disclosure">Illustrative</span>}</span>
             <span class="op-related-body">
               <span class="meta-label" aria-hidden="true">0{index + 1}</span>
               <span class="op-related-title">{link.label}</span>
@@ -534,7 +529,7 @@ const cols = (count: number) => (count >= 4 && count % 3 !== 0 ? (count === 4 ? 
 
   {/* Closing: a photograph not used elsewhere on the page, flat tint, centred actions. */}
   <section class="op-closing hm-dark hm-parallax">
-    {closingImage && <img class="op-closing-photo" src={closingImage.src} alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="900" />}
+    {closingImage && <img class="op-closing-photo" src={closingImage.src} alt={illustrativeAlt(closingImage.src, "")} aria-hidden={isIllustrativeImage(closingImage.src) ? undefined : "true"} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(closingImage.src) && <span class="image-disclosure">Illustrative</span>}}
     <div class="op-closing-content">
       <p class="section-kicker" data-reveal="fade">The next step is simple</p>
       <h2 class="section-title" data-reveal="title">{closing.primary.label}</h2>

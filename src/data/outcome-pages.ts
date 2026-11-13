@@ -415,8 +415,8 @@ export const outcomePages: OutcomePage[] = [
     audience: 'Residential and commercial prospects seeking price clarity.',
     primaryCta: 'Get a Cleaning Quote',
     primaryHref: quote,
-    secondaryCta: 'Book an Essential Clean™',
-    secondaryHref: '/book-essential-clean/',
+    secondaryCta: 'Check Essential Clean™ Pricing',
+    secondaryHref: '/essential-clean-london/',
     proof: ['Condition and scope affect labour', 'Access, parking and timing are considered', 'Fixed examples will only be published when validated'],
     related: [{ label: 'Essential Clean', href: '/essential-clean-london/' }, { label: 'Office cleaning', href: '/office-cleaning-london/' }, { label: 'Cleaning FAQs', href: '/cleaning-faqs/' }]
   },

@@ -888,3 +888,17 @@ main.hm-page h2.section-title, .hm-outcome-title, .hm-homes-title, #find-my-serv
   .hm-hero .hm-trust-row { column-gap: 1.1rem; }
   .hm-hero .hm-trust-row > span + span::before { display: none; }
 }
+
+/* Pedro's selected proof cards replace the homepage review carousel. */
+.hm-review-cards { display: grid; gap: 1rem; margin-bottom: 0; padding: 0; list-style: none; }
+.hm-review-cards .hm-review { width: auto; min-width: 0; }
+.hm-review-cards .hm-review-by { flex-wrap: wrap; }
+@media (min-width: 640px) { .hm-review-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .hm-review-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Retain both people and original pixels in the genuine landscape photograph. */
+.hm-founder-photo:has(img[src$="pedro-on-site-original.png"]) { aspect-ratio: 4 / 3; min-height: 0; }
+.hm-founder-photo img[src$="pedro-on-site-original.png"] { object-fit: cover; width: 110%; height: 110%; inset: -5%; max-width: none; background: var(--color-midnight); }
+
+/* A visible caption accompanies each explicitly generated image, including decorative uses. */
+.image-disclosure { position: absolute; z-index: 3; right: .5rem; bottom: .5rem; display: block; width: max-content; max-width: calc(100% - 1rem); padding: .2rem .4rem; border-radius: .2rem; background: rgb(14 42 49 / .86); color: white; font: 500 .65rem/1.4 var(--font-sans, sans-serif); letter-spacing: .04em; }
+figure:has(> .image-disclosure), span:has(> .image-disclosure), .hm-route-media:has(> .image-disclosure) { position: relative; }

@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import MotionKit from '../components/MotionKit.astro';
 import { offeringImages } from '../data/section-imagery';
-import { cardLibrary } from '../data/card-imagery';
+import { isIllustrativeImage, illustrativeAlt, cardLibrary } from '../data/card-imagery';
 import '../styles/enquiry-pages.css';
 
 // Image-led round (10 Nov 2026): route cards reuse the three-offerings images.
@@ -45,7 +45,7 @@ const routeCards = [
         <p class="eq-hero-lead">You do not need to select the perfect service before contacting HQC. Start with the property or site, its current condition and what needs to happen next.</p>
       </div>
       <figure class="eq-hero-media">
-        <img src={heroPhoto.src} alt="" width="1200" height="900" fetchpriority="high" loading="eager" decoding="async" />
+        <img src={heroPhoto.src} alt={illustrativeAlt(heroPhoto.src, "")} width="1200" height="900" fetchpriority="high" loading="eager" decoding="async" />{isIllustrativeImage(heroPhoto.src) && <span class="image-disclosure">Illustrative</span>}
       </figure>
     </section>
 
@@ -147,7 +147,7 @@ const routeCards = [
             {routeCards.map((card) => (
               <article class="hm-card hm-card-dark">
                 <span class="hm-card-media block overflow-hidden">
-                  <img src={card.image.src} srcset={card.image.srcset} sizes="(min-width: 1280px) 330px, (min-width: 768px) 50vw, 100vw" alt={card.image.alt} loading="lazy" decoding="async" width="800" height="450" />
+                  <img src={card.image.src} srcset={card.image.srcset} sizes="(min-width: 1280px) 330px, (min-width: 768px) 50vw, 100vw" alt={illustrativeAlt(card.image.src, card.image.alt)} loading="lazy" decoding="async" width="800" height="450" />{isIllustrativeImage(card.image.src) && <span class="image-disclosure">Illustrative</span>}
                 </span>
                 <div class="hm-card-body">
                   <h3 class="eq-card-title">{card.title}</h3>
@@ -171,7 +171,7 @@ const routeCards = [
           <p class="mt-6 text-lg leading-8 text-slate" data-reveal>Not every enquiry needs every field.</p>
         </div>
         <figure class="hm-split-media" data-reveal="clip" style="--hm-cover: var(--color-porcelain)">
-          <img src={informationPhoto.src} alt="" loading="lazy" decoding="async" width="1200" height="900" />
+          <img src={informationPhoto.src} alt={illustrativeAlt(informationPhoto.src, "")} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(informationPhoto.src) && <span class="image-disclosure">Illustrative</span>}
         </figure>
       </section>
 
@@ -188,7 +188,7 @@ const routeCards = [
       {/* Booking and accuracy: full-bleed photograph with one white panel holding both notes. */}
       <div class="hm-stage">
         <div class="hm-stage-media hm-parallax">
-          <img src={accuracyPhoto.src} alt="" loading="lazy" decoding="async" width="1200" height="900" />
+          <img src={accuracyPhoto.src} alt={illustrativeAlt(accuracyPhoto.src, "")} loading="lazy" decoding="async" width="1200" height="900" />{isIllustrativeImage(accuracyPhoto.src) && <span class="image-disclosure">Illustrative</span>}
         </div>
         <div class="hm-stage-panel" data-reveal="right">
           <section aria-labelledby="quote-not-booking-title">
@@ -473,7 +473,7 @@ const routeCards = [
       // Receipt measurement is emitted above, before the form resets.
     } catch {
       window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'routed-quote-form', stage: 'error' } }));
-      message.innerHTML = 'We could not confirm receipt. Your details are still here. Before submitting again, please call <a href="tel:+442088703925" class="font-semibold underline">0208 870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
+      message.innerHTML = 'We could not confirm receipt. Your details are still here. Before submitting again, please call <a href="tel:+442088703925" class="font-semibold underline">020 8870 3925</a> or email <a href="mailto:sales@highqualityclean.co.uk" class="font-semibold underline">sales@highqualityclean.co.uk</a>.';
       message.className = 'mt-6 rounded-lg bg-red-50 p-4 text-sm text-red-900';
     } finally {
       submit.disabled = false;

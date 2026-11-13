@@ -41,7 +41,8 @@ const keepPhotos = {
   armchair: { src: '/images/phase8-nov6/keep-p-de8736bfb6.jpg', alt: 'Living room with a yellow armchair and a floor lamp.' } // p-de8736bfb6 letting agents (Unsplash stock)
 };
 
-const propertyGallery = [keepPhotos.livingRoom, keepPhotos.ensuite, keepPhotos.hallway];
+const communalSpace = { src: '/images/phase8-nov6/communal-lift-lobby-800.webp', alt: 'Shared apartment-block entrance with lift doors and a cleaning trolley.' };
+const propertyGallery = [communalSpace, keepPhotos.ensuite, keepPhotos.hallway];
 
 // Round 4 (H1/H2): pages whose hero used a skip-marked photo now use a keep photo as the hero,
 // and their gallery excludes that hero so the same image is not shown twice.
@@ -81,7 +82,7 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   },
   'estate-letting-agent-cleaning-london': {
     ...heroFromKeep(keepPhotos.townhouse),
-    gallery: [keepPhotos.armchair, keepPhotos.hallway, keepPhotos.livingRoom],
+    gallery: [keepPhotos.armchair, keepPhotos.hallway, communalSpace],
     outcomes: ['Properties ready for viewings', 'Faster instruction-to-handover route', 'One contact for repeat requirements'],
     scope: ['Void and move-in cleans', 'End of tenancy requirements', 'Access, inventories and deadline coordination']
   },
@@ -99,12 +100,13 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
   },
   'post-construction-cleaning-london': {
     ...heroFromKeep(keepPhotos.bathroom),
-    gallery: [keepPhotos.ensuite, keepPhotos.livingRoom, keepPhotos.hallway],
+    gallery: [keepPhotos.ensuite, communalSpace, keepPhotos.hallway],
     outcomes: ['Dust removed in planned stages', 'Finishes prepared for inspection', 'A defined snagging and handover point'],
     scope: ['Build dust and surface residue', 'High-level and detailed finishing', 'Programme, other trades and safe access']
   },
   'portfolio-cleaning-support-london': {
-    ...heroFromKeep(keepPhotos.livingRoom),
+    hero: '/images/generated/hqc-property-hero.webp',
+    heroAlt: 'Empty flat hallway with wooden floors and open doors.',
     gallery: [keepPhotos.ensuite, keepPhotos.hallway, keepPhotos.townhouse],
     outcomes: ['Consistent instructions across sites', 'Centralised communication', 'A clearer mobilisation process'],
     scope: ['Property list and service types', 'Local access arrangements', 'Reporting, approvals and invoicing needs']

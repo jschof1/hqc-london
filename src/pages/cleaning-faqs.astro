@@ -1,4 +1,5 @@
 ---
+import { isIllustrativeImage, illustrativeAlt } from '../data/card-imagery';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import MotionKit from '../components/MotionKit.astro';
@@ -46,10 +47,11 @@ const faqEntities = faqGroups.flatMap((group) => group.items.map((faq) => ({
               </details>
             ))}
           </div>
-          {chapterPhotos[index] && <figure class="utility-faq-photo hm-parallax" data-reveal="clip" style="--hm-cover: var(--color-porcelain)"><img src={chapterPhotos[index]} alt="" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async" /></figure>}
+          {chapterPhotos[index] && <figure class="utility-faq-photo hm-parallax" data-reveal="clip" style="--hm-cover: var(--color-porcelain)"><img src={chapterPhotos[index]} alt={illustrativeAlt(chapterPhotos[index], "")} aria-hidden={isIllustrativeImage(chapterPhotos[index]) ? undefined : "true"} width="800" height="600" loading="lazy" decoding="async" />{isIllustrativeImage(chapterPhotos[index]) && <span class="image-disclosure">Illustrative</span>}</figure>}
         </section>
       ))}
       <section class="utility-closing utility-closing-photo hm-dark bg-midnight text-white" data-reveal="fade" aria-labelledby="faq-still-not-sure">
+        <span class="image-disclosure">Illustrative</span>
         <h2 id="faq-still-not-sure" class="section-title font-serif">Still Not Sure?</h2>
         <p class="mt-4 text-lg leading-8 text-white/75">Tell us what you need the cleaning to achieve.</p>
         <div class="mt-7 flex flex-wrap gap-3">

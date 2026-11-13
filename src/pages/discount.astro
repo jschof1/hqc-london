@@ -246,7 +246,7 @@ const description = "Claim your exclusive 30% introductory rate for High Quality
       } catch (error) {
         window.dispatchEvent(new CustomEvent('hqc:form-stage', { detail: { id: 'discount-form', stage: 'error' } }));
         console.error('Error submitting discount request:', error);
-        alert('Something went wrong. Please try again or call us directly at 0208 8703925.');
+        alert('Something went wrong. Please try again or call us directly at 020 8870 3925.');
 
         if (submitBtn) {
           submitBtn.disabled = false;
