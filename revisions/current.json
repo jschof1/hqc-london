@@ -1,528 +1,724 @@
 {
   "schemaVersion": 1,
-  "baseline": "39fc985b5facc6028bf5201430cbf57238b78d2b",
-  "request": "Jack, 10 November 2026 (T3 thread): starting with the homepage of the nov10-logo-clarity version (https://6b5c2f00.hqc-london.pages.dev, commit 3f212df), significantly improve UI, UX, motion design and conversion so the page feels like a beautiful, dynamic journey rather than a wall of text, without changing or removing any copy. Use the council (three independent model reviewers) until the standard is met. Follow-up, Jack, 11 November 2026 (same T3 thread): make the homepage far more image-led with deliberate photographic section backgrounds instead of gradients; remove semicolons from the copy where they appear; make motion and scroll animation feel completely smooth and never buggy; vary positioning so content is not always on the left; split sections where it helps and make each section more immersive and less chunky, following the conventions of award-winning service-business sites; diagnose and fix what is missing from the hero. Follow-up, Jack, 11 November 2026 (later) (same thread), answering four decisions: add HQC's Google reviews as proof with a moving carousel below the hero; remove the repeated 'Cleaning Defined by the Outcome' section labels; fix the header so it does not wrap at 1024px; use the photo of Pedro he sent on WhatsApp (10 November 2026, Pedro's chat) for the founder portrait. Follow-up, Jack, 11 November 2026 (after the 2531bf56 preview): fix the service selector section: make its photograph the section background, move the text to the top, and separate the cards in a split grid; improve the selector's UI and usability. Follow-up, Jack, 11 November 2026: use the logo asset set prepared for Pedro (flat gold logo kit built 28 Oct 2026 to Pedro's 8 Oct 2026 specification: horizontal recomposition for the header, compact monogram, stacked lock-up, favicons and app icons) properly across the site. Follow-up, Jack, 11 November 2026: Jack is happy with the homepage; using the taste skill, update every other page to the same design, pragmatically through shared components, with agents working on different pages in parallel. No copy changes. Follow-up, Jack, 11 November 2026 (after the 575ddc71 preview): the other pages have many silly mistakes and lack the homepage's range of presentation; do much more so they are far better. Follow-up, Jack, 11 November 2026: the header logo in the top left looks weird; work on it. Follow-up, Jack, 11 November 2026: use the more golden, alive 3D logo in the header instead of the flat one. Follow-up, Jack, 11 November 2026 (same T3 thread): fix the photo of the cleaner wiping the banister using Codex Imagen, because it has a stray lock-like fitting on the front of the banister post.",
+  "baseline": "d4c296e54787acd682700ea952bc72707159981d",
+  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments.",
   "requirements": [
     {
-      "id": "M1",
-      "text": "Planning: freeze this scope on the nov10-logo-clarity line; earlier accepted Phase 8 requirements (logo round L1/L2, F1-F3, copy restoration, imagery) stay in force."
+      "id": "SCOPE",
+      "text": "Jack 13 Nov authorises implementation of clear items from Pedro 12 Nov audit and two accompanying instructions. Preserve cumulative Phase 8 and later operational/design improvements. Current working source is the implementation baseline; audited source 028b45098becf5ca4cb0800673f783f3cd98f797 and immutable 71d122e7 are separate references, not the latest accepted website. Private evidence: hqc-review-2026-11-13 (original emails, all eight audit tabs, attachment hashes and UPDATE-PLAN.md)."
     },
     {
-      "id": "D1",
-      "text": "Homepage only: significantly improve presentation, layout rhythm and motion design (entrance choreography, scroll-linked motion, interactive states) so the page reads as a guided journey."
+      "id": "COPY",
+      "text": "Restore exact missing call-outs and two three-month offer conditions per COPY-070/076/085/097/098/112/118/119/120/127/128/136/137/138/196. Apply only the explicit wording changes in audit email section 4. Restore approved 300+ statements on Homepage, Home Cleaning, About, Reviews. Keep other approved copy and order."
     },
     {
-      "id": "D2",
-      "text": "Raise conversion potential: clearer CTA hierarchy, persistent access to the existing primary actions, a stronger service-selector interaction and less friction, reusing only existing on-page CTA labels."
+      "id": "LEGAL",
+      "text": "Replace Privacy contact placeholders with privacy@highqualityclean.co.uk and Terms section 33 with support@highqualityclean.co.uk. Apply exact supplied Terms section 7 paragraph. Delete only named 50% deposit disclaimer from booking page. Preserve approved Terms section 5 unchanged pending Automaid-name decision. Retain unresolved legal date; show draft warning only for preview, never production. Legal H1s already exist: preserve."
     },
     {
-      "id": "D3",
-      "text": "Preserve every word of homepage copy (visible text, alt text, aria labels, title and meta), its order, every link destination, data-track attribute, selector routing and conversion event. A mechanical text comparison against the baseline must show no changed, removed or reordered copy."
+      "id": "REVIEWS",
+      "text": "Replace homepage reviews carousel with exactly Kara O., Lucy M., Yori Z., Fabio K., Chris M., Liv M. in approved stars/quotation/public-name/service card format. Preserve 4.9/92 badge. Exclude Thomas B. and Andre B. from every public review path. Reviews-page selection remains held: no inferred reuse of six. Remove only explicit evidence placeholders/gallery on Reviews; preserve pending visible proof/selection gate in evidence register rather than inventing cards/case studies."
     },
     {
-      "id": "D4",
-      "text": "Honour prefers-reduced-motion, keep all content readable without JavaScript, avoid layout shift and LCP delay, keep keyboard and screen-reader behaviour, and add no new runtime dependencies."
+      "id": "REMOVALS",
+      "text": "Remove homepage A clear standard from the first conversation carousel only. Client evidence band homepage only, while retaining restored 300+ page content. Whole-section-versus-heading removal, service-page boundary and non-service propagation are HELD. Do not remove those generic shared sections or closing CTAs pending clarification."
     },
     {
-      "id": "D5",
-      "text": "Leave every other page, shared component, form, CRM routing, tracking, schema, redirect, every image and the Phase 8 production hold unchanged."
+      "id": "CONTACT",
+      "text": "Show sales email for new enquiries/quotes and support email for existing bookings/general/supplier/admin. Remove only misleading Location card (expressly allowed by Pedro). Client-facing intro may use only exact approved material; new proposed wording held until approved. Visible public number 020 8870 3925, retain +442088703925 dial destinations and nonpublic forwarding boundary. Verify existing confirmed-success/preview/failure logic before modifying it."
     },
     {
-      "id": "R6",
-      "text": "Record the resulting version in revisions/versions.json (and the review room) before handover; full npm run check:revision passes."
+      "id": "ROUTES",
+      "text": "Correct ROUTE-001..006 exact destinations in private plan/workbook including selector complex and next=booking. Pricing CTA Check Essential Clean\u2122 Pricing uses controlled source routing, do not invent destination."
     },
     {
-      "id": "I7",
-      "text": "Image-led homepage (Jack, 11 Nov): each major section gets a deliberate photographic treatment (full-bleed bands, split media, image-led cards) using only existing library images under public/images, no image repeated on the page, no decorative gradients, glows or orbs; readability overlays are flat tints."
+      "id": "COMPLEX",
+      "text": "Apply exact 23:16 Complex amendment only: supporting hero line; mandatory site-visit intro and remove site-visit bullet only; preserve original Confidentiality heading/intro/list and replace closing paragraph with exact four commitments; replace controlled step 3 and add exact capacity line after step 7. Preserve SEO title/meta/H1/CTAs/routes and all other content."
     },
     {
-      "id": "C8",
-      "text": "Copy punctuation (Jack, 11 Nov): homepage list items render without trailing semicolons or full stops; no other copy changes. This is the only authorised exception to D3."
+      "id": "LOCATIONS",
+      "text": "Restore exact Batch 6 H1/intro/CTAs/four-route module on 17 retained location URLs with existing visual language. No invented local claims or blind restoration of historical marketing claims. Local-fact and metadata changes await source/equity evidence; preserve metadata pending that evidence. Retain existing location URL inventory and service coverage gates."
     },
     {
-      "id": "L9",
-      "text": "Layout and motion (Jack, 11 Nov): vary alignment and composition across sections (centred, right, split, full-bleed), split sections where it clarifies, diagnose and fix the hero (one decisive image, clear hierarchy, routes in view), and make all motion smooth: no jitter, no late pop-in, no cursor gimmicks; scroll effects run on transform and opacity only."
+      "id": "IMAGERY",
+      "text": "Add visible Illustrative captions and meaningful alt disclosure for generated imagery only, using explicit provenance. Keep genuine/unknown photo provenance separate. Keep service galleries; remove Reviews gallery. Restrict richmond-living-room to home contexts, use existing suitable communal imagery for non-home routes. Replace one duplicate floor-plan assignment with existing suitable distinct image. Regenerate defective routine-vacuum image and correct inconsistent AI uniform logos on left chest only when inspected, preserving teal direction and other details. No arbitrary image replacements/deletions."
     },
     {
-      "id": "G10",
-      "text": "Google reviews (Jack, 11 Nov, later): a dated snapshot of HQC's public Google Business Profile reviews (4.9 rating, 92 reviews at capture) shown as a moving carousel directly below the hero, plus the rating in the hero trust row. Review text verbatim; reviewers shown by first name and last initial; 4- and 5-star reviews shown; no dates. Pauses on hover and focus, static and scrollable under reduced motion, duplicates hidden from assistive technology."
+      "id": "FOUNDER",
+      "text": "Copy exact genuine supplied PNG to public/images/pedro-on-site-original.png and use homepage existing founder slot with CSS crop only as appropriate, both people retained, no logo/colour changes, exact alt from email and no Illustrative label. Preserve other founder portraits."
     },
     {
-      "id": "K11",
-      "text": "Remove the five repeated 'Cleaning Defined by the Outcome' kickers above the homepage chapters (Jack, 11 Nov, later); the hero kicker and the chapter heading of the same name remain."
+      "id": "SEMANTICS",
+      "text": "Approved Batch 6 404 copy, CTAs and five useful routes; actual missing URL must return 404. FAQ question headings, Request a Quote terms and homepage card titles become H3 with existing styling. No general copy/SEO/layout rewrite."
     },
     {
-      "id": "H12",
-      "text": "Header (Jack, 11 Nov, later): primary navigation and the Request a Quote button stay on one line from 1024px; no label or link changes."
+      "id": "PARITY",
+      "text": "Review baseline against canonical main dec5ec0a9d1fb2fc591029c3b50274f46f208760. Existing Phase 8 intake reconciliation stays in place; no wholesale main merge. Preserve newer Plausible behaviour via exact scoped port only if contract-compatible, otherwise document remaining dependency. Robots and Contact success findings require evidence first; no guessed fix. Production hold stays."
     },
     {
-      "id": "P13",
-      "text": "Founder portrait (Jack, 11 Nov, later): replace the founder portrait image with the photograph Pedro sent on WhatsApp, cropped to portrait; same alt text."
+      "id": "VERIFY",
+      "text": "Run scope while editing, meaningful lightweight regression checks and available forms/analytics suites under resource guard. No local build/browser/image-render batches while guard denies. Independent other-provider hunk review; then hosted review build/captures and registry before any handover. No live form submit/payment/provider write or message send without matching authority. External legal/booking/CRM/acceptance gates remain explicit."
     },
     {
-      "id": "S14",
-      "text": "Service selector (Jack, 11 Nov): photograph as the section background with a flat tint, heading and intro at the top, the nine situations in a two-column split grid (Homes: 01 to 05; Workplaces and property: 06 to 09) with the recommendation directly beneath; labels, order, routing, results copy and events unchanged."
-    },
-    {
-      "id": "G10a",
-      "text": "Review data correction (found 11 Nov): rating-only Google reviews whose captured text was HQC's reply are removed from the carousel, so every displayed quote is the reviewer's own words."
-    },
-    {
-      "id": "LG15",
-      "text": "Logo (Jack, 11 Nov): the flat gold horizontal logo in the site header (the compact monogram where the header is tight), the flat gold stacked lock-up in the footer in place of the 3D plaque, favicons (16/32/48 ICO and PNG), an Apple touch icon and web manifest icons from the same kit, and the organisation schema logo pointing at a raster logo file. Artwork copied unchanged from the kit; alt text and link labels unchanged; the old 3D plaque file is kept, not deleted."
-    },
-    {
-      "id": "SW16",
-      "text": "Site-wide design (Jack, 11 Nov): bring the 27 other controlled pages (the 22 outcome pages via OutcomePage.astro, Request a Quote, Contact, Cleaning FAQs, Privacy Policy, Terms and Conditions) plus the 17 location pages, Book Essential Clean and the 404 page in line with the approved homepage design through a shared kit (MotionKit component and the homepage stylesheet's components): image-led sections, gold pill calls to action, one heading scale, section borders, smooth reveal motion with reduced-motion and no-JS fallbacks. Every visible word, alt text, link destination, data-track attribute, form field, form action, routing, schema and meta stays exactly as it is; forms keep their markup, names, validation and submission scripts. Legacy noindex pages (/faq, /disclaimer, /offer, /feedback) are out of scope."
-    },
-    {
-      "id": "SW17",
-      "text": "Site-wide second pass (Jack, 11 Nov): each section on every page is composed from its content (photo split, full-bleed photo with panel, dark icon cards, centred columns, card grids, centred statement bands) so neighbours never repeat a layout; numbered headings get copper numerals; a photograph appears at most once per page (repeats of the hero in galleries and outcome figures are dropped); list items drop trailing semicolons and full stops site-wide as on the homepage (C8 extended); no other wording changes."
-    },
-    {
-      "id": "LG18",
-      "text": "Logo rebuild (Jack, 11 Nov): the flat logo set is rebuilt cleanly. Monogram re-traced from the approved stacked master at 8x with smoothing (no lumps); wordmark and tagline set as vector paths in the faces the approved artwork uses (Cinzel Bold, Montserrat Medium); flat gold matched to the site gold #D1A467; layout kept to Pedro's horizontal recomposition. A header-size lockup omits the tagline (illegible below about 60px tall); the footer and full lockups keep it. Favicons and app icons regenerated from the new monogram on a midnight tile."
-    },
-    {
-      "id": "LG19",
-      "text": "Header logo (Jack, 11 Nov): the header uses the 3D gold logo: the HQC monogram cut from the approved 3D artwork along the clean traced outline, with HIGH QUALITY CLEAN and the rule in the approved lettering filled with a metallic gold gradient. The footer and icons keep the flat set. Pedro's 8 Oct request for a flat website logo is noted for his review."
-    },
-    {
-      "id": "PH20",
-      "text": "Banister photo (Jack, 11 Nov): remove the brass hinge or latch plate from the front of the newel post in the complex-a photograph (cleaner wiping a communal stair handrail) using a Codex Imagen edit. Only the newel post area changes; the edited post is colour-matched and blended into the untouched original, and the file names, sizes and alt text stay the same."
+      "id": "RECORD",
+      "text": "Record exact implementation status, check results and remaining gates in phase8/REVIEW_CORRECTIONS_2026-11-13.md and revisions/acceptance-2026-11-13.json, with no private email text/access links. Append visual version after hosted evidence, never overwrite previous versions. Commit/push review branch, no production release."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "M1"
+        "SCOPE"
       ],
       "allowDelete": false,
-      "reason": "Planning-only scope freeze."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "revisions/acceptance-2026-11-13.json",
+      "requirements": [
+        "RECORD"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "R6"
+        "RECORD"
       ],
       "allowDelete": false,
-      "reason": "Register the reviewed version."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "src/pages/index.astro",
+      "path": "phase8/REVIEW_CORRECTIONS_2026-11-13.md",
       "requirements": [
-        "C8",
-        "D1",
-        "D2",
-        "D3",
-        "D4",
-        "G10",
-        "I7",
-        "K11",
-        "L9",
-        "SW16"
+        "RECORD",
+        "VERIFY"
       ],
       "allowDelete": false,
-      "reason": "Homepage presentation, motion hooks and sticky CTA using existing labels."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "src/components/ServiceSelector.astro",
+      "path": "src/data/phase8-copy.json",
       "requirements": [
-        "D1",
-        "D2",
-        "D3",
-        "D4",
-        "I7",
-        "L9",
-        "S14"
+        "COPY",
+        "COMPLEX"
       ],
       "allowDelete": false,
-      "reason": "Homepage-only component: selection state and animated result panel; results copy untouched."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "src/components/TrustRail.astro",
+      "path": "src/data/phase8-legal.json",
       "requirements": [
-        "D1",
-        "D3",
-        "D4",
-        "I7",
-        "L9"
+        "LEGAL"
       ],
       "allowDelete": false,
-      "reason": "Homepage-only component: rail progress, drag and reveal."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "src/styles/home-motion.css",
+      "path": "src/data/outcome-pages.ts",
       "requirements": [
-        "D1",
-        "D2",
-        "D4",
-        "G10",
-        "I7",
-        "K11",
-        "L9",
-        "S14",
-        "SW16"
+        "ROUTES",
+        "COPY",
+        "CONTACT"
       ],
       "allowDelete": false,
-      "reason": "New homepage-only stylesheet."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "src/scripts/home-motion.ts",
+      "path": "src/data/controlled-cta-links.ts",
       "requirements": [
-        "D1",
-        "D2",
-        "D4",
-        "G10",
-        "I7",
-        "K11",
-        "L9",
-        "SW16"
+        "ROUTES"
       ],
       "allowDelete": false,
-      "reason": "New dependency-free homepage motion engine."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/data/google-reviews.json",
       "requirements": [
-        "G10",
-        "G10a"
+        "REVIEWS"
       ],
       "allowDelete": false,
-      "reason": "Dated snapshot of public Google reviews."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "src/components/ReviewMarquee.astro",
+      "path": "src/data/site-settings.json",
       "requirements": [
-        "G10"
+        "CONTACT"
       ],
       "allowDelete": false,
-      "reason": "Homepage review carousel component."
-    },
-    {
-      "path": "src/components/Header.astro",
-      "requirements": [
-        "H12",
-        "LG15",
-        "LG18",
-        "LG19"
-      ],
-      "allowDelete": false,
-      "reason": "One-line desktop navigation from 1024px."
-    },
-    {
-      "path": "src/components/FounderPortrait.astro",
-      "requirements": [
-        "P13"
-      ],
-      "allowDelete": false,
-      "reason": "New founder photograph."
-    },
-    {
-      "path": "public/images/pedro-founder-portrait-400.webp",
-      "requirements": [
-        "P13"
-      ],
-      "allowDelete": false,
-      "reason": "Founder photograph, small."
-    },
-    {
-      "path": "public/images/pedro-founder-portrait-753.webp",
-      "requirements": [
-        "P13"
-      ],
-      "allowDelete": false,
-      "reason": "Founder photograph, large."
-    },
-    {
-      "path": "src/components/Footer.astro",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Stacked flat gold logo in the footer."
-    },
-    {
-      "path": "src/layouts/Layout.astro",
-      "requirements": [
-        "LG15"
-      ],
-      "allowDelete": false,
-      "reason": "Favicon, touch icon, manifest links and schema logo."
-    },
-    {
-      "path": "public/favicon.ico",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Favicon from the logo kit (16/32/48)."
-    },
-    {
-      "path": "public/favicon-32.png",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Favicon PNG from the logo kit."
-    },
-    {
-      "path": "public/favicon-48.png",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Favicon PNG from the logo kit."
-    },
-    {
-      "path": "public/apple-touch-icon.png",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Apple touch icon from the logo kit (180)."
-    },
-    {
-      "path": "public/site.webmanifest",
-      "requirements": [
-        "LG15"
-      ],
-      "allowDelete": false,
-      "reason": "Web manifest naming the app icons."
-    },
-    {
-      "path": "public/images/brand/hqc-logo-horizontal-flat-gold.svg",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Header logo from the kit."
-    },
-    {
-      "path": "public/images/brand/hqc-logo-stacked-flat-gold.svg",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Footer logo from the kit."
-    },
-    {
-      "path": "public/images/brand/hqc-monogram-flat-gold.svg",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Compact monogram from the kit."
-    },
-    {
-      "path": "public/images/brand/hqc-logo-horizontal-flat-gold.png",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Raster logo for schema and sharing."
-    },
-    {
-      "path": "public/images/brand/hqc-app-icon-192.png",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Manifest icon from the kit."
-    },
-    {
-      "path": "public/images/brand/hqc-app-icon-512.png",
-      "requirements": [
-        "LG15",
-        "LG18"
-      ],
-      "allowDelete": false,
-      "reason": "Manifest icon from the kit."
-    },
-    {
-      "path": "src/components/MotionKit.astro",
-      "requirements": [
-        "SW16"
-      ],
-      "allowDelete": false,
-      "reason": "Shared motion gate, stylesheet and script for every redesigned page."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/components/OutcomePage.astro",
       "requirements": [
-        "SW16"
+        "COPY",
+        "REVIEWS",
+        "REMOVALS",
+        "COMPLEX",
+        "IMAGERY"
       ],
       "allowDelete": false,
-      "reason": "Outcome page template (22 pages)."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/ClientEvidence.astro",
+      "requirements": [
+        "COPY",
+        "REMOVALS"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/ReviewMarquee.astro",
+      "requirements": [
+        "REVIEWS"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/components/ControlledLegalPage.astro",
       "requirements": [
-        "SW16"
+        "LEGAL"
       ],
       "allowDelete": false,
-      "reason": "Privacy and terms template."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "src/pages/request-a-quote.astro",
+      "path": "src/components/ServiceSelector.astro",
       "requirements": [
-        "SW16"
+        "ROUTES",
+        "SEMANTICS"
       ],
       "allowDelete": false,
-      "reason": "Request a Quote page (form preserved)."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/Footer.astro",
+      "requirements": [
+        "CONTACT",
+        "COPY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/Header.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/AreasServed.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/CTABanner.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/HeroSection.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/LandingHeroSection.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/Offer.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/QuoteBlock.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/ServicesSection.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/pages/index.astro",
+      "requirements": [
+        "COPY",
+        "REVIEWS",
+        "REMOVALS",
+        "FOUNDER",
+        "IMAGERY",
+        "SEMANTICS",
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/pages/contact.astro",
       "requirements": [
-        "SW16"
+        "CONTACT"
       ],
       "allowDelete": false,
-      "reason": "Contact page (form preserved)."
-    },
-    {
-      "path": "src/pages/cleaning-faqs.astro",
-      "requirements": [
-        "SW16"
-      ],
-      "allowDelete": false,
-      "reason": "Cleaning FAQs page."
-    },
-    {
-      "path": "src/pages/privacy-policy.astro",
-      "requirements": [
-        "SW16"
-      ],
-      "allowDelete": false,
-      "reason": "Privacy page wrapper."
-    },
-    {
-      "path": "src/pages/terms-and-conditions.astro",
-      "requirements": [
-        "SW16"
-      ],
-      "allowDelete": false,
-      "reason": "Terms page wrapper."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/pages/book-essential-clean.astro",
       "requirements": [
-        "SW16"
+        "LEGAL"
       ],
       "allowDelete": false,
-      "reason": "Essential Clean booking page."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/pages/cleaning-faqs.astro",
+      "requirements": [
+        "SEMANTICS",
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/pages/request-a-quote.astro",
+      "requirements": [
+        "ROUTES",
+        "SEMANTICS",
+        "CONTACT",
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/pages/404.astro",
       "requirements": [
-        "SW16"
+        "SEMANTICS"
       ],
       "allowDelete": false,
-      "reason": "Not found page."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/pages/locations/london/[area].astro",
       "requirements": [
-        "SW16"
+        "LOCATIONS",
+        "CONTACT",
+        "IMAGERY"
       ],
       "allowDelete": false,
-      "reason": "London location pages."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/pages/locations/surrey/[area].astro",
       "requirements": [
-        "SW16"
+        "LOCATIONS",
+        "CONTACT",
+        "IMAGERY"
       ],
       "allowDelete": false,
-      "reason": "Surrey location pages."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/pages/offer.astro",
+      "requirements": [
+        "CONTACT",
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/pages/feedback.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/data/page-visuals.ts",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/data/card-imagery.ts",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/data/section-imagery.ts",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/styles/home-motion.css",
+      "requirements": [
+        "REVIEWS",
+        "FOUNDER",
+        "IMAGERY",
+        "SEMANTICS"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/styles/outcome-page.css",
       "requirements": [
-        "SW16"
+        "IMAGERY",
+        "COPY"
       ],
       "allowDelete": false,
-      "reason": "Outcome page styles."
-    },
-    {
-      "path": "src/styles/enquiry-pages.css",
-      "requirements": [
-        "SW16"
-      ],
-      "allowDelete": false,
-      "reason": "Quote and contact styles."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "src/styles/utility-pages.css",
       "requirements": [
-        "SW16"
+        "LOCATIONS",
+        "SEMANTICS",
+        "IMAGERY"
       ],
       "allowDelete": false,
-      "reason": "FAQ, legal, booking, 404 and location styles."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "public/images/brand/hqc-logo-header-flat-gold.svg",
+      "path": "src/layouts/Layout.astro",
       "requirements": [
-        "LG18"
+        "PARITY",
+        "CONTACT"
       ],
       "allowDelete": false,
-      "reason": "Header-size lockup (monogram, wordmark, rule)."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "public/images/brand/hqc-logo-header-3d.svg",
+      "path": "src/components/Plausible.astro",
       "requirements": [
-        "LG19"
+        "PARITY"
       ],
       "allowDelete": false,
-      "reason": "3D gold header lockup."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "public/images/brand/hqc-monogram-3d.webp",
+      "path": "public/hqc-plausible.js",
       "requirements": [
-        "LG19"
+        "PARITY"
       ],
       "allowDelete": false,
-      "reason": "3D gold monogram for the tight header range."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
-      "path": "public/images/phase8-nov6/complex-a-1600.webp",
+      "path": "tests/plausible.test.mjs",
       "requirements": [
-        "PH20"
+        "PARITY"
       ],
       "allowDelete": false,
-      "reason": "Banister photo at 1600px with the latch plate removed."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "scripts/verify-pedro-audit-corrections.test.mjs",
+      "requirements": [
+        "VERIFY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/pedro-on-site-original.png",
+      "requirements": [
+        "FOUNDER"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-living-dust.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-routine-visit.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-hallway-floor.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-desks.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-staff-kitchen.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-floor-scrubber.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-waste.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-after-hours.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-high-level.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-deep-kitchen.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-supervisor.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-coats-office.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-glass-partition.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-lobby.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-stairwell.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-high-windows.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-snagging.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-van-street.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-site-review.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-delivery.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-planner.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov10/k-supplies.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "public/images/phase8-nov6/complex-a-800.webp",
       "requirements": [
-        "PH20"
+        "IMAGERY"
       ],
       "allowDelete": false,
-      "reason": "Banister photo at 800px with the latch plate removed."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-a-1600.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-b-800.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov6/complex-b-1600.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-800.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov6/scope-and-planning-1600.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-touchpoints-800.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/images/phase8-nov6/workplace-touchpoints-1600.webp",
+      "requirements": [
+        "IMAGERY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     }
   ],
   "preserve": [
-    "All homepage copy and its order, alt text, aria labels, links, data-track attributes, selector results copy, routing and events, except the C8 list punctuation, the K11 kicker removals and the G10 review content.",
-    "Shared components used elsewhere (Header, Footer, Layout, ConversionPrompt, CookiePreferences, ClientEvidence, FounderPortrait, OutcomePage) and global.css.",
-    "Every existing image file is kept (no deletions) and unedited except the PH20 banister photograph; generated library images stay illustrative; the Phase 8 production hold. New files are the P13 founder photograph and the LG15 logo kit exports; public/favicon.ico is replaced by the kit favicon (LG15)."
+    "Current d4c296e visual design and later Jack-authorised amendments; audited 028b450 is a separate reference, not a rollback target.",
+    "Every existing photo asset; no file deletions, no logo redesign or header logo switch pending clarification.",
+    "Approved Terms section 5 and Essential Clean steps 4-5; no new legal approval date; no assumed Reviews-page selections.",
+    "Generic-section removals and their page boundary are held; preserve approved closing CTA bands and Complex controlled seven-step process.",
+    "Current Phase 8 form, consent, analytics, redirects, schema, preview no-send guards and production release hold; main parity differences reviewed individually.",
+    "No client send, no provider/credential/budget mutation, no payment or live lead submission under this packet."
   ],
   "verification": [
-    "Mechanical text, attribute and link comparison of rendered homepage HTML against 6b5c2f00 / 8f5331b.",
-    "Desktop and mobile browser checks of every homepage section, the service selector journey, reduced-motion and no-JS rendering, and console health.",
-    "Council review by three independent model reviewers (Claude, GPT, DeepSeek) with scores, repeated after fixes.",
-    "Round 5: mechanical copy comparison against 8f5331b shows only the C8 punctuation removals plus the existing dock labels; desktop, laptop and phone captures of every section; scroll-through recordings checked for jank; independent Codex review.",
-    "Round 6: review snapshot count and rating match the live profile at capture; carousel motion, pause, reduced-motion and screen-reader checks; header on one line at 1024, 1280 and 1440 on the homepage and an outcome page; founder photograph on the homepage and an outcome page.",
-    "SW16: per-page mechanical copy comparison (words, attributes, links, data-track, form field names) of every redesigned page against its pre-change render; desktop and phone captures of every page type; forms submitted only against no-send previews; taste-skill consistency check on representative pages; independent review.",
-    "PH20: side-by-side zoom of the newel post before and after; pixel difference outside the post patch is zero; homepage hero checked on desktop and phone."
+    "Scope guard during implementation; exact copy and block/route regression tests plus full diff against baseline and production contract references.",
+    "Resource-guard-compliant local tests; record unrun builds/browser/provider checks honestly.",
+    "Fresh independent Claude review of every hunk and material preserved behaviour.",
+    "Immutable review deployment, dated desktop/mobile capture manifest, hosted review room readback and full revision check before handover; no production release."
   ]
 }
