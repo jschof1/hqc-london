@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "92799e7ac61f85e70614b824d1270ddf9035382f",
-  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments. Scope amendment, same explicit site-wide visible phone instruction: add the five exact discovered legacy/public error-text sources. This follows a checkpoint of the initial clear corrections; cumulative original baseline d4c296e54787acd682700ea952bc72707159981d and original planning commit 026203c remain source references. No additional behaviour or message authority.",
+  "baseline": "bdd61b7807aa601ed6b28f7ae910aec3df1e5bcf",
+  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments. Scope amendment, same explicit site-wide visible phone instruction: add the five exact discovered legacy/public error-text sources. This follows a checkpoint of the initial clear corrections; cumulative original baseline d4c296e54787acd682700ea952bc72707159981d and original planning commit 026203c remain source references. No additional behaviour or message authority. Scope linkage amendment under the same explicit AI imagery disclosure instruction: Contact, Booking and ServiceSelector already allowed paths now also map to IMAGERY. Preserve all cumulative changes since original d4c296e across checkpoints; no new interpretation or release authority.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -190,7 +190,8 @@
       "path": "src/components/ServiceSelector.astro",
       "requirements": [
         "ROUTES",
-        "SEMANTICS"
+        "SEMANTICS",
+        "IMAGERY"
       ],
       "allowDelete": false,
       "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
@@ -285,7 +286,8 @@
     {
       "path": "src/pages/contact.astro",
       "requirements": [
-        "CONTACT"
+        "CONTACT",
+        "IMAGERY"
       ],
       "allowDelete": false,
       "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
@@ -293,7 +295,8 @@
     {
       "path": "src/pages/book-essential-clean.astro",
       "requirements": [
-        "LEGAL"
+        "LEGAL",
+        "IMAGERY"
       ],
       "allowDelete": false,
       "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
