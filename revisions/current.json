@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "9103dcad6915bb2d6b8669c619f76b8185106da9",
-  "request": "Jack 13 November: create a hidden HQC updates comparison link and a checklist showing done and due work. Use existing authenticated review.highqualityclean.co.uk/versions area. Preserve earlier versions, comments, photos and access controls. Application candidate and pending client clarifications stay separate from release acceptance.",
+  "baseline": "d0cf26bfae7b91417358448bb37f88a82a2f4915",
+  "request": "Jack 13 November: create a hidden HQC updates comparison link and a checklist showing done and due work. Use existing authenticated review.highqualityclean.co.uk/versions area. Preserve earlier versions, comments, photos and access controls. Application candidate and pending client clarifications stay separate from release acceptance. Independent review found five low-severity accuracy issues. Correct source provenance spacing, explicitly include the held Contact intro, correct the stale global capture-date note, and record the exact before-preview provenance. Preserve all earlier version entries/captures/comments/photo state; no new screenshot or acceptance claims.",
   "requirements": [
     {
       "id": "UPDATES",
@@ -14,6 +14,10 @@
     {
       "id": "PUBLISH",
       "text": "Test, preserve existing Worker/settings and back up shared review/photo state, deploy only review Worker using --keep-vars, verify unauthenticated denial/authenticated readback. No notification, client send, photo/comment mutation, production site deployment or settlement."
+    },
+    {
+      "id": "ACCURACY",
+      "text": "Fix only the five reviewed metadata/wording issues. Correct the global date explanation without changing any old version/capture entry. Add beforeCommit and provenance evidence plus a short visible explanation. Production site and all held items remain unchanged."
     }
   ],
   "allowedFiles": [
@@ -37,7 +41,8 @@
     {
       "path": "tools/photo-review/public/versions/app.js",
       "requirements": [
-        "UPDATES"
+        "UPDATES",
+        "ACCURACY"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -53,7 +58,8 @@
     {
       "path": "tools/photo-review/public/versions/updates.json",
       "requirements": [
-        "UPDATES"
+        "UPDATES",
+        "ACCURACY"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -62,7 +68,8 @@
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "ACCURACY"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -71,7 +78,8 @@
       "path": "tools/photo-review/evidence/version-captures-20261113-pedro-audit.json",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "ACCURACY"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
