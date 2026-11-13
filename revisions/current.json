@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "d4c296e54787acd682700ea952bc72707159981d",
-  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments.",
+  "baseline": "92799e7ac61f85e70614b824d1270ddf9035382f",
+  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments. Scope amendment, same explicit site-wide visible phone instruction: add the five exact discovered legacy/public error-text sources. This follows a checkpoint of the initial clear corrections; cumulative original baseline d4c296e54787acd682700ea952bc72707159981d and original planning commit 026203c remain source references. No additional behaviour or message authority.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -705,6 +705,46 @@
       ],
       "allowDelete": false,
       "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/FAQ.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
+    },
+    {
+      "path": "src/pages/discount.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
+    },
+    {
+      "path": "src/pages/quote.astro",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
+    },
+    {
+      "path": "src/scripts/main.js",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
+    },
+    {
+      "path": "src/data/area-data.json",
+      "requirements": [
+        "CONTACT"
+      ],
+      "allowDelete": false,
+      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
     }
   ],
   "preserve": [
@@ -713,7 +753,8 @@
     "Approved Terms section 5 and Essential Clean steps 4-5; no new legal approval date; no assumed Reviews-page selections.",
     "Generic-section removals and their page boundary are held; preserve approved closing CTA bands and Complex controlled seven-step process.",
     "Current Phase 8 form, consent, analytics, redirects, schema, preview no-send guards and production release hold; main parity differences reviewed individually.",
-    "No client send, no provider/credential/budget mutation, no payment or live lead submission under this packet."
+    "No client send, no provider/credential/budget mutation, no payment or live lead submission under this packet.",
+    "Scope amendment changes only the five phone-text file permissions. Preserve every requirement from planning commit 026203c and all changes in preceding implementation checkpoint; original cumulative visual baseline remains d4c296e."
   ],
   "verification": [
     "Scope guard during implementation; exact copy and block/route regression tests plus full diff against baseline and production contract references.",
