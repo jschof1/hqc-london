@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "1adf2a0c92f2fe749dd21fc004fb64cfd468061c",
-  "request": "Jack 13 November: create a hidden HQC updates comparison link and a checklist showing done and due work. Use existing authenticated review.highqualityclean.co.uk/versions area. Preserve earlier versions, comments, photos and access controls. Application candidate and pending client clarifications stay separate from release acceptance. Independent review found five low-severity accuracy issues. Correct source provenance spacing, explicitly include the held Contact intro, correct the stale global capture-date note, and record the exact before-preview provenance. Preserve all earlier version entries/captures/comments/photo state; no new screenshot or acceptance claims. Jack 16 November cancels the separate-page idea and explicitly asks for actual screenshots so Pedro audit updates are visible in the existing comparison tool. Fill only the reserved nov13-pedro-audit version with genuine desktop/mobile full-page captures of its recorded immutable preview. Keep the existing review layout, all prior versions/assets/comments/photo selections and source acceptance holds.",
+  "baseline": "87061b0d84a2f82e26b130947d4532944c3046c6",
+  "request": "Jack 13 November: create a hidden HQC updates comparison link and a checklist showing done and due work. Use existing authenticated review.highqualityclean.co.uk/versions area. Preserve earlier versions, comments, photos and access controls. Application candidate and pending client clarifications stay separate from release acceptance. Independent review found five low-severity accuracy issues. Correct source provenance spacing, explicitly include the held Contact intro, correct the stale global capture-date note, and record the exact before-preview provenance. Preserve all earlier version entries/captures/comments/photo state; no new screenshot or acceptance claims. Jack 16 November cancels the separate-page idea and explicitly asks for actual screenshots so Pedro audit updates are visible in the existing comparison tool. Fill only the reserved nov13-pedro-audit version with genuine desktop/mobile full-page captures of its recorded immutable preview. Keep the existing review layout, all prior versions/assets/comments/photo selections and source acceptance holds. Necessary capture-status dependency: the comparison app contains a hard-coded screenshots-still-due sentence. Permit only replacing that sentence selection with the existing checklist previewNote value so the new captured state is displayed truthfully.",
   "requirements": [
     {
       "id": "UPDATES",
@@ -46,10 +46,11 @@
       "path": "tools/photo-review/public/versions/app.js",
       "requirements": [
         "UPDATES",
-        "ACCURACY"
+        "ACCURACY",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Only display the capture-state note from updates.json instead of the stale hard-coded pending-capture sentence; preserve auth, comparison, comments and all other behaviour."
     },
     {
       "path": "tools/photo-review/public/versions/style.css",
