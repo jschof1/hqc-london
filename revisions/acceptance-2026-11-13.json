@@ -10,7 +10,10 @@
   "productionReleaseAuthorised": false,
   "clientAcceptance": false,
   "newImmutableDeployment": "https://5bf03519.hqc-london.pages.dev",
-  "newCaptureManifest": null,
+  "newCaptureManifest": {
+    "commit": "79015f745c7e54823c8add305108aa3ecca63ece",
+    "path": "tools/photo-review/public/versions/manifest.json"
+  },
   "criteria": [
     {
       "id": "COPY",
@@ -182,8 +185,8 @@
         "P8-SEO-024"
       ],
       "status": "partial",
-      "sourceResult": "Source scope, exact regression, syntax, forms runtime and analytics contract checks run. Full review build passed on the isolated VPS checkout; exact immutable preview is published. Local full-page captures remain unrun.",
-      "remaining": "Fresh full-page desktop/mobile captures and registration remain due, with source and provider/client gates still separate. Local resource guard currently denies capture batches. Full revision gate remains blocked by the missing new capture record."
+      "sourceResult": "Source scope, exact regression, syntax, forms runtime and analytics contract checks run. Full review build passed on the isolated VPS checkout; exact immutable preview is published. Local full-page captures remain unrun. Eighteen genuine desktop/mobile full-page captures for all nine existing comparison pages are published and hash-verified.",
+      "remaining": "Broader page/journey testing, provider receipts and client acceptance remain due. These nine-page captures do not establish all interactive or service/area-page checks."
     }
   ],
   "checks": [
@@ -214,8 +217,8 @@
     },
     {
       "command": "npm run check:revision",
-      "result": "FAIL / BLOCKED",
-      "coverage": "Staged rerun: current application matches no recorded version/capture manifest, the sole remaining failure. Earlier unstaged-application failure resolved. A real immutable deployment and capture registration remain required."
+      "result": "PASS",
+      "coverage": "Current application matches recorded nov13-pedro-audit source 177b6e202dee at immutable5bf03519 with a committed nine-page desktop/mobile capture manifest. Guard validates scope/provenance, not client acceptance or provider delivery."
     },
     {
       "command": "npm run build:review on isolated VPS checkout",
@@ -418,8 +421,8 @@
   },
   "continuation": {
     "owner": "Implementation agent with Jack",
-    "gate": "Resource guard must permit build and browser verification; no production release authority.",
-    "nextAction": "Complete full-page desktop/mobile captures, register their committed manifest, then pass the full revision gate. Review preview and private checklist are available.",
+    "gate": "Client clarifications, broader interaction/provider evidence and explicit release authority remain open.",
+    "nextAction": "Review remaining client clarifications, broader browser journeys and provider/client evidence before any release. The nine-page comparison screenshots are now available and registered.",
     "followUpPoint": "Next working continuation and before any client handover or release.",
     "clientClarificationOwner": "Jack approves the exact WhatsApp draft; Pedro supplies the held decisions, including the newly identified Reviews intro anchor."
   },
@@ -431,5 +434,19 @@
     "command": "npm run build:review",
     "sourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
     "notes": "Full build initially exposed adjacent image/caption expressions and location alt interpolation defects. These were repaired, and the correction suite now also parses compiled Astro output as TypeScript through esbuild."
-  }
+  },
+  "captureEvidence": {
+    "captureDate": "2026-11-16",
+    "pages": 9,
+    "screenshots": 18,
+    "viewportWidths": [
+      1440,
+      390
+    ],
+    "sourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+    "immutableDeploymentUrl": "https://5bf03519.hqc-london.pages.dev",
+    "hostedReadback": "All 18 JPEG files match their recorded SHA-256 values; desktop comparison and mobile image selection verified.",
+    "limits": "Nine comparison pages captured; this is not proof of all interactions, all affected routes, provider delivery or acceptance."
+  },
+  "reviewComparisonUrl": "https://review.highqualityclean.co.uk/versions/?before=nov11-banister-photo&after=nov13-pedro-audit#compare"
 }

@@ -1,6 +1,6 @@
 # Pedro audit corrections: 13 November source candidate
 
-Status: internal review preview published, not a production release or client handover. Source `177b6e202dee86e9703f0a6bbcd746fb5cf26ece` is at `https://5bf03519.hqc-london.pages.dev`. Fresh full-page captures and client acceptance remain outstanding.
+Status: internal review preview published, not a production release or client handover. Source `177b6e202dee86e9703f0a6bbcd746fb5cf26ece` is at `https://5bf03519.hqc-london.pages.dev`. Eighteen full-page captures of the nine comparison pages were made on 16 November and published. Client acceptance and broader interaction/provider checks remain outstanding.
 
 The cumulative implementation baseline is `d4c296e54787acd682700ea952bc72707159981d`. Pedro audited source `028b45098becf5ca4cb0800673f783f3cd98f797` at immutable deployment `https://71d122e7.hqc-london.pages.dev/`. Those are separate references. Planning amendments preserve the original cumulative baseline while freezing exact additional paths before edits. The private source evidence is referenced as `hqc-review-2026-11-13`; it is not copied into this repository.
 
@@ -27,7 +27,7 @@ The cumulative implementation baseline is `d4c296e54787acd682700ea952bc727071599
 - `npm run test:analytics`: PASS, 2 real-adapter/contract checks covering consent, preview isolation, field sanitisation and receipt deduplication.
 - `npm run check:revision:scope`: PASS. This checks permitted paths, not the semantic correctness of every hunk or human approval.
 - `git diff --check`: PASS.
-- `npm run check:revision`: FAIL / handover gate blocked. After staging the intended application and rerunning, the sole remaining failure is that the current application has no matching recorded visual version/capture manifest. The earlier unstaged-application failure is resolved.
+- `npm run check:revision`: PASS after the 16 November captures were published and registered against exact source `177b6e202dee` and immutable preview `5bf03519`. This is a scope/provenance check, not client acceptance or evidence of provider delivery.
 
 ## Deliberately preserved or unresolved
 
@@ -41,18 +41,24 @@ Canonical main has a newer cookieless Plausible adapter. A direct copy would dup
 
 ## Remaining gates
 
-During the initial source pass, local full builds, browser launches and captures were not run because the resource guard denies heavy work and external storage is unavailable. The approximately 16:30 UTC readback showed 24.85 GiB free, below the 25 GiB reserve, and another guarded heavy job held the lock; Jack Drive was unmounted. Earlier load-based denial is historical. Earlier Pages API/wrangler reads returned 503, but a later `wrangler pages deployment list` retry succeeded. The read outage is therefore recovered, not a current blocker. The later successful VPS build and immutable preview `5bf03519` are now recorded below. Fresh full-page capture evidence remains due. The staged full revision check is blocked solely by missing recorded-version/capture evidence, not skipped. Do not bypass either guard or manufacture a version-registry entry.
+During the initial source pass, local full builds, browser launches and captures were not run because the resource guard denies heavy work and external storage is unavailable. The approximately 16:30 UTC readback showed 24.85 GiB free, below the 25 GiB reserve, and another guarded heavy job held the lock; Jack Drive was unmounted. Earlier load-based denial is historical. Earlier Pages API/wrangler reads returned 503, but a later `wrangler pages deployment list` retry succeeded. The read outage is therefore recovered, not a current blocker. The later successful VPS build and immutable preview `5bf03519` are now recorded below. The 16 November full-page captures are now published and registered, and the full revision check passes. Broader interaction/provider checks remain due. Do not bypass either guard or manufacture a version-registry entry.
 
 Fresh Claude independent review covered cumulative baseline `d4c296e` through head `9ffee824` and found nine issues. Each is recorded in the acceptance matrix: eight corrected in source and one ambiguous text replacement restored and held. The parent inspected the resulting fixes and expanded the regression suite; this is not a second independent or rendered approval.
 
-Still required: complete corrected artwork and layout inspection in context; desktop/mobile browser journeys; a dated capture manifest for the existing immutable preview; review-room readback and full revision check; direct redirect logs and production-target indexing proof; controlled CRM/booking/payment records; consent/analytics and 18 pop-up scenarios; legal sign-off/date; Pedro acceptance and explicit release authority.
+Still required: complete corrected artwork and layout inspection in context; desktop/mobile browser journeys beyond the saved comparison captures; direct redirect logs and production-target indexing proof; controlled CRM/booking/payment records; consent/analytics and 18 pop-up scenarios; legal sign-off/date; Pedro acceptance and explicit release authority.
 
 The Phase 8 production hold remains. During the initial source implementation pass, no provider settings, credentials, client messages, live submissions, bookings, payments, deployment or thread settlement/archive were performed. The later non-production preview and private review-page publications are recorded separately.
 
-Continuation owner: the implementation agent with Jack. The review build and immutable preview are complete. Next action is full desktop/mobile verification, genuine full-page captures and capture registration once the resource guard permits it. Revisit at the next working continuation and before any client handover. Jack owns exact-draft message approval; Pedro owns the outstanding clarification and acceptance responses.
+Continuation owner: the implementation agent with Jack. The review build and immutable preview are complete. The nine-page desktop/mobile capture set is published and registered. Next action is broader interaction testing and the remaining client/provider gates. Revisit at the next working continuation and before any client handover. Jack owns exact-draft message approval; Pedro owns the outstanding clarification and acceptance responses.
 
 ## Internal review preview, 13 November evening
 
 The full review build passed on an isolated VPS checkout after build-stage validation exposed invalid adjacent image/caption expressions and location alt interpolation. Those narrow syntax fixes preserve the same content/layout. The 14-case correction suite now also sends Astro compiler output through esbuild TypeScript parsing. The candidate was deployed only to the non-production `pedro-audit-nov13` Pages branch.
 
-Private checklist and comparison entry: https://review.highqualityclean.co.uk/versions/?before=nov11-banister-photo&after=nov13-pedro-audit#updates . Live before/after links are available; the new saved-capture comparison is explicitly pending. No old captures are relabelled as new, and no completed visual registry entry is fabricated. The full revision gate remains held until genuine captures are registered.
+Private checklist and comparison entry: https://review.highqualityclean.co.uk/versions/?before=nov11-banister-photo&after=nov13-pedro-audit#updates . Live before/after links and the fresh saved-capture comparison are available. No old captures are relabelled as new. The full revision check passes against the genuine registered captures; production release remains held.
+
+## Pedro audit screenshots, 16 November
+
+All nine existing comparison pages now have full-page desktop (1440px) and mobile (390px) captures of the unchanged immutable preview. All 18 hosted JPEGs match their recorded hashes. Original PNGs are retained privately on the VPS. The capture date is 16 November; source date remains 13 November. Earlier versions, photo selections and comments are preserved.
+
+The saved side-by-side comparison now loads both versions instead of showing an unavailable screenshot. These captures do not prove every affected route, interactive journey, CRM delivery, booking/payment or client acceptance.

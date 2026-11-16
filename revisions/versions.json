@@ -3346,6 +3346,271 @@
           }
         }
       }
+    },
+    {
+      "id": "nov13-pedro-audit",
+      "commit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+      "immutableDeploymentUrl": "https://5bf03519.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov11-banister-photo&after=nov13-pedro-audit#compare",
+      "captureManifest": {
+        "commit": "79015f745c7e54823c8add305108aa3ecca63ece",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-16",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-home-desktop.jpg",
+            "width": 1440,
+            "height": 14350,
+            "sha256": "6f70ff375e800041c64750918d2ffbbad9f15fb064f5330fdfbb50dccfc1fc4a",
+            "capturedAt": "2026-11-16T13:47:40.964Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-home-mobile.jpg",
+            "width": 390,
+            "height": 24269,
+            "sha256": "adb697afe2c548348953b24e6312236edfd27192ddee945b8d797180ef29e0d1",
+            "capturedAt": "2026-11-16T13:48:31.301Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-quote-desktop.jpg",
+            "width": 1440,
+            "height": 6624,
+            "sha256": "82b4b80a25614a6d1bd9416fb1eeb04c9454391120c8ba78105bfacd79245e6c",
+            "capturedAt": "2026-11-16T13:47:44.742Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-quote-mobile.jpg",
+            "width": 390,
+            "height": 11072,
+            "sha256": "77253c0bfc1e001f5e5172f75e17584727a5e0e9f967c77599272f5ea7cb291b",
+            "capturedAt": "2026-11-16T13:48:34.359Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-how-desktop.jpg",
+            "width": 1440,
+            "height": 13334,
+            "sha256": "e9a809c8d7ca32f6f4f4a4ca1b54810c26fef75f4a648b20dfcb953f96607940",
+            "capturedAt": "2026-11-16T13:47:52.116Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-how-mobile.jpg",
+            "width": 390,
+            "height": 18631,
+            "sha256": "3fc4adb7d3364ca4aee89f4cc84723c1d1b0f74d313eb61e9dd8229c9ae5abde",
+            "capturedAt": "2026-11-16T13:48:39.420Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-contact-desktop.jpg",
+            "width": 1440,
+            "height": 7222,
+            "sha256": "3db92f0e4f11c8c143a9936b6bf4d28097207acb773a30a8df782d9e0a10fc47",
+            "capturedAt": "2026-11-16T13:47:56.003Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-contact-mobile.jpg",
+            "width": 390,
+            "height": 10723,
+            "sha256": "919e2cfcc202f49a4bb78320108443deb3e5f1ca52e7b7e95dc02d3f36ae7a46",
+            "capturedAt": "2026-11-16T13:48:42.587Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 13143,
+            "sha256": "2c80e00bae6af380ff8f225a08c96247ae82a40497cd6f0560f8919fbd770317",
+            "capturedAt": "2026-11-16T13:48:03.234Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 18873,
+            "sha256": "c9d18210a5a8d91604cb4b36ab4f200706fe39bad8f6f138add8ea488657e1f2",
+            "capturedAt": "2026-11-16T13:48:47.752Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-about-desktop.jpg",
+            "width": 1440,
+            "height": 14227,
+            "sha256": "6b7fbe166899785426a44f1a0e37eb9900ffabd24e4dc40da431b42902e6b8bb",
+            "capturedAt": "2026-11-16T13:48:10.963Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-about-mobile.jpg",
+            "width": 390,
+            "height": 21366,
+            "sha256": "818eb3a2842ddf4b05b303aee20c0bd9638bd5deaea35f6f98dc63fcc54fdd54",
+            "capturedAt": "2026-11-16T13:48:53.548Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 8946,
+            "sha256": "ecb85bdec142ebd1a54ca3d15423e0356ed3057d4f8101c0e015f9d2334396f7",
+            "capturedAt": "2026-11-16T13:48:15.256Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-reviews-mobile.jpg",
+            "width": 390,
+            "height": 13359,
+            "sha256": "d0d4952dffa37d42409a4bec3264572a57d392014ad4b5091e9e73f3ddbd65fb",
+            "capturedAt": "2026-11-16T13:48:57.018Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 10635,
+            "sha256": "7aa5d68e952e30eaf3cdb0cb76b388b1234ad06ade82b65c243a1db20adb68e0",
+            "capturedAt": "2026-11-16T13:48:19.396Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-privacy-mobile.jpg",
+            "width": 390,
+            "height": 16781,
+            "sha256": "3ba1ab203bfff48ed5f060dc0bd68eec9c9f50e6ffece94e3f14dd584532f32c",
+            "capturedAt": "2026-11-16T13:49:01.079Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov13-pedro-audit-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13772,
+            "sha256": "1c7ca9456b7a06fbe8a196d1f2003d05638b6002f67d8be7c2495a3d40bf8c7a",
+            "capturedAt": "2026-11-16T13:48:24.588Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov13-pedro-audit-terms-mobile.jpg",
+            "width": 390,
+            "height": 21817,
+            "sha256": "4d2fceabf9854ca133f39292d39f95f5e5cca178d69b1c77bf6fea15e2bc7194",
+            "capturedAt": "2026-11-16T13:49:06.236Z",
+            "sourceUrl": "https://5bf03519.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        }
+      }
     }
   ]
 }
