@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "d0cf26bfae7b91417358448bb37f88a82a2f4915",
-  "request": "Jack 13 November: create a hidden HQC updates comparison link and a checklist showing done and due work. Use existing authenticated review.highqualityclean.co.uk/versions area. Preserve earlier versions, comments, photos and access controls. Application candidate and pending client clarifications stay separate from release acceptance. Independent review found five low-severity accuracy issues. Correct source provenance spacing, explicitly include the held Contact intro, correct the stale global capture-date note, and record the exact before-preview provenance. Preserve all earlier version entries/captures/comments/photo state; no new screenshot or acceptance claims.",
+  "baseline": "1adf2a0c92f2fe749dd21fc004fb64cfd468061c",
+  "request": "Jack 13 November: create a hidden HQC updates comparison link and a checklist showing done and due work. Use existing authenticated review.highqualityclean.co.uk/versions area. Preserve earlier versions, comments, photos and access controls. Application candidate and pending client clarifications stay separate from release acceptance. Independent review found five low-severity accuracy issues. Correct source provenance spacing, explicitly include the held Contact intro, correct the stale global capture-date note, and record the exact before-preview provenance. Preserve all earlier version entries/captures/comments/photo state; no new screenshot or acceptance claims. Jack 16 November cancels the separate-page idea and explicitly asks for actual screenshots so Pedro audit updates are visible in the existing comparison tool. Fill only the reserved nov13-pedro-audit version with genuine desktop/mobile full-page captures of its recorded immutable preview. Keep the existing review layout, all prior versions/assets/comments/photo selections and source acceptance holds.",
   "requirements": [
     {
       "id": "UPDATES",
@@ -18,6 +18,10 @@
     {
       "id": "ACCURACY",
       "text": "Fix only the five reviewed metadata/wording issues. Correct the global date explanation without changing any old version/capture entry. Add beforeCommit and provenance evidence plus a short visible explanation. Production site and all held items remain unchanged."
+    },
+    {
+      "id": "CAPTURE_FILL",
+      "text": "Capture all9existing comparison pages at1440x900 and390x844, full-page at the original viewport. Use https://5bf03519.hqc-london.pages.dev source177b6e202dee86e9703f0a6bbcd746fb5cf26ece. Actual capture date16November separate from source date13November. Reject optional cookies, loadfonts/images, capture originalscreens privately and compressedJPEGs public, verify finalURL/noerrorpage/hash/dimensions. Populate the currently empty version pages map and update only capture-related due notes. Do not mark broader browser/provider/client acceptance gates done."
     }
   ],
   "allowedFiles": [
@@ -59,7 +63,8 @@
       "path": "tools/photo-review/public/versions/updates.json",
       "requirements": [
         "UPDATES",
-        "ACCURACY"
+        "ACCURACY",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -69,7 +74,8 @@
       "requirements": [
         "CAPTURES",
         "PUBLISH",
-        "ACCURACY"
+        "ACCURACY",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -79,7 +85,8 @@
       "requirements": [
         "CAPTURES",
         "PUBLISH",
-        "ACCURACY"
+        "ACCURACY",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -88,7 +95,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-home-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -97,7 +105,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-home-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -106,7 +115,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-quote-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -115,7 +125,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-quote-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -124,7 +135,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-how-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -133,7 +145,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-how-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -142,7 +155,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-contact-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -151,7 +165,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-contact-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -160,7 +175,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-tenancy-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -169,7 +185,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-tenancy-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -178,7 +195,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-about-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -187,7 +205,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-about-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -196,7 +215,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-reviews-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -205,7 +225,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-reviews-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -214,7 +235,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-privacy-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -223,7 +245,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-privacy-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -232,7 +255,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-terms-desktop.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
@@ -241,7 +265,8 @@
       "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-terms-mobile.jpg",
       "requirements": [
         "CAPTURES",
-        "PUBLISH"
+        "PUBLISH",
+        "CAPTURE_FILL"
       ],
       "allowDelete": false,
       "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
