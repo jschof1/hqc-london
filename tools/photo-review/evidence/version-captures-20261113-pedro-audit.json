@@ -3,7 +3,7 @@
   "sourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
   "immutableDeploymentUrl": "https://5bf03519.hqc-london.pages.dev",
   "build": "PASS build:review on VPS",
-  "status": "captured_awaiting_hosted_readback",
+  "status": "captured_published_registered",
   "capturedAt": "2026-11-16",
   "captures": [
     {
@@ -508,5 +508,23 @@
     "privateEvidenceReference": "hqc-review-2026-11-13/review-accuracy-readback.json"
   },
   "captureMethod": "Playwright full-page PNG at fixed original viewport, native Sharp JPEG quality 78. Reduced motion, optional cookies rejected, images/fonts loaded, full scroll to reveal content. No form submission.",
-  "privateOriginalEvidenceReference": "hqc-review-2026-11-13/capture-records-20261116.json; originals retained on theVPS"
+  "privateOriginalEvidenceReference": "hqc-review-2026-11-13/capture-records-20261116.json; originals retained on theVPS",
+  "capturePublication": {
+    "workerVersion": "5eacb78f-b645-4571-ad2c-1680c16b4a52",
+    "pages": 9,
+    "verifiedCaptureFiles": 18,
+    "captureDate": "2026-11-16",
+    "sourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+    "photoStateUnchanged": true,
+    "discussionUnchanged": true,
+    "prior23VersionsUnchanged": true,
+    "sourceCaptureManifestCommit": "79015f745c7e54823c8add305108aa3ecca63ece",
+    "fullRevisionCheck": "PASS; matching source 177b6e202dee and nine desktop/mobile capture pairs",
+    "browserChecks": [
+      "Desktop side-by-side loads both selected captures with no unavailable state",
+      "Slider and toggle controls available",
+      "Mobile toggle shows the new nov13-pedro-audit mobile capture in the visible after layer; before layer is hidden",
+      "390px comparison has no document overflow"
+    ]
+  }
 }

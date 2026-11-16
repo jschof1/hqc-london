@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T13:49:06.236Z",
+  "updatedAt": "2026-11-16T14:03:45.835792Z",
   "candidateUrl": "https://5bf03519.hqc-london.pages.dev",
   "candidateCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
   "beforeUrl": "https://1a8fa837.hqc-london.pages.dev/",
@@ -398,9 +398,9 @@
         },
         {
           "id": "preview-captures",
-          "status": "verification",
-          "title": "Finish capture registration and hosted checks",
-          "detail": "All nine comparison pages now have genuine full-page desktop/mobile screenshots from the immutable preview. The version record and final hosted readback are being completed; this does not establish all browser journeys or client acceptance."
+          "status": "source",
+          "title": "Desktop/mobile captures and version record completed",
+          "detail": "All nine comparison pages have genuine full-page desktop/mobile screenshots, captured on 16 November from the immutable preview. The hosted files match their recorded hashes, the capture version is registered and the full revision provenance check passes. Broader journeys and client acceptance remain separate."
         },
         {
           "id": "browser-journeys",
