@@ -177,9 +177,7 @@ async function loadUpdates() {
       return href ? [h('a', { href, target: '_blank', rel: 'noopener noreferrer', class: 'secondary' }, `${label} ↗`)] : [];
     });
     $('#updates-links').replaceChildren(...links);
-    $('#updates-preview').textContent = safeExternal(data.candidateUrl)
-      ? 'Before opens the frozen site immediately before these edits. Open it beside the updated preview to compare the changes. Fresh saved screenshots for this update are still due. A preview is not production approval.'
-      : data.previewNote;
+    $('#updates-preview').textContent = typeof data.previewNote === 'string' ? data.previewNote : '';
     $('#updates-content').hidden = false;
     renderUpdates();
   } catch (e) {

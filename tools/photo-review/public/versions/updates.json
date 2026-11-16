@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-13T21:45:56.741010Z",
+  "updatedAt": "2026-11-16T13:49:06.236Z",
   "candidateUrl": "https://5bf03519.hqc-london.pages.dev",
   "candidateCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
   "beforeUrl": "https://1a8fa837.hqc-london.pages.dev/",
   "auditedUrl": "https://71d122e7.hqc-london.pages.dev/",
   "summary": "The clear changes from Pedro’s review have been made in the source. The design is being kept. Anything ambiguous stays on hold until its meaning is confirmed.",
   "scopeNote": "“Done in source” means the edit or named source check is recorded in the acceptance matrix. It does not mean the live site is approved. These are grouped work items, not a fresh verification of all 252 audit findings. This checklist is read-only.",
-  "previewNote": "The review build and immutable preview are available. The customer-facing production site is unchanged. Fresh full-page captures remain due.",
+  "previewNote": "Fresh desktop and mobile screenshots are available in the saved comparison below. They were captured on 16 November from the recorded 13 November preview. Source edits, screenshots and client approval remain separate.",
   "groups": [
     {
       "id": "COPY",
@@ -399,8 +399,8 @@
         {
           "id": "preview-captures",
           "status": "verification",
-          "title": "Complete the dated capture and version record",
-          "detail": "The full review build passed and the immutable preview is live at the recorded source commit. Fresh full-page desktop/mobile captures and their registered manifest are still due; the full revision handover gate stays blocked until that evidence exists."
+          "title": "Finish capture registration and hosted checks",
+          "detail": "All nine comparison pages now have genuine full-page desktop/mobile screenshots from the immutable preview. The version record and final hosted readback are being completed; this does not establish all browser journeys or client acceptance."
         },
         {
           "id": "browser-journeys",
@@ -432,5 +432,6 @@
     "sameApplicationAsVersion": "nov11-banister-photo",
     "sameApplicationCommit": "e45ba305eb217aac1844bd3e425cc7a6c14c6b4c",
     "verification": "Cloudflare deployment record identifies the before-preview source. Git diff between the source commits contains only revisions/versions.json; application files are unchanged."
-  }
+  },
+  "captureDate": "2026-11-16"
 }
