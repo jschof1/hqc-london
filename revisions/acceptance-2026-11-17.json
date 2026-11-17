@@ -3,8 +3,8 @@
   "date": "2026-11-17",
   "sourceEvidence": "private:hqc-review-2026-11-17/request.txt",
   "baseline": "86276d92c751cfccbd5ed7126d961e0107ff3d90",
-  "sourceCommit": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
-  "immutableDeploymentUrl": "https://f3817af8.hqc-london.pages.dev",
+  "sourceCommit": "ac24c182d7af8b76c65159701b3a06b1af0ead5e",
+  "immutableDeploymentUrl": "https://99efba8e.hqc-london.pages.dev",
   "productionReleased": false,
   "requirements": [
     {
@@ -130,14 +130,34 @@
             900
           ],
           "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/g-scope-plan.webp",
+          "baselineSha256": "9f82d909891409faa9f33a1c7c99d75531aaf8d964f18cb2d49df0ebca250b2a",
+          "currentSha256": "dff306cce0b3b58de9b0eb0328f15809cfd5905bc1fe3c01f483380c5717d537",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed final-review-found sleeve logo; left chest hidden in this camera view."
+        },
+        {
+          "path": "public/images/phase8-nov10/p-key-hooks.webp",
+          "baselineSha256": "eb577d4fac15608d7ebe6e13ccef2d6865b94cadcfaa42daa63057a8e873d964",
+          "currentSha256": "7f11d35a82d85d595e06c8e129eb1362032600786068b45b84410a0d09e4172b",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed final-review-found sleeve logo; left chest hidden in this camera view."
         }
       ],
-      "evidence": "Ten parent-inspected generated edits remove misplaced sleeve/shoulder/upper-back marks. Left chest is hidden in these views, so no visible replacement is invented.1200 by 900 WebP; generated scene continuity visually inspected, not a pixel-exact preservation guarantee."
+      "evidence": "All twelve inspected uniform views are corrected and all twelve hosted image hashes match. Both extra sleeve images from final review were inspected at full resolution. Left chest remains hidden in those compositions; no visible replacement is invented."
     },
     {
       "id": "N17_VERIFY",
       "status": "hosted-preview-pass",
-      "evidence": "19 correction tests, the form suites and two analytics tests pass; the full review build passes. Independent browser QA passed: 50 captures across 25 pages, 230 page criteria and 12 journey/asset checks. Hosted review readback verifies 50 JPEG hashes and the exact committed manifest/source, with existing comments and photo selections unchanged. Fresh final review pending."
+      "evidence": "19 correction tests, full review build, 52 captures across 26 pages, 238 page criteria and 12 journey/asset checks passed. All hosted capture hashes and committed review source match. Fresh independent final recheck passed both remaining repairs; no requested website defect remains in inspected scope. This does not prove production release, legal approval, provider outcomes or client acceptance."
     }
   ],
   "checks": {
@@ -149,9 +169,9 @@
     "scope": "PASS",
     "whitespace": "PASS",
     "localLimit": "No local dependency install/build/capture processing. Mac guard denied heavy work. VPS existing dependencies reused; initial shallow-history test failure fixed by fetching original baseline, then all tests passed.",
-    "browserQA": "PASS: 50 captures, 230 page criteria, 12 journey/asset checks",
-    "versionReview": "Published and read back: exact new manifest and all 50 capture hashes; previous versions, comments and photo selections preserved.",
-    "finalReview": "Pending fresh hosted independent judge",
+    "browserQA": "V2 PASS: 52 fresh captures across 26 pages, 238 page criteria and 12 journey/asset checks. All twelve corrected hosted assets match their inspected hashes.",
+    "versionReview": "V2 published and read back: all 52 JPEG hashes, exact committed manifest and comparison script match. Older snapshots, existing comments and photo selections preserved unchanged.",
+    "finalReview": "PASS: fresh independent Claude recheck confirmed both final sleeve-image repairs at full resolution and in hosted desktop/mobile page context; comparison release cards contain no null/undefined; switching captures works; older versions remain unchanged. Earlier full final review passed all unchanged website requirements. Legal/provider/client gates remain held.",
     "production": "Provider readback confirms production remains at dec5ec0, deployment 130015d3; this round only published the preview and review Worker."
   },
   "held": [
@@ -161,11 +181,17 @@
     "Pedro final acceptance and explicit production release authority",
     "Earlier held Contact intro, local proof, case-study permission and analytics parity"
   ],
-  "nextAction": "Finish fresh independent hosted judge; then Jack reviews comparison and pursues the held legal/provider/client gates before any production release.",
+  "nextAction": "Jack reviews the current comparison. Pedro supplies legal Last reviewed wording and legal sign-off; Jack and the implementation owner pursue direct redirect/forms-CRM/booking-payment/pop-up evidence and Pedro final acceptance before any protected-main release PR. Revisit at the next working continuation and before release.",
   "owner": "Jack and current implementation thread; Pedro supplies legal wording and acceptance.",
   "captureManifest": {
-    "commit": "ee1d63c6492169b713d22d50f2cdc600efd568e2",
+    "commit": "cb11d83dd2673a15aca6239fed58ab044bd0b07b",
     "path": "tools/photo-review/public/versions/manifest.json"
   },
-  "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov13-pedro-audit&after=nov17-pedro-followup#compare"
+  "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov13-pedro-audit&after=nov17-pedro-followup-v2#compare",
+  "previousCandidate": {
+    "sourceCommit": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
+    "immutableDeploymentUrl": "https://f3817af8.hqc-london.pages.dev",
+    "versionId": "nov17-pedro-followup",
+    "result": "Fresh final reviewer found two additional sleeve logos after the original50capture QA. Candidate retained as immutable intermediate evidence."
+  }
 }
