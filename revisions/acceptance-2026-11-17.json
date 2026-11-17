@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-17",
+  "sourceEvidence": "private:hqc-review-2026-11-17/request.txt",
+  "baseline": "86276d92c751cfccbd5ed7126d961e0107ff3d90",
+  "sourceCommit": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
+  "immutableDeploymentUrl": "https://f3817af8.hqc-london.pages.dev",
+  "productionReleased": false,
+  "requirements": [
+    {
+      "id": "N17_SECTIONS",
+      "status": "hosted-preview-pass",
+      "evidence": "15 explicit service slugs; four generic sections gated. Gallery preservation corrected after independent hunk review and covered by regression. Homepage Client evidence and non-service content retained."
+    },
+    {
+      "id": "N17_LEGAL",
+      "status": "hosted-preview-pass",
+      "evidence": "Terms section 5 only changes vendor-record wording to a record in our booking system. Privacy names become supplier categories; date/H1s unchanged."
+    },
+    {
+      "id": "N17_LOGO",
+      "status": "hosted-preview-pass",
+      "evidence": "Existing single-fill flat gold full header and monogram SVGs; matching aspect ratios. No 3D header references."
+    },
+    {
+      "id": "N17_REVIEWS",
+      "status": "hosted-preview-pass",
+      "evidence": "Seven exact reviews in four requested groups, exact intro replacement, retained lead/Google link/4.9 rating and 92 count. All seven quotes matched direct Google Maps readback 17 November; Andre Gould and excluded Andre Barrett separately identified."
+    },
+    {
+      "id": "N17_UNIFORMS",
+      "status": "hosted-preview-pass",
+      "assets": [
+        {
+          "path": "public/images/phase8-nov10/g-assessment.webp",
+          "baselineSha256": "bcf97bc14b6154cc9691f7e93e2ae9570ada90ffd78fc26ae795227fe9a03fdd",
+          "currentSha256": "132d9303b6fa07b171b3c79f87f82487f17aec87fae4ae9483a82171353b71c8",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/g-service-profile.webp",
+          "baselineSha256": "0d6e1d176ed3303bd3537d88737d46ee2f5bb0b7059cb5cfe1d87f235353b3f8",
+          "currentSha256": "634a41f9937f28b72b01032852cc40fee49aca42e482a9fd98314bf368828e7b",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/c-washroom.webp",
+          "baselineSha256": "5d38d2d4e5532bf6893e448f5652c44dc1e1e1e3bd7395e98f45e306d0ede28e",
+          "currentSha256": "25b8ebae64c100422bb0bb847f5403e07ca545bea6f322856b5551906fc02004",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/g-walkthrough.webp",
+          "baselineSha256": "d00f9e73a538385c8aac58c9c8f3781b71341dec6d95b3181a286fb46021aba5",
+          "currentSha256": "ea2b3115727049da0ef56ce973195286ea0560cd5aa3c5fdea7c202c50acdbf5",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/p-bin-store.webp",
+          "baselineSha256": "f8693a5899db08e33d38beb9225b4954b25f670bbfac17adc6acb75367f88b06",
+          "currentSha256": "92eed69e887fe00858606bc58805ab5680b84a1b12c36aaee52c94f015c7306d",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/p-lift.webp",
+          "baselineSha256": "7c8d2e05bf4dc1eb0fdbb523a003758f2995293ee959fd4ac9f39a2db2a3c548",
+          "currentSha256": "fadd295742eba2e7878dc17eb5769bf62dc9005c62ad31600710753ae6f639d8",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/p-postcode.webp",
+          "baselineSha256": "9cb490459a9c0845bdd2113f58423217c8bbdaba3bec8134f83145443253eb59",
+          "currentSha256": "aee459940789f92c03b803f2c450d273399a89f6db0ff2071e18c0e9fee93d95",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/p-report-photo.webp",
+          "baselineSha256": "ea72e169f7e5a05f89d0ac4ac78d39df188f903f4a0d5c77ec6e3ef3bef11c81",
+          "currentSha256": "2238eb9b5c60a8ed284e7167475395231f7fd461be3111d470c34bbb6593e0f5",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/r-oven-inside.webp",
+          "baselineSha256": "4bd33d22ab431b0256623d75c84609e91b06865e8e5c6cadb04ed2bc7f7b483c",
+          "currentSha256": "696c79f65e325114427039833fa1662203f32b30182d26297c4c21063e67929d",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        },
+        {
+          "path": "public/images/phase8-nov10/r-shower-glass.webp",
+          "baselineSha256": "b2ecd07cf6788563f824ca5cac1e3e49849a2240c182f377bbfa51288abf746c",
+          "currentSha256": "24dafc2452c4b8bbe7c4f980ebf9361c3ec8581b54ddc50b2a71f7dac666429d",
+          "dimensions": [
+            1200,
+            900
+          ],
+          "change": "Removed misplaced sleeve/shoulder/back logo; left chest hidden in unchanged scene viewpoint. Generated edit; not a promise of pixel-exact preservation."
+        }
+      ],
+      "evidence": "Ten parent-inspected generated edits remove misplaced sleeve/shoulder/upper-back marks. Left chest is hidden in these views, so no visible replacement is invented.1200 by 900 WebP; generated scene continuity visually inspected, not a pixel-exact preservation guarantee."
+    },
+    {
+      "id": "N17_VERIFY",
+      "status": "hosted-preview-pass",
+      "evidence": "19 correction tests, the form suites and two analytics tests pass; the full review build passes. Independent browser QA passed: 50 captures across 25 pages, 230 page criteria and 12 journey/asset checks. Hosted review readback verifies 50 JPEG hashes and the exact committed manifest/source, with existing comments and photo selections unchanged. Fresh final review pending."
+    }
+  ],
+  "checks": {
+    "corrections": "PASS 19/19 on VPS",
+    "forms": "PASS controlled receivers; no live customer submission",
+    "analytics": "PASS 2/2",
+    "reviewBuild": "PASS",
+    "sourceReview": "Independent Claude hunk review 86276d9..a1c3e34 found gallery-loss defect; parent fixed in 79d7e8b and added regression. Other low-severity observations retained privately. Final hosted review pending.",
+    "scope": "PASS",
+    "whitespace": "PASS",
+    "localLimit": "No local dependency install/build/capture processing. Mac guard denied heavy work. VPS existing dependencies reused; initial shallow-history test failure fixed by fetching original baseline, then all tests passed.",
+    "browserQA": "PASS: 50 captures, 230 page criteria, 12 journey/asset checks",
+    "versionReview": "Published and read back: exact new manifest and all 50 capture hashes; previous versions, comments and photo selections preserved.",
+    "finalReview": "Pending fresh hosted independent judge",
+    "production": "Provider readback confirms production remains at dec5ec0, deployment 130015d3; this round only published the preview and review Worker."
+  },
+  "held": [
+    "Pedro legal Last reviewed wording and legal sign-off",
+    "Direct forms/CRM delivery, booking/payment and full pop-up acceptance evidence",
+    "Redirect evidence beyond unchanged source tests",
+    "Pedro final acceptance and explicit production release authority",
+    "Earlier held Contact intro, local proof, case-study permission and analytics parity"
+  ],
+  "nextAction": "Finish fresh independent hosted judge; then Jack reviews comparison and pursues the held legal/provider/client gates before any production release.",
+  "owner": "Jack and current implementation thread; Pedro supplies legal wording and acceptance.",
+  "captureManifest": {
+    "commit": "ee1d63c6492169b713d22d50f2cdc600efd568e2",
+    "path": "tools/photo-review/public/versions/manifest.json"
+  },
+  "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov13-pedro-audit&after=nov17-pedro-followup#compare"
+}
