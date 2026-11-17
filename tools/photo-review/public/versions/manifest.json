@@ -4020,6 +4020,731 @@
         }
       },
       "captureDate": "2026-11-16"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "label": "17 Nov: Pedro follow-up (preview)",
+      "date": "2026-11-17",
+      "commit": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
+      "deploymentUrl": "https://f3817af8.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://f3817af8.hqc-london.pages.dev",
+      "kind": "review candidate",
+      "summary": "Confirmed service-page removals, flat vector header, legal supplier wording, grouped reviews and remaining uniform logo corrections. Production release remains held.",
+      "changes": [
+        "Removed the four repeated generic sections on the 15 confirmed service pages; other page content and photos retained.",
+        "Restored the approved flat gold vector header and monogram.",
+        "Terms uses our booking system; Privacy lists supplier categories.",
+        "Reviews page includes seven exact Google quotes in four service groups and the approved intro sentence.",
+        "Removed misplaced logos from ten sleeve/back image views where the left chest is hidden."
+      ],
+      "outstanding": [
+        "Pedro to supply legal Last reviewed wording and final legal approval.",
+        "Real CRM, booking/payment, full pop-up evidence and Pedro final acceptance remain open.",
+        "Held Contact intro, unsupported local proof/case studies and analytics parity remain as separately recorded."
+      ],
+      "provenance": "Exact source 79d7e8b24b8460acb9f5506b681d22c2c6d44ca3 at immutable preview f3817af8. Fifty full-page captures made on 17November 2026 at 1440x900 desktop and 390x844 mobile viewports. Optional cookies rejected; images/fonts loaded; originals retained privately on the VPS. Every image records actual capture time and hash. Screenshots do not prove CRM delivery, payment or client acceptance.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-home-desktop.jpg",
+            "width": 1440,
+            "height": 14350,
+            "sha256": "274d7b88d28a4e690f6624acbcf337c1070c3ba47532d8e2c2e80eaf35ce8d5e",
+            "capturedAt": "2026-11-17T10:07:22.949Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-home-mobile.jpg",
+            "width": 390,
+            "height": 24269,
+            "sha256": "e1fadd2f22bb098a6702b17b17b8ffbcaaaecadf53c6ee8799e0940da8c1e242",
+            "capturedAt": "2026-11-17T10:09:39.337Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-quote-desktop.jpg",
+            "width": 1440,
+            "height": 6624,
+            "sha256": "c9f4df5a2a0483ada1241458592b960da41a4697a2432452eca981ece2de9c4b",
+            "capturedAt": "2026-11-17T10:07:26.257Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-quote-mobile.jpg",
+            "width": 390,
+            "height": 11072,
+            "sha256": "258c2f91f7e9b48a1b286e319d9752f104f9bdbbee1be793c9dfe72b08d9e894",
+            "capturedAt": "2026-11-17T10:09:42.109Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "how": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-how-desktop.jpg",
+            "width": 1440,
+            "height": 13334,
+            "sha256": "1c32e40fdfb9d9d15112b6adcbce9fbf22880fcf30a4bd96c84b8759da113055",
+            "capturedAt": "2026-11-17T10:07:33.115Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-how-mobile.jpg",
+            "width": 390,
+            "height": 18631,
+            "sha256": "43e53a33c9ec6ddf485e00a8c9eccbecd4deb4e5883c6572a928de9b84cd3acd",
+            "capturedAt": "2026-11-17T10:09:46.775Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-contact-desktop.jpg",
+            "width": 1440,
+            "height": 7222,
+            "sha256": "e565eb1d4a038efe5a445bcadc0cfb646b8d600c6780f20135df5837289b601d",
+            "capturedAt": "2026-11-17T10:07:36.798Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-contact-mobile.jpg",
+            "width": 390,
+            "height": 10723,
+            "sha256": "522ea20fa76666982a9a36cca1d8858a468f7a5ef446da1235c60f8bf580fade",
+            "capturedAt": "2026-11-17T10:09:49.720Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-tenancy-desktop.jpg",
+            "width": 1440,
+            "height": 10027,
+            "sha256": "b2637c242653c548e30d92055d077fd4df3b343623391c90b830a4f47b12431f",
+            "capturedAt": "2026-11-17T10:07:42.305Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-tenancy-mobile.jpg",
+            "width": 390,
+            "height": 14235,
+            "sha256": "d6b3f04faf709262fe9917db51e45ca81683a10ba992a0b40cea818f8ad59fe2",
+            "capturedAt": "2026-11-17T10:09:53.564Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "about": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-about-desktop.jpg",
+            "width": 1440,
+            "height": 14227,
+            "sha256": "dac207eade2e0269883e4bae8566dc6dd720f75d6b040e3ef66a1ff9ac9bb8a9",
+            "capturedAt": "2026-11-17T10:07:49.851Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-about-mobile.jpg",
+            "width": 390,
+            "height": 21366,
+            "sha256": "4d2dc5b85e7e984c335e1729c80a1b2def4adeb589a8aaeab69453f3b72e5870",
+            "capturedAt": "2026-11-17T10:09:58.893Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-reviews-desktop.jpg",
+            "width": 1440,
+            "height": 10828,
+            "sha256": "633496ddc1bc6dc53991eafd5b8f52fe095a630fd6c0be16e86814ac8f22b16c",
+            "capturedAt": "2026-11-17T10:07:54.233Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-reviews-mobile.jpg",
+            "width": 390,
+            "height": 16087,
+            "sha256": "29c0609dcd686d47bbc8c928ee5ca20459519130236de82c902f2200a0adffbe",
+            "capturedAt": "2026-11-17T10:10:02.692Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-privacy-desktop.jpg",
+            "width": 1440,
+            "height": 10591,
+            "sha256": "32e03b58f9fca5fd4b66dbd0b6ef7e1952ddb3b4f923d4bb3ef8cdcee7b25af2",
+            "capturedAt": "2026-11-17T10:07:57.935Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-privacy-mobile.jpg",
+            "width": 390,
+            "height": 16697,
+            "sha256": "076977f1ca7526466fec216b8d3a852f290903dfc0e7b537469017503286af45",
+            "capturedAt": "2026-11-17T10:10:06.520Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-terms-desktop.jpg",
+            "width": 1440,
+            "height": 13772,
+            "sha256": "a5eaec5a7a53368840dce44d70bcb6b006f7b23a8d8cd8106c83d31774fefd69",
+            "capturedAt": "2026-11-17T10:08:02.857Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-terms-mobile.jpg",
+            "width": 390,
+            "height": 21817,
+            "sha256": "adb1fc7744d212188bfd32dd6ad24c2411f04b2240bed129b89e8326dd6e3885",
+            "capturedAt": "2026-11-17T10:10:11.470Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "facilities": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-facilities-desktop.jpg",
+            "width": 1440,
+            "height": 9786,
+            "sha256": "783f9201f4c2786afd3a34ee633d1b4e9e27c9ad9ea6dfbc5cd4a0139350327b",
+            "capturedAt": "2026-11-17T10:08:07.798Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/property-facilities-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-facilities-mobile.jpg",
+            "width": 390,
+            "height": 13915,
+            "sha256": "74d896bf53f0e83e001d18638c9f97bdca25aca1e938fdf4c11fdebfab2e311b",
+            "capturedAt": "2026-11-17T10:10:15.010Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/property-facilities-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "communal": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-communal-desktop.jpg",
+            "width": 1440,
+            "height": 11248,
+            "sha256": "43e07782a8b14e0c6404e4dd20419b0d162b0ba061ed7918033508127b094806",
+            "capturedAt": "2026-11-17T10:08:13.747Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-communal-mobile.jpg",
+            "width": 390,
+            "height": 16108,
+            "sha256": "8f2c02a1fc040da1e181c12b7656f67959aef370bd4ab45908c2a5618945f10d",
+            "capturedAt": "2026-11-17T10:10:19.218Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "agents": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-agents-desktop.jpg",
+            "width": 1440,
+            "height": 10685,
+            "sha256": "a77678fc50dbb144b9985f9287313235744cd6181e3619c47c0cabd9498401b7",
+            "capturedAt": "2026-11-17T10:08:19.663Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-agents-mobile.jpg",
+            "width": 390,
+            "height": 15367,
+            "sha256": "41dbee3a5486b78291990bcd46c1a6002dfcf242c3e21c3975f180040f7746dc",
+            "capturedAt": "2026-11-17T10:10:23.074Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "void": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-void-desktop.jpg",
+            "width": 1440,
+            "height": 9739,
+            "sha256": "c28951947f5d20ad243201943727cbafd2d1c858c071ecba1f1b2f5485ef9a4a",
+            "capturedAt": "2026-11-17T10:08:24.799Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-void-mobile.jpg",
+            "width": 390,
+            "height": 14237,
+            "sha256": "8e23341246e019c03a4ccae7264fa76a8c910487f4fcc6e4af14584c44e33f81",
+            "capturedAt": "2026-11-17T10:10:26.704Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "construction": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-construction-desktop.jpg",
+            "width": 1440,
+            "height": 11527,
+            "sha256": "0cabff9649dd5c14f4f6046f06d23b0072582241f700ea799c78ed56bc27b180",
+            "capturedAt": "2026-11-17T10:08:30.510Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/post-construction-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-construction-mobile.jpg",
+            "width": 390,
+            "height": 16803,
+            "sha256": "4b31d9ad7b72cba52538af6d9367449bf50d3eb2995dea69009724efa1d9c5a8",
+            "capturedAt": "2026-11-17T10:10:30.709Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/post-construction-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "portfolio": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-portfolio-desktop.jpg",
+            "width": 1440,
+            "height": 10907,
+            "sha256": "3e406abbe3ac7cd7c06a921c4c667ca0e7d542e32d68fa8bcd446e9cf00aec5e",
+            "capturedAt": "2026-11-17T10:08:36.065Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-portfolio-mobile.jpg",
+            "width": 390,
+            "height": 15349,
+            "sha256": "1f5762ae3bcb4a4ea88955324a261ad627d7aba694e01d9ac2f0d1bdd5905ae7",
+            "capturedAt": "2026-11-17T10:10:34.594Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "commercial": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-commercial-desktop.jpg",
+            "width": 1440,
+            "height": 11611,
+            "sha256": "59ee0bb701e921517fd5d77bc6da2e0f46a03398a23b265cbcf63ccfb705f9e5",
+            "capturedAt": "2026-11-17T10:08:42.152Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/commercial-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-commercial-mobile.jpg",
+            "width": 390,
+            "height": 16063,
+            "sha256": "d67ea77b66a6fc92d70a4a8a2711ee528e7e9e99669b28cfb17e0d2b18d9983b",
+            "capturedAt": "2026-11-17T10:10:38.676Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/commercial-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "office": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-office-desktop.jpg",
+            "width": 1440,
+            "height": 10438,
+            "sha256": "f2934a04afc7ec0fab23b52d5f9dec23c9308021501e2dd97238f5dafa15a10d",
+            "capturedAt": "2026-11-17T10:08:48.264Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/office-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-office-mobile.jpg",
+            "width": 390,
+            "height": 15077,
+            "sha256": "9084fe024cea14a92f44ea941c746c83a0010b008486d718ba088ddf7e59a8d9",
+            "capturedAt": "2026-11-17T10:10:42.532Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/office-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "commercial-deep": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-commercial-deep-desktop.jpg",
+            "width": 1440,
+            "height": 11647,
+            "sha256": "a4a01c2dba7ca1b397af082e03691fc4c11125ab57dcf7136edef69ab42ae467",
+            "capturedAt": "2026-11-17T10:08:54.034Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-commercial-deep-mobile.jpg",
+            "width": 390,
+            "height": 16293,
+            "sha256": "a7ea5e0dbc6c3613c6d07b2d5b755b1661f4f166c9a1f2e905c845ce2652eeb0",
+            "capturedAt": "2026-11-17T10:10:46.432Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "home-service": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-home-service-desktop.jpg",
+            "width": 1440,
+            "height": 10017,
+            "sha256": "1fdb4eb85bd963620430446379894cfceaf8233d63987a55c533aa7eee18a8f1",
+            "capturedAt": "2026-11-17T10:08:59.574Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/home-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-home-service-mobile.jpg",
+            "width": 390,
+            "height": 14344,
+            "sha256": "d55157afc551ad6b2c6f868550b3f229badab2464a3a422caee6868190e34209",
+            "capturedAt": "2026-11-17T10:10:50.157Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/home-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "essential": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-essential-desktop.jpg",
+            "width": 1440,
+            "height": 10668,
+            "sha256": "1c96a9cb5f04f7550db8fa373108467995f939307f2674d2ad18dac127808581",
+            "capturedAt": "2026-11-17T10:09:05.351Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/essential-clean-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-essential-mobile.jpg",
+            "width": 390,
+            "height": 15819,
+            "sha256": "5f59f341ed6fc220eb3394c62206a31b8c58649e1840962cef59a097dc64ec0b",
+            "capturedAt": "2026-11-17T10:10:54.122Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/essential-clean-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "deep": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-deep-desktop.jpg",
+            "width": 1440,
+            "height": 9476,
+            "sha256": "318e8a5d08fdf35e531504fff4f6db8202642d60f0454eeaa729de907e8808a5",
+            "capturedAt": "2026-11-17T10:09:10.816Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/deep-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-deep-mobile.jpg",
+            "width": 390,
+            "height": 14209,
+            "sha256": "29654cc14229e26ba17bd82519e52ce6832cd3f531d9ebb9cef0242874eaf649",
+            "capturedAt": "2026-11-17T10:10:57.804Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/deep-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "move-in": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-move-in-desktop.jpg",
+            "width": 1440,
+            "height": 9271,
+            "sha256": "7519c67224682fceffb472b545104bbbe81c67b9b7a75a5a1d494771ee569c1c",
+            "capturedAt": "2026-11-17T10:09:15.560Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/move-in-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-move-in-mobile.jpg",
+            "width": 390,
+            "height": 12826,
+            "sha256": "ffa4319aa0a74985aefcdda0a316efbce764be3149e1d8156779026a4c8b351f",
+            "capturedAt": "2026-11-17T10:11:01.121Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/move-in-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "complex": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-complex-desktop.jpg",
+            "width": 1440,
+            "height": 11742,
+            "sha256": "eed95172835f96ef9a3332086649c55a54f3da185d8f010a9684d5117d7f662b",
+            "capturedAt": "2026-11-17T10:09:21.685Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/complex-property-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-complex-mobile.jpg",
+            "width": 390,
+            "height": 17594,
+            "sha256": "8f65511b155b049b23ed79bfe33ba5a38b28fef9821a0637fca8a3365ca06a17",
+            "capturedAt": "2026-11-17T10:11:05.381Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/complex-property-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "faq": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-faq-desktop.jpg",
+            "width": 1440,
+            "height": 7778,
+            "sha256": "c0aeab4a15f620a829c4374775fca307d0e0c4c09fd31186304aa665aff8f9f9",
+            "capturedAt": "2026-11-17T10:09:25.000Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/cleaning-faqs/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-faq-mobile.jpg",
+            "width": 390,
+            "height": 8459,
+            "sha256": "c618506b37afdfea88a3c40024b77275ac2099d3c6f64efa51b59c86ccd676b5",
+            "capturedAt": "2026-11-17T10:11:07.649Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/cleaning-faqs/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        },
+        "why": {
+          "desktop": {
+            "src": "/versions/captures/nov17-pedro-followup-why-desktop.jpg",
+            "width": 1440,
+            "height": 14254,
+            "sha256": "c9a0c9a2621b54b63131710de5919e6b0fa3fac838372217e41f4076c8e014e2",
+            "capturedAt": "2026-11-17T10:09:33.051Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/why-choose-hqc/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov17-pedro-followup-why-mobile.jpg",
+            "width": 390,
+            "height": 20259,
+            "sha256": "9a3c62e0517ae8c9fb3d6e448fc4631a397f53ba4ee69f1f2cf62f1914a73ccc",
+            "capturedAt": "2026-11-17T10:11:12.788Z",
+            "sourceUrl": "https://f3817af8.hqc-london.pages.dev/why-choose-hqc/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies"
+          }
+        }
+      }
     }
   ],
   "pages": [
@@ -4067,10 +4792,90 @@
       "id": "terms",
       "label": "Terms and conditions",
       "path": "/terms-and-conditions/"
+    },
+    {
+      "id": "facilities",
+      "label": "Property Facilities Cleaning London",
+      "path": "/property-facilities-cleaning-london/"
+    },
+    {
+      "id": "communal",
+      "label": "Communal Area Cleaning London",
+      "path": "/communal-area-cleaning-london/"
+    },
+    {
+      "id": "agents",
+      "label": "Estate Letting Agent Cleaning London",
+      "path": "/estate-letting-agent-cleaning-london/"
+    },
+    {
+      "id": "void",
+      "label": "Move In Void Property Cleaning London",
+      "path": "/move-in-void-property-cleaning-london/"
+    },
+    {
+      "id": "construction",
+      "label": "Post Construction Cleaning London",
+      "path": "/post-construction-cleaning-london/"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio Cleaning Support London",
+      "path": "/portfolio-cleaning-support-london/"
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial Cleaning London",
+      "path": "/commercial-cleaning-london/"
+    },
+    {
+      "id": "office",
+      "label": "Office Cleaning London",
+      "path": "/office-cleaning-london/"
+    },
+    {
+      "id": "commercial-deep",
+      "label": "Commercial Deep Cleaning London",
+      "path": "/commercial-deep-cleaning-london/"
+    },
+    {
+      "id": "home-service",
+      "label": "Home Cleaning London",
+      "path": "/home-cleaning-london/"
+    },
+    {
+      "id": "essential",
+      "label": "Essential Clean London",
+      "path": "/essential-clean-london/"
+    },
+    {
+      "id": "deep",
+      "label": "Deep Cleaning London",
+      "path": "/deep-cleaning-london/"
+    },
+    {
+      "id": "move-in",
+      "label": "Move In Cleaning London",
+      "path": "/move-in-cleaning-london/"
+    },
+    {
+      "id": "complex",
+      "label": "Complex Property Cleaning London",
+      "path": "/complex-property-cleaning-london/"
+    },
+    {
+      "id": "faq",
+      "label": "Cleaning Faqs",
+      "path": "/cleaning-faqs/"
+    },
+    {
+      "id": "why",
+      "label": "Why Choose Hqc",
+      "path": "/why-choose-hqc/"
     }
   ],
-  "defaultBefore": "nov11-banister-photo",
-  "defaultAfter": "nov13-pedro-audit",
+  "defaultBefore": "nov13-pedro-audit",
+  "defaultAfter": "nov17-pedro-followup",
   "notes": [
     "Saved visual captures only. Forms, payments and CRM behaviour require separate tests.",
     "Each saved version records its actual capture date. Source deployment dates are separate: the Pedro audit source is from 13 November and its desktop/mobile captures were made on 16 November 2026.",

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T14:03:45.835792Z",
-  "candidateUrl": "https://5bf03519.hqc-london.pages.dev",
-  "candidateCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
-  "beforeUrl": "https://1a8fa837.hqc-london.pages.dev/",
+  "updatedAt": "2026-11-17T10:06:10.910979+00:00",
+  "candidateUrl": "https://f3817af8.hqc-london.pages.dev",
+  "candidateCommit": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
+  "beforeUrl": "https://5bf03519.hqc-london.pages.dev",
   "auditedUrl": "https://71d122e7.hqc-london.pages.dev/",
-  "summary": "The clear changes from Pedro’s review have been made in the source. The design is being kept. Anything ambiguous stays on hold until its meaning is confirmed.",
-  "scopeNote": "“Done in source” means the edit or named source check is recorded in the acceptance matrix. It does not mean the live site is approved. These are grouped work items, not a fresh verification of all 252 audit findings. This checklist is read-only.",
-  "previewNote": "Fresh desktop and mobile screenshots are available in the saved comparison below. They were captured on 16 November from the recorded 13 November preview. Source edits, screenshots and client approval remain separate.",
+  "summary": "Pedro’s confirmed follow-up decisions have been applied to a new review candidate. The existing design and accepted earlier corrections are retained. Production remains unchanged.",
+  "scopeNote": "This checklist distinguishes source edits, hosted browser evidence and external acceptance gates. Google review quotes were checked directly on 17 November; CRM delivery, payments and client approval are separate states.",
+  "previewNote": "Fifty fresh desktop/mobile screenshots across 25 pages were captured on 17November from this exact immutable review preview. Earlier snapshots remain available. Screenshots, provider behaviour and client approval are separate states.",
   "groups": [
     {
       "id": "COPY",
@@ -49,15 +49,15 @@
         },
         {
           "id": "decision-provider-name",
-          "status": "clarification",
-          "title": "Confirm the Automaid naming boundary",
-          "detail": "Resolve the instruction about removing the name against the approved section 5 and privacy processor disclosure before changing either."
+          "status": "source",
+          "title": "Booking-system and supplier wording applied",
+          "detail": "Terms, including section 5, uses our booking system. Privacy lists supplier categories. The approved confirmation meaning is retained."
         },
         {
           "id": "legal-date",
           "status": "clarification",
-          "title": "Legal sign-off and final date",
-          "detail": "Pedro or the legal reviewer needs to approve the legal text and supply the final “Last reviewed” date for both pages."
+          "title": "Legal sign-off and Last reviewed wording awaited",
+          "detail": "Pedro is supplying the final wording. Existing legal headings and date placeholder remain; no date or approval has been invented."
         }
       ],
       "pages": [
@@ -93,15 +93,15 @@
         },
         {
           "id": "decision-review-selection",
-          "status": "clarification",
-          "title": "Choose the Reviews-page review set",
-          "detail": "Confirm whether the six homepage reviews should also be used by service on the Reviews page. No additional selection has been guessed."
+          "status": "source",
+          "title": "Seven agreed reviews grouped by service",
+          "detail": "Homes: Kara O., Lucy M., Liv M.; End of tenancy: Yori Z., Fabio K.; Workplaces: Chris M.; Property & Facilities: Andre G. All seven quotes matched direct Google Maps readback on 17 November. Andre B. and Thomas B. remain excluded."
         },
         {
           "id": "decision-review-intro",
-          "status": "clarification",
-          "title": "Confirm where the new Reviews intro belongs",
-          "detail": "The supplied replacement sentence needs an exact placement. The approved hero paragraphs stay until that anchor is confirmed."
+          "status": "source",
+          "title": "Exact Reviews introduction applied",
+          "detail": "Every property is different. These are the kinds of situations where clients have trusted HQC to help. Other approved lead text remains."
         },
         {
           "id": "case-study-permission",
@@ -133,9 +133,9 @@
         },
         {
           "id": "decision-removal-boundary",
-          "status": "clarification",
-          "title": "Confirm section depth and page list",
-          "detail": "Decide which added sections should disappear in full and which instructions refer only to a heading. Preserve approved closing calls to action and the Complex process until that boundary is clear."
+          "status": "source",
+          "title": "Four whole repeated sections removed on service pages",
+          "detail": "The four named generic sections are absent on the 15 explicit service routes. Trust, About and other pages retain their content. Service photographs remain available in the galleries. Homepage Client evidence stays and the named homepage carousel remains removed."
         }
       ],
       "pages": []
@@ -256,14 +256,14 @@
         {
           "id": "imagery-artwork",
           "status": "source",
-          "title": "23 corrected artwork files integrated",
-          "detail": "The corrected vacuum image and 22 inspected uniform outputs are in their exact target files with hash checks. Scene continuity still needs review in the page."
+          "title": "Remaining ten misplaced uniform logos corrected",
+          "detail": "Removed sleeve, shoulder and upper-back logos from ten inspected views. The left chest is hidden in these camera views, so no visible replacement mark is invented. Teal uniforms and scene composition are retained; generated edits do not guarantee pixel-exact preservation."
         },
         {
           "id": "decision-logo",
-          "status": "clarification",
-          "title": "Choose the header logo version",
-          "detail": "Confirm flat or 3D before changing the current header logo."
+          "status": "source",
+          "title": "Approved flat vector header restored",
+          "detail": "Both the full header logo and narrow-navigation monogram use the existing sharp flat gold SVGs. No 3D header assets are used."
         },
         {
           "id": "imagery-render",
@@ -361,9 +361,9 @@
         },
         {
           "id": "indexing-proof",
-          "status": "verification",
-          "title": "Prove redirects and production indexing",
-          "detail": "Collect direct redirect evidence plus production-target HTML, response headers and robots.txt. Keep preview protection. Actual indexing needs its own evidence."
+          "status": "source",
+          "title": "Production and preview indexing distinguished",
+          "detail": "Cloudflare production branch is main. Direct 17 November readback of the live homepage and FAQs returned index, follow with no X-Robots restriction. The new review build retains noindex protection. Redirect evidence remains a separate gate."
         }
       ],
       "pages": []
@@ -375,8 +375,8 @@
         {
           "id": "checks-regression",
           "status": "source",
-          "title": "14 regression checks passed",
-          "detail": "Recorded source checks cover controlled wording, protected content, exported routes, selector behaviour, provenance, phones, image assignments, heading structure and Astro syntax. They are not a full site build."
+          "title": "19 correction regression checks passed",
+          "detail": "Includes all earlier correction checks plus service-only section boundaries, gallery photograph preservation, grouped verbatim reviews, flat vector proportions and production/preview robots logic."
         },
         {
           "id": "checks-forms",
@@ -399,8 +399,8 @@
         {
           "id": "preview-captures",
           "status": "source",
-          "title": "Desktop/mobile captures and version record completed",
-          "detail": "All nine comparison pages have genuine full-page desktop/mobile screenshots, captured on 16 November from the immutable preview. The hosted files match their recorded hashes, the capture version is registered and the full revision provenance check passes. Broader journeys and client acceptance remain separate."
+          "title": "50 new desktop/mobile captures added",
+          "detail": "All 25 planned pages, including all 15 affected service pages, have fresh desktop/mobile captures, exact hashes and source references. Earlier snapshots and comments remain."
         },
         {
           "id": "browser-journeys",
@@ -424,14 +424,7 @@
       "pages": []
     }
   ],
-  "beforeCommit": "d4c296e54787acd682700ea952bc72707159981d",
-  "beforeProvenance": {
-    "deploymentId": "1a8fa837-c715-48fe-b998-606bb09d7903",
-    "sourceBranch": "t3/hqc-home-motion-cro-nov10",
-    "meaning": "Frozen preview immediately before these audit edits.",
-    "sameApplicationAsVersion": "nov11-banister-photo",
-    "sameApplicationCommit": "e45ba305eb217aac1844bd3e425cc7a6c14c6b4c",
-    "verification": "Cloudflare deployment record identifies the before-preview source. Git diff between the source commits contains only revisions/versions.json; application files are unchanged."
-  },
-  "captureDate": "2026-11-16"
+  "beforeCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+  "beforeProvenance": "13 November source; genuine previous captures made on 16 November. Earlier versions remain available.",
+  "captureDate": "2026-11-17"
 }

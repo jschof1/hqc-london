@@ -1,0 +1,5849 @@
+{
+  "versionId": "nov17-pedro-followup",
+  "sourceCommit": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
+  "baseUrl": "https://f3817af8.hqc-london.pages.dev",
+  "pages": [
+    {
+      "id": "home",
+      "label": "Homepage",
+      "path": "/"
+    },
+    {
+      "id": "quote",
+      "label": "Request a quote",
+      "path": "/request-a-quote/"
+    },
+    {
+      "id": "how",
+      "label": "How it works",
+      "path": "/how-we-work/"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "path": "/contact/"
+    },
+    {
+      "id": "tenancy",
+      "label": "End of tenancy cleaning",
+      "path": "/end-of-tenancy-cleaning-london/"
+    },
+    {
+      "id": "about",
+      "label": "About HQC",
+      "path": "/about-high-quality-clean/"
+    },
+    {
+      "id": "reviews",
+      "label": "Reviews & case studies",
+      "path": "/reviews-case-studies/"
+    },
+    {
+      "id": "privacy",
+      "label": "Privacy policy",
+      "path": "/privacy-policy/"
+    },
+    {
+      "id": "terms",
+      "label": "Terms and conditions",
+      "path": "/terms-and-conditions/"
+    },
+    {
+      "id": "facilities",
+      "label": "Property Facilities Cleaning London",
+      "path": "/property-facilities-cleaning-london/"
+    },
+    {
+      "id": "communal",
+      "label": "Communal Area Cleaning London",
+      "path": "/communal-area-cleaning-london/"
+    },
+    {
+      "id": "agents",
+      "label": "Estate Letting Agent Cleaning London",
+      "path": "/estate-letting-agent-cleaning-london/"
+    },
+    {
+      "id": "void",
+      "label": "Move In Void Property Cleaning London",
+      "path": "/move-in-void-property-cleaning-london/"
+    },
+    {
+      "id": "construction",
+      "label": "Post Construction Cleaning London",
+      "path": "/post-construction-cleaning-london/"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio Cleaning Support London",
+      "path": "/portfolio-cleaning-support-london/"
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial Cleaning London",
+      "path": "/commercial-cleaning-london/"
+    },
+    {
+      "id": "office",
+      "label": "Office Cleaning London",
+      "path": "/office-cleaning-london/"
+    },
+    {
+      "id": "commercial-deep",
+      "label": "Commercial Deep Cleaning London",
+      "path": "/commercial-deep-cleaning-london/"
+    },
+    {
+      "id": "home-service",
+      "label": "Home Cleaning London",
+      "path": "/home-cleaning-london/"
+    },
+    {
+      "id": "essential",
+      "label": "Essential Clean London",
+      "path": "/essential-clean-london/"
+    },
+    {
+      "id": "deep",
+      "label": "Deep Cleaning London",
+      "path": "/deep-cleaning-london/"
+    },
+    {
+      "id": "move-in",
+      "label": "Move In Cleaning London",
+      "path": "/move-in-cleaning-london/"
+    },
+    {
+      "id": "complex",
+      "label": "Complex Property Cleaning London",
+      "path": "/complex-property-cleaning-london/"
+    },
+    {
+      "id": "faq",
+      "label": "Cleaning Faqs",
+      "path": "/cleaning-faqs/"
+    },
+    {
+      "id": "why",
+      "label": "Why Choose Hqc",
+      "path": "/why-choose-hqc/"
+    }
+  ],
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "records": [
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "home",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/",
+      "final": "https://f3817af8.hqc-london.pages.dev/",
+      "file": "nov17-pedro-followup-home-desktop.jpg",
+      "width": 1440,
+      "height": 14350,
+      "sha256": "274d7b88d28a4e690f6624acbcf337c1070c3ba47532d8e2c2e80eaf35ce8d5e",
+      "originalSha256": "5a5f479ba779915835ff3b3cd6644ad09401c5edee55ae82e23169e63ca69048",
+      "capturedAt": "2026-11-17T10:07:22.949Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Professional Cleaning Services London | High Quality Clean",
+      "h1": "The Right Cleaning Servicefor the Result You Need",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 1,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "googleLink": "https://www.google.com/maps/place/High+Quality+Clean+Ltd/data=!4m2!3m1!1s0x0:0xade47bf255fda541",
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "quote",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/request-a-quote/",
+      "final": "https://f3817af8.hqc-london.pages.dev/request-a-quote/",
+      "file": "nov17-pedro-followup-quote-desktop.jpg",
+      "width": 1440,
+      "height": 6624,
+      "sha256": "c9f4df5a2a0483ada1241458592b960da41a4697a2432452eca981ece2de9c4b",
+      "originalSha256": "dee81b0c07c4f71bd6af263d63eb4e1fdac9f0ad77abe2128be0da962a546b73",
+      "capturedAt": "2026-11-17T10:07:26.257Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Request a Cleaning Quote | High Quality Clean London",
+      "h1": "Tell Us What You Need the Cleaning to Achieve",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "how",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/how-we-work/",
+      "final": "https://f3817af8.hqc-london.pages.dev/how-we-work/",
+      "file": "nov17-pedro-followup-how-desktop.jpg",
+      "width": 1440,
+      "height": 13334,
+      "sha256": "1c32e40fdfb9d9d15112b6adcbce9fbf22880fcf30a4bd96c84b8759da113055",
+      "originalSha256": "4be696bc7c882edd209d595b5e5998dff6ee53e7711bab4c354898ab35d5afc9",
+      "capturedAt": "2026-11-17T10:07:33.115Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "How High Quality Clean Works | Scope, Delivery & Quality",
+      "h1": "A Clearer Route from Requirement to Delivery",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "contact",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/contact/",
+      "final": "https://f3817af8.hqc-london.pages.dev/contact/",
+      "file": "nov17-pedro-followup-contact-desktop.jpg",
+      "width": 1440,
+      "height": 7222,
+      "sha256": "e565eb1d4a038efe5a445bcadc0cfb646b8d600c6780f20135df5837289b601d",
+      "originalSha256": "f601545418b42778c3c0ce1653c15106081b205caae0b92c72d877a6c3c042f5",
+      "capturedAt": "2026-11-17T10:07:36.798Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Contact High Quality Clean | London",
+      "h1": "Contact High Quality Clean",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "tenancy",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "file": "nov17-pedro-followup-tenancy-desktop.jpg",
+      "width": 1440,
+      "height": 10027,
+      "sha256": "b2637c242653c548e30d92055d077fd4df3b343623391c90b830a4f47b12431f",
+      "originalSha256": "79396f5dc36c0bd0548b38f9ee1c4fabcff87a0bc30497635e7ddad7320bedee",
+      "capturedAt": "2026-11-17T10:07:42.305Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "End of Tenancy Cleaning London | HQC",
+      "h1": "End of Tenancy™ Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "about",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/about-high-quality-clean/",
+      "final": "https://f3817af8.hqc-london.pages.dev/about-high-quality-clean/",
+      "file": "nov17-pedro-followup-about-desktop.jpg",
+      "width": 1440,
+      "height": 14227,
+      "sha256": "dac207eade2e0269883e4bae8566dc6dd720f75d6b040e3ef66a1ff9ac9bb8a9",
+      "originalSha256": "10dbc7b600ac8cd2289b3b1bd3c1c99580097c308dd2c6a359d11b7273107531",
+      "capturedAt": "2026-11-17T10:07:49.851Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "About High Quality Clean | Professional Cleaning London",
+      "h1": "About High Quality Clean",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "reviews",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/reviews-case-studies/",
+      "final": "https://f3817af8.hqc-london.pages.dev/reviews-case-studies/",
+      "file": "nov17-pedro-followup-reviews-desktop.jpg",
+      "width": 1440,
+      "height": 10828,
+      "sha256": "633496ddc1bc6dc53991eafd5b8f52fe095a630fd6c0be16e86814ac8f22b16c",
+      "originalSha256": "97ed8b0388de3b5db39820c6f194156225c6ee2172efc55876f9651dab075977",
+      "capturedAt": "2026-11-17T10:07:54.233Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "High Quality Clean Reviews & Case Studies | London",
+      "h1": "What Clients Say About High Quality Clean",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [
+        {
+          "service": "Homes",
+          "cards": [
+            {
+              "name": "Kara O.",
+              "text": "The team do an excellent job of cleaning our house each week as well as doing special cleanings (eg deep cleans, curtains, etc) for a reasonable price. They are courteous and work around our large dog and toddler. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Lucy M.",
+              "text": "Absolutely blown away by the service and excellent standard of my deep clean. Property looks completely different thanks to the team. The standard of cleaning was exceptional and the team were a delight. 110% recommend, thank you so much!!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Liv M.",
+              "text": "Loved the service! We had our whole flat deep cleaned after our home renovation and it was sparkling clean. Would definitely be using their services again !",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "End of tenancy",
+          "cards": [
+            {
+              "name": "Yori Z.",
+              "text": "Pedro and his crew performed an end-of-tenancy cleaning. They were very thorough and professional throughout. The house was left sparkling clean, ready for the next tenants.",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Fabio K.",
+              "text": "I can’t recommend this company enough. Very responsive and swift replies. Kept me updated every step of the way, and did an incredible job of deep cleaning an end of tenancy flat that was filthy.",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Workplaces",
+          "cards": [
+            {
+              "name": "Chris M.",
+              "text": "Fantastic service! The team was professional, thorough, and efficient. Our space has never looked better—everything was spotless and fresh. Great attention to detail and very friendly staff. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Property & Facilities",
+          "cards": [
+            {
+              "name": "Andre G.",
+              "text": "I must say I have received high Quality cleaning and Good Quotation..they even came 2days earlier to help us so my Tenants can come in to my clean Property..",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        }
+      ],
+      "intro": true,
+      "oldIntro": false,
+      "googleLink": "https://www.google.com/maps/place/High+Quality+Clean+Ltd/data=!4m2!3m1!1s0x0:0xade47bf255fda541",
+      "rating": true,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "privacy",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/privacy-policy/",
+      "final": "https://f3817af8.hqc-london.pages.dev/privacy-policy/",
+      "file": "nov17-pedro-followup-privacy-desktop.jpg",
+      "width": 1440,
+      "height": 10591,
+      "sha256": "32e03b58f9fca5fd4b66dbd0b6ef7e1952ddb3b4f923d4bb3ef8cdcee7b25af2",
+      "originalSha256": "eb6919bbf33de8bf4aa8d0e8323453057cac5f926a51bc02982f529271c16299",
+      "capturedAt": "2026-11-17T10:07:57.935Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Privacy Policy | High Quality Clean Ltd",
+      "h1": "Privacy Policy",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "terms",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/terms-and-conditions/",
+      "final": "https://f3817af8.hqc-london.pages.dev/terms-and-conditions/",
+      "file": "nov17-pedro-followup-terms-desktop.jpg",
+      "width": 1440,
+      "height": 13772,
+      "sha256": "a5eaec5a7a53368840dce44d70bcb6b006f7b23a8d8cd8106c83d31774fefd69",
+      "originalSha256": "a295cec25b87313880c8303fc96430e159802e184918a0b4582472b2be01db26",
+      "capturedAt": "2026-11-17T10:08:02.857Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Terms & Conditions of Service | High Quality Clean Ltd",
+      "h1": "Terms and Conditions of Service",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "facilities",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "file": "nov17-pedro-followup-facilities-desktop.jpg",
+      "width": 1440,
+      "height": 9786,
+      "sha256": "783f9201f4c2786afd3a34ee633d1b4e9e27c9ad9ea6dfbc5cd4a0139350327b",
+      "originalSha256": "b5f715d53ba0642e76d03c06c5398d2cb078c7b0d160927d04b88e76b2fe02ed",
+      "capturedAt": "2026-11-17T10:08:07.798Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Property Management Cleaning London | HQC",
+      "h1": "Cleaning Support for London Property Managers, Agents and Facilities Teams",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "communal",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "file": "nov17-pedro-followup-communal-desktop.jpg",
+      "width": 1440,
+      "height": 11248,
+      "sha256": "43e07782a8b14e0c6404e4dd20419b0d162b0ba061ed7918033508127b094806",
+      "originalSha256": "19d2b518f94021deb4343dca764d94549336b4e05b8a278b0e739ffbcec2a2ca",
+      "capturedAt": "2026-11-17T10:08:13.747Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Communal Area Cleaning London | Managed Buildings | HQC",
+      "h1": "Communal Area Cleaning for London Managed Buildings",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "agents",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "file": "nov17-pedro-followup-agents-desktop.jpg",
+      "width": 1440,
+      "height": 10685,
+      "sha256": "a77678fc50dbb144b9985f9287313235744cd6181e3619c47c0cabd9498401b7",
+      "originalSha256": "2ea611551088169680c7b8aea2b9334a8865eda1aaaf2fec41f79140d294a6ff",
+      "capturedAt": "2026-11-17T10:08:19.663Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Cleaning Services for Estate & Lettings Agents London | HQC",
+      "h1": "Cleaning Support for London Estate and Lettings Agents",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "void",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "file": "nov17-pedro-followup-void-desktop.jpg",
+      "width": 1440,
+      "height": 9739,
+      "sha256": "c28951947f5d20ad243201943727cbafd2d1c858c071ecba1f1b2f5485ef9a4a",
+      "originalSha256": "155fdffb5b22662a1186a76c5310e78e668a3bdcc6f78ac9dacef82ec58a3f3a",
+      "capturedAt": "2026-11-17T10:08:24.799Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Void Property Cleaning London | Move-In & Property Reset | HQC",
+      "h1": "Move-In and Void Property Cleaning for London Property Teams",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/luxurious-kensington-ensuite.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "construction",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "file": "nov17-pedro-followup-construction-desktop.jpg",
+      "width": 1440,
+      "height": 11527,
+      "sha256": "0cabff9649dd5c14f4f6046f06d23b0072582241f700ea799c78ed56bc27b180",
+      "originalSha256": "a0ffd6459ca6f2169f9e9819ac57c61b56a8887ec9df794a61ae8ed3dd7aeeb2",
+      "capturedAt": "2026-11-17T10:08:30.510Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Post-Construction Cleaning London | HQC",
+      "h1": "Post-Construction™ Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "portfolio",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "file": "nov17-pedro-followup-portfolio-desktop.jpg",
+      "width": 1440,
+      "height": 10907,
+      "sha256": "3e406abbe3ac7cd7c06a921c4c667ca0e7d542e32d68fa8bcd446e9cf00aec5e",
+      "originalSha256": "8ef82316e39e6c544fdb4e5ec943ebbcdcd12336a5dc6584a4fcfaca891b9f39",
+      "capturedAt": "2026-11-17T10:08:36.065Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Property Portfolio Cleaning London | HQC",
+      "h1": "Cleaning Support Across London Property Portfolios",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "commercial",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/commercial-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/commercial-cleaning-london/",
+      "file": "nov17-pedro-followup-commercial-desktop.jpg",
+      "width": 1440,
+      "height": 11611,
+      "sha256": "59ee0bb701e921517fd5d77bc6da2e0f46a03398a23b265cbcf63ccfb705f9e5",
+      "originalSha256": "85e4de0a3a2092759c905634b96208b104c6d9b3b1b7b0fc5cdb2342f16e8e37",
+      "capturedAt": "2026-11-17T10:08:42.152Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Commercial Cleaning London | Workplaces & Sites | HQC",
+      "h1": "Workplaces and Commercial Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/generated/hqc-workplace-detail.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "office",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/office-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/office-cleaning-london/",
+      "file": "nov17-pedro-followup-office-desktop.jpg",
+      "width": 1440,
+      "height": 10438,
+      "sha256": "f2934a04afc7ec0fab23b52d5f9dec23c9308021501e2dd97238f5dafa15a10d",
+      "originalSha256": "916f83791b51a4413f757fd5b6b420f969ceedbf82c0f41c6787b97715be3948",
+      "capturedAt": "2026-11-17T10:08:48.264Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Office Cleaning London | Workplace Cleaning Programmes | HQC",
+      "h1": "Office Cleaning Programmes Built Around Your Workplace",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "commercial-deep",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "file": "nov17-pedro-followup-commercial-deep-desktop.jpg",
+      "width": 1440,
+      "height": 11647,
+      "sha256": "a4a01c2dba7ca1b397af082e03691fc4c11125ab57dcf7136edef69ab42ae467",
+      "originalSha256": "36fd1e93ce067444623bbd5e3bd2c635015ad46ea8be2cdfdd80d1c1799aef4d",
+      "capturedAt": "2026-11-17T10:08:54.034Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Commercial Deep Cleaning London | Workplace Reset | HQC",
+      "h1": "Commercial Deep Cleaning for London Workplaces and Premises",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "home-service",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/home-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/home-cleaning-london/",
+      "file": "nov17-pedro-followup-home-service-desktop.jpg",
+      "width": 1440,
+      "height": 10017,
+      "sha256": "1fdb4eb85bd963620430446379894cfceaf8233d63987a55c533aa7eee18a8f1",
+      "originalSha256": "92bc50a21f1f2abc1e5d467522a3d72c541a6b6b8106b863752f6235bc29e7e8",
+      "capturedAt": "2026-11-17T10:08:59.574Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Home Cleaning Services London | High Quality Clean",
+      "h1": "Home Cleaning Starts with the Result You Need",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "essential",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/essential-clean-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/essential-clean-london/",
+      "file": "nov17-pedro-followup-essential-desktop.jpg",
+      "width": 1440,
+      "height": 10668,
+      "sha256": "1c96a9cb5f04f7550db8fa373108467995f939307f2674d2ad18dac127808581",
+      "originalSha256": "0cd34caf4a37e2f75d37d1d2ba04a77e94a962595700e7780275b1b81a93fdd0",
+      "capturedAt": "2026-11-17T10:09:05.351Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Regular Home Cleaning London | Essential Clean™ | HQC",
+      "h1": "Essential Clean™ for London Homes",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "deep",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/deep-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/deep-cleaning-london/",
+      "file": "nov17-pedro-followup-deep-desktop.jpg",
+      "width": 1440,
+      "height": 9476,
+      "sha256": "318e8a5d08fdf35e531504fff4f6db8202642d60f0454eeaa729de907e8808a5",
+      "originalSha256": "5745fbdcde8f07870a664828d9c2bbf68b42cfecec869f6e8622e3b7c2b10ada",
+      "capturedAt": "2026-11-17T10:09:10.816Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Deep Cleaning London | Deep Clean™ for Homes | HQC",
+      "h1": "Deep Clean™ for London Homes",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "move-in",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/move-in-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/move-in-cleaning-london/",
+      "file": "nov17-pedro-followup-move-in-desktop.jpg",
+      "width": 1440,
+      "height": 9271,
+      "sha256": "7519c67224682fceffb472b545104bbbe81c67b9b7a75a5a1d494771ee569c1c",
+      "originalSha256": "8e2f83c1d4d709900e4907079ab5e6b9b283ac79ba0f0a39b3aa1fe2db6be6b6",
+      "capturedAt": "2026-11-17T10:09:15.560Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Move-In Cleaning London | Move-In Reset™ | HQC",
+      "h1": "Move-In Reset™ Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "complex",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "file": "nov17-pedro-followup-complex-desktop.jpg",
+      "width": 1440,
+      "height": 11742,
+      "sha256": "eed95172835f96ef9a3332086649c55a54f3da185d8f010a9684d5117d7f662b",
+      "originalSha256": "80033b527e34693a36e9f70cc4c9e9feaf9c98ae48e76385d869bb459a67a018",
+      "capturedAt": "2026-11-17T10:09:21.685Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Large & Complex Property Cleaning London | HQC",
+      "h1": "Cleaning Assessment and Delivery for Large or Complex London Properties",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "faq",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/cleaning-faqs/",
+      "final": "https://f3817af8.hqc-london.pages.dev/cleaning-faqs/",
+      "file": "nov17-pedro-followup-faq-desktop.jpg",
+      "width": 1440,
+      "height": 7778,
+      "sha256": "c0aeab4a15f620a829c4374775fca307d0e0c4c09fd31186304aa665aff8f9f9",
+      "originalSha256": "99bff18feda20c6022bf92b57931a9bd96a0ecf46adfda8a6c16e7a41627a374",
+      "capturedAt": "2026-11-17T10:09:25.000Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Cleaning FAQs London | High Quality Clean",
+      "h1": "Frequently Asked Questions About HQC Cleaning Services",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "why",
+      "viewport": "desktop",
+      "viewportSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/why-choose-hqc/",
+      "final": "https://f3817af8.hqc-london.pages.dev/why-choose-hqc/",
+      "file": "nov17-pedro-followup-why-desktop.jpg",
+      "width": 1440,
+      "height": 14254,
+      "sha256": "c9a0c9a2621b54b63131710de5919e6b0fa3fac838372217e41f4076c8e014e2",
+      "originalSha256": "c17952cce5735272004cc54649a8dcd32bc230d9f15814a9c26bc189b537fed2",
+      "capturedAt": "2026-11-17T10:09:33.051Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Why Choose High Quality Clean | London Cleaning Company",
+      "h1": "Why Clients Choose HQC When the Result Matters",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "home",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/",
+      "final": "https://f3817af8.hqc-london.pages.dev/",
+      "file": "nov17-pedro-followup-home-mobile.jpg",
+      "width": 390,
+      "height": 24269,
+      "sha256": "e1fadd2f22bb098a6702b17b17b8ffbcaaaecadf53c6ee8799e0940da8c1e242",
+      "originalSha256": "4bc2b776dc1e02a19749f628e62e815ffacafc80f308629cb15afeaeee5c00c5",
+      "capturedAt": "2026-11-17T10:09:39.337Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Professional Cleaning Services London | High Quality Clean",
+      "h1": "The Right Cleaning Servicefor the Result You Need",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 1,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "googleLink": "https://www.google.com/maps/place/High+Quality+Clean+Ltd/data=!4m2!3m1!1s0x0:0xade47bf255fda541",
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "quote",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/request-a-quote/",
+      "final": "https://f3817af8.hqc-london.pages.dev/request-a-quote/",
+      "file": "nov17-pedro-followup-quote-mobile.jpg",
+      "width": 390,
+      "height": 11072,
+      "sha256": "258c2f91f7e9b48a1b286e319d9752f104f9bdbbee1be793c9dfe72b08d9e894",
+      "originalSha256": "23033ef4c6e51948bac465eb97932334ce1653951238c1801358d51b28a22173",
+      "capturedAt": "2026-11-17T10:09:42.109Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Request a Cleaning Quote | High Quality Clean London",
+      "h1": "Tell Us What You Need the Cleaning to Achieve",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "how",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/how-we-work/",
+      "final": "https://f3817af8.hqc-london.pages.dev/how-we-work/",
+      "file": "nov17-pedro-followup-how-mobile.jpg",
+      "width": 390,
+      "height": 18631,
+      "sha256": "43e53a33c9ec6ddf485e00a8c9eccbecd4deb4e5883c6572a928de9b84cd3acd",
+      "originalSha256": "7dcdbc27f3b6e6a02819754eeecc8bdc524e5d5b03d832a77efa46c9dcc465fc",
+      "capturedAt": "2026-11-17T10:09:46.775Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "How High Quality Clean Works | Scope, Delivery & Quality",
+      "h1": "A Clearer Route from Requirement to Delivery",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "contact",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/contact/",
+      "final": "https://f3817af8.hqc-london.pages.dev/contact/",
+      "file": "nov17-pedro-followup-contact-mobile.jpg",
+      "width": 390,
+      "height": 10723,
+      "sha256": "522ea20fa76666982a9a36cca1d8858a468f7a5ef446da1235c60f8bf580fade",
+      "originalSha256": "715bfbcf7121c7b3732355f5393ca0c6bf339c6a7eb3c70db89e45b7ac10eb56",
+      "capturedAt": "2026-11-17T10:09:49.720Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Contact High Quality Clean | London",
+      "h1": "Contact High Quality Clean",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "tenancy",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "file": "nov17-pedro-followup-tenancy-mobile.jpg",
+      "width": 390,
+      "height": 14235,
+      "sha256": "d6b3f04faf709262fe9917db51e45ca81683a10ba992a0b40cea818f8ad59fe2",
+      "originalSha256": "921b161b7b0e375c0e180db3b70febd2fb2cb2fd91e40b2869301b77ecf25667",
+      "capturedAt": "2026-11-17T10:09:53.564Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "End of Tenancy Cleaning London | HQC",
+      "h1": "End of Tenancy™ Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "about",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/about-high-quality-clean/",
+      "final": "https://f3817af8.hqc-london.pages.dev/about-high-quality-clean/",
+      "file": "nov17-pedro-followup-about-mobile.jpg",
+      "width": 390,
+      "height": 21366,
+      "sha256": "4d2dc5b85e7e984c335e1729c80a1b2def4adeb589a8aaeab69453f3b72e5870",
+      "originalSha256": "388eea8b716469acb7007a6c05783cd52cb1d7418cb9c766af481d137074d54b",
+      "capturedAt": "2026-11-17T10:09:58.893Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "About High Quality Clean | Professional Cleaning London",
+      "h1": "About High Quality Clean",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "reviews",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/reviews-case-studies/",
+      "final": "https://f3817af8.hqc-london.pages.dev/reviews-case-studies/",
+      "file": "nov17-pedro-followup-reviews-mobile.jpg",
+      "width": 390,
+      "height": 16087,
+      "sha256": "29c0609dcd686d47bbc8c928ee5ca20459519130236de82c902f2200a0adffbe",
+      "originalSha256": "821f6e72e3b1a4de4fb8c3ea0ae320c3e708ffb21ff4a03af1fa58f1e3d720bf",
+      "capturedAt": "2026-11-17T10:10:02.692Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "High Quality Clean Reviews & Case Studies | London",
+      "h1": "What Clients Say About High Quality Clean",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [
+        {
+          "service": "Homes",
+          "cards": [
+            {
+              "name": "Kara O.",
+              "text": "The team do an excellent job of cleaning our house each week as well as doing special cleanings (eg deep cleans, curtains, etc) for a reasonable price. They are courteous and work around our large dog and toddler. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Lucy M.",
+              "text": "Absolutely blown away by the service and excellent standard of my deep clean. Property looks completely different thanks to the team. The standard of cleaning was exceptional and the team were a delight. 110% recommend, thank you so much!!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Liv M.",
+              "text": "Loved the service! We had our whole flat deep cleaned after our home renovation and it was sparkling clean. Would definitely be using their services again !",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "End of tenancy",
+          "cards": [
+            {
+              "name": "Yori Z.",
+              "text": "Pedro and his crew performed an end-of-tenancy cleaning. They were very thorough and professional throughout. The house was left sparkling clean, ready for the next tenants.",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Fabio K.",
+              "text": "I can’t recommend this company enough. Very responsive and swift replies. Kept me updated every step of the way, and did an incredible job of deep cleaning an end of tenancy flat that was filthy.",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Workplaces",
+          "cards": [
+            {
+              "name": "Chris M.",
+              "text": "Fantastic service! The team was professional, thorough, and efficient. Our space has never looked better—everything was spotless and fresh. Great attention to detail and very friendly staff. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Property & Facilities",
+          "cards": [
+            {
+              "name": "Andre G.",
+              "text": "I must say I have received high Quality cleaning and Good Quotation..they even came 2days earlier to help us so my Tenants can come in to my clean Property..",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        }
+      ],
+      "intro": true,
+      "oldIntro": false,
+      "googleLink": "https://www.google.com/maps/place/High+Quality+Clean+Ltd/data=!4m2!3m1!1s0x0:0xade47bf255fda541",
+      "rating": true,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "privacy",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/privacy-policy/",
+      "final": "https://f3817af8.hqc-london.pages.dev/privacy-policy/",
+      "file": "nov17-pedro-followup-privacy-mobile.jpg",
+      "width": 390,
+      "height": 16697,
+      "sha256": "076977f1ca7526466fec216b8d3a852f290903dfc0e7b537469017503286af45",
+      "originalSha256": "08cc8b8bffbf8395292e1a616c79219f2f15ced6f9f7fc0f4a185bcc9abc3df7",
+      "capturedAt": "2026-11-17T10:10:06.520Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Privacy Policy | High Quality Clean Ltd",
+      "h1": "Privacy Policy",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "terms",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/terms-and-conditions/",
+      "final": "https://f3817af8.hqc-london.pages.dev/terms-and-conditions/",
+      "file": "nov17-pedro-followup-terms-mobile.jpg",
+      "width": 390,
+      "height": 21817,
+      "sha256": "adb1fc7744d212188bfd32dd6ad24c2411f04b2240bed129b89e8326dd6e3885",
+      "originalSha256": "f00914ff946f8a3c5a12388b1334e12fbd696e599b4775251473c5f528b30dc4",
+      "capturedAt": "2026-11-17T10:10:11.470Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Terms & Conditions of Service | High Quality Clean Ltd",
+      "h1": "Terms and Conditions of Service",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "facilities",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "file": "nov17-pedro-followup-facilities-mobile.jpg",
+      "width": 390,
+      "height": 13915,
+      "sha256": "74d896bf53f0e83e001d18638c9f97bdca25aca1e938fdf4c11fdebfab2e311b",
+      "originalSha256": "869d867f2c57bb8ef9b792fa9822da799bd51a0a6d63b11f969688a1e3f46a2d",
+      "capturedAt": "2026-11-17T10:10:15.010Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Property Management Cleaning London | HQC",
+      "h1": "Cleaning Support for London Property Managers, Agents and Facilities Teams",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "communal",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "file": "nov17-pedro-followup-communal-mobile.jpg",
+      "width": 390,
+      "height": 16108,
+      "sha256": "8f2c02a1fc040da1e181c12b7656f67959aef370bd4ab45908c2a5618945f10d",
+      "originalSha256": "2b1a065330c84fc6d0e2eec8e8ea51bb97cb4132cfb2ae02ef31c2dcf2f861e7",
+      "capturedAt": "2026-11-17T10:10:19.218Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Communal Area Cleaning London | Managed Buildings | HQC",
+      "h1": "Communal Area Cleaning for London Managed Buildings",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "agents",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "file": "nov17-pedro-followup-agents-mobile.jpg",
+      "width": 390,
+      "height": 15367,
+      "sha256": "41dbee3a5486b78291990bcd46c1a6002dfcf242c3e21c3975f180040f7746dc",
+      "originalSha256": "642d7622d18f7125a911a719ad4522d5a1e2505c03f7da6393a433e94e125450",
+      "capturedAt": "2026-11-17T10:10:23.074Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Cleaning Services for Estate & Lettings Agents London | HQC",
+      "h1": "Cleaning Support for London Estate and Lettings Agents",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "void",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "file": "nov17-pedro-followup-void-mobile.jpg",
+      "width": 390,
+      "height": 14237,
+      "sha256": "8e23341246e019c03a4ccae7264fa76a8c910487f4fcc6e4af14584c44e33f81",
+      "originalSha256": "85e6adb21f312fc4b95e2f36d964aa9902f6748d62551c85e894ab3c5f52e124",
+      "capturedAt": "2026-11-17T10:10:26.704Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Void Property Cleaning London | Move-In & Property Reset | HQC",
+      "h1": "Move-In and Void Property Cleaning for London Property Teams",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/luxurious-kensington-ensuite.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "construction",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "file": "nov17-pedro-followup-construction-mobile.jpg",
+      "width": 390,
+      "height": 16803,
+      "sha256": "4b31d9ad7b72cba52538af6d9367449bf50d3eb2995dea69009724efa1d9c5a8",
+      "originalSha256": "3ab66cf557addfd78f609acffbd29b7d0b8fbad134dbea259d8ffd31a3e253da",
+      "capturedAt": "2026-11-17T10:10:30.709Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Post-Construction Cleaning London | HQC",
+      "h1": "Post-Construction™ Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "portfolio",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "file": "nov17-pedro-followup-portfolio-mobile.jpg",
+      "width": 390,
+      "height": 15349,
+      "sha256": "1f5762ae3bcb4a4ea88955324a261ad627d7aba694e01d9ac2f0d1bdd5905ae7",
+      "originalSha256": "38705db076300d75de6e51a2d03e3debdb2fcbe138c24e38869b70622b17dd04",
+      "capturedAt": "2026-11-17T10:10:34.594Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Property Portfolio Cleaning London | HQC",
+      "h1": "Cleaning Support Across London Property Portfolios",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "commercial",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/commercial-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/commercial-cleaning-london/",
+      "file": "nov17-pedro-followup-commercial-mobile.jpg",
+      "width": 390,
+      "height": 16063,
+      "sha256": "d67ea77b66a6fc92d70a4a8a2711ee528e7e9e99669b28cfb17e0d2b18d9983b",
+      "originalSha256": "929e3b9b6563d7b83931e98ef9fc8dc09445c5d320144150a2d9025c29c030ef",
+      "capturedAt": "2026-11-17T10:10:38.676Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Commercial Cleaning London | Workplaces & Sites | HQC",
+      "h1": "Workplaces and Commercial Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/generated/hqc-workplace-detail.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "office",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/office-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/office-cleaning-london/",
+      "file": "nov17-pedro-followup-office-mobile.jpg",
+      "width": 390,
+      "height": 15077,
+      "sha256": "9084fe024cea14a92f44ea941c746c83a0010b008486d718ba088ddf7e59a8d9",
+      "originalSha256": "8bbbe0694f23b4667445298f77900074951f582afbaef57f358c6ec03d5987fc",
+      "capturedAt": "2026-11-17T10:10:42.532Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Office Cleaning London | Workplace Cleaning Programmes | HQC",
+      "h1": "Office Cleaning Programmes Built Around Your Workplace",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "commercial-deep",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "file": "nov17-pedro-followup-commercial-deep-mobile.jpg",
+      "width": 390,
+      "height": 16293,
+      "sha256": "a7ea5e0dbc6c3613c6d07b2d5b755b1661f4f166c9a1f2e905c845ce2652eeb0",
+      "originalSha256": "3238c5a472ddebb7059032f0b45c160200a35a471c5d827b0695cc4eb9e81d61",
+      "capturedAt": "2026-11-17T10:10:46.432Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Commercial Deep Cleaning London | Workplace Reset | HQC",
+      "h1": "Commercial Deep Cleaning for London Workplaces and Premises",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "home-service",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/home-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/home-cleaning-london/",
+      "file": "nov17-pedro-followup-home-service-mobile.jpg",
+      "width": 390,
+      "height": 14344,
+      "sha256": "d55157afc551ad6b2c6f868550b3f229badab2464a3a422caee6868190e34209",
+      "originalSha256": "ddb1d713c3d7a29be473466c4df38c31624ce94154586c24f4cef4c3054059b5",
+      "capturedAt": "2026-11-17T10:10:50.157Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Home Cleaning Services London | High Quality Clean",
+      "h1": "Home Cleaning Starts with the Result You Need",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "essential",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/essential-clean-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/essential-clean-london/",
+      "file": "nov17-pedro-followup-essential-mobile.jpg",
+      "width": 390,
+      "height": 15819,
+      "sha256": "5f59f341ed6fc220eb3394c62206a31b8c58649e1840962cef59a097dc64ec0b",
+      "originalSha256": "f905d2ca62e6d94187fbd5e9ffdae7b33bc118d7985a352f64d0cab87a796673",
+      "capturedAt": "2026-11-17T10:10:54.122Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Regular Home Cleaning London | Essential Clean™ | HQC",
+      "h1": "Essential Clean™ for London Homes",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "deep",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/deep-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/deep-cleaning-london/",
+      "file": "nov17-pedro-followup-deep-mobile.jpg",
+      "width": 390,
+      "height": 14209,
+      "sha256": "29654cc14229e26ba17bd82519e52ce6832cd3f531d9ebb9cef0242874eaf649",
+      "originalSha256": "0e8ee0507ebd3d17d6d29074ae3c8fa3568d7249b6b113d17be84b678480b7b6",
+      "capturedAt": "2026-11-17T10:10:57.804Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Deep Cleaning London | Deep Clean™ for Homes | HQC",
+      "h1": "Deep Clean™ for London Homes",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "move-in",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/move-in-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/move-in-cleaning-london/",
+      "file": "nov17-pedro-followup-move-in-mobile.jpg",
+      "width": 390,
+      "height": 12826,
+      "sha256": "ffa4319aa0a74985aefcdda0a316efbce764be3149e1d8156779026a4c8b351f",
+      "originalSha256": "33929d64809015d84f99ace91cedc9548bf63881647bdf72afcaa3363e8f672b",
+      "capturedAt": "2026-11-17T10:11:01.121Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Move-In Cleaning London | Move-In Reset™ | HQC",
+      "h1": "Move-In Reset™ Cleaning in London",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "complex",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "final": "https://f3817af8.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "file": "nov17-pedro-followup-complex-mobile.jpg",
+      "width": 390,
+      "height": 17594,
+      "sha256": "8f65511b155b049b23ed79bfe33ba5a38b28fef9821a0637fca8a3365ca06a17",
+      "originalSha256": "7e41a1d4c4c892e6eca5109a4635e1988f4f6af8b448b9b995fb2f1ea800bc16",
+      "capturedAt": "2026-11-17T10:11:05.381Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Large & Complex Property Cleaning London | HQC",
+      "h1": "Cleaning Assessment and Delivery for Large or Complex London Properties",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "faq",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/cleaning-faqs/",
+      "final": "https://f3817af8.hqc-london.pages.dev/cleaning-faqs/",
+      "file": "nov17-pedro-followup-faq-mobile.jpg",
+      "width": 390,
+      "height": 8459,
+      "sha256": "c618506b37afdfea88a3c40024b77275ac2099d3c6f64efa51b59c86ccd676b5",
+      "originalSha256": "29795b61c94005312d5b05e1e30b6e2a9269d978678a65aad8d254df7a84b8dd",
+      "capturedAt": "2026-11-17T10:11:07.649Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Cleaning FAQs London | High Quality Clean",
+      "h1": "Frequently Asked Questions About HQC Cleaning Services",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "gallery": [],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex, nofollow, noarchive"
+    },
+    {
+      "id": "nov17-pedro-followup",
+      "pageId": "why",
+      "viewport": "mobile",
+      "viewportSize": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://f3817af8.hqc-london.pages.dev/why-choose-hqc/",
+      "final": "https://f3817af8.hqc-london.pages.dev/why-choose-hqc/",
+      "file": "nov17-pedro-followup-why-mobile.jpg",
+      "width": 390,
+      "height": 20259,
+      "sha256": "9a3c62e0517ae8c9fb3d6e448fc4631a397f53ba4ee69f1f2cf62f1914a73ccc",
+      "originalSha256": "c1849e53f0776b6ad8aaa6362f93b194ba67645a2728149d6f5f63fb457d615c",
+      "capturedAt": "2026-11-17T10:11:12.788Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies",
+      "title": "Why Choose High Quality Clean | London Cleaning Company",
+      "h1": "Why Clients Choose HQC When the Result Matters",
+      "h1Count": 1,
+      "overflow": false,
+      "broken": [],
+      "fonts": "loaded",
+      "robots": "noindex, nofollow, noarchive",
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "gallery": [
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ],
+      "clientEvidence": 0,
+      "oldCarousel": false,
+      "header": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "reviews": [],
+      "intro": false,
+      "oldIntro": false,
+      "errors": [],
+      "failedRequests": [],
+      "xRobots": "noindex"
+    }
+  ],
+  "checks": [
+    {
+      "id": "home/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "home/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "home/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "home/desktop/homepage-evidence",
+      "status": "PASS",
+      "detail": {
+        "evidence": 1,
+        "oldCarousel": false
+      }
+    },
+    {
+      "id": "quote/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "quote/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "quote/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "how/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "how/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "how/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "how/desktop/retained-trust-sections",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      }
+    },
+    {
+      "id": "contact/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "contact/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "contact/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "tenancy/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "tenancy/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "tenancy/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "tenancy/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "tenancy/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ]
+    },
+    {
+      "id": "about/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "about/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "about/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "about/desktop/retained-trust-sections",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      }
+    },
+    {
+      "id": "reviews/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "reviews/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "reviews/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "reviews/desktop/reviews-groups",
+      "status": "PASS",
+      "detail": [
+        {
+          "service": "Homes",
+          "cards": [
+            {
+              "name": "Kara O.",
+              "text": "The team do an excellent job of cleaning our house each week as well as doing special cleanings (eg deep cleans, curtains, etc) for a reasonable price. They are courteous and work around our large dog and toddler. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Lucy M.",
+              "text": "Absolutely blown away by the service and excellent standard of my deep clean. Property looks completely different thanks to the team. The standard of cleaning was exceptional and the team were a delight. 110% recommend, thank you so much!!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Liv M.",
+              "text": "Loved the service! We had our whole flat deep cleaned after our home renovation and it was sparkling clean. Would definitely be using their services again !",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "End of tenancy",
+          "cards": [
+            {
+              "name": "Yori Z.",
+              "text": "Pedro and his crew performed an end-of-tenancy cleaning. They were very thorough and professional throughout. The house was left sparkling clean, ready for the next tenants.",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Fabio K.",
+              "text": "I can’t recommend this company enough. Very responsive and swift replies. Kept me updated every step of the way, and did an incredible job of deep cleaning an end of tenancy flat that was filthy.",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Workplaces",
+          "cards": [
+            {
+              "name": "Chris M.",
+              "text": "Fantastic service! The team was professional, thorough, and efficient. Our space has never looked better—everything was spotless and fresh. Great attention to detail and very friendly staff. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Property & Facilities",
+          "cards": [
+            {
+              "name": "Andre G.",
+              "text": "I must say I have received high Quality cleaning and Good Quotation..they even came 2days earlier to help us so my Tenants can come in to my clean Property..",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reviews/desktop/reviews-quotes",
+      "status": "PASS",
+      "detail": [
+        {
+          "service": "Homes",
+          "cards": [
+            {
+              "name": "Kara O.",
+              "text": "The team do an excellent job of cleaning our house each week as well as doing special cleanings (eg deep cleans, curtains, etc) for a reasonable price. They are courteous and work around our large dog and toddler. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Lucy M.",
+              "text": "Absolutely blown away by the service and excellent standard of my deep clean. Property looks completely different thanks to the team. The standard of cleaning was exceptional and the team were a delight. 110% recommend, thank you so much!!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Liv M.",
+              "text": "Loved the service! We had our whole flat deep cleaned after our home renovation and it was sparkling clean. Would definitely be using their services again !",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "End of tenancy",
+          "cards": [
+            {
+              "name": "Yori Z.",
+              "text": "Pedro and his crew performed an end-of-tenancy cleaning. They were very thorough and professional throughout. The house was left sparkling clean, ready for the next tenants.",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Fabio K.",
+              "text": "I can’t recommend this company enough. Very responsive and swift replies. Kept me updated every step of the way, and did an incredible job of deep cleaning an end of tenancy flat that was filthy.",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Workplaces",
+          "cards": [
+            {
+              "name": "Chris M.",
+              "text": "Fantastic service! The team was professional, thorough, and efficient. Our space has never looked better—everything was spotless and fresh. Great attention to detail and very friendly staff. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Property & Facilities",
+          "cards": [
+            {
+              "name": "Andre G.",
+              "text": "I must say I have received high Quality cleaning and Good Quotation..they even came 2days earlier to help us so my Tenants can come in to my clean Property..",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reviews/desktop/reviews-intro-links-gallery",
+      "status": "PASS",
+      "detail": {
+        "intro": true,
+        "oldIntro": false,
+        "gallery": [],
+        "googleLink": "https://www.google.com/maps/place/High+Quality+Clean+Ltd/data=!4m2!3m1!1s0x0:0xade47bf255fda541",
+        "rating": true
+      }
+    },
+    {
+      "id": "privacy/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "privacy/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "privacy/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "privacy/desktop/legal",
+      "status": "PASS",
+      "detail": {
+        "vendorNames": false,
+        "datePreserved": true
+      }
+    },
+    {
+      "id": "terms/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "terms/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "terms/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "terms/desktop/legal",
+      "status": "PASS",
+      "detail": {
+        "vendorNames": false,
+        "datePreserved": true
+      }
+    },
+    {
+      "id": "facilities/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "facilities/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "facilities/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "facilities/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "facilities/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ]
+    },
+    {
+      "id": "communal/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "communal/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "communal/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "communal/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "communal/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ]
+    },
+    {
+      "id": "agents/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "agents/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "agents/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "agents/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "agents/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp"
+      ]
+    },
+    {
+      "id": "void/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "void/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "void/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "void/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "void/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/luxurious-kensington-ensuite.png"
+      ]
+    },
+    {
+      "id": "construction/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "construction/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "construction/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "construction/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "construction/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ]
+    },
+    {
+      "id": "portfolio/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "portfolio/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "portfolio/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "portfolio/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "portfolio/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png"
+      ]
+    },
+    {
+      "id": "commercial/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "commercial/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "commercial/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "commercial/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "commercial/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/generated/hqc-workplace-detail.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ]
+    },
+    {
+      "id": "office/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "office/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "office/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "office/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "office/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ]
+    },
+    {
+      "id": "commercial-deep/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "commercial-deep/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "commercial-deep/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "commercial-deep/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "commercial-deep/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ]
+    },
+    {
+      "id": "home-service/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "home-service/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "home-service/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "home-service/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "home-service/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "essential/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "essential/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "essential/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "essential/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "essential/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "deep/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "deep/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "deep/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "deep/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "deep/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "move-in/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "move-in/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "move-in/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "move-in/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "move-in/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ]
+    },
+    {
+      "id": "complex/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "complex/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "complex/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "complex/desktop/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "complex/desktop/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "complex/desktop/complex-controlled-process",
+      "status": "PASS",
+      "detail": {
+        "step7": true
+      }
+    },
+    {
+      "id": "faq/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "faq/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "faq/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "why/desktop/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "why/desktop/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 263.28125,
+          "height": 40
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "why/desktop/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "why/desktop/retained-trust-sections",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      }
+    },
+    {
+      "id": "home/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "home/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "home/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "home/mobile/homepage-evidence",
+      "status": "PASS",
+      "detail": {
+        "evidence": 1,
+        "oldCarousel": false
+      }
+    },
+    {
+      "id": "quote/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "quote/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "quote/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "how/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "how/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "how/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "how/mobile/retained-trust-sections",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      }
+    },
+    {
+      "id": "contact/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "contact/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "contact/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "tenancy/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "tenancy/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "tenancy/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "tenancy/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "tenancy/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ]
+    },
+    {
+      "id": "about/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "about/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "about/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "about/mobile/retained-trust-sections",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      }
+    },
+    {
+      "id": "reviews/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "reviews/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "reviews/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "reviews/mobile/reviews-groups",
+      "status": "PASS",
+      "detail": [
+        {
+          "service": "Homes",
+          "cards": [
+            {
+              "name": "Kara O.",
+              "text": "The team do an excellent job of cleaning our house each week as well as doing special cleanings (eg deep cleans, curtains, etc) for a reasonable price. They are courteous and work around our large dog and toddler. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Lucy M.",
+              "text": "Absolutely blown away by the service and excellent standard of my deep clean. Property looks completely different thanks to the team. The standard of cleaning was exceptional and the team were a delight. 110% recommend, thank you so much!!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Liv M.",
+              "text": "Loved the service! We had our whole flat deep cleaned after our home renovation and it was sparkling clean. Would definitely be using their services again !",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "End of tenancy",
+          "cards": [
+            {
+              "name": "Yori Z.",
+              "text": "Pedro and his crew performed an end-of-tenancy cleaning. They were very thorough and professional throughout. The house was left sparkling clean, ready for the next tenants.",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Fabio K.",
+              "text": "I can’t recommend this company enough. Very responsive and swift replies. Kept me updated every step of the way, and did an incredible job of deep cleaning an end of tenancy flat that was filthy.",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Workplaces",
+          "cards": [
+            {
+              "name": "Chris M.",
+              "text": "Fantastic service! The team was professional, thorough, and efficient. Our space has never looked better—everything was spotless and fresh. Great attention to detail and very friendly staff. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Property & Facilities",
+          "cards": [
+            {
+              "name": "Andre G.",
+              "text": "I must say I have received high Quality cleaning and Good Quotation..they even came 2days earlier to help us so my Tenants can come in to my clean Property..",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reviews/mobile/reviews-quotes",
+      "status": "PASS",
+      "detail": [
+        {
+          "service": "Homes",
+          "cards": [
+            {
+              "name": "Kara O.",
+              "text": "The team do an excellent job of cleaning our house each week as well as doing special cleanings (eg deep cleans, curtains, etc) for a reasonable price. They are courteous and work around our large dog and toddler. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Lucy M.",
+              "text": "Absolutely blown away by the service and excellent standard of my deep clean. Property looks completely different thanks to the team. The standard of cleaning was exceptional and the team were a delight. 110% recommend, thank you so much!!",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Liv M.",
+              "text": "Loved the service! We had our whole flat deep cleaned after our home renovation and it was sparkling clean. Would definitely be using their services again !",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "End of tenancy",
+          "cards": [
+            {
+              "name": "Yori Z.",
+              "text": "Pedro and his crew performed an end-of-tenancy cleaning. They were very thorough and professional throughout. The house was left sparkling clean, ready for the next tenants.",
+              "stars": "5 out of 5 stars"
+            },
+            {
+              "name": "Fabio K.",
+              "text": "I can’t recommend this company enough. Very responsive and swift replies. Kept me updated every step of the way, and did an incredible job of deep cleaning an end of tenancy flat that was filthy.",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Workplaces",
+          "cards": [
+            {
+              "name": "Chris M.",
+              "text": "Fantastic service! The team was professional, thorough, and efficient. Our space has never looked better—everything was spotless and fresh. Great attention to detail and very friendly staff. Highly recommend!",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        },
+        {
+          "service": "Property & Facilities",
+          "cards": [
+            {
+              "name": "Andre G.",
+              "text": "I must say I have received high Quality cleaning and Good Quotation..they even came 2days earlier to help us so my Tenants can come in to my clean Property..",
+              "stars": "5 out of 5 stars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reviews/mobile/reviews-intro-links-gallery",
+      "status": "PASS",
+      "detail": {
+        "intro": true,
+        "oldIntro": false,
+        "gallery": [],
+        "googleLink": "https://www.google.com/maps/place/High+Quality+Clean+Ltd/data=!4m2!3m1!1s0x0:0xade47bf255fda541",
+        "rating": true
+      }
+    },
+    {
+      "id": "privacy/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "privacy/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "privacy/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "privacy/mobile/legal",
+      "status": "PASS",
+      "detail": {
+        "vendorNames": false,
+        "datePreserved": true
+      }
+    },
+    {
+      "id": "terms/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "terms/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "terms/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "terms/mobile/legal",
+      "status": "PASS",
+      "detail": {
+        "vendorNames": false,
+        "datePreserved": true
+      }
+    },
+    {
+      "id": "facilities/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "facilities/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "facilities/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "facilities/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "facilities/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ]
+    },
+    {
+      "id": "communal/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "communal/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "communal/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "communal/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "communal/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ]
+    },
+    {
+      "id": "agents/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "agents/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "agents/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "agents/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "agents/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp"
+      ]
+    },
+    {
+      "id": "void/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "void/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "void/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "void/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "void/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/belgravia-stonework.png",
+        "/images/luxury-home/luxurious-kensington-ensuite.png"
+      ]
+    },
+    {
+      "id": "construction/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "construction/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "construction/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "construction/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "construction/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/phase8-nov6/communal-lift-lobby-800.webp",
+        "/images/luxury-home/mayfair-home-hallway.png"
+      ]
+    },
+    {
+      "id": "portfolio/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "portfolio/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "portfolio/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "portfolio/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "portfolio/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/luxury-home/luxurious-kensington-ensuite.png",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/belgravia-stonework.png"
+      ]
+    },
+    {
+      "id": "commercial/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "commercial/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "commercial/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "commercial/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "commercial/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/generated/hqc-workplace-detail.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ]
+    },
+    {
+      "id": "office/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "office/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "office/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "office/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "office/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ]
+    },
+    {
+      "id": "commercial-deep/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "commercial-deep/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "commercial-deep/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "commercial-deep/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "commercial-deep/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/generated/hqc-office-hero.png",
+        "/images/generated/hqc-kitchen-detail.png"
+      ]
+    },
+    {
+      "id": "home-service/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "home-service/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "home-service/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "home-service/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "home-service/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "essential/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "essential/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "essential/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "essential/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "essential/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "deep/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "deep/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "deep/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "deep/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "deep/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "move-in/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "move-in/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "move-in/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "move-in/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "move-in/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/keep-p-de8736bfb6.jpg",
+        "/images/luxury-home/mayfair-home-hallway.png",
+        "/images/luxury-home/richmond-living-room.png"
+      ]
+    },
+    {
+      "id": "complex/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "complex/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "complex/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "complex/mobile/service-only-removals",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      }
+    },
+    {
+      "id": "complex/mobile/retained-gallery-photo",
+      "status": "PASS",
+      "detail": [
+        "/images/phase8-nov6/old-living-room-wide-1536.webp",
+        "/images/phase8-nov6/old-living-room-1536.webp",
+        "/images/phase8-nov6/old-approved-window-cleaning-1079.webp"
+      ]
+    },
+    {
+      "id": "complex/mobile/complex-controlled-process",
+      "status": "PASS",
+      "detail": {
+        "step7": true
+      }
+    },
+    {
+      "id": "faq/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "faq/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "faq/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex, nofollow, noarchive"
+      }
+    },
+    {
+      "id": "why/mobile/health",
+      "status": "PASS",
+      "detail": {
+        "h1Count": 1,
+        "broken": [],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "id": "why/mobile/flat-logo",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "/images/brand/hqc-logo-header-flat-gold.svg",
+          "shown": true,
+          "width": 210.625,
+          "height": 32
+        },
+        {
+          "src": "/images/brand/hqc-monogram-flat-gold.svg",
+          "shown": false,
+          "width": 0,
+          "height": 0
+        }
+      ]
+    },
+    {
+      "id": "why/mobile/preview-robots",
+      "status": "PASS",
+      "detail": {
+        "meta": "noindex, nofollow, noarchive",
+        "header": "noindex"
+      }
+    },
+    {
+      "id": "why/mobile/retained-trust-sections",
+      "status": "PASS",
+      "detail": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      }
+    }
+  ],
+  "journeys": []
+}
