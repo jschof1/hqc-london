@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "86276d92c751cfccbd5ed7126d961e0107ff3d90",
-  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro.",
+  "baseline": "a0b7d619842ad6da652ad302fb6d14c089abeee1",
+  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -195,6 +195,70 @@
       ],
       "allowDelete": false,
       "reason": "Only the mapped 17 November requests; preserve all other hunks."
+    },
+    {
+      "path": "public/images/phase8-nov10/c-washroom.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-walkthrough.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-bin-store.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-lift.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-postcode.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-report-photo.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-oven-inside.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
+    },
+    {
+      "path": "public/images/phase8-nov10/r-shower-glass.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
     }
   ],
   "preserve": [
