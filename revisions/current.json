@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "0694295f45de4317c299acad2b7a5ad89feacbed",
-  "request": "Jack, 13 November 2026, current native thread: begin implementing everything else after review/planning and staging the clarification WhatsApp. This authorises clear source corrections only; the four clarification questions, unresolved local proof, new proposed copy and external acceptance/provider gates remain held. Private evidence reference hqc-review-2026-11-13. Earlier cumulative accepted requirements remain in force except exact newer amendments. Scope amendment, same explicit site-wide visible phone instruction: add the five exact discovered legacy/public error-text sources. This follows a checkpoint of the initial clear corrections; cumulative original baseline d4c296e54787acd682700ea952bc72707159981d and original planning commit 026203c remain source references. No additional behaviour or message authority. Scope linkage amendment under the same explicit AI imagery disclosure instruction: Contact, Booking and ServiceSelector already allowed paths now also map to IMAGERY. Preserve all cumulative changes since original d4c296e across checkpoints; no new interpretation or release authority. Necessary verification dependency amendment: permit scripts/verify-form-routing.mjs solely to align its existing required visible-phone expectation with the already authorised 020 8870 3925 format. No handler contract or test weakening. Independent review checkpoint 13 Nov: review of cumulative d4c296e to 9ffee824 found image-caption anchoring, inherited 404/heading layout, missed Terms phone, missing clear Google link and repeated location prose defects. Correct these within existing allowed paths and the original requests. Restore approved Reviews hero lead pending confirmation of the replacement sentence anchor. Baseline moves only for this checkpoint; original cumulative d4c296e and prior planning references remain authoritative. Jack 13 November requests a hidden HQC comparison link and done/due checklist. Build and publish only a review preview, repair invalid adjacent image/caption expressions exposed by the first full build, and register genuine captures after hosted verification. Preserve all held client decisions and production hold. Jack 16 November requests actual screenshots in the existing Pedro audit comparison entry and cancels the separate-page idea. After genuine captures are published/read back, append the exact visual version registry reference and update only capture/check evidence. Preserve all source edits, client clarification holds and production hold.",
+  "baseline": "86276d92c751cfccbd5ed7126d961e0107ff3d90",
+  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -70,6 +70,30 @@
     {
       "id": "CAPTURE_RECORD",
       "text": "Register the unchanged source177b6e202dee86e9703f0a6bbcd746fb5cf26ece/immutable5bf03519 with actual16November desktop/mobile captures for9existing review pages after hosted publication and readback. Update revisions/versions.json, acceptance evidence and factual notes only; do not claim full site QA, provider delivery or client acceptance."
+    },
+    {
+      "id": "N17_SECTIONS",
+      "text": "Remove exactly four whole generic sections on the 15 explicitly listed service slugs only. Keep trust, about, quote, locations and homepage content; preserve controlled sections including Complex seven-step process and existing galleries/image selection. Client evidence stays homepage only; removed homepage carousel stays absent."
+    },
+    {
+      "id": "N17_LEGAL",
+      "text": "Terms vendor references become our booking system, preserving approved meaning including section 5. Privacy suppliers are categories. Preserve legal H1s and pending Last reviewed placeholder."
+    },
+    {
+      "id": "N17_LOGO",
+      "text": "Use existing crisp flat gold header and monogram SVGs with matching intrinsic dimensions. No logo redesign, no asset deletion."
+    },
+    {
+      "id": "N17_REVIEWS",
+      "text": "Reviews page groups six existing homepage reviews exactly as requested plus Andre G under Property & Facilities; use exact source review text, exclude Andre B and Thomas B. Replace held hero intro sentence with exact new Every property is different sentence. Keep other lead, Google link, 4.9/92 badge and no gallery/evidence placeholders."
+    },
+    {
+      "id": "N17_UNIFORMS",
+      "text": "Correct logos on g-assessment and g-service-profile from upper back/sleeve/shoulder to left chest where visible; hidden chest must not produce a back/sleeve logo. Preserve composition, teal and scene. Inspect remaining illustrative uniforms and add exact additional paths only via planning amendment if needed."
+    },
+    {
+      "id": "N17_VERIFY",
+      "text": "Prove preview versus production robots contract without stripping review protections or changing intentional noindex utility pages. Independent hunk review, hosted preview, desktop/mobile QA and fresh captures, append review version preserving comments/history. Record provider, legal-date and client acceptance gates accurately."
     }
   ],
   "allowedFiles": [
@@ -79,15 +103,16 @@
         "SCOPE"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
-      "path": "revisions/acceptance-2026-11-13.json",
+      "path": "revisions/acceptance-2026-11-17.json",
       "requirements": [
-        "RECORD"
+        "RECORD",
+        "N17_VERIFY"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
       "path": "revisions/versions.json",
@@ -95,677 +120,81 @@
         "RECORD"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
-      "path": "phase8/REVIEW_CORRECTIONS_2026-11-13.md",
+      "path": "phase8/REVIEW_CORRECTIONS_2026-11-17.md",
       "requirements": [
         "RECORD",
-        "VERIFY"
+        "N17_VERIFY"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/phase8-copy.json",
-      "requirements": [
-        "COPY",
-        "COMPLEX"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/phase8-legal.json",
-      "requirements": [
-        "LEGAL",
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Existing legal amendments plus the explicitly site-wide public phone display correction only. Preserve other legal copy, dates and approved section 5."
-    },
-    {
-      "path": "src/data/outcome-pages.ts",
-      "requirements": [
-        "ROUTES",
-        "COPY",
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/controlled-cta-links.ts",
-      "requirements": [
-        "ROUTES"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/google-reviews.json",
-      "requirements": [
-        "REVIEWS"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/site-settings.json",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
       "path": "src/components/OutcomePage.astro",
       "requirements": [
-        "COPY",
-        "REVIEWS",
-        "REMOVALS",
-        "COMPLEX",
-        "IMAGERY"
+        "N17_SECTIONS",
+        "N17_REVIEWS"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
-      "path": "src/components/ClientEvidence.astro",
+      "path": "src/data/phase8-copy.json",
       "requirements": [
-        "COPY",
-        "REMOVALS"
+        "N17_REVIEWS"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
-      "path": "src/components/ReviewMarquee.astro",
+      "path": "src/data/phase8-legal.json",
       "requirements": [
-        "REVIEWS"
+        "N17_LEGAL"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/ControlledLegalPage.astro",
-      "requirements": [
-        "LEGAL"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/ServiceSelector.astro",
-      "requirements": [
-        "ROUTES",
-        "SEMANTICS",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/Footer.astro",
-      "requirements": [
-        "CONTACT",
-        "COPY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
       "path": "src/components/Header.astro",
       "requirements": [
-        "CONTACT"
+        "N17_LOGO"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/AreasServed.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/CTABanner.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/HeroSection.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/LandingHeroSection.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/Offer.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/QuoteBlock.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/ServicesSection.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/index.astro",
-      "requirements": [
-        "COPY",
-        "REVIEWS",
-        "REMOVALS",
-        "FOUNDER",
-        "IMAGERY",
-        "SEMANTICS",
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/contact.astro",
-      "requirements": [
-        "CONTACT",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/book-essential-clean.astro",
-      "requirements": [
-        "LEGAL",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/cleaning-faqs.astro",
-      "requirements": [
-        "SEMANTICS",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/request-a-quote.astro",
-      "requirements": [
-        "ROUTES",
-        "SEMANTICS",
-        "CONTACT",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/404.astro",
-      "requirements": [
-        "SEMANTICS"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/locations/london/[area].astro",
-      "requirements": [
-        "LOCATIONS",
-        "CONTACT",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/locations/surrey/[area].astro",
-      "requirements": [
-        "LOCATIONS",
-        "CONTACT",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/offer.astro",
-      "requirements": [
-        "CONTACT",
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/feedback.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/page-visuals.ts",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/card-imagery.ts",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/data/section-imagery.ts",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/styles/home-motion.css",
-      "requirements": [
-        "REVIEWS",
-        "FOUNDER",
-        "IMAGERY",
-        "SEMANTICS"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
       "path": "src/styles/outcome-page.css",
       "requirements": [
-        "IMAGERY",
-        "COPY"
+        "N17_REVIEWS"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
-      "path": "src/styles/utility-pages.css",
+      "path": "public/images/phase8-nov10/g-assessment.webp",
       "requirements": [
-        "LOCATIONS",
-        "SEMANTICS",
-        "IMAGERY"
+        "N17_UNIFORMS"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
-      "path": "src/layouts/Layout.astro",
+      "path": "public/images/phase8-nov10/g-service-profile.webp",
       "requirements": [
-        "PARITY",
-        "CONTACT"
+        "N17_UNIFORMS"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/Plausible.astro",
-      "requirements": [
-        "PARITY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/hqc-plausible.js",
-      "requirements": [
-        "PARITY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "tests/plausible.test.mjs",
-      "requirements": [
-        "PARITY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     },
     {
       "path": "scripts/verify-pedro-audit-corrections.test.mjs",
       "requirements": [
-        "VERIFY"
+        "N17_VERIFY"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/pedro-on-site-original.png",
-      "requirements": [
-        "FOUNDER"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-living-dust.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-routine-visit.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-hallway-floor.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-desks.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-staff-kitchen.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-floor-scrubber.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-waste.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-after-hours.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-high-level.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-deep-kitchen.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-supervisor.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-coats-office.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-glass-partition.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-lobby.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-stairwell.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-high-windows.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-snagging.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-van-street.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-site-review.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-delivery.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-planner.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov10/k-supplies.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-a-800.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-a-1600.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-b-800.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/complex-b-1600.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/scope-and-planning-800.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/scope-and-planning-1600.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/workplace-touchpoints-800.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/images/phase8-nov6/workplace-touchpoints-1600.webp",
-      "requirements": [
-        "IMAGERY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/components/FAQ.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
-    },
-    {
-      "path": "src/pages/discount.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
-    },
-    {
-      "path": "src/pages/quote.astro",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
-    },
-    {
-      "path": "src/scripts/main.js",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
-    },
-    {
-      "path": "src/data/area-data.json",
-      "requirements": [
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Only public phone display formatting explicitly requested site-wide; preserve all other legacy content, local claims, values and behaviour."
-    },
-    {
-      "path": "scripts/verify-form-routing.mjs",
-      "requirements": [
-        "VERIFY",
-        "CONTACT"
-      ],
-      "allowDelete": false,
-      "reason": "Update only the stale public phone-format assertion; preserve all route/receiver assertions."
+      "reason": "Only the mapped 17 November requests; preserve all other hunks."
     }
   ],
   "preserve": [
