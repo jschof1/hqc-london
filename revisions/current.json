@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "ee1d63c6492169b713d22d50f2cdc600efd568e2",
-  "request": "Jack 17 November requests next HQC review round and existing comparison review. Append nov17-pedro-followup to existing tool after immutable candidate and actual captures; preserve all earlier snapshots, comments, selections, access settings and held Phase 8 application. Exact private source hqc-review-2026-11-17/request.txt. No production website release or client send. Final hosted review found two remaining website sleeve-logo corrections and a literal null rendered by release cards in this requested comparison tool. Append a v2 candidate with fresh captures and correct only optional null children in release card rendering so comparison labels are readable. Preserve all earlier versions, comments, selections and authentication.",
+  "baseline": "1202e6ae536deef9081bf50bfa7804a371c1bc50",
+  "request": "Jack 17 November requests next HQC review round and existing comparison review. Append nov17-pedro-followup to existing tool after immutable candidate and actual captures; preserve all earlier snapshots, comments, selections, access settings and held Phase 8 application. Exact private source hqc-review-2026-11-17/request.txt. No production website release or client send. Final hosted review found two remaining website sleeve-logo corrections and a literal null rendered by release cards in this requested comparison tool. Append a v2 candidate with fresh captures and correct only optional null children in release card rendering so comparison labels are readable. Preserve all earlier versions, comments, selections and authentication. Capture-scope refinement under the same two imagery corrections: include the pricing page, which also displays g-scope-plan, so all known affected templates are recorded.",
   "requirements": [
     {
       "id": "REVIEW17",
@@ -448,6 +448,22 @@
       ],
       "allowDelete": false,
       "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-prices-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Pricing page displays corrected g-scope-plan asset; fresh source-linked capture."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-prices-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Pricing page displays corrected g-scope-plan asset; fresh source-linked capture."
     }
   ],
   "preserve": [
