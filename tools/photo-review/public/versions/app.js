@@ -339,7 +339,7 @@ function renderRelease(side) {
     shortCommit(v?.commit) && h('code', { title: v.commit }, shortCommit(v.commit)),
     v?.captureDate && `Captured ${fmtDate(v.captureDate, true)}`,
   ].filter(Boolean);
-  el.replaceChildren(
+  el.replaceChildren(...[
     h('p', { class: 'release-side' }, side === 'before' ? 'Before' : 'After'),
     h('h3', { id: `release-${side}-title` }, v?.label || 'Unknown release'),
     h('p', { class: 'release-date' }, 'Released ', h('time', { datetime: v?.date || '' }, fmtDate(v?.date) || 'date unknown')),
@@ -352,7 +352,7 @@ function renderRelease(side) {
     shot ? null : h('p', { class: 'missing-tag' }, `No ${sel.view} screenshot of ${pageName(sel.page)} for this release.`),
     link ? h('p', { class: 'release-link' },
       h('a', { href: link, target: '_blank', rel: 'noopener noreferrer' }, 'Open this release in a new tab ↗'),
-      h('span', { class: 'fine' }, 'Opens a live deployment. Do not submit forms there unless you mean to send a real enquiry.')) : null);
+      h('span', { class: 'fine' }, 'Opens a live deployment. Do not submit forms there unless you mean to send a real enquiry.')) : null].filter(Boolean));
 }
 
 function unavailable(side) {
