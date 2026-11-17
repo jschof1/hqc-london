@@ -336,11 +336,11 @@
     {
       "kind": "ul",
       "items": [
-        "GoHighLevel for CRM and enquiry management;",
-        "Launch27/Automaid for applicable booking and scheduling functions;",
-        "Stripe for applicable payment processing;",
-        "QuickBooks for accounting;",
-        "Google Workspace for business communications;",
+        "CRM and enquiry management providers;",
+        "booking and scheduling software providers;",
+        "payment processing providers;",
+        "accounting software providers;",
+        "business communications providers;",
         "website and infrastructure providers."
       ]
     },
@@ -675,7 +675,7 @@
     },
     {
       "kind": "p",
-      "text": "A booking becomes confirmed only when HQC has reviewed the request, allocated cleaner(s), completed any required deposit or payment collection and sent its confirmation email. Providing booking or payment details, or creating an Automaid record, does not itself confirm the booking or mean that payment has been collected."
+      "text": "A booking becomes confirmed only when HQC has reviewed the request, allocated cleaner(s), completed any required deposit or payment collection and sent its confirmation email. Providing booking or payment details, or creating a record in our booking system, does not itself confirm the booking or mean that payment has been collected."
     },
     {
       "kind": "p",

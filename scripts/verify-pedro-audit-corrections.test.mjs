@@ -76,11 +76,13 @@ test('the Complex amendment preserves the original access list and all seven con
   }
 });
 
-test('approved confirmation wording and unresolved legal decisions stay separate from the section 7 replacement', () => {
+test('category suppliers and booking-system wording preserve the approved confirmation meaning and pending legal date', () => {
   const before = original('src/data/phase8-legal.json');
   const section5 = (blocks) => blocks.find((block) => block.text?.startsWith('A booking becomes confirmed only when HQC has reviewed'));
-  assert.deepEqual(section5(legal.terms), section5(before.terms));
-  assert.ok(JSON.stringify(legal).includes('Launch27/Automaid'));
+  assert.deepEqual(section5(legal.terms), { ...section5(before.terms), text: section5(before.terms).text.replace('creating an Automaid record', 'creating a record in our booking system') });
+  assert.ok(!/Automaid|Launch27|GoHighLevel|Stripe|QuickBooks|Google Workspace/.test(JSON.stringify(legal)));
+  const supplierCategories = legal.privacy.find((block) => block.kind === 'ul' && block.items.includes('booking and scheduling software providers;'));
+  assert.deepEqual(supplierCategories.items, ['CRM and enquiry management providers;', 'booking and scheduling software providers;', 'payment processing providers;', 'accounting software providers;', 'business communications providers;', 'website and infrastructure providers.']);
   assert.ok(JSON.stringify(legal).includes('[FINAL LEGAL / PRODUCTION APPROVAL DATE]'));
   assert.ok(JSON.stringify(legal.privacy).includes('privacy@highqualityclean.co.uk'));
   assert.ok(JSON.stringify(legal.terms).includes('Email: support@highqualityclean.co.uk'));
@@ -202,6 +204,102 @@ test('heading semantics retain the two-column error composition and valid homepa
   walk(error, (node) => { if (node.name === 'ul') assert.ok(!classOf(node).includes('text-white'), 'useful routes inherit their porcelain panel contrast'); });
   const home = (await parseAstro(read('src/pages/index.astro'))).ast;
   walk(home, (node, ancestors) => { if (/^h[1-6]$/.test(node.name || '')) assert.ok(!ancestors.some((parent) => parent.name === 'span'), `invalid heading in span at line ${node.position?.start?.line}`); });
+});
+
+test('all four repeated sections are gated only for the fifteen approved service routes', async () => {
+  const source = read('src/components/OutcomePage.astro');
+  const serviceLogic = source.slice(source.indexOf('const servicePageSlugs ='), source.indexOf('// Reuse the public snapshot'));
+  const expected = [
+    'property-facilities-cleaning-london', 'communal-area-cleaning-london',
+    'estate-letting-agent-cleaning-london', 'move-in-void-property-cleaning-london',
+    'end-of-tenancy-cleaning-london', 'post-construction-cleaning-london',
+    'portfolio-cleaning-support-london', 'commercial-cleaning-london',
+    'office-cleaning-london', 'commercial-deep-cleaning-london',
+    'home-cleaning-london', 'essential-clean-london', 'deep-cleaning-london',
+    'move-in-cleaning-london', 'complex-property-cleaning-london'
+  ];
+  const { outcomePages } = await moduleAt('src/data/outcome-pages.ts');
+  for (const page of outcomePages) {
+    const actual = vm.runInNewContext(`${serviceLogic}; isServicePage`, { page });
+    assert.equal(actual, expected.includes(page.slug), page.slug);
+  }
+  for (const slug of expected) assert.ok(outcomePages.some((page) => page.slug === slug), slug);
+  const { ast } = await parseAstro(source);
+  const guardedSections = [];
+  const walk = (node, ancestors = []) => {
+    if (node.name === 'section') {
+      const cls = node.attributes?.find((attribute) => attribute.name === 'class')?.value ?? '';
+      if (ancestors.some((parent) => parent.type === 'expression' && parent.children?.some((child) => child.type === 'text' && child.value.includes('!isServicePage &&')))) guardedSections.push(cls.split(' ')[0]);
+    }
+    for (const child of node.children ?? []) walk(child, [...ancestors, node]);
+  };
+  walk(ast);
+  assert.deepEqual(guardedSections, ['op-outcomes', 'op-scope', 'op-next', 'op-closing']);
+  assert.ok(!source.includes('<ClientEvidence'));
+  assert.ok(read('src/pages/index.astro').includes('<ClientEvidence'));
+  assert.ok(!read('src/pages/index.astro').includes('<TrustRail'));
+});
+
+test('Reviews groups resolve the seven named reviews verbatim and remain absent from other pages', () => {
+  const source = read('src/components/OutcomePage.astro');
+  const start = source.indexOf('const selectedReviewGroups =');
+  const end = source.indexOf('// Keep the approved controlled sections');
+  assert.ok(start > -1 && end > start);
+  const logic = source.slice(start, end);
+  const reviewsData = data('src/data/google-reviews.json');
+  const groups = JSON.parse(JSON.stringify(vm.runInNewContext(`${logic}; reviewGroups`, { page: { slug: 'reviews-case-studies' }, reviewsData })));
+  assert.deepEqual(groups.map(({ service, reviews }) => [service, reviews.map((review) => review.name)]), [
+    ['Homes', ['Kara O.', 'Lucy M.', 'Liv M.']],
+    ['End of tenancy', ['Yori Z.', 'Fabio K.']],
+    ['Workplaces', ['Chris M.']],
+    ['Property & Facilities', ['Andre G.']]
+  ]);
+  for (const group of groups) for (const review of group.reviews) {
+    assert.deepEqual(review, reviewsData.reviews.find((entry) => entry.name === review.name));
+    assert.ok(!['Andre B.', 'Thomas B.'].includes(review.name));
+  }
+  assert.equal(vm.runInNewContext(`${logic}; reviewGroups.length`, { page: { slug: 'home-cleaning-london' }, reviewsData }), 0);
+  assert.ok(source.includes('{review.text}'));
+  assert.ok(source.includes('aria-label={`${review.rating} out of 5 stars`}'));
+  assert.ok(source.includes('{reviewsData.rating} on Google from {reviewsData.reviewCount} reviews'));
+  assert.ok(source.includes("page.slug === 'reviews-case-studies' ? []"));
+});
+
+test('flat header assets keep their vector proportions at full and narrow-nav sizes', () => {
+  const header = read('src/components/Header.astro');
+  assert.ok(!header.includes('hqc-logo-header-3d') && !header.includes('hqc-monogram-3d'));
+  for (const filename of ['hqc-logo-header-flat-gold.svg', 'hqc-monogram-flat-gold.svg']) {
+    const svg = read(`public/images/brand/${filename}`);
+    const box = svg.match(/viewBox="([^"]+)"/)[1].split(/\s+/).map(Number);
+    const tag = header.match(new RegExp(`<img[^>]+src="/images/brand/${filename.replaceAll('.', '\\.')}"[^>]*>`))[0];
+    const width = Number(tag.match(/width="([^"]+)"/)[1]);
+    const height = Number(tag.match(/height="([^"]+)"/)[1]);
+    assert.equal(width / height, box[2] / box[3]);
+    assert.ok(!/<image|linearGradient|radialGradient|filter/.test(svg), filename);
+  }
+});
+
+test('homepage and FAQs use index-follow in production and remain protected on previews', () => {
+  const layout = read('src/layouts/Layout.astro');
+  const logic = layout.slice(layout.indexOf('const isPagesPreviewBuild ='), layout.indexOf('const defaultImage ='));
+  assert.ok(logic.includes('const effectiveRobots ='));
+  const robotsFor = (hostname, env, robots = 'index, follow') => vm.runInNewContext(`${logic}; effectiveRobots`, { Astro: { url: { hostname } }, process: { env }, robots });
+  const cases = [
+    ['highqualityclean.co.uk', { CF_PAGES: '1', CF_PAGES_BRANCH: 'main' }, 'index, follow'],
+    ['www.highqualityclean.co.uk', { CF_PAGES: '1', CF_PAGES_BRANCH: 'main' }, 'index, follow'],
+    ['highqualityclean.co.uk', {}, 'index, follow'],
+    ['highqualityclean.co.uk', { CF_PAGES: '1', CF_PAGES_BRANCH: 'pedro-followup-nov17' }, 'noindex, nofollow, noarchive'],
+    ['abcd1234.hqc-london.pages.dev', { CF_PAGES: '1', CF_PAGES_BRANCH: 'main' }, 'noindex, nofollow, noarchive'],
+    ['localhost', {}, 'noindex, nofollow, noarchive']
+  ];
+  for (const [host, env, expected] of cases) assert.equal(robotsFor(host, env), expected, `${host}: ${JSON.stringify(env)}`);
+  assert.ok(layout.includes('robots = "index, follow"'));
+  for (const filename of ['index', 'cleaning-faqs']) assert.ok(!read(`src/pages/${filename}.astro`).match(/<Layout[^>]*\brobots=/));
+  for (const filename of ['quote', 'feedback', 'discount', 'book-essential-clean']) {
+    const override = read(`src/pages/${filename}.astro`).match(/<Layout[^>]*robots="([^"]+)"/)[1];
+    assert.match(override, /^noindex/);
+    assert.equal(robotsFor('highqualityclean.co.uk', { CF_PAGES: '1', CF_PAGES_BRANCH: 'main' }, override), override);
+  }
 });
 
 test('changed Astro sources compile without a site build; this does not claim browser or provider verification', async () => {
