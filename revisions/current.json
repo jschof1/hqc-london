@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "a0b7d619842ad6da652ad302fb6d14c089abeee1",
-  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority.",
+  "baseline": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
+  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority. Evidence-registration checkpoint: frozen application source 79d7e8b24b8460acb9f5506b681d22c2c6d44ca3, immutable review f3817af8. Cumulative source review remains 86276d9 through this source, not merely this record-only scope. Append actual hosted captures/checklist and exact source registry after QA and hosted publication. No new application-source authority in this checkpoint.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -13,15 +13,15 @@
     },
     {
       "id": "LEGAL",
-      "text": "Replace Privacy contact placeholders with privacy@highqualityclean.co.uk and Terms section 33 with support@highqualityclean.co.uk. Apply exact supplied Terms section 7 paragraph. Delete only named 50% deposit disclaimer from booking page. Preserve approved Terms section 5 unchanged pending Automaid-name decision. Retain unresolved legal date; show draft warning only for preview, never production. Legal H1s already exist: preserve."
+      "text": "Replace Privacy contact placeholders with privacy@highqualityclean.co.uk and Terms section 33 with support@highqualityclean.co.uk. Apply exact supplied Terms section 7 paragraph. Delete only named 50% deposit disclaimer from booking page. Preserve approved Terms section 5 unchanged pending Automaid-name decision. Retain unresolved legal date; show draft warning only for preview, never production. Legal H1s already exist: preserve. HISTORICAL HOLD SUPERSEDED: N17_LEGAL now explicitly authorises our booking system including section 5 and supplier categories. Legal date remains held."
     },
     {
       "id": "REVIEWS",
-      "text": "Replace homepage reviews carousel with exactly Kara O., Lucy M., Yori Z., Fabio K., Chris M., Liv M. in approved stars/quotation/public-name/service card format. Preserve 4.9/92 badge. Exclude Thomas B. and Andre B. from every public review path. Reviews-page selection remains held: no inferred reuse of six. Remove only explicit evidence placeholders/gallery on Reviews; preserve pending visible proof/selection gate in evidence register rather than inventing cards/case studies. Add the requested Google profile link using the existing reviewed profileUrl; preserve both approved hero lead paragraphs until the anchor of the supplied replacement intro is confirmed."
+      "text": "Replace homepage reviews carousel with exactly Kara O., Lucy M., Yori Z., Fabio K., Chris M., Liv M. in approved stars/quotation/public-name/service card format. Preserve 4.9/92 badge. Exclude Thomas B. and Andre B. from every public review path. Reviews-page selection remains held: no inferred reuse of six. Remove only explicit evidence placeholders/gallery on Reviews; preserve pending visible proof/selection gate in evidence register rather than inventing cards/case studies. Add the requested Google profile link using the existing reviewed profileUrl; preserve both approved hero lead paragraphs until the anchor of the supplied replacement intro is confirmed. HISTORICAL HOLD SUPERSEDED: N17_REVIEWS now explicitly authorises seven grouped reviews and exact intro anchor; no gallery/case-study invention."
     },
     {
       "id": "REMOVALS",
-      "text": "Remove homepage A clear standard from the first conversation carousel only. Client evidence band homepage only, while retaining restored 300+ page content. Whole-section-versus-heading removal, service-page boundary and non-service propagation are HELD. Do not remove those generic shared sections or closing CTAs pending clarification."
+      "text": "Remove homepage A clear standard from the first conversation carousel only. Client evidence band homepage only, while retaining restored 300+ page content. Whole-section-versus-heading removal, service-page boundary and non-service propagation are HELD. Do not remove those generic shared sections or closing CTAs pending clarification. HISTORICAL HOLD SUPERSEDED: N17_SECTIONS now authorises the four whole sections on the exact15 service slugs. Homepage Client evidence must stay per newer13Nov email."
     },
     {
       "id": "CONTACT",
@@ -130,135 +130,6 @@
       ],
       "allowDelete": false,
       "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "src/components/OutcomePage.astro",
-      "requirements": [
-        "N17_SECTIONS",
-        "N17_REVIEWS"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "src/data/phase8-copy.json",
-      "requirements": [
-        "N17_REVIEWS"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "src/data/phase8-legal.json",
-      "requirements": [
-        "N17_LEGAL"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "src/components/Header.astro",
-      "requirements": [
-        "N17_LOGO"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "src/styles/outcome-page.css",
-      "requirements": [
-        "N17_REVIEWS"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-assessment.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-service-profile.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "scripts/verify-pedro-audit-corrections.test.mjs",
-      "requirements": [
-        "N17_VERIFY"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "public/images/phase8-nov10/c-washroom.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-walkthrough.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-bin-store.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-lift.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-postcode.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-report-photo.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-oven-inside.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
-    },
-    {
-      "path": "public/images/phase8-nov10/r-shower-glass.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Inspected misplaced sleeve/upper-back logo under Pedro explicit remaining illustrative-image instruction; no other scene edits."
     }
   ],
   "preserve": [
