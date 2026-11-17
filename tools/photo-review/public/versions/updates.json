@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-11-17T10:06:10.910979+00:00",
-  "candidateUrl": "https://f3817af8.hqc-london.pages.dev",
-  "candidateCommit": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
+  "candidateUrl": "https://99efba8e.hqc-london.pages.dev",
+  "candidateCommit": "ac24c182d7af8b76c65159701b3a06b1af0ead5e",
   "beforeUrl": "https://5bf03519.hqc-london.pages.dev",
   "auditedUrl": "https://71d122e7.hqc-london.pages.dev/",
   "summary": "Pedro’s confirmed follow-up decisions have been applied to a new review candidate. The existing design and accepted earlier corrections are retained. Production remains unchanged.",
   "scopeNote": "This checklist distinguishes source edits, hosted browser evidence and external acceptance gates. Google review quotes were checked directly on 17 November; CRM delivery, payments and client approval are separate states.",
-  "previewNote": "Fifty fresh desktop/mobile screenshots across 25 pages were captured on 17November from this exact immutable review preview. Earlier snapshots remain available. Screenshots, provider behaviour and client approval are separate states.",
+  "previewNote": "Latest corrected candidate: 52 fresh desktop/mobile captures across 26 pages, including pricing. The first 17 November candidate and all earlier snapshots remain available.",
   "groups": [
     {
       "id": "COPY",
@@ -256,8 +256,8 @@
         {
           "id": "imagery-artwork",
           "status": "source",
-          "title": "Remaining ten misplaced uniform logos corrected",
-          "detail": "Removed sleeve, shoulder and upper-back logos from ten inspected views. The left chest is hidden in these camera views, so no visible replacement mark is invented. Teal uniforms and scene composition are retained; generated edits do not guarantee pixel-exact preservation."
+          "title": "Twelve misplaced uniform logos corrected",
+          "detail": "Removed misplaced sleeve, shoulder and back marks in twelve inspected camera views, including g-scope-plan and p-key-hooks found in final review. The left chest is hidden, so no visible replacement is invented. Generated edits retain scene direction without promising pixel-exact identity."
         },
         {
           "id": "decision-logo",
@@ -399,14 +399,14 @@
         {
           "id": "preview-captures",
           "status": "source",
-          "title": "50 new desktop/mobile captures added",
-          "detail": "All 25 planned pages, including all 15 affected service pages, have fresh desktop/mobile captures, exact hashes and source references. Earlier snapshots and comments remain."
+          "title": "52 latest desktop/mobile captures added",
+          "detail": "All 26 planned pages have genuine captures of exact source ac24c18 / immutable 99efba8e. The intermediate 50 captures and earlier versions remain unchanged."
         },
         {
           "id": "browser-journeys",
-          "status": "verification",
-          "title": "Run desktop and mobile journeys",
-          "detail": "Inspect changed pages, image continuity, accessibility, form failure/success and consent. Complete all 18 interactive pop-up scenarios and record the outcomes."
+          "status": "source",
+          "title": "Hosted desktop/mobile checks passed",
+          "detail": "V2 passed 238 page checks and 12 journey/asset checks, including all twelve hosted uniform hashes. No real enquiry, booking or payment was submitted. Fresh final recheck is separate."
         },
         {
           "id": "crm-booking-payment",
