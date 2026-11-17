@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "79d7e8b24b8460acb9f5506b681d22c2c6d44ca3",
-  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority. Evidence-registration checkpoint: frozen application source 79d7e8b24b8460acb9f5506b681d22c2c6d44ca3, immutable review f3817af8. Cumulative source review remains 86276d9 through this source, not merely this record-only scope. Append actual hosted captures/checklist and exact source registry after QA and hosted publication. No new application-source authority in this checkpoint.",
+  "baseline": "392d9833fbf6c32bbc9c6a4495e630a119af5c70",
+  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority. Evidence-registration checkpoint: frozen application source 79d7e8b24b8460acb9f5506b681d22c2c6d44ca3, immutable review f3817af8. Cumulative source review remains 86276d9 through this source, not merely this record-only scope. Append actual hosted captures/checklist and exact source registry after QA and hosted publication. No new application-source authority in this checkpoint. Fresh final review found two additional sleeve logos in g-scope-plan and p-key-hooks. Same explicit N17_UNIFORMS authority; add exact paths before editing. Source79d7e8b/previewf3817af8 and its captures remain immutable intermediate evidence. Append a new corrected review version; do not overwrite old captures.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -130,6 +130,22 @@
       ],
       "allowDelete": false,
       "reason": "Only the mapped 17 November requests; preserve all other hunks."
+    },
+    {
+      "path": "public/images/phase8-nov10/g-scope-plan.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Exact final-review finding under Pedro explicit remaining uniform-logo instruction."
+    },
+    {
+      "path": "public/images/phase8-nov10/p-key-hooks.webp",
+      "requirements": [
+        "N17_UNIFORMS"
+      ],
+      "allowDelete": false,
+      "reason": "Exact final-review finding under Pedro explicit remaining uniform-logo instruction."
     }
   ],
   "preserve": [
