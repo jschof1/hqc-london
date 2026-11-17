@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "7e07da936b53fbfa791f960eb124d024a112d875",
-  "request": "Jack 17 November requests next HQC review round and existing comparison review. Append nov17-pedro-followup to existing tool after immutable candidate and actual captures; preserve all earlier snapshots, comments, selections, access settings and held Phase 8 application. Exact private source hqc-review-2026-11-17/request.txt. No production website release or client send.",
+  "baseline": "ee1d63c6492169b713d22d50f2cdc600efd568e2",
+  "request": "Jack 17 November requests next HQC review round and existing comparison review. Append nov17-pedro-followup to existing tool after immutable candidate and actual captures; preserve all earlier snapshots, comments, selections, access settings and held Phase 8 application. Exact private source hqc-review-2026-11-17/request.txt. No production website release or client send. Final hosted review found two remaining website sleeve-logo corrections and a literal null rendered by release cards in this requested comparison tool. Append a v2 candidate with fresh captures and correct only optional null children in release card rendering so comparison labels are readable. Preserve all earlier versions, comments, selections and authentication.",
   "requirements": [
     {
       "id": "REVIEW17",
@@ -15,7 +15,7 @@
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
@@ -23,7 +23,7 @@
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
       "path": "tools/photo-review/public/versions/updates.json",
@@ -31,415 +31,423 @@
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261117.json",
+      "path": "tools/photo-review/public/versions/app.js",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-desktop.jpg",
+      "path": "tools/photo-review/evidence/version-captures-20261117-v2.json",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-quote-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-how-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-quote-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-how-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-how-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-contact-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-how-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-contact-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-contact-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-tenancy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-contact-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-tenancy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-tenancy-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-about-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-tenancy-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-about-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-about-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-reviews-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-about-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-reviews-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-reviews-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-privacy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-reviews-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-privacy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-privacy-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-terms-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-privacy-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-terms-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-terms-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-facilities-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-terms-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-facilities-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-facilities-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-communal-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-facilities-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-communal-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-communal-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-agents-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-communal-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-agents-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-agents-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-void-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-agents-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-void-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-void-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-construction-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-void-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-construction-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-construction-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-portfolio-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-construction-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-portfolio-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-portfolio-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-portfolio-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-office-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-office-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-office-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-deep-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-office-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-deep-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-deep-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-service-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-deep-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-service-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-service-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-essential-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-service-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-essential-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-essential-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-deep-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-essential-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-deep-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-deep-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-move-in-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-deep-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-move-in-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-move-in-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-complex-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-move-in-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-complex-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-complex-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-faq-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-complex-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-faq-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-faq-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-why-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-faq-mobile.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-why-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-why-desktop.jpg",
       "requirements": [
         "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Append requested new review and factual evidence only."
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-why-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
     }
   ],
   "preserve": [
