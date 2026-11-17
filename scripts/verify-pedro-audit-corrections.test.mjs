@@ -240,6 +240,25 @@ test('all four repeated sections are gated only for the fifteen approved service
   assert.ok(!read('src/pages/index.astro').includes('<TrustRail'));
 });
 
+test('hiding the service outcome section retains its photograph in the gallery', () => {
+  const source = read('src/components/OutcomePage.astro');
+  const logic = source.slice(source.indexOf('const outcomeFigureShown ='), source.indexOf('const closingPool ='));
+  const visual = { gallery: [{ src: 'hero.webp' }, { src: 'outcome.webp' }, { src: 'other.webp' }] };
+  const fixtures = [
+    ['home-cleaning-london', true, ['outcome.webp', 'other.webp']],
+    ['commercial-cleaning-london', true, ['outcome.webp', 'other.webp']],
+    ['why-choose-hqc', false, ['other.webp']],
+    ['about-high-quality-clean', false, ['outcome.webp', 'other.webp']],
+    ['reviews-case-studies', false, []],
+  ];
+  for (const [slug, isServicePage, expected] of fixtures) {
+    const result = vm.runInNewContext(`${logic}; shownGallery.map(image => image.src)`, {
+      page: { slug }, isServicePage, visual, outcomeFigure: visual.gallery[1], heroKey: 'hero.webp', imageKey: (src) => src,
+    });
+    assert.deepEqual(Array.from(result), expected, slug);
+  }
+});
+
 test('Reviews groups resolve the seven named reviews verbatim and remain absent from other pages', () => {
   const source = read('src/components/OutcomePage.astro');
   const start = source.indexOf('const selectedReviewGroups =');

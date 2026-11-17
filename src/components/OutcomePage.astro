@@ -163,8 +163,8 @@ const plans: Plan[] = controlledSections.map((section, index) => {
 // and the closing band uses a library photograph not shown elsewhere on the page.
 const heroKey = imageKey(visual.hero);
 const outcomeFigure = visual.gallery.find((image) => imageKey(image.src) !== heroKey) ?? visual.gallery[0];
-// The About page shows the founder portrait instead of the outcome figure, so its gallery keeps that photograph.
-const outcomeFigureShown = page.slug !== 'about-high-quality-clean';
+// Keep the photograph in the gallery when About uses the founder portrait or a service page omits the outcome section.
+const outcomeFigureShown = page.slug !== 'about-high-quality-clean' && !isServicePage;
 const shownGallery = page.slug === 'reviews-case-studies' ? [] : visual.gallery.filter((image) => imageKey(image.src) !== heroKey && !(outcomeFigureShown && image.src === outcomeFigure.src));
 const closingPool = [...(destinationThumbnails[page.slug] ?? []), 'p-mansion-blocks', 'p-handover-keys', 'r-front-door-keys', 'g-walkthrough']
   .map((id) => cardImage(id as never)).filter((image): image is CardImage => Boolean(image));
