@@ -1,276 +1,445 @@
 {
   "schemaVersion": 1,
-  "baseline": "87061b0d84a2f82e26b130947d4532944c3046c6",
-  "request": "Jack 13 November: create a hidden HQC updates comparison link and a checklist showing done and due work. Use existing authenticated review.highqualityclean.co.uk/versions area. Preserve earlier versions, comments, photos and access controls. Application candidate and pending client clarifications stay separate from release acceptance. Independent review found five low-severity accuracy issues. Correct source provenance spacing, explicitly include the held Contact intro, correct the stale global capture-date note, and record the exact before-preview provenance. Preserve all earlier version entries/captures/comments/photo state; no new screenshot or acceptance claims. Jack 16 November cancels the separate-page idea and explicitly asks for actual screenshots so Pedro audit updates are visible in the existing comparison tool. Fill only the reserved nov13-pedro-audit version with genuine desktop/mobile full-page captures of its recorded immutable preview. Keep the existing review layout, all prior versions/assets/comments/photo selections and source acceptance holds. Necessary capture-status dependency: the comparison app contains a hard-coded screenshots-still-due sentence. Permit only replacing that sentence selection with the existing checklist previewNote value so the new captured state is displayed truthfully.",
+  "baseline": "7e07da936b53fbfa791f960eb124d024a112d875",
+  "request": "Jack 17 November requests next HQC review round and existing comparison review. Append nov17-pedro-followup to existing tool after immutable candidate and actual captures; preserve all earlier snapshots, comments, selections, access settings and held Phase 8 application. Exact private source hqc-review-2026-11-17/request.txt. No production website release or client send.",
   "requirements": [
     {
-      "id": "UPDATES",
-      "text": "Add a concise done/due checklist inside authenticated version review using supplied acceptance evidence. Source changes made, awaiting clarification and awaiting verification must be distinct. Links to actual before/after candidate and affected pages. No invented completion or client approval."
-    },
-    {
-      "id": "CAPTURES",
-      "text": "Append genuine dated desktop/mobile candidate captures with exact source/deployment/hash and missing evidence explicit. Keep all old versions and assets. Update defaultAfter only."
-    },
-    {
-      "id": "PUBLISH",
-      "text": "Test, preserve existing Worker/settings and back up shared review/photo state, deploy only review Worker using --keep-vars, verify unauthenticated denial/authenticated readback. No notification, client send, photo/comment mutation, production site deployment or settlement."
-    },
-    {
-      "id": "ACCURACY",
-      "text": "Fix only the five reviewed metadata/wording issues. Correct the global date explanation without changing any old version/capture entry. Add beforeCommit and provenance evidence plus a short visible explanation. Production site and all held items remain unchanged."
-    },
-    {
-      "id": "CAPTURE_FILL",
-      "text": "Capture all9existing comparison pages at1440x900 and390x844, full-page at the original viewport. Use https://5bf03519.hqc-london.pages.dev source177b6e202dee86e9703f0a6bbcd746fb5cf26ece. Actual capture date16November separate from source date13November. Reject optional cookies, loadfonts/images, capture originalscreens privately and compressedJPEGs public, verify finalURL/noerrorpage/hash/dimensions. Populate the currently empty version pages map and update only capture-related due notes. Do not mark broader browser/provider/client acceptance gates done."
+      "id": "REVIEW17",
+      "text": "Append exact candidate commit, immutable deployment, dated genuine desktop/mobile captures and factual updates checklist in existing review tool. Preserve prior versions/comments/selections and authentication. Do not merge this held application branch into production."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
-    },
-    {
-      "path": "tools/photo-review/public/versions/index.html",
-      "requirements": [
-        "UPDATES"
-      ],
-      "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
-    },
-    {
-      "path": "tools/photo-review/public/versions/app.js",
-      "requirements": [
-        "UPDATES",
-        "ACCURACY",
-        "CAPTURE_FILL"
-      ],
-      "allowDelete": false,
-      "reason": "Only display the capture-state note from updates.json instead of the stale hard-coded pending-capture sentence; preserve auth, comparison, comments and all other behaviour."
-    },
-    {
-      "path": "tools/photo-review/public/versions/style.css",
-      "requirements": [
-        "UPDATES"
-      ],
-      "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
-    },
-    {
-      "path": "tools/photo-review/public/versions/updates.json",
-      "requirements": [
-        "UPDATES",
-        "ACCURACY",
-        "CAPTURE_FILL"
-      ],
-      "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "ACCURACY",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261113-pedro-audit.json",
+      "path": "tools/photo-review/public/versions/updates.json",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "ACCURACY",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-home-desktop.jpg",
+      "path": "tools/photo-review/evidence/version-captures-20261117.json",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-quote-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-how-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-quote-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-how-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-how-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-contact-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-how-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-contact-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-contact-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-tenancy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-contact-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-tenancy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-tenancy-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-about-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-tenancy-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-about-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-about-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-reviews-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-about-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-reviews-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-reviews-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-privacy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-reviews-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-privacy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-privacy-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-terms-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-privacy-mobile.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-terms-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-terms-desktop.jpg",
       "requirements": [
-        "CAPTURES",
-        "PUBLISH",
-        "CAPTURE_FILL"
+        "REVIEW17"
       ],
       "allowDelete": false,
-      "reason": "Only this hidden review checklist and appended evidence; no unrelated edits."
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-terms-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-facilities-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-facilities-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-communal-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-communal-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-agents-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-agents-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-void-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-void-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-construction-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-construction-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-portfolio-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-portfolio-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-office-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-office-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-deep-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-commercial-deep-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-service-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-home-service-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-essential-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-essential-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-deep-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-deep-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-move-in-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-move-in-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-complex-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-complex-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-faq-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-faq-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-why-desktop.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
+    },
+    {
+      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-why-mobile.jpg",
+      "requirements": [
+        "REVIEW17"
+      ],
+      "allowDelete": false,
+      "reason": "Append requested new review and factual evidence only."
     }
   ],
   "preserve": [
