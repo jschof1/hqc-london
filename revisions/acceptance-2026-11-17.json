@@ -165,7 +165,7 @@
     "forms": "PASS controlled receivers; no live customer submission",
     "analytics": "PASS 2/2",
     "reviewBuild": "PASS",
-    "sourceReview": "Independent Claude hunk review 86276d9..a1c3e34 found gallery-loss defect; parent fixed in 79d7e8b and added regression. Other low-severity observations retained privately. Final hosted review pending.",
+    "sourceReview": "Independent Claude hunk review 86276d9..a1c3e34 found gallery-loss defect; parent fixed in 79d7e8b and added regression. Other low-severity observations retained privately. Completed hosted final review and repair recheck are recorded in finalReview.",
     "scope": "PASS",
     "whitespace": "PASS",
     "localLimit": "No local dependency install/build/capture processing. Mac guard denied heavy work. VPS existing dependencies reused; initial shallow-history test failure fixed by fetching original baseline, then all tests passed.",
