@@ -1,478 +1,333 @@
 {
   "schemaVersion": 1,
-  "baseline": "1202e6ae536deef9081bf50bfa7804a371c1bc50",
-  "request": "Jack 17 November requests next HQC review round and existing comparison review. Append nov17-pedro-followup to existing tool after immutable candidate and actual captures; preserve all earlier snapshots, comments, selections, access settings and held Phase 8 application. Exact private source hqc-review-2026-11-17/request.txt. No production website release or client send. Final hosted review found two remaining website sleeve-logo corrections and a literal null rendered by release cards in this requested comparison tool. Append a v2 candidate with fresh captures and correct only optional null children in release card rendering so comparison labels are readable. Preserve all earlier versions, comments, selections and authentication. Capture-scope refinement under the same two imagery corrections: include the pricing page, which also displays g-scope-plan, so all known affected templates are recorded.",
+  "baseline": "cb11d83dd2673a15aca6239fed58ab044bd0b07b",
+  "request": "Jack 18 November asks to make the older review visible and reports missing Move-in/Void. Private evidence hqc-review-coverage-2026-11-18/request.txt. Add missing saved captures from the same immutable 13 Nov review source to its existing visual version, matching the 26-page latest comparison. No new application source or visual release. Preserve original snapshots, comments, selections, authentication, current candidate and production hold.",
   "requirements": [
     {
       "id": "REVIEW17",
       "text": "Append exact candidate commit, immutable deployment, dated genuine desktop/mobile captures and factual updates checklist in existing review tool. Preserve prior versions/comments/selections and authentication. Do not merge this held application branch into production."
+    },
+    {
+      "id": "COVERAGE18",
+      "text": "For existing nov13-pedro-audit source177b6e202dee86e9703f0a6bbcd746fb5cf26ece on immutable5bf03519, add genuine desktop/mobile captures for its17 missing comparison pages including Move-in/Void. Verify exact old origin/path and page health, record actual18Nov capture time, retain existing18 capture objects/files unchanged. Keep same version ID and shared URLs; no current-page substitution or app redesign."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/updates.json",
+      "path": "tools/photo-review/evidence/version-captures-20261118-nov13-coverage.json",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/app.js",
+      "path": "tools/photo-review/VERSION_REVIEW.md",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261117-v2.json",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-facilities-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-facilities-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-communal-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-communal-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-agents-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-how-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-agents-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-how-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-void-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-contact-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-void-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-contact-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-construction-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-tenancy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-construction-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-tenancy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-portfolio-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-about-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-portfolio-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-about-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-commercial-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-reviews-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-commercial-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-reviews-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-office-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-privacy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-office-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-privacy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-commercial-deep-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-terms-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-commercial-deep-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-terms-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-home-service-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-facilities-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-home-service-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-facilities-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-essential-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-communal-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-essential-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-communal-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-deep-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-agents-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-deep-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-agents-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-move-in-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-void-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-move-in-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-void-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-complex-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-construction-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-complex-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-construction-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-faq-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-portfolio-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-faq-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-portfolio-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-why-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-why-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-prices-desktop.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-office-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov13-pedro-audit-prices-mobile.jpg",
       "requirements": [
-        "REVIEW17"
+        "COVERAGE18"
       ],
       "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-office-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-deep-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-commercial-deep-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-service-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-home-service-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-essential-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-essential-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-deep-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-deep-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-move-in-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-move-in-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-complex-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-complex-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-faq-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-faq-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-why-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-why-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Append fresh corrected candidate; narrowly fix reviewer-found null release labels in the requested comparison flow."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-prices-desktop.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Pricing page displays corrected g-scope-plan asset; fresh source-linked capture."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov17-pedro-followup-v2-prices-mobile.jpg",
-      "requirements": [
-        "REVIEW17"
-      ],
-      "allowDelete": false,
-      "reason": "Pricing page displays corrected g-scope-plan asset; fresh source-linked capture."
+      "reason": "Capture coverage addition for the unchanged older review source; preserve every existing capture and behavior."
     }
   ],
   "preserve": [
-    "All prior manifest versions/captures/comments/photo selections/access secret and binding",
-    "Customer website application remains held and is never deployed by this review Worker operation"
+    "All previous version entries and their existing capture objects/files, with only additive pages and factual supplement provenance on nov13-pedro-audit.",
+    "Existing source commit, deployment URL, version IDs, default comparison, comments and photo selections.",
+    "Authentication, access code, Durable Object bindings, customer website and production hold.",
+    "No forms submitted, customer/internal messages sent, or booking/payment/provider mutations."
   ],
   "verification": [
-    "Scope guard and complete diff review",
-    "Review unit and capture-integrity checks",
-    "Hosted desktop/mobile review and protected data readback"
+    "Scope guard and complete diff from exact planning baseline.",
+    "Remote sequential captures at1440x900 and390x844 from old immutable origin/path only; loaded fonts/images and no overflow.",
+    "Existing version-review tests and all recorded capture hashes/dimensions.",
+    "Fresh independent review and hosted readback by parent before handover; no website production release."
   ]
 }
