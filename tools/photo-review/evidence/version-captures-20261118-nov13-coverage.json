@@ -1,0 +1,1657 @@
+{
+  "kind": "capture-coverage-supplement",
+  "requestReference": "private:hqc-review-coverage-2026-11-18/request.txt",
+  "versionId": "nov13-pedro-audit",
+  "sourceCommit": "177b6e202dee86e9703f0a6bbcd746fb5cf26ece",
+  "immutableDeploymentUrl": "https://5bf03519.hqc-london.pages.dev",
+  "baselineReviewCommit": "cb11d83dd2673a15aca6239fed58ab044bd0b07b",
+  "baselineManifestSha256": "35b4fd1f8137f0efd7184964c57254adc95198d7e1b67b2b3bd31bc56ab91670",
+  "sourceReleaseDate": "2026-11-13",
+  "originalCaptureDate": "2026-11-16",
+  "supplementCaptureDate": "2026-11-18",
+  "originalPageCount": 9,
+  "addedPageCount": 17,
+  "completePageCount": 26,
+  "addedCaptureCount": 34,
+  "pages": [
+    {
+      "id": "facilities",
+      "label": "Property Facilities Cleaning London",
+      "path": "/property-facilities-cleaning-london/"
+    },
+    {
+      "id": "communal",
+      "label": "Communal Area Cleaning London",
+      "path": "/communal-area-cleaning-london/"
+    },
+    {
+      "id": "agents",
+      "label": "Estate Letting Agent Cleaning London",
+      "path": "/estate-letting-agent-cleaning-london/"
+    },
+    {
+      "id": "void",
+      "label": "Move In Void Property Cleaning London",
+      "path": "/move-in-void-property-cleaning-london/"
+    },
+    {
+      "id": "construction",
+      "label": "Post Construction Cleaning London",
+      "path": "/post-construction-cleaning-london/"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio Cleaning Support London",
+      "path": "/portfolio-cleaning-support-london/"
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial Cleaning London",
+      "path": "/commercial-cleaning-london/"
+    },
+    {
+      "id": "office",
+      "label": "Office Cleaning London",
+      "path": "/office-cleaning-london/"
+    },
+    {
+      "id": "commercial-deep",
+      "label": "Commercial Deep Cleaning London",
+      "path": "/commercial-deep-cleaning-london/"
+    },
+    {
+      "id": "home-service",
+      "label": "Home Cleaning London",
+      "path": "/home-cleaning-london/"
+    },
+    {
+      "id": "essential",
+      "label": "Essential Clean London",
+      "path": "/essential-clean-london/"
+    },
+    {
+      "id": "deep",
+      "label": "Deep Cleaning London",
+      "path": "/deep-cleaning-london/"
+    },
+    {
+      "id": "move-in",
+      "label": "Move In Cleaning London",
+      "path": "/move-in-cleaning-london/"
+    },
+    {
+      "id": "complex",
+      "label": "Complex Property Cleaning London",
+      "path": "/complex-property-cleaning-london/"
+    },
+    {
+      "id": "faq",
+      "label": "Cleaning Faqs",
+      "path": "/cleaning-faqs/"
+    },
+    {
+      "id": "why",
+      "label": "Why Choose Hqc",
+      "path": "/why-choose-hqc/"
+    },
+    {
+      "id": "prices",
+      "label": "Cleaning prices",
+      "path": "/cleaning-prices-london/"
+    }
+  ],
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "records": [
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "void",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-void-desktop.jpg",
+      "width": 1440,
+      "height": 12855,
+      "sha256": "029977cad6aa5f6bec0a0106f7e186461a74313d6780221b8240bd8f3b846ff0",
+      "originalSha256": "29b735c11d2da15d2242da4fee9b553cb8e6fac537613747793879f8217249e0",
+      "capturedAt": "2026-11-18T13:50:16.562Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Void Property Cleaning London | Move-In & Property Reset | HQC",
+      "h1": "Move-In and Void Property Cleaning for London Property Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "facilities",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-facilities-desktop.jpg",
+      "width": 1440,
+      "height": 12902,
+      "sha256": "b126e1b76f7b535c6c4057f3f792e3e6a53fe9c3e037ede0e505564102ae317d",
+      "originalSha256": "c9a18611a8e9521f960cb2bf3105bbea4aad918725f259ec26420732a7a11c7d",
+      "capturedAt": "2026-11-18T13:50:23.043Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Property Management Cleaning London | HQC",
+      "h1": "Cleaning Support for London Property Managers, Agents and Facilities Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "communal",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-communal-desktop.jpg",
+      "width": 1440,
+      "height": 14421,
+      "sha256": "62a7afeb0dd076a3ad4040b0cbabf2b41647555b7baf0287e281809f80f39866",
+      "originalSha256": "5cc27b5688ca3883ff869c9233f16e1c4a85f73bb047210100aa12644cedd765",
+      "capturedAt": "2026-11-18T13:50:30.610Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Communal Area Cleaning London | Managed Buildings | HQC",
+      "h1": "Communal Area Cleaning for London Managed Buildings",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "agents",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-agents-desktop.jpg",
+      "width": 1440,
+      "height": 13801,
+      "sha256": "66f8f8a92545d481f27666a17d535d3087aba81ea62843ccb56b6a3eaba9f476",
+      "originalSha256": "c089918046eecc79722bafeac866e7f4f849cfc5835e8e0f90293ba17ab47761",
+      "capturedAt": "2026-11-18T13:50:37.984Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Cleaning Services for Estate & Lettings Agents London | HQC",
+      "h1": "Cleaning Support for London Estate and Lettings Agents",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "construction",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-construction-desktop.jpg",
+      "width": 1440,
+      "height": 14700,
+      "sha256": "6cfadf39b32a7f3f6d7408aa9ecba64483dbfd9fae5357d8313fd5a2990c9cd6",
+      "originalSha256": "765de06047ee991725671a60d4f0f3329645b8211acbaaa8e8502b8035926f84",
+      "capturedAt": "2026-11-18T13:50:45.356Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Post-Construction Cleaning London | HQC",
+      "h1": "Post-Construction™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "portfolio",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-portfolio-desktop.jpg",
+      "width": 1440,
+      "height": 14022,
+      "sha256": "c06f9bf688ef7dacfeee90f99dff548cd935449462583366e552d568cf93992c",
+      "originalSha256": "fd89d251953033534029411621aec99c73362e8b4d0a94a6aca1264c22d2eb93",
+      "capturedAt": "2026-11-18T13:50:52.684Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Property Portfolio Cleaning London | HQC",
+      "h1": "Cleaning Support Across London Property Portfolios",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "commercial",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/commercial-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-commercial-desktop.jpg",
+      "width": 1440,
+      "height": 14573,
+      "sha256": "36bac4e46eb4ca6e947a1db03b441791c0d569d463dc1aaca8aff8c2084b0403",
+      "originalSha256": "a28978ac799ff7e81d3a08eb61830f16379008ca241aa1d42eda029a601a4c8b",
+      "capturedAt": "2026-11-18T13:51:00.103Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Commercial Cleaning London | Workplaces & Sites | HQC",
+      "h1": "Workplaces and Commercial Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "office",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/office-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-office-desktop.jpg",
+      "width": 1440,
+      "height": 13399,
+      "sha256": "aaaf151059eded7ceedbcee6b77cb20eef02a3ddc5cf4d2cd4c1c0334473ef89",
+      "originalSha256": "a969d23f004e670f2fdd8c5d84b6fc8e5b9311da26d744b0f020174994be9d05",
+      "capturedAt": "2026-11-18T13:51:07.438Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Office Cleaning London | Workplace Cleaning Programmes | HQC",
+      "h1": "Office Cleaning Programmes Built Around Your Workplace",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "commercial-deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-commercial-deep-desktop.jpg",
+      "width": 1440,
+      "height": 14666,
+      "sha256": "44dfb6077c5c4e8d9ec66bb8d92516d62ee40eaabf1ad773aafc6ef97ed68236",
+      "originalSha256": "2acf4651f54ef45f6f1f61662cd6a6577d1bba3f4fd95e68b1499fd66fc370c0",
+      "capturedAt": "2026-11-18T13:51:14.895Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Commercial Deep Cleaning London | Workplace Reset | HQC",
+      "h1": "Commercial Deep Cleaning for London Workplaces and Premises",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "home-service",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/home-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-home-service-desktop.jpg",
+      "width": 1440,
+      "height": 13133,
+      "sha256": "d81fc12d39cd136411e0746d13baafe54dd9044e911f85407a4d9499871aa49d",
+      "originalSha256": "3d37f6d9a06687214d655e5197b2e4e02f2a7ef4463d67a4021ea7a7b903875c",
+      "capturedAt": "2026-11-18T13:51:21.339Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Home Cleaning Services London | High Quality Clean",
+      "h1": "Home Cleaning Starts with the Result You Need",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "essential",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/essential-clean-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-essential-desktop.jpg",
+      "width": 1440,
+      "height": 13812,
+      "sha256": "67a3c7183f3fe6f4d8e66158d8160a0084219c898cd1958116a2309021e9e9ef",
+      "originalSha256": "b5f3b08492e137f4e4781ef2809dc3419c0870273628221a46b4b3835ef034e2",
+      "capturedAt": "2026-11-18T13:51:28.331Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Regular Home Cleaning London | Essential Clean™ | HQC",
+      "h1": "Essential Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/deep-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-deep-desktop.jpg",
+      "width": 1440,
+      "height": 12592,
+      "sha256": "4f247443b5cbf8ee20aaecf5fe53537d8e56ea22aa5c000bead964d898b0f03f",
+      "originalSha256": "ac5bfa240b345edad587d0c9649fc143779b5651b63049e4ff4cb0d6b3ce90db",
+      "capturedAt": "2026-11-18T13:51:35.278Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Deep Cleaning London | Deep Clean™ for Homes | HQC",
+      "h1": "Deep Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "move-in",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/move-in-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-move-in-desktop.jpg",
+      "width": 1440,
+      "height": 12387,
+      "sha256": "7edcff7ebf01240b181492a8726b8b5ac9fc37f8f6f436ea165738329879d87c",
+      "originalSha256": "e0b0246ab04124b9c12b53635853720766d824dacfdb3ca7294c974711dc744f",
+      "capturedAt": "2026-11-18T13:51:41.573Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Move-In Cleaning London | Move-In Reset™ | HQC",
+      "h1": "Move-In Reset™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "complex",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-complex-desktop.jpg",
+      "width": 1440,
+      "height": 14915,
+      "sha256": "61f9c3d7ca0a5db748d4088957724f485e13d6dc63485e8c82fd5267c5f1dc50",
+      "originalSha256": "8f0f8ea9d6edd7878ebf44873f029d5ffa752ae8d8e6c15e488ee5416ab7d28d",
+      "capturedAt": "2026-11-18T13:51:49.218Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Large & Complex Property Cleaning London | HQC",
+      "h1": "Cleaning Assessment and Delivery for Large or Complex London Properties",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "faq",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/cleaning-faqs/",
+      "final": "https://5bf03519.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "file": "nov13-pedro-audit-faq-desktop.jpg",
+      "width": 1440,
+      "height": 7778,
+      "sha256": "5ce43ba6dacc3cb064b2162a51d498703fb73ff56dc4d96601b15ab52dea78b0",
+      "originalSha256": "d9c88f57706ceba6b9220d9816ba480d68050917674a25fd328d9968a952759b",
+      "capturedAt": "2026-11-18T13:51:52.876Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Cleaning FAQs London | High Quality Clean",
+      "h1": "Frequently Asked Questions About HQC Cleaning Services",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 6,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "robots": "noindex, nofollow, noarchive",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "why",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/why-choose-hqc/",
+      "final": "https://5bf03519.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "file": "nov13-pedro-audit-why-desktop.jpg",
+      "width": 1440,
+      "height": 14254,
+      "sha256": "b7fdc15f0508d780269d3dba2d098c56efd99709d5cf5fee007ff59f6c3e7a60",
+      "originalSha256": "f66406eb199d184df4b0b78b72358f7691ffb8c556372cecc5564d6a6d1208a7",
+      "capturedAt": "2026-11-18T13:52:00.561Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Why Choose High Quality Clean | London Cleaning Company",
+      "h1": "Why Clients Choose HQC When the Result Matters",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 28,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "prices",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/cleaning-prices-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-prices-desktop.jpg",
+      "width": 1440,
+      "height": 14488,
+      "sha256": "72b93d2d5aadb9a719e7ca9e647eb2486309a7c583154b67cc890622cac992a4",
+      "originalSha256": "3cb676205c8fd4234e1bf3da91095153783c406420a69d37be9c3b9ec217d85a",
+      "capturedAt": "2026-11-18T13:52:07.753Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Cleaning Prices London | How HQC Prices Cleaning",
+      "h1": "Cleaning Prices Based on the Work Required",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "void",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-void-mobile.jpg",
+      "width": 390,
+      "height": 18849,
+      "sha256": "c788dc82773d76473211429ab3e2d4306de158405e83eb4ef25adbbbb35c46d7",
+      "originalSha256": "7be411bdb6541bc839163d58dab3f2e7446e08e425d476b51ae2858b766dc244",
+      "capturedAt": "2026-11-18T13:52:12.585Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Void Property Cleaning London | Move-In & Property Reset | HQC",
+      "h1": "Move-In and Void Property Cleaning for London Property Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "facilities",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-facilities-mobile.jpg",
+      "width": 390,
+      "height": 18553,
+      "sha256": "1dc5a991f2f8d529bb26bf475a0487c6c8923066a634b21f5f162cc6cbacbf0d",
+      "originalSha256": "8aa6b589a6bf74a931bb59c8e3c819b5f0aed709b355fc308f81e40c53ef10f1",
+      "capturedAt": "2026-11-18T13:52:17.281Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Property Management Cleaning London | HQC",
+      "h1": "Cleaning Support for London Property Managers, Agents and Facilities Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "communal",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-communal-mobile.jpg",
+      "width": 390,
+      "height": 20729,
+      "sha256": "729f82efe1a87910fef5292c380cd1064a665327b0b4a801d4ca0df5ea685f7c",
+      "originalSha256": "f44e8ff12416a449545fece0f19e2e5670c58199c63100318a377b2523a048d6",
+      "capturedAt": "2026-11-18T13:52:22.360Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Communal Area Cleaning London | Managed Buildings | HQC",
+      "h1": "Communal Area Cleaning for London Managed Buildings",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "agents",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-agents-mobile.jpg",
+      "width": 390,
+      "height": 19975,
+      "sha256": "3402f658ca37ab5a63d1d190ba71261dd748df92662a3a6141030747a2846af3",
+      "originalSha256": "6cbe59da1c852e4bcf701a38f50850d8aab9f39d1bb6d2dcd55b542d0a018168",
+      "capturedAt": "2026-11-18T13:52:27.364Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Cleaning Services for Estate & Lettings Agents London | HQC",
+      "h1": "Cleaning Support for London Estate and Lettings Agents",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "construction",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-construction-mobile.jpg",
+      "width": 390,
+      "height": 21401,
+      "sha256": "45ff2632fce36d0cdbd6875d6d632f1299b0390471dd9bf0deebbf1bfdd63ab2",
+      "originalSha256": "f8e5cd3b6bda79edb07ae0a4bcd0a1224c0048db70b45b9fd3d4b452c45ebc3c",
+      "capturedAt": "2026-11-18T13:52:32.592Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Post-Construction Cleaning London | HQC",
+      "h1": "Post-Construction™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "portfolio",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-portfolio-mobile.jpg",
+      "width": 390,
+      "height": 19941,
+      "sha256": "89c3579c0d869df9a5aad7ad50055ce75eb441a22813fa41e3ddefe5fe6f878a",
+      "originalSha256": "b01ff43fd04e749351114b6aa133b996bdf99f4a875eddcb10cbe01395e45662",
+      "capturedAt": "2026-11-18T13:52:37.560Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Property Portfolio Cleaning London | HQC",
+      "h1": "Cleaning Support Across London Property Portfolios",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "commercial",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/commercial-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-commercial-mobile.jpg",
+      "width": 390,
+      "height": 20682,
+      "sha256": "87402b65cfc878b943985f6d4eca49f338abda2792f705d8303cd03cf4fd8a65",
+      "originalSha256": "09c9a88d995de4012d420bad6f1372e8c3b26203a4373d1eff504aba73a41605",
+      "capturedAt": "2026-11-18T13:52:42.713Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Commercial Cleaning London | Workplaces & Sites | HQC",
+      "h1": "Workplaces and Commercial Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "office",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/office-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-office-mobile.jpg",
+      "width": 390,
+      "height": 19652,
+      "sha256": "b70df5525ef5ea4411cedcab3926c5c53bc8c5429922c87d2e6f8dbc375d6294",
+      "originalSha256": "44c19aced557735ee1444d97ac5c6355d49bdd479e24580f7d519938e5c39622",
+      "capturedAt": "2026-11-18T13:52:47.911Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Office Cleaning London | Workplace Cleaning Programmes | HQC",
+      "h1": "Office Cleaning Programmes Built Around Your Workplace",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "commercial-deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-commercial-deep-mobile.jpg",
+      "width": 390,
+      "height": 20940,
+      "sha256": "49143a6863822e6623ac2ad77bb8fe8abed578f7efa3852860dc7ea8b8e6d33f",
+      "originalSha256": "a6531c4802d5b5abe85f39873b433bac43a1424cd86d40ecd79d57bcdd3e0e89",
+      "capturedAt": "2026-11-18T13:52:53.218Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Commercial Deep Cleaning London | Workplace Reset | HQC",
+      "h1": "Commercial Deep Cleaning for London Workplaces and Premises",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "home-service",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/home-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-home-service-mobile.jpg",
+      "width": 390,
+      "height": 18912,
+      "sha256": "bea2c3ac3cdbf092e3a484d344c1ab964262e7bce643bf7816858adf0dca7a35",
+      "originalSha256": "3c604c9cf5394befce5594ce4bc12bd2aaeaf5c627f44f5b8f166d348825be45",
+      "capturedAt": "2026-11-18T13:52:57.996Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Home Cleaning Services London | High Quality Clean",
+      "h1": "Home Cleaning Starts with the Result You Need",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "essential",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/essential-clean-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-essential-mobile.jpg",
+      "width": 390,
+      "height": 20484,
+      "sha256": "3fee8988657022d5063909f3c102f5e9380c4f420eeff129cdd139f8d2b95749",
+      "originalSha256": "88e54896b3ff3dbda5804070c368a5aac22de8b0fa37d1215af46aa17e8cd299",
+      "capturedAt": "2026-11-18T13:53:03.129Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Regular Home Cleaning London | Essential Clean™ | HQC",
+      "h1": "Essential Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/deep-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-deep-mobile.jpg",
+      "width": 390,
+      "height": 18821,
+      "sha256": "383293fa8b5fd60d17d34642dfb3e4c5a1f33cb9f2cb98eb3ef295dab8c19f9d",
+      "originalSha256": "7534a22651682a130e5d009c7e8202f6610aa2aeb1abdb1cf88286d17dfc548e",
+      "capturedAt": "2026-11-18T13:53:08.193Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Deep Cleaning London | Deep Clean™ for Homes | HQC",
+      "h1": "Deep Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 25,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "move-in",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/move-in-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-move-in-mobile.jpg",
+      "width": 390,
+      "height": 17453,
+      "sha256": "a18c219dd42874a9ce14cf7201a2d456b2da4894ece74c28e0e1c05c1ddd69b6",
+      "originalSha256": "cfa38cb11f954c7d197118ff8f4a7b2013b360c6bad1a72dbd471b3795cefb7c",
+      "capturedAt": "2026-11-18T13:53:12.575Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Move-In Cleaning London | Move-In Reset™ | HQC",
+      "h1": "Move-In Reset™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 24,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "complex",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-complex-mobile.jpg",
+      "width": 390,
+      "height": 22258,
+      "sha256": "514edecb17fc32748d3e158d05ca4972e6dd645756c559cfb0f7d3b87fb1d422",
+      "originalSha256": "66823230db266e0d5131eecb8c971477c70fa25da55876ab94b123e259727333",
+      "capturedAt": "2026-11-18T13:53:18.113Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Large & Complex Property Cleaning London | HQC",
+      "h1": "Cleaning Assessment and Delivery for Large or Complex London Properties",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "faq",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/cleaning-faqs/",
+      "final": "https://5bf03519.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "file": "nov13-pedro-audit-faq-mobile.jpg",
+      "width": 390,
+      "height": 8459,
+      "sha256": "fa9a8dc942fc73a1b41931b82fe07cc92822c58865b101fda27e4fce8a4ddc28",
+      "originalSha256": "477406e8b18a5351559bc6325e977b8a6b9245a55594fa0243e8c7474786f53b",
+      "capturedAt": "2026-11-18T13:53:20.624Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Cleaning FAQs London | High Quality Clean",
+      "h1": "Frequently Asked Questions About HQC Cleaning Services",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 6,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 0,
+        "op-scope": 0,
+        "op-next": 0,
+        "op-closing": 0
+      },
+      "robots": "noindex, nofollow, noarchive",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "why",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/why-choose-hqc/",
+      "final": "https://5bf03519.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "file": "nov13-pedro-audit-why-mobile.jpg",
+      "width": 390,
+      "height": 20259,
+      "sha256": "cc9109a2be95d292e82bf0b2b4e04b5052ed6bff215477577d769b05bcc28a9d",
+      "originalSha256": "22299bfac24457a408a881af0e7e29aa7dd93755f1be38556a73a5f53d7df91e",
+      "capturedAt": "2026-11-18T13:53:25.868Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Why Choose High Quality Clean | London Cleaning Company",
+      "h1": "Why Clients Choose HQC When the Result Matters",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 28,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov13-pedro-audit",
+      "pageId": "prices",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://5bf03519.hqc-london.pages.dev/cleaning-prices-london/",
+      "final": "https://5bf03519.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "file": "nov13-pedro-audit-prices-mobile.jpg",
+      "width": 390,
+      "height": 20696,
+      "sha256": "009440de8dcbce7f4b58909250e6ef95953eb2a6bd518caa0f1e0a5ec84ccf06",
+      "originalSha256": "e320e6d2e03b29bcc45c956ffbc1bdb0a56bee8961501c4c09cadf6b073c5a30",
+      "capturedAt": "2026-11-18T13:53:31.039Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked",
+      "title": "Cleaning Prices London | How HQC Prices Cleaning",
+      "h1": "Cleaning Prices Based on the Work Required",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "headerImages": [
+        {
+          "src": "/images/brand/hqc-logo-header-3d.svg",
+          "shown": true
+        },
+        {
+          "src": "/images/brand/hqc-monogram-3d.webp",
+          "shown": false
+        }
+      ],
+      "genericSections": {
+        "op-outcomes": 1,
+        "op-scope": 1,
+        "op-next": 1,
+        "op-closing": 1
+      },
+      "robots": "index, follow",
+      "errors": [],
+      "blockedWrites": []
+    }
+  ],
+  "failures": [],
+  "preservation": {
+    "originalCaptureObjectsUnchanged": true,
+    "originalCaptureCount": 18,
+    "otherVersionEntriesUnchanged": 25,
+    "topLevelManifestMetadataUnchanged": true,
+    "versionIdAndSharedUrlsUnchanged": true,
+    "appCodeChanged": false,
+    "noFormSubmissionOrClientMessage": true
+  },
+  "originals": "Original PNGs and the capture log remain in the private VPS evidence store. JPEGs alone are added to the public review assets.",
+  "limits": "Captures show the old immutable website layout at the actual capture time. They do not prove form delivery, CRM behavior, payment, or client acceptance. Publication and hosted review readback are separate parent-owned steps."
+}

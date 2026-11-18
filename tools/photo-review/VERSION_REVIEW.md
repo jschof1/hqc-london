@@ -14,6 +14,12 @@ The selected pages in the earlier October checkpoints can look identical. Operat
 
 `public/versions/manifest.json` records deployment/source references, route, viewport, capture timestamp, dimensions and SHA-256 for each image. `evidence/version-captures-20261029.json` records the requested/final URLs and capture method. Historical pages that redirect to a different origin must be marked unavailable rather than replaced with a current page.
 
+## Complete coverage of an unchanged version
+
+If the comparison exposes a page that was never captured for an existing version, capture that page from the same immutable source deployment and add only the missing page/view entries. Retain the existing version ID, source commit, release date and original capture objects/files. Record the new actual capture times on each added image and add a capture-supplement evidence record; do not invent a new website release or replace an old capture with a current page. Existing comments and shared comparison URLs continue to refer to the same version.
+
+On 18 November, the 13 November Pedro audit version received a coverage supplement for its 17 missing pages at both screen sizes. The original nine pages and their 16 November captures remain unchanged. The additional images come from the same immutable 13 November deployment and are dated 18 November.
+
 ## Add a review version
 
 1. Obtain a successful Cloudflare deployment and its exact commit reference. Check that each requested page remains on that deployment and route.
