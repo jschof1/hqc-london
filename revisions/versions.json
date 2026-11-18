@@ -4114,7 +4114,9 @@
             "prices"
           ],
           "addedCaptureCount": 34,
-          "publicationStatus": "pending Cloudflare access; not hosted yet"
+          "publicationStatus": "published; final independent hosted audit in progress",
+          "workerVersion": "27a9bdd9-d6b2-4f5c-a880-3ca2b13326c2",
+          "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov13-pedro-audit&after=nov17-pedro-followup-v2&page=void&view=desktop&mode=side#compare"
         }
       ]
     },
