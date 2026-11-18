@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "baseline": "392d9833fbf6c32bbc9c6a4495e630a119af5c70",
-  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority. Evidence-registration checkpoint: frozen application source 79d7e8b24b8460acb9f5506b681d22c2c6d44ca3, immutable review f3817af8. Cumulative source review remains 86276d9 through this source, not merely this record-only scope. Append actual hosted captures/checklist and exact source registry after QA and hosted publication. No new application-source authority in this checkpoint. Fresh final review found two additional sleeve logos in g-scope-plan and p-key-hooks. Same explicit N17_UNIFORMS authority; add exact paths before editing. Source79d7e8b/previewf3817af8 and its captures remain immutable intermediate evidence. Append a new corrected review version; do not overwrite old captures.",
+  "baseline": "6eaf51c907b7539a22724c169956b65ae91e46ec",
+  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority. Evidence-registration checkpoint: frozen application source 79d7e8b24b8460acb9f5506b681d22c2c6d44ca3, immutable review f3817af8. Cumulative source review remains 86276d9 through this source, not merely this record-only scope. Append actual hosted captures/checklist and exact source registry after QA and hosted publication. No new application-source authority in this checkpoint. Fresh final review found two additional sleeve logos in g-scope-plan and p-key-hooks. Same explicit N17_UNIFORMS authority; add exact paths before editing. Source79d7e8b/previewf3817af8 and its captures remain immutable intermediate evidence. Append a new corrected review version; do not overwrite old captures. 18 November operational coverage correction: Jack reports missing old-version pages including Move-in / Void. Existing nov13 comparison has nine captured pages, latest has26. Add genuine missing old-source captures in review branch and append their operational capture evidence here; keep existing source version, existing captures and all release holds. No website code or client message change. Exact current request saved privately in hqc-review-coverage-2026-11-18/request.txt.",
   "requirements": [
     {
       "id": "SCOPE",
@@ -29,7 +29,7 @@
     },
     {
       "id": "ROUTES",
-      "text": "Correct ROUTE-001..006 exact destinations in private plan/workbook including selector complex and next=booking. Pricing CTA Check Essential Clean\u2122 Pricing uses controlled source routing, do not invent destination."
+      "text": "Correct ROUTE-001..006 exact destinations in private plan/workbook including selector complex and next=booking. Pricing CTA Check Essential Clean™ Pricing uses controlled source routing, do not invent destination."
     },
     {
       "id": "COMPLEX",
@@ -94,58 +94,36 @@
     {
       "id": "N17_VERIFY",
       "text": "Prove preview versus production robots contract without stripping review protections or changing intentional noindex utility pages. Independent hunk review, hosted preview, desktop/mobile QA and fresh captures, append review version preserving comments/history. Record provider, legal-date and client acceptance gates accurately."
+    },
+    {
+      "id": "REVIEW_OLD_COVERAGE",
+      "text": "Register supplementary actual 18 November desktop/mobile captures of the missing17 old-source pages for existing nov13-pedro-audit version, retaining all original objects/hashes and original manifest reference. Record exact committed capture supplement and hosted evidence. Existing website application/source and production remain unchanged."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "SCOPE"
+        "REVIEW_OLD_COVERAGE"
       ],
       "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "revisions/acceptance-2026-11-17.json",
-      "requirements": [
-        "RECORD",
-        "N17_VERIFY"
-      ],
-      "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
+      "reason": "Operational registry/evidence for old comparison capture coverage only; no website source edit."
     },
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "RECORD"
+        "REVIEW_OLD_COVERAGE"
       ],
       "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
+      "reason": "Operational registry/evidence for old comparison capture coverage only; no website source edit."
     },
     {
-      "path": "phase8/REVIEW_CORRECTIONS_2026-11-17.md",
+      "path": "phase8/REVIEW_COVERAGE_2026-11-18.md",
       "requirements": [
-        "RECORD",
-        "N17_VERIFY"
+        "REVIEW_OLD_COVERAGE"
       ],
       "allowDelete": false,
-      "reason": "Only the mapped 17 November requests; preserve all other hunks."
-    },
-    {
-      "path": "public/images/phase8-nov10/g-scope-plan.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Exact final-review finding under Pedro explicit remaining uniform-logo instruction."
-    },
-    {
-      "path": "public/images/phase8-nov10/p-key-hooks.webp",
-      "requirements": [
-        "N17_UNIFORMS"
-      ],
-      "allowDelete": false,
-      "reason": "Exact final-review finding under Pedro explicit remaining uniform-logo instruction."
+      "reason": "Operational registry/evidence for old comparison capture coverage only; no website source edit."
     }
   ],
   "preserve": [
