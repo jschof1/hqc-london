@@ -1,465 +1,465 @@
 {
   "schemaVersion": 1,
-  "baseline": "262f24b0ce9bc435e65d8d5d0d17b618f83a464b",
-  "request": "Jack 23 Nov asks to keep the review section ready for Pedro's 20 Nov Terms amendments. Private evidence hqc-review-2026-11-23/request.txt. Append one new review version for application source 31370b887822ab7ee955ac74710101ee7bde9b8f on immutable preview 6da7ecde, with genuine dated desktop/mobile captures of all 26 comparison pages and factual change notes. Preview only, not a production release. Preserve earlier snapshots, comments, selections, authentication and the production hold.",
+  "baseline": "4299aeabec611cea13c16c56d17b7b8a3ec67270",
+  "request": "Coordinator 23 Nov: the final re-check produced one source fix (2aaba22, quote form validation runs after the early-start check). Append it as a new review version from immutable preview 6b694c82 with 26-page desktop/mobile captures, keeping nov23-pedro-terms as intermediate evidence. Private evidence hqc-review-2026-11-23/request.txt. Preview only, not a production release.",
   "requirements": [
     {
-      "id": "REVIEW23",
-      "text": "Append version nov23-pedro-terms: exact source 31370b887822ab7ee955ac74710101ee7bde9b8f, immutable https://6da7ecde.hqc-london.pages.dev, release date 2026-11-23 (preview), actual capture timestamps, 52 desktop/mobile JPEG captures with dimensions and SHA-256, factual changes and held items, and a capture evidence record. Point the default comparison at nov17-pedro-followup-v2 -> nov23-pedro-terms. No changes to earlier version entries, capture files, app code, Worker settings or the audit checklist."
+      "id": "REVIEW23B",
+      "text": "Append version nov23-pedro-terms-v2: exact source 2aaba2273860d383295e4dddac46aa4ffb66f866, immutable https://6b694c82.hqc-london.pages.dev, release date 2026-11-23 (preview), actual capture timestamps, 52 desktop/mobile JPEG captures with dimensions and SHA-256, factual change notes with the same held items and questions, and a capture evidence record. Set the default comparison to nov17-pedro-followup-v2 -> nov23-pedro-terms-v2. Do not modify nov23-pedro-terms or any earlier entry, capture file, app code, Worker settings or the audit checklist."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261123-terms.json",
+      "path": "tools/photo-review/evidence/version-captures-20261123-terms-v2.json",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-home-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-home-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-home-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-quote-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-quote-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-how-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-how-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-how-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-how-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-contact-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-contact-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-contact-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-contact-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-tenancy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-tenancy-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-tenancy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-tenancy-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-about-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-about-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-about-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-about-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-reviews-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-reviews-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-reviews-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-reviews-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-privacy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-privacy-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-privacy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-privacy-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-terms-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-terms-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-terms-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-terms-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-facilities-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-facilities-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-facilities-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-facilities-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-communal-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-communal-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-communal-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-communal-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-agents-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-agents-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-agents-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-agents-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-void-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-void-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-void-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-void-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-construction-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-construction-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-construction-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-construction-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-portfolio-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-portfolio-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-portfolio-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-portfolio-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-commercial-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-commercial-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-commercial-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-commercial-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-office-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-office-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-office-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-office-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-commercial-deep-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-commercial-deep-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-commercial-deep-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-commercial-deep-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-home-service-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-home-service-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-home-service-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-home-service-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-essential-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-essential-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-essential-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-essential-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-deep-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-deep-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-deep-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-deep-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-move-in-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-move-in-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-move-in-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-move-in-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-complex-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-complex-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-complex-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-complex-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-faq-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-faq-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-faq-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-faq-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-why-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-why-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-why-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-why-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-prices-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-prices-desktop.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-prices-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov23-pedro-terms-v2-prices-mobile.jpg",
       "requirements": [
-        "REVIEW23"
+        "REVIEW23B"
       ],
       "allowDelete": false,
-      "reason": "Append the 23 Nov Terms review candidate as a new version; preserve every existing version, capture, comment and selection."
+      "reason": "Append the 23 Nov Terms follow-up candidate as a new version; nov23-pedro-terms and every earlier version, capture, comment and selection stay unchanged."
     }
   ],
   "preserve": [
-    "All earlier version entries, capture objects and capture files byte-for-byte; existing version IDs and shared comparison URLs.",
+    "nov23-pedro-terms and all earlier version entries, capture objects and files byte-for-byte; existing version IDs and shared comparison URLs.",
     "Comments, photo selections, authentication, access code, Durable Object binding, migration and Worker secrets.",
     "The customer website, its production hold and the updates checklist.",
     "No forms submitted, no client messages sent, no provider mutations."
   ],
   "verification": [
     "Scope guard and complete diff from the planning baseline.",
-    "Sequential remote captures at 1440x900 and 390x844 from the immutable preview only; fonts/images loaded, no overflow, non-GET requests aborted.",
+    "Sequential remote captures at 1440x900 and 390x844 from the immutable preview only, non-GET requests aborted; pixel comparison with nov23-pedro-terms originals.",
     "node --test tools/photo-review/version-review.test.mjs and check-version-captures.mjs.",
-    "Private API backups before deploy, review Worker deploy with --keep-vars, hosted readback where authentication is available; no website production release."
+    "Review Worker deploy with --keep-vars; pre-deploy API backups and hosted readback are owned by the coordinator because the access code is unavailable here; no website production release."
   ]
 }
