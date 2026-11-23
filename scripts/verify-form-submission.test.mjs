@@ -365,29 +365,113 @@ test('classification preserves every existing quote field and normalizes metadat
   ])].sort());
 }));
 
-test('14-day early-start request passes through additively; payloads without it are unchanged', async () => capture(async calls => {
-  const input = { ...quote, desired_date: '2026-11-25' };
-  assert.equal((await invoke('quote', input)).status, 200);
-  assert.equal((await invoke('quote', { ...input, early_start_request: 'yes' })).status, 200);
-  assert.equal((await invoke('quote', { ...input, early_start_request: 'forged text' })).status, 200);
-  const [without, withRequest, forged] = calls.map(({ payload }) => payload);
-  assert.equal('early_start_request' in without, false);
-  assert.ok(!without.details.includes('Early start'));
-  assert.equal(withRequest.early_start_request, 'yes');
-  assert.ok(withRequest.details.includes('Early start requested within 14-day cancellation period: yes'));
-  assert.equal('early_start_request' in forged, false, 'only the checkbox value is forwarded');
-  const volatile = ['timestamp', 'submission_id', 'details', 'early_start_request'];
-  const stable = (payload) => Object.fromEntries(Object.entries(payload).filter(([key]) => !volatile.includes(key)));
-  assert.deepEqual(stable(withRequest), stable(without));
-  assert.deepEqual(stable(forged), stable(without));
-  const strip = (payload) => payload.details.replace(/\nSubmission reference:[\s\S]*$/, '');
-  assert.equal(strip(withRequest), `${strip(without)}\nEarly start requested within 14-day cancellation period: yes`);
-  assert.equal(strip(forged), strip(without));
+// 14-day early-start request (T23_EARLYSTART). Dates are Europe/London calendar dates.
+const londonToday = (now = new Date()) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
+const shiftDate = (iso, days) => new Date(Date.parse(iso) + days * 86_400_000).toISOString().slice(0, 10);
+const earlyStartLine = 'Early start requested within 14-day cancellation period: yes';
+const volatileKeys = ['timestamp', 'submission_id'];
+const stablePayload = ({ payload }) => JSON.stringify(Object.fromEntries(Object.entries(payload).filter(([key]) => !volatileKeys.includes(key))))
+  .replace(/Submission reference: [^\\]+\\nReceived: [^"]+/, '');
+
+test('early-start helper uses the Europe/London calendar day, today through today + 14 inclusive', async () => {
+  const lib = await build({ entryPoints: [new URL('../src/lib/form-submission.ts', import.meta.url).pathname], bundle: true, write: false, platform: 'node', format: 'esm' });
+  const { earlyStartEligible } = await import(`data:text/javascript;base64,${Buffer.from(lib.outputFiles[0].text).toString('base64')}`);
+  const cases = [
+    // 23:30 UTC on 29 March 2026 is 00:30 BST on 30 March in London.
+    ['2026-03-29T23:30:00Z', { '2026-03-29': false, '2026-03-30': true, '2026-04-13': true, '2026-04-14': false }],
+    // Late evening GMT stays on the same London day.
+    ['2026-11-23T23:59:00Z', { '2026-11-22': false, '2026-11-23': true, '2026-12-07': true, '2026-12-08': false }],
+    ['2026-10-24T23:30:00Z', { '2026-10-24': false, '2026-10-25': true, '2026-11-08': true, '2026-11-09': false }],
+  ];
+  for (const [now, dates] of cases) for (const [date, expected] of Object.entries(dates)) {
+    assert.equal(earlyStartEligible(date, new Date(now)), expected, `${date} at ${now}`);
+  }
+  for (const invalid of ['', '2026-02-30', '23/11/2026']) assert.equal(earlyStartEligible(invalid, new Date('2026-11-23T12:00:00Z')), false, invalid);
+});
+
+test('server forwards early_start_request only on an eligible home quote and otherwise drops it silently', async () => capture(async calls => {
+  const today = londonToday();
+  const dates = { yesterday: shiftDate(today, -1), today, day14: shiftDate(today, 14), day15: shiftDate(today, 15), empty: '' };
+  const eligible = new Set(['today', 'day14']);
+  for (const [label, desired_date] of Object.entries(dates)) {
+    const base = { ...quote, desired_date };
+    assert.equal((await invoke('quote', base)).status, 200, label);
+    assert.equal((await invoke('quote', { ...base, early_start_request: 'yes' })).status, 200, label);
+    assert.equal((await invoke('quote', { ...base, early_start_request: 'forged text' })).status, 200, label);
+    const [without, withRequest, forged] = calls.slice(-3);
+    assert.equal('early_start_request' in without.payload, false, label);
+    assert.ok(!without.payload.details.includes('Early start'), label);
+    assert.equal(stablePayload(forged), stablePayload(without), `${label}: non-yes value is dropped`);
+    if (eligible.has(label)) {
+      assert.equal(withRequest.payload.early_start_request, 'yes', label);
+      const strip = ({ payload }) => payload.details.replace(/\nSubmission reference:[\s\S]*$/, '');
+      assert.equal(strip(withRequest), `${strip(without)}\n${earlyStartLine}`, label);
+      const rest = (call) => JSON.stringify(Object.fromEntries(Object.entries(call.payload).filter(([key]) => ![...volatileKeys, 'details', 'early_start_request'].includes(key))));
+      assert.equal(rest(withRequest), rest(without), label);
+    } else {
+      assert.equal(stablePayload(withRequest), stablePayload(without), `${label}: ineligible date is dropped silently`);
+    }
+  }
+  // Non-home routes and the legacy quote never carry the request, even with an eligible date.
+  const commercial = { service: 'Office Cleaning', frequency: 'Weekly', operating_hours: 'After 6pm', mobilisation_requirements: 'Start next month' };
+  const others = {
+    commercial: { ...quote, route: 'commercial', ...commercial },
+    property: { ...quote, route: 'commercial', buyer: 'property', service: 'Communal Area Cleaning' },
+    complex: { ...quote, route: 'complex', service: 'Large or Executive Property' },
+    legacy: { name: 'Legacy Test', email: 'legacy@example.test', phone: '020 7946 0999', postcode: 'SW1A 1AA', service: 'deep', property_type: 'flat', frequency: 'one-off' },
+  };
+  for (const [label, input] of Object.entries(others)) {
+    const base = { ...input, desired_date: today };
+    assert.equal((await invoke('quote', base)).status, 200, label);
+    assert.equal((await invoke('quote', { ...base, early_start_request: 'yes' })).status, 200, label);
+    const [without, withRequest] = calls.slice(-2);
+    assert.equal(stablePayload(withRequest), stablePayload(without), `${label} drops the request silently`);
+    assert.ok(!withRequest.payload.details.includes('Early start'), label);
+  }
+}));
+
+test('quote page early-start checkbox follows the home route and London date window without touching other fields', async () => {
   const page = await readFile(new URL('../src/pages/request-a-quote.astro', import.meta.url), 'utf8');
   assert.match(page, /<label id="early-start-field" class="hidden [^"]*">\s*<input class="mt-1" type="checkbox" name="early_start_request" value="yes" disabled \/>\s*<span>If my first clean is within 14 days of booking, I ask High Quality Clean to start the service within my 14-day cancellation period\. I understand that if I cancel after work has started I will pay for the service provided up to that point, and that I lose the right to cancel once the service has been fully performed\.<\/span>/);
-  assert.match(page, /const needsEarlyStart = routeInput\.value === 'residential' && daysAhead <= 14;/);
-  assert.match(page, /earlyStartInput\.disabled = !needsEarlyStart;\s*earlyStartInput\.required = needsEarlyStart;/);
-}));
+  const extract = (name) => {
+    const start = page.indexOf(`  function ${name}(`);
+    assert.notEqual(start, -1, name);
+    return page.slice(start, page.indexOf('\n  }\n', start) + 4);
+  };
+  const conditional = extract('updateConditionalFields');
+  assert.ok(!/earlyStart|desiredDate/.test(conditional), 'frequency/commercial logic stays independent of the early-start checkbox');
+  assert.match(page, /desiredDateInput\?\.addEventListener\('change', updateEarlyStart\);\s*desiredDateInput\?\.addEventListener\('input', updateEarlyStart\);/);
+  assert.match(extract('setRoute'), /updateConditionalFields\(\);\s*updateEarlyStart\(\);/);
+  const { code } = await transform(`${extract('londonDaysUntil')}\n${extract('updateEarlyStart')}`, { loader: 'ts' });
+  const classes = new Set(['hidden']);
+  const context = {
+    earlyStart: { classList: { toggle: (name, on) => on ? classes.add(name) : classes.delete(name) } },
+    earlyStartInput: { disabled: true, required: false, checked: false },
+    routeInput: { value: 'residential' }, desiredDateInput: { value: '' },
+    frequencyInput: { value: 'Weekly', innerHTML: '<option>Weekly</option>' },
+  };
+  vm.runInNewContext(`${code}\nthis.londonDaysUntil = londonDaysUntil; this.updateEarlyStart = updateEarlyStart;`, context);
+  assert.equal(context.londonDaysUntil('2026-03-30', new Date('2026-03-29T23:30:00Z')), 0);
+  assert.equal(context.londonDaysUntil('2026-03-29', new Date('2026-03-29T23:30:00Z')), -1);
+  assert.equal(context.londonDaysUntil('2026-12-07', new Date('2026-11-23T23:59:00Z')), 14);
+  assert.equal(context.londonDaysUntil('2026-02-30'), null);
+  const today = londonToday();
+  const run = (route, date, checked = true) => {
+    Object.assign(context, { routeInput: { value: route }, desiredDateInput: { value: date } });
+    context.earlyStartInput.checked = checked;
+    context.updateEarlyStart();
+    return { shown: !classes.has('hidden'), disabled: context.earlyStartInput.disabled, required: context.earlyStartInput.required, checked: context.earlyStartInput.checked };
+  };
+  const shown = { shown: true, disabled: false, required: true, checked: true };
+  const hidden = { shown: false, disabled: true, required: false, checked: false };
+  assert.deepEqual(run('residential', today), shown);
+  assert.deepEqual(run('residential', shiftDate(today, 14)), shown);
+  assert.deepEqual(run('residential', shiftDate(today, -1)), hidden);
+  assert.deepEqual(run('residential', shiftDate(today, 15)), hidden);
+  assert.deepEqual(run('residential', ''), hidden);
+  for (const route of ['commercial', 'complex']) assert.deepEqual(run(route, today), hidden, route);
+  assert.deepEqual(context.frequencyInput, { value: 'Weekly', innerHTML: '<option>Weekly</option>' });
+});
 
 for (const service of ['never-seen-before', 'Office Cleaning']) {
   test(`residential route with ${service} forwards unconfirmed tags without rejecting intake`, async () => capture(async calls => {

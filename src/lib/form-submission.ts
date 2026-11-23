@@ -34,6 +34,14 @@ function validDate(value: string) {
     new Date(value).toISOString().slice(0, 10) === value;
 }
 
+// True when a YYYY-MM-DD date falls from today through today + 14 days on the Europe/London calendar.
+export function earlyStartEligible(value: string, now: Date = new Date()) {
+  if (!validDate(value)) return false;
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
+  const days = Math.round((Date.parse(value) - Date.parse(today)) / 86_400_000);
+  return days >= 0 && days <= 14;
+}
+
 function quickFormSource(request: Request) {
   // Only known same-origin page paths select a source; never forward a supplied source.
   const sources: Record<string, string> = {
@@ -128,8 +136,9 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
       if (body[field] && !validDate(body[field])) return json({ error: 'Please enter a valid date', field: field === 'required_service_date' ? 'desired_date' : field }, 400);
       body[field] ||= '';
     }
-    // Optional 14-day early-start request: only the checkbox value is forwarded, and only when present.
-    if ('early_start_request' in body && body.early_start_request !== 'yes') delete body.early_start_request;
+    // Optional 14-day early-start request: forwarded only as 'yes' on an eligible home quote; otherwise dropped silently.
+    if ('early_start_request' in body && !(body.early_start_request === 'yes' && routedQuote && body.route === 'residential'
+      && earlyStartEligible(body.required_service_date))) delete body.early_start_request;
     body.enquiry_type = body.route === 'commercial' && ['property', 'agency'].includes(body.buyer) ? 'property' : body.route;
     // The existing receiver maps Enquiry Notes from details. Append new context there too.
     body.details = [body.details, ...[

@@ -373,18 +373,28 @@ const routeCards = [
       input.required = isCommercial;
       if (!isCommercial) input.value = '';
     }
+  }
 
-    // Home route only: the 14-day early-start request applies when the requested date is within 14 days of today.
-    if (earlyStartInput) {
-      const [year, month, day] = (desiredDateInput?.value ?? '').split('-').map(Number);
-      const now = new Date();
-      const daysAhead = year && month && day ? (Date.UTC(year, month - 1, day) - Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())) / 86_400_000 : Infinity;
-      const needsEarlyStart = routeInput.value === 'residential' && daysAhead <= 14;
-      earlyStart?.classList.toggle('hidden', !needsEarlyStart);
-      earlyStartInput.disabled = !needsEarlyStart;
-      earlyStartInput.required = needsEarlyStart;
-      if (!needsEarlyStart) earlyStartInput.checked = false;
-    }
+  // Days from today's Europe/London calendar date to a YYYY-MM-DD date; null when empty or invalid.
+  function londonDaysUntil(value: string, now: Date = new Date()): number | null {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    if (!match) return null;
+    const target = Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+    if (new Date(target).toISOString().slice(0, 10) !== value) return null;
+    const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
+    const [year, month, day] = today.split('-').map(Number);
+    return Math.round((target - Date.UTC(year, month - 1, day)) / 86_400_000);
+  }
+
+  // Home route only: the 14-day early-start request applies when the requested date is today through today + 14 (London).
+  function updateEarlyStart() {
+    if (!earlyStart || !earlyStartInput || !routeInput) return;
+    const daysAhead = londonDaysUntil(desiredDateInput?.value ?? '');
+    const needsEarlyStart = routeInput.value === 'residential' && daysAhead !== null && daysAhead >= 0 && daysAhead <= 14;
+    earlyStart.classList.toggle('hidden', !needsEarlyStart);
+    earlyStartInput.disabled = !needsEarlyStart;
+    earlyStartInput.required = needsEarlyStart;
+    if (!needsEarlyStart) earlyStartInput.checked = false;
   }
 
   function setRoute(route: keyof typeof routes, options: { updateUrl?: boolean; track?: boolean; requestedService?: string } = {}) {
@@ -399,6 +409,7 @@ const routeCards = [
     const matchedService = serviceAliases[route][requestedService];
     if (matchedService && config.options.includes(matchedService)) service.value = matchedService;
     updateConditionalFields();
+    updateEarlyStart();
     complexNote?.classList.toggle('hidden', route !== 'complex');
     tabs.forEach((tab) => {
       const selected = tab.dataset.route === route;
@@ -436,8 +447,8 @@ const routeCards = [
     });
   });
   service?.addEventListener('change', updateConditionalFields);
-  desiredDateInput?.addEventListener('change', updateConditionalFields);
-  desiredDateInput?.addEventListener('input', updateConditionalFields);
+  desiredDateInput?.addEventListener('change', updateEarlyStart);
+  desiredDateInput?.addEventListener('input', updateEarlyStart);
   const initial = pageUrl.searchParams.get('route');
   const propertyService = ['communal', 'communal-area', 'communal-area-cleaning', 'portfolio', 'void', 'move-in-void'].includes(initialService);
   const propertyBuyer = ['property', 'agency'].includes(pageUrl.searchParams.get('buyer') ?? '');
