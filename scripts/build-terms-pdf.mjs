@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 // Render the Terms in src/data/phase8-legal.json to a dated, fixed-address PDF.
-// Usage: node scripts/build-terms-pdf.mjs <output path> [--force]
-//   e.g. node scripts/build-terms-pdf.mjs public/terms-2026-11.pdf
+// Usage: node scripts/build-terms-pdf.mjs <output path>
+//   e.g. node scripts/build-terms-pdf.mjs public/terms-2026-12.pdf
+// Requires Node 20+ (the pinned Playwright version does not support older Node).
 // Each published version (public/terms-YYYY-MM.pdf) is a fixed copy that booking confirmations link to,
-// so an existing output file is never overwritten unless --force is given. Publish a new Terms version
-// at a new dated path instead of replacing an old one.
+// so an existing output file is never overwritten: the PDF is rendered to memory first and written with
+// an exclusive create. A new Terms edition must use a new dated filename.
 // The HTML Terms page is not touched; this reads the same data and prints it with Playwright's Chromium.
 // Browser: Playwright's expected Chromium when installed; otherwise TERMS_PDF_CHROMIUM (an executable path)
 // or, failing that, the newest chromium_headless_shell already in the Playwright cache
 // (PLAYWRIGHT_BROWSERS_PATH or ~/Library/Caches/ms-playwright), so no browser download is needed.
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { writeFile } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,17 +19,16 @@ import { chromium } from 'playwright';
 
 const root = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 const args = process.argv.slice(2);
-const force = args.includes('--force');
-const outputArg = args.find((arg) => !arg.startsWith('--'));
-if (!outputArg) {
-  console.error('Usage: node scripts/build-terms-pdf.mjs <output path> [--force]');
+if (args.length !== 1 || args[0].startsWith('--')) {
+  console.error('Usage: node scripts/build-terms-pdf.mjs <output path>');
   process.exit(2);
 }
-const output = resolve(process.cwd(), outputArg);
-if (existsSync(output) && !force) {
-  console.error(`Refusing to overwrite ${output}: published Terms PDFs are fixed copies. Use a new dated path, or --force to replace it deliberately.`);
+const output = resolve(process.cwd(), args[0]);
+const refuse = () => {
+  console.error(`Refusing to overwrite ${output}: published Terms PDFs are fixed copies. Use a new dated filename.`);
   process.exit(1);
-}
+};
+if (existsSync(output)) refuse();
 const terms = JSON.parse(readFileSync(resolve(root, 'src/data/phase8-legal.json'), 'utf8')).terms;
 
 const esc = (value) => String(value).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -92,11 +93,12 @@ function cachedHeadlessShell() {
 }
 const executablePath = existsSync(chromium.executablePath()) ? undefined : process.env.TERMS_PDF_CHROMIUM || cachedHeadlessShell();
 const browser = await chromium.launch(executablePath ? { executablePath } : {});
+let pdf;
 try {
   const page = await browser.newPage();
   await page.setContent(html, { waitUntil: 'load' });
-  await page.pdf({
-    path: output, format: 'A4', printBackground: true, displayHeaderFooter: true,
+  pdf = await page.pdf({
+    format: 'A4', printBackground: true, displayHeaderFooter: true,
     headerTemplate: '<span></span>',
     footerTemplate: `<div style="width:100%;font-family:Helvetica,Arial,sans-serif;font-size:7pt;color:#555;padding:0 18mm;display:flex;justify-content:space-between"><span>High Quality Clean Ltd - Terms and Conditions of Service - ${esc(updated)}</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>`,
     margin: { top: '18mm', bottom: '20mm', left: '18mm', right: '18mm' },
@@ -104,4 +106,10 @@ try {
 } finally {
   await browser.close();
 }
-console.log(`Wrote ${output} (${statSync(output).size} bytes)`);
+try {
+  await writeFile(output, pdf, { flag: 'wx' });
+} catch (error) {
+  if (error?.code === 'EEXIST') refuse();
+  throw error;
+}
+console.log(`Wrote ${output} (${pdf.length} bytes)`);

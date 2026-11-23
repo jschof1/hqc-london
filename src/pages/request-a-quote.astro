@@ -381,8 +381,9 @@ const routeCards = [
     if (!match) return null;
     const target = Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
     if (new Date(target).toISOString().slice(0, 10) !== value) return null;
-    const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
-    const [year, month, day] = today.split('-').map(Number);
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' })
+      .formatToParts(now).filter((part) => part.type !== 'literal').map((part) => [part.type, Number(part.value)]));
+    const year = parts.year, month = parts.month, day = parts.day;
     return Math.round((target - Date.UTC(year, month - 1, day)) / 86_400_000);
   }
 
@@ -449,6 +450,9 @@ const routeCards = [
   service?.addEventListener('change', updateConditionalFields);
   desiredDateInput?.addEventListener('change', updateEarlyStart);
   desiredDateInput?.addEventListener('input', updateEarlyStart);
+  // The London date can change while the page is open (midnight, or a restored tab), so re-check eligibility.
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') updateEarlyStart(); });
+  window.addEventListener('pageshow', updateEarlyStart);
   const initial = pageUrl.searchParams.get('route');
   const propertyService = ['communal', 'communal-area', 'communal-area-cleaning', 'portfolio', 'void', 'move-in-void'].includes(initialService);
   const propertyBuyer = ['property', 'agency'].includes(pageUrl.searchParams.get('buyer') ?? '');
@@ -474,6 +478,9 @@ const routeCards = [
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!submit || !message || submit.disabled) return;
+    // Re-check the early-start box against the current London date before reading the form.
+    updateEarlyStart();
+    if (!form.reportValidity()) return;
     submit.disabled = true;
     submit.textContent = 'Sending…';
     message.className = 'mt-6 hidden rounded-lg p-4 text-sm';

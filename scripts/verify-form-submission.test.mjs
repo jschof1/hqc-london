@@ -430,6 +430,75 @@ test('server forwards early_start_request only on an eligible home quote and oth
   }
 }));
 
+test('malformed early_start_request values are ignored silently, as the baseline accepted them', async () => capture(async calls => {
+  const base = { ...quote, desired_date: londonToday() };
+  assert.equal((await invoke('quote', base)).status, 200);
+  for (const value of [true, false, null, 1, ['yes'], { yes: true }, 'YES', ' yes ', 'yes'.padEnd(5000, 'x')]) {
+    const response = await invoke('quote', { ...base, early_start_request: value });
+    assert.equal(response.status, 200, JSON.stringify(value).slice(0, 40));
+    assert.equal(stablePayload(calls.at(-1)), stablePayload(calls[0]), JSON.stringify(value).slice(0, 40));
+  }
+}));
+
+test('submit handler re-checks the early-start box when the London date changes while the page is open', async () => {
+  const page = await readFile(new URL('../src/pages/request-a-quote.astro', import.meta.url), 'utf8');
+  const extract = (name) => {
+    const start = page.indexOf(`  function ${name}(`);
+    return page.slice(start, page.indexOf('\n  }\n', start) + 4);
+  };
+  const submitStart = page.indexOf("  form?.addEventListener('submit', async");
+  const submitHandler = page.slice(submitStart, page.indexOf('\n  });', submitStart) + 6);
+  assert.match(page, /document\.addEventListener\('visibilitychange', \(\) => \{ if \(document\.visibilityState === 'visible'\) updateEarlyStart\(\); \}\);\s*window\.addEventListener\('pageshow', updateEarlyStart\);/);
+  const { code } = await transform(`${extract('londonDaysUntil')}\n${extract('updateEarlyStart')}\n${submitHandler}`, { loader: 'ts' });
+  let clock = Date.parse('2026-03-29T22:59:00Z'); // 23:59 BST on 29 March
+  const RealDate = Date;
+  class MockDate extends RealDate { constructor(...args) { super(...(args.length ? args : [clock])); } static now() { return clock; } }
+  const classes = new Set(['hidden']);
+  const checkbox = { disabled: true, required: false, checked: false };
+  const dateInput = { value: '2026-04-13' };
+  const fetches = [];
+  let handler, validityChecks = 0;
+  const node = () => ({ disabled: false, textContent: '', className: '', innerHTML: '', focus() {} });
+  const form = {
+    reportValidity: () => { validityChecks++; return !(checkbox.required && !checkbox.checked); },
+    elements: { namedItem: () => null }, reset() {}, append() {},
+    addEventListener: (_type, fn) => { handler = fn; },
+  };
+  const context = {
+    Date: MockDate, form, submit: node(), message: node(),
+    earlyStart: { classList: { toggle: (name, on) => on ? classes.add(name) : classes.delete(name) } },
+    earlyStartInput: checkbox, routeInput: { value: 'residential' }, desiredDateInput: dateInput,
+    FormData: class { entries() { return Object.entries({ route: 'residential', desired_date: dateInput.value, ...(!checkbox.disabled && checkbox.checked ? { early_start_request: 'yes' } : {}) }); } },
+    fetch: async (_url, options) => { fetches.push(JSON.parse(options.body)); return Response.json({ ok: true, submission_id: 'x' }); },
+    window: { dispatchEvent() {} }, CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options?.detail; } },
+    tabs: [], routes: { residential: {} }, setRoute() {}, populateContext() {}, initialService: '', HTMLElement: class {}, Response,
+  };
+  vm.runInNewContext(`${code}\nthis.updateEarlyStart = updateEarlyStart;`, context);
+  context.updateEarlyStart();
+  assert.equal(classes.has('hidden'), true, 'day 15 at 23:59 is not eligible');
+  // The clock crosses London midnight before the visitor submits: 13 April is now day 14.
+  clock = Date.parse('2026-03-29T23:01:00Z');
+  await handler.call(form, { preventDefault() {} });
+  assert.equal(validityChecks, 1);
+  assert.equal(fetches.length, 0, 'submission stops so the now-required box can be answered');
+  assert.equal(classes.has('hidden'), false);
+  assert.equal(checkbox.required, true);
+  checkbox.checked = true;
+  await handler.call(form, { preventDefault() {} });
+  assert.equal(fetches.length, 1);
+  assert.equal(fetches[0].early_start_request, 'yes');
+  // Reverse: a ticked box for today becomes ineligible once today becomes yesterday.
+  dateInput.value = '2026-03-30';
+  clock = Date.parse('2026-03-30T22:59:00Z');
+  context.updateEarlyStart();
+  assert.equal(checkbox.checked, true);
+  clock = Date.parse('2026-03-30T23:01:00Z');
+  await handler.call(form, { preventDefault() {} });
+  assert.equal(fetches.length, 2);
+  assert.equal('early_start_request' in fetches[1], false);
+  assert.deepEqual({ ...checkbox, hidden: classes.has('hidden') }, { disabled: true, required: false, checked: false, hidden: true });
+});
+
 test('quote page early-start checkbox follows the home route and London date window without touching other fields', async () => {
   const page = await readFile(new URL('../src/pages/request-a-quote.astro', import.meta.url), 'utf8');
   assert.match(page, /<label id="early-start-field" class="hidden [^"]*">\s*<input class="mt-1" type="checkbox" name="early_start_request" value="yes" disabled \/>\s*<span>If my first clean is within 14 days of booking, I ask High Quality Clean to start the service within my 14-day cancellation period\. I understand that if I cancel after work has started I will pay for the service provided up to that point, and that I lose the right to cancel once the service has been fully performed\.<\/span>/);
@@ -737,7 +806,7 @@ async function frontend(path, endpoint, payload, response) {
     formContent: content, successContent: success, feedbackStep: content, successStep: success,
     steps: [content], navContainer: node(), progressContainer: node(),
     originalBtnText: 'Submit', originalButtonText: 'Submit', routeInput: { value: 'residential' },
-    tabs: [{ dataset: { route: 'residential' }, getAttribute: () => 'true' }], routes: { residential: {} }, initialService: '', setRoute() {}, populateContext() {},
+    tabs: [{ dataset: { route: 'residential' }, getAttribute: () => 'true' }], routes: { residential: {} }, initialService: '', setRoute() {}, populateContext() {}, updateEarlyStart() {},
     normalizeDiscountType: type => type === 'home' ? 'Residential' : 'Commercial',
     document: { getElementById: () => preview, createElement: () => node() },
     FormData: class { entries() { return Object.entries(payload); } },

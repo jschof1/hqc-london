@@ -14,7 +14,7 @@ const quoteFields = ['phone', 'postcode', 'service', 'route', 'buyer', 'service_
   'checkout_date', 'inspection_date', 'move_in_date', 'details', 'operating_hours',
   'mobilisation_requirements', 'tupe_context', 'property_type', 'bedrooms', 'bathrooms',
   'email_marketing_consent', 'privacy_consent', 'source_page', 'landing_page', 'referrer', 'utm_source', 'utm_medium',
-  'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'intent', 'early_start_request'];
+  'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'intent'];
 const allowedFields: Record<FormKind, string[]> = {
   quote: quoteFields,
   contact: ['phone', 'postcode', 'service', 'message', 'email_marketing_consent'],
@@ -34,11 +34,17 @@ function validDate(value: string) {
     new Date(value).toISOString().slice(0, 10) === value;
 }
 
+// Today's calendar date in Europe/London as YYYY-MM-DD, independent of locale formatting.
+function londonToday(now: Date) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' })
+    .formatToParts(now).filter((part) => part.type !== 'literal').map((part) => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
 // True when a YYYY-MM-DD date falls from today through today + 14 days on the Europe/London calendar.
 export function earlyStartEligible(value: string, now: Date = new Date()) {
   if (!validDate(value)) return false;
-  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
-  const days = Math.round((Date.parse(value) - Date.parse(today)) / 86_400_000);
+  const days = Math.round((Date.parse(value) - Date.parse(londonToday(now))) / 86_400_000);
   return days >= 0 && days <= 14;
 }
 
@@ -136,9 +142,11 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
       if (body[field] && !validDate(body[field])) return json({ error: 'Please enter a valid date', field: field === 'required_service_date' ? 'desired_date' : field }, 400);
       body[field] ||= '';
     }
-    // Optional 14-day early-start request: forwarded only as 'yes' on an eligible home quote; otherwise dropped silently.
-    if ('early_start_request' in body && !(body.early_start_request === 'yes' && routedQuote && body.route === 'residential'
-      && earlyStartEligible(body.required_service_date))) delete body.early_start_request;
+    // Optional 14-day early-start checkbox, read outside strict field validation: forwarded only as exactly 'yes'
+    // on an eligible home quote; any other value or an ineligible enquiry is ignored silently.
+    if (input.early_start_request === 'yes' && routedQuote && body.route === 'residential' && earlyStartEligible(body.required_service_date)) {
+      body.early_start_request = 'yes';
+    }
     body.enquiry_type = body.route === 'commercial' && ['property', 'agency'].includes(body.buyer) ? 'property' : body.route;
     // The existing receiver maps Enquiry Notes from details. Append new context there too.
     body.details = [body.details, ...[
