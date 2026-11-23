@@ -1,0 +1,2760 @@
+{
+  "kind": "version-capture",
+  "requestReference": "private:hqc-review-2026-11-23/request.txt",
+  "versionId": "nov23-pedro-terms-v2",
+  "sourceCommit": "2aaba2273860d383295e4dddac46aa4ffb66f866",
+  "baseUrl": "https://6b694c82.hqc-london.pages.dev",
+  "immutableDeploymentUrl": "https://6b694c82.hqc-london.pages.dev",
+  "sourceReleaseDate": "2026-11-23",
+  "releaseStatus": "preview review candidate; not a production release",
+  "captureDate": "2026-11-23",
+  "captureWindow": [
+    "2026-11-23T13:00:59.033Z",
+    "2026-11-23T13:07:03.052Z"
+  ],
+  "baselineReviewCommit": "78c0bec97bed1bbb46e5a12396930b154d0eff86",
+  "baselineManifestSha256": "fbe0da2df2266bf7ebcbab92a7bf294c947cda54cddb31f648609f6572874757",
+  "pageCount": 26,
+  "captureCount": 52,
+  "pages": [
+    {
+      "id": "home",
+      "label": "Homepage",
+      "path": "/"
+    },
+    {
+      "id": "quote",
+      "label": "Request a quote",
+      "path": "/request-a-quote/"
+    },
+    {
+      "id": "how",
+      "label": "How it works",
+      "path": "/how-we-work/"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "path": "/contact/"
+    },
+    {
+      "id": "tenancy",
+      "label": "End of tenancy cleaning",
+      "path": "/end-of-tenancy-cleaning-london/"
+    },
+    {
+      "id": "about",
+      "label": "About HQC",
+      "path": "/about-high-quality-clean/"
+    },
+    {
+      "id": "reviews",
+      "label": "Reviews & case studies",
+      "path": "/reviews-case-studies/"
+    },
+    {
+      "id": "privacy",
+      "label": "Privacy policy",
+      "path": "/privacy-policy/"
+    },
+    {
+      "id": "terms",
+      "label": "Terms and conditions",
+      "path": "/terms-and-conditions/"
+    },
+    {
+      "id": "facilities",
+      "label": "Property Facilities Cleaning London",
+      "path": "/property-facilities-cleaning-london/"
+    },
+    {
+      "id": "communal",
+      "label": "Communal Area Cleaning London",
+      "path": "/communal-area-cleaning-london/"
+    },
+    {
+      "id": "agents",
+      "label": "Estate Letting Agent Cleaning London",
+      "path": "/estate-letting-agent-cleaning-london/"
+    },
+    {
+      "id": "void",
+      "label": "Move In Void Property Cleaning London",
+      "path": "/move-in-void-property-cleaning-london/"
+    },
+    {
+      "id": "construction",
+      "label": "Post Construction Cleaning London",
+      "path": "/post-construction-cleaning-london/"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio Cleaning Support London",
+      "path": "/portfolio-cleaning-support-london/"
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial Cleaning London",
+      "path": "/commercial-cleaning-london/"
+    },
+    {
+      "id": "office",
+      "label": "Office Cleaning London",
+      "path": "/office-cleaning-london/"
+    },
+    {
+      "id": "commercial-deep",
+      "label": "Commercial Deep Cleaning London",
+      "path": "/commercial-deep-cleaning-london/"
+    },
+    {
+      "id": "home-service",
+      "label": "Home Cleaning London",
+      "path": "/home-cleaning-london/"
+    },
+    {
+      "id": "essential",
+      "label": "Essential Clean London",
+      "path": "/essential-clean-london/"
+    },
+    {
+      "id": "deep",
+      "label": "Deep Cleaning London",
+      "path": "/deep-cleaning-london/"
+    },
+    {
+      "id": "move-in",
+      "label": "Move In Cleaning London",
+      "path": "/move-in-cleaning-london/"
+    },
+    {
+      "id": "complex",
+      "label": "Complex Property Cleaning London",
+      "path": "/complex-property-cleaning-london/"
+    },
+    {
+      "id": "faq",
+      "label": "Cleaning Faqs",
+      "path": "/cleaning-faqs/"
+    },
+    {
+      "id": "why",
+      "label": "Why Choose Hqc",
+      "path": "/why-choose-hqc/"
+    },
+    {
+      "id": "prices",
+      "label": "Cleaning prices",
+      "path": "/cleaning-prices-london/"
+    }
+  ],
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "records": [
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "home",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/",
+      "final": "https://6b694c82.hqc-london.pages.dev/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-home-desktop.jpg",
+      "width": 1440,
+      "height": 14385,
+      "sha256": "54b6ff07270fbdc5e89f285df08ba905ece782784fce54600db5132a175555d3",
+      "originalSha256": "5f39793e4bb02278b68fdd62ec6126aa7da0705816126e64ba4d21ead27dc3a6",
+      "capturedAt": "2026-11-23T13:00:59.033Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Professional Cleaning Services London | High Quality Clean",
+      "h1": "The Right Cleaning Service for the Result You Need",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 39,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "quote",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/request-a-quote/",
+      "final": "https://6b694c82.hqc-london.pages.dev/request-a-quote/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-quote-desktop.jpg",
+      "width": 1440,
+      "height": 6650,
+      "sha256": "8335f8a06eda3416945d77f43be496678f1e674fee1ca21db97fe61c668e4848",
+      "originalSha256": "699d2952829b394df55ff0de5e4741d1e0e50d8689e3fc1239738280a85a0696",
+      "capturedAt": "2026-11-23T13:01:06.192Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Request a Cleaning Quote | High Quality Clean London",
+      "h1": "Tell Us What You Need the Cleaning to Achieve",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 10,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "how",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/how-we-work/",
+      "final": "https://6b694c82.hqc-london.pages.dev/how-we-work/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-how-desktop.jpg",
+      "width": 1440,
+      "height": 13412,
+      "sha256": "3207820bbed318beef6629c32d5d6b61a700858a73a69aeccfe4fb20d91f152c",
+      "originalSha256": "ddd79f318b1a2d738d7d2b787866eac1d73a55e7b5a61c509656ac2ea14f6b4b",
+      "capturedAt": "2026-11-23T13:01:12.521Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "How High Quality Clean Works | Scope, Delivery & Quality",
+      "h1": "A Clearer Route from Requirement to Delivery",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 23,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "contact",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/contact/",
+      "final": "https://6b694c82.hqc-london.pages.dev/contact/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-contact-desktop.jpg",
+      "width": 1440,
+      "height": 7305,
+      "sha256": "e9e704f3b57be2b68c3f8a7ce7882718b38d5d2e166b00d2bca5df244ec7d41a",
+      "originalSha256": "99b2f11b0ed58cc50204592d991a26eb20a9a6af65da76f25066e2414179d4ac",
+      "capturedAt": "2026-11-23T13:01:19.182Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Contact High Quality Clean | London",
+      "h1": "Contact High Quality Clean",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 12,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "tenancy",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-tenancy-desktop.jpg",
+      "width": 1440,
+      "height": 10110,
+      "sha256": "2b3a585a2650d76e296fab4d666b032efc642b694f77db70b5d9dcb7e6b2b1e6",
+      "originalSha256": "393fc5793c750137233074da3d7146d407ceb1fab3198ec9cbef58161df42035",
+      "capturedAt": "2026-11-23T13:01:24.974Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "End of Tenancy Cleaning London | HQC",
+      "h1": "End of Tenancy™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "about",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/about-high-quality-clean/",
+      "final": "https://6b694c82.hqc-london.pages.dev/about-high-quality-clean/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-about-desktop.jpg",
+      "width": 1440,
+      "height": 14331,
+      "sha256": "63ba5846057729b95f2f6564de3e59817a700150d1c22598ac0443f184a33a2c",
+      "originalSha256": "1ab4aaf1b8ff8c2490b7d0cb04a219e59b4228db9d5fc89ee63619c4396976f8",
+      "capturedAt": "2026-11-23T13:01:32.358Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "About High Quality Clean | Professional Cleaning London",
+      "h1": "About High Quality Clean",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 29,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "reviews",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/reviews-case-studies/",
+      "final": "https://6b694c82.hqc-london.pages.dev/reviews-case-studies/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-reviews-desktop.jpg",
+      "width": 1440,
+      "height": 10917,
+      "sha256": "0ffe6980246dd7d49201bfd7e9a340268f17030f642ff789fa561168a79d403c",
+      "originalSha256": "7913c9264a0b23f9bf51c7e4ec4c534d28dd25983f097ebaa2b6c5e1b4de7563",
+      "capturedAt": "2026-11-23T13:01:39.661Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "High Quality Clean Reviews & Case Studies | London",
+      "h1": "What Clients Say About High Quality Clean",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 9,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "privacy",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/privacy-policy/",
+      "final": "https://6b694c82.hqc-london.pages.dev/privacy-policy/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-privacy-desktop.jpg",
+      "width": 1440,
+      "height": 10775,
+      "sha256": "02ced50cc011aa16b7e4b4dffb09466e48e661f11dc0199ca574920d0ff8f9a6",
+      "originalSha256": "1aca4b0f6e1c26b0f4306495d26495664a3e64e20899d7f95d3601d908bbc9bc",
+      "capturedAt": "2026-11-23T13:01:45.536Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Privacy Policy | High Quality Clean Ltd",
+      "h1": "Privacy Policy",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 3,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "terms",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/terms-and-conditions/",
+      "final": "https://6b694c82.hqc-london.pages.dev/terms-and-conditions/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-terms-desktop.jpg",
+      "width": 1440,
+      "height": 18770,
+      "sha256": "9d67fbcf84391603ffa1ea2278828b2d575bfe10998354fa0334bff501992454",
+      "originalSha256": "3299c204a2a1099ae9ae7f3815ce2d82d5eab296a2353eeb3f2c84da76122bf5",
+      "capturedAt": "2026-11-23T13:01:52.486Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Terms & Conditions of Service | High Quality Clean Ltd",
+      "h1": "Terms and Conditions of Service",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 3,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "facilities",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-facilities-desktop.jpg",
+      "width": 1440,
+      "height": 9834,
+      "sha256": "d8295817cc2d48374e320099f167e27e429ccf919bc66797ab059b32ce8ec465",
+      "originalSha256": "0fdb15910eb50b524b5c5a25ad132529df4d864036ef50728b79f9c5e449a880",
+      "capturedAt": "2026-11-23T13:01:58.180Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Property Management Cleaning London | HQC",
+      "h1": "Cleaning Support for London Property Managers, Agents and Facilities Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "communal",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-communal-desktop.jpg",
+      "width": 1440,
+      "height": 11348,
+      "sha256": "82db45aa82d1f75edc77548cc8a2e6911117c7079a5f833df8acc567b60f5f99",
+      "originalSha256": "d76c37261ba4854724a5a668d39e8e87a00f2a3bcd94e48f73b4af00feab787a",
+      "capturedAt": "2026-11-23T13:02:04.598Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Communal Area Cleaning London | Managed Buildings | HQC",
+      "h1": "Communal Area Cleaning for London Managed Buildings",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "agents",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-agents-desktop.jpg",
+      "width": 1440,
+      "height": 10718,
+      "sha256": "dff7e78af20d907e5d0b432c58fe4e6a5dc25f5730758a81e4a581f9a3c7917f",
+      "originalSha256": "30ab484e584ad696375b27b275ffa2f5eb3fd258ba5f3bcdf682d9d1e87a0536",
+      "capturedAt": "2026-11-23T13:02:14.102Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Cleaning Services for Estate & Lettings Agents London | HQC",
+      "h1": "Cleaning Support for London Estate and Lettings Agents",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "void",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-void-desktop.jpg",
+      "width": 1440,
+      "height": 9816,
+      "sha256": "dd85799af914d0eb430712f2c99c6099e6feb9fb9eca10a12589a69afc156cf6",
+      "originalSha256": "b929d78b04b60562f74a81abed8943917dbde1ec61264a6503ba3c1d472fb296",
+      "capturedAt": "2026-11-23T13:02:20.591Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Void Property Cleaning London | Move-In & Property Reset | HQC",
+      "h1": "Move-In and Void Property Cleaning for London Property Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "construction",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-construction-desktop.jpg",
+      "width": 1440,
+      "height": 11586,
+      "sha256": "57aab07084016b5cc778d2dafd7f31e8af8b6e407e0a9237c19b8bab40d70045",
+      "originalSha256": "1d491bb863be1d8aeb2cc409e5c8168867592c2185c02c53182057f6c28fa10a",
+      "capturedAt": "2026-11-23T13:02:27.434Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Post-Construction Cleaning London | HQC",
+      "h1": "Post-Construction™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "portfolio",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-portfolio-desktop.jpg",
+      "width": 1440,
+      "height": 10919,
+      "sha256": "514354d5a3bd0d286923dce7564435098277a5ba3e45916385ed034fdadc0df3",
+      "originalSha256": "44e334b11796a70b5722ada9ce92c1b68956c41ab1c83db8dd780b117ce057fa",
+      "capturedAt": "2026-11-23T13:02:34.204Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Property Portfolio Cleaning London | HQC",
+      "h1": "Cleaning Support Across London Property Portfolios",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "commercial",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/commercial-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-commercial-desktop.jpg",
+      "width": 1440,
+      "height": 11644,
+      "sha256": "9341e315a07cc2bf71892b52439113a6f1526e8c6a8ddf7b7f78697ad72be96b",
+      "originalSha256": "e9fa70f4da992db7c498adf8877e6e3420df45792bbc1700034a27c4104340d4",
+      "capturedAt": "2026-11-23T13:02:40.932Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Commercial Cleaning London | Workplaces & Sites | HQC",
+      "h1": "Workplaces and Commercial Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "office",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/office-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-office-desktop.jpg",
+      "width": 1440,
+      "height": 10515,
+      "sha256": "c8cf897c0b75e0b0cc46066d3bf9c724109094e264ea32f5963a9c302845bda3",
+      "originalSha256": "22ea3643bcfd2713882a67cab902bf7a7c5e888da7018fc9a560d618bd13d5f4",
+      "capturedAt": "2026-11-23T13:02:47.726Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Office Cleaning London | Workplace Cleaning Programmes | HQC",
+      "h1": "Office Cleaning Programmes Built Around Your Workplace",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "commercial-deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-commercial-deep-desktop.jpg",
+      "width": 1440,
+      "height": 11741,
+      "sha256": "8966a62271ef6760d65685f8a5953f56c7d6d115b6b7390f16f843e8110262c9",
+      "originalSha256": "fb8eccb3eb6c9e19d6c081e89f921025803343371916fc6c78785d599a98dc5e",
+      "capturedAt": "2026-11-23T13:02:54.994Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Commercial Deep Cleaning London | Workplace Reset | HQC",
+      "h1": "Commercial Deep Cleaning for London Workplaces and Premises",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "home-service",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/home-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-home-service-desktop.jpg",
+      "width": 1440,
+      "height": 10086,
+      "sha256": "add1a44f6acf71085864b5efafed12d627b4483185405fc88432b3dba7b9a3d8",
+      "originalSha256": "71e3cfb7c009421795ab0e14fbc7374d13a67d5058741adc0f57cc3eefb5b51e",
+      "capturedAt": "2026-11-23T13:03:01.798Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Home Cleaning Services London | High Quality Clean",
+      "h1": "Home Cleaning Starts with the Result You Need",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "essential",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/essential-clean-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-essential-desktop.jpg",
+      "width": 1440,
+      "height": 10791,
+      "sha256": "fb347e9a0e92d2e871984727ee84989e0c3a256a818e1d77aff1a104d8e7df9e",
+      "originalSha256": "b72c9488efe782de8ba68b9eb607c5ea06a6b2456f338da533708244d5ff44c7",
+      "capturedAt": "2026-11-23T13:03:08.607Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Regular Home Cleaning London | Essential Clean™ | HQC",
+      "h1": "Essential Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/deep-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-deep-desktop.jpg",
+      "width": 1440,
+      "height": 9531,
+      "sha256": "18e279131ae711345adb829dca0270010bfe846f5857eb74505d02f4ae5af4d0",
+      "originalSha256": "c7b7a9f791017cee4cf099a4e5e65f633d1971b181c67d92fe7d8c124904259c",
+      "capturedAt": "2026-11-23T13:03:15.091Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Deep Cleaning London | Deep Clean™ for Homes | HQC",
+      "h1": "Deep Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "move-in",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/move-in-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-move-in-desktop.jpg",
+      "width": 1440,
+      "height": 9399,
+      "sha256": "589d1b04fa9ea0b751f926a3163bf9283711dd1244e2d52018585011a385e227",
+      "originalSha256": "e0608b6d1afb343d2896902a1dbc1239403a38dddb3f80fa570a283c64d012da",
+      "capturedAt": "2026-11-23T13:03:21.402Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Move-In Cleaning London | Move-In Reset™ | HQC",
+      "h1": "Move-In Reset™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "complex",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-complex-desktop.jpg",
+      "width": 1440,
+      "height": 11819,
+      "sha256": "b4b76a14a6684986491a974172d181abfb912c6932a96dec269d607dc92cf583",
+      "originalSha256": "53d3fdcea6485526e72648ef7107172a7794f7617a701944eb10ce4c2b03d732",
+      "capturedAt": "2026-11-23T13:03:28.166Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Large & Complex Property Cleaning London | HQC",
+      "h1": "Cleaning Assessment and Delivery for Large or Complex London Properties",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "faq",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/cleaning-faqs/",
+      "final": "https://6b694c82.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-faq-desktop.jpg",
+      "width": 1440,
+      "height": 7682,
+      "sha256": "7158792088235e7b113cf2d49149b6a04250f2bb863d387489548ff741cfb3c9",
+      "originalSha256": "981bdcb411ff109afd6bbf079cf12982dcaa42a279d1fb5d151746d1b272bf69",
+      "capturedAt": "2026-11-23T13:03:34.393Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Cleaning FAQs London | High Quality Clean",
+      "h1": "Frequently Asked Questions About HQC Cleaning Services",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 6,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "why",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/why-choose-hqc/",
+      "final": "https://6b694c82.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-why-desktop.jpg",
+      "width": 1440,
+      "height": 14331,
+      "sha256": "cd01ad4bd760afb4ff8fb69fe3cb91c274ad0106ad15493da64c2a5dff4c80b2",
+      "originalSha256": "26dd3e4e5832cb294117769bc1e194589b7345d20ae263b720ab2e363f5cc2b3",
+      "capturedAt": "2026-11-23T13:03:40.648Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Why Choose High Quality Clean | London Cleaning Company",
+      "h1": "Why Clients Choose HQC When the Result Matters",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 28,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "prices",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/cleaning-prices-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-prices-desktop.jpg",
+      "width": 1440,
+      "height": 14544,
+      "sha256": "76b90ea34e2c9a6ae67598af617e8da1a65038dc1a03dd6b6f98f824e560859e",
+      "originalSha256": "22a608871a45c537a1078d60ba287cf93ea5825730783c5c83e35eb6a36bd23b",
+      "capturedAt": "2026-11-23T13:03:48.937Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Cleaning Prices London | How HQC Prices Cleaning",
+      "h1": "Cleaning Prices Based on the Work Required",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "home",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/",
+      "final": "https://6b694c82.hqc-london.pages.dev/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-home-mobile.jpg",
+      "width": 390,
+      "height": 24462,
+      "sha256": "7e8a2784111f23e04f2041320c74a76d6f98af735946c02c5b9ab0853167f7d2",
+      "originalSha256": "fb5f082e4a07f33ff39eed074b7839aa13aca8ddac6155cddc9250464a79a104",
+      "capturedAt": "2026-11-23T13:04:02.994Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Professional Cleaning Services London | High Quality Clean",
+      "h1": "The Right Cleaning Service for the Result You Need",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 39,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "quote",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/request-a-quote/",
+      "final": "https://6b694c82.hqc-london.pages.dev/request-a-quote/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-quote-mobile.jpg",
+      "width": 390,
+      "height": 11138,
+      "sha256": "4e9c6f6fc9b94fdc8d6367231a6384169769c69980002c95ec6334d2a37f01b0",
+      "originalSha256": "1c1bcf55e3c675a3abff14a6189bb3eacbb5dddca67df5722ef9713e826fb017",
+      "capturedAt": "2026-11-23T13:04:15.042Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Request a Cleaning Quote | High Quality Clean London",
+      "h1": "Tell Us What You Need the Cleaning to Achieve",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 10,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "how",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/how-we-work/",
+      "final": "https://6b694c82.hqc-london.pages.dev/how-we-work/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-how-mobile.jpg",
+      "width": 390,
+      "height": 18894,
+      "sha256": "bfffae970bf63e1e609f051de8b0945dbbbaf8cb5c105f7117c3b3869f306d0e",
+      "originalSha256": "af113b6b93d3c0770527656ff8ab62be6d2a0d10f00ce5fbefec8a2a2eb6f433",
+      "capturedAt": "2026-11-23T13:04:22.078Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "How High Quality Clean Works | Scope, Delivery & Quality",
+      "h1": "A Clearer Route from Requirement to Delivery",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 23,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "contact",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/contact/",
+      "final": "https://6b694c82.hqc-london.pages.dev/contact/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-contact-mobile.jpg",
+      "width": 390,
+      "height": 10784,
+      "sha256": "01f0cfdae4c0c0b344ecf9c84d9ceba4f2447c2b9b04819c606b88d92dd5831a",
+      "originalSha256": "0ae72438cc8a9d5877fd49ce27861e58448a6e0a187ca2e1567cfee42817c446",
+      "capturedAt": "2026-11-23T13:04:30.918Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Contact High Quality Clean | London",
+      "h1": "Contact High Quality Clean",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 12,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "tenancy",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-tenancy-mobile.jpg",
+      "width": 390,
+      "height": 14316,
+      "sha256": "972292d2ed5713a7287637a40f6e33cb03bc8503674be80d83cb8386189b2a41",
+      "originalSha256": "04ed4f1a78c8f225cd71d915035aba4f02d6f8f917d96f529e5aa6ff23d9bb35",
+      "capturedAt": "2026-11-23T13:04:37.322Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "End of Tenancy Cleaning London | HQC",
+      "h1": "End of Tenancy™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "about",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/about-high-quality-clean/",
+      "final": "https://6b694c82.hqc-london.pages.dev/about-high-quality-clean/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-about-mobile.jpg",
+      "width": 390,
+      "height": 21677,
+      "sha256": "3908a4d771a6018b49855373b757c380df1b312bb16fd68c23fbf7749da58c1c",
+      "originalSha256": "98e4562720aced224da585ecff60238242afbcae9d463966f5b0caaa5063e0a4",
+      "capturedAt": "2026-11-23T13:04:44.931Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "About High Quality Clean | Professional Cleaning London",
+      "h1": "About High Quality Clean",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 29,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "reviews",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/reviews-case-studies/",
+      "final": "https://6b694c82.hqc-london.pages.dev/reviews-case-studies/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-reviews-mobile.jpg",
+      "width": 390,
+      "height": 16225,
+      "sha256": "08314e912b715290c646057f17ca2bd852eb573f92701e0454332a8245a8380b",
+      "originalSha256": "32cb86f5f9537c9ccb99ba36dd67aea0a675aef3eb0cb5c0a1a54502f7c141e0",
+      "capturedAt": "2026-11-23T13:04:51.862Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "High Quality Clean Reviews & Case Studies | London",
+      "h1": "What Clients Say About High Quality Clean",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 9,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "privacy",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/privacy-policy/",
+      "final": "https://6b694c82.hqc-london.pages.dev/privacy-policy/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-privacy-mobile.jpg",
+      "width": 390,
+      "height": 16906,
+      "sha256": "17c8764b47cce8e9e202c098419986d7efd22af5b32117e260ea21cb1cd6052c",
+      "originalSha256": "3c25713dd685804eff79f94111ac892303aaa839071fa44d891e33200bf5dbf3",
+      "capturedAt": "2026-11-23T13:04:58.560Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Privacy Policy | High Quality Clean Ltd",
+      "h1": "Privacy Policy",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 3,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "terms",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/terms-and-conditions/",
+      "final": "https://6b694c82.hqc-london.pages.dev/terms-and-conditions/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-terms-mobile.jpg",
+      "width": 390,
+      "height": 29217,
+      "sha256": "f7b1a98c420b33f8a6fa3214df691f00d09c40658b0adbf961262f7003d25f7d",
+      "originalSha256": "67dc4d84ac4474b2e45abeb9e65294fb518dfeaeb91beb1c065c84a2e184b7d9",
+      "capturedAt": "2026-11-23T13:05:07.222Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Terms & Conditions of Service | High Quality Clean Ltd",
+      "h1": "Terms and Conditions of Service",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 3,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "facilities",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-facilities-mobile.jpg",
+      "width": 390,
+      "height": 14030,
+      "sha256": "1ea2203f4369af55bb3853e21423a457ffae1e274803e179fcdb2c7ff69b9d2b",
+      "originalSha256": "236d771108ae4af11d07f3dc43c6e918ca76d7c824008484f0fb8b53cb725684",
+      "capturedAt": "2026-11-23T13:05:13.409Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Property Management Cleaning London | HQC",
+      "h1": "Cleaning Support for London Property Managers, Agents and Facilities Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "communal",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-communal-mobile.jpg",
+      "width": 390,
+      "height": 16230,
+      "sha256": "0caf96b2630d57335dee06a7dfafb70ffd54fa24ab00f4262fecb43bb2f93a80",
+      "originalSha256": "5041c3689e084cd65627ddde2ac6a87b36f9b7c2b5ecb1d8d7ed14706d306208",
+      "capturedAt": "2026-11-23T13:05:20.031Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Communal Area Cleaning London | Managed Buildings | HQC",
+      "h1": "Communal Area Cleaning for London Managed Buildings",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "agents",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-agents-mobile.jpg",
+      "width": 390,
+      "height": 15618,
+      "sha256": "7969a38da75e7482c812389c91edb3a83c8c859eab1285325c39ba815e24c00c",
+      "originalSha256": "50a81c3133dad34b36de9369bccfbd02c0741170a93fa62d1cecc3139a8632d4",
+      "capturedAt": "2026-11-23T13:05:26.924Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Cleaning Services for Estate & Lettings Agents London | HQC",
+      "h1": "Cleaning Support for London Estate and Lettings Agents",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "void",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-void-mobile.jpg",
+      "width": 390,
+      "height": 14492,
+      "sha256": "5a1950c8a3a91994617040edaf5c2bc9151f29ac2a36ed7ada1fb0ebe9b8b98f",
+      "originalSha256": "f47db1c6d9841642fcefc5acd6a6b87d7e4368a6126504bc4167b850b3d8b862",
+      "capturedAt": "2026-11-23T13:05:33.450Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Void Property Cleaning London | Move-In & Property Reset | HQC",
+      "h1": "Move-In and Void Property Cleaning for London Property Teams",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "construction",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-construction-mobile.jpg",
+      "width": 390,
+      "height": 16990,
+      "sha256": "9f520e58ee99135a90816d8b5d85e37715187cecb0a9565526861f5c1d124aad",
+      "originalSha256": "168df0bd25bcfa1de26099ba4f167ac3ef248c4374615399473e553c84d4c1fc",
+      "capturedAt": "2026-11-23T13:05:40.232Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Post-Construction Cleaning London | HQC",
+      "h1": "Post-Construction™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "portfolio",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-portfolio-mobile.jpg",
+      "width": 390,
+      "height": 15437,
+      "sha256": "6fc2bb74fe10bd8e16eafd55008ad446eb416122cb0b52ecc66fcf4bd6a40a87",
+      "originalSha256": "a82e97e9e33fd3ae7297773df8b7f11d689530df297c62e8e09f348ba5bb2ad6",
+      "capturedAt": "2026-11-23T13:05:46.833Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Property Portfolio Cleaning London | HQC",
+      "h1": "Cleaning Support Across London Property Portfolios",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "commercial",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/commercial-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-commercial-mobile.jpg",
+      "width": 390,
+      "height": 16098,
+      "sha256": "4b458d307baa1e2ea175f680ebe50c5677058f5de5b38f748036dbd5dd302728",
+      "originalSha256": "f65a19527a6c1fe663563fa8888da930366113430c65ae2af78fb1c68f3d62bf",
+      "capturedAt": "2026-11-23T13:05:53.305Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Commercial Cleaning London | Workplaces & Sites | HQC",
+      "h1": "Workplaces and Commercial Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "office",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/office-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-office-mobile.jpg",
+      "width": 390,
+      "height": 15224,
+      "sha256": "000dc9e9206350cad9cbf1749eff873da2fc0928fbd94e1cc383c8534fe02124",
+      "originalSha256": "928f3b5ca9dfb92b2020c257f76dc1df169bbe411f2b4a7a167ad0ec22257831",
+      "capturedAt": "2026-11-23T13:05:59.951Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Office Cleaning London | Workplace Cleaning Programmes | HQC",
+      "h1": "Office Cleaning Programmes Built Around Your Workplace",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "commercial-deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-commercial-deep-mobile.jpg",
+      "width": 390,
+      "height": 16382,
+      "sha256": "132481e4544e44942e916833d60f00891c3b4320093fed10fbf9f6106cc09717",
+      "originalSha256": "eb909e055cb95168e44b39bb24b192059f6bf042567044eb21e85bf260757447",
+      "capturedAt": "2026-11-23T13:06:06.746Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Commercial Deep Cleaning London | Workplace Reset | HQC",
+      "h1": "Commercial Deep Cleaning for London Workplaces and Premises",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "home-service",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/home-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-home-service-mobile.jpg",
+      "width": 390,
+      "height": 14528,
+      "sha256": "0c47aa582c862fa83f254ddd46fd86cf21d821b793958673db5bf0d681ecc9dd",
+      "originalSha256": "50c6e5db42194322919df29fdbc9134db354f2fe6f013db669aae53a625fd70f",
+      "capturedAt": "2026-11-23T13:06:13.112Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Home Cleaning Services London | High Quality Clean",
+      "h1": "Home Cleaning Starts with the Result You Need",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "essential",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/essential-clean-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-essential-mobile.jpg",
+      "width": 390,
+      "height": 15954,
+      "sha256": "88c6ac3914367984c1b7fdb350d2cfb916c127a8c9cc2359bd6f0edbafbe94f8",
+      "originalSha256": "7a444760b3d871edf7d12319033ddcb452f82679ba178afe9006d84d78daa843",
+      "capturedAt": "2026-11-23T13:06:19.821Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Regular Home Cleaning London | Essential Clean™ | HQC",
+      "h1": "Essential Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/deep-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-deep-mobile.jpg",
+      "width": 390,
+      "height": 14349,
+      "sha256": "adc2ce0c09fb0d94b83ff3ba64dce30b3421eb53372e112fcc4031a09faab99b",
+      "originalSha256": "11622c5bfc8b49a67bb0b30a230204816f6fcd16bb6e9773f34af6b864ffc2c5",
+      "capturedAt": "2026-11-23T13:06:26.103Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Deep Cleaning London | Deep Clean™ for Homes | HQC",
+      "h1": "Deep Clean™ for London Homes",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 17,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "move-in",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/move-in-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-move-in-mobile.jpg",
+      "width": 390,
+      "height": 12990,
+      "sha256": "ff3371fa87972897d1fc2531f30a6d13f31b789d19fa52a4c862356f3f99e145",
+      "originalSha256": "eeb5f2f395006c0d9bb80b26832484dacd0c6466df87301c8958f4a8f5ca7fb2",
+      "capturedAt": "2026-11-23T13:06:32.169Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Move-In Cleaning London | Move-In Reset™ | HQC",
+      "h1": "Move-In Reset™ Cleaning in London",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 16,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "complex",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-complex-mobile.jpg",
+      "width": 390,
+      "height": 17780,
+      "sha256": "43caf59156d68f6786ecf772b2ca434844a36a8055d3759cbca0e4fb4bb81124",
+      "originalSha256": "00f4ed6c90cdbdbe8a1991b6b491e4a7af7c7a77afa17b401a4be8f4a28603c7",
+      "capturedAt": "2026-11-23T13:06:39.097Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Large & Complex Property Cleaning London | HQC",
+      "h1": "Cleaning Assessment and Delivery for Large or Complex London Properties",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 18,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "faq",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/cleaning-faqs/",
+      "final": "https://6b694c82.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "file": "nov23-pedro-terms-v2-faq-mobile.jpg",
+      "width": 390,
+      "height": 8483,
+      "sha256": "c4e688848d3b44a251ce8cfac5edfd3b5a1f38b73006b6dc08f5d03029820ceb",
+      "originalSha256": "814f68c734e6327ea1379a138c5f4f39a55077a0e0fce862b19ff78b0f7cc1a1",
+      "capturedAt": "2026-11-23T13:06:44.566Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Cleaning FAQs London | High Quality Clean",
+      "h1": "Frequently Asked Questions About HQC Cleaning Services",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 6,
+      "brokenImages": [],
+      "robots": "noindex, nofollow, noarchive",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "why",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/why-choose-hqc/",
+      "final": "https://6b694c82.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-why-mobile.jpg",
+      "width": 390,
+      "height": 20484,
+      "sha256": "584777dcff41fa27c33d826443131c2a163a29a2f06b01efccb60e3623f8b419",
+      "originalSha256": "b23babdf7fcd97b753a26d7e2ba1f9e45cdfd77d5afa1c71cfa3d64bf9775ace",
+      "capturedAt": "2026-11-23T13:06:52.089Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Why Choose High Quality Clean | London Cleaning Company",
+      "h1": "Why Clients Choose HQC When the Result Matters",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 28,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    },
+    {
+      "versionId": "nov23-pedro-terms-v2",
+      "pageId": "prices",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "requested": "https://6b694c82.hqc-london.pages.dev/cleaning-prices-london/",
+      "final": "https://6b694c82.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "file": "nov23-pedro-terms-v2-prices-mobile.jpg",
+      "width": 390,
+      "height": 21036,
+      "sha256": "b9c1f5a5cb54cbd019f96252fc4c133039e570b2bb5bf7c533bb699ee4f657c8",
+      "originalSha256": "a3b4cf2f3e0d4d6a91d3f971e7ddae6036ba7bc9af88362fe5e34f5765c6b5f9",
+      "capturedAt": "2026-11-23T13:07:03.052Z",
+      "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+      "title": "Cleaning Prices London | How HQC Prices Cleaning",
+      "h1": "Cleaning Prices Based on the Work Required",
+      "h1Count": 1,
+      "fonts": "loaded",
+      "overflow": false,
+      "imageCount": 26,
+      "brokenImages": [],
+      "robots": "index, follow",
+      "footerVat": true,
+      "errors": [],
+      "failedRequests": [],
+      "blockedWrites": []
+    }
+  ],
+  "supplementaryPrivateEvidence": {
+    "formValidation": {
+      "note": "6b694c82 with JavaScript sets noValidate and validates in the submit handler after refreshing the early-start box. Every non-GET request was intercepted and aborted; nothing reached the server.",
+      "checks": {
+        "desktop": {
+          "emptyHome": {
+            "noValidate": true,
+            "focused": "name",
+            "focusedMessage": "Please fill out this field.",
+            "invalid": [
+              "name",
+              "email",
+              "phone",
+              "postcode",
+              "service",
+              "details"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "postsAttempted": 0
+          },
+          "plus3Unticked": {
+            "date": "2026-11-26",
+            "noValidate": true,
+            "focused": "early_start_request",
+            "focusedMessage": "Please check this box if you want to proceed.",
+            "invalid": [
+              "early_start_request"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "postsAttempted": 0
+          },
+          "plus3Ticked": {
+            "noValidate": true,
+            "focused": null,
+            "focusedMessage": null,
+            "invalid": [],
+            "button": "Submit Your Requirement",
+            "formMessage": "We could not confirm receipt. Your details are still here. Before submitting again, please call 020 8870 3925 or email sales@highqualityclean.co.uk.",
+            "postsAttempted": 1,
+            "requests": [
+              {
+                "method": "POST",
+                "url": "https://6b694c82.hqc-london.pages.dev/api/quote/",
+                "format": "json",
+                "keys": [
+                  "address",
+                  "area",
+                  "buyer",
+                  "desired_date",
+                  "details",
+                  "early_start_request",
+                  "email",
+                  "intent",
+                  "landing_page",
+                  "name",
+                  "phone",
+                  "postcode",
+                  "referrer",
+                  "route",
+                  "service",
+                  "service_context",
+                  "size",
+                  "source_page",
+                  "utm_campaign",
+                  "utm_content",
+                  "utm_id",
+                  "utm_medium",
+                  "utm_source",
+                  "utm_term"
+                ],
+                "earlyStart": "yes"
+              }
+            ]
+          },
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED"
+          ],
+          "commercialEmpty": {
+            "route": "commercial",
+            "noValidate": true,
+            "focused": "name",
+            "focusedMessage": "Please fill out this field.",
+            "invalid": [
+              "name",
+              "email",
+              "phone",
+              "postcode",
+              "service",
+              "frequency",
+              "operating_hours",
+              "mobilisation_requirements",
+              "details"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "postsAttempted": 0
+          },
+          "noJsEmpty": {
+            "noValidate": false,
+            "focused": "name",
+            "focusedMessage": "Please fill out this field.",
+            "invalid": [
+              "name",
+              "email",
+              "phone",
+              "postcode",
+              "service",
+              "details"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "urlUnchanged": true,
+            "postsAttempted": 0
+          }
+        },
+        "mobile": {
+          "emptyHome": {
+            "noValidate": true,
+            "focused": "name",
+            "focusedMessage": "Please fill out this field.",
+            "invalid": [
+              "name",
+              "email",
+              "phone",
+              "postcode",
+              "service",
+              "details"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "postsAttempted": 0
+          },
+          "plus3Unticked": {
+            "date": "2026-11-26",
+            "noValidate": true,
+            "focused": "early_start_request",
+            "focusedMessage": "Please check this box if you want to proceed.",
+            "invalid": [
+              "early_start_request"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "postsAttempted": 0
+          },
+          "plus3Ticked": {
+            "noValidate": true,
+            "focused": null,
+            "focusedMessage": null,
+            "invalid": [],
+            "button": "Submit Your Requirement",
+            "formMessage": "We could not confirm receipt. Your details are still here. Before submitting again, please call 020 8870 3925 or email sales@highqualityclean.co.uk.",
+            "postsAttempted": 1,
+            "requests": [
+              {
+                "method": "POST",
+                "url": "https://6b694c82.hqc-london.pages.dev/api/quote/",
+                "format": "json",
+                "keys": [
+                  "address",
+                  "area",
+                  "buyer",
+                  "desired_date",
+                  "details",
+                  "early_start_request",
+                  "email",
+                  "intent",
+                  "landing_page",
+                  "name",
+                  "phone",
+                  "postcode",
+                  "referrer",
+                  "route",
+                  "service",
+                  "service_context",
+                  "size",
+                  "source_page",
+                  "utm_campaign",
+                  "utm_content",
+                  "utm_id",
+                  "utm_medium",
+                  "utm_source",
+                  "utm_term"
+                ],
+                "earlyStart": "yes"
+              }
+            ]
+          },
+          "consoleErrors": [
+            "Failed to load resource: net::ERR_FAILED"
+          ],
+          "commercialEmpty": {
+            "route": "commercial",
+            "noValidate": true,
+            "focused": "name",
+            "focusedMessage": "Please fill out this field.",
+            "invalid": [
+              "name",
+              "email",
+              "phone",
+              "postcode",
+              "service",
+              "frequency",
+              "operating_hours",
+              "mobilisation_requirements",
+              "details"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "postsAttempted": 0
+          },
+          "noJsEmpty": {
+            "noValidate": false,
+            "focused": "name",
+            "focusedMessage": "Please fill out this field.",
+            "invalid": [
+              "name",
+              "email",
+              "phone",
+              "postcode",
+              "service",
+              "details"
+            ],
+            "button": "Submit Your Requirement",
+            "formMessage": "",
+            "urlUnchanged": true,
+            "postsAttempted": 0
+          }
+        }
+      }
+    },
+    "earlyStartTickBox": "Private screenshots v2-unticked-desktop.png and v2-unticked-mobile.png: home route, date today+3 (Europe/London), tick-box shown and its validation message raised. The committed Request a Quote captures show the default state, where the tick-box is hidden.",
+    "pixelComparisonWithNov23PedroTerms": {
+      "method": "Original PNGs of nov23-pedro-terms (6da7ecde) vs nov23-pedro-terms-v2 (6b694c82); pixel counted as different when summed RGB difference > 30.",
+      "pages": {
+        "about-desktop": {
+          "v1": [
+            1440,
+            14331
+          ],
+          "v2": [
+            1440,
+            14331
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "about-mobile": {
+          "v1": [
+            390,
+            21677
+          ],
+          "v2": [
+            390,
+            21677
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "agents-desktop": {
+          "v1": [
+            1440,
+            10718
+          ],
+          "v2": [
+            1440,
+            10718
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "agents-mobile": {
+          "v1": [
+            390,
+            15618
+          ],
+          "v2": [
+            390,
+            15618
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "commercial-deep-desktop": {
+          "v1": [
+            1440,
+            11741
+          ],
+          "v2": [
+            1440,
+            11741
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "commercial-deep-mobile": {
+          "v1": [
+            390,
+            16382
+          ],
+          "v2": [
+            390,
+            16382
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "commercial-desktop": {
+          "v1": [
+            1440,
+            11644
+          ],
+          "v2": [
+            1440,
+            11644
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "commercial-mobile": {
+          "v1": [
+            390,
+            16098
+          ],
+          "v2": [
+            390,
+            16098
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "communal-desktop": {
+          "v1": [
+            1440,
+            11348
+          ],
+          "v2": [
+            1440,
+            11348
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "communal-mobile": {
+          "v1": [
+            390,
+            16230
+          ],
+          "v2": [
+            390,
+            16230
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "complex-desktop": {
+          "v1": [
+            1440,
+            11819
+          ],
+          "v2": [
+            1440,
+            11819
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "complex-mobile": {
+          "v1": [
+            390,
+            17780
+          ],
+          "v2": [
+            390,
+            17780
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "construction-desktop": {
+          "v1": [
+            1440,
+            11586
+          ],
+          "v2": [
+            1440,
+            11586
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "construction-mobile": {
+          "v1": [
+            390,
+            16990
+          ],
+          "v2": [
+            390,
+            16990
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "contact-desktop": {
+          "v1": [
+            1440,
+            7305
+          ],
+          "v2": [
+            1440,
+            7305
+          ],
+          "sameSize": true,
+          "diffPixels": 20657,
+          "diffRowRange": [
+            34,
+            7266
+          ]
+        },
+        "contact-mobile": {
+          "v1": [
+            390,
+            10784
+          ],
+          "v2": [
+            390,
+            10784
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "deep-desktop": {
+          "v1": [
+            1440,
+            9531
+          ],
+          "v2": [
+            1440,
+            9531
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "deep-mobile": {
+          "v1": [
+            390,
+            14349
+          ],
+          "v2": [
+            390,
+            14349
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "essential-desktop": {
+          "v1": [
+            1440,
+            10791
+          ],
+          "v2": [
+            1440,
+            10791
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "essential-mobile": {
+          "v1": [
+            390,
+            15954
+          ],
+          "v2": [
+            390,
+            15954
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "facilities-desktop": {
+          "v1": [
+            1440,
+            9834
+          ],
+          "v2": [
+            1440,
+            9834
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "facilities-mobile": {
+          "v1": [
+            390,
+            14030
+          ],
+          "v2": [
+            390,
+            14030
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "faq-desktop": {
+          "v1": [
+            1440,
+            7682
+          ],
+          "v2": [
+            1440,
+            7682
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "faq-mobile": {
+          "v1": [
+            390,
+            8483
+          ],
+          "v2": [
+            390,
+            8483
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "home-desktop": {
+          "v1": [
+            1440,
+            14385
+          ],
+          "v2": [
+            1440,
+            14385
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "home-mobile": {
+          "v1": [
+            390,
+            24462
+          ],
+          "v2": [
+            390,
+            24462
+          ],
+          "sameSize": true,
+          "diffPixels": 38864,
+          "diffRowRange": [
+            235,
+            24420
+          ]
+        },
+        "home-service-desktop": {
+          "v1": [
+            1440,
+            10086
+          ],
+          "v2": [
+            1440,
+            10086
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "home-service-mobile": {
+          "v1": [
+            390,
+            14528
+          ],
+          "v2": [
+            390,
+            14528
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "how-desktop": {
+          "v1": [
+            1440,
+            13412
+          ],
+          "v2": [
+            1440,
+            13412
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "how-mobile": {
+          "v1": [
+            390,
+            18894
+          ],
+          "v2": [
+            390,
+            18894
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "move-in-desktop": {
+          "v1": [
+            1440,
+            9399
+          ],
+          "v2": [
+            1440,
+            9399
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "move-in-mobile": {
+          "v1": [
+            390,
+            12990
+          ],
+          "v2": [
+            390,
+            12990
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "office-desktop": {
+          "v1": [
+            1440,
+            10515
+          ],
+          "v2": [
+            1440,
+            10515
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "office-mobile": {
+          "v1": [
+            390,
+            15224
+          ],
+          "v2": [
+            390,
+            15224
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "portfolio-desktop": {
+          "v1": [
+            1440,
+            10919
+          ],
+          "v2": [
+            1440,
+            10919
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "portfolio-mobile": {
+          "v1": [
+            390,
+            15437
+          ],
+          "v2": [
+            390,
+            15437
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "prices-desktop": {
+          "v1": [
+            1440,
+            14544
+          ],
+          "v2": [
+            1440,
+            14544
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "prices-mobile": {
+          "v1": [
+            390,
+            21036
+          ],
+          "v2": [
+            390,
+            21036
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "privacy-desktop": {
+          "v1": [
+            1440,
+            10775
+          ],
+          "v2": [
+            1440,
+            10775
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "privacy-mobile": {
+          "v1": [
+            390,
+            16906
+          ],
+          "v2": [
+            390,
+            16906
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "quote-desktop": {
+          "v1": [
+            1440,
+            6650
+          ],
+          "v2": [
+            1440,
+            6650
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "quote-mobile": {
+          "v1": [
+            390,
+            11138
+          ],
+          "v2": [
+            390,
+            11138
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "reviews-desktop": {
+          "v1": [
+            1440,
+            10917
+          ],
+          "v2": [
+            1440,
+            10917
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "reviews-mobile": {
+          "v1": [
+            390,
+            16225
+          ],
+          "v2": [
+            390,
+            16225
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "tenancy-desktop": {
+          "v1": [
+            1440,
+            10110
+          ],
+          "v2": [
+            1440,
+            10110
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "tenancy-mobile": {
+          "v1": [
+            390,
+            14316
+          ],
+          "v2": [
+            390,
+            14316
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "terms-desktop": {
+          "v1": [
+            1440,
+            18770
+          ],
+          "v2": [
+            1440,
+            18770
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "terms-mobile": {
+          "v1": [
+            390,
+            29217
+          ],
+          "v2": [
+            390,
+            29217
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "void-desktop": {
+          "v1": [
+            1440,
+            9816
+          ],
+          "v2": [
+            1440,
+            9816
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "void-mobile": {
+          "v1": [
+            390,
+            14492
+          ],
+          "v2": [
+            390,
+            14492
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "why-desktop": {
+          "v1": [
+            1440,
+            14331
+          ],
+          "v2": [
+            1440,
+            14331
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        },
+        "why-mobile": {
+          "v1": [
+            390,
+            20484
+          ],
+          "v2": [
+            390,
+            20484
+          ],
+          "sameSize": true,
+          "diffPixels": 0,
+          "diffRowRange": null
+        }
+      },
+      "totalDiffPixels": 59521,
+      "allSameSize": true,
+      "compared": 52
+    }
+  },
+  "preservation": {
+    "earlierVersionEntriesUnchanged": 27,
+    "earlierCaptureFilesUnchanged": true,
+    "appCodeChanged": false,
+    "updatesChecklistChanged": false,
+    "noFormSubmissionOrClientMessage": true
+  },
+  "originals": "Original PNGs and capture logs remain in Jack's private evidence store on the MacBook Pro. Only the JPEG78 copies are added to the review assets.",
+  "limits": "Captures show the immutable preview layout at the actual capture time. They do not prove form delivery, CRM behaviour, payment, legal sign-off or client acceptance. Hosted review readback is recorded separately."
+}
