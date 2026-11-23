@@ -1,144 +1,168 @@
 {
   "schemaVersion": 1,
-  "baseline": "6eaf51c907b7539a22724c169956b65ae91e46ec",
-  "request": "Jack 17 November 2026 requests next review round from latest candidate, sharper flat logo, preserving environment-specific preview noindex. Exact source: private hqc-review-2026-11-17/request.txt; Pedro WhatsApp 17 Nov and four-question email 13 Nov. Latest cumulative baseline 86276d9; earlier accepted Phase 8 and 13 Nov corrections remain requirements. Preview only, no production release or client send. Legal review date wording awaits Pedro. Planning amendment under the same explicit remaining imagery instruction: visual inspection found eight further misplaced sleeve/back logos. Add those exact paths only. Pre-round source remains 86276d9, first planning 7ed854b and content checkpoint a0b7d61 remain cumulative references. No expanded design authority. Evidence-registration checkpoint: frozen application source 79d7e8b24b8460acb9f5506b681d22c2c6d44ca3, immutable review f3817af8. Cumulative source review remains 86276d9 through this source, not merely this record-only scope. Append actual hosted captures/checklist and exact source registry after QA and hosted publication. No new application-source authority in this checkpoint. Fresh final review found two additional sleeve logos in g-scope-plan and p-key-hooks. Same explicit N17_UNIFORMS authority; add exact paths before editing. Source79d7e8b/previewf3817af8 and its captures remain immutable intermediate evidence. Append a new corrected review version; do not overwrite old captures. 18 November operational coverage correction: Jack reports missing old-version pages including Move-in / Void. Existing nov13 comparison has nine captured pages, latest has26. Add genuine missing old-source captures in review branch and append their operational capture evidence here; keep existing source version, existing captures and all release holds. No website code or client message change. Exact current request saved privately in hqc-review-coverage-2026-11-18/request.txt.",
+  "baseline": "4751e5b797e8b46b1121e565aa933335ca52a63b",
+  "request": "Jack 23 November 2026: action Pedro's outstanding emailed updates (20 Nov final Terms amendments, confirmed by 21 Nov WhatsApp) and keep the version review ready. Exact source private hqc-review-2026-11-23/request.txt. Earlier 12/13/17 Nov requests already implemented at ac24c18/99efba8e remain cumulative requirements. Preview only; no production release or client send.",
   "requirements": [
     {
-      "id": "SCOPE",
-      "text": "Jack 13 Nov authorises implementation of clear items from Pedro 12 Nov audit and two accompanying instructions. Preserve cumulative Phase 8 and later operational/design improvements. Current working source is the implementation baseline; audited source 028b45098becf5ca4cb0800673f783f3cd98f797 and immutable 71d122e7 are separate references, not the latest accepted website. Private evidence: hqc-review-2026-11-13 (original emails, all eight audit tabs, attachment hashes and UPDATE-PLAN.md)."
+      "id": "T23_SCOPE",
+      "text": "Jack 23 Nov 2026 asks to action Pedro's outstanding emailed updates and keep the version review ready. Only new website request: Pedro 20 Nov final Terms clause amendments (PDF sha256 391275969fa5...), confirmed by his 21 Nov WhatsApp. Private evidence hqc-review-2026-11-23. Cumulative baseline: application source ac24c18 / immutable 99efba8e (nov17-pedro-followup-v2) and every earlier accepted 12/13/17 Nov requirement remain in force. Preview only; production hold, legal sign-off and client acceptance remain separate."
     },
     {
-      "id": "COPY",
-      "text": "Restore exact missing call-outs and two three-month offer conditions per COPY-070/076/085/097/098/112/118/119/120/127/128/136/137/138/196. Apply only the explicit wording changes in audit email section 4. Restore approved 300+ statements on Homepage, Home Cleaning, About, Reviews. Keep other approved copy and order."
+      "id": "T23_TERMS",
+      "text": "Apply the PDF's Implementation checklist to Terms data exactly as written: new 'HQC service commitment and re-clean' section after s4 (48h); replace s10 with 14-day right to cancel plus model cancellation form; three s8 additions (discount balance not charged on HQC material failure; replace second paragraph of Rescheduled or skipped visits with three consecutive cancelled visits wording; new Price changes for recurring clients); replace only the four client cancellation rows of the s11 table with fixed tiers (0/25/50/100%) plus the paragraph below it, keeping other approved rows; add Payment, VAT and quotations wording to s7 and 30-day quotation validity to s4 (Pedro's exact Stripe wording is authoritative for Terms s7 only; Privacy stays supplier categories); replace s26 with damage/valuables/photos keeping the unlawful-liability sentence; new keys, codes and alarms section after s14 (GBP500); add precedence to s1, complaints 2/10 working days to s24, copy-of-Terms text to s31; replace s33 Contact with the exact six lines including VAT 519 1014 22; commercial clients schedule C1-C4 at the end; renumber all sections and update internal cross-references; header 'Last updated: 23 November 2026'. HOLD s27 Insurance and s15/s18 unchanged pending insurance renewal. Preserve every other approved clause, the approved s5 and s7 booking-system paragraph, and Privacy unchanged."
     },
     {
-      "id": "LEGAL",
-      "text": "Replace Privacy contact placeholders with privacy@highqualityclean.co.uk and Terms section 33 with support@highqualityclean.co.uk. Apply exact supplied Terms section 7 paragraph. Delete only named 50% deposit disclaimer from booking page. Preserve approved Terms section 5 unchanged pending Automaid-name decision. Retain unresolved legal date; show draft warning only for preview, never production. Legal H1s already exist: preserve. HISTORICAL HOLD SUPERSEDED: N17_LEGAL now explicitly authorises our booking system including section 5 and supplier categories. Legal date remains held."
+      "id": "T23_VAT",
+      "text": "Add 'VAT registration number: 519 1014 22' to the existing footer company details only, in the existing style."
     },
     {
-      "id": "REVIEWS",
-      "text": "Replace homepage reviews carousel with exactly Kara O., Lucy M., Yori Z., Fabio K., Chris M., Liv M. in approved stars/quotation/public-name/service card format. Preserve 4.9/92 badge. Exclude Thomas B. and Andre B. from every public review path. Reviews-page selection remains held: no inferred reuse of six. Remove only explicit evidence placeholders/gallery on Reviews; preserve pending visible proof/selection gate in evidence register rather than inventing cards/case studies. Add the requested Google profile link using the existing reviewed profileUrl; preserve both approved hero lead paragraphs until the anchor of the supplied replacement intro is confirmed. HISTORICAL HOLD SUPERSEDED: N17_REVIEWS now explicitly authorises seven grouped reviews and exact intro anchor; no gallery/case-study invention."
+      "id": "T23_PDF",
+      "text": "Publish the new Terms as a dated, fixed-address PDF at /terms-2026-11.pdf generated from the same Terms content, without altering the HTML page. Preview only until Pedro signs off."
     },
     {
-      "id": "REMOVALS",
-      "text": "Remove homepage A clear standard from the first conversation carousel only. Client evidence band homepage only, while retaining restored 300+ page content. Whole-section-versus-heading removal, service-page boundary and non-service propagation are HELD. Do not remove those generic shared sections or closing CTAs pending clarification. HISTORICAL HOLD SUPERSEDED: N17_SECTIONS now authorises the four whole sections on the exact15 service slugs. Homepage Client evidence must stay per newer13Nov email."
+      "id": "T23_EARLYSTART",
+      "text": "Add Pedro's exact 14-day early-start tick-box text to the request-a-quote route: show and require it only for home (consumer) routes when the required/desired service date is within 14 days of today; otherwise hidden and not submitted. Pass it through the existing form allowlist and readable summary as an additive field. Do not change other fields, routing, consent, webhook destinations or success behaviour."
     },
     {
-      "id": "CONTACT",
-      "text": "Show sales email for new enquiries/quotes and support email for existing bookings/general/supplier/admin. Remove only misleading Location card (expressly allowed by Pedro). Client-facing intro may use only exact approved material; new proposed wording held until approved. Visible public number 020 8870 3925, retain +442088703925 dial destinations and nonpublic forwarding boundary. Verify existing confirmed-success/preview/failure logic before modifying it."
+      "id": "T23_VERIFY",
+      "text": "Scope check while editing; update only the stale assertions in the existing Pedro audit test that the newer Terms supersede (Stripe in Terms s7, renumbered booking section), keeping all Privacy/Automaid/Launch27 protections; add Terms 2026-11 regression tests and an early-start form test. Run forms, analytics, corrections and revision suites, then review build. Independent other-provider hunk review. Non-production Pages preview, desktop/mobile captures of Terms, homepage footer and Request a Quote (with tick-box shown), append a new version to the review room without altering earlier versions."
     },
     {
-      "id": "ROUTES",
-      "text": "Correct ROUTE-001..006 exact destinations in private plan/workbook including selector complex and next=booking. Pricing CTA Check Essential Clean™ Pricing uses controlled source routing, do not invent destination."
-    },
-    {
-      "id": "COMPLEX",
-      "text": "Apply exact 23:16 Complex amendment only: supporting hero line; mandatory site-visit intro and remove site-visit bullet only; preserve original Confidentiality heading/intro/list and replace closing paragraph with exact four commitments; replace controlled step 3 and add exact capacity line after step 7. Preserve SEO title/meta/H1/CTAs/routes and all other content."
-    },
-    {
-      "id": "LOCATIONS",
-      "text": "Restore exact Batch 6 H1/intro/CTAs/four-route module on 17 retained location URLs with existing visual language. No invented local claims or blind restoration of historical marketing claims. Local-fact and metadata changes await source/equity evidence; preserve metadata pending that evidence. Retain existing location URL inventory and service coverage gates. Avoid repeating the new controlled intro in coverage and closing blocks. Preserve their baseline wording with only the residential-only restriction neutralised as required by the cross-buyer route; no new local claims."
-    },
-    {
-      "id": "IMAGERY",
-      "text": "Add visible Illustrative captions and meaningful alt disclosure for generated imagery only, using explicit provenance. Keep genuine/unknown photo provenance separate. Keep service galleries; remove Reviews gallery. Restrict richmond-living-room to home contexts, use existing suitable communal imagery for non-home routes. Replace one duplicate floor-plan assignment with existing suitable distinct image. Regenerate defective routine-vacuum image and correct inconsistent AI uniform logos on left chest only when inspected, preserving teal direction and other details. No arbitrary image replacements/deletions."
-    },
-    {
-      "id": "FOUNDER",
-      "text": "Copy exact genuine supplied PNG to public/images/pedro-on-site-original.png and use homepage existing founder slot with CSS crop only as appropriate, both people retained, no logo/colour changes, exact alt from email and no Illustrative label. Preserve other founder portraits."
-    },
-    {
-      "id": "SEMANTICS",
-      "text": "Approved Batch 6 404 copy, CTAs and five useful routes; actual missing URL must return 404. FAQ question headings, Request a Quote terms and homepage card titles become H3 with existing styling. No general copy/SEO/layout rewrite."
-    },
-    {
-      "id": "PARITY",
-      "text": "Review baseline against canonical main dec5ec0a9d1fb2fc591029c3b50274f46f208760. Existing Phase 8 intake reconciliation stays in place; no wholesale main merge. Preserve newer Plausible behaviour via exact scoped port only if contract-compatible, otherwise document remaining dependency. Robots and Contact success findings require evidence first; no guessed fix. Production hold stays."
-    },
-    {
-      "id": "VERIFY",
-      "text": "Run scope while editing, meaningful lightweight regression checks and available forms/analytics suites under resource guard. No local build/browser/image-render batches while guard denies. Independent other-provider hunk review; then hosted review build/captures and registry before any handover. No live form submit/payment/provider write or message send without matching authority. External legal/booking/CRM/acceptance gates remain explicit. Resolve the fresh independent review findings within these requests and record source fixes separately from outstanding rendered verification."
-    },
-    {
-      "id": "RECORD",
-      "text": "Record exact implementation status, check results and remaining gates in phase8/REVIEW_CORRECTIONS_2026-11-13.md and revisions/acceptance-2026-11-13.json, with no private email text/access links. Append visual version after hosted evidence, never overwrite previous versions. Commit/push review branch, no production release."
-    },
-    {
-      "id": "REVIEW_LINK",
-      "text": "Provide the private existing HQC version review with a new candidate and done/due checklist. Build-only repair: group adjacent image/caption JSX within existing conditional/map expressions without changing content or layout. Append genuine preview/capture registry evidence; no production release or client send."
-    },
-    {
-      "id": "CAPTURE_RECORD",
-      "text": "Register the unchanged source177b6e202dee86e9703f0a6bbcd746fb5cf26ece/immutable5bf03519 with actual16November desktop/mobile captures for9existing review pages after hosted publication and readback. Update revisions/versions.json, acceptance evidence and factual notes only; do not claim full site QA, provider delivery or client acceptance."
-    },
-    {
-      "id": "N17_SECTIONS",
-      "text": "Remove exactly four whole generic sections on the 15 explicitly listed service slugs only. Keep trust, about, quote, locations and homepage content; preserve controlled sections including Complex seven-step process and existing galleries/image selection. Client evidence stays homepage only; removed homepage carousel stays absent."
-    },
-    {
-      "id": "N17_LEGAL",
-      "text": "Terms vendor references become our booking system, preserving approved meaning including section 5. Privacy suppliers are categories. Preserve legal H1s and pending Last reviewed placeholder."
-    },
-    {
-      "id": "N17_LOGO",
-      "text": "Use existing crisp flat gold header and monogram SVGs with matching intrinsic dimensions. No logo redesign, no asset deletion."
-    },
-    {
-      "id": "N17_REVIEWS",
-      "text": "Reviews page groups six existing homepage reviews exactly as requested plus Andre G under Property & Facilities; use exact source review text, exclude Andre B and Thomas B. Replace held hero intro sentence with exact new Every property is different sentence. Keep other lead, Google link, 4.9/92 badge and no gallery/evidence placeholders."
-    },
-    {
-      "id": "N17_UNIFORMS",
-      "text": "Correct logos on g-assessment and g-service-profile from upper back/sleeve/shoulder to left chest where visible; hidden chest must not produce a back/sleeve logo. Preserve composition, teal and scene. Inspect remaining illustrative uniforms and add exact additional paths only via planning amendment if needed."
-    },
-    {
-      "id": "N17_VERIFY",
-      "text": "Prove preview versus production robots contract without stripping review protections or changing intentional noindex utility pages. Independent hunk review, hosted preview, desktop/mobile QA and fresh captures, append review version preserving comments/history. Record provider, legal-date and client acceptance gates accurately."
-    },
-    {
-      "id": "REVIEW_OLD_COVERAGE",
-      "text": "Register supplementary actual 18 November desktop/mobile captures of the missing17 old-source pages for existing nov13-pedro-audit version, retaining all original objects/hashes and original manifest reference. Record exact committed capture supplement and hosted evidence. Existing website application/source and production remain unchanged."
+      "id": "T23_RECORD",
+      "text": "Record status, checks, holds and evidence in phase8/REVIEW_CORRECTIONS_2026-11-23.md, revisions/acceptance-2026-11-23.json and revisions/versions.json. No private email text, access codes or links. No client send, provider write, live submission or production release."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "REVIEW_OLD_COVERAGE"
+        "T23_SCOPE"
       ],
       "allowDelete": false,
-      "reason": "Operational registry/evidence for old comparison capture coverage only; no website source edit."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/data/phase8-legal.json",
+      "requirements": [
+        "T23_TERMS"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/ControlledLegalPage.astro",
+      "requirements": [
+        "T23_TERMS"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/components/Footer.astro",
+      "requirements": [
+        "T23_VAT"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "public/terms-2026-11.pdf",
+      "requirements": [
+        "T23_PDF"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "scripts/build-terms-pdf.mjs",
+      "requirements": [
+        "T23_PDF"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/pages/request-a-quote.astro",
+      "requirements": [
+        "T23_EARLYSTART"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/lib/form-submission.ts",
+      "requirements": [
+        "T23_EARLYSTART"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "src/pages/api/quote.ts",
+      "requirements": [
+        "T23_EARLYSTART"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "scripts/verify-pedro-audit-corrections.test.mjs",
+      "requirements": [
+        "T23_VERIFY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "scripts/verify-terms-2026-11.test.mjs",
+      "requirements": [
+        "T23_VERIFY"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "scripts/verify-form-submission.test.mjs",
+      "requirements": [
+        "T23_VERIFY",
+        "T23_EARLYSTART"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "phase8/REVIEW_CORRECTIONS_2026-11-23.md",
+      "requirements": [
+        "T23_RECORD"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+    },
+    {
+      "path": "revisions/acceptance-2026-11-23.json",
+      "requirements": [
+        "T23_RECORD"
+      ],
+      "allowDelete": false,
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     },
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "REVIEW_OLD_COVERAGE"
+        "T23_RECORD"
       ],
       "allowDelete": false,
-      "reason": "Operational registry/evidence for old comparison capture coverage only; no website source edit."
-    },
-    {
-      "path": "phase8/REVIEW_COVERAGE_2026-11-18.md",
-      "requirements": [
-        "REVIEW_OLD_COVERAGE"
-      ],
-      "allowDelete": false,
-      "reason": "Operational registry/evidence for old comparison capture coverage only; no website source edit."
+      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
     }
   ],
   "preserve": [
-    "Current d4c296e visual design and later Jack-authorised amendments; audited 028b450 is a separate reference, not a rollback target.",
-    "Every existing photo asset; no file deletions, no logo redesign or header logo switch pending clarification.",
-    "Approved Terms section 5 and Essential Clean steps 4-5; no new legal approval date; no assumed Reviews-page selections.",
-    "Generic-section removals and their page boundary are held; preserve approved closing CTA bands and Complex controlled seven-step process.",
-    "Current Phase 8 form, consent, analytics, redirects, schema, preview no-send guards and production release hold; main parity differences reviewed individually.",
-    "No client send, no provider/credential/budget mutation, no payment or live lead submission under this packet.",
-    "Scope amendment changes only the five phone-text file permissions. Preserve every requirement from planning commit 026203c and all changes in preceding implementation checkpoint; original cumulative visual baseline remains d4c296e."
+    "All content, layout, images, routes, forms, analytics, schema, redirects and review records at ac24c18 / 99efba8e, and every earlier accepted Pedro requirement.",
+    "Privacy Policy unchanged (supplier categories, pending Last reviewed placeholder). Terms s5 approved meaning, s7 booking-system paragraph, s15, s18 and s27 unchanged.",
+    "Header/footer/favicon flat gold logo unchanged; no 3D logo placement without Pedro's choice.",
+    "Phase 8 production hold, environment-specific preview noindex, existing intake reconciliation, no live submissions or provider writes."
   ],
   "verification": [
-    "Scope guard during implementation; exact copy and block/route regression tests plus full diff against baseline and production contract references.",
-    "Resource-guard-compliant local tests; record unrun builds/browser/provider checks honestly.",
-    "Fresh independent Claude review of every hunk and material preserved behaviour.",
-    "Immutable review deployment, dated desktop/mobile capture manifest, hosted review room readback and full revision check before handover; no production release."
+    "npm run check:revision:scope; node --test scripts/verify-terms-2026-11.test.mjs scripts/verify-pedro-audit-corrections.test.mjs; npm run test:forms; npm run test:analytics; npm run test:revisions; npm run build:review (guarded light).",
+    "Independent Codex hunk review; hosted preview desktop/mobile QA and captures; review-room version appended and read back; npm run check:revision before handover."
   ]
 }
