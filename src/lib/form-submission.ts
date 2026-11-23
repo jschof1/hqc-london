@@ -14,7 +14,7 @@ const quoteFields = ['phone', 'postcode', 'service', 'route', 'buyer', 'service_
   'checkout_date', 'inspection_date', 'move_in_date', 'details', 'operating_hours',
   'mobilisation_requirements', 'tupe_context', 'property_type', 'bedrooms', 'bathrooms',
   'email_marketing_consent', 'privacy_consent', 'source_page', 'landing_page', 'referrer', 'utm_source', 'utm_medium',
-  'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'intent'];
+  'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'intent', 'early_start_request'];
 const allowedFields: Record<FormKind, string[]> = {
   quote: quoteFields,
   contact: ['phone', 'postcode', 'service', 'message', 'email_marketing_consent'],
@@ -128,6 +128,8 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
       if (body[field] && !validDate(body[field])) return json({ error: 'Please enter a valid date', field: field === 'required_service_date' ? 'desired_date' : field }, 400);
       body[field] ||= '';
     }
+    // Optional 14-day early-start request: only the checkbox value is forwarded, and only when present.
+    if ('early_start_request' in body && body.early_start_request !== 'yes') delete body.early_start_request;
     body.enquiry_type = body.route === 'commercial' && ['property', 'agency'].includes(body.buyer) ? 'property' : body.route;
     // The existing receiver maps Enquiry Notes from details. Append new context there too.
     body.details = [body.details, ...[
@@ -137,6 +139,7 @@ export async function submitForm(request: Request, env: Environment, kind: FormK
       ['Route', body.route], ['Buyer', body.buyer], ['Service context', body.service_context],
       ['Intent', body.intent], ['Operating hours', body.operating_hours],
       ['Mobilisation requirements', body.mobilisation_requirements], ['Current cleaner / TUPE', body.tupe_context],
+      ['Early start requested within 14-day cancellation period', body.early_start_request],
     ].filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`)].filter(Boolean).join('\n');
     body.source = routedQuote ? 'request_a_quote' : 'website_detailed_quote_page';
   } else if (kind === 'contact' || kind === 'quick-form') {

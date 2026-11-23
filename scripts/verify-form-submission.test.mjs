@@ -365,6 +365,30 @@ test('classification preserves every existing quote field and normalizes metadat
   ])].sort());
 }));
 
+test('14-day early-start request passes through additively; payloads without it are unchanged', async () => capture(async calls => {
+  const input = { ...quote, desired_date: '2026-11-25' };
+  assert.equal((await invoke('quote', input)).status, 200);
+  assert.equal((await invoke('quote', { ...input, early_start_request: 'yes' })).status, 200);
+  assert.equal((await invoke('quote', { ...input, early_start_request: 'forged text' })).status, 200);
+  const [without, withRequest, forged] = calls.map(({ payload }) => payload);
+  assert.equal('early_start_request' in without, false);
+  assert.ok(!without.details.includes('Early start'));
+  assert.equal(withRequest.early_start_request, 'yes');
+  assert.ok(withRequest.details.includes('Early start requested within 14-day cancellation period: yes'));
+  assert.equal('early_start_request' in forged, false, 'only the checkbox value is forwarded');
+  const volatile = ['timestamp', 'submission_id', 'details', 'early_start_request'];
+  const stable = (payload) => Object.fromEntries(Object.entries(payload).filter(([key]) => !volatile.includes(key)));
+  assert.deepEqual(stable(withRequest), stable(without));
+  assert.deepEqual(stable(forged), stable(without));
+  const strip = (payload) => payload.details.replace(/\nSubmission reference:[\s\S]*$/, '');
+  assert.equal(strip(withRequest), `${strip(without)}\nEarly start requested within 14-day cancellation period: yes`);
+  assert.equal(strip(forged), strip(without));
+  const page = await readFile(new URL('../src/pages/request-a-quote.astro', import.meta.url), 'utf8');
+  assert.match(page, /<label id="early-start-field" class="hidden [^"]*">\s*<input class="mt-1" type="checkbox" name="early_start_request" value="yes" disabled \/>\s*<span>If my first clean is within 14 days of booking, I ask High Quality Clean to start the service within my 14-day cancellation period\. I understand that if I cancel after work has started I will pay for the service provided up to that point, and that I lose the right to cancel once the service has been fully performed\.<\/span>/);
+  assert.match(page, /const needsEarlyStart = routeInput\.value === 'residential' && daysAhead <= 14;/);
+  assert.match(page, /earlyStartInput\.disabled = !needsEarlyStart;\s*earlyStartInput\.required = needsEarlyStart;/);
+}));
+
 for (const service of ['never-seen-before', 'Office Cleaning']) {
   test(`residential route with ${service} forwards unconfirmed tags without rejecting intake`, async () => capture(async calls => {
     assert.equal((await invoke('quote', { ...quote, service, property_type: 'flat' })).status, 200);

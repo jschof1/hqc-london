@@ -125,6 +125,10 @@ const routeCards = [
           <input class="mt-1" type="checkbox" name="email_marketing_consent" value="yes" />
           <span>I would like to receive occasional HQC offers and service updates by email. I can unsubscribe at any time.</span>
         </label>
+        <label id="early-start-field" class="hidden mt-4 flex items-start gap-3 text-sm text-ink/70">
+          <input class="mt-1" type="checkbox" name="early_start_request" value="yes" disabled />
+          <span>If my first clean is within 14 days of booking, I ask High Quality Clean to start the service within my 14-day cancellation period. I understand that if I cancel after work has started I will pay for the service provided up to that point, and that I lose the right to cancel once the service has been fully performed.</span>
+        </label>
 
         <div id="form-message" class="mt-6 hidden rounded-lg p-4 text-sm" role="status" aria-live="polite"></div>
         <button id="quote-submit" class="eq-submit mt-6 w-full" type="submit">Submit Your Requirement</button>
@@ -297,6 +301,9 @@ const routeCards = [
   const mobilisation = document.getElementById('mobilisation-field');
   const mobilisationInput = mobilisation?.querySelector<HTMLTextAreaElement>('[name="mobilisation_requirements"]');
   const complexNote = document.getElementById('complex-files-note');
+  const earlyStart = document.getElementById('early-start-field');
+  const earlyStartInput = earlyStart?.querySelector<HTMLInputElement>('[name="early_start_request"]');
+  const desiredDateInput = document.querySelector<HTMLInputElement>('#routed-quote-form [name="desired_date"]');
   const routePanel = document.getElementById('quote-route-panel');
   const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.route-tab'));
   const pageUrl = new URL(window.location.href);
@@ -366,6 +373,18 @@ const routeCards = [
       input.required = isCommercial;
       if (!isCommercial) input.value = '';
     }
+
+    // Home route only: the 14-day early-start request applies when the requested date is within 14 days of today.
+    if (earlyStartInput) {
+      const [year, month, day] = (desiredDateInput?.value ?? '').split('-').map(Number);
+      const now = new Date();
+      const daysAhead = year && month && day ? (Date.UTC(year, month - 1, day) - Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())) / 86_400_000 : Infinity;
+      const needsEarlyStart = routeInput.value === 'residential' && daysAhead <= 14;
+      earlyStart?.classList.toggle('hidden', !needsEarlyStart);
+      earlyStartInput.disabled = !needsEarlyStart;
+      earlyStartInput.required = needsEarlyStart;
+      if (!needsEarlyStart) earlyStartInput.checked = false;
+    }
   }
 
   function setRoute(route: keyof typeof routes, options: { updateUrl?: boolean; track?: boolean; requestedService?: string } = {}) {
@@ -417,6 +436,8 @@ const routeCards = [
     });
   });
   service?.addEventListener('change', updateConditionalFields);
+  desiredDateInput?.addEventListener('change', updateConditionalFields);
+  desiredDateInput?.addEventListener('input', updateConditionalFields);
   const initial = pageUrl.searchParams.get('route');
   const propertyService = ['communal', 'communal-area', 'communal-area-cleaning', 'portfolio', 'void', 'move-in-void'].includes(initialService);
   const propertyBuyer = ['property', 'agency'].includes(pageUrl.searchParams.get('buyer') ?? '');
