@@ -24,7 +24,7 @@ for (const block of blocks) {
     {isPreview && <p class="mt-5 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Staging draft: company details, legal review date and production behavior must be verified before release.</p>}
     <div class="mt-10 utility-legal-chapters text-base leading-7 text-slate">
       {chapters.map((chapter, index) => <section class:list={["utility-legal-chapter", { "utility-legal-preamble": !chapter.heading }]} id={`legal-clause-${index + 1}`}>
-        {chapter.heading && <div class="utility-legal-marker"><h2 class="section-title font-serif text-midnight"><span class="utility-clause-number">{chapter.heading.split(' ')[0]}</span>{' '}{chapter.heading.split(' ').slice(1).join(' ')}</h2></div>}
+        {chapter.heading && <div class="utility-legal-marker"><h2 class="section-title font-serif text-midnight">{/^\d+\.\s/.test(chapter.heading) ? <><span class="utility-clause-number">{chapter.heading.split(' ')[0]}</span>{' '}{chapter.heading.split(' ').slice(1).join(' ')}</> : chapter.heading}</h2></div>}
         <div class="utility-legal-content space-y-5">
       {chapter.blocks.map((block) => (
         block.kind === 'h3' ? <h3 class="pt-4 text-xl font-semibold text-midnight" data-reveal="quick">{block.text}</h3> :
@@ -47,6 +47,7 @@ for (const block of blocks) {
             </ul>
           </div>
         ) :
+        block.kind === 'callout' && block.lines ? <div class="space-y-3 rounded-lg border border-midnight/15 bg-porcelain p-4 font-medium text-midnight">{block.lines.map((line) => <p>{line}</p>)}</div> :
         block.kind === 'callout' ? <p class="rounded-lg border border-midnight/15 bg-porcelain p-4 font-medium text-midnight">{block.text}</p> :
         block.kind === 'table' ? <div class="overflow-x-auto"><table class="min-w-[720px] border-collapse text-left text-sm"><thead><tr>{block.rows[0].map((cell) => <th class="border border-midnight/20 bg-porcelain p-3">{cell}</th>)}</tr></thead><tbody>{block.rows.slice(1).map((row) => <tr>{row.map((cell) => <td class="border border-midnight/20 p-3 align-top">{cell}</td>)}</tr>)}</tbody></table></div> :
         block.text === 'Link: Privacy Policy' ? <p><a class="underline" href="/privacy-policy/">Privacy Policy</a></p> :

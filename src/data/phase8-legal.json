@@ -580,7 +580,7 @@
   "terms": [
     {
       "kind": "p",
-      "text": "Last reviewed: [FINAL LEGAL / PRODUCTION APPROVAL DATE]"
+      "text": "Last updated: 23 November 2026"
     },
     {
       "kind": "p",
@@ -614,6 +614,10 @@
         "Quoted Service means a service requiring manual quotation or assessment.",
         "Commercial Service means a service supplied principally for business, property-management or organisational purposes."
       ]
+    },
+    {
+      "kind": "p",
+      "text": "Your contract with HQC is made up of these Terms and any quotation, booking confirmation or commercial proposal we send you. If they conflict, the specific quotation, confirmation or proposal applies over these general Terms, unless that would remove a right you have by law."
     },
     {
       "kind": "h2",
@@ -666,8 +670,40 @@
       "text": "Where new information materially changes the requirement, HQC may issue a revised quotation."
     },
     {
+      "kind": "p",
+      "text": "A quotation is valid for 30 days from the date we send it. It is based on the information you give us and assumes normal conditions and access. Availability is confirmed only when we confirm your booking."
+    },
+    {
       "kind": "h2",
-      "text": "5. Booking Confirmation"
+      "text": "5. HQC's Service Commitment"
+    },
+    {
+      "kind": "h3",
+      "text": "Our commitment"
+    },
+    {
+      "kind": "p",
+      "text": "HQC will carry out the agreed service with reasonable care and skill, using methods suitable for the surfaces and items within the agreed scope."
+    },
+    {
+      "kind": "h3",
+      "text": "If something has been missed"
+    },
+    {
+      "kind": "p",
+      "text": "If an area within the agreed scope has not been cleaned to a reasonable standard, please tell us within 48 hours of the visit, with a short description and photographs where possible. Where we agree that the issue falls within the agreed scope, we will return to put it right at no extra cost, at the earliest suitable time."
+    },
+    {
+      "kind": "p",
+      "text": "If a re-clean is not possible within a reasonable time, or does not resolve the issue, you may be entitled to an appropriate price reduction."
+    },
+    {
+      "kind": "p",
+      "text": "The 48-hour window is our preferred reporting time, so that we can check the issue while it is fresh. It does not remove your statutory rights or any legal time limit."
+    },
+    {
+      "kind": "h2",
+      "text": "6. Booking Confirmation"
     },
     {
       "kind": "p",
@@ -683,7 +719,7 @@
     },
     {
       "kind": "h2",
-      "text": "6. Pricing and VAT"
+      "text": "7. Pricing and VAT"
     },
     {
       "kind": "p",
@@ -699,7 +735,7 @@
     },
     {
       "kind": "h2",
-      "text": "7. Payment"
+      "text": "8. Payment"
     },
     {
       "kind": "p",
@@ -718,8 +754,48 @@
       "text": "HQC may withhold confirmation or suspend future work where amounts that are properly due remain unpaid, subject to applicable law and contract terms."
     },
     {
+      "kind": "h3",
+      "text": "How you pay"
+    },
+    {
+      "kind": "p",
+      "text": "We take card payments through Stripe, our card payment provider, which is our preferred method. We also accept bank transfer by arrangement."
+    },
+    {
+      "kind": "h3",
+      "text": "When you pay"
+    },
+    {
+      "kind": "p",
+      "text": "We will tell you when payment is due in your quotation or booking confirmation. For some bookings, such as one-off, larger or specialist cleans, we may ask for full or part payment before work begins. If so, we will tell you the amount and when it is due before your booking is confirmed. Before a visit, we may place a temporary hold on your card to check that it can be used. A hold is not a charge."
+    },
+    {
+      "kind": "h3",
+      "text": "If a payment fails"
+    },
+    {
+      "kind": "p",
+      "text": "If we cannot take payment or confirm your card, we will contact you so that you can update your card details or pay another way. If payment cannot be confirmed before a visit, we may need to reschedule it. If an amount remains unpaid, we may pause future visits until it is resolved."
+    },
+    {
+      "kind": "h3",
+      "text": "Refunds"
+    },
+    {
+      "kind": "p",
+      "text": "Where a refund is due, including when you cancel under §11, we will make it to your original payment method within 14 days."
+    },
+    {
+      "kind": "h3",
+      "text": "Prices and VAT"
+    },
+    {
+      "kind": "p",
+      "text": "HQC is VAT-registered. Prices for consumers include VAT. Prices for business clients may be quoted excluding VAT, and will say so. Business clients receive a VAT invoice."
+    },
+    {
       "kind": "h2",
-      "text": "8. Essential Clean™ Recurring Introductory Offer"
+      "text": "9. Essential Clean™ Recurring Introductory Offer"
     },
     {
       "kind": "callout",
@@ -761,7 +837,7 @@
     },
     {
       "kind": "p",
-      "text": "Where a client repeatedly cancels or suspends enough visits to materially defeat the agreed recurring arrangement, HQC may review the pattern and, after considering the circumstances, treat the arrangement as having ended early."
+      "text": "If three or more consecutive scheduled visits are cancelled or suspended by you during the minimum term, other than for reasons outside your reasonable control, we may write to you to treat the arrangement as ended early. In that case the discount balance may apply."
     },
     {
       "kind": "h3",
@@ -815,8 +891,20 @@
       "text": "A different position may apply where termination follows a material client breach and the contract lawfully provides for that outcome."
     },
     {
+      "kind": "p",
+      "text": "The discount balance will not be charged where you end the arrangement because HQC has materially failed to provide the agreed service, and has not put it right after you told us about it."
+    },
+    {
+      "kind": "h3",
+      "text": "Price changes for recurring clients"
+    },
+    {
+      "kind": "p",
+      "text": "Your price is fixed for the three-month minimum term. After that, we may change the price of your recurring service by giving you at least 30 days' written notice. If you do not accept the new price, you may end the arrangement without charge before the new price takes effect."
+    },
+    {
       "kind": "h2",
-      "text": "9. Commercial and Other Recurring Agreements"
+      "text": "10. Commercial and Other Recurring Agreements"
     },
     {
       "kind": "p",
@@ -832,31 +920,42 @@
     },
     {
       "kind": "h2",
-      "text": "10. Consumer Statutory Cancellation Rights"
+      "text": "11. Your 14-Day Right to Cancel"
     },
     {
       "kind": "p",
-      "text": "Where a consumer enters into a qualifying distance or off-premises service contract, statutory cancellation rights may apply."
+      "text": "If you are a consumer and you book a service online, by phone or email, or away from our business premises, you have the right to cancel the contract within 14 days without giving a reason. The 14 days start on the day the contract is made, which is the day we confirm your booking."
     },
     {
       "kind": "p",
-      "text": "These statutory rights operate separately from HQC's ordinary appointment-cancellation policy below."
+      "text": "To cancel, tell us clearly before the 14 days end, for example by email to support@highqualityclean.co.uk or by phone on 020 8870 3925. You may use the model cancellation form below, but you do not have to."
     },
     {
       "kind": "p",
-      "text": "Where a consumer asks HQC to begin providing a service during an applicable statutory cancellation period, HQC may require the consumer's express request and any acknowledgement required by law."
+      "text": "If you cancel within the 14 days and no service has been provided, we will refund any payment you have made within 14 days of your cancellation, using the same payment method."
     },
     {
       "kind": "p",
-      "text": "Where permitted by law, a consumer who later cancels after performance has begun may be required to pay a proportionate amount for services already supplied."
+      "text": "If you ask us to start the service within the 14-day period and then cancel, you must pay a proportionate amount for the service provided up to the time you tell us you are cancelling. If the service has been fully performed at your request within the 14 days, you lose the right to cancel for that service."
     },
     {
       "kind": "p",
-      "text": "Nothing in the HQC appointment-cancellation matrix overrides mandatory consumer rights."
+      "text": "This statutory right is separate from our appointment cancellation and rescheduling policy in §12."
+    },
+    {
+      "kind": "h3",
+      "text": "Model cancellation form"
+    },
+    {
+      "kind": "callout",
+      "lines": [
+        "To: High Quality Clean Ltd, 9 Swanage Road, London SW18 2DZ, support@highqualityclean.co.uk",
+        "I hereby give notice that I cancel my contract for the supply of the following service: [service]. Ordered on: [date]. Name: [name]. Address: [address]. Date: [date]."
+      ]
     },
     {
       "kind": "h2",
-      "text": "11. HQC Appointment Cancellation & Rescheduling Matrix"
+      "text": "12. HQC Appointment Cancellation & Rescheduling Matrix"
     },
     {
       "kind": "p",
@@ -867,51 +966,43 @@
       "rows": [
         [
           "Situation",
+          "Notice before scheduled start",
+          "Charge"
+        ],
+        [
+          "You cancel or reschedule",
+          "More than 48 hours",
+          "£0"
+        ],
+        [
+          "You cancel or reschedule",
+          "24 to 48 hours",
+          "25% of the booked service price"
+        ],
+        [
+          "You cancel or reschedule",
+          "Less than 24 hours",
+          "50% of the booked service price"
+        ],
+        [
+          "You cancel after the team has set off, or the team cannot gain access as agreed",
+          "On the day",
+          "100% of the booked service price"
+        ]
+      ]
+    },
+    {
+      "kind": "p",
+      "text": "These charges reflect the cleaner time we have reserved and usually cannot reallocate at short notice. If we are able to reallocate the time, we will reduce or waive the charge. Statutory cancellation rights in §11 are not affected."
+    },
+    {
+      "kind": "table",
+      "rows": [
+        [
+          "Situation",
           "Notice / trigger",
           "Normal treatment",
           "Maximum normal charge"
-        ],
-        [
-          "Customer cancels",
-          "More than 48 hours before scheduled start",
-          "Cancellation accepted; capacity released",
-          "£0"
-        ],
-        [
-          "Customer reschedules",
-          "More than 48 hours before scheduled start",
-          "Move to a suitable available date",
-          "£0"
-        ],
-        [
-          "Customer cancels",
-          "24-48 hours before scheduled start",
-          "Late cancellation",
-          "Up to 50% of booked service price"
-        ],
-        [
-          "Customer reschedules",
-          "24-48 hours before scheduled start",
-          "Late reschedule; new date subject to availability",
-          "Up to 50% of booked service price"
-        ],
-        [
-          "Customer cancels or reschedules",
-          "Less than 24 hours before scheduled start",
-          "Very late cancellation/reschedule",
-          "Up to 100% of booked service price"
-        ],
-        [
-          "Same-day cancellation after dispatch",
-          "Team has been dispatched",
-          "Attendance/capacity treated as committed",
-          "Up to 100% of booked service price"
-        ],
-        [
-          "Failed access",
-          "Team attends but cannot gain access because agreed client access fails",
-          "Failed attendance",
-          "Up to 100% of booked service price"
         ],
         [
           "Substantial client-caused access delay",
@@ -975,7 +1066,7 @@
     },
     {
       "kind": "h2",
-      "text": "12. HQC Cancellation or Material Rescheduling"
+      "text": "13. HQC Cancellation or Material Rescheduling"
     },
     {
       "kind": "p",
@@ -1003,7 +1094,7 @@
     },
     {
       "kind": "h2",
-      "text": "13. Project and Assessment-Led Cancellation Terms"
+      "text": "14. Project and Assessment-Led Cancellation Terms"
     },
     {
       "kind": "p",
@@ -1037,7 +1128,7 @@
     },
     {
       "kind": "h2",
-      "text": "14. Access and Aborted Visits"
+      "text": "15. Access and Aborted Visits"
     },
     {
       "kind": "p",
@@ -1053,7 +1144,43 @@
     },
     {
       "kind": "h2",
-      "text": "15. Safe Working Conditions"
+      "text": "16. Keys, Access Codes and Alarms"
+    },
+    {
+      "kind": "h3",
+      "text": "Keys and codes held by HQC"
+    },
+    {
+      "kind": "p",
+      "text": "Where you give us keys, fobs or access codes, we will record who holds them, store keys securely and unlabelled with your address, and share codes only with the team members attending. We will return keys or confirm their destruction when the arrangement ends, or sooner if you ask."
+    },
+    {
+      "kind": "h3",
+      "text": "Lost keys"
+    },
+    {
+      "kind": "p",
+      "text": "If a key or fob in our care is lost through our fault, we will tell you promptly and pay the reasonable cost of replacing it, up to £500 per incident."
+    },
+    {
+      "kind": "h3",
+      "text": "Alarms"
+    },
+    {
+      "kind": "p",
+      "text": "Please give us accurate alarm instructions and tell us about any change. We will pay any reasonable call-out charge caused by our failure to follow the instructions you gave us. We are not responsible for call-outs caused by incorrect or out-of-date instructions, or by a faulty system."
+    },
+    {
+      "kind": "h3",
+      "text": "Written protocol"
+    },
+    {
+      "kind": "p",
+      "text": "For complex, executive and commercial clients, we will agree the key-holding and access arrangements in writing before the first visit."
+    },
+    {
+      "kind": "h2",
+      "text": "17. Safe Working Conditions"
     },
     {
       "kind": "p",
@@ -1065,7 +1192,7 @@
     },
     {
       "kind": "h2",
-      "text": "16. Property Condition and Variations"
+      "text": "18. Property Condition and Variations"
     },
     {
       "kind": "p",
@@ -1077,7 +1204,7 @@
     },
     {
       "kind": "h2",
-      "text": "17. Specialist and Sensitive Items"
+      "text": "19. Specialist and Sensitive Items"
     },
     {
       "kind": "p",
@@ -1089,7 +1216,7 @@
     },
     {
       "kind": "h2",
-      "text": "18. Appliances, Windows, Carpets and Other Add-Ons"
+      "text": "20. Appliances, Windows, Carpets and Other Add-Ons"
     },
     {
       "kind": "p",
@@ -1112,7 +1239,7 @@
     },
     {
       "kind": "h2",
-      "text": "19. End of Tenancy™"
+      "text": "21. End of Tenancy™"
     },
     {
       "kind": "p",
@@ -1128,7 +1255,7 @@
     },
     {
       "kind": "h2",
-      "text": "20. Post-Construction™"
+      "text": "22. Post-Construction™"
     },
     {
       "kind": "p",
@@ -1144,7 +1271,7 @@
     },
     {
       "kind": "h2",
-      "text": "21. Recurring and Commercial Services"
+      "text": "23. Recurring and Commercial Services"
     },
     {
       "kind": "p",
@@ -1156,7 +1283,7 @@
     },
     {
       "kind": "h2",
-      "text": "22. Team Allocation and Subcontractors"
+      "text": "24. Team Allocation and Subcontractors"
     },
     {
       "kind": "p",
@@ -1168,7 +1295,7 @@
     },
     {
       "kind": "h2",
-      "text": "23. Service Timing"
+      "text": "25. Service Timing"
     },
     {
       "kind": "p",
@@ -1184,7 +1311,7 @@
     },
     {
       "kind": "h2",
-      "text": "24. Quality, Complaints and Remedial Action"
+      "text": "26. Quality, Complaints and Remedial Action"
     },
     {
       "kind": "p",
@@ -1203,8 +1330,12 @@
       "text": "An operational request to report an issue promptly does not remove any statutory rights or legal time limit."
     },
     {
+      "kind": "p",
+      "text": "We aim to acknowledge complaints within 2 working days and respond fully within 10 working days. If we cannot resolve your complaint, we will tell you in writing and explain any alternative dispute resolution options available. You can also get free advice from Citizens Advice."
+    },
+    {
       "kind": "h2",
-      "text": "25. Results and Limitations"
+      "text": "27. Results and Limitations"
     },
     {
       "kind": "p",
@@ -1216,15 +1347,55 @@
     },
     {
       "kind": "h2",
-      "text": "26. Damage and Pre-Existing Conditions"
+      "text": "28. Damage, Valuables and Photos"
+    },
+    {
+      "kind": "h3",
+      "text": "Damage caused by HQC"
     },
     {
       "kind": "p",
-      "text": "Where damage is reported, HQC will investigate the circumstances."
+      "text": "If we damage your property or belongings through our negligence, we will repair it or pay the reasonable cost of repair. Where repair is not possible, we will pay a fair replacement value, taking account of the item's age and condition."
+    },
+    {
+      "kind": "h3",
+      "text": "Reporting damage"
     },
     {
       "kind": "p",
-      "text": "Clients should notify HQC promptly and preserve relevant evidence."
+      "text": "Please tell us within 48 hours of the visit, with photographs, and keep the item or affected area as it is until we have inspected it, where reasonable. Reporting promptly helps us investigate; it does not remove your statutory rights."
+    },
+    {
+      "kind": "h3",
+      "text": "What we are not responsible for"
+    },
+    {
+      "kind": "p",
+      "text": "We are not responsible for:"
+    },
+    {
+      "kind": "ul",
+      "items": [
+        "damage caused by an existing defect, wear or faulty installation that we could not reasonably have identified;",
+        "items that are loose, unstable or not fixed as they should be;",
+        "the result of following a specific instruction you gave us, where we told you of the risk beforehand."
+      ]
+    },
+    {
+      "kind": "h3",
+      "text": "Valuables"
+    },
+    {
+      "kind": "p",
+      "text": "Please put away cash, jewellery and small valuable items before the visit, and tell us about any fragile, high-value or sentimental items in the areas we are cleaning."
+    },
+    {
+      "kind": "h3",
+      "text": "Photographs for quality records"
+    },
+    {
+      "kind": "p",
+      "text": "Our team may take dated photographs of the areas cleaned, before and after, to record the condition and the work done. These are kept securely for quality and dispute purposes only. We never publish photographs of your home without your written consent."
     },
     {
       "kind": "p",
@@ -1232,7 +1403,7 @@
     },
     {
       "kind": "h2",
-      "text": "27. Insurance"
+      "text": "29. Insurance"
     },
     {
       "kind": "p",
@@ -1240,7 +1411,7 @@
     },
     {
       "kind": "h2",
-      "text": "28. Force Majeure and Events Beyond Reasonable Control"
+      "text": "30. Force Majeure and Events Beyond Reasonable Control"
     },
     {
       "kind": "p",
@@ -1252,7 +1423,7 @@
     },
     {
       "kind": "h2",
-      "text": "29. Personal Information"
+      "text": "31. Personal Information"
     },
     {
       "kind": "p",
@@ -1264,7 +1435,7 @@
     },
     {
       "kind": "h2",
-      "text": "30. Intellectual Property"
+      "text": "32. Intellectual Property"
     },
     {
       "kind": "p",
@@ -1276,7 +1447,7 @@
     },
     {
       "kind": "h2",
-      "text": "31. Changes to These Terms"
+      "text": "33. Changes to These Terms"
     },
     {
       "kind": "p",
@@ -1287,8 +1458,12 @@
       "text": "Publishing updated website Terms does not retrospectively rewrite an existing contract where the law requires agreement."
     },
     {
+      "kind": "p",
+      "text": "Your booking confirmation email links to the version of these Terms that applies to your booking. Each version is dated and kept available at a fixed address. Please save or print a copy for your records, or ask us and we will email you one."
+    },
+    {
       "kind": "h2",
-      "text": "32. Governing Law"
+      "text": "34. Governing Law"
     },
     {
       "kind": "p",
@@ -1300,15 +1475,19 @@
     },
     {
       "kind": "h2",
-      "text": "33. Contact"
+      "text": "35. Contact"
     },
     {
       "kind": "p",
-      "text": "High Quality Clean Ltd"
+      "text": "High Quality Clean Ltd, registered in England and Wales, company number 13213121"
     },
     {
       "kind": "p",
-      "text": "Email: support@highqualityclean.co.uk"
+      "text": "Registered office: 9 Swanage Road, London SW18 2DZ"
+    },
+    {
+      "kind": "p",
+      "text": "VAT registration number: 519 1014 22"
     },
     {
       "kind": "p",
@@ -1316,7 +1495,51 @@
     },
     {
       "kind": "p",
-      "text": "Registered office: 9 Swanage Road, London, England, SW18 2DZ"
+      "text": "Bookings, changes, cancellations and complaints: support@highqualityclean.co.uk"
+    },
+    {
+      "kind": "p",
+      "text": "Personal data and privacy requests: privacy@highqualityclean.co.uk"
+    },
+    {
+      "kind": "h2",
+      "text": "Commercial Clients Schedule"
+    },
+    {
+      "kind": "p",
+      "text": "This schedule applies only to Commercial Services (as defined in §1)."
+    },
+    {
+      "kind": "h3",
+      "text": "C1. Liability"
+    },
+    {
+      "kind": "p",
+      "text": "HQC's total liability to a commercial client arising from any service is limited to the greater of the fees paid or payable for that service in the 12 months before the claim, or £1 million. HQC is not liable for loss of profit, loss of business, loss of revenue or any indirect or consequential loss. Nothing limits liability for death or personal injury caused by negligence, fraud, or anything else that cannot be limited by law."
+    },
+    {
+      "kind": "h3",
+      "text": "C2. Payment"
+    },
+    {
+      "kind": "p",
+      "text": "Invoices are payable within 30 days of the invoice date unless the proposal states otherwise. HQC may charge interest and compensation on late payments under the Late Payment of Commercial Debts (Interest) Act 1998."
+    },
+    {
+      "kind": "h3",
+      "text": "C3. Non-solicitation"
+    },
+    {
+      "kind": "p",
+      "text": "During the agreement and for 12 months after it ends, the client will not directly engage any HQC team member who worked at the client's premises in the previous 12 months, without HQC's written agreement. If this happens, the client will pay HQC a fee equal to 20% of that team member's annual earnings from HQC, as a reasonable estimate of HQC's recruitment and training costs."
+    },
+    {
+      "kind": "h3",
+      "text": "C4. Term and price review"
+    },
+    {
+      "kind": "p",
+      "text": "The minimum term, notice period and any annual price review are as stated in the proposal. Where a price review applies, HQC will give at least 30 days' written notice."
     }
   ]
 }

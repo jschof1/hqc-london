@@ -80,12 +80,15 @@ test('category suppliers and booking-system wording preserve the approved confir
   const before = original('src/data/phase8-legal.json');
   const section5 = (blocks) => blocks.find((block) => block.text?.startsWith('A booking becomes confirmed only when HQC has reviewed'));
   assert.deepEqual(section5(legal.terms), { ...section5(before.terms), text: section5(before.terms).text.replace('creating an Automaid record', 'creating a record in our booking system') });
-  assert.ok(!/Automaid|Launch27|GoHighLevel|Stripe|QuickBooks|Google Workspace/.test(JSON.stringify(legal)));
+  assert.ok(!/Automaid|Launch27|GoHighLevel|QuickBooks|Google Workspace/.test(JSON.stringify(legal)));
+  // Pedro's 20 Nov 2026 Terms amendments name Stripe in the Terms payment section only; Privacy keeps supplier categories.
+  assert.ok(!/Stripe/.test(JSON.stringify(legal.privacy)));
+  assert.deepEqual(JSON.stringify(legal.terms).match(/Stripe/g), ['Stripe']);
   const supplierCategories = legal.privacy.find((block) => block.kind === 'ul' && block.items.includes('booking and scheduling software providers;'));
   assert.deepEqual(supplierCategories.items, ['CRM and enquiry management providers;', 'booking and scheduling software providers;', 'payment processing providers;', 'accounting software providers;', 'business communications providers;', 'website and infrastructure providers.']);
   assert.ok(JSON.stringify(legal).includes('[FINAL LEGAL / PRODUCTION APPROVAL DATE]'));
   assert.ok(JSON.stringify(legal.privacy).includes('privacy@highqualityclean.co.uk'));
-  assert.ok(JSON.stringify(legal.terms).includes('Email: support@highqualityclean.co.uk'));
+  assert.ok(JSON.stringify(legal.terms).includes('Bookings, changes, cancellations and complaints: support@highqualityclean.co.uk'));
   assert.ok(JSON.stringify(legal.terms).includes('Our booking system records booking requests and payment details. Recording payment details does not by itself mean that payment has been taken. HQC decides whether a deposit or payment is required for the service and when it is collected, and will confirm the applicable payment terms in the quotation or booking confirmation.'));
   assert.deepEqual(section('essential-clean-london', 'What Happens Next'), original('src/data/phase8-copy.json')['essential-clean-london'].sections.find((s) => s.heading === 'What Happens Next'));
   assert.ok(!read('src/pages/book-essential-clean.astro').includes('A 50% deposit on bookings over £400'));
