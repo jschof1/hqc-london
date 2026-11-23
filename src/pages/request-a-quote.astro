@@ -465,6 +465,8 @@ const routeCards = [
   const form = document.getElementById('routed-quote-form') as HTMLFormElement | null;
   const message = document.getElementById('form-message');
   const submit = document.getElementById('quote-submit') as HTMLButtonElement | null;
+  // With JavaScript, the submit handler refreshes the early-start box before running validation itself.
+  if (form) form.noValidate = true;
   pageUrl.searchParams.forEach((value, key) => {
     const alreadyCaptured = Array.from(form?.elements ?? []).some((element) => element instanceof HTMLInputElement && element.name === key);
     if (!key.startsWith('utm_') || alreadyCaptured) return;

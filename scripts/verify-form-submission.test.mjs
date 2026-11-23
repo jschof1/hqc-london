@@ -497,6 +497,17 @@ test('submit handler re-checks the early-start box when the London date changes 
   assert.equal(fetches.length, 2);
   assert.equal('early_start_request' in fetches[1], false);
   assert.deepEqual({ ...checkbox, hidden: classes.has('hidden') }, { disabled: true, required: false, checked: false, hidden: true });
+  // An unticked, required box for today must not block the quote once today becomes yesterday:
+  // native validation is deferred to the handler so eligibility is refreshed first.
+  assert.match(page, /if \(form\) form\.noValidate = true;/);
+  dateInput.value = '2026-03-31';
+  clock = Date.parse('2026-03-31T22:59:00Z');
+  context.updateEarlyStart();
+  assert.deepEqual({ required: checkbox.required, checked: checkbox.checked }, { required: true, checked: false });
+  clock = Date.parse('2026-03-31T23:01:00Z');
+  await handler.call(form, { preventDefault() {} });
+  assert.equal(fetches.length, 3, 'expired unticked box no longer blocks the enquiry');
+  assert.equal('early_start_request' in fetches[2], false);
 });
 
 test('quote page early-start checkbox follows the home route and London date window without touching other fields', async () => {
