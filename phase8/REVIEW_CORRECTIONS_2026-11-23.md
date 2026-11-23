@@ -2,7 +2,7 @@
 
 Source request: the client's 20 November final Terms clause amendments (private evidence `hqc-review-2026-11-23`). Earlier 12, 13 and 17 November requirements remain cumulative at `ac24c18` / `99efba8e`.
 
-## Implemented (source `31370b8`, preview `https://6da7ecde.hqc-london.pages.dev`)
+## Implemented (final source `2aaba22`, preview `https://6b694c82.hqc-london.pages.dev`)
 
 - Terms: every item in the client's implementation checklist, applied verbatim. New sections are 5 (service commitment and re-clean, 48 hours), 11 (14-day right to cancel and model form), 16 (keys, codes and alarms, £500) and 28 (damage, valuables and photos).
 - Terms: the section 8 additions, the fixed cancellation tiers in section 12, and payment, VAT and quotation wording in sections 4 and 7.
@@ -17,7 +17,7 @@ Source request: the client's 20 November final Terms clause amendments (private 
 
 - Codex review 1 (FAIL): past dates triggered the box; date changes cleared frequency; the server accepted ineligible values; the test asserted source text; the PDF generator could overwrite the dated copy. All fixed in `a2f64b7`.
 - Codex re-check 2 (FAIL): eligibility went stale across London midnight; malformed values returned 400; the PDF write was not exclusive. All fixed in `31370b8`, with behaviour tests.
-- Codex re-check 3: see the acceptance record.
+- Codex re-check 3 (PASS-WITH-FIXES): native validation could block an expired unticked box after midnight. Fixed in `2aaba22` (JS `noValidate`, handler validates after refreshing eligibility; no-JS validation retained). Final preview `https://6b694c82.hqc-london.pages.dev`, version `nov23-pedro-terms-v2`.
 
 ## Verification
 

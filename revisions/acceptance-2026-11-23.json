@@ -3,8 +3,8 @@
   "date": "2026-11-23",
   "sourceEvidence": "private:hqc-review-2026-11-23/request.txt",
   "baseline": "4751e5b797e8b46b1121e565aa933335ca52a63b",
-  "sourceCommit": "31370b887822ab7ee955ac74710101ee7bde9b8f",
-  "immutableDeploymentUrl": "https://6da7ecde.hqc-london.pages.dev",
+  "sourceCommit": "2aaba2273860d383295e4dddac46aa4ffb66f866",
+  "immutableDeploymentUrl": "https://6b694c82.hqc-london.pages.dev",
   "productionReleased": false,
   "requirements": [
     {
@@ -25,7 +25,7 @@
     {
       "id": "T23_EARLYSTART",
       "status": "hosted-preview-pass",
-      "evidence": "Client tick-box text shown and required only on home route for London dates today..today+14; hidden for empty, past, day 15+, and non-home routes; frequency selection preserved; submit-time recheck; server forwards only exact yes on eligible home quotes, otherwise ignores silently. No live submission made."
+      "evidence": "Client tick-box text shown and required only on home route for London dates today..today+14; hidden for empty, past, day 15+, and non-home routes; frequency selection preserved; submit-time recheck; server forwards only exact yes on eligible home quotes, otherwise ignores silently. No live submission made. JS sets noValidate and the handler refreshes eligibility before reportValidity; no-JS native validation retained."
     },
     {
       "id": "T23_VERIFY",
@@ -39,10 +39,11 @@
     }
   ],
   "checks": {
-    "browserQA": "Claude QA agent: 52 fresh captures over 26 pages at 1440/390 of 6da7ecde; criteria pass. Section 12 tables scroll sideways on mobile, same pattern as the previous approved matrix (not stacked); unchanged behaviour, not redesigned.",
+    "browserQA": "v2 on 6b694c82: native and early-start validation, ticked payload (aborted, not sent), commercial validation, no-JS validation all PASS at 1440/390; 52 captures, 50 byte-identical to v1, 2 anti-aliasing only. Section 12 tables scroll sideways on mobile, same pattern as the previously approved matrix.",
     "regression": "Homepage, deep cleaning and contact match 99efba8e above the footer at desktop (0 differing pixels); privacy text identical.",
-    "versionReview": "Version nov23-pedro-terms appended at review commit 4299aea; review Worker version 48ead122 (rollback 27a9bdd9). Hosted readback 23 Nov: manifest identical to committed, all 26 earlier versions unchanged, 52/52 new capture hashes match, photo selections and comments APIs served. Pre-deploy API backup was missed; post-deploy backups held privately. Deploy changed static assets only.",
-    "production": "Not released. Phase 8 production hold unchanged."
+    "versionReview": "Versions nov23-pedro-terms (review 4299aea, Worker 48ead122) and nov23-pedro-terms-v2 (review c82fe49, Worker b6cd19d6, rollback 48ead122) appended. Hosted readback after each deploy: manifest identical to committed, earlier versions unchanged (28 total), 52/52 new hashes match, photo selections unchanged. Pre-deploy API backups were not taken; post-deploy backups held privately; deploys changed static assets only.",
+    "production": "Not released. Phase 8 production hold unchanged.",
+    "sourceReview": "Three Codex reviews: FAIL (fixed a2f64b7), FAIL (fixed 31370b8), PASS-WITH-FIXES (fixed 2aaba22 with regression test). No open findings."
   },
   "held": [
     "s15, s18 and s27 (insurance) pending the client's insurance renewal confirmation",
@@ -54,13 +55,14 @@
   "nextAction": "Jack reviews the comparison and the draft message; client signs off the Terms comparison and answers the three questions; production release only through protected main after Phase 8 gates.",
   "owner": "Jack and current implementation thread; client supplies sign-off.",
   "captureManifest": {
-    "commit": "4299aeabec611cea13c16c56d17b7b8a3ec67270",
+    "commit": "c82fe49180cb9b1019aeba7aada797ef0adc9273",
     "path": "tools/photo-review/public/versions/manifest.json"
   },
-  "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov17-pedro-followup-v2&after=nov23-pedro-terms#compare",
+  "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov17-pedro-followup-v2&after=nov23-pedro-terms-v2#compare",
   "previousCandidate": {
-    "sourceCommit": "ac24c182d7af8b76c65159701b3a06b1af0ead5e",
-    "immutableDeploymentUrl": "https://99efba8e.hqc-london.pages.dev",
-    "versionId": "nov17-pedro-followup-v2"
+    "sourceCommit": "31370b887822ab7ee955ac74710101ee7bde9b8f",
+    "immutableDeploymentUrl": "https://6da7ecde.hqc-london.pages.dev",
+    "versionId": "nov23-pedro-terms",
+    "result": "Codex re-check 3 PASS-WITH-FIXES: native validation could block an expired unticked early-start box after London midnight. Fixed in 2aaba22; retained as immutable intermediate evidence."
   }
 }
