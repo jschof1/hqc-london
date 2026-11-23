@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-23",
+  "sourceEvidence": "private:hqc-review-2026-11-23/request.txt",
+  "baseline": "4751e5b797e8b46b1121e565aa933335ca52a63b",
+  "sourceCommit": "31370b887822ab7ee955ac74710101ee7bde9b8f",
+  "immutableDeploymentUrl": "https://6da7ecde.hqc-london.pages.dev",
+  "productionReleased": false,
+  "requirements": [
+    {
+      "id": "T23_TERMS",
+      "status": "hosted-preview-pass",
+      "evidence": "Every item of the client's 20 Nov implementation checklist applied verbatim apart from renumbered cross-references; sections 1-35 sequential plus Commercial Clients Schedule; Last updated: 23 November 2026 on Terms only. Old s15, s18, s27 byte-identical apart from heading numbers. Privacy unchanged. Independent Codex review confirmed wording, numbering and holds."
+    },
+    {
+      "id": "T23_VAT",
+      "status": "hosted-preview-pass",
+      "evidence": "Footer shows VAT registration number in the existing address style at 1440 and 390; contact section lists it."
+    },
+    {
+      "id": "T23_PDF",
+      "status": "hosted-preview-pass",
+      "evidence": "/terms-2026-11.pdf served as application/pdf, 11 pages, byte-identical to committed file (sha256 a0081e12...). Generator refuses to overwrite an existing edition."
+    },
+    {
+      "id": "T23_EARLYSTART",
+      "status": "hosted-preview-pass",
+      "evidence": "Client tick-box text shown and required only on home route for London dates today..today+14; hidden for empty, past, day 15+, and non-home routes; frequency selection preserved; submit-time recheck; server forwards only exact yes on eligible home quotes, otherwise ignores silently. No live submission made."
+    },
+    {
+      "id": "T23_VERIFY",
+      "status": "pass",
+      "evidence": "Scope, Terms/audit 36/36, forms 42/42+1/1, analytics 2/2, revisions 18/18, build:review. Two Codex review rounds found early-start defects, all fixed; see REVIEW_CORRECTIONS_2026-11-23.md."
+    },
+    {
+      "id": "T23_RECORD",
+      "status": "pass",
+      "evidence": "This record, phase8/REVIEW_CORRECTIONS_2026-11-23.md and appended visual version nov23-pedro-terms."
+    }
+  ],
+  "checks": {
+    "browserQA": "Claude QA agent: 52 fresh captures over 26 pages at 1440/390 of 6da7ecde; criteria pass. Section 12 tables scroll sideways on mobile, same pattern as the previous approved matrix (not stacked); unchanged behaviour, not redesigned.",
+    "regression": "Homepage, deep cleaning and contact match 99efba8e above the footer at desktop (0 differing pixels); privacy text identical.",
+    "versionReview": "Version nov23-pedro-terms appended at review commit 4299aea; review Worker version 48ead122 (rollback 27a9bdd9). Hosted readback 23 Nov: manifest identical to committed, all 26 earlier versions unchanged, 52/52 new capture hashes match, photo selections and comments APIs served. Pre-deploy API backup was missed; post-deploy backups held privately. Deploy changed static assets only.",
+    "production": "Not released. Phase 8 production hold unchanged."
+  },
+  "held": [
+    "s15, s18 and s27 (insurance) pending the client's insurance renewal confirmation",
+    "Privacy Last reviewed date wording",
+    "Client sign-off of the Terms comparison and any solicitor review",
+    "Questions for the client: old 'A quotation may have an expiry date' bullet beside new 30-day validity; added one-line scope sentence above the commercial schedule; existing section 12 reasonably-incurred-loss intro above fixed charges",
+    "Direct forms/CRM, booking/payment, redirect and pop-up evidence, and the client's final acceptance before any production release"
+  ],
+  "nextAction": "Jack reviews the comparison and the draft message; client signs off the Terms comparison and answers the three questions; production release only through protected main after Phase 8 gates.",
+  "owner": "Jack and current implementation thread; client supplies sign-off.",
+  "captureManifest": {
+    "commit": "4299aeabec611cea13c16c56d17b7b8a3ec67270",
+    "path": "tools/photo-review/public/versions/manifest.json"
+  },
+  "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov17-pedro-followup-v2&after=nov23-pedro-terms#compare",
+  "previousCandidate": {
+    "sourceCommit": "ac24c182d7af8b76c65159701b3a06b1af0ead5e",
+    "immutableDeploymentUrl": "https://99efba8e.hqc-london.pages.dev",
+    "versionId": "nov17-pedro-followup-v2"
+  }
+}
