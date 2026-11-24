@@ -322,6 +322,7 @@
         "payment processing;",
         "accounting;",
         "email and business communications;",
+        "messaging services (WhatsApp);",
         "website hosting and infrastructure;",
         "analytics;",
         "advertising tools where consent permits;",
@@ -580,7 +581,7 @@
   "terms": [
     {
       "kind": "p",
-      "text": "Last updated: 23 November 2026"
+      "text": "Last updated: 24 November 2026"
     },
     {
       "kind": "p",
@@ -659,10 +660,8 @@
       "kind": "ul",
       "items": [
         "a quotation covers only the stated scope;",
-        "VAT is added where applicable;",
         "additional work is not automatically included;",
-        "quotations remain subject to availability until booking is confirmed;",
-        "a quotation may have an expiry date."
+        "quotations remain subject to availability until booking is confirmed;"
       ]
     },
     {
@@ -711,7 +710,7 @@
     },
     {
       "kind": "p",
-      "text": "A booking becomes confirmed only when HQC has reviewed the request, allocated cleaner(s), completed any required deposit or payment collection and sent its confirmation email. Providing booking or payment details, or creating a record in our booking system, does not itself confirm the booking or mean that payment has been collected."
+      "text": "A booking becomes confirmed only when HQC has reviewed the request, allocated cleaner(s), taken any advance payment required and sent its confirmation email. Providing booking or payment details, or creating a record in our booking system, does not itself confirm the booking or mean that payment has been collected."
     },
     {
       "kind": "p",
@@ -723,7 +722,7 @@
     },
     {
       "kind": "p",
-      "text": "Prices will be stated as excluding VAT, including VAT or with VAT separately shown, as applicable."
+      "text": "HQC is VAT-registered. Prices for consumers include VAT. Prices for business clients may be quoted excluding VAT, and will say so. Business clients receive a VAT invoice."
     },
     {
       "kind": "p",
@@ -739,7 +738,7 @@
     },
     {
       "kind": "p",
-      "text": "Payment timing depends on the service and may include payment at booking, deposit, payment before service, payment on completion, recurring card payment or invoicing under agreed commercial terms."
+      "text": "Payment timing depends on the service and may include payment at booking, advance payment before service, payment on completion, recurring card payment or invoicing under agreed commercial terms."
     },
     {
       "kind": "p",
@@ -747,7 +746,7 @@
     },
     {
       "kind": "p",
-      "text": "Our booking system records booking requests and payment details. Recording payment details does not by itself mean that payment has been taken. HQC decides whether a deposit or payment is required for the service and when it is collected, and will confirm the applicable payment terms in the quotation or booking confirmation."
+      "text": "Our booking system records booking requests and payment details. Recording payment details does not by itself mean that payment has been taken. HQC decides whether any advance payment is required for the service and when it is collected, and will confirm the applicable payment terms in the quotation or booking confirmation."
     },
     {
       "kind": "p",
@@ -784,14 +783,6 @@
     {
       "kind": "p",
       "text": "Where a refund is due, including when you cancel under §11, we will make it to your original payment method within 14 days."
-    },
-    {
-      "kind": "h3",
-      "text": "Prices and VAT"
-    },
-    {
-      "kind": "p",
-      "text": "HQC is VAT-registered. Prices for consumers include VAT. Prices for business clients may be quoted excluding VAT, and will say so. Business clients receive a VAT invoice."
     },
     {
       "kind": "h2",
@@ -959,7 +950,7 @@
     },
     {
       "kind": "p",
-      "text": "The matrix below is HQC's normal operational policy for appointments. Any amount charged must remain subject to applicable consumer law and must not exceed HQC's reasonably incurred loss resulting from the cancellation, taking account of costs saved and capacity successfully reallocated."
+      "text": "The matrix below is HQC's normal policy for appointments. Any charge remains subject to applicable consumer law."
     },
     {
       "kind": "table",
@@ -1238,6 +1229,10 @@
       ]
     },
     {
+      "kind": "p",
+      "text": "We do not carry out work that needs rope access, cradles, harnesses or powered access platforms (such as cherry pickers or scissor lifts)."
+    },
+    {
       "kind": "h2",
       "text": "21. End of Tenancy™"
     },
@@ -1407,7 +1402,7 @@
     },
     {
       "kind": "p",
-      "text": "HQC maintains insurance appropriate to its operations. Specific insurance details can be provided where reasonably required for commercial qualification."
+      "text": "HQC holds public liability insurance with a limit of £5 million and employers' liability insurance with a limit of £10 million. Certificates are available on request."
     },
     {
       "kind": "h2",
@@ -1495,6 +1490,10 @@
     },
     {
       "kind": "p",
+      "text": "WhatsApp: 07824 390336"
+    },
+    {
+      "kind": "p",
       "text": "Bookings, changes, cancellations and complaints: support@highqualityclean.co.uk"
     },
     {
@@ -1540,6 +1539,14 @@
     {
       "kind": "p",
       "text": "The minimum term, notice period and any annual price review are as stated in the proposal. Where a price review applies, HQC will give at least 30 days' written notice."
+    },
+    {
+      "kind": "h3",
+      "text": "C5. Indemnities and insurance"
+    },
+    {
+      "kind": "p",
+      "text": "HQC does not give any indemnity, or accept any liability, beyond what is set out in these Terms and the agreed proposal, unless a director of HQC agrees otherwise in writing. HQC's insurance certificate is available on request; it does not name clients as interested parties."
     }
   ]
 }

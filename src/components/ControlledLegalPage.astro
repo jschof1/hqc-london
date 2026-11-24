@@ -52,6 +52,7 @@ for (const block of blocks) {
         block.kind === 'table' ? <div class="overflow-x-auto"><table class="min-w-[720px] border-collapse text-left text-sm"><thead><tr>{block.rows[0].map((cell) => <th class="border border-midnight/20 bg-porcelain p-3">{cell}</th>)}</tr></thead><tbody>{block.rows.slice(1).map((row) => <tr>{row.map((cell) => <td class="border border-midnight/20 p-3 align-top">{cell}</td>)}</tr>)}</tbody></table></div> :
         block.text === 'Link: Privacy Policy' ? <p><a class="underline" href="/privacy-policy/">Privacy Policy</a></p> :
         block.text === 'Link: Manage Cookie Preferences' ? <p><a class="underline" href="#hqc-cookie-preferences" data-open-cookie-preferences>Manage Cookie Preferences</a></p> :
+        block.text === 'WhatsApp: 07824 390336' ? <p><a class="underline" href="https://wa.me/447824390336">WhatsApp: 07824 390336</a></p> :
         <p>{block.text}</p>
       ))}
         </div>

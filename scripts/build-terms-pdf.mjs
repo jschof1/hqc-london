@@ -44,6 +44,7 @@ const block = (b) => {
     case 'table': return `<table><thead><tr>${b.rows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${b.rows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
     default:
       if (b.text === 'Link: Privacy Policy') return '<p>Privacy Policy: https://highqualityclean.co.uk/privacy-policy/</p>';
+      if (b.text === 'WhatsApp: 07824 390336') return '<p><a href="https://wa.me/447824390336">WhatsApp: 07824 390336</a></p>';
       return `<p>${esc(b.text)}</p>`;
   }
 };
