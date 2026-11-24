@@ -8270,6 +8270,756 @@
           }
         }
       }
+    },
+    {
+      "id": "nov24-hqc-3d-header",
+      "label": "24 Nov: 3D gold header (preview)",
+      "date": "2026-11-24",
+      "captureDate": "2026-11-24",
+      "commit": "2db742fe40dd6b7aad9275d6be11417bdc7b6ad8",
+      "deploymentUrl": "https://c356b857.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://c356b857.hqc-london.pages.dev",
+      "kind": "review candidate",
+      "summary": "The original 3D gold artwork returns to the top of the 24 November HQC preview.",
+      "changes": [
+        "Restored the full 3D header wordmark and the compact 3D monogram for tight desktop navigation.",
+        "Retained the 24 November Terms, Privacy and WhatsApp updates. The flat-header review candidate is available separately."
+      ],
+      "outstanding": [
+        "Pedro’s review of the 3D header option.",
+        "Existing Phase 8 production release gates."
+      ],
+      "provenance": "Captured from the immutable preview at 1440×900 and 390×844, with reduced motion, optional cookies rejected and no customer actions. Header behaviour was also checked across seven widths.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "width": 1440,
+            "height": 14417,
+            "sha256": "bfa5cfb41ad33cd871ef8b2355ed4b34f614906cc2fffc5083882bb0964ca7c8",
+            "capturedAt": "2026-11-24T17:06:31.633Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-home-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 24494,
+            "sha256": "d68d2c228b990a2450159f3ef336414ea8429a45fa92c30910fab456b8b9a85f",
+            "capturedAt": "2026-11-24T17:05:17.461Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-home-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "quote": {
+          "desktop": {
+            "width": 1440,
+            "height": 6682,
+            "sha256": "f8e89a0816f53253d59678c4f831640b654b3b092de7ba5c02f7fe6bc1bcd8a1",
+            "capturedAt": "2026-11-24T17:06:39.094Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-quote-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 11170,
+            "sha256": "5d889c6d6693c1ee17ab2f58f7b4b93827b0a9118772ac5a60c90f1e2e063cd4",
+            "capturedAt": "2026-11-24T17:05:24.610Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-quote-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "how": {
+          "desktop": {
+            "width": 1440,
+            "height": 13444,
+            "sha256": "776de3fef5cb70da1ac1023609a293f8a9e842d0bceffb27f94c7f599f4cf4c0",
+            "capturedAt": "2026-11-24T17:06:45.752Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-how-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 18926,
+            "sha256": "a41c097fe5e7db5916bb600162aece3a5a04706429492079fbcabdd090f037c4",
+            "capturedAt": "2026-11-24T17:05:32.496Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-how-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "contact": {
+          "desktop": {
+            "width": 1440,
+            "height": 7337,
+            "sha256": "17d1736c6b3153d68165b40ebe2fa64b4ad455401b3c67e2a55d94d9ac2abd72",
+            "capturedAt": "2026-11-24T17:06:52.187Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-contact-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 10816,
+            "sha256": "b2d4dfee40bd112acf1ff8101524746e01ac5685fd1e3c7bffd77e7052c43654",
+            "capturedAt": "2026-11-24T17:05:39.916Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-contact-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "width": 1440,
+            "height": 10142,
+            "sha256": "b7b2d49f92270185f1d79ed0c9959293aabddd36cd888a850b1b29e97bd9b9ab",
+            "capturedAt": "2026-11-24T17:06:58.044Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-tenancy-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14348,
+            "sha256": "1a3f72def5850888f1e4d8caa342a2373f5a92a441c28f37a06eee1c4af1a71a",
+            "capturedAt": "2026-11-24T17:05:46.516Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-tenancy-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "about": {
+          "desktop": {
+            "width": 1440,
+            "height": 14363,
+            "sha256": "0def817391d24ef0648c2b58bddb5ab3b9de81b2a71cdaaa2c6f186eceb75928",
+            "capturedAt": "2026-11-24T17:07:04.959Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-about-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 21709,
+            "sha256": "22024fcc63253f441478da6e34af79e08574c3ef08f95c149d2f6768c0cf0a59",
+            "capturedAt": "2026-11-24T17:05:54.775Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-about-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "width": 1440,
+            "height": 10949,
+            "sha256": "1d728228abe8c51ec39848930515b524e8f7bf7488765f7b73b00dcbec55b74b",
+            "capturedAt": "2026-11-24T17:07:15.522Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-reviews-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16257,
+            "sha256": "a2d84dd2269e91bf3b913b62e84be6dbf07ba3972f0df2c206f3d1926cc2e9fb",
+            "capturedAt": "2026-11-24T17:06:02.384Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-reviews-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "width": 1440,
+            "height": 10835,
+            "sha256": "b112a86aa3e6d06508fb7e62e6ba83405018f349ddc43ce06e17fe34a03dd070",
+            "capturedAt": "2026-11-24T17:07:21.365Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-privacy-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16977,
+            "sha256": "925b04f3a95fa101e3b2883306c029a1c66dbfd745617580b4be2b3100e03913",
+            "capturedAt": "2026-11-24T17:06:09.378Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-privacy-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "terms": {
+          "desktop": {
+            "width": 1440,
+            "height": 18903,
+            "sha256": "aba24914c18b1f0d3f0b19a5bfae9f791a565d43976a53a26bc1297dee49f042",
+            "capturedAt": "2026-11-24T17:07:28.252Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-terms-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 29305,
+            "sha256": "7099cfd8e5079dae577408ff303a813a2e4f7684f09a9d51db6fc6b78ca2791e",
+            "capturedAt": "2026-11-24T17:06:18.314Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-terms-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "facilities": {
+          "desktop": {
+            "width": 1440,
+            "height": 9866,
+            "sha256": "839320461a5f729cf67dd671eaaf73a5ed3ff645e0a6fca5ad0532f2bc759b78",
+            "capturedAt": "2026-11-24T17:07:33.938Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-facilities-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/property-facilities-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14062,
+            "sha256": "9be35b00825bc83f259ab61db796cf163570ed3ede9108401e2005deecb9d23d",
+            "capturedAt": "2026-11-24T17:06:25.163Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-facilities-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/property-facilities-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "communal": {
+          "desktop": {
+            "width": 1440,
+            "height": 11380,
+            "sha256": "43e8769fff82b71fe1895292f6dd7c9eb3ae9348594e7fbdcdf63ff046e45aa4",
+            "capturedAt": "2026-11-24T17:07:40.402Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-communal-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16262,
+            "sha256": "08fb6401eef6a377c347a943b71897b7360d3339d9806c3c9f5f8df039749278",
+            "capturedAt": "2026-11-24T17:06:32.190Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-communal-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "agents": {
+          "desktop": {
+            "width": 1440,
+            "height": 10750,
+            "sha256": "be4eba7ee1019f788e8b5406318051d5021b4c95106614dcab417dad9e2a26ed",
+            "capturedAt": "2026-11-24T17:07:47.658Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-agents-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15650,
+            "sha256": "431889d3c2dbcc28a5c074cafaf398a43e5a505045176578c7d3d8066e1fe89e",
+            "capturedAt": "2026-11-24T17:06:39.255Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-agents-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "void": {
+          "desktop": {
+            "width": 1440,
+            "height": 9848,
+            "sha256": "55b6f3c37c92626447c87793da0d7ea01d1b6a1605f31a6a6a030fa38aae9f2e",
+            "capturedAt": "2026-11-24T17:07:54.131Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-void-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14524,
+            "sha256": "937f8e8a559410f7e9986bad233703fdaaf2afb806b6c91d0d9df13e1e64a115",
+            "capturedAt": "2026-11-24T17:06:46.033Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-void-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "construction": {
+          "desktop": {
+            "width": 1440,
+            "height": 11618,
+            "sha256": "ae0a29eb764449157edb92b96df899657aaf6749ca1da208fa4e826f2b7dc984",
+            "capturedAt": "2026-11-24T17:08:00.492Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-construction-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/post-construction-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 17022,
+            "sha256": "cbec42da4eae7d92202116a696b3c3c17c9f1a3de78a82ca110f7549df7ca4f9",
+            "capturedAt": "2026-11-24T17:06:53.205Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-construction-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/post-construction-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "portfolio": {
+          "desktop": {
+            "width": 1440,
+            "height": 10951,
+            "sha256": "fced5588cb81fd2d8a0c398847a7d83e382e0a96e0f0a3264e584423f750ab2c",
+            "capturedAt": "2026-11-24T17:08:06.940Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-portfolio-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15469,
+            "sha256": "fff343a51dd402681d30e0a63cc325b12eb3cde062e5a198092e62c4a32e6c00",
+            "capturedAt": "2026-11-24T17:06:59.811Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-portfolio-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "commercial": {
+          "desktop": {
+            "width": 1440,
+            "height": 11676,
+            "sha256": "351fe070eaf9b2e18797afdfec45d59bda0a15520b6d4bf7c323d910b359d111",
+            "capturedAt": "2026-11-24T17:08:14.749Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-commercial-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/commercial-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16130,
+            "sha256": "c6e280d674faf64db7753364d815a8b99c6edad69f41680412a7b92985bbff3f",
+            "capturedAt": "2026-11-24T17:07:06.571Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-commercial-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/commercial-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "office": {
+          "desktop": {
+            "width": 1440,
+            "height": 10547,
+            "sha256": "3d727314a68aff0e585f12b037143f5147c8fda8534699429a8444624f0edc2f",
+            "capturedAt": "2026-11-24T17:08:21.391Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-office-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/office-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15256,
+            "sha256": "fc62d47333000e7d76673c407b8ef294c01a68b0bb239c538fe5bf6707c62e6d",
+            "capturedAt": "2026-11-24T17:07:14.461Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-office-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/office-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "commercial-deep": {
+          "desktop": {
+            "width": 1440,
+            "height": 11773,
+            "sha256": "b56b8d5901488fe4cf27ea92e3fc8ff7096a9b179b4246b274ab06e10a07482e",
+            "capturedAt": "2026-11-24T17:08:28.363Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-commercial-deep-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16414,
+            "sha256": "a5b56b49c7c88dde9ad53942b8c5c875573ca860756ea6e09f6bf1b142da7858",
+            "capturedAt": "2026-11-24T17:07:21.397Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-commercial-deep-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "home-service": {
+          "desktop": {
+            "width": 1440,
+            "height": 10118,
+            "sha256": "22ef05d9f530d7833c90914b46200384ba26656346b308e58e7ec01a49018afc",
+            "capturedAt": "2026-11-24T17:08:34.686Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-home-service-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/home-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14560,
+            "sha256": "7db0868660b12d8955bf07a014e5086c816d36612739fa131eb8df4bb5ba2b79",
+            "capturedAt": "2026-11-24T17:07:28.140Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-home-service-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/home-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "essential": {
+          "desktop": {
+            "width": 1440,
+            "height": 10823,
+            "sha256": "e98ad1a1c3cdd93ddb18b3c6ebf4759ec910e98a932095a8784d82a96fffeec2",
+            "capturedAt": "2026-11-24T17:08:41.405Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-essential-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/essential-clean-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15986,
+            "sha256": "74516fd193dd383633c89279d42c0ecd8579830bf49ecdbdcdea9df13088d166",
+            "capturedAt": "2026-11-24T17:07:34.786Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-essential-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/essential-clean-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "deep": {
+          "desktop": {
+            "width": 1440,
+            "height": 9563,
+            "sha256": "b91a4c196de6dfb117134c896cfeb239bcb0e35b103b2228b0458207d86d52e8",
+            "capturedAt": "2026-11-24T17:08:47.756Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-deep-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/deep-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14381,
+            "sha256": "ac1b4c0af303065cf27268436dc2530e211fa5e27a14f47f1cd390321dfcbfb9",
+            "capturedAt": "2026-11-24T17:07:44.432Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-deep-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/deep-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "move-in": {
+          "desktop": {
+            "width": 1440,
+            "height": 9431,
+            "sha256": "556dedf77c4042387a022c90179977b31d7a238a7389c1901c3cb0914718c83b",
+            "capturedAt": "2026-11-24T17:08:53.969Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-move-in-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/move-in-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 13022,
+            "sha256": "5c0c39b6ff6ea0b1200ae2d16c064f7ed2d5c2d85c450c62733ef40092bb2e7d",
+            "capturedAt": "2026-11-24T17:07:50.661Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-move-in-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/move-in-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "complex": {
+          "desktop": {
+            "width": 1440,
+            "height": 11851,
+            "sha256": "0adb6054d314b3f2780d97c32b55d4c889e559a1d7e6a8844b655e22c90010ac",
+            "capturedAt": "2026-11-24T17:09:00.352Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-complex-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/complex-property-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 17812,
+            "sha256": "86c4f1d724c2acdcfa7b962d2cdb8b8980ec4355faab92ff027365961a56808f",
+            "capturedAt": "2026-11-24T17:07:57.821Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-complex-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/complex-property-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "faq": {
+          "desktop": {
+            "width": 1440,
+            "height": 7714,
+            "sha256": "d1f56c2e51ac7cefa1506fc8e71653625c1691bf409d8851525db175f0895a4e",
+            "capturedAt": "2026-11-24T17:09:06.518Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-faq-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/cleaning-faqs/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 8515,
+            "sha256": "ef5b77fc5914522bd37e2fe9a50b48f7aba745cf2ecd17c69c1ee87bc7577393",
+            "capturedAt": "2026-11-24T17:08:03.385Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-faq-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/cleaning-faqs/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "why": {
+          "desktop": {
+            "width": 1440,
+            "height": 14363,
+            "sha256": "f96da55a6ba21499901fdbc0ffe61244e62dd1c18602631eda9f7cc3e5ad0b3e",
+            "capturedAt": "2026-11-24T17:09:13.101Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-why-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/why-choose-hqc/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 20516,
+            "sha256": "0c0f6e4a8ca2fd1e3411f757ddaa435137e60a30eb19e14d885ddf4c0154532e",
+            "capturedAt": "2026-11-24T17:08:10.692Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-why-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/why-choose-hqc/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "prices": {
+          "desktop": {
+            "width": 1440,
+            "height": 14576,
+            "sha256": "4ead6111515c2e142e38b1bacafff2b066f4b22ecfd3d92ed8e178f11cd24b6d",
+            "capturedAt": "2026-11-24T17:09:21.338Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-prices-desktop.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/cleaning-prices-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 21068,
+            "sha256": "fd6048f27ae46a2d4d0282fca97768ff01f22450046a55d569734eeb6749e91b",
+            "capturedAt": "2026-11-24T17:08:18.724Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-hqc-3d-header-prices-mobile.jpg",
+            "sourceUrl": "https://c356b857.hqc-london.pages.dev/cleaning-prices-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        }
+      }
     }
   ],
   "pages": [

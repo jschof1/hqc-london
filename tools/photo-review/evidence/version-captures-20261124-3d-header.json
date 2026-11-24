@@ -1,0 +1,1197 @@
+{
+  "versionId": "nov24-hqc-3d-header",
+  "sourceCommit": "2db742fe40dd6b7aad9275d6be11417bdc7b6ad8",
+  "immutableDeploymentUrl": "https://c356b857.hqc-london.pages.dev",
+  "pageCount": 26,
+  "captureCount": 52,
+  "captureDate": "2026-11-24",
+  "sourceEvidence": "private:hqc-3d-header-2026-11-24/request.txt",
+  "headerGeometry": [
+    {
+      "width": 390,
+      "asset": "/images/brand/hqc-logo-header-3d.svg",
+      "naturalWidth": 300,
+      "naturalHeight": 46,
+      "logoWidth": 210.71875,
+      "logoHeight": 32,
+      "headerHeight": 81,
+      "navWidth": 0,
+      "pageWidth": 390,
+      "logoRight": 230.71875,
+      "navLeft": 0
+    },
+    {
+      "width": 768,
+      "asset": "/images/brand/hqc-logo-header-3d.svg",
+      "naturalWidth": 300,
+      "naturalHeight": 46,
+      "logoWidth": 237.0625,
+      "logoHeight": 36,
+      "headerHeight": 81,
+      "navWidth": 0,
+      "pageWidth": 768,
+      "logoRight": 269.0625,
+      "navLeft": 0
+    },
+    {
+      "width": 1023,
+      "asset": "/images/brand/hqc-logo-header-3d.svg",
+      "naturalWidth": 300,
+      "naturalHeight": 46,
+      "logoWidth": 237.0625,
+      "logoHeight": 36,
+      "headerHeight": 81,
+      "navWidth": 0,
+      "pageWidth": 1023,
+      "logoRight": 269.0625,
+      "navLeft": 0
+    },
+    {
+      "width": 1024,
+      "asset": "/images/brand/hqc-monogram-3d.webp",
+      "naturalWidth": 316,
+      "naturalHeight": 144,
+      "logoWidth": 87.765625,
+      "logoHeight": 40,
+      "headerHeight": 81,
+      "navWidth": 704.15625,
+      "pageWidth": 1024,
+      "logoRight": 143.765625,
+      "navLeft": 263.84375
+    },
+    {
+      "width": 1279,
+      "asset": "/images/brand/hqc-monogram-3d.webp",
+      "naturalWidth": 316,
+      "naturalHeight": 144,
+      "logoWidth": 87.765625,
+      "logoHeight": 40,
+      "headerHeight": 81,
+      "navWidth": 704.15625,
+      "pageWidth": 1279,
+      "logoRight": 143.765625,
+      "navLeft": 518.84375
+    },
+    {
+      "width": 1280,
+      "asset": "/images/brand/hqc-logo-header-3d.svg",
+      "naturalWidth": 300,
+      "naturalHeight": 46,
+      "logoWidth": 263.40625,
+      "logoHeight": 40,
+      "headerHeight": 81,
+      "navWidth": 739,
+      "pageWidth": 1280,
+      "logoRight": 319.40625,
+      "navLeft": 485
+    },
+    {
+      "width": 1440,
+      "asset": "/images/brand/hqc-logo-header-3d.svg",
+      "naturalWidth": 300,
+      "naturalHeight": 46,
+      "logoWidth": 263.40625,
+      "logoHeight": 40,
+      "headerHeight": 81,
+      "navWidth": 752.15625,
+      "pageWidth": 1440,
+      "logoRight": 319.40625,
+      "navLeft": 631.84375
+    }
+  ],
+  "records": [
+    {
+      "pageId": "home",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "bfa5cfb41ad33cd871ef8b2355ed4b34f614906cc2fffc5083882bb0964ca7c8",
+      "width": 1440,
+      "height": 14417,
+      "capturedAt": "2026-11-24T17:06:31.633Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "quote",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/request-a-quote/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "f8e89a0816f53253d59678c4f831640b654b3b092de7ba5c02f7fe6bc1bcd8a1",
+      "width": 1440,
+      "height": 6682,
+      "capturedAt": "2026-11-24T17:06:39.094Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "how",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/how-we-work/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "776de3fef5cb70da1ac1023609a293f8a9e842d0bceffb27f94c7f599f4cf4c0",
+      "width": 1440,
+      "height": 13444,
+      "capturedAt": "2026-11-24T17:06:45.752Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "contact",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/contact/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "17d1736c6b3153d68165b40ebe2fa64b4ad455401b3c67e2a55d94d9ac2abd72",
+      "width": 1440,
+      "height": 7337,
+      "capturedAt": "2026-11-24T17:06:52.187Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "tenancy",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "b7b2d49f92270185f1d79ed0c9959293aabddd36cd888a850b1b29e97bd9b9ab",
+      "width": 1440,
+      "height": 10142,
+      "capturedAt": "2026-11-24T17:06:58.044Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "about",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/about-high-quality-clean/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "0def817391d24ef0648c2b58bddb5ab3b9de81b2a71cdaaa2c6f186eceb75928",
+      "width": 1440,
+      "height": 14363,
+      "capturedAt": "2026-11-24T17:07:04.959Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "reviews",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/reviews-case-studies/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "1d728228abe8c51ec39848930515b524e8f7bf7488765f7b73b00dcbec55b74b",
+      "width": 1440,
+      "height": 10949,
+      "capturedAt": "2026-11-24T17:07:15.522Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "privacy",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/privacy-policy/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "b112a86aa3e6d06508fb7e62e6ba83405018f349ddc43ce06e17fe34a03dd070",
+      "width": 1440,
+      "height": 10835,
+      "capturedAt": "2026-11-24T17:07:21.365Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "terms",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/terms-and-conditions/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "aba24914c18b1f0d3f0b19a5bfae9f791a565d43976a53a26bc1297dee49f042",
+      "width": 1440,
+      "height": 18903,
+      "capturedAt": "2026-11-24T17:07:28.252Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "facilities",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "839320461a5f729cf67dd671eaaf73a5ed3ff645e0a6fca5ad0532f2bc759b78",
+      "width": 1440,
+      "height": 9866,
+      "capturedAt": "2026-11-24T17:07:33.938Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "communal",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "43e8769fff82b71fe1895292f6dd7c9eb3ae9348594e7fbdcdf63ff046e45aa4",
+      "width": 1440,
+      "height": 11380,
+      "capturedAt": "2026-11-24T17:07:40.402Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "agents",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "be4eba7ee1019f788e8b5406318051d5021b4c95106614dcab417dad9e2a26ed",
+      "width": 1440,
+      "height": 10750,
+      "capturedAt": "2026-11-24T17:07:47.658Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "void",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "55b6f3c37c92626447c87793da0d7ea01d1b6a1605f31a6a6a030fa38aae9f2e",
+      "width": 1440,
+      "height": 9848,
+      "capturedAt": "2026-11-24T17:07:54.131Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "construction",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "ae0a29eb764449157edb92b96df899657aaf6749ca1da208fa4e826f2b7dc984",
+      "width": 1440,
+      "height": 11618,
+      "capturedAt": "2026-11-24T17:08:00.492Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "portfolio",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "fced5588cb81fd2d8a0c398847a7d83e382e0a96e0f0a3264e584423f750ab2c",
+      "width": 1440,
+      "height": 10951,
+      "capturedAt": "2026-11-24T17:08:06.940Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "commercial",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "351fe070eaf9b2e18797afdfec45d59bda0a15520b6d4bf7c323d910b359d111",
+      "width": 1440,
+      "height": 11676,
+      "capturedAt": "2026-11-24T17:08:14.749Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "office",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "3d727314a68aff0e585f12b037143f5147c8fda8534699429a8444624f0edc2f",
+      "width": 1440,
+      "height": 10547,
+      "capturedAt": "2026-11-24T17:08:21.391Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "commercial-deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "b56b8d5901488fe4cf27ea92e3fc8ff7096a9b179b4246b274ab06e10a07482e",
+      "width": 1440,
+      "height": 11773,
+      "capturedAt": "2026-11-24T17:08:28.363Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "home-service",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "22ef05d9f530d7833c90914b46200384ba26656346b308e58e7ec01a49018afc",
+      "width": 1440,
+      "height": 10118,
+      "capturedAt": "2026-11-24T17:08:34.686Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "essential",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "e98ad1a1c3cdd93ddb18b3c6ebf4759ec910e98a932095a8784d82a96fffeec2",
+      "width": 1440,
+      "height": 10823,
+      "capturedAt": "2026-11-24T17:08:41.405Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "b91a4c196de6dfb117134c896cfeb239bcb0e35b103b2228b0458207d86d52e8",
+      "width": 1440,
+      "height": 9563,
+      "capturedAt": "2026-11-24T17:08:47.756Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "move-in",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "556dedf77c4042387a022c90179977b31d7a238a7389c1901c3cb0914718c83b",
+      "width": 1440,
+      "height": 9431,
+      "capturedAt": "2026-11-24T17:08:53.969Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "complex",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "0adb6054d314b3f2780d97c32b55d4c889e559a1d7e6a8844b655e22c90010ac",
+      "width": 1440,
+      "height": 11851,
+      "capturedAt": "2026-11-24T17:09:00.352Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "faq",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "d1f56c2e51ac7cefa1506fc8e71653625c1691bf409d8851525db175f0895a4e",
+      "width": 1440,
+      "height": 7714,
+      "capturedAt": "2026-11-24T17:09:06.518Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "why",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "f96da55a6ba21499901fdbc0ffe61244e62dd1c18602631eda9f7cc3e5ad0b3e",
+      "width": 1440,
+      "height": 14363,
+      "capturedAt": "2026-11-24T17:09:13.101Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "prices",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "4ead6111515c2e142e38b1bacafff2b066f4b22ecfd3d92ed8e178f11cd24b6d",
+      "width": 1440,
+      "height": 14576,
+      "capturedAt": "2026-11-24T17:09:21.338Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "home",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "d68d2c228b990a2450159f3ef336414ea8429a45fa92c30910fab456b8b9a85f",
+      "width": 390,
+      "height": 24494,
+      "capturedAt": "2026-11-24T17:05:17.461Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "quote",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/request-a-quote/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "5d889c6d6693c1ee17ab2f58f7b4b93827b0a9118772ac5a60c90f1e2e063cd4",
+      "width": 390,
+      "height": 11170,
+      "capturedAt": "2026-11-24T17:05:24.610Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "how",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/how-we-work/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "a41c097fe5e7db5916bb600162aece3a5a04706429492079fbcabdd090f037c4",
+      "width": 390,
+      "height": 18926,
+      "capturedAt": "2026-11-24T17:05:32.496Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "contact",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/contact/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "b2d4dfee40bd112acf1ff8101524746e01ac5685fd1e3c7bffd77e7052c43654",
+      "width": 390,
+      "height": 10816,
+      "capturedAt": "2026-11-24T17:05:39.916Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "tenancy",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "1a3f72def5850888f1e4d8caa342a2373f5a92a441c28f37a06eee1c4af1a71a",
+      "width": 390,
+      "height": 14348,
+      "capturedAt": "2026-11-24T17:05:46.516Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "about",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/about-high-quality-clean/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "22024fcc63253f441478da6e34af79e08574c3ef08f95c149d2f6768c0cf0a59",
+      "width": 390,
+      "height": 21709,
+      "capturedAt": "2026-11-24T17:05:54.775Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "reviews",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/reviews-case-studies/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "a2d84dd2269e91bf3b913b62e84be6dbf07ba3972f0df2c206f3d1926cc2e9fb",
+      "width": 390,
+      "height": 16257,
+      "capturedAt": "2026-11-24T17:06:02.384Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "privacy",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/privacy-policy/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "925b04f3a95fa101e3b2883306c029a1c66dbfd745617580b4be2b3100e03913",
+      "width": 390,
+      "height": 16977,
+      "capturedAt": "2026-11-24T17:06:09.378Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "terms",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/terms-and-conditions/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "7099cfd8e5079dae577408ff303a813a2e4f7684f09a9d51db6fc6b78ca2791e",
+      "width": 390,
+      "height": 29305,
+      "capturedAt": "2026-11-24T17:06:18.314Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "facilities",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "9be35b00825bc83f259ab61db796cf163570ed3ede9108401e2005deecb9d23d",
+      "width": 390,
+      "height": 14062,
+      "capturedAt": "2026-11-24T17:06:25.163Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "communal",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "08fb6401eef6a377c347a943b71897b7360d3339d9806c3c9f5f8df039749278",
+      "width": 390,
+      "height": 16262,
+      "capturedAt": "2026-11-24T17:06:32.190Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "agents",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "431889d3c2dbcc28a5c074cafaf398a43e5a505045176578c7d3d8066e1fe89e",
+      "width": 390,
+      "height": 15650,
+      "capturedAt": "2026-11-24T17:06:39.255Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "void",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "937f8e8a559410f7e9986bad233703fdaaf2afb806b6c91d0d9df13e1e64a115",
+      "width": 390,
+      "height": 14524,
+      "capturedAt": "2026-11-24T17:06:46.033Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "construction",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "cbec42da4eae7d92202116a696b3c3c17c9f1a3de78a82ca110f7549df7ca4f9",
+      "width": 390,
+      "height": 17022,
+      "capturedAt": "2026-11-24T17:06:53.205Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "portfolio",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "fff343a51dd402681d30e0a63cc325b12eb3cde062e5a198092e62c4a32e6c00",
+      "width": 390,
+      "height": 15469,
+      "capturedAt": "2026-11-24T17:06:59.811Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "commercial",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "c6e280d674faf64db7753364d815a8b99c6edad69f41680412a7b92985bbff3f",
+      "width": 390,
+      "height": 16130,
+      "capturedAt": "2026-11-24T17:07:06.571Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "office",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "fc62d47333000e7d76673c407b8ef294c01a68b0bb239c538fe5bf6707c62e6d",
+      "width": 390,
+      "height": 15256,
+      "capturedAt": "2026-11-24T17:07:14.461Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "commercial-deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "a5b56b49c7c88dde9ad53942b8c5c875573ca860756ea6e09f6bf1b142da7858",
+      "width": 390,
+      "height": 16414,
+      "capturedAt": "2026-11-24T17:07:21.397Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "home-service",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "7db0868660b12d8955bf07a014e5086c816d36612739fa131eb8df4bb5ba2b79",
+      "width": 390,
+      "height": 14560,
+      "capturedAt": "2026-11-24T17:07:28.140Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "essential",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "74516fd193dd383633c89279d42c0ecd8579830bf49ecdbdcdea9df13088d166",
+      "width": 390,
+      "height": 15986,
+      "capturedAt": "2026-11-24T17:07:34.786Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "ac1b4c0af303065cf27268436dc2530e211fa5e27a14f47f1cd390321dfcbfb9",
+      "width": 390,
+      "height": 14381,
+      "capturedAt": "2026-11-24T17:07:44.432Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "move-in",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "5c0c39b6ff6ea0b1200ae2d16c064f7ed2d5c2d85c450c62733ef40092bb2e7d",
+      "width": 390,
+      "height": 13022,
+      "capturedAt": "2026-11-24T17:07:50.661Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "complex",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "86c4f1d724c2acdcfa7b962d2cdb8b8980ec4355faab92ff027365961a56808f",
+      "width": 390,
+      "height": 17812,
+      "capturedAt": "2026-11-24T17:07:57.821Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "faq",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "sha256": "ef5b77fc5914522bd37e2fe9a50b48f7aba745cf2ecd17c69c1ee87bc7577393",
+      "width": 390,
+      "height": 8515,
+      "capturedAt": "2026-11-24T17:08:03.385Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "why",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "0c0f6e4a8ca2fd1e3411f757ddaa435137e60a30eb19e14d885ddf4c0154532e",
+      "width": 390,
+      "height": 20516,
+      "capturedAt": "2026-11-24T17:08:10.692Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    },
+    {
+      "pageId": "prices",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://c356b857.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "sha256": "fd6048f27ae46a2d4d0282fca97768ff01f22450046a55d569734eeb6749e91b",
+      "width": 390,
+      "height": 21068,
+      "capturedAt": "2026-11-24T17:08:18.724Z",
+      "headerLogos": [
+        {
+          "path": "/images/brand/hqc-logo-header-3d.svg",
+          "naturalWidth": 300
+        }
+      ]
+    }
+  ],
+  "releaseStatus": "review-only"
+}
