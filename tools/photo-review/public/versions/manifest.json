@@ -7517,6 +7517,759 @@
         }
       },
       "captureDate": "2026-11-23"
+    },
+    {
+      "id": "nov24-pedro-final-terms",
+      "label": "24 Nov: final Terms amendments (preview)",
+      "date": "2026-11-24",
+      "captureDate": "2026-11-24",
+      "commit": "14a886d9ffbc1ab23326d6677766b781d3e78b80",
+      "deploymentUrl": "https://ea0b678e.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://ea0b678e.hqc-london.pages.dev",
+      "kind": "review candidate",
+      "summary": "The follow-up to the 23 November Terms comparison with the confirmed insurance, payment and access amendments, WhatsApp and the corrected dated PDF.",
+      "changes": [
+        "Removed the superseded quotation bullets and retained the 30-day validity. VAT wording is in §7 and the requested advance-payment terms are in §6 and §8.",
+        "Updated the cancellation introduction and added the access-equipment exclusion, confirmed insurance and commercial clause C5. The approved commercial scope remains in place.",
+        "Added the WhatsApp link in Terms and the footer, kept the existing Contact link, and included WhatsApp in the Privacy supplier categories.",
+        "Regenerated the 11-page Terms PDF with the 24 November date and the WhatsApp hyperlink."
+      ],
+      "outstanding": [
+        "Pedro’s sign-off of the final comparison.",
+        "Privacy Last reviewed wording.",
+        "Production enquiry reconciliation, booking/payment, redirect and pop-up evidence and protected release."
+      ],
+      "provenance": "Fifty-two full-page images from the immutable preview, captured 24 November at 1440×900 and 390×844 with reduced motion and write requests blocked. Each image has its own capture time. This is a preview review record.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "width": 1440,
+            "height": 14417,
+            "sha256": "7de48f428775f842109ea7cb14aae81f92f7a15f4054f96a71c3d3e07170a2f7",
+            "capturedAt": "2026-11-24T15:03:03.911Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-home-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 24494,
+            "sha256": "b19971d207646f5f5384ebe14cc0e698259ffa0ca32043d04c1acd38ac844c86",
+            "capturedAt": "2026-11-24T15:07:19.401Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-home-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "quote": {
+          "desktop": {
+            "width": 1440,
+            "height": 6682,
+            "sha256": "7364d4837b1d7bbb73fda5c6776161c197b4bec646531b3236c1800028dbb51c",
+            "capturedAt": "2026-11-24T15:03:11.558Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-quote-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 11170,
+            "sha256": "69fff8462f8d50f1ce9fb0adaceb9a6607df9c2545dc1919470e983e1ee0ea16",
+            "capturedAt": "2026-11-24T15:07:26.626Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-quote-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/request-a-quote/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "how": {
+          "desktop": {
+            "width": 1440,
+            "height": 13444,
+            "sha256": "ac6b97da889748337745dae1d4095d9b9253e88034bd23f6b0777991fca9c5c8",
+            "capturedAt": "2026-11-24T15:03:18.887Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-how-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 18926,
+            "sha256": "281b534e211b8403db55cb292cee252a26faf5c5c8ce70592488fb020ae4061b",
+            "capturedAt": "2026-11-24T15:07:34.549Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-how-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/how-we-work/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "contact": {
+          "desktop": {
+            "width": 1440,
+            "height": 7337,
+            "sha256": "2de8209cb3e416c58428cf4edbb92a36c8a3a6087e55472f79c0afae337a6944",
+            "capturedAt": "2026-11-24T15:03:25.916Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-contact-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 10816,
+            "sha256": "3d139bee6e2bc5c7fef102ec3faf8da80dc5a767a773fb3494084568bd912635",
+            "capturedAt": "2026-11-24T15:07:41.201Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-contact-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/contact/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "width": 1440,
+            "height": 10142,
+            "sha256": "93556e167159cec41da865c44f791dbc24cbfc946a50d0c1dbcf9e02029d2c58",
+            "capturedAt": "2026-11-24T15:03:32.473Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-tenancy-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14348,
+            "sha256": "a38ff8f853fcde9bb2b90ba55e40ecfd759bf69e7c682333d7fd646d2a20df3c",
+            "capturedAt": "2026-11-24T15:07:47.992Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-tenancy-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "about": {
+          "desktop": {
+            "width": 1440,
+            "height": 14363,
+            "sha256": "625fd9c8d85eb12f9c89af268e38d200abc0469b3e2c019683d0ffe240366463",
+            "capturedAt": "2026-11-24T15:03:40.716Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-about-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 21709,
+            "sha256": "723a6f94d60c9de0a1e1489c8f46d225a395e4e81a7ebf1ce6b6921ad3b994e7",
+            "capturedAt": "2026-11-24T15:07:56.351Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-about-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/about-high-quality-clean/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "width": 1440,
+            "height": 10949,
+            "sha256": "71880f1cb775602a9c0c0e5863fe7a75db0d3e83c06d8f455d8d4705416df072",
+            "capturedAt": "2026-11-24T15:03:49.166Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-reviews-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16257,
+            "sha256": "67b76612ff751dc445f69e629c5783a509e4a25c4fdc8d3d2c622de0b439b83f",
+            "capturedAt": "2026-11-24T15:08:04.399Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-reviews-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/reviews-case-studies/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "width": 1440,
+            "height": 10835,
+            "sha256": "99fbb1bc6a2d160101fe95d4094bca4ac1d427639bc6b6e0ea2515c6a21ee413",
+            "capturedAt": "2026-11-24T15:03:56.068Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-privacy-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16977,
+            "sha256": "f708c0dac3332ea31488ccb43db316d62cd567f2cbdfd19f37efda07b43af31f",
+            "capturedAt": "2026-11-24T15:08:12.185Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-privacy-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/privacy-policy/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "terms": {
+          "desktop": {
+            "width": 1440,
+            "height": 18903,
+            "sha256": "7b3cd52bb9a2956c42e6d3e397d642aa782c1f0cee71aa743757efa7b8a55688",
+            "capturedAt": "2026-11-24T15:04:04.419Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-terms-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 29305,
+            "sha256": "b954a3bb0c5595247362641064551dc1279113b9adb7ea558f61e80ae3fe0c0e",
+            "capturedAt": "2026-11-24T15:08:22.813Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-terms-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/terms-and-conditions/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "facilities": {
+          "desktop": {
+            "width": 1440,
+            "height": 9866,
+            "sha256": "fa9ac8e07a14e367c1ec40ca1cebe2811fd4ded4624440f82ea0f6b5084f4c6b",
+            "capturedAt": "2026-11-24T15:04:10.798Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-facilities-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/property-facilities-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14062,
+            "sha256": "5e5d10107b552407effe54866d15e6998f3de9abf18eaa742fef903d372a9a4a",
+            "capturedAt": "2026-11-24T15:08:29.784Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-facilities-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/property-facilities-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "communal": {
+          "desktop": {
+            "width": 1440,
+            "height": 11380,
+            "sha256": "d7ca45641d18cf76d66448cc2055ed143a1ff514f4baceabdc1660f67f0503b9",
+            "capturedAt": "2026-11-24T15:04:17.864Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-communal-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16262,
+            "sha256": "ddaa8f3dbc524bd034851de865623a6c614cbb4569cd6fc346dfb4427477a870",
+            "capturedAt": "2026-11-24T15:08:37.025Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-communal-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "agents": {
+          "desktop": {
+            "width": 1440,
+            "height": 10750,
+            "sha256": "232ef97f0fa4b894a8931bf721a37bee78354bfc402257a086f5731d700a84da",
+            "capturedAt": "2026-11-24T15:04:25.458Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-agents-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15650,
+            "sha256": "1b8e5ef81bd055f5b3e83541fb8d6940999ce64de30b912ad69b28f671678207",
+            "capturedAt": "2026-11-24T15:08:44.325Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-agents-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "void": {
+          "desktop": {
+            "width": 1440,
+            "height": 9848,
+            "sha256": "aa119b7f395dc2c58cd0b5e4d2fbb10298a71e4a9140f1880ef2bf0e5585cb12",
+            "capturedAt": "2026-11-24T15:04:32.712Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-void-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14524,
+            "sha256": "368173716f02675326e0cdd931710c3d290dbc2ad5f91cc2219b5a4926c135d1",
+            "capturedAt": "2026-11-24T15:08:51.380Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-void-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "construction": {
+          "desktop": {
+            "width": 1440,
+            "height": 11618,
+            "sha256": "dbfb031f11dfd158ef783447def99daab744141e64267034e20d5280f440bf5a",
+            "capturedAt": "2026-11-24T15:04:40.004Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-construction-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/post-construction-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 17022,
+            "sha256": "59bc205a5b8ef295591a2bcd700c4d3caa8aec90702df342bae548ca27cccd5c",
+            "capturedAt": "2026-11-24T15:08:58.855Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-construction-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/post-construction-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "portfolio": {
+          "desktop": {
+            "width": 1440,
+            "height": 10951,
+            "sha256": "6c053318b5570b1d256b60d6091f5eb44e3549c5fe7110ed5dc727272951a925",
+            "capturedAt": "2026-11-24T15:04:47.478Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-portfolio-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15469,
+            "sha256": "11aff6d4d64115c93d2669df07c791d1394493a7b429e402cdd5cb34f23181f8",
+            "capturedAt": "2026-11-24T15:09:06.572Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-portfolio-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "commercial": {
+          "desktop": {
+            "width": 1440,
+            "height": 11676,
+            "sha256": "6c080ecd57683c1517cea6058dcc1181a841871a9be206b10cdb6b84b5794026",
+            "capturedAt": "2026-11-24T15:04:54.872Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-commercial-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/commercial-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16130,
+            "sha256": "0538ebd394cb59a666c0898ff4f26b9fdae4941160160e2d91df8340718d32d6",
+            "capturedAt": "2026-11-24T15:09:15.283Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-commercial-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/commercial-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "office": {
+          "desktop": {
+            "width": 1440,
+            "height": 10547,
+            "sha256": "9864c3e059ca28f1f2386181bdcc3ff1b37324bb75c22e0972b01e7cd0bf54d4",
+            "capturedAt": "2026-11-24T15:05:02.294Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-office-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/office-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15256,
+            "sha256": "fabe1a5040415ea95cb54523f6a830ad1448f58143017778186920eeb730f0b4",
+            "capturedAt": "2026-11-24T15:09:23.184Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-office-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/office-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "commercial-deep": {
+          "desktop": {
+            "width": 1440,
+            "height": 11773,
+            "sha256": "cac13806c9a80752d0098cea003179b613e0a0e1514d12fcff9ab1aeaaa73551",
+            "capturedAt": "2026-11-24T15:05:10.311Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-commercial-deep-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16414,
+            "sha256": "ec797c9693ab83f411733ac1fb1ffd34eeec77c7d9066d3e01fe0dffb5efd335",
+            "capturedAt": "2026-11-24T15:09:30.977Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-commercial-deep-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "home-service": {
+          "desktop": {
+            "width": 1440,
+            "height": 10118,
+            "sha256": "9573a0b081bd35dfae59d48e042e16a0c679a99f27ccca9827a4bbb3edfe2162",
+            "capturedAt": "2026-11-24T15:05:17.985Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-home-service-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/home-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14560,
+            "sha256": "79c4f5b914969be4017dbba74d01b7e2aea2cfda3e26e1d07e3361b911ab8383",
+            "capturedAt": "2026-11-24T15:09:38.808Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-home-service-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/home-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "essential": {
+          "desktop": {
+            "width": 1440,
+            "height": 10823,
+            "sha256": "409e84d74a55ba16921ba72315ce4a77ffb9f876ca80ac1939eeeeb840e69e96",
+            "capturedAt": "2026-11-24T15:05:25.027Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-essential-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/essential-clean-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15986,
+            "sha256": "df1edcf16e6e82efc61c581293de87bf791ffdb375ffb1478c6f4b543cd758e9",
+            "capturedAt": "2026-11-24T15:09:46.700Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-essential-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/essential-clean-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "deep": {
+          "desktop": {
+            "width": 1440,
+            "height": 9563,
+            "sha256": "a5128cc2a16cbfeb4f1e438afaac06ae32500476f2ad060a70e9c810138c2178",
+            "capturedAt": "2026-11-24T15:05:31.906Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-deep-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/deep-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14381,
+            "sha256": "0e2adeac5f53d058f86347e5ac1556157e645bdda6e5edb395f17f06c58d989b",
+            "capturedAt": "2026-11-24T15:09:54.013Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-deep-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/deep-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "move-in": {
+          "desktop": {
+            "width": 1440,
+            "height": 9431,
+            "sha256": "7463af33e39aae2a1908f5c60b144f81e1cc95e5b415d78902380ec581899716",
+            "capturedAt": "2026-11-24T15:05:38.846Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-move-in-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/move-in-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 13022,
+            "sha256": "bae1e058feacd55dc10ff08f3188271e9fa0413e7eba3fbe7a4f39153642106a",
+            "capturedAt": "2026-11-24T15:10:00.746Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-move-in-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/move-in-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "complex": {
+          "desktop": {
+            "width": 1440,
+            "height": 11851,
+            "sha256": "8b38e80ec94e7e31455df37a78a2fb415c7d898285937d6a816b231c0b8fdcc1",
+            "capturedAt": "2026-11-24T15:05:46.045Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-complex-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/complex-property-cleaning-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 17812,
+            "sha256": "4f1b8c5b34c2be70bf467606703930fa0e742407d0fc8a01d5b2ea01a1960861",
+            "capturedAt": "2026-11-24T15:10:08.494Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-complex-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/complex-property-cleaning-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "faq": {
+          "desktop": {
+            "width": 1440,
+            "height": 7714,
+            "sha256": "64fb8a178ee2afae1175f5647ecd9d684685061f7b13421332c698361eb093b8",
+            "capturedAt": "2026-11-24T15:05:52.711Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-faq-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/cleaning-faqs/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 8515,
+            "sha256": "5b1d1e9d8dab29b17eb4922b9b9a461769935f50b8fda31f249a38fa5a3e78d2",
+            "capturedAt": "2026-11-24T15:10:14.757Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-faq-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/cleaning-faqs/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "why": {
+          "desktop": {
+            "width": 1440,
+            "height": 14363,
+            "sha256": "087d6dbad6d58528afa1c9ef90b1a15b561bc9cacef8e4bd48f97cabb1ff74b0",
+            "capturedAt": "2026-11-24T15:06:00.107Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-why-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/why-choose-hqc/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 20516,
+            "sha256": "279decdd8a5299c5d81b1f950fef5e772cffd2deecb33230c10c3737df6e6a5d",
+            "capturedAt": "2026-11-24T15:10:23.109Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-why-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/why-choose-hqc/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        },
+        "prices": {
+          "desktop": {
+            "width": 1440,
+            "height": 14576,
+            "sha256": "5f18c14d23ca0244167af5ec792ad2f667cd702cd1b320239c27e698a9275695",
+            "capturedAt": "2026-11-24T15:06:09.042Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-prices-desktop.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/cleaning-prices-london/",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            }
+          },
+          "mobile": {
+            "width": 390,
+            "height": 21068,
+            "sha256": "f230eb952a0219c93f481b3211f41ae595d53a090b73a2d2020d587fa3dff97f",
+            "capturedAt": "2026-11-24T15:10:32.097Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "src": "/versions/captures/nov24-pedro-final-terms-prices-mobile.jpg",
+            "sourceUrl": "https://ea0b678e.hqc-london.pages.dev/cleaning-prices-london/",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          }
+        }
+      }
     }
   ],
   "pages": [

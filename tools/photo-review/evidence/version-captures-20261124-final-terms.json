@@ -1,0 +1,898 @@
+{
+  "versionId": "nov24-pedro-final-terms",
+  "sourceCommit": "14a886d9ffbc1ab23326d6677766b781d3e78b80",
+  "immutableDeploymentUrl": "https://ea0b678e.hqc-london.pages.dev",
+  "captureDate": "2026-11-24",
+  "pageCount": 26,
+  "captureCount": 52,
+  "sourceEvidence": "private:hqc-review-2026-11-24/terms-request.txt",
+  "records": [
+    {
+      "pageId": "home",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "8d4df650e4f627877df19a558e66c131d2d0fd76def7fd887750f2b361bc5996",
+      "sha256": "7de48f428775f842109ea7cb14aae81f92f7a15f4054f96a71c3d3e07170a2f7",
+      "width": 1440,
+      "height": 14417,
+      "capturedAt": "2026-11-24T15:03:03.911Z",
+      "imageCount": 39
+    },
+    {
+      "pageId": "quote",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/request-a-quote/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "7aefd79d0804ff89c6fb942da51e0ff3b5e02733662d43d7da8564d3afe64d55",
+      "sha256": "7364d4837b1d7bbb73fda5c6776161c197b4bec646531b3236c1800028dbb51c",
+      "width": 1440,
+      "height": 6682,
+      "capturedAt": "2026-11-24T15:03:11.558Z",
+      "imageCount": 10
+    },
+    {
+      "pageId": "how",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/how-we-work/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "2ac9225099c7a78db3dc3126cf3c74e5680bd024948ed388ff903b4270aaa073",
+      "sha256": "ac6b97da889748337745dae1d4095d9b9253e88034bd23f6b0777991fca9c5c8",
+      "width": 1440,
+      "height": 13444,
+      "capturedAt": "2026-11-24T15:03:18.887Z",
+      "imageCount": 23
+    },
+    {
+      "pageId": "contact",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/contact/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "1888ed1e2c246671e2451ebff2168f77d5af37eec740a70749a03c5d46861dc3",
+      "sha256": "2de8209cb3e416c58428cf4edbb92a36c8a3a6087e55472f79c0afae337a6944",
+      "width": 1440,
+      "height": 7337,
+      "capturedAt": "2026-11-24T15:03:25.916Z",
+      "imageCount": 12
+    },
+    {
+      "pageId": "tenancy",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "301a7be1f7dfbd505c5fe11f1e1a97a01bbfd9d6624f69326073770591359d9b",
+      "sha256": "93556e167159cec41da865c44f791dbc24cbfc946a50d0c1dbcf9e02029d2c58",
+      "width": 1440,
+      "height": 10142,
+      "capturedAt": "2026-11-24T15:03:32.473Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "about",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/about-high-quality-clean/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "759a7ef499d7c4bc5b661fc087881d89b96805722a60036b742a94466252eede",
+      "sha256": "625fd9c8d85eb12f9c89af268e38d200abc0469b3e2c019683d0ffe240366463",
+      "width": 1440,
+      "height": 14363,
+      "capturedAt": "2026-11-24T15:03:40.716Z",
+      "imageCount": 29
+    },
+    {
+      "pageId": "reviews",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/reviews-case-studies/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "a983cd328cfe26a8311a86c7539f9316c9077300cfbcd644a02989e41de11872",
+      "sha256": "71880f1cb775602a9c0c0e5863fe7a75db0d3e83c06d8f455d8d4705416df072",
+      "width": 1440,
+      "height": 10949,
+      "capturedAt": "2026-11-24T15:03:49.166Z",
+      "imageCount": 9
+    },
+    {
+      "pageId": "privacy",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/privacy-policy/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "165510407f57922ee5cccdaae545daf18b000bc18fc948a2bfad1e3ed473a58d",
+      "sha256": "99fbb1bc6a2d160101fe95d4094bca4ac1d427639bc6b6e0ea2515c6a21ee413",
+      "width": 1440,
+      "height": 10835,
+      "capturedAt": "2026-11-24T15:03:56.068Z",
+      "imageCount": 3
+    },
+    {
+      "pageId": "terms",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/terms-and-conditions/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "7220f523a6050ba5863347072b1aac89029f688450c6a810f695da776b7964dd",
+      "sha256": "7b3cd52bb9a2956c42e6d3e397d642aa782c1f0cee71aa743757efa7b8a55688",
+      "width": 1440,
+      "height": 18903,
+      "capturedAt": "2026-11-24T15:04:04.419Z",
+      "imageCount": 3
+    },
+    {
+      "pageId": "facilities",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "1b5552275e57a8f7a7c59828b05872168bcf10a7c9ca4d24aaf414afa9b5b43a",
+      "sha256": "fa9ac8e07a14e367c1ec40ca1cebe2811fd4ded4624440f82ea0f6b5084f4c6b",
+      "width": 1440,
+      "height": 9866,
+      "capturedAt": "2026-11-24T15:04:10.798Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "communal",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "5f3299c142fbba1d5ffdc1019acfc4d65f01af0d573b096d822ff99acaad8562",
+      "sha256": "d7ca45641d18cf76d66448cc2055ed143a1ff514f4baceabdc1660f67f0503b9",
+      "width": 1440,
+      "height": 11380,
+      "capturedAt": "2026-11-24T15:04:17.864Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "agents",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "926e8f9a786dadba7341b42bae8777829d8dd484057da1d948b2ef86886cdfdb",
+      "sha256": "232ef97f0fa4b894a8931bf721a37bee78354bfc402257a086f5731d700a84da",
+      "width": 1440,
+      "height": 10750,
+      "capturedAt": "2026-11-24T15:04:25.458Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "void",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "7ef32409fc83fa3a9c1bf6775c92d408a29915613aa21ef901f613a0b0e76788",
+      "sha256": "aa119b7f395dc2c58cd0b5e4d2fbb10298a71e4a9140f1880ef2bf0e5585cb12",
+      "width": 1440,
+      "height": 9848,
+      "capturedAt": "2026-11-24T15:04:32.712Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "construction",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "28916a4447a3509b39969f144b854d20a08256efb752c7c8ce399a25c7f6afa8",
+      "sha256": "dbfb031f11dfd158ef783447def99daab744141e64267034e20d5280f440bf5a",
+      "width": 1440,
+      "height": 11618,
+      "capturedAt": "2026-11-24T15:04:40.004Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "portfolio",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "9834fb50bee184287de87c00da567b1d666afae0aef2bee41120f3554b446e3a",
+      "sha256": "6c053318b5570b1d256b60d6091f5eb44e3549c5fe7110ed5dc727272951a925",
+      "width": 1440,
+      "height": 10951,
+      "capturedAt": "2026-11-24T15:04:47.478Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "commercial",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "12d2c9aca414ebac830966e75d65239a45f3b1f5c8c929a23548defda788efae",
+      "sha256": "6c080ecd57683c1517cea6058dcc1181a841871a9be206b10cdb6b84b5794026",
+      "width": 1440,
+      "height": 11676,
+      "capturedAt": "2026-11-24T15:04:54.872Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "office",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "4bef08146a03a3369355343cbe4fcb34f0935544c7bb3db9091719b671985374",
+      "sha256": "9864c3e059ca28f1f2386181bdcc3ff1b37324bb75c22e0972b01e7cd0bf54d4",
+      "width": 1440,
+      "height": 10547,
+      "capturedAt": "2026-11-24T15:05:02.294Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "commercial-deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "3ac78db20a0c77bb8f2e9d909622b77acbb1f473d2c10396b307fa52b09ed097",
+      "sha256": "cac13806c9a80752d0098cea003179b613e0a0e1514d12fcff9ab1aeaaa73551",
+      "width": 1440,
+      "height": 11773,
+      "capturedAt": "2026-11-24T15:05:10.311Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "home-service",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "e0c7d9a7ff02e519e6967bf5ed7e985040c8668e31359c6b709f8d5545a57c40",
+      "sha256": "9573a0b081bd35dfae59d48e042e16a0c679a99f27ccca9827a4bbb3edfe2162",
+      "width": 1440,
+      "height": 10118,
+      "capturedAt": "2026-11-24T15:05:17.985Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "essential",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "06104bda7efaef490bbc4719ca3918e857e18af84cba5b7ed9beba8c7f563cb6",
+      "sha256": "409e84d74a55ba16921ba72315ce4a77ffb9f876ca80ac1939eeeeb840e69e96",
+      "width": 1440,
+      "height": 10823,
+      "capturedAt": "2026-11-24T15:05:25.027Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "deep",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "04f79c151e10d3154e918dde44f533d443e5641340ce6e7fba7d079feae5c9d8",
+      "sha256": "a5128cc2a16cbfeb4f1e438afaac06ae32500476f2ad060a70e9c810138c2178",
+      "width": 1440,
+      "height": 9563,
+      "capturedAt": "2026-11-24T15:05:31.906Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "move-in",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "4f6542a284f2f8a90fbd90a63e2a964d1820eaf4583e6cecc801f754f2f1b405",
+      "sha256": "7463af33e39aae2a1908f5c60b144f81e1cc95e5b415d78902380ec581899716",
+      "width": 1440,
+      "height": 9431,
+      "capturedAt": "2026-11-24T15:05:38.846Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "complex",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "6aa63b8f57d8da820f3df26fcc94b398e42521c06d3296f145030a64050c2720",
+      "sha256": "8b38e80ec94e7e31455df37a78a2fb415c7d898285937d6a816b231c0b8fdcc1",
+      "width": 1440,
+      "height": 11851,
+      "capturedAt": "2026-11-24T15:05:46.045Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "faq",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "da49cf8307494890cc9578f90fbdb8f4c5db55358d6e95a84b05489ddd8ca205",
+      "sha256": "64fb8a178ee2afae1175f5647ecd9d684685061f7b13421332c698361eb093b8",
+      "width": 1440,
+      "height": 7714,
+      "capturedAt": "2026-11-24T15:05:52.711Z",
+      "imageCount": 6
+    },
+    {
+      "pageId": "why",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "9ebb13f963b733655cd8fda564ae4aa864d8a9e18d6532d7614366f618d8c81a",
+      "sha256": "087d6dbad6d58528afa1c9ef90b1a15b561bc9cacef8e4bd48f97cabb1ff74b0",
+      "width": 1440,
+      "height": 14363,
+      "capturedAt": "2026-11-24T15:06:00.107Z",
+      "imageCount": 28
+    },
+    {
+      "pageId": "prices",
+      "view": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "38f239198559f41dfeda5c28522776e40c7e4cf57b4cb495d7a790c11221a907",
+      "sha256": "5f18c14d23ca0244167af5ec792ad2f667cd702cd1b320239c27e698a9275695",
+      "width": 1440,
+      "height": 14576,
+      "capturedAt": "2026-11-24T15:06:09.042Z",
+      "imageCount": 26
+    },
+    {
+      "pageId": "home",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "d6afad25c5f32d204d487d994eeb8bc1d21d16c7e5930c0101779188e02ec49f",
+      "sha256": "b19971d207646f5f5384ebe14cc0e698259ffa0ca32043d04c1acd38ac844c86",
+      "width": 390,
+      "height": 24494,
+      "capturedAt": "2026-11-24T15:07:19.401Z",
+      "imageCount": 39
+    },
+    {
+      "pageId": "quote",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/request-a-quote/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "a87f008a575e30c2a7d55ce5a53e680a0cb3a73922436cf9759dd687eb8676a1",
+      "sha256": "69fff8462f8d50f1ce9fb0adaceb9a6607df9c2545dc1919470e983e1ee0ea16",
+      "width": 390,
+      "height": 11170,
+      "capturedAt": "2026-11-24T15:07:26.626Z",
+      "imageCount": 10
+    },
+    {
+      "pageId": "how",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/how-we-work/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "ca484675a8975067139df782a404c437fd268c518b1e2fcb46fd576fd0e82265",
+      "sha256": "281b534e211b8403db55cb292cee252a26faf5c5c8ce70592488fb020ae4061b",
+      "width": 390,
+      "height": 18926,
+      "capturedAt": "2026-11-24T15:07:34.549Z",
+      "imageCount": 23
+    },
+    {
+      "pageId": "contact",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/contact/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "72414f1ba8dd3b96936412fa9a491904b06fbbe791b6f42ae1961df4f1462917",
+      "sha256": "3d139bee6e2bc5c7fef102ec3faf8da80dc5a767a773fb3494084568bd912635",
+      "width": 390,
+      "height": 10816,
+      "capturedAt": "2026-11-24T15:07:41.201Z",
+      "imageCount": 12
+    },
+    {
+      "pageId": "tenancy",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/end-of-tenancy-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "661e3249655194a55b7894442bf8865c4fe4fd2e26ad5749b395efd4bc8fcd6f",
+      "sha256": "a38ff8f853fcde9bb2b90ba55e40ecfd759bf69e7c682333d7fd646d2a20df3c",
+      "width": 390,
+      "height": 14348,
+      "capturedAt": "2026-11-24T15:07:47.992Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "about",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/about-high-quality-clean/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "be3a0920706264fa936454c19976fdcb9e072c9aa62e111b0f92e2e80304118c",
+      "sha256": "723a6f94d60c9de0a1e1489c8f46d225a395e4e81a7ebf1ce6b6921ad3b994e7",
+      "width": 390,
+      "height": 21709,
+      "capturedAt": "2026-11-24T15:07:56.351Z",
+      "imageCount": 29
+    },
+    {
+      "pageId": "reviews",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/reviews-case-studies/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "827ca64b91ec66794dcbe9cd9fa5332337b0340a60c01cee66d252acc5efabdb",
+      "sha256": "67b76612ff751dc445f69e629c5783a509e4a25c4fdc8d3d2c622de0b439b83f",
+      "width": 390,
+      "height": 16257,
+      "capturedAt": "2026-11-24T15:08:04.399Z",
+      "imageCount": 9
+    },
+    {
+      "pageId": "privacy",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/privacy-policy/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "3de9624e58064ce913fa3597965a87ca1544e54d858d339267bf5c635a5b55a5",
+      "sha256": "f708c0dac3332ea31488ccb43db316d62cd567f2cbdfd19f37efda07b43af31f",
+      "width": 390,
+      "height": 16977,
+      "capturedAt": "2026-11-24T15:08:12.185Z",
+      "imageCount": 3
+    },
+    {
+      "pageId": "terms",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/terms-and-conditions/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "025df32c1c1aafd29f3ebe1d6c9cd57e7e0399ca0d1616e70df94f2cf935ce67",
+      "sha256": "b954a3bb0c5595247362641064551dc1279113b9adb7ea558f61e80ae3fe0c0e",
+      "width": 390,
+      "height": 29305,
+      "capturedAt": "2026-11-24T15:08:22.813Z",
+      "imageCount": 3
+    },
+    {
+      "pageId": "facilities",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/property-facilities-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "d5885c8c8dc1cba829258a7eb000bfabd5f01cb70913c7872da4e4465f4f461a",
+      "sha256": "5e5d10107b552407effe54866d15e6998f3de9abf18eaa742fef903d372a9a4a",
+      "width": 390,
+      "height": 14062,
+      "capturedAt": "2026-11-24T15:08:29.784Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "communal",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "5899d325983afae0ac6e0a7422e640b8590e48d9ba959f305b73690f6ae000ba",
+      "sha256": "ddaa8f3dbc524bd034851de865623a6c614cbb4569cd6fc346dfb4427477a870",
+      "width": 390,
+      "height": 16262,
+      "capturedAt": "2026-11-24T15:08:37.025Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "agents",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/estate-letting-agent-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "b49b30bf61608c10b766fca207418affccd3a0a221995a75994bc18ec4069484",
+      "sha256": "1b8e5ef81bd055f5b3e83541fb8d6940999ce64de30b912ad69b28f671678207",
+      "width": 390,
+      "height": 15650,
+      "capturedAt": "2026-11-24T15:08:44.325Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "void",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/move-in-void-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "60479f13e74040ccaf48cd53f828a6e63659d6e975869794f0b8662c8ea7241a",
+      "sha256": "368173716f02675326e0cdd931710c3d290dbc2ad5f91cc2219b5a4926c135d1",
+      "width": 390,
+      "height": 14524,
+      "capturedAt": "2026-11-24T15:08:51.380Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "construction",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/post-construction-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "086ed615e163688436cef05a138be4009b315db1e07fe5b1724bea81151347bb",
+      "sha256": "59bc205a5b8ef295591a2bcd700c4d3caa8aec90702df342bae548ca27cccd5c",
+      "width": 390,
+      "height": 17022,
+      "capturedAt": "2026-11-24T15:08:58.855Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "portfolio",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/portfolio-cleaning-support-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "44818478e971e47fb88887ec1f6ff47a7026bd7c7cdfc7d7858be913b3635a1e",
+      "sha256": "11aff6d4d64115c93d2669df07c791d1394493a7b429e402cdd5cb34f23181f8",
+      "width": 390,
+      "height": 15469,
+      "capturedAt": "2026-11-24T15:09:06.572Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "commercial",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/commercial-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "4aa9b52c97139ae7444c608d6e360fd183132a6716ccaea517df7a1cd18b441d",
+      "sha256": "0538ebd394cb59a666c0898ff4f26b9fdae4941160160e2d91df8340718d32d6",
+      "width": 390,
+      "height": 16130,
+      "capturedAt": "2026-11-24T15:09:15.283Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "office",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/office-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "e7af4ec22a5715d6d51aa9b46c31f7570b0ff0cecaa6bd14a823bc207aa54b30",
+      "sha256": "fabe1a5040415ea95cb54523f6a830ad1448f58143017778186920eeb730f0b4",
+      "width": 390,
+      "height": 15256,
+      "capturedAt": "2026-11-24T15:09:23.184Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "commercial-deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/commercial-deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "5f98ff71ecb4fe26115b165d7eb07281263b781de7aa60e1158a2243031a659b",
+      "sha256": "ec797c9693ab83f411733ac1fb1ffd34eeec77c7d9066d3e01fe0dffb5efd335",
+      "width": 390,
+      "height": 16414,
+      "capturedAt": "2026-11-24T15:09:30.977Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "home-service",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/home-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "c13bfc86514df371900870d6fbcc7bdc153b0a0020c3c0fdd9e595bac736b0c9",
+      "sha256": "79c4f5b914969be4017dbba74d01b7e2aea2cfda3e26e1d07e3361b911ab8383",
+      "width": 390,
+      "height": 14560,
+      "capturedAt": "2026-11-24T15:09:38.808Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "essential",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/essential-clean-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "8e4b85396a32e9a059b53c215acea040f45ffefe46bd7ba8a6a92df3d2290dc1",
+      "sha256": "df1edcf16e6e82efc61c581293de87bf791ffdb375ffb1478c6f4b543cd758e9",
+      "width": 390,
+      "height": 15986,
+      "capturedAt": "2026-11-24T15:09:46.700Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "deep",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/deep-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "ca1e3a726b0b54b2a3dfc6c16cec0f65d1ce41cef80499b25dc74e1e66801704",
+      "sha256": "0e2adeac5f53d058f86347e5ac1556157e645bdda6e5edb395f17f06c58d989b",
+      "width": 390,
+      "height": 14381,
+      "capturedAt": "2026-11-24T15:09:54.013Z",
+      "imageCount": 17
+    },
+    {
+      "pageId": "move-in",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/move-in-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "72d9fafa2b06cd35668aacdfef30b744f1e51f57b67bd1391c760e31d605dd93",
+      "sha256": "bae1e058feacd55dc10ff08f3188271e9fa0413e7eba3fbe7a4f39153642106a",
+      "width": 390,
+      "height": 13022,
+      "capturedAt": "2026-11-24T15:10:00.746Z",
+      "imageCount": 16
+    },
+    {
+      "pageId": "complex",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/complex-property-cleaning-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "f2f032a7aee341d858e8e27ad0ac01800bda744c50cf7b7560d1bb443f89d279",
+      "sha256": "4f1b8c5b34c2be70bf467606703930fa0e742407d0fc8a01d5b2ea01a1960861",
+      "width": 390,
+      "height": 17812,
+      "capturedAt": "2026-11-24T15:10:08.494Z",
+      "imageCount": 18
+    },
+    {
+      "pageId": "faq",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/cleaning-faqs/",
+      "status": 200,
+      "xRobots": "noindex, nofollow, noarchive",
+      "originalSha256": "c2bf1cd067bed782b773f66e7148d942c200402213ab9a63d49cd2011cc5f356",
+      "sha256": "5b1d1e9d8dab29b17eb4922b9b9a461769935f50b8fda31f249a38fa5a3e78d2",
+      "width": 390,
+      "height": 8515,
+      "capturedAt": "2026-11-24T15:10:14.757Z",
+      "imageCount": 6
+    },
+    {
+      "pageId": "why",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/why-choose-hqc/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "e96a2fcb8efb3fcb13ed7a0ba032b220da28b1efd5505479d9491fbfa31d39db",
+      "sha256": "279decdd8a5299c5d81b1f950fef5e772cffd2deecb33230c10c3737df6e6a5d",
+      "width": 390,
+      "height": 20516,
+      "capturedAt": "2026-11-24T15:10:23.109Z",
+      "imageCount": 28
+    },
+    {
+      "pageId": "prices",
+      "view": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "final": "https://ea0b678e.hqc-london.pages.dev/cleaning-prices-london/",
+      "status": 200,
+      "xRobots": "noindex",
+      "originalSha256": "258f21042492b9513d8da81ca88db4ed5f3ee4cfb7d3d2d07342e44ef1a1fe4e",
+      "sha256": "f230eb952a0219c93f481b3211f41ae595d53a090b73a2d2020d587fa3dff97f",
+      "width": 390,
+      "height": 21068,
+      "capturedAt": "2026-11-24T15:10:32.097Z",
+      "imageCount": 26
+    }
+  ],
+  "sourceReleaseDate": "2026-11-24",
+  "releaseStatus": "review-only",
+  "limits": "No customer-site release or form submission. Captures cover the existing 26 review routes."
+}
