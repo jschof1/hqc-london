@@ -1,133 +1,24 @@
 {
   "schemaVersion": 1,
-  "baseline": "c4c601d78e15d40998926d211a609f1d7488b8c9",
-  "request": "Pedro’s follow-up to the 23 November Terms comparison, confirmed through his native email. Private source hqc-review-2026-11-24/terms-request.txt. Prepare for review under the existing Phase 8 production hold.",
+  "baseline": "5aae74c7b52cca29bbb66d5d03dbef21e6a82025",
+  "request": "Jack’s 24 November request to restore the previously implemented 3D gold logo at the top of the current HQC site. Private source hqc-3d-header-2026-11-24/request.txt. The 24 November flat candidate remains a distinct review version.",
   "requirements": [
-    {
-      "id": "T24_SCOPE",
-      "text": "Implement Pedro’s late 23 November Terms reply and prepare a separate review version. Exact request held privately in hqc-review-2026-11-24/terms-request.txt. Cumulative baseline is 23 November v2, application 2aaba22 / immutable 6b694c82."
-    },
-    {
-      "id": "T24_TERMS",
-      "text": "Apply the exact approved follow-up to Terms §4, §6–8, §12, §20, §29 and commercial C5. Preserve the confirmed commercial schedule scope sentence and all wording outside the specified changes. Leave §17 unchanged."
-    },
-    {
-      "id": "T24_WHATSAPP",
-      "text": "Ensure the visible 07824 390336 WhatsApp route to https://wa.me/447824390336 on Contact, in the footer and in Terms §35. Contact already contains both visible text and this link. Add the messaging services (WhatsApp) supplier category in Privacy §6."
-    },
-    {
-      "id": "T24_PDF",
-      "text": "Set the Terms date to 24 November 2026 and generate the revised PDF at /terms-2026-11.pdf on the new preview. This fixed route has not gone live. Preserve the old PDF in its immutable 23 November deployment and keep the generator exclusive-create rule."
-    },
-    {
-      "id": "T24_VERIFY",
-      "text": "Update checks and verify the frozen terms delta, shared footer, WhatsApp link, accessible responsive output and the emitted PDF; preserve the quote flow and all provider settings."
-    },
-    {
-      "id": "T24_RECORD",
-      "text": "Record the exact source and preview evidence, comparison, later release gates and private review manifest without overwriting earlier version records."
-    }
+    {"id": "H3D_SCOPE", "text": "Freeze this header-only revision on the registered 24 November Terms version before editing."},
+    {"id": "H3D_HEADER", "text": "Restore the exact header artwork and responsive logo selection from 211b2a2 using the existing 3D full wordmark and compact 3D monogram."},
+    {"id": "H3D_REVIEW", "text": "Verify and append an immutable 3D header review version based on the 24 November Terms preview."}
   ],
   "allowedFiles": [
-    {
-      "path": "revisions/current.json",
-      "requirements": [
-        "T24_SCOPE"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "src/data/phase8-legal.json",
-      "requirements": [
-        "T24_TERMS",
-        "T24_WHATSAPP",
-        "T24_PDF"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "src/components/ControlledLegalPage.astro",
-      "requirements": [
-        "T24_WHATSAPP"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "src/components/Footer.astro",
-      "requirements": [
-        "T24_WHATSAPP"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "scripts/build-terms-pdf.mjs",
-      "requirements": [
-        "T24_PDF",
-        "T24_WHATSAPP"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "public/terms-2026-11.pdf",
-      "requirements": [
-        "T24_PDF"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "scripts/verify-terms-2026-11.test.mjs",
-      "requirements": [
-        "T24_VERIFY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "scripts/verify-pedro-audit-corrections.test.mjs",
-      "requirements": [
-        "T24_VERIFY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "phase8/REVIEW_CORRECTIONS_2026-11-24.md",
-      "requirements": [
-        "T24_RECORD"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "revisions/acceptance-2026-11-24.json",
-      "requirements": [
-        "T24_RECORD"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    },
-    {
-      "path": "revisions/versions.json",
-      "requirements": [
-        "T24_RECORD"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the specified changes and evidence."
-    }
+    {"path": "revisions/current.json", "requirements": ["H3D_SCOPE"], "allowDelete": false, "reason": "Planning-only scope freeze."},
+    {"path": "src/components/Header.astro", "requirements": ["H3D_HEADER"], "allowDelete": false, "reason": "Restore the original two responsive 3D header images."},
+    {"path": "revisions/versions.json", "requirements": ["H3D_REVIEW"], "allowDelete": false, "reason": "Append the verified version registry record."}
   ],
   "preserve": [
-    "Every previously approved website version and all unrelated copy, routes, forms, analytics, tracking, images and behavioural controls.",
-    "The public release, customer communications, live CRM settings and earlier private review records.",
-    "Terms cancellation table, the existing fairness paragraph, §17 and all surviving terms, including agreed commercial scope wording. Privacy Last reviewed wording remains pending."
+    "The 24 November Terms, Privacy, PDF and WhatsApp changes, and the 24 November flat-header preview at https://ea0b678e.hqc-london.pages.dev/.",
+    "Header navigation and layout, and the existing logo variants in the footer, icons and structured data.",
+    "All other copy, images, styling, routes, forms, tracking and provider settings. The Phase 8 production hold remains in force."
   ],
   "verification": [
-    "Revision scope, exact Terms and Privacy delta to c4c601d, existing regression suites, PDF extraction and visual review, checkout and working branch isolation.",
-    "Independent source review. Verify staged desktop and mobile outcomes and register a separate immutable private review version before handover."
+    "Check scope and compare the header delta with 211b2a2 and the registered flat baseline. Verify asset bytes and applicable tests.",
+    "Build a non-production preview and verify both responsive assets, header link, navigation and overflow on desktop, mobile and at 1024px. Verify the 24 November Terms date is still present. Append dated desktop/mobile evidence without modifying prior versions."
   ]
 }
