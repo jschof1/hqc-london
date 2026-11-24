@@ -7066,6 +7066,17 @@
         "path": "tools/photo-review/public/versions/manifest.json"
       },
       "captureDate": "2026-11-24"
+    },
+    {
+      "id": "nov24-hqc-3d-header",
+      "commit": "2db742fe40dd6b7aad9275d6be11417bdc7b6ad8",
+      "immutableDeploymentUrl": "https://c356b857.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov24-pedro-final-terms&after=nov24-hqc-3d-header&page=home#compare",
+      "captureManifest": {
+        "commit": "2b0fc84222cc4456acc1f93e5b1ec4a93835c552",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-24"
     }
   ]
 }
