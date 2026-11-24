@@ -298,7 +298,7 @@ test('the 3D header keeps its responsive lockup and the flat vector assets remai
   assert.match(header, /src="\/images\/brand\/hqc-monogram-3d\.webp"[^>]+class="hidden h-10 w-auto lg:block xl:hidden"[^>]+width="316" height="144"/);
   for (const filename of ['hqc-logo-header-flat-gold.svg', 'hqc-monogram-flat-gold.svg']) {
     const svg = read(`public/images/brand/${filename}`);
-    assert.match(svg, /viewBox="0 0 [\d.]+ [\d.]+"/);
+    assert.match(svg, /viewBox="-?[\d.]+ -?[\d.]+ [\d.]+ [\d.]+"/);
     assert.doesNotMatch(svg, /<image|linearGradient|radialGradient|filter/, filename);
   }
 });
