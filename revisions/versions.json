@@ -7055,6 +7055,17 @@
           }
         }
       }
+    },
+    {
+      "id": "nov24-pedro-final-terms",
+      "commit": "14a886d9ffbc1ab23326d6677766b781d3e78b80",
+      "immutableDeploymentUrl": "https://ea0b678e.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov23-pedro-terms-v2&after=nov24-pedro-final-terms&page=terms#compare",
+      "captureManifest": {
+        "commit": "e09141b10b83313fe1267578e71ee2e7ca2dec8a",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-24"
     }
   ]
 }

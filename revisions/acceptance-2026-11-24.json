@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-24",
+  "sourceEvidence": "private:hqc-review-2026-11-24/terms-request.txt",
+  "baseline": "c4c601d78e15d40998926d211a609f1d7488b8c9",
+  "sourceCommit": "14a886d9ffbc1ab23326d6677766b781d3e78b80",
+  "immutableDeploymentUrl": "https://ea0b678e.hqc-london.pages.dev",
+  "productionReleased": false,
+  "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov23-pedro-terms-v2&after=nov24-pedro-final-terms&page=terms#compare",
+  "captureManifest": {
+    "commit": "e09141b10b83313fe1267578e71ee2e7ca2dec8a",
+    "path": "tools/photo-review/public/versions/manifest.json"
+  },
+  "checks": {
+    "independentSourceReview": "PASS, no blockers. Added regression assertions for exact quotations and advance payment wording. Preserved the remaining quotation bullet punctuation.",
+    "tests": "100 tests passed. Guarded Astro review build and revision scope passed.",
+    "hosted": "Fixed preview and all affected links checked. PDF SHA-256 matches source. Seventeen location pages and coverage hub retain the previous candidate’s main copy and links.",
+    "reviewRoom": "52 desktop/mobile captures on 26 routes. Worker d45b5fc5-7745-428f-9e18-b49346258c77. Hosted manifest exactly matches the committed manifest. All 52 image hashes match. Earlier entries, photo choices and comments match the pre-release backup.",
+    "production": "Production readback remains the main deployment 130015d3 from dec5ec0."
+  },
+  "held": [
+    "Pedro’s final Terms review and sign-off.",
+    "Privacy Last reviewed wording.",
+    "Phase 8 enquiry reconciliation, booking/payment, redirects and pop-up evidence.",
+    "Protected main publication."
+  ]
+}
