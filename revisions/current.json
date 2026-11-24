@@ -1,459 +1,459 @@
 {
   "schemaVersion": 1,
-  "baseline": "c82fe49180cb9b1019aeba7aada797ef0adc9273",
-  "request": "Append the fixed 24 November Terms follow-up preview for Pedro, scoped by its application revision. Exact request held privately. Earlier review versions remain available.",
+  "baseline": "e09141b10b83313fe1267578e71ee2e7ca2dec8a",
+  "request": "Append a 24 November 3D header comparison for Jack’s latest HQC request, retaining the separate 24 November flat version. Private source hqc-3d-header-2026-11-24/request.txt.",
   "requirements": [
     {
-      "id": "T24_ROOM",
-      "text": "Append Nov 24 candidate and its 26 desktop/mobile capture pairs, preserving all existing version entries and Worker behavior."
+      "id": "H3D_ROOM",
+      "text": "Append one new immutable review version with dated desktop/mobile capture pairs."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261124-final-terms.json",
+      "path": "tools/photo-review/evidence/version-captures-20261124-3d-header.json",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-home-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-home-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-home-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-quote-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-quote-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-how-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-how-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-how-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-how-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-contact-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-contact-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-contact-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-contact-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-tenancy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-tenancy-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-tenancy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-tenancy-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-about-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-about-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-about-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-about-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-reviews-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-reviews-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-reviews-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-reviews-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-privacy-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-privacy-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-privacy-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-privacy-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-terms-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-terms-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-terms-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-terms-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-facilities-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-facilities-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-facilities-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-facilities-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-communal-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-communal-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-communal-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-communal-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-agents-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-agents-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-agents-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-agents-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-void-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-void-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-void-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-void-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-construction-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-construction-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-construction-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-construction-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-portfolio-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-portfolio-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-portfolio-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-portfolio-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-commercial-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-commercial-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-commercial-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-commercial-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-office-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-office-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-office-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-office-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-commercial-deep-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-commercial-deep-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-commercial-deep-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-commercial-deep-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-home-service-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-home-service-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-home-service-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-home-service-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-essential-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-essential-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-essential-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-essential-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-deep-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-deep-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-deep-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-deep-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-move-in-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-move-in-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-move-in-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-move-in-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-complex-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-complex-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-complex-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-complex-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-faq-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-faq-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-faq-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-faq-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-why-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-why-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-why-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-why-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-prices-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-prices-desktop.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov24-pedro-final-terms-prices-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov24-hqc-3d-header-prices-mobile.jpg",
       "requirements": [
-        "T24_ROOM"
+        "H3D_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only version evidence."
+      "reason": "Append-only review evidence."
     }
   ],
   "preserve": [
-    "All earlier captures, review comments, choices, access settings and Worker behavior. No customer-site production release."
+    "Prior snapshots, photo choices, comments, Worker code, bindings, secrets and production applications."
   ],
   "verification": [
-    "Read-only browser capture and health checks, committed manifest integrity, no prior asset delta, protected hosted readback."
+    "Verify live logos and captures, commit and check capture hashes, verify protected hosted readback."
   ]
 }
