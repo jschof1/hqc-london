@@ -291,17 +291,15 @@ test('Reviews groups resolve the seven named reviews verbatim and remain absent 
   assert.ok(source.includes("page.slug === 'reviews-case-studies' ? []"));
 });
 
-test('flat header assets keep their vector proportions at full and narrow-nav sizes', () => {
+test('the 3D header keeps its responsive lockup and the flat vector assets remain reusable', () => {
   const header = read('src/components/Header.astro');
-  assert.ok(!header.includes('hqc-logo-header-3d') && !header.includes('hqc-monogram-3d'));
+  assert.doesNotMatch(header, /src="[^"]+flat-gold/);
+  assert.match(header, /src="\/images\/brand\/hqc-logo-header-3d\.svg"[^>]+class="block h-8 w-auto sm:h-9 lg:hidden xl:block xl:h-10"[^>]+width="1212" height="184"/);
+  assert.match(header, /src="\/images\/brand\/hqc-monogram-3d\.webp"[^>]+class="hidden h-10 w-auto lg:block xl:hidden"[^>]+width="316" height="144"/);
   for (const filename of ['hqc-logo-header-flat-gold.svg', 'hqc-monogram-flat-gold.svg']) {
     const svg = read(`public/images/brand/${filename}`);
-    const box = svg.match(/viewBox="([^"]+)"/)[1].split(/\s+/).map(Number);
-    const tag = header.match(new RegExp(`<img[^>]+src="/images/brand/${filename.replaceAll('.', '\\.')}"[^>]*>`))[0];
-    const width = Number(tag.match(/width="([^"]+)"/)[1]);
-    const height = Number(tag.match(/height="([^"]+)"/)[1]);
-    assert.equal(width / height, box[2] / box[3]);
-    assert.ok(!/<image|linearGradient|radialGradient|filter/.test(svg), filename);
+    assert.match(svg, /viewBox="0 0 [\d.]+ [\d.]+"/);
+    assert.doesNotMatch(svg, /<image|linearGradient|radialGradient|filter/, filename);
   }
 });
 
