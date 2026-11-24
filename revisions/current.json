@@ -1,168 +1,133 @@
 {
   "schemaVersion": 1,
-  "baseline": "4751e5b797e8b46b1121e565aa933335ca52a63b",
-  "request": "Jack 23 November 2026: action Pedro's outstanding emailed updates (20 Nov final Terms amendments, confirmed by 21 Nov WhatsApp) and keep the version review ready. Exact source private hqc-review-2026-11-23/request.txt. Earlier 12/13/17 Nov requests already implemented at ac24c18/99efba8e remain cumulative requirements. Preview only; no production release or client send.",
+  "baseline": "c4c601d78e15d40998926d211a609f1d7488b8c9",
+  "request": "Pedro’s follow-up to the 23 November Terms comparison, confirmed through his native email. Private source hqc-review-2026-11-24/terms-request.txt. Prepare for review under the existing Phase 8 production hold.",
   "requirements": [
     {
-      "id": "T23_SCOPE",
-      "text": "Jack 23 Nov 2026 asks to action Pedro's outstanding emailed updates and keep the version review ready. Only new website request: Pedro 20 Nov final Terms clause amendments (PDF sha256 391275969fa5...), confirmed by his 21 Nov WhatsApp. Private evidence hqc-review-2026-11-23. Cumulative baseline: application source ac24c18 / immutable 99efba8e (nov17-pedro-followup-v2) and every earlier accepted 12/13/17 Nov requirement remain in force. Preview only; production hold, legal sign-off and client acceptance remain separate."
+      "id": "T24_SCOPE",
+      "text": "Implement Pedro’s late 23 November Terms reply and prepare a separate review version. Exact request held privately in hqc-review-2026-11-24/terms-request.txt. Cumulative baseline is 23 November v2, application 2aaba22 / immutable 6b694c82."
     },
     {
-      "id": "T23_TERMS",
-      "text": "Apply the PDF's Implementation checklist to Terms data exactly as written: new 'HQC service commitment and re-clean' section after s4 (48h); replace s10 with 14-day right to cancel plus model cancellation form; three s8 additions (discount balance not charged on HQC material failure; replace second paragraph of Rescheduled or skipped visits with three consecutive cancelled visits wording; new Price changes for recurring clients); replace only the four client cancellation rows of the s11 table with fixed tiers (0/25/50/100%) plus the paragraph below it, keeping other approved rows; add Payment, VAT and quotations wording to s7 and 30-day quotation validity to s4 (Pedro's exact Stripe wording is authoritative for Terms s7 only; Privacy stays supplier categories); replace s26 with damage/valuables/photos keeping the unlawful-liability sentence; new keys, codes and alarms section after s14 (GBP500); add precedence to s1, complaints 2/10 working days to s24, copy-of-Terms text to s31; replace s33 Contact with the exact six lines including VAT 519 1014 22; commercial clients schedule C1-C4 at the end; renumber all sections and update internal cross-references; header 'Last updated: 23 November 2026'. HOLD s27 Insurance and s15/s18 unchanged pending insurance renewal. Preserve every other approved clause, the approved s5 and s7 booking-system paragraph, and Privacy unchanged."
+      "id": "T24_TERMS",
+      "text": "Apply the exact approved follow-up to Terms §4, §6–8, §12, §20, §29 and commercial C5. Preserve the confirmed commercial schedule scope sentence and all wording outside the specified changes. Leave §17 unchanged."
     },
     {
-      "id": "T23_VAT",
-      "text": "Add 'VAT registration number: 519 1014 22' to the existing footer company details only, in the existing style."
+      "id": "T24_WHATSAPP",
+      "text": "Ensure the visible 07824 390336 WhatsApp route to https://wa.me/447824390336 on Contact, in the footer and in Terms §35. Contact already contains both visible text and this link. Add the messaging services (WhatsApp) supplier category in Privacy §6."
     },
     {
-      "id": "T23_PDF",
-      "text": "Publish the new Terms as a dated, fixed-address PDF at /terms-2026-11.pdf generated from the same Terms content, without altering the HTML page. Preview only until Pedro signs off."
+      "id": "T24_PDF",
+      "text": "Set the Terms date to 24 November 2026 and generate the revised PDF at /terms-2026-11.pdf on the new preview. This fixed route has not gone live. Preserve the old PDF in its immutable 23 November deployment and keep the generator exclusive-create rule."
     },
     {
-      "id": "T23_EARLYSTART",
-      "text": "Add Pedro's exact 14-day early-start tick-box text to the request-a-quote route: show and require it only for home (consumer) routes when the required/desired service date is within 14 days of today; otherwise hidden and not submitted. Pass it through the existing form allowlist and readable summary as an additive field. Do not change other fields, routing, consent, webhook destinations or success behaviour."
+      "id": "T24_VERIFY",
+      "text": "Update checks and verify the frozen terms delta, shared footer, WhatsApp link, accessible responsive output and the emitted PDF; preserve the quote flow and all provider settings."
     },
     {
-      "id": "T23_VERIFY",
-      "text": "Scope check while editing; update only the stale assertions in the existing Pedro audit test that the newer Terms supersede (Stripe in Terms s7, renumbered booking section), keeping all Privacy/Automaid/Launch27 protections; add Terms 2026-11 regression tests and an early-start form test. Run forms, analytics, corrections and revision suites, then review build. Independent other-provider hunk review. Non-production Pages preview, desktop/mobile captures of Terms, homepage footer and Request a Quote (with tick-box shown), append a new version to the review room without altering earlier versions."
-    },
-    {
-      "id": "T23_RECORD",
-      "text": "Record status, checks, holds and evidence in phase8/REVIEW_CORRECTIONS_2026-11-23.md, revisions/acceptance-2026-11-23.json and revisions/versions.json. No private email text, access codes or links. No client send, provider write, live submission or production release."
+      "id": "T24_RECORD",
+      "text": "Record the exact source and preview evidence, comparison, later release gates and private review manifest without overwriting earlier version records."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "T23_SCOPE"
+        "T24_SCOPE"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
       "path": "src/data/phase8-legal.json",
       "requirements": [
-        "T23_TERMS"
+        "T24_TERMS",
+        "T24_WHATSAPP",
+        "T24_PDF"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
       "path": "src/components/ControlledLegalPage.astro",
       "requirements": [
-        "T23_TERMS"
+        "T24_WHATSAPP"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
       "path": "src/components/Footer.astro",
       "requirements": [
-        "T23_VAT"
+        "T24_WHATSAPP"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "public/terms-2026-11.pdf",
-      "requirements": [
-        "T23_PDF"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
       "path": "scripts/build-terms-pdf.mjs",
       "requirements": [
-        "T23_PDF"
+        "T24_PDF",
+        "T24_WHATSAPP"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
-      "path": "src/pages/request-a-quote.astro",
+      "path": "public/terms-2026-11.pdf",
       "requirements": [
-        "T23_EARLYSTART"
+        "T24_PDF"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/lib/form-submission.ts",
-      "requirements": [
-        "T23_EARLYSTART"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "src/pages/api/quote.ts",
-      "requirements": [
-        "T23_EARLYSTART"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
-    },
-    {
-      "path": "scripts/verify-pedro-audit-corrections.test.mjs",
-      "requirements": [
-        "T23_VERIFY"
-      ],
-      "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
       "path": "scripts/verify-terms-2026-11.test.mjs",
       "requirements": [
-        "T23_VERIFY"
+        "T24_VERIFY"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
-      "path": "scripts/verify-form-submission.test.mjs",
+      "path": "scripts/verify-pedro-audit-corrections.test.mjs",
       "requirements": [
-        "T23_VERIFY",
-        "T23_EARLYSTART"
+        "T24_VERIFY"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
-      "path": "phase8/REVIEW_CORRECTIONS_2026-11-23.md",
+      "path": "phase8/REVIEW_CORRECTIONS_2026-11-24.md",
       "requirements": [
-        "T23_RECORD"
+        "T24_RECORD"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
-      "path": "revisions/acceptance-2026-11-23.json",
+      "path": "revisions/acceptance-2026-11-24.json",
       "requirements": [
-        "T23_RECORD"
+        "T24_RECORD"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     },
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "T23_RECORD"
+        "T24_RECORD"
       ],
       "allowDelete": false,
-      "reason": "Limited to the numbered requirements; file inclusion grants no unrelated changes."
+      "reason": "Limited to the specified changes and evidence."
     }
   ],
   "preserve": [
-    "All content, layout, images, routes, forms, analytics, schema, redirects and review records at ac24c18 / 99efba8e, and every earlier accepted Pedro requirement.",
-    "Privacy Policy unchanged (supplier categories, pending Last reviewed placeholder). Terms s5 approved meaning, s7 booking-system paragraph, s15, s18 and s27 unchanged.",
-    "Header/footer/favicon flat gold logo unchanged; no 3D logo placement without Pedro's choice.",
-    "Phase 8 production hold, environment-specific preview noindex, existing intake reconciliation, no live submissions or provider writes."
+    "Every previously approved website version and all unrelated copy, routes, forms, analytics, tracking, images and behavioural controls.",
+    "The public release, customer communications, live CRM settings and earlier private review records.",
+    "Terms cancellation table, the existing fairness paragraph, §17 and all surviving terms, including agreed commercial scope wording. Privacy Last reviewed wording remains pending."
   ],
   "verification": [
-    "npm run check:revision:scope; node --test scripts/verify-terms-2026-11.test.mjs scripts/verify-pedro-audit-corrections.test.mjs; npm run test:forms; npm run test:analytics; npm run test:revisions; npm run build:review (guarded light).",
-    "Independent Codex hunk review; hosted preview desktop/mobile QA and captures; review-room version appended and read back; npm run check:revision before handover."
+    "Revision scope, exact Terms and Privacy delta to c4c601d, existing regression suites, PDF extraction and visual review, checkout and working branch isolation.",
+    "Independent source review. Verify staged desktop and mobile outcomes and register a separate immutable private review version before handover."
   ]
 }
