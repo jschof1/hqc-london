@@ -108,8 +108,17 @@ test('§1 precedence, §4 quotation validity and the service commitment are verb
   assert.ok(!/Decision for Pedro|P\.N:|Decided \(/.test(JSON.stringify(legal.terms)));
 });
 
+test('quotations retain exactly the three remaining bullets', () => {
+  assert.deepEqual(byNumber(now, 4).blocks.find((block) => block.kind === 'ul').items, [
+    'a quotation covers only the stated scope;',
+    'additional work is not automatically included;',
+    'quotations remain subject to availability until booking is confirmed;'
+  ]);
+});
+
 test('VAT appears in §7 only and Payment retains Pedro\'s Stripe text without the duplicate subsection', () => {
   assert.equal(texts(byNumber(now, 7))[0], 'HQC is VAT-registered. Prices for consumers include VAT. Prices for business clients may be quoted excluding VAT, and will say so. Business clients receive a VAT invoice.');
+  assert.equal(texts(byNumber(now, 8))[0], 'Payment timing depends on the service and may include payment at booking, advance payment before service, payment on completion, recurring card payment or invoicing under agreed commercial terms.');
   const tail = texts(byNumber(now, 8)).slice(-8);
   assert.deepEqual(tail, [
     'How you pay',
