@@ -9020,6 +9020,758 @@
           }
         }
       }
+    },
+    {
+      "id": "nov25-pedro-final-fixes",
+      "label": "25 Nov: final website fixes (preview)",
+      "date": "2026-11-25",
+      "captureDate": "2026-11-25",
+      "commit": "6cfbe188d4a58b49827ce341f27cbad56204c8c0",
+      "deploymentUrl": "https://1d7154bb.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://1d7154bb.hqc-london.pages.dev",
+      "kind": "review candidate",
+      "summary": "The next review includes the final website changes requested after the 24 November Terms and 3D logo review.",
+      "changes": [
+        "Dated Privacy Policy, dated Terms PDF download beside the Terms date, and advance-payment wording on Essential Clean.",
+        "3D header logo with descriptive alternative text on both responsive assets.",
+        "A distinct illustrative marble detail for Complex & Executive and content-sized homepage reviews on mobile.",
+        "Recorded validation for an eligible home quote with its early-start box unticked."
+      ],
+      "outstanding": [
+        "Final review of this preview.",
+        "Production indexing readback after the authorised release, outstanding GoHighLevel checks and live Launch27 booking/payment handoff."
+      ],
+      "provenance": "Captured from the immutable preview at 1440×900 and 390×844 with reduced motion, optional cookies rejected and browser write requests blocked.",
+      "pages": {
+        "home": {
+          "desktop": {
+            "width": 1440,
+            "height": 14417,
+            "sha256": "f2c5dcabc0f54734c8389ff5f845f08308b45f573dc14c09e40969a43b8f02ab",
+            "capturedAt": "2026-11-25T12:55:50.293Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-home-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 24228,
+            "sha256": "48f4fdb69e87450f436b7f9f13f34c2cc4530aaff01c577ebb2d345074955044",
+            "capturedAt": "2026-11-25T12:53:14.958Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-home-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/"
+          }
+        },
+        "quote": {
+          "desktop": {
+            "width": 1440,
+            "height": 6682,
+            "sha256": "234c15e73e15911dc175b4be4e76c16421ed0c339ede31cdbae5fbe67badddb9",
+            "capturedAt": "2026-11-25T12:55:57.788Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-quote-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/request-a-quote/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 11170,
+            "sha256": "eee18c229246a8e382558c08083b206b52ba28c695f1ee398ec3419b96e026f4",
+            "capturedAt": "2026-11-25T12:53:22.883Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-quote-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/request-a-quote/"
+          }
+        },
+        "how": {
+          "desktop": {
+            "width": 1440,
+            "height": 13444,
+            "sha256": "597f05a503919408445c7522260402b253b99da7b2f5d036fbb4153e8740ced6",
+            "capturedAt": "2026-11-25T12:56:04.646Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-how-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/how-we-work/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 18926,
+            "sha256": "d9bd6a350dc4684bf1b89326456a492d9e7ad367714f7f506d32b5104f0acb7b",
+            "capturedAt": "2026-11-25T12:53:30.904Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-how-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/how-we-work/"
+          }
+        },
+        "contact": {
+          "desktop": {
+            "width": 1440,
+            "height": 7337,
+            "sha256": "4a2507fff5ef29c54c7051057250524894a9033b42e13490e2f0865b7ee3b59d",
+            "capturedAt": "2026-11-25T12:56:12.042Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-contact-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/contact/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 10816,
+            "sha256": "ac435100bfa8a1e9eca3b5525466caaf958c09a131044b46281840a909b81dbe",
+            "capturedAt": "2026-11-25T12:53:37.539Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-contact-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/contact/"
+          }
+        },
+        "tenancy": {
+          "desktop": {
+            "width": 1440,
+            "height": 10142,
+            "sha256": "9f279f9fc33594b6bec33a4a2b3cdb0ad6b17853fbe4e46597dbba88a6ed2fab",
+            "capturedAt": "2026-11-25T12:56:19.054Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-tenancy-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14348,
+            "sha256": "a80e106c48efd022d7970e90f60e7139e0d59ed55a0c631d7d6a777652cf4cc2",
+            "capturedAt": "2026-11-25T12:53:44.907Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-tenancy-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/end-of-tenancy-cleaning-london/"
+          }
+        },
+        "about": {
+          "desktop": {
+            "width": 1440,
+            "height": 14363,
+            "sha256": "ee3e90af699768c5f65815aa70bda40123cb626b9141322b444e09470f855d35",
+            "capturedAt": "2026-11-25T12:56:26.781Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-about-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/about-high-quality-clean/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 21709,
+            "sha256": "e52e7c54f195e0cc0915d41e87173f31fdb8324e2d3f174df68a5e6685b5d427",
+            "capturedAt": "2026-11-25T12:53:53.528Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-about-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/about-high-quality-clean/"
+          }
+        },
+        "reviews": {
+          "desktop": {
+            "width": 1440,
+            "height": 10949,
+            "sha256": "43527a3e40c7c241f51b0ccbafbb0d400a8a3bfb8ed91699fef2b2580714a8d7",
+            "capturedAt": "2026-11-25T12:56:34.233Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-reviews-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/reviews-case-studies/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15915,
+            "sha256": "6673cb584ff7b1034b1cfe666b5b5624715fb18f382eced20096a3a49fe175e4",
+            "capturedAt": "2026-11-25T12:54:01.321Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-reviews-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/reviews-case-studies/"
+          }
+        },
+        "privacy": {
+          "desktop": {
+            "width": 1440,
+            "height": 10835,
+            "sha256": "415b3e7e045f94d4a3c4865a5518e26c4f3ec333306d8f62c0e66c207d2abd99",
+            "capturedAt": "2026-11-25T12:56:40.602Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-privacy-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/privacy-policy/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16951,
+            "sha256": "1c7fabe4657a626e2c40136e3060ef5e78825a10c4220c52fbf7ecf50d2bc73e",
+            "capturedAt": "2026-11-25T12:54:09.240Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-privacy-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/privacy-policy/"
+          }
+        },
+        "terms": {
+          "desktop": {
+            "width": 1440,
+            "height": 18903,
+            "sha256": "70e0403941ea0fc8be71d85ff8c52fe5bfad7b2dce75fa9eab20baeadf67582b",
+            "capturedAt": "2026-11-25T12:56:48.008Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-terms-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/terms-and-conditions/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 29360,
+            "sha256": "4fc180cad714d697481c8f203a9eef248fcadc18d9d7d348ef802ba073c258ae",
+            "capturedAt": "2026-11-25T12:54:19.515Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-terms-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/terms-and-conditions/"
+          }
+        },
+        "facilities": {
+          "desktop": {
+            "width": 1440,
+            "height": 9866,
+            "sha256": "0c3376f6e2630d4a9bf5fdb159d02a2f28655cb196e52db42ff701cb4373a6e8",
+            "capturedAt": "2026-11-25T12:56:54.088Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-facilities-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/property-facilities-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14062,
+            "sha256": "287e3aeda363a1690bb34e1ee573aa2ebba19de93572f7ffb1642f4e20d038d2",
+            "capturedAt": "2026-11-25T12:54:26.481Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-facilities-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/property-facilities-cleaning-london/"
+          }
+        },
+        "communal": {
+          "desktop": {
+            "width": 1440,
+            "height": 11380,
+            "sha256": "44918d025cc769b875e4fb1a56583cd0cd81fe5676613046da5a36d3fc8eb51f",
+            "capturedAt": "2026-11-25T12:57:00.653Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-communal-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/communal-area-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16262,
+            "sha256": "ed5f5dcd15d6961df7b55a9b337066e4612788e058ebe2d53d7e979a06f561fe",
+            "capturedAt": "2026-11-25T12:54:34.024Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-communal-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/communal-area-cleaning-london/"
+          }
+        },
+        "agents": {
+          "desktop": {
+            "width": 1440,
+            "height": 10750,
+            "sha256": "efda9e7e1f08b5f0a167570ed0ae3c8559d80e0935931bff6bc96eec5cbedf84",
+            "capturedAt": "2026-11-25T12:57:07.753Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-agents-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/estate-letting-agent-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15650,
+            "sha256": "83d81609d8e463c26ba8ff57526c92a8b09ba3fdf1bad2035b09af52d6577205",
+            "capturedAt": "2026-11-25T12:54:41.547Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-agents-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/estate-letting-agent-cleaning-london/"
+          }
+        },
+        "void": {
+          "desktop": {
+            "width": 1440,
+            "height": 9848,
+            "sha256": "940d194cd28018c0a806a3793c83d341f4148506248ae1b9c36698387aef72b1",
+            "capturedAt": "2026-11-25T12:57:14.610Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-void-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/move-in-void-property-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14524,
+            "sha256": "0ebbbf645b40eef93aa7647684ca6da2b4170293246f3a3ed57c4eed7a705b5c",
+            "capturedAt": "2026-11-25T12:54:48.516Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-void-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/move-in-void-property-cleaning-london/"
+          }
+        },
+        "construction": {
+          "desktop": {
+            "width": 1440,
+            "height": 11618,
+            "sha256": "4c8448b3d0d2d5745ce025a6122c7fe45b7163c2a15294669a48c2cded0e71f2",
+            "capturedAt": "2026-11-25T12:57:21.936Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-construction-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/post-construction-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 17022,
+            "sha256": "5cbdfbf150f8773f24efddf69cfbfff3053b92161e5d5e20c8443e4dfd3412ff",
+            "capturedAt": "2026-11-25T12:54:56.289Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-construction-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/post-construction-cleaning-london/"
+          }
+        },
+        "portfolio": {
+          "desktop": {
+            "width": 1440,
+            "height": 10951,
+            "sha256": "ccae008db1348183dfe9aacde9885545b12a455799c8e9404978b38a5ab6d4e1",
+            "capturedAt": "2026-11-25T12:57:30.913Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-portfolio-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/portfolio-cleaning-support-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15469,
+            "sha256": "ff8565a74824b86120db093f10beee7d6ef99166bb7ebf11d1f6d0c304637108",
+            "capturedAt": "2026-11-25T12:55:04.227Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-portfolio-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/portfolio-cleaning-support-london/"
+          }
+        },
+        "commercial": {
+          "desktop": {
+            "width": 1440,
+            "height": 11676,
+            "sha256": "265146f437e553ffb46050cb59cfcd3f3b6908fc794656fbaf2f1466481ea058",
+            "capturedAt": "2026-11-25T12:57:38.171Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-commercial-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/commercial-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16130,
+            "sha256": "e71605a03b8d45a498f48d85eb16908755c61dac1d7dbf0fc9bf59cd6de1794d",
+            "capturedAt": "2026-11-25T12:55:12.831Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-commercial-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/commercial-cleaning-london/"
+          }
+        },
+        "office": {
+          "desktop": {
+            "width": 1440,
+            "height": 10547,
+            "sha256": "462504a246bd4352f33c0d02b5750b76eef0cac4d9f77e730afd2b7e9423aee3",
+            "capturedAt": "2026-11-25T12:57:45.784Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-office-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/office-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15256,
+            "sha256": "7cc2271f74a753a1d56dad3fb4ba7d5ce8c820977439924b22cbcaae05aebfc6",
+            "capturedAt": "2026-11-25T12:55:20.904Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-office-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/office-cleaning-london/"
+          }
+        },
+        "commercial-deep": {
+          "desktop": {
+            "width": 1440,
+            "height": 11773,
+            "sha256": "3a47128c6ff74e69c58a8c321ea32ada77ca590a7ec5db4ac631f521929b2dbe",
+            "capturedAt": "2026-11-25T12:57:53.179Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-commercial-deep-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/commercial-deep-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 16414,
+            "sha256": "11b8861fb1f2d90c5ffce453895a64bfd3fd09401406429dbbd57ed7971ff62c",
+            "capturedAt": "2026-11-25T12:55:28.652Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-commercial-deep-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/commercial-deep-cleaning-london/"
+          }
+        },
+        "home-service": {
+          "desktop": {
+            "width": 1440,
+            "height": 10118,
+            "sha256": "ab46c9f4735ba37c6e82112f4b4a50b9dd4e5d9042ce9e72d833d098c592e64f",
+            "capturedAt": "2026-11-25T12:58:03.339Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-home-service-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/home-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14560,
+            "sha256": "cc89993d49a59fbd14497ed4d500b545c4ff719995868de4bd394ea9a3574def",
+            "capturedAt": "2026-11-25T12:55:35.989Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-home-service-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/home-cleaning-london/"
+          }
+        },
+        "essential": {
+          "desktop": {
+            "width": 1440,
+            "height": 10823,
+            "sha256": "95fc63757bbd03af1cbc27c9f125c24c09a616bb6844465a97af699372f76f9e",
+            "capturedAt": "2026-11-25T12:58:10.660Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-essential-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/essential-clean-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 15986,
+            "sha256": "d6f68777a8ca007d91f1d3c03a73d6cecef685b957a72e0ea0928e3e02a319ba",
+            "capturedAt": "2026-11-25T12:55:43.747Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-essential-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/essential-clean-london/"
+          }
+        },
+        "deep": {
+          "desktop": {
+            "width": 1440,
+            "height": 9563,
+            "sha256": "f3fb3ed9a41953aefec1e9504a21d6b650cc95739cf4bf2ac8edb4fc3adbe1b9",
+            "capturedAt": "2026-11-25T12:58:17.510Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-deep-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/deep-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 14381,
+            "sha256": "df567aad0b03415e1ecbbc403a942fe747a47df04a1e17cb8fb8d08a365ef637",
+            "capturedAt": "2026-11-25T12:55:51.237Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-deep-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/deep-cleaning-london/"
+          }
+        },
+        "move-in": {
+          "desktop": {
+            "width": 1440,
+            "height": 9431,
+            "sha256": "c2440c145322a9b398bb8ef4f9aa0c58aa05faa315f8191d960183bc2e7dd345",
+            "capturedAt": "2026-11-25T12:58:24.293Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-move-in-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/move-in-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 13022,
+            "sha256": "67c9487668d32106fe50e11d7dfde5eb1f9bc9ba57247b4c6dbed2224f59336a",
+            "capturedAt": "2026-11-25T12:55:58.598Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-move-in-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/move-in-cleaning-london/"
+          }
+        },
+        "complex": {
+          "desktop": {
+            "width": 1440,
+            "height": 11851,
+            "sha256": "c0397377425040f53e2fa5ced932b7dd56e9c2da1324e9aa99e42cdd2000d995",
+            "capturedAt": "2026-11-25T12:58:31.683Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-complex-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/complex-property-cleaning-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 17812,
+            "sha256": "5cac46ed61e0859c087e1f389b8b139075e96fa839b5a31d9e97469f72702adf",
+            "capturedAt": "2026-11-25T12:56:06.364Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-complex-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/complex-property-cleaning-london/"
+          }
+        },
+        "faq": {
+          "desktop": {
+            "width": 1440,
+            "height": 7714,
+            "sha256": "e90ea68828e80be0a2e6695878058538ca78e9f9be302d174a989b645d6e3e19",
+            "capturedAt": "2026-11-25T12:58:38.190Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-faq-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/cleaning-faqs/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 8515,
+            "sha256": "37f0c3bf333cb51d95623a6de3094deaacc1b393a2cccf4cd8cc41fc129be677",
+            "capturedAt": "2026-11-25T12:56:12.460Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-faq-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/cleaning-faqs/"
+          }
+        },
+        "why": {
+          "desktop": {
+            "width": 1440,
+            "height": 14363,
+            "sha256": "f8bf8be83d625976d6eafca0498757b70119c6450769f70760fd3a93e2caf42b",
+            "capturedAt": "2026-11-25T12:58:45.848Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-why-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/why-choose-hqc/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 20516,
+            "sha256": "9afe1689c5b6348debe8099523ad24a922fc0a5c97f6f421609b2a177f74aaa4",
+            "capturedAt": "2026-11-25T12:56:21.095Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-why-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/why-choose-hqc/"
+          }
+        },
+        "prices": {
+          "desktop": {
+            "width": 1440,
+            "height": 14576,
+            "sha256": "8fce106184372f9b1d3da186c2abf29d9c602f6013fdfcc977d1d20414b576ca",
+            "capturedAt": "2026-11-25T12:58:56.175Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-prices-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/cleaning-prices-london/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 21068,
+            "sha256": "355d79ce2b08f518397deec774ccc2c56f8aee0f69aea81bbba3d9539bd852b9",
+            "capturedAt": "2026-11-25T12:56:30.047Z",
+            "method": "playwright-fullpage-png; sharp-jpeg78; reduced-motion; scroll-and-decode; reject-optional-cookies; write-requests-blocked; screenshot-animations-disabled",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-prices-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/cleaning-prices-london/"
+          }
+        }
+      }
     }
   ],
   "pages": [
