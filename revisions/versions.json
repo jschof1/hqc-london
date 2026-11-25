@@ -7077,6 +7077,17 @@
         "path": "tools/photo-review/public/versions/manifest.json"
       },
       "captureDate": "2026-11-24"
+    },
+    {
+      "id": "nov25-pedro-final-fixes",
+      "commit": "6cfbe188d4a58b49827ce341f27cbad56204c8c0",
+      "immutableDeploymentUrl": "https://1d7154bb.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov24-hqc-3d-header&after=nov25-pedro-final-fixes&page=home#compare",
+      "captureManifest": {
+        "commit": "5730bdf6bb028e732384d94e4080749e009e804a",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-25"
     }
   ]
 }
