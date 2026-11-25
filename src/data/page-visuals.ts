@@ -161,8 +161,8 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Move date and access window', 'Empty or partly furnished condition', 'Cupboards, appliances and priority areas']
   },
   'complex-property-cleaning-london': {
-    hero: '/images/luxury-home/mayfair-home-hallway.png',
-    heroAlt: 'Hallway with a herringbone floor and blue panelled walls.',
+    hero: '/images/phase8-nov10/r-bathroom-shine.webp',
+    heroAlt: 'Gloved hands polishing a chrome basin tap in a marble bathroom.',
     gallery: homeGallery,
     outcomes: ['A considered delivery plan', 'Specialist requirements identified', 'Sequenced work and accountable handover'],
     scope: ['Plans, materials and floor area', 'Specialist surfaces and contractors', 'Security, programme and representative sign-off']

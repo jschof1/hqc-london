@@ -90,11 +90,13 @@ test('category suppliers and booking-system wording preserve the approved confir
   assert.deepEqual(supplierCategories.items, ['CRM and enquiry management providers;', 'booking and scheduling software providers;', 'payment processing providers;', 'accounting software providers;', 'business communications providers;', 'website and infrastructure providers.']);
   const supplierTypes = legal.privacy.find((block) => block.kind === 'ul' && block.items.includes('email and business communications;'));
   assert.ok(supplierTypes.items.includes('messaging services (WhatsApp);'));
-  assert.ok(JSON.stringify(legal).includes('[FINAL LEGAL / PRODUCTION APPROVAL DATE]'));
+  assert.deepEqual(legal.privacy[0], { kind: 'p', text: 'Last updated: 24 November 2026' });
   assert.ok(JSON.stringify(legal.privacy).includes('privacy@highqualityclean.co.uk'));
   assert.ok(JSON.stringify(legal.terms).includes('Bookings, changes, cancellations and complaints: support@highqualityclean.co.uk'));
   assert.ok(JSON.stringify(legal.terms).includes('Our booking system records booking requests and payment details. Recording payment details does not by itself mean that payment has been taken. HQC decides whether any advance payment is required for the service and when it is collected, and will confirm the applicable payment terms in the quotation or booking confirmation.'));
-  assert.deepEqual(section('essential-clean-london', 'What Happens Next'), original('src/data/phase8-copy.json')['essential-clean-london'].sections.find((s) => s.heading === 'What Happens Next'));
+  const expectedNext = original('src/data/phase8-copy.json')['essential-clean-london'].sections.find((s) => s.heading === 'What Happens Next');
+  expectedNext.blocks.at(-1).text = 'HQC checks suitability and availability, allocates a cleaner and takes any advance payment required before sending confirmation.';
+  assert.deepEqual(section('essential-clean-london', 'What Happens Next'), expectedNext);
   assert.ok(!read('src/pages/book-essential-clean.astro').includes('A 50% deposit on bookings over £400'));
 });
 
@@ -198,6 +200,26 @@ test('the retained floor-plan image is no longer paired with its look-alike in t
   assert.notEqual(cardLibrary[homeComplexStepImagery['Defined scope']].src, cardLibrary['g-service-profile'].src);
 });
 
+test('Complex has its own illustrative hero and keeps its existing related-route thumbnail', async () => {
+  const { getPageVisual } = await moduleAt('src/data/page-visuals.ts');
+  const { cardLibrary, cardImage, destinationThumbnails, outcomeCardImagery, relatedRouteImagery, illustrativeAlt } = await moduleAt('src/data/card-imagery.ts');
+  const slug = 'complex-property-cleaning-london';
+  const complex = getPageVisual(slug);
+  assert.equal(complex.hero, cardLibrary['r-bathroom-shine'].src);
+  assert.match(illustrativeAlt(complex.hero, complex.heroAlt), /^Illustrative: Gloved hands polishing a chrome basin tap in a marble bathroom\.$/);
+  assert.equal(getPageVisual('move-in-void-property-cleaning-london').hero, '/images/luxury-home/mayfair-home-hallway.png');
+  const source = read('src/components/OutcomePage.astro');
+  const selection = source.slice(source.indexOf('const relatedImages:'), source.indexOf('const enquiryType ='));
+  const { code } = await transform(`${selection}\nrelatedImages[0].src;`, { loader: 'ts' });
+  const hostSlug = 'post-construction-cleaning-london';
+  const thumbnail = vm.runInNewContext(code, {
+    page: { slug: hostSlug, related: [{ href: `/${slug}/` }] }, renderedOutcomeSlugs: [slug], getPageVisual,
+    cardImagery: outcomeCardImagery[hostSlug], cardImage, destinationThumbnails, relatedRouteImagery,
+    pageImageKeys: new Set(), imageKey: (src) => src,
+  });
+  assert.equal(thumbnail, cardLibrary['n6-complex-b'].src);
+});
+
 test('heading semantics retain the two-column error composition and valid homepage nesting', async () => {
   const classOf = (node) => node.attributes?.find((attr) => attr.name === 'class')?.value || '';
   const walk = (node, visit, ancestors = []) => { visit(node, ancestors); for (const child of node.children || []) walk(child, visit, [...ancestors, node]); };
@@ -294,8 +316,8 @@ test('Reviews groups resolve the seven named reviews verbatim and remain absent 
 test('the 3D header keeps its responsive lockup and the flat vector assets remain reusable', () => {
   const header = read('src/components/Header.astro');
   assert.doesNotMatch(header, /src="[^"]+flat-gold/);
-  assert.match(header, /src="\/images\/brand\/hqc-logo-header-3d\.svg"[^>]+class="block h-8 w-auto sm:h-9 lg:hidden xl:block xl:h-10"[^>]+width="1212" height="184"/);
-  assert.match(header, /src="\/images\/brand\/hqc-monogram-3d\.webp"[^>]+class="hidden h-10 w-auto lg:block xl:hidden"[^>]+width="316" height="144"/);
+  assert.match(header, /src="\/images\/brand\/hqc-logo-header-3d\.svg" alt="High Quality Clean" class="block h-8 w-auto sm:h-9 lg:hidden xl:block xl:h-10"[^>]+width="1212" height="184"/);
+  assert.match(header, /src="\/images\/brand\/hqc-monogram-3d\.webp" alt="High Quality Clean" class="hidden h-10 w-auto lg:block xl:hidden"[^>]+width="316" height="144"/);
   for (const filename of ['hqc-logo-header-flat-gold.svg', 'hqc-monogram-flat-gold.svg']) {
     const svg = read(`public/images/brand/${filename}`);
     assert.match(svg, /viewBox="-?[\d.]+ -?[\d.]+ [\d.]+ [\d.]+"/);

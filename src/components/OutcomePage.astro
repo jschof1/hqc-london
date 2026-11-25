@@ -91,7 +91,8 @@ const relatedImages: CardImage[] = page.related.map((link) => {
   const slug = link.href.replace(/^\/|\/$/g, '');
   const destination = renderedOutcomeSlugs.includes(slug) ? getPageVisual(slug) : undefined;
   // Review B3: only a light WebP hero is used as a thumbnail (its 800px variant when one exists).
-  const hero = destination && destination.hero.endsWith('.webp')
+  // Keep the existing related-route thumbnails for Complex after its dedicated hero changes.
+  const hero = destination && slug !== 'complex-property-cleaning-london' && destination.hero.endsWith('.webp')
     ? { src: destination.hero.replace(/-1600\.webp$/, '-800.webp'), alt: destination.heroAlt }
     : undefined;
   const fallbacks = [

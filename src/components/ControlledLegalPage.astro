@@ -53,6 +53,9 @@ for (const block of blocks) {
         block.text === 'Link: Privacy Policy' ? <p><a class="underline" href="/privacy-policy/">Privacy Policy</a></p> :
         block.text === 'Link: Manage Cookie Preferences' ? <p><a class="underline" href="#hqc-cookie-preferences" data-open-cookie-preferences>Manage Cookie Preferences</a></p> :
         block.text === 'WhatsApp: 07824 390336' ? <p><a class="underline" href="https://wa.me/447824390336">WhatsApp: 07824 390336</a></p> :
+        kind === 'terms' && block.text === 'Last updated: 24 November 2026' ? (
+          <p class="flex flex-wrap gap-x-4 gap-y-1"><span>{block.text}</span><a class="underline" href="/terms-2026-11.pdf">Download this version (PDF, 24 November 2026)</a></p>
+        ) :
         <p>{block.text}</p>
       ))}
         </div>

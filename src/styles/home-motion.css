@@ -893,6 +893,10 @@ main.hm-page h2.section-title, .hm-outcome-title, .hm-homes-title, #find-my-serv
 .hm-review-cards { display: grid; gap: 1rem; margin-bottom: 0; padding: 0; list-style: none; }
 .hm-review-cards .hm-review { width: auto; min-width: 0; }
 .hm-review-cards .hm-review-by { flex-wrap: wrap; }
+@media (max-width: 639px) {
+  .hm-review-cards { align-items: start; }
+  .hm-review-cards .hm-review { min-height: 0; }
+}
 @media (min-width: 640px) { .hm-review-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .hm-review-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* Retain both people and original pixels in the genuine landscape photograph. */

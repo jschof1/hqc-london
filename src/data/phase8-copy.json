@@ -1462,7 +1462,7 @@
           },
           {
             "kind": "p",
-            "text": "HQC checks suitability and availability, allocates a cleaner and collects any required deposit or payment before sending confirmation."
+            "text": "HQC checks suitability and availability, allocates a cleaner and takes any advance payment required before sending confirmation."
           }
         ]
       },

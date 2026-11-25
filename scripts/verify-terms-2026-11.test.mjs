@@ -4,6 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { execFileSync, spawnSync } from 'node:child_process';
+import vm from 'node:vm';
 
 const BASELINE = '4751e5b';
 const REQUEST_BASELINE = 'c4c601d';
@@ -34,11 +35,28 @@ test('header line is dated for the corrected edition', () => {
   assert.deepEqual(legal.terms.slice(1, 3), before.terms.slice(1, 3));
 });
 
-test('Privacy Policy adds only the requested WhatsApp supplier category', () => {
+test('Privacy Policy changes only the requested date and WhatsApp supplier category', () => {
   const expected = structuredClone(requestBefore.privacy);
+  expected[0].text = 'Last updated: 24 November 2026';
   const categories = expected.find((block) => block.kind === 'ul' && block.items?.includes('email and business communications;'));
   categories.items.splice(categories.items.indexOf('email and business communications;') + 1, 0, 'messaging services (WhatsApp);');
   assert.deepEqual(legal.privacy, expected);
+});
+
+test('the legal staging notice appears only on preview builds or hosts', () => {
+  const layout = read('src/components/ControlledLegalPage.astro');
+  assert.match(layout, /\{isPreview && <p[^>]*>Staging draft:/);
+  const flag = layout.split('\n').find((line) => line.startsWith('const isPreview = '));
+  for (const [hostname, branch, expected] of [
+    ['highqualityclean.co.uk', 'main', false],
+    ['www.highqualityclean.co.uk', 'main', false],
+    ['c356b857.hqc-london.pages.dev', 'main', true],
+    ['highqualityclean.co.uk', 'codex/hqc-final-preview-2026-11-25', true],
+  ]) {
+    assert.equal(vm.runInNewContext(`${flag}\nisPreview`, {
+      Astro: { url: { hostname } }, process: { env: { CF_PAGES: '1', CF_PAGES_BRANCH: branch } },
+    }), expected, `${hostname} (${branch})`);
+  }
 });
 
 test('numbered sections are sequential, followed only by the commercial schedule', () => {
@@ -269,6 +287,9 @@ test('dated Terms PDF exists at the fixed address and is a small PDF', () => {
   const pdf = fs.readFileSync('public/terms-2026-11.pdf');
   assert.equal(pdf.subarray(0, 5).toString('latin1'), '%PDF-');
   assert.ok(pdf.length > 20_000 && pdf.length < 500_000, `size ${pdf.length}`);
+  assert.deepEqual(pdf, execFileSync('git', ['show', 'a6897d4:public/terms-2026-11.pdf']));
+  const layout = read('src/components/ControlledLegalPage.astro');
+  assert.match(layout, /kind === 'terms' && block\.text === 'Last updated: 24 November 2026' \? \(\s*<p[^>]*><span>\{block\.text\}<\/span><a[^>]*href="\/terms-2026-11\.pdf">Download this version \(PDF, 24 November 2026\)<\/a><\/p>/);
   const generator = read('scripts/build-terms-pdf.mjs');
   assert.match(generator, /src\/data\/phase8-legal\.json/);
   assert.match(generator, /writeFile\(output, pdf, \{ flag: 'wx' \}\)/);
