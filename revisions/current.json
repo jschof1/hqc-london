@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "baseline": "821ef29f0bf343ef116c08f05fe3548ae67c03f2",
-  "request": "Add the same communal page desktop and mobile captures to the protected before and after versions. Private source hqc-review-2026-11-27/whatsapp-photos.",
+  "baseline": "db5f4eb0e3738bab76776c364a64f468a394921d",
+  "request": "Append the reviewed communal hero with two discreet fitting redactions requested by the independent privacy review.",
   "requirements": [
     {
-      "id": "P27_ROOM",
-      "text": "Append a fresh photo comparison from the immutable booking and communal candidates."
+      "id": "P27_ROOM_V2",
+      "text": "Append desktop and mobile captures from the privacy-reviewed immutable Pages candidate."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "P27_ROOM"
+        "P27_ROOM_V2"
       ],
       "allowDelete": false,
       "reason": "Append-only review evidence."
@@ -20,56 +20,40 @@
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "P27_ROOM"
+        "P27_ROOM_V2"
       ],
       "allowDelete": false,
       "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261127-communal-photos.json",
+      "path": "tools/photo-review/evidence/version-captures-20261127-communal-photos-v2.json",
       "requirements": [
-        "P27_ROOM"
+        "P27_ROOM_V2"
       ],
       "allowDelete": false,
       "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-communal-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-communal-photos-v2-communal-desktop.jpg",
       "requirements": [
-        "P27_ROOM"
+        "P27_ROOM_V2"
       ],
       "allowDelete": false,
       "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-communal-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-communal-photos-v2-communal-mobile.jpg",
       "requirements": [
-        "P27_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov27-hqc-communal-photos-communal-desktop.jpg",
-      "requirements": [
-        "P27_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov27-hqc-communal-photos-communal-mobile.jpg",
-      "requirements": [
-        "P27_ROOM"
+        "P27_ROOM_V2"
       ],
       "allowDelete": false,
       "reason": "Append-only review evidence."
     }
   ],
   "preserve": [
-    "Existing snapshots, comments, photo selections, protected assets and Worker configuration."
+    "All existing snapshots, comments, photo selections and Worker configuration."
   ],
   "verification": [
-    "Existing manifest tests, committed capture hashes, exact hosted capture readback and preserved comments and photo selections."
+    "Verify the version manifest and hosted image hashes."
   ]
 }
