@@ -7099,6 +7099,28 @@
         "path": "tools/photo-review/public/versions/manifest.json"
       },
       "captureDate": "2026-11-27"
+    },
+    {
+      "id": "nov27-hqc-communal-photos",
+      "commit": "a97f2cc375133af1455761c9870da9e0f9d351ee",
+      "immutableDeploymentUrl": "https://d825fc00.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov27-hqc-booking-wording&after=nov27-hqc-communal-photos&page=communal#compare",
+      "captureManifest": {
+        "commit": "db5f4eb0e3738bab76776c364a64f468a394921d",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-27"
+    },
+    {
+      "id": "nov27-hqc-communal-photos-v2",
+      "commit": "7c47a302cb5bcf0cd0ac9a2e9a1d4b6b3dff6026",
+      "immutableDeploymentUrl": "https://6bd3673a.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov27-hqc-booking-wording&after=nov27-hqc-communal-photos-v2&page=communal#compare",
+      "captureManifest": {
+        "commit": "2a0ba2dd2549c16edaee8d50ac9a834899c7f40d",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-27"
     }
   ]
 }
