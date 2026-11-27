@@ -1,58 +1,102 @@
 {
   "schemaVersion": 1,
-  "baseline": "43ec8691a2855b2abff6bd9946d96ac3c75964d7",
-  "request": "Pedro conditionally accepted the 25 November website preview and specified one exact change on /book-essential-clean/. Private native source hqc-review-2026-11-27/1a213ea2b8b6c759.txt. The communal hero awaits a suitable photo with confirmed publication permission.",
+  "baseline": "a9c4956be8eafed6e1e5e8fd4ee9ea9fc6c33570",
+  "request": "Use suitable real communal photos supplied by Pedro after his 25 November email and Jack’s 27 November follow-up. Private sources hqc-review-2026-11-27/1a213ea2b8b6c759.txt and hqc-review-2026-11-27/whatsapp-photos.",
   "requirements": [
     {
-      "id": "N27_BOOKING",
-      "text": "In the payment paragraph on /book-essential-clean/ use the exact sentence: HQC decides whether any advance payment applies to your service and takes it where required before sending its confirmation email."
+      "id": "P27_HERO",
+      "text": "Replace only the Communal Area Cleaning hero with the strongest real supplied photo. Use anonymous descriptive alt and omit the illustrative label."
     },
     {
-      "id": "N27_RECORD",
-      "text": "Verify the booking copy and unchanged controls in a new review-only deployment, record exact source and visual comparison, preserve the production hold."
+      "id": "P27_GALLERY",
+      "text": "Add other suitable real communal photos to that page’s existing gallery when privacy-safe and visually useful."
+    },
+    {
+      "id": "P27_PRIVACY",
+      "text": "Strip metadata and remove identifiable details, including any people, building and location names, door numbers, post-box names, key safes, entry panels and CCTV."
+    },
+    {
+      "id": "P27_REVIEW",
+      "text": "Retain the 27 November booking candidate and production hold, then record the new protected visual comparison and immutable preview."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "N27_RECORD"
+        "P27_REVIEW"
       ],
       "allowDelete": false,
       "reason": "Planning-only freeze."
     },
     {
-      "path": "src/pages/book-essential-clean.astro",
+      "path": "src/data/page-visuals.ts",
       "requirements": [
-        "N27_BOOKING"
+        "P27_HERO",
+        "P27_GALLERY"
       ],
       "allowDelete": false,
-      "reason": "Replace the single requested sentence."
+      "reason": "Assign anonymous communal assets and preserve the existing related-route thumbnail."
+    },
+    {
+      "path": "src/components/OutcomePage.astro",
+      "requirements": [
+        "P27_HERO"
+      ],
+      "allowDelete": false,
+      "reason": "Allow a preserved related thumbnail for the changed hero without affecting other selection."
+    },
+    {
+      "path": "public/images/hqc-communal/communal-lounge.webp",
+      "requirements": [
+        "P27_HERO",
+        "P27_PRIVACY"
+      ],
+      "allowDelete": false,
+      "reason": "Anonymised wide lounge hero."
+    },
+    {
+      "path": "public/images/hqc-communal/communal-seating.webp",
+      "requirements": [
+        "P27_GALLERY",
+        "P27_PRIVACY"
+      ],
+      "allowDelete": false,
+      "reason": "Optional safe supporting photograph of shared seating."
+    },
+    {
+      "path": "public/images/hqc-communal/communal-terrace.webp",
+      "requirements": [
+        "P27_GALLERY",
+        "P27_PRIVACY"
+      ],
+      "allowDelete": false,
+      "reason": "Optional safe supporting photograph of terrace furniture."
+    },
+    {
+      "path": "phase8/REVIEW_COMMUNAL_PHOTOS_2026-11-27.md",
+      "requirements": [
+        "P27_REVIEW"
+      ],
+      "allowDelete": false,
+      "reason": "Record verified photo scope and launch hold."
     },
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "N27_RECORD"
+        "P27_REVIEW"
       ],
       "allowDelete": false,
-      "reason": "Append the new verified candidate."
-    },
-    {
-      "path": "phase8/REVIEW_CORRECTIONS_2026-11-27.md",
-      "requirements": [
-        "N27_RECORD"
-      ],
-      "allowDelete": false,
-      "reason": "Record scoped website verification and outstanding release evidence."
+      "reason": "Append the hosted version and manifest reference."
     }
   ],
   "preserve": [
-    "The exact prior client review deployment 1d7154bb.hqc-london.pages.dev, source 6cfbe188d4a58b49827ce341f27cbad56204c8c0 and existing visual review entries.",
-    "The payment paragraph’s first sentence, Launch27 frame and fallback, suitability quote and legal links, all other content, images and routes, and the Phase 8 launch hold."
+    "Existing homepage tile, related-route thumbnails, gallery images, illustrative marking for generated assets, copy, links and booking/form behaviour.",
+    "Earlier accepted revisions and the Phase 8 production release hold."
   ],
   "verification": [
-    "Run revision scope, diff, existing targeted regression checks and guarded review build.",
-    "Check exact rendered sentence and preservation of booking links, staging behavior and layout at desktop and mobile, with zero booking, payment or customer send.",
-    "Append dated immutable candidate evidence to the protected version room and run the revision guard before handover."
+    "Audit all output images at full resolution, verify metadata removal and no identifiable details.",
+    "Scope check, guarded Astro build and existing tests. Check desktop and mobile in Ego Browser, confirm homepage and related-route thumbnails.",
+    "Append a dated protected comparison and run the full revision guard."
   ]
 }
