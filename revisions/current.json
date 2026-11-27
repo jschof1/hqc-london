@@ -1,459 +1,75 @@
 {
   "schemaVersion": 1,
-  "baseline": "2b0fc84222cc4456acc1f93e5b1ec4a93835c552",
-  "request": "Append the 25 November preview requested by Pedro for final review. Private source hqc-review-2026-11-25/1a21008f3e8531a7.txt.",
+  "baseline": "5730bdf6bb028e732384d94e4080749e009e804a",
+  "request": "Add before and after captures for the exact booking wording correction requested after the 25 November review. Private source hqc-review-2026-11-27/1a213ea2b8b6c759.txt.",
   "requirements": [
     {
-      "id": "N25_ROOM",
-      "text": "Append one immutable review version with dated desktop and mobile captures."
+      "id": "N27_ROOM",
+      "text": "Register desktop and mobile booking captures from the original 25 November preview and the new immutable candidate using the existing comparison tool."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "N25_ROOM"
+        "N27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only review evidence."
+      "reason": "Append-only booking comparison evidence."
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "N25_ROOM"
+        "N27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only review evidence."
+      "reason": "Append-only booking comparison evidence."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261125-final-fixes.json",
+      "path": "tools/photo-review/evidence/version-captures-20261127-booking-wording.json",
       "requirements": [
-        "N25_ROOM"
+        "N27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only review evidence."
+      "reason": "Append-only booking comparison evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-home-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-booking-desktop.jpg",
       "requirements": [
-        "N25_ROOM"
+        "N27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only review evidence."
+      "reason": "Append-only booking comparison evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-home-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-booking-mobile.jpg",
       "requirements": [
-        "N25_ROOM"
+        "N27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only review evidence."
+      "reason": "Append-only booking comparison evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-quote-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-booking-desktop.jpg",
       "requirements": [
-        "N25_ROOM"
+        "N27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only review evidence."
+      "reason": "Append-only booking comparison evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-quote-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-booking-mobile.jpg",
       "requirements": [
-        "N25_ROOM"
+        "N27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-how-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-how-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-contact-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-contact-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-tenancy-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-tenancy-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-about-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-about-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-reviews-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-reviews-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-privacy-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-privacy-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-terms-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-terms-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-facilities-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-facilities-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-communal-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-communal-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-agents-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-agents-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-void-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-void-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-construction-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-construction-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-portfolio-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-portfolio-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-commercial-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-commercial-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-office-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-office-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-commercial-deep-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-commercial-deep-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-home-service-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-home-service-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-essential-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-essential-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-deep-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-deep-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-move-in-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-move-in-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-complex-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-complex-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-faq-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-faq-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-why-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-why-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-prices-desktop.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
-    },
-    {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-prices-mobile.jpg",
-      "requirements": [
-        "N25_ROOM"
-      ],
-      "allowDelete": false,
-      "reason": "Append-only review evidence."
+      "reason": "Append-only booking comparison evidence."
     }
   ],
   "preserve": [
-    "Prior snapshots, photo selections, comments, Worker code, bindings, secrets and production website."
+    "All existing versions, capture objects, photos, comments, bindings, runtime and credentials."
   ],
   "verification": [
-    "Verify capture bytes, source URLs and protected readback after the deployment."
+    "Guard scoped paths, compare all previous capture entries, verify committed and hosted hashes, and read back protected review data."
   ]
 }
