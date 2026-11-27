@@ -1,75 +1,75 @@
 {
   "schemaVersion": 1,
-  "baseline": "5730bdf6bb028e732384d94e4080749e009e804a",
-  "request": "Add before and after captures for the exact booking wording correction requested after the 25 November review. Private source hqc-review-2026-11-27/1a213ea2b8b6c759.txt.",
+  "baseline": "821ef29f0bf343ef116c08f05fe3548ae67c03f2",
+  "request": "Add the same communal page desktop and mobile captures to the protected before and after versions. Private source hqc-review-2026-11-27/whatsapp-photos.",
   "requirements": [
     {
-      "id": "N27_ROOM",
-      "text": "Register desktop and mobile booking captures from the original 25 November preview and the new immutable candidate using the existing comparison tool."
+      "id": "P27_ROOM",
+      "text": "Append a fresh photo comparison from the immutable booking and communal candidates."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "N27_ROOM"
+        "P27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only booking comparison evidence."
+      "reason": "Append-only review evidence."
     },
     {
       "path": "tools/photo-review/public/versions/manifest.json",
       "requirements": [
-        "N27_ROOM"
+        "P27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only booking comparison evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/evidence/version-captures-20261127-booking-wording.json",
+      "path": "tools/photo-review/evidence/version-captures-20261127-communal-photos.json",
       "requirements": [
-        "N27_ROOM"
+        "P27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only booking comparison evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-booking-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-communal-desktop.jpg",
       "requirements": [
-        "N27_ROOM"
+        "P27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only booking comparison evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov25-pedro-final-fixes-booking-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-communal-mobile.jpg",
       "requirements": [
-        "N27_ROOM"
+        "P27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only booking comparison evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-booking-desktop.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-communal-photos-communal-desktop.jpg",
       "requirements": [
-        "N27_ROOM"
+        "P27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only booking comparison evidence."
+      "reason": "Append-only review evidence."
     },
     {
-      "path": "tools/photo-review/public/versions/captures/nov27-hqc-booking-wording-booking-mobile.jpg",
+      "path": "tools/photo-review/public/versions/captures/nov27-hqc-communal-photos-communal-mobile.jpg",
       "requirements": [
-        "N27_ROOM"
+        "P27_ROOM"
       ],
       "allowDelete": false,
-      "reason": "Append-only booking comparison evidence."
+      "reason": "Append-only review evidence."
     }
   ],
   "preserve": [
-    "All existing versions, capture objects, photos, comments, bindings, runtime and credentials."
+    "Existing snapshots, comments, photo selections, protected assets and Worker configuration."
   ],
   "verification": [
-    "Guard scoped paths, compare all previous capture entries, verify committed and hosted hashes, and read back protected review data."
+    "Existing manifest tests, committed capture hashes, exact hosted capture readback and preserved comments and photo selections."
   ]
 }
