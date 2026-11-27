@@ -1,161 +1,58 @@
 {
   "schemaVersion": 1,
-  "baseline": "a6897d41dbdf7adee30d7471b3314a4949f95680",
-  "request": "Pedro’s 25 November email following his review of all 45 routes on c356b857. He accepted the Terms, WhatsApp, VAT, Privacy supplier categories, Reviews page and 3D header, and specified eight further items before final preview review. Private source hqc-review-2026-11-25/1a21008f3e8531a7.txt.",
+  "baseline": "43ec8691a2855b2abff6bd9946d96ac3c75964d7",
+  "request": "Pedro conditionally accepted the 25 November website preview and specified one exact change on /book-essential-clean/. Private native source hqc-review-2026-11-27/1a213ea2b8b6c759.txt. The communal hero awaits a suitable photo with confirmed publication permission.",
   "requirements": [
     {
-      "id": "N25_SCOPE",
-      "text": "Freeze this round from the preview Pedro reviewed and retain his 25 November sign-off and earlier accepted decisions."
+      "id": "N27_BOOKING",
+      "text": "In the payment paragraph on /book-essential-clean/ use the exact sentence: HQC decides whether any advance payment applies to your service and takes it where required before sending its confirmation email."
     },
     {
-      "id": "N25_PRIVACY",
-      "text": "Replace the Privacy review placeholder with Last updated: 24 November 2026."
-    },
-    {
-      "id": "N25_NOTICE",
-      "text": "Verify the legal staging notice is confined to previews and the production indexing settings for homepage and FAQs. Retain the launch hold."
-    },
-    {
-      "id": "N25_ESSENTIAL",
-      "text": "Use Pedro's exact advance payment wording on the Essential Clean page."
-    },
-    {
-      "id": "N25_PDF",
-      "text": "Add the exact dated download link adjacent to the Terms date. Verify the unchanged PDF matches the approved source and includes §29 and C5."
-    },
-    {
-      "id": "N25_FORM",
-      "text": "Record preview proof that an eligible home quote cannot send with the early-start checkbox unticked."
-    },
-    {
-      "id": "N25_LOGO",
-      "text": "Use High Quality Clean alt text for both responsive 3D logo assets. Preserve the home link and navigation."
-    },
-    {
-      "id": "N25_HERO",
-      "text": "Give Complex and Executive a distinct, discreet illustrative hero and keep other page hero and related-route choices."
-    },
-    {
-      "id": "N25_REVIEWS",
-      "text": "Let the homepage review cards size to their content on mobile, retaining the selected review copy and desktop presentation."
-    },
-    {
-      "id": "N25_RECORD",
-      "text": "Register a separately hosted comparison candidate and record verified launch evidence and the open checks."
+      "id": "N27_RECORD",
+      "text": "Verify the booking copy and unchanged controls in a new review-only deployment, record exact source and visual comparison, preserve the production hold."
     }
   ],
   "allowedFiles": [
     {
       "path": "revisions/current.json",
       "requirements": [
-        "N25_SCOPE"
+        "N27_RECORD"
       ],
       "allowDelete": false,
       "reason": "Planning-only freeze."
     },
     {
-      "path": "src/data/phase8-legal.json",
+      "path": "src/pages/book-essential-clean.astro",
       "requirements": [
-        "N25_PRIVACY"
+        "N27_BOOKING"
       ],
       "allowDelete": false,
-      "reason": "Exact Privacy update date only."
-    },
-    {
-      "path": "src/components/ControlledLegalPage.astro",
-      "requirements": [
-        "N25_PDF"
-      ],
-      "allowDelete": false,
-      "reason": "Add the dated link next to the Terms date."
-    },
-    {
-      "path": "src/data/phase8-copy.json",
-      "requirements": [
-        "N25_ESSENTIAL"
-      ],
-      "allowDelete": false,
-      "reason": "Exact confirmed payment wording only."
-    },
-    {
-      "path": "src/components/Header.astro",
-      "requirements": [
-        "N25_LOGO"
-      ],
-      "allowDelete": false,
-      "reason": "Name both responsive brand images."
-    },
-    {
-      "path": "src/data/page-visuals.ts",
-      "requirements": [
-        "N25_HERO"
-      ],
-      "allowDelete": false,
-      "reason": "Use the existing labelled illustrative marble detail exclusively as the Complex page hero."
-    },
-    {
-      "path": "src/components/OutcomePage.astro",
-      "requirements": [
-        "N25_HERO"
-      ],
-      "allowDelete": false,
-      "reason": "Retain the pre-existing related-route thumbnails for links to Complex."
-    },
-    {
-      "path": "src/styles/home-motion.css",
-      "requirements": [
-        "N25_REVIEWS"
-      ],
-      "allowDelete": false,
-      "reason": "Remove the mobile minimum review height and grid stretching, scoped to the homepage review cards."
-    },
-    {
-      "path": "scripts/verify-pedro-audit-corrections.test.mjs",
-      "requirements": [
-        "N25_PRIVACY",
-        "N25_ESSENTIAL",
-        "N25_LOGO",
-        "N25_HERO"
-      ],
-      "allowDelete": false,
-      "reason": "Align existing exact assertions with Pedro's new request and verify Complex isolation."
-    },
-    {
-      "path": "scripts/verify-terms-2026-11.test.mjs",
-      "requirements": [
-        "N25_PRIVACY",
-        "N25_NOTICE",
-        "N25_PDF"
-      ],
-      "allowDelete": false,
-      "reason": "Verify the authorised Privacy change, production notice rule and dated download link."
-    },
-    {
-      "path": "phase8/REVIEW_CORRECTIONS_2026-11-25.md",
-      "requirements": [
-        "N25_RECORD",
-        "N25_FORM"
-      ],
-      "allowDelete": false,
-      "reason": "Record verification, recording and outstanding launch evidence."
+      "reason": "Replace the single requested sentence."
     },
     {
       "path": "revisions/versions.json",
       "requirements": [
-        "N25_RECORD"
+        "N27_RECORD"
       ],
       "allowDelete": false,
-      "reason": "Append only the checked new review candidate."
+      "reason": "Append the new verified candidate."
+    },
+    {
+      "path": "phase8/REVIEW_CORRECTIONS_2026-11-27.md",
+      "requirements": [
+        "N27_RECORD"
+      ],
+      "allowDelete": false,
+      "reason": "Record scoped website verification and outstanding release evidence."
     }
   ],
   "preserve": [
-    "The 24 November 3D preview, earlier separate review versions, wording and dated PDF Pedro approved, current navigation and forms, and production release gates.",
-    "All unrequested copy, browser behaviour, assets, tracking, robots protections and GoHighLevel settings.",
-    "Use the already generated marble-and-tap image at public/images/phase8-nov10/r-bathroom-shine.webp, with the existing Illustrative caption and alt provenance."
+    "The exact prior client review deployment 1d7154bb.hqc-london.pages.dev, source 6cfbe188d4a58b49827ce341f27cbad56204c8c0 and existing visual review entries.",
+    "The payment paragraph’s first sentence, Launch27 frame and fallback, suitability quote and legal links, all other content, images and routes, and the Phase 8 launch hold."
   ],
   "verification": [
-    "Exact scope, form and terms regression tests, verified PDF extraction and link, record controlled no-send browser proof on the immutable preview.",
-    "Desktop and mobile hosted QA of changed pages, compare Complex and Move-in / Void heroes, measure mobile review heights and check responsive logo alt.",
-    "Check current live and preview indexing guard, and verify launch evidence separately from the preview. Append the new immutable comparison and run the full revision guard."
+    "Run revision scope, diff, existing targeted regression checks and guarded review build.",
+    "Check exact rendered sentence and preservation of booking links, staging behavior and layout at desktop and mobile, with zero booking, payment or customer send.",
+    "Append dated immutable candidate evidence to the protected version room and run the revision guard before handover."
   ]
 }
