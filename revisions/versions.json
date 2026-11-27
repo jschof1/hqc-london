@@ -7088,6 +7088,17 @@
         "path": "tools/photo-review/public/versions/manifest.json"
       },
       "captureDate": "2026-11-25"
+    },
+    {
+      "id": "nov27-hqc-booking-wording",
+      "commit": "cf1e04c996bcfb30fd9a66993b0fa0e846f22058",
+      "immutableDeploymentUrl": "https://4407599e.hqc-london.pages.dev",
+      "reviewUrl": "https://review.highqualityclean.co.uk/versions/?before=nov25-pedro-final-fixes&after=nov27-hqc-booking-wording&page=booking#compare",
+      "captureManifest": {
+        "commit": "821ef29f0bf343ef116c08f05fe3548ae67c03f2",
+        "path": "tools/photo-review/public/versions/manifest.json"
+      },
+      "captureDate": "2026-11-27"
     }
   ]
 }
