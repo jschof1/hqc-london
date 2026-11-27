@@ -9926,6 +9926,56 @@
           }
         }
       }
+    },
+    {
+      "id": "nov27-hqc-communal-photos-v2",
+      "label": "27 Nov: communal photos with privacy review (preview)",
+      "date": "2026-11-27",
+      "captureDate": "2026-11-27",
+      "commit": "7c47a302cb5bcf0cd0ac9a2e9a1d4b6b3dff6026",
+      "deploymentUrl": "https://6bd3673a.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://6bd3673a.hqc-london.pages.dev",
+      "kind": "review candidate",
+      "summary": "Real supplied photography on the Communal Area Cleaning page.",
+      "changes": [
+        "A real shared lounge photo replaces the illustrative hero.",
+        "Added 2 privacy-checked supporting photographs to the existing gallery.",
+        "Two small fixtures in the hero were obscured as a precaution."
+      ],
+      "outstanding": [
+        "Production release remains on hold for the outstanding intake, booking and client checks."
+      ],
+      "provenance": "Dated desktop and mobile captures from the immutable review preview.",
+      "pages": {
+        "communal": {
+          "desktop": {
+            "src": "/versions/captures/nov27-hqc-communal-photos-v2-communal-desktop.jpg",
+            "sourceUrl": "https://6bd3673a.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "width": 1440,
+            "height": 11720,
+            "sha256": "036cb58b7672b095adc8e47f89ba2d904e0bb267fe45026da065b72f66cf04dd",
+            "capturedAt": "2026-11-27T17:13:52.710Z",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "method": "Ego Browser full-page capture, optional cookies rejected"
+          },
+          "mobile": {
+            "src": "/versions/captures/nov27-hqc-communal-photos-v2-communal-mobile.jpg",
+            "sourceUrl": "https://6bd3673a.hqc-london.pages.dev/communal-area-cleaning-london/",
+            "width": 390,
+            "height": 16819,
+            "sha256": "a078d03f22c8f1af468c4f96ad80f5d147796b196f88fe3257c2ee49d0d9a35a",
+            "capturedAt": "2026-11-27T17:13:54.714Z",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "method": "Ego Browser tiled page capture, optional cookies rejected"
+          }
+        }
+      }
     }
   ],
   "pages": [
