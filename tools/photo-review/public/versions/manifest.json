@@ -9770,6 +9770,83 @@
             "src": "/versions/captures/nov25-pedro-final-fixes-prices-mobile.jpg",
             "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/cleaning-prices-london/"
           }
+        },
+        "booking": {
+          "desktop": {
+            "width": 1425,
+            "height": 2837,
+            "sha256": "3d3144185138cc3c132ef746ead4ef419bb40aa7f5ac59c0382115bd0eaaf76d",
+            "capturedAt": "2026-11-27T15:32:23Z",
+            "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-booking-desktop.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/book-essential-clean/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 4207,
+            "sha256": "011c851b22a10b0c976512532e06f29213109e056dfb86f78575417339eb4787",
+            "capturedAt": "2026-11-27T15:32:47Z",
+            "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov25-pedro-final-fixes-booking-mobile.jpg",
+            "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/book-essential-clean/"
+          }
+        }
+      }
+    },
+    {
+      "id": "nov27-hqc-booking-wording",
+      "label": "27 Nov: Essential Clean booking wording (preview)",
+      "date": "2026-11-27",
+      "captureDate": "2026-11-27",
+      "commit": "cf1e04c996bcfb30fd9a66993b0fa0e846f22058",
+      "deploymentUrl": "https://4407599e.hqc-london.pages.dev",
+      "immutableDeploymentUrl": "https://4407599e.hqc-london.pages.dev",
+      "kind": "review candidate",
+      "summary": "Exact advance-payment wording requested for the Essential Clean booking page.",
+      "changes": [
+        "The payment notice uses the exact approved advance-payment sentence. The booking form and links retain their existing destinations."
+      ],
+      "outstanding": [
+        "Launch remains on hold. The controlled HighLevel test, Launch27 booking and payment handoff, and production indexing readback remain open.",
+        "The communal hero awaits a suitable cleared photo."
+      ],
+      "provenance": "Captured from the immutable preview in Ego Browser at 1440×900 and 390×844.",
+      "pages": {
+        "booking": {
+          "desktop": {
+            "width": 1425,
+            "height": 2837,
+            "sha256": "42e3eb1d3f7916541432aca7b89a1a61d4a578314bd22763af8bb1402c267507",
+            "capturedAt": "2026-11-27T15:32:38Z",
+            "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "src": "/versions/captures/nov27-hqc-booking-wording-booking-desktop.jpg",
+            "sourceUrl": "https://4407599e.hqc-london.pages.dev/book-essential-clean/"
+          },
+          "mobile": {
+            "width": 390,
+            "height": 4207,
+            "sha256": "db21144f119c22e93095e2edc01e1b91a756de2248a2ea08f7f382c97ae52a6e",
+            "capturedAt": "2026-11-27T15:32:51Z",
+            "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "src": "/versions/captures/nov27-hqc-booking-wording-booking-mobile.jpg",
+            "sourceUrl": "https://4407599e.hqc-london.pages.dev/book-essential-clean/"
+          }
         }
       }
     }
@@ -9904,6 +9981,11 @@
       "id": "prices",
       "label": "Cleaning prices",
       "path": "/cleaning-prices-london/"
+    },
+    {
+      "id": "booking",
+      "label": "Book Essential Clean",
+      "path": "/book-essential-clean/"
     }
   ],
   "defaultBefore": "nov17-pedro-followup-v2",

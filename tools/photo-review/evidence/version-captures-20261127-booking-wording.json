@@ -1,0 +1,75 @@
+{
+  "versionId": "nov27-hqc-booking-wording",
+  "sourceCommit": "cf1e04c996bcfb30fd9a66993b0fa0e846f22058",
+  "immutableDeploymentUrl": "https://4407599e.hqc-london.pages.dev",
+  "captureDate": "2026-11-27",
+  "pageCount": 1,
+  "captureCount": 4,
+  "releaseStatus": "Non-production review",
+  "records": [
+    {
+      "versionId": "nov25-pedro-final-fixes",
+      "pageId": "booking",
+      "view": "desktop",
+      "width": 1425,
+      "height": 2837,
+      "sha256": "3d3144185138cc3c132ef746ead4ef419bb40aa7f5ac59c0382115bd0eaaf76d",
+      "capturedAt": "2026-11-27T15:32:23Z",
+      "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "src": "/versions/captures/nov25-pedro-final-fixes-booking-desktop.jpg",
+      "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/book-essential-clean/"
+    },
+    {
+      "versionId": "nov25-pedro-final-fixes",
+      "pageId": "booking",
+      "view": "mobile",
+      "width": 390,
+      "height": 4207,
+      "sha256": "011c851b22a10b0c976512532e06f29213109e056dfb86f78575417339eb4787",
+      "capturedAt": "2026-11-27T15:32:47Z",
+      "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "src": "/versions/captures/nov25-pedro-final-fixes-booking-mobile.jpg",
+      "sourceUrl": "https://1d7154bb.hqc-london.pages.dev/book-essential-clean/"
+    },
+    {
+      "versionId": "nov27-hqc-booking-wording",
+      "pageId": "booking",
+      "view": "desktop",
+      "width": 1425,
+      "height": 2837,
+      "sha256": "42e3eb1d3f7916541432aca7b89a1a61d4a578314bd22763af8bb1402c267507",
+      "capturedAt": "2026-11-27T15:32:38Z",
+      "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "src": "/versions/captures/nov27-hqc-booking-wording-booking-desktop.jpg",
+      "sourceUrl": "https://4407599e.hqc-london.pages.dev/book-essential-clean/"
+    },
+    {
+      "versionId": "nov27-hqc-booking-wording",
+      "pageId": "booking",
+      "view": "mobile",
+      "width": 390,
+      "height": 4207,
+      "sha256": "db21144f119c22e93095e2edc01e1b91a756de2248a2ea08f7f382c97ae52a6e",
+      "capturedAt": "2026-11-27T15:32:51Z",
+      "method": "Ego Browser full-page content PNG excluding scrollbar, JPEG quality 78",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "src": "/versions/captures/nov27-hqc-booking-wording-booking-mobile.jpg",
+      "sourceUrl": "https://4407599e.hqc-london.pages.dev/book-essential-clean/"
+    }
+  ]
+}
