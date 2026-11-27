@@ -1,0 +1,75 @@
+{
+  "versionId": "nov27-hqc-communal-photos",
+  "sourceCommit": "a97f2cc375133af1455761c9870da9e0f9d351ee",
+  "immutableDeploymentUrl": "https://d825fc00.hqc-london.pages.dev",
+  "captureDate": "2026-11-27",
+  "pageCount": 1,
+  "captureCount": 4,
+  "releaseStatus": "Non-production review",
+  "records": [
+    {
+      "versionId": "nov27-hqc-booking-wording",
+      "pageId": "communal",
+      "view": "desktop",
+      "src": "/versions/captures/nov27-hqc-booking-wording-communal-desktop.jpg",
+      "sourceUrl": "https://4407599e.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "width": 1440,
+      "height": 11380,
+      "sha256": "183aa68c7cc3f1fee4e69436005212408c21fa94e657c551c7c06cd50846ac7e",
+      "capturedAt": "2026-11-27T16:58:53.361Z",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "method": "Ego Browser full-page content capture, optional cookies rejected"
+    },
+    {
+      "versionId": "nov27-hqc-booking-wording",
+      "pageId": "communal",
+      "view": "mobile",
+      "src": "/versions/captures/nov27-hqc-booking-wording-communal-mobile.jpg",
+      "sourceUrl": "https://4407599e.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "width": 390,
+      "height": 16262,
+      "sha256": "a9d9b87921d8c13e40a4f1ba19ae846bc9f7cb6a9470743933afa567502e22a7",
+      "capturedAt": "2026-11-27T16:58:54.236Z",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "method": "Ego Browser full-page content capture, optional cookies rejected"
+    },
+    {
+      "versionId": "nov27-hqc-communal-photos",
+      "pageId": "communal",
+      "view": "desktop",
+      "src": "/versions/captures/nov27-hqc-communal-photos-communal-desktop.jpg",
+      "sourceUrl": "https://d825fc00.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "width": 1440,
+      "height": 11720,
+      "sha256": "c116cfc82a2d27cd21158bf0d7e7ddced0524ae7e0af1eb7c8048fd22bdc0a8c",
+      "capturedAt": "2026-11-27T17:03:38.592Z",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "method": "Ego Browser full-page content capture, optional cookies rejected"
+    },
+    {
+      "versionId": "nov27-hqc-communal-photos",
+      "pageId": "communal",
+      "view": "mobile",
+      "src": "/versions/captures/nov27-hqc-communal-photos-communal-mobile.jpg",
+      "sourceUrl": "https://d825fc00.hqc-london.pages.dev/communal-area-cleaning-london/",
+      "width": 390,
+      "height": 16819,
+      "sha256": "6b5b0bf8b53dd62bf94c8242ae74f70c2ee2aa9803ef853bec2b35db95e28190",
+      "capturedAt": "2026-11-27T17:03:41.168Z",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "method": "Ego Browser full-page content capture, optional cookies rejected"
+    }
+  ]
+}
