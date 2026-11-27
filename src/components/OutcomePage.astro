@@ -92,16 +92,16 @@ const relatedImages: CardImage[] = page.related.map((link) => {
   const destination = renderedOutcomeSlugs.includes(slug) ? getPageVisual(slug) : undefined;
   // Review B3: only a light WebP hero is used as a thumbnail (its 800px variant when one exists).
   // Keep the existing related-route thumbnails for Complex after its dedicated hero changes.
-  const hero = destination && slug !== 'complex-property-cleaning-london' && destination.hero.endsWith('.webp')
+  const thumbnail = destination?.relatedThumbnail ?? (destination && slug !== 'complex-property-cleaning-london' && destination.hero.endsWith('.webp')
     ? { src: destination.hero.replace(/-1600\.webp$/, '-800.webp'), alt: destination.heroAlt }
-    : undefined;
+    : undefined);
   const fallbacks = [
     cardImagery?.related?.[link.href],
     ...(destinationThumbnails[slug] ?? []),
     relatedRouteImagery[link.href]
   ].map((id) => cardImage(id)).filter((image): image is CardImage => Boolean(image));
-  const chosen = hero && !pageImageKeys.has(imageKey(hero.src))
-    ? hero
+  const chosen = thumbnail && !pageImageKeys.has(imageKey(thumbnail.src))
+    ? thumbnail
     : fallbacks.find((image) => !pageImageKeys.has(imageKey(image.src))) ?? fallbacks[0];
   if (!chosen) throw new Error(`No related-route image for ${link.href} on ${page.slug}`);
   if (pageImageKeys.has(imageKey(chosen.src))) throw new Error(`Related-route image ${chosen.src} repeats on ${page.slug}`);

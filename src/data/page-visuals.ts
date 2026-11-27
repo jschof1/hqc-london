@@ -1,6 +1,7 @@
 export type PageVisual = {
   hero: string;
   heroAlt: string;
+  relatedThumbnail?: { src: string; alt: string };
   /** hqc is true only for photos listed in confirmedHqcPhotoIds; anything else is shown as illustrative. */
   gallery: { src: string; alt: string; hqc?: boolean }[];
   outcomes: string[];
@@ -74,9 +75,17 @@ const visualBySlug: Record<string, Partial<PageVisual>> = {
     scope: ['Portfolio and site requirements', 'Keys, access and parking', 'Frequency, reporting and escalation']
   },
   'communal-area-cleaning-london': {
-    hero: '/images/phase8-nov6/complex-a-1600.webp',
-    heroAlt: 'Cleaner in a teal uniform wiping a communal stair handrail.',
-    gallery: propertyGallery,
+    hero: '/images/hqc-communal/communal-lounge.webp',
+    heroAlt: 'Shared lounge with a long wooden table, stools and soft seating.',
+    relatedThumbnail: {
+      src: '/images/phase8-nov6/complex-a-800.webp',
+      alt: 'Cleaner in a teal uniform wiping a communal stair handrail.'
+    },
+    gallery: [
+      ...propertyGallery,
+      { src: '/images/hqc-communal/communal-seating.webp', alt: 'Upholstered seating and a side table in a shared lounge.' },
+      { src: '/images/hqc-communal/communal-terrace.webp', alt: 'Table and chairs on a shared terrace beside a planter.' }
+    ],
     outcomes: ['Presentable shared entrances', 'Reliable recurring attendance', 'Issues reported to the managing team'],
     scope: ['Entrances, stairs and landings', 'Lifts, touchpoints and shared facilities', 'Bin stores and agreed external areas']
   },
